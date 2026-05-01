@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  timescaledb:
+    image: timescale/timescaledb:latest-pg14
+    container_name: timescaledb
+    environment:
+      - POSTGRES_USER=quant
+      - POSTGRES_PASSWORD=quantpassword
+      - POSTGRES_DB=market_data
+    ports:
+      - "5432:5432"
+    volumes:
+      - timescaledb_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "quant"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgvector:
+    image: ankane/pgvector:latest
+    container_name: pgvector
+    environment:
+      - POSTGRES_USER=agent
+      - POSTGRES_PASSWORD=agentpassword
+      - POSTGRES_DB=sovereign_state
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgvector_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "agent"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  zerodha_sync:
+    image: python:3.12-slim
+    container_name: zerodha_sync
+    working_dir: /app
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    command: ["/bin/bash", "-c", "python agents/reconciliation_node.py"]
+    depends_on:
+      pgvector:
+        condition: service_healthy
+      timescaledb:
+        condition: service_healthy
+
+volumes:
+  timescaledb_data:
+  pgvector_data:

@@ -1,0 +1,12 @@
+# Midnight Sovereign V2.1 Execution Schedule
+# Deploy this on your Mac via the command: crontab schedule_crontab.txt
+
+PYTHONPATH=/Users/poonamsalke/.gemini/antigravity/scratch
+
+# --- GEAR 1: EOD Watchlist Screener ---
+# Runs once a day post-market at 4:00 PM IST
+0 16 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign/venv/bin/python3 run_engine.py >> logs/eod_screener.log 2>&1
+
+# --- GEAR 2: Intraday Momentum Polling ---
+# Runs every 30 minutes from 10:00 AM to 3:00 PM IST
+*/30 10-15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign/venv/bin/python3 run_engine.py >> logs/intraday_polling.log 2>&1

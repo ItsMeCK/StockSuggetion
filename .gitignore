@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.pyc
+.env
+screening_diagnostics.csv
+run_history/
+*.log
+.DS_Store

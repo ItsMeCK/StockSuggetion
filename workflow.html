@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Sovereign v2.1 - System Architecture</title>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #050505;
+            --bg-surface: #111111;
+            --bg-card: #1a1a1a;
+            --text-main: #eeeeee;
+            --text-dim: #888888;
+            --accent: #00f2ff;
+            --success: #00e676;
+            --warning: #ffb300;
+            --danger: #ff1744;
+            --border: #333333;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+        }
+
+        h1 span {
+            color: var(--accent);
+        }
+
+        .subtitle {
+            color: var(--text-dim);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: #555;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .card li::before {
+            content: "▹";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .code-inline {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: rgba(255,255,255,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #ffb300;
+        }
+
+        .mermaid-container {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 60px;
+            overflow-x: auto;
+        }
+
+        .mermaid-title {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Midnight Sovereign <span>v2.1</span></h1>
+        <div class="subtitle">Institutional Quantitative Architecture & Multi-Agent Execution Logic</div>
+    </header>
+
+    <div class="mermaid-container">
+        <div class="mermaid-title">System Topology Flowchart v2.2</div>
+        <pre class="mermaid">
+        graph TD
+            subgraph "Phase 1: Macro & Data Ingestion"
+                A[Zerodha Kite API] -->|Daily & 65m History| B[(TimescaleDB)]
+                M1[NSE FII/DII Flow Data] -->|Regime Context| M_Gate[Meta-Gate Logic]
+                M2[India VIX & US DXY] -->|Volatility/Liquidity| M_Gate
+                B --> C{Nifty 500 Universe}
+            end
+
+            subgraph "Phase 2: Multiple Timeframe Polars Screener"
+                C --> D[Instrument Exclusion Regex]
+                D -->|Drop NIFTY/BOND/ETF/BEES| E[Daily Math Bounds Check]
+                E -->|Stage 2: Price > 50SMA > 200SMA| AV[Anchored VWAP Check]
+                AV -->|Above Institutional Cost-Basis| MT[65m Intraday Trend Alignment]
+                MT -->|Aligned with Daily Direction| F[Velocity & Extension Veto]
+                F -->|Slope <= 150, Extension <= 12%| G[Refined Candidates ~10-15 Equities]
+                F -.->|Log Rejections| H[screening_diagnostics.csv]
+            end
+
+            subgraph "Phase 3: LangGraph Cognitive Orchestration"
+                G --> I[Agent 1: DTW Heuristic]
+                I -->|Dynamic Time Warping Patterns| M_Gate
+                M_Gate <-->|Veto Check via Semantic Rules| K[(pgvector Experience DB)]
+                M_Gate -->|Passes Regime Test| L[Agent 3: Claude 3.5 Vision]
+                L -->|Audits Candlestick Breakouts| M_Risk[Agent 4: Risk Manager]
+                M_Risk -->|Fractional Kelly 3:1 R:R| N[Approved Targets]
+            end
+
+            subgraph "Phase 4: Gap-Tax Defense & UI"
+                N --> O{Limit AMO Order Engine}
+                O -->|Set Tonight at Key Pivot Levels| P[run_history JSON Logs]
+                O -->|Record Results| K
+                P --> Q[FastAPI Backend]
+                Q --> R[React Terminal UX]
+                R -->|Instant Market Watch Quotes| A
+            end
+        </pre>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>📊 1. Data Ingestion & Macro feeds</h3>
+            <p>Captures multi-timeframe institutional metrics.</p>
+            <ul>
+                <li><strong>Universe:</strong> NSE 500 Equities mapped securely.</li>
+                <li><strong>Timeframes:</strong> Leverages parallel Daily and 65-minute candle histories.</li>
+                <li><strong>Macro Buffers:</strong> Ingests FII/DII, India VIX, and DXY indicators cleanly.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🧮 2. Polars Multiple Timeframe Screener</h3>
+            <p>Applies cost-basis checks seamlessly.</p>
+            <ul>
+                <li><strong>Institutional Anchors:</strong> Calculates support conditions dynamically.</li>
+                <li><strong>Timeframe Vetoes:</strong> Resolves local distributional anomalies.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🤖 3. LangGraph Nodes</h3>
+            <p>Enforces risk rules.</p>
+            <ul>
+                <li><strong>Kelly Constraints:</strong> Protects baseline targets safely.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🔄 4. Limit AMO Execution</h3>
+            <p>Controls deployment paths.</p>
+            <ul>
+                <li><strong>Entry Defenses:</strong> Preserves strategic execution vectors appropriately.</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
