@@ -76,66 +76,67 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
     critic_results = {}
     approved_allocations = {}
     
-    # --- NEURAL STRATEGY ORCHESTRATOR (Dynamic Playbook) ---
-    # Map engine regime to playbook regime
-    regime_map = {
-        "BULLISH": "BULL_MARKET",
-        "BEARISH": "BEAR_MARKET",
-        "NEUTRAL": "CHOPPY_SIDEWAYS"
-    }
+    # --- SOVEREIGN RESILIENCE PROTOCOL (Dynamic Alpha) ---
+    regime_map = {"BULLISH": "BULL_MARKET", "BEARISH": "BEAR_MARKET", "NEUTRAL": "CHOPPY_SIDEWAYS"}
     active_regime = regime_map.get(macro, "CHOPPY_SIDEWAYS")
-    
     rules = critic.rules.get("pring_pattern_geometries", {})
     
     for symbol in candidates:
         scores = agent_scores.get(symbol, {})
-        heuristic_data = state.get("heuristic_flags", {}).get(symbol, {})
-        pattern = heuristic_data.get("identified_pattern", "unknown")
+        vision_data = state.get("vision_validations", {}).get(symbol, {})
+        pattern = vision_data.get("identified_pattern", "unknown")
         
-        # Load the specific institutional rule for this pattern
+        # Calculate Relative Strength (RS) Alpha
+        # RS = Stock Performance / Nifty Performance (Simplified mock for logic)
+        rs_score = scores.get("sector", 50.0) / 50.0 # 1.0 is parity
+        
         pattern_rule = rules.get(pattern, {})
+        priority = pattern_rule.get("institutional_priority", 5)
         
+        # --- DYNAMIC RISK GOVERNOR ---
+        if macro == "BEARISH":
+            if rs_score < 1.2:
+                # Stock is failing to lead in a bad market
+                logging.warning(f"REGIME FRICTION: {symbol} has insufficient RS ({rs_score:.2f}) for BEARISH market. Tightening Hurdle.")
+                COGNITIVE_THRESHOLD = 80.0
+            else:
+                # Institutional Strength detected!
+                logging.info(f"RESILIENCE ALPHA: {symbol} is outperforming Nifty (RS: {rs_score:.2f}). Maintaining 70% Hurdle.")
+                COGNITIVE_THRESHOLD = 70.0
+        else:
+            # Bullish market: Be more aggressive
+            COGNITIVE_THRESHOLD = 65.0 if priority >= 8 else 70.0
+            
         # --- WEIGHTED COGNITIVE CONSENSUS SCORING ---
         w_entry = scores.get("entry", 0) * 0.40
         w_vision = scores.get("vision", 0) * 0.40
         w_dtw = scores.get("dtw", 0) * 0.20
-        
         total_confidence = w_entry + w_vision + w_dtw
         
-        # 1. Regime Fit Check (Thematic Alignment)
+        # 1. Resilience Boost
+        if macro == "BEARISH" and rs_score > 1.5:
+            logging.info(f"INSTITUTIONAL SUPPORT: {symbol} is an elite leader. Boosting +10%")
+            total_confidence += 10.0
+            
+        # 2. Thematic Alignment
         target_regime = pattern_rule.get("regime_fit", "UNKNOWN")
-        theme = pattern_rule.get("thematic_category", "UNKNOWN")
-        
         if target_regime == active_regime:
-            logging.info(f"REGIME MATCH: {symbol} setup is optimized for {active_regime} ({theme}). Boosting +5%")
-            total_confidence += 5.0
-        elif target_regime != "UNKNOWN" and target_regime != active_regime:
-            logging.warning(f"REGIME MISMATCH: {symbol} ({pattern}) is a {target_regime} setup in a {active_regime} market. Penalizing -10%")
-            total_confidence -= 10.0
+            total_confidence += 15.0
             
-        # 2. Institutional Priority Boost
-        priority = pattern_rule.get("institutional_priority", 5)
-        if priority >= 8:
-            logging.info(f"ELITE PRIORITY: {symbol} is a Tier 1 Institutional setup. Boosting +3%")
-            total_confidence += 3.0
-            
-        # 3. Run base adversarial check (Veto penalty)
         evaluation = critic.evaluate_thesis(symbol, "thesis", macro)
         if evaluation["veto"]:
             total_confidence -= 20.0
             
-        # Final Decision Logic (Restored 70% Baseline)
-        COGNITIVE_THRESHOLD = 70.0
         final_approval = (total_confidence >= COGNITIVE_THRESHOLD)
-        
         evaluation["total_confidence"] = float(total_confidence)
         evaluation["approved"] = final_approval
+        evaluation["rs_alpha"] = rs_score
         critic_results[symbol] = evaluation
         
         if final_approval:
-            logging.info(f"NEURAL APPROVAL: {symbol} passed {macro} regime with {total_confidence:.1f}% confidence!")
+            logging.info(f"ALPHA APPROVAL: {symbol} passed ({total_confidence:.1f}/{COGNITIVE_THRESHOLD}) - RS: {rs_score:.2f}")
         else:
-            logging.warning(f"NEURAL REJECTION: {symbol} failed {macro} regime ({total_confidence:.1f}/{COGNITIVE_THRESHOLD})")
+            logging.warning(f"ALPHA REJECTION: {symbol} failed ({total_confidence:.1f}/{COGNITIVE_THRESHOLD})")
         
     return {
         "critic_results": critic_results, 

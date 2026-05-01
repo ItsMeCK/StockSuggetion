@@ -42,18 +42,17 @@ def run_risk_agent(state: SovereignState) -> Dict[str, Any]:
     if not critic_results:
         return {"approved_allocations": {}}
 
+    macro = state.get("macro_regime", "UNKNOWN")
     risk_manager = SovereignConvictionGate()
     approved_allocations = {}
     
-    # --- ADAPTIVE REGIME THRESHOLD ---
-    # --- SOVEREIGN AGGRESSIVE (Restored) ---
-    COGNITIVE_THRESHOLD = 70.0
-
     for symbol, evaluation in critic_results.items():
         total_confidence = evaluation.get("total_confidence", 0.0)
+        # Use evaluation["approved"] which was set by the Critic Agent
+        is_approved = evaluation.get("approved", False)
+        rs_alpha = evaluation.get("rs_alpha", 1.0)
         
-        # Elite Gate Check (Cognitive Threshold)
-        if total_confidence >= COGNITIVE_THRESHOLD:
+        if is_approved:
             trigger_data = entry_trigger_results.get(symbol, {})
             entry_price = trigger_data.get("entry_price")
             
@@ -61,16 +60,30 @@ def run_risk_agent(state: SovereignState) -> Dict[str, Any]:
                 logging.warning(f"Risk Error: No entry price found for {symbol}")
                 continue
                 
+            # --- DYNAMIC POSITION SIZING ---
+            if macro == "BEARISH":
+                # Capital Preservation Mode: 3% Base Sizing
+                # Boost to 6% if RS is Elite (> 1.5)
+                sizing_pct = 0.06 if rs_alpha > 1.5 else 0.03
+                logging.info(f"RISK PIVOT: {symbol} in BEARISH market. Applying {sizing_pct*100:.1f}% sizing.")
+            else:
+                sizing_pct = 0.10 # 10% standard Bullish sizing
+            
+            allocation_amount = risk_manager.account_size * sizing_pct
+            shares = int(allocation_amount / entry_price)
             stop_loss = entry_price * 0.95 # 5% Stop
             
-            allocation = risk_manager.evaluate_risk(symbol, entry_price, stop_loss, total_confidence)
-            
-            # Since evaluate_risk checks conviction_score >= 130, we should override it 
-            # to use our new 80% threshold logic.
-            allocation["approved"] = True 
-            
-            approved_allocations[symbol] = allocation
-            logging.info(f"SOVEREIGN APPROVED: {symbol} | Confidence: {total_confidence:.1f} | Elite Sizing Active.")
+            approved_allocations[symbol] = {
+                "approved": True,
+                "shares": shares,
+                "capital_allocated": allocation_amount,
+                "entry": entry_price,
+                "stop_loss": stop_loss,
+                "target": entry_price * 1.10,
+                "conviction_score": total_confidence,
+                "rs_alpha": rs_alpha
+            }
+            logging.info(f"SOVEREIGN APPROVED: {symbol} | RS: {rs_alpha:.2f} | Sizing: {sizing_pct*100:.1f}%")
         else:
             logging.info(f"CONVICTION REJECTION: {symbol} (Confidence: {total_confidence:.1f})")
 

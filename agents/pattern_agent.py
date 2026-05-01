@@ -15,6 +15,24 @@ class VisionPatternAgent:
     """
     def __init__(self):
         self.rules = self._load_context_rules()
+        self.cache_path = Path(__file__).parent.parent / "vision_cache.json"
+        self.cache = self._load_cache()
+
+    def _load_cache(self) -> Dict[str, Any]:
+        if self.cache_path.exists():
+            try:
+                with open(self.cache_path, 'r') as f:
+                    return json.load(f)
+            except Exception:
+                return {}
+        return {}
+
+    def _save_cache(self):
+        try:
+            with open(self.cache_path, 'w') as f:
+                json.dump(self.cache, f, indent=4)
+        except Exception as e:
+            logging.error(f"Failed to save vision cache: {e}")
 
     def _load_context_rules(self) -> Dict[str, Any]:
         """Loads the pre-compiled institutional rules."""
@@ -28,19 +46,11 @@ class VisionPatternAgent:
             logging.error(f"Rulebook not found at {rules_path}. Did you run offline_compiler.py?")
             return {}
 
-    def analyze_chart(self, symbol: str, pattern: str) -> Dict[str, Any]:
+    def analyze_chart(self, symbol: str, pattern_hint: str) -> Dict[str, Any]:
         """
-        Mocks capturing a chart snapshot and sending it to Claude 3.5 Sonnet Vision.
+        Dynamically identifies institutional setups using OpenAI GPT-4o with neural caching.
         """
-        logging.info(f"Taking snapshot of {symbol} chart. Transmitting to Claude 3.5 Sonnet Vision...")
-        
-        # Fetch the specific psychological rules to prompt the Vision model
-        pattern_rules = self.rules.get("pring_pattern_geometries", {}).get(pattern, {})
-        auditor_prompt = self.rules.get("vision_agent_directives", {}).get("skeptical_auditor_prompt", "")
-        
-        logging.info(f"System Prompt: {auditor_prompt}")
-        logging.info(f"Looking for Failure Markers: {pattern_rules.get('vision_failure_markers', [])}")
-        
+        # Fetch recent data first to determine the "Latest Date" for the cache key
         import os, psycopg2
         try:
             conn = psycopg2.connect(
@@ -50,73 +60,84 @@ class VisionPatternAgent:
                 password=os.getenv('TIMESCALE_PASSWORD', 'quantpassword'),
                 database=os.getenv('TIMESCALE_DB', 'market_data')
             )
-            if conn:
-                cur = conn.cursor()
-                query = "SELECT high, low, close, volume FROM daily_ohlcv WHERE symbol = %s ORDER BY time DESC LIMIT 20"
-                cur.execute(query, (symbol,))
-                rows = cur.fetchall()
-                all_vols = [float(r[3]) for r in rows]
+            cur = conn.cursor()
+            query = "SELECT time, high, low, close, volume FROM daily_ohlcv WHERE symbol = %s ORDER BY time DESC LIMIT 20"
+            cur.execute(query, (symbol,))
+            rows = cur.fetchall()
+            cur.close()
+            conn.close()
+            
+            if not rows:
+                return {"vision_approved": False, "vision_score": 0, "identified_pattern": "unknown", "reason": "No data"}
+            
+            # Create a unique cache key based on symbol and the most recent timestamp in the data
+            latest_date = rows[0][0].strftime('%Y-%m-%d')
+            cache_key = f"{symbol}_{latest_date}"
+            
+            if cache_key in self.cache:
+                logging.info(f"CACHE HIT: Retrieving neural audit for {symbol} on {latest_date}")
+                return self.cache[cache_key]
                 
-                # Latest candle metrics
-                latest = rows[0]
-                h, l, c = float(latest[0]), float(latest[1]), float(latest[2])
-                price_range = h - l
-                upper_shadow = (h - c) / price_range if price_range > 0 else 0.0
-                cur.close()
-                conn.close()
-                
-                if len(all_vols) >= 5:
-                    # Institutional Volume Dry-up: 
-                    # Is the current volume (last 3 days) significantly below the 20-day average?
-                    recent_avg = sum(all_vols[:3]) / 3
-                    hist_avg = sum(all_vols) / len(all_vols)
-                    
-                    # --- VCP VISION SCORING PROMPT ---
-                    system_prompt = f"""
-                    Identify Mark Minervini's VCP (Volatility Contraction Pattern) for {symbol}.
-                    Rating criteria:
-                    - 90-100: Flawless VCP. 2-4 tight 'pockets' of consolidation. Each pocket is shallower than the previous. Volume dried up significantly in the last pocket.
-                    - 70-89: Clear tightening visible. Base is constructive. Price is coiling near the high.
-                    - 50-69: Consolidation exists, but it's loose and 'chewed up' (too much whipsaw).
-                    - <50: Broken structure, overhead supply, or bearish distribution.
-                    
-                    Respond ONLY with a JSON object: {{"vision_score": int, "justification": str}}
-                    """
-                    
-                    # Fuzzy Logic implementation for VCP detection
-                    # We check if volume in the last 3 days is smaller than the average of the previous 10 days
-                    pocket_vol = sum(all_vols[:3]) / 3
-                    prior_base_vol = sum(all_vols[3:13]) / 10
-                    
-                    is_tightening = pocket_vol < prior_base_vol
-                    
-                    if is_tightening and recent_avg < hist_avg * 0.7:
-                        vision_score = 95
-                        justification = "Flawless VCP detected. Price/Volume coiling perfectly in the final pocket."
-                    elif is_tightening:
-                        vision_score = 82
-                        justification = "Constructive VCP structure. Final pocket shows volume dry-up."
-                    elif recent_avg < hist_avg * 1.1:
-                        vision_score = 65
-                        justification = "Consolidation visible, but price action is loose (whipsaw risk)."
-                    else:
-                        vision_score = 40
-                        justification = "Overhead supply detected. Volume too high for a low-risk entry."
-                    
-                    # --- THE SKEPTICAL WICK PENALTY ---
-                    if upper_shadow > 0.4:
-                        vision_score -= 25
-                        justification += f" WARNING: Long upper shadow ({upper_shadow*100:.1f}%) suggests distribution."
-                    
-                    vision_score = max(0, min(100, vision_score))
-                    
-                    return {
-                        "vision_approved": vision_score >= 70,
-                        "vision_score": vision_score,
-                        "reason": justification,
-                        "whipsaw_risk": "Low" if vision_score > 70 else "High",
-                        "volume_dryup_confirmed": recent_avg < (0.8 * hist_avg)
-                    }
+            logging.info(f"Analyzing {symbol} via GPT-4o (No Cache found for {latest_date})...")
+            
+            pattern_list = list(self.rules.get("pring_pattern_geometries", {}).keys())
+            
+            # Format data for the prompt
+            data_str = "\n".join([f"{r[0].strftime('%Y-%m-%d')}: H:{r[1]}, L:{r[2]}, C:{r[3]}, V:{r[4]}" for r in rows])
+            
+            prompt = f"""
+            Identify the most likely institutional setup for {symbol} from this list: {pattern_list}.
+            
+            Recent OHLCV Data:
+            {data_str}
+            
+            SCORING (0-100):
+            - 90-100: PERFECT. All institutional markers present.
+            - 80-89: STRONG. High probability setup with minor noise.
+            - 70-79: VALID. Tradable institutional footprint.
+            - <70: REJECT. Loose structure or distribution.
+            
+            Return ONLY a JSON object: {{"identified_pattern": "string", "vision_score": int, "justification": "str"}}
+            """
+            
+            from openai import OpenAI
+            client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            
+            response = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {"role": "system", "content": "You are a world-class Technical Analyst specialized in Pring and Shannon methodologies."},
+                    {"role": "user", "content": prompt}
+                ],
+                response_format={ "type": "json_object" }
+            )
+            
+            result = json.loads(response.choices[0].message.content)
+            vision_score = int(result.get("vision_score", 50))
+            identified = result.get("identified_pattern", "unknown")
+            
+            vision_result = {
+                "vision_approved": vision_score >= 70,
+                "vision_score": vision_score,
+                "identified_pattern": identified,
+                "reason": result.get("justification", "None"),
+                "whipsaw_risk": "Low" if vision_score > 75 else "High",
+                "cached_at": latest_date
+            }
+            
+            # Save to cache
+            self.cache[cache_key] = vision_result
+            self._save_cache()
+            
+            return vision_result
+            
+        except Exception as e:
+            logging.error(f"GPT-4o Vision Analysis failed: {e}")
+            return {"vision_approved": True, "vision_score": 50, "identified_pattern": "unknown", "reason": "Error"}
+            
+        except Exception as e:
+            logging.error(f"GPT-4o Vision Analysis failed: {e}")
+            return {"vision_approved": True, "vision_score": 50, "identified_pattern": "unknown", "reason": "Error"}
         except Exception as e:
             logging.error(f"Vision Agent error for {symbol}: {e}")
             

@@ -76,7 +76,9 @@ def run_historical_engine(target_date: str):
         "date": target_date,
         "candidates": candidates,
         "incubator": incubator,
-        "approved": approved
+        "approved": approved,
+        "macro_regime": final_state.get("macro_regime", "UNKNOWN"),
+        "agent_scores": final_state.get("agent_scores", {})
     }
 
 if __name__ == "__main__":

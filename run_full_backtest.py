@@ -120,15 +120,18 @@ def run_backtest():
             
         results.append({
             "date": date,
+            "market_regime": run_data.get("macro_regime", "UNKNOWN"),
             "gate_1_candidates": run_data["candidates"],
             "gate_1_incubator": run_data.get("incubator", []),
             "gate_2_approved": run_data["approved"],
+            "agent_scores": run_data.get("agent_scores", {}),
             "trades": trades
         })
         
-    with open("backtest_results.json", "w") as f:
-        json.dump(results, f, indent=4)
-        
+        # Incremental Save for real-time study
+        with open("backtest_results.json", "w") as f:
+            json.dump(results, f, indent=4)
+            
     logging.info("Backtest complete. Results saved to backtest_results.json")
 
 if __name__ == "__main__":

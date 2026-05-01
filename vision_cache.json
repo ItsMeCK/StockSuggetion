@@ -1,0 +1,1066 @@
+{
+    "BEL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 83,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data suggests a range-bound movement with price oscillating between the 420-450 range, forming a rectangle pattern over the month of April 2026. The volume spikes on April 8th and March 31st, along with the relatively stable price boundaries, indicate accumulation and distribution phases consistent with rectangle patterns. The minor fluctuations in closing prices around the center of the range contribute minor noise, which slightly lowers the score but maintains a strong overall setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "APOLLO_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "reverse_head_and_shoulders_bottom",
+        "reason": "The data shows an initial downtrend followed by a clear reversal structure with higher lows from 2026-04-06 onward, leading up to a consolidation phase with a significant increase in volume around 2026-04-19, characteristic of the right shoulder. The pattern's symmetry and volume dynamics indicate strong institutional accumulation, aligning with a high probability 'reverse head and shoulders bottom' setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "KANSAINER_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The OHLCV data for KANSAINER shows a narrow trading range within certain price levels, indicative of a rectangle pattern. The highs and lows over the period between April 6th and April 29th suggest repeated price movement within a horizontal band, with neither upward nor downward breakouts establishing dominance. Volume fluctuations are observed, but do not impact the range significantly, which aligns with the characteristics of a rectangle pattern. Minor deviations from perfect horizontal movement account for the score below perfect but still in the strong category.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GODREJAGRO_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "descending_triangle",
+        "reason": "The recent price data indicates a pattern of lower highs while the lows are largely converging around the 582-590 level. This setup is characteristic of a descending triangle, suggesting potential bearish sentiment. The pattern is supported by medium-to-high volume on the downward movements, further confirming institutional interest in a potential breakdown. The vision score reflects strong alignment with descending triangle characteristics, though minor upward tests introduce some noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ADL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "reverse_head_and_shoulders_bottom",
+        "reason": "The OHLCV data indicates a potential reverse head and shoulders bottom pattern. The price action shows initial declines with low points, likely forming the left shoulder. This was followed by a more significant dip around April 8 serving as the head. Finally, a rise and second dip, though higher than the head, suggests the formation of the right shoulder. Volume patterns align with this type of reversal setup, with increased volume on the left shoulder and head followed by consolidation. The overall pattern exhibits characteristics of accumulation with the last price action indicating a potential breakout beginning.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BANARBEADS_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a trading range with clearly defined highs and lows, indicative of a rectangle pattern. Prices have oscillated between approximately 109 and 115 without a decisive breakout in either direction. Volume remains inconsistent, adding minor noise, but the overall price movement suggests a consolidation phase commonly associated with a rectangle pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ANGELONE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The price action for ANGELONE over the provided period suggests a consolidation phase, typical of a rectangle pattern. The recent highs and lows indicate a range-bound movement between approximately 328 and 306, with the closing prices often fluctuating around the middle of this range, consistent with a rectangle formation. This stabilization phase follows a prior uptrend, indicating a potential continuation pattern. Minor deviations exist, but overall, the setup aligns with the characteristics of a rectangle, suggesting a strong probability.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GARFIBRES_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "descending_triangle",
+        "reason": "The recent OHLCV data shows a pattern where the highs are getting progressively lower while the lows have found some support around the 603-607 range, evidencing a descending triangle. Volume reduction during this consolidation period supports the interpretation as a descending triangle, which typically precedes a bearish continuation after a consolidation pause. The pattern is well-formed with minor deviations, giving it a strong probability setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CENTENKA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 88,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a clear trading range between approximately 421 and 437, indicating a sideways movement typical of a rectangle pattern. Volume is relatively stable with occasional spikes, supporting a non-directional trend. Minor deviations are considered noise, resulting in a strong yet not perfect rectangle pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ICICIB22_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The price action over the provided period indicates a tendency for higher lows, while horizontal resistance can be observed around the closing price peaks in the range of 125 to 127. Volume spikes are noted during some of these progresses towards resistance levels, which often characterizes an ascending triangle pattern. However, uncertainty in consistent volume progression and breakout confirmation lowers the perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CGPOWER_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action for CGPOWER shows a series of higher lows and a resistance level around the 840 area, indicating an ascending triangle formation. The trading volumes are relatively high, supporting the accumulation phase typical of this pattern. The price consolidation at higher levels and the eventual breakout potential align with an ascending triangle, suggesting a bullish institutional setup with strong probability.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ELGIEQUIP_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 80,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data reveals higher lows alongside relatively consistent highs around the 555-567 range, suggesting an ascending triangle formation, which is often seen as a bullish continuation pattern. Volume tends to decrease as the pattern progresses, aligning with the volume trend in the given data. However, a minor dip in the recent price reinforces noise, slightly lowering the confidence score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GINNIFILA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates higher lows while the highs are relatively flat, suggesting an ascending triangle pattern. Volume appears to decrease as the pattern develops, which is consistent with this formation. This setup aligns with a high probability scenario given the overlapping highs and rising lows, leading to the STRONG classification.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "AUROPHARMA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "rectangle",
+        "reason": "The OHLCV data suggests a sideways consolidation with relatively stable highs and lows, indicative of a rectangle pattern. The price oscillations between the approximate highs of 1430-1446 and lows of 1357-1380 over multiple trading sessions are characteristic of this pattern. While not all markers are perfectly aligned, the consistent volume and price action support the identification of a rectangle pattern.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "BALKRISIND_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data points showcase a trading range between approximately 2100 and 2365. This reflects a horizontal price movement characteristic of a rectangle pattern, where prices fluctuated within a clear upper and lower boundary without a dominant trend. The volume levels have shown peaks during the initial and final stages, suggesting increased participation at these range boundaries, consistent with traditional rectangle patterns. Nevertheless, slight deviations in consistency lead to a score that signifies a strong but not perfect pattern recognition.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BOMDYEING_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 79,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows fluctuations within a relatively well-defined range. The highs and lows over the examined period are approximately maintaining horizontal levels, indicating the presence of a rectangle pattern. The resistance level is near 116-117 and support is around 110-111. While there are minor deviations, the overall price action remains confined, making this a tradable setup but with some noise, leading to a reasonable vision score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "DHAMPURSUG_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "double_bottom",
+        "reason": "The recent OHLCV data suggests a tradable double bottom pattern. There were two notable dips in closing prices around 140 (on 2026-04-01 and 2026-04-12), indicating potential support levels. The closing prices then witnessed a rise, culminating in a higher closing price on 2026-04-28 and another surge on 2026-04-29. This ascending pattern with increasing volume suggests the formation of a double bottom pattern. However, the structure carries some noise, lowering the certainty to a 'VALID' rating based on Pring and Shannon methodologies.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "BIRLACORPN_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for BIRLACORPN displays price movement confined within a horizontal range between approximately 850 and 960, indicating the formation of a rectangle pattern. This suggests a period of consolidation with relatively equal highs and lows, indicating a balance between buyers and sellers. The consistent volume levels and confined price action support the presence of a rectangle pattern. Although there is minor noise due to fluctuations at the boundaries, the overall pattern is indicative of a strong institutional setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ANDHRAPAP_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The price data over the analyzed period shows a clear horizontal channel with the prices oscillating between the approximate highs of 68.85 (April 16 and 15) and lows around 59.93 (April 5) to 60.17 (April 1). The highs and lows test the boundaries multiple times, indicating a rectangle pattern. The overall volume distribution appears consistent with a pattern forming within these levels, suggesting an ongoing consolidation phase. Minor variations and noise reduce the score slightly, but the structure remains robust.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BHARATGEAR_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for BHARATGEAR shows a relatively consistent range between approximately 106.0 and 113.0, suggesting a rectangle pattern. The horizontal highs around 115.05, 116.4, and 115.05, along with lows near 106.0, indicate price consolidation within a bounded range typical of a rectangle. The pattern hints toward continuation or reversal but lacks strong volume cues and breakout signals, resulting in a VALID, yet tradable institutional footprint.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "AUTOAXLES_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 86,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action shows a series of higher lows while resistance remains relatively flat around the 1900 level, which often suggests an ascending triangle. The volume trend supports a potential bullish breakout, with increased activity on upward price moves, which aligns with accumulation patterns. The structure is coherent with sustained investor interest aiming for a higher breakout, though minor fluctuations affect the overall clarity.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "APOLLOTYRE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for APOLLOTYRE exhibits a clear range-bound price movement with discernible upper resistance around the 445-450 zone and lower support near the 405-420 level. The price actions over the observed period show multiple tests of these boundaries without a decisive breakout, indicative of a rectangle pattern. The volume analysis supports this with no significant volume spikes accompanying price rejections at the range extremes, suggesting an accumulation or stalemate rather than distribution or breakout. This setup aligns with a rectangle pattern's characteristics, hence the scoring of 85 indicating a strong, high-probability setup with minor noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "EIHOTEL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 83,
+        "identified_pattern": "descending_triangle",
+        "reason": "The recent OHLCV data for EIHOTEL suggests a descending triangle pattern. This is characterized by a series of lower highs from April 20 to April 29 and a relatively flat support level around 318 observed on April 14, April 16, and April 29. The volume generally decreases as the pattern progresses, accompanied by a noticeable increase near the resistance touchpoints, aligning with how descending triangles form during downtrends. This gives it a high probability setup with minor fluctuations, thus warranting a strong score in the 80-89 range.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GRAPHITE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "descending_triangle",
+        "reason": "The price data indicates a descending triangle pattern. This is characterized by a series of lower highs and a relatively stable support level, as seen from the OHLCV data from 2026-04-21 to 2026-04-29, where the price is consistently finding support around the 695-710 range, but the highs are steadily declining from 760 to 751, 757, 750, and 749. The decreasing volume on the rally attempts supports the bearish nature of the pattern, suggesting a likely breakout to the downside. The pattern is clear, but minor fluctuations in support levels introduce slight noise, hence the robust score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ELECTCAST_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 80,
+        "identified_pattern": "symmetrical_triangle",
+        "reason": "The price data shows a narrowing pattern of lower highs and higher lows, characteristic of a symmetrical triangle. The volume tends to decrease as the pattern progresses, indicating a consolidation phase typical of this setup. Recent sessions show converging trendlines that suggest a period of indecision, common in a symmetrical triangle. The vision score reflects a strong probability, with some minor noise that doesn't disrupt the overall pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "SHAREINDIA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The price action over the selected period demonstrates a consolidation within a relatively narrow range, characteristic of a rectangle pattern. There are multiple points of resistance around the 150 level and support around the 140 level, indicating a strong horizontal boundary, typical of rectangle formations. The volume shows variability, suggesting minor breakouts and pullbacks, but remains consistent with consolidation patterns. While there is some noise, the overall setup is strong, meriting a vision score of 85.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "NIACL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price data showcases a pattern where there are consistently higher lows from early April 2026, coupled with somewhat consistent resistance around 167-168 seen later in the month. This suggests an ascending triangle, characterized by a horizontal resistance and an upward sloping support line. Though minor noise is present in the fluctuation, the probability remains strong for an upward breakout consistent with institutional buying patterns.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GICRE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for GICRE shows a noticeable pattern where the closing prices fluctuate within a defined horizontal range, suggesting consolidation. Highs generally stay below 417.95, while lows remain above 370.1. This sideway movement is a characteristic of the rectangle pattern, typically indicating a pause or equilibrium before continuation or reversal. Additionally, the volume does not show significant spikes indicating major breakout attempts, strengthening the rectangular formation identification. Nonetheless, minor volatility and variations in daily highs and lows introduce some noise to an otherwise strong pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ESCORTS_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price data shows a series of higher lows with resistance around the 3380 level. This creates a pattern indicative of an ascending triangle, a continuation pattern commonly occurring in an uptrend. The volume decreases as the pattern progresses, aligning with the expected behavior of an ascending triangle. This high-probability setup exhibits minor noise but maintains a consistent upward bias, reflected in a strong vision score of 85.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "STYRENIX_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "symmetrical_triangle",
+        "reason": "The recent OHLCV data suggests price oscillation with progressively lower highs and higher lows, typical in a symmetrical triangle formation. The volumes show significant spikes without clear directional bias, indicating potential buildup of tension. Minor deviations present but overall alignment with symmetrical triangle characteristics.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "HEMIPROP_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a formation where price swings are contained within a horizontal range, suggesting sideways movement typical of a rectangle pattern. The highs range around 129-133 and lows between 127-130. Volume surges on certain days indicate interest but lacks a definitive breakout direction, highlighting potential accumulation or distribution leading to this strong but non-perfect setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GLAXO_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "rectangle",
+        "reason": "The recent GLAXO price data indicates a formation resembling a rectangle pattern. Prices oscillate between a defined horizontal support level around 2320-2350 and a resistance level between 2490-2520. Volume pattern supports this analysis by showing decreased activity within the range, a sign of consolidation typical in rectangle patterns. Although the boundaries are not perfectly horizontal and some noise is present, there is sufficient evidence to consider this a valid rectangle pattern indicative of a consolidative phase potentially preceding a breakout.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "BATAINDIA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The OHLCV data for BATAINDIA shows a consolidation phase with relatively equal highs and lows over the recent trading sessions, indicating a rectangle formation. This pattern is characterized by price moving in a sideways range, which is evident from the repeated testing of resistance around 760-780 and support around 665-700. Volume spikes on certain days suggest some accumulation within this range, further consolidating it as a rectangle pattern. Minor noise in price levels slightly affects the perfect symmetry, hence the strong but not perfect score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CHAMBLFERT_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for CHAMBLFERT indicates a trading range where price oscillates within a well-defined horizontal channel, marked by resistance around 465 and support near 440 levels. The volume is relatively consistent with no significant spikes indicating accumulation or distribution, suggesting a steady indecisive market. The classic visual signature of a rectangle pattern is present with minor fluctuations. Based on these insights, a rectangle pattern can be identified with a strong probability, meriting a vision score of 82 due to the clarity of horizontal boundaries and consistent price movement.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "APOLLOHOSP_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The price data displays signs of consolidation within a relatively narrow range, showing multiple touching points at resistance (around 7850) and support levels (around 7300), indicative of a rectangle formation. The volume trends support a period of range-bound trading. While there might be some fluctuations, the overall pattern suggests a strong possibility of a rectangle setup with minor noise, hence a high probability pattern identification.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CARBORUNIV_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for CARBORUNIV indicates a period of consolidation with horizontal resistance around 981.95 and support near 929.85 to 939.95, forming a rectangular pattern. This price behavior is typical of a 'rectangle' pattern, often observed before a breakout. The volume analysis shows a balanced distribution with no significant spikes, supporting the pattern's legitimacy. The setup is strong, with high probability for a continuation or reversal move, but minor fluctuations and noise slightly affect the overall structure, placing the vision score in the strong category.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BBTC_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows price movement within well-defined horizontal levels, particularly between April 9 and April 29, suggesting a rectangle pattern. The highs are mostly unable to break above 1540 consistently, while the lows have support around 1480. This range-bound trading, with no new significant highs or lows, indicates consolidation typical of a rectangle. The volume has peaks and troughs that are also typical, but the high volume on April 15 is an anomaly that slightly impacts the score, hence a STRONG but not PERFECT setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "EICHERMOT_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price data suggests a period of consolidation with highs and lows forming horizontal boundaries, characteristic of a rectangle pattern. This pattern is defined by multiple tests of support and resistance levels, as seen in the congruent highs around 7260-7290 and lows near 7050-7100. Volatile movements are reduced and volume decreases over time, indicating a possible pause in the market that supports the rectangle setup, earning a strong score above 80.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "DANGEE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "descending_triangle",
+        "reason": "The price has been forming lower highs from April 22 to April 29, with a relatively horizontal support level around the 3.57 - 3.60 range, creating a descending triangle pattern. Volume tends to decrease as the pattern forms, suggesting a potential continuation of the previous downtrend. Despite some minor fluctuations that don't perfectly fit the triangle, the overall pattern and volume behavior suggest a strong descending triangle formation. This interpretation aligns with a high probability setup with minor noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "FINPIPE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "rectangle",
+        "reason": "The data shows a consolidation pattern with alternating highs and lows without a clear trend direction from March 31 to April 29, suggesting a rectangle formation. The recent OHLC data indicates price bouncing between approximately 159 and 179, which implies a trading range. This setup matches the characteristics of a rectangle, reflecting institutional accumulation or distribution.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ICEMAKE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "symmetrical_triangle",
+        "reason": "The data exhibits a narrowing price range between support and resistance levels over time, indicating a continuation pattern. There is a series of higher lows and lower highs, with volumes generally decreasing as the pattern progresses, which is characteristic of a symmetrical triangle. The vision score reflects minor deviations from an ideal symmetrical triangle, yet the consistency of the pattern suggests a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "EPL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows price movements mostly within a defined horizontal range with the highs around 240-235 and lows around 220-225, indicating a consolidation phase or a 'rectangle' pattern. This is seen after a prior uptrend. The volume spikes and subsequent decrease align with typical accumulation or distribution phases within a rectangle. Minor fluctuations are present, which reduce the vision score slightly.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "SHRADHA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "descending_triangle",
+        "reason": "The price range shows a series of lower highs from 2026-03-31 to 2026-04-29, while the support (lower) levels from 2026-04-08 to 2026-04-29 remain relatively stable or slightly descending. The volume pattern supports this as volume tends to increase on down days, indicating distribution. The setup presents a strong descending triangle pattern with a high probability of bearish continuation upon breakout at the support level.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GALAXYSURF_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 88,
+        "identified_pattern": "head_and_shoulders",
+        "reason": "Over the given dataset, a pattern resembling the classic head and shoulders can be observed: a high peak (April 15th) flanked by two lower peaks (April 8th and April 28th). This suggests a possible trend reversal as volumes on peak days are significantly higher than surrounding days, supporting the hypothesis of distribution at these levels. The high vision score reflects a strong setup with this identifiable pattern, although some volatility around it adds minor noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "DICIND_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows price consolidation between approximately 500 and 560, forming a horizontal pattern with multiple small peaks and troughs within a range. This consistent range and lack of a clear directional breakout suggest a rectangle pattern. The 'rectangle' pattern aligns with the observed data, with relatively stable highs and lows over an extended period, indicating a strong commitment by both bulls and bears. The vision score is 85 due to the clear range boundaries but minor fluctuations which add some noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "DABUR_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for DABUR shows a range-bound movement between a high of approximately 465 and a low of about 424 over the observed period, indicating a consolidation phase typical of a rectangle pattern. The pattern is characterized by multiple touches of support and resistance levels without any clear breakout, suggesting indecision and equilibrium between buyers and sellers. The consistent price oscillation within this range, combined with moderate volume variations, signifies a strong probability setup, albeit with minor noise from volume spikes and a few outliers, which slightly affect the pattern's perfection score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CHOLAFIN_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "symmetrical_triangle",
+        "reason": "The recent OHLCV data shows converging highs and lows, indicating a contracting range which is characteristic of a symmetrical triangle. This pattern often occurs as a continuation pattern in a trending market. The volume also decreases as the pattern progresses, which is typical for symmetrical triangles. The breakout direction is not yet confirmed, but the structure is strong with minor noise, suggesting a potential continuation of trend upon breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "MARINE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price data demonstrates a pattern of higher lows from approximately April 5th onward, with relatively consistent resistance at around 236 since April 23rd. This is indicative of an ascending triangle pattern in which buying pressure is pushing prices higher while sellers are maintaining a consistent resistance level. The volume pattern, with notable peaks on April 22nd and April 23rd, aligns with the expected volume breakout characteristics of an ascending triangle. This setup exhibits a strong institutional footprint but shows some minor noise around the resistance level, hence a vision score of 85.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "FACT_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "descending_triangle",
+        "reason": "The recent OHLCV data indicates a market setup where there's a clear downtrend reflecting lower highs while the lows are moderately converging, forming a descending triangle. This pattern suggests a continuation of the prevailing trend. Volume analysis shows increasing volume on down days, supporting the descending triangle diagnosis. While most markers align with the pattern, slight deviations in volume consistency cause minor noise, warranting a strong probability tag.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GTECJAINX_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "symmetrical_triangle",
+        "reason": "Analysis of recent OHLCV data shows converging high and low price points over the observed period, characteristic of a symmetrical triangle pattern. Volume patterns also support this, as volume tends to decrease as the pattern progresses, indicating consolidation before a potential breakout. Although there is some noise, such as fluctuations in volume and slight irregularities in price action, the overall setup suggests a symmetrical triangle with high probability.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "EUROTEXIND_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "symmetrical_triangle",
+        "reason": "The data indicates a consolidation pattern with converging trendlines suggesting a symmetrical triangle. The narrowing of high and low prices from the start at 13.12 on 2026-03-31 to the current prices, and moderate volume fluctuation, support this formation, pointing to a potential breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ABB_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "head_and_shoulders_top",
+        "reason": "The recent price action and volume present a classic 'head and shoulders' formation. The price structure over the past couple of weeks shows an upward trend marked by three peaks: a higher peak ('head') in the middle, flanked by two lower peaks ('shoulders'). This pattern is confirmed by a decrease in volume near the head and shoulders, suggesting a potential reversal pattern. The increased volume on April 21, followed by a decline, supports the breakdown expectations of this pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BEPL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "symmetrical_triangle",
+        "reason": "The recent OHLCV data for BEPL shows a pattern of lower highs and higher lows forming a converging price range, indicating a symmetrical triangle formation. This is further validated by fluctuating volume levels, which are typical as the pattern progresses towards its apex. Although there's minor noise in the form of brief dissonance in price movement, the overall structure remains intact, thus scoring 85 for a strong probability setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GMBREW_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The OHLCV data shows a well-established range trading between the highs around 980-1000 and the lows around 960-975 over several trading sessions. This horizontal price movement depicts a rectangle pattern, where the price is bounded by parallel support and resistance levels, indicating a consolidation phase. The volume is relatively stable, aligning with typical characteristics of a rectangle formation. There are minor variations, but the overall structure remains valid for a rectangle, hence a strong but not perfect setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "DRREDDY_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data reveals a formation where the highs are becoming increasingly lower while the lows remain relatively stable, particularly evident from the consistent higher lows around the 1217-1220 range. This suggests an ascending triangle pattern, which is typically a bullish continuation pattern. The volume also shows a spike during breakouts from key resistance levels, indicating institutional accumulation. The score reflects a strong, high-probability setup with minor ambiguity in volume continuity.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BSHSL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The price action over the recent period suggests a rectangle pattern formation due to the identifiable horizontal support and resistance levels between roughly 97.0 and 105.0. This range-bound movement is indicative of consolidation and aligns with institutional interests where accumulation or distribution could be taking place. Volume spikes on breakout attempts further support the rectangle setup, although minor volatility injection keeps this pattern from scoring perfectly.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "UNIDT_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "descending_triangle",
+        "reason": "The recent OHLCV data exhibits a series of lower highs and relatively consistent support around the 200-202 price level, characteristic of a descending triangle formation. The volume profile aligns with reducing volume on price declines, suggesting the potential for a bearish continuation pattern. The structure appears robust with some minor noise from a few breakout attempts, ensuring a high probability setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ABREL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 87,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The price data displays the characteristics of an ascending triangle, marked by higher lows and a relatively flat resistance line around the 1570 level. Volume was relatively higher during the initial run-up and decreased during consolidation, which is consistent with an ascending triangle. However, there is minor noise in the recent fluctuation of prices that slightly deviates from a textbook example, impacting the vision score slightly.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "MAHLOG_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for MAHLOG shows a broad range of price between approximately 350 and 450, where the price has oscillated without a clear trend direction since March 31, 2026. This consolidation with a relatively flat support level (around 401) and resistance level (approaching 448 to 450) aligns with the characteristics of a rectangle pattern. The rectangle formation is supported by the lack of lower lows or higher highs, and consistent volume fluctuations, indicating a potential continuation pattern. The vision score is 85 because while the pattern is strongly evident, there's minor noise and variation due to high volume spikes, but the overall structure largely supports this setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ASIANPAINT_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data suggests the formation of rising lows with relatively flat highs, characteristic of an ascending triangle. This pattern indicates accumulation within a discreet price range before a potential breakout. The volume pattern also supports this structure, with increasing interest at the lower boundary and diminishing volume near the upper boundary. The presence of higher lows with the potential breakout makes the setup strong, albeit with minor noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ARENTERP_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data suggests a pattern characterized by a series of higher lows (seen on 2026-03-31, 2026-04-05, 2026-04-07) and a relatively horizontal resistance line around the 42 level (seen on 2026-04-19, 2026-04-20, 2026-04-21, 2026-04-22, and 2026-04-23). This pattern is indicative of an ascending triangle, commonly a bullish continuation pattern. The volume shows initial spikes followed by a general downtrend, supportive of consolidation typical in such patterns. Minor volatility from some bars detracts from a perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "SDBL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "reverse_head_and_shoulders_bottom",
+        "reason": "The recent OHLCV data shows a potential reverse head and shoulders pattern. The chart demonstrates an initial decline to 69.14 on March 31, which could serve as the left shoulder. A significant further decline to 75.8 on April 8 could represent the head. This is followed by a recovery and then another decline to 84.36 by April 15. The subsequent rise in price can be considered forming the right shoulder, as it's followed by a rise back to higher levels, with trading volumes suggesting potential accumulation as prices recover. Minor fluctuations around the 84 region before breaking higher add credibility to the formation. However, noise in price levels and volume varies, requiring further confirmation for validation.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "AEGISLOG_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 88,
+        "identified_pattern": "double_bottom",
+        "reason": "The recent OHLCV data exhibits a potential double bottom pattern emerging. Prices fell sharply from March 31 to April 14, creating an initial bottom around the 658 level. Following a brief recovery, another low was formed around the same level (April 15 to 16), validating the 'double bottom' structure. The subsequent price increase after April 16 indicates a potential reversal from the previous downtrend, which aligns with institutional buying behavior typically seen in such setups. The demand-driven spike on April 19, marked by a substantial increase in volume, reinforces the pattern's integrity, making it a strong, high probability setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "UTIAMC_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "head_and_shoulders_top",
+        "reason": "The recent OHLCV data exhibit characteristics of a head and shoulders top pattern. The highest peak on 2026-04-21 appears as the head, flanked by lower peaks on 2026-04-22 and 2026-04-20 acting as shoulders. The volume peaked near the head, and there's a notable price decline afterward, which typically confirms the pattern. The drop from the head's peak reflects classic distribution behavior, consistent with this pattern formation.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "SINTERCOM_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 81,
+        "identified_pattern": "rectangle",
+        "reason": "The OHLCV data suggests a consolidation phase with the price oscillating in a defined range. There are multiple touchpoints showing both resistance around the upper 77-80 range (peak touches on April 21 and April 20) and support in the lower 70s (troughs on March 31 and April 5). The volume spikes on April 21 and April 16 suggest potential for a breakout. Minor noises in price movements didn't affect the overall horizontal channel, leading to the identification of a rectangle pattern. Given the consolidation and volume dynamics, the setup is strong.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ZENSARTECH_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "descending_triangle",
+        "reason": "The recent price action shows lower highs, particularly from 2026-04-20 onwards, indicating a descending resistance line, while the lows, particularly at 513.85 on 2026-04-29, suggest a potential support level. Combined with the decreasing volume, this aligns well with the formation of a descending triangle pattern, likely indicating bearish continuation.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GLAND_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "head_and_shoulders_top",
+        "reason": "The recent OHLCV data for GLAND suggests the formation of a head and shoulders top pattern. The highest price on 2026-04-22 forms the head, with relative peaks on 2026-04-21 and 2026-04-26 forming the shoulders. The lower highs in subsequent data and a moderate increase in volume indicate a potential bearish reversal, aligning well with the typical characteristics of a head and shoulders top pattern. Noise is minimal, although slight fluctuations exist, thus earning a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CANFINHOME_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "rectangle",
+        "reason": "The observed price action for CANFINHOME over the recent dates suggests a range-bound movement, indicating the presence of a rectangle pattern. Prices are frequently touching but unable to consistently break through a defined support level around 800-830 and resistance level around 900-920. Volume activity fluctuates within this range, which is consistent with a rectangle pattern as it involves consolidation within horizontal support and resistance levels. This setup shows a tradable footprint as prices are constrained within this defined range; however, due to some fluctuations in volume and price spikes that create minor noise, the vision score is assigned as 78, indicating it as a valid setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CRISIL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates a pattern of higher lows from early April to late April, while the highs remain around the same level, especially within the range of 4370-4400. This creates a price action typical of an ascending triangle, where buying pressure is building up leading to a possibility of a breakout. The volume data supports this pattern showing a gradual increase in volume towards the end of the period, suggesting that accumulation might be happening. The pattern is strong but includes slight noise with some variability in daily price ranges, which slightly lowers the perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GNFC_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 83,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for GNFC demonstrates a price range bound between approximately 466 and 492 over multiple sessions. The highs and lows are respecting horizontal support and resistance levels, typical of a rectangle pattern. Volume remains relatively consistent without significant spikes, supporting the continuity of the pattern. This suggests an accumulation phase with possible continuation after a breakout, fitting the rectangle continuation characteristics.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "DPABHUSHAN_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "symmetrical_triangle",
+        "reason": "The recent price data indicates converging trend lines, as evident from the narrowing high and low data points. The highs have gradually decreased from 1199.95 to 1150.0 and the lows have increased from 985.0 to 1090.05, suggesting an incision of volatility that matches a symmetrical triangle pattern. While the volume has been variable, it peaked at points of wide price movement but has not shown consistent divergence, thus showing signs of strong but not perfect institutional activity likely indicating an impending breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "TIINDIA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The price data indicates an increase in lows from early April through to the end of April 2026, creating a rising trendline underneath the price action, while the highs around late April suggest a relatively flat area of resistance near the 3065 mark. These are characteristic features of an ascending triangle, suggesting bullish accumulation. The volume characteristics also support the pattern, as there's a declining volume trend with a few volume spikes, typically observed in a breakout phase of ascending triangles. While not all markers align perfectly, the pattern's main traits are present, warranting a strong scoring.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "DCM_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 88,
+        "identified_pattern": "symmetrical_triangle",
+        "reason": "The recent OHLCV data indicates a potential symmetrical triangle pattern. The pattern is emerging from a series of higher lows and lower highs, creating converging trendlines over the observed period. Trading volume, which is initially high during the first half of the observed period, progressively decreases, consistent with the formation of a symmetrical triangle. This pattern often suggests a period of consolidation with an impending breakout, typically continuation or reversal depending on the broader market context before the pattern formed. Despite minor noise in volume and price volatility, the overall structural integrity of the symmetrical triangle remains strong.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "SHALBY_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data indicates price movement largely within a defined range, suggesting a consolidation phase consistent with a rectangle pattern. The highs and lows over the stated period show repeated support around 155-160 and resistance near the 165-170 level. The price action has demonstrated a notable pattern of bouncing between these levels without a significant breakout, reinforcing the rectangle pattern. The vision score reflects a valid trading opportunity with clear boundaries, although volatility and volume dynamics introduce some uncertainty.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "BPL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "head_and_shoulders_top",
+        "reason": "The recent data exhibits characteristics of a head and shoulders top pattern. After a strong initial upward movement, a higher peak (head) was formed around April 27th, flanked by two lower peaks (shoulders) on April 9th and April 29th, with a trend of decreasing volume during the formation span. This pattern suggests a potential reversal. The structure observed shows a strong probability setup with minor market noise, hence the high vision score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "DCW_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "Upon analyzing the recent OHLCV data, the price action from 2026-04-01 to 2026-04-29 appears to be trading within a well-defined horizontal channel, suggesting a 'rectangle' pattern. The highs and lows during this period show periods of consolidation with a clear resistance around 49.14 and support near 42.00. This bounded movement indicates a strong possibility of accumulation or distribution within this range. The vision score is assessed as 85 due to the presence of a defined range with minor fluctuations, suggesting a strong setup with minimal external noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BSL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "rectangle",
+        "reason": "The price action over recent trading sessions shows the formation of a rectangle pattern, which is characterized by a range-bound movement between approximately 130 on the high end and 120 on the low end, observed from the dates 2026-03-31 to 2026-04-29. This indicates accumulation, as the price repeatedly tests these horizontal support and resistance levels without breaking out. The volume pattern during this period is relatively variable, aligning with typical rectangle formations. However, the lack of breakout confirmation and some variability in price levels reduces the certainty of this pattern being perfectly drawn, hence the scoring.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ARVIND_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for ARVIND shows a consolidation phase with highs and lows forming a horizontal range, suggesting a rectangle pattern. The consistency in the closing prices fluctuating within a defined range, coupled with steady volume levels and lack of clear trend direction, supports the rectangle classification. While minor noise in form of slight price spikes is present, the overall setup aligns closely with the characteristics of a rectangle, justifying a strong probability rating.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ADANIENT_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent data shows a series of higher lows from L:2186.1 on April 16 to L:2286.0 on April 26, while highs stabilize around the 2440 zone evident from H:2443.8 on April 28. This suggests an ascending triangle pattern. The incrementing volume from April 22-29 supports potential breakout likelihood, marking a valid tradable setup with reasonable clarity despite some minor volatility before the pattern formation.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BHARATFORG_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The OHLCV data indicates a pattern where there is a relatively horizontal resistance level around the highs of 1915-1949 over the recent period with a series of higher lows from the start of the data, indicating pressure building against the resistance. The volume generally supports a potential breakout structure typical of an ascending triangle. Minor fluctuations in daily ranges and volumes introduce some noise, thus scoring it as STRONG rather than PERFECT.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "UFLEX_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "reverse_head_and_shoulders_bottom",
+        "reason": "The recent pricing data shows a reverse head and shoulders pattern developing, with a prominent head formed with a low of 344.55 on 2026-04-06, followed by subsequent higher lows suggesting the formation of the right shoulder. The pattern's breach point above the 400 level reinforces strength, indicated by increased volume on 2026-04-27. The setup is strong but has minor noise due to interim volatility, hence an 85 score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "SHIVATEX_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "reverse_head_and_shoulders_bottom",
+        "reason": "The data reveals a formation starting with a low on 2026-03-31 followed by a rise and subsequent decline forming the left shoulder. A deeper low appears on 2026-04-05, representing the head. The closing prices then rise, with a drop to form the right shoulder around 2026-04-12. Volume increased notably during the rise on 2026-04-28, which complements the pattern breakout characteristics. This setup indicates a potential reversal, and while it exhibits minor deviations from a perfect reverse head and shoulders, overall it presents a strong probability setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ESG_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data exhibits a relatively consistent range in both highs and lows, creating a sideways movement typical of a rectangle pattern. The highs around 41.1 to 41.7 and lows around 40.3 to 40.9 do not exhibit significant trend breaches, while moderate volume suggests accumulation or distribution phases often seen in such patterns. Minor fluctuations indicate some noise, thus scoring it lower than perfect.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CASTROLIND_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price data for CASTROLIND shows a range-bound movement with the highs approximately around 185.39 and the lows around 182.5. This suggests a rectangle formation, where prices are mostly confined between horizontal support and resistance levels. The consistent volume within this period also supports a consolidation phase, aligning with a rectangle pattern, which is typically a continuation or neutral formation. Minor fluctuations represent noise, hence the 'strong' scoring.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GABRIEL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The OHLCV data shows a clear pattern of higher lows, while the highs remain relatively consistent. This is characteristic of an ascending triangle, which is a bullish continuation pattern. The consistent high points around the 1030 level combined with increasing lows suggest accumulation and potential breakout. Volume also seems to decrease, typical before a breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BAJFINANCE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The price action for BAJFINANCE shows a consolidation phase with alternating touches around the highs of 975.0 and lows of around 855. This behavior typifies a rectangle continuation pattern as the price hovers and retests these levels without breaking out significantly. The volume spikes during the initial high and subsequent lows indicate accumulation and potential for continuation. Overall, the pattern is well-formed with minor deviations lending to a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "VALIANTORG_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 80,
+        "identified_pattern": "head_and_shoulders",
+        "reason": "The recent price action indicates a potential head and shoulders pattern, characterized by three peaks, with the middle peak being the highest. The initial rise and subsequent decline form the left shoulder, followed by a higher peak (head), and another lower peak (right shoulder). The declining volume from the head towards the right shoulder also supports this pattern, indicating a potential reversal. The structure is strong but with slight noise, hence the 'strong' score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ANDHRSUGAR_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The data shows a rising price floor with relatively even highs around the 103 level, creating a recognizable ascending triangle formation. This pattern is suggestive of an accumulation period with potential for upward breakout. Minor noise in volume increases near peaks slightly lowers confidence level.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BAJAJHLDNG_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price data for BAJAJHLDNG indicates a consolidation pattern where the highs and lows have been consistently touching a horizontal resistance and support level, suggesting a rectangle formation. The price seems to be trading within a range without a clear breakout upwards or downwards, showing consistency with the rectangle pattern. The rangebound movement and relatively stable volume support this identification, though there is some minor fluctuation which slightly lowers the vision score from a perfect mark.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "DALMIASUG_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "rectangle",
+        "reason": "The price data suggests consolidation, as seen in the relatively flat closing prices within a range over the recent period. The highs and lows indicate a lack of clear directional momentum, typical of a rectangle pattern. The volume also fluctuates but does not align perfectly with a breakout or strongly directional pattern, which suits a rectangle's consolidation phase. This signals a valid institutional footprint, but with enough variability and lack of decisive characteristics to preclude a perfect score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "FINCABLES_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data suggests a pattern where there is a horizontal resistance level around the 1015 mark and higher lows forming since early April. Volume generally decreases as the price approaches the resistance, indicating an ascending triangle, a bullish continuation pattern, with a strong probability of an upward breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "3MINDIA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "rectangle",
+        "reason": "The price data for 3MINDIA shows a range-bound movement with clear horizontal resistance around 33800-33895 and support around 31255-31585. This indicates a rectangle pattern, which is confirmed by relatively consistent highs and lows over the recent period. Volume remains steady with occasional spikes, typical for a rectangle pattern where traders buying at support and selling at resistance balance each other out. However, the noise from previous sessions pulls the score slightly below 'Strong' due to less clarity in immediate breakout directions.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BASF_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "rectangle",
+        "reason": "The recent BASF price data shows oscillation between a clear horizontal resistance around 3720 and support near 3560, forming a bounded range without a significant upward or downward breakout, typical of a rectangle pattern. The relatively consistent volume indicates stability within this range, confirming the pattern without strong directional bias.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BEML_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 80,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data from 2026-03-31 to 2026-04-29 displays a pattern characteristic of an ascending triangle. The upper bound resistance appears to be near the 1842.0 to 1874.0 range, while higher lows are forming, indicating accumulation and potential breakout. Volume analysis shows increasing interest as price nears resistance, suggesting institutional accumulation. The minor noise does slightly affect the perfect setup but does not significantly detract from the overall pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "FMGOETZE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The price action shows a consolidation phase with upper resistance around 458-460 and lower support near 431-433 over the analyzed period. The volume alternates but does not significantly trend one way, indicating a strong range-bound trading environment typical of a rectangle pattern. This suggests a period of indecision, with no clear trend yet, warranting a strong but not perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BALRAMCHIN_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data of BALRAMCHIN shows a broad sideways movement with support near the 480-490 levels and resistance around the 540-550 levels. This is indicative of a rectangle pattern where prices have been oscillating within a defined horizontal range. Despite fluctuations and minor anomalies, the pattern's boundaries are respected, justifying a strong probability of a rectangle institutional setup. Volume analysis supports this as well, as it has remained relatively stable when moving towards the range boundaries.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "PGHL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 88,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for PGHL shows a series of horizontal price movements in a range between approximately 4900 and 5200. This suggests a rectangle pattern, characterized by consistent highs and lows without significant trending, typically between two parallel support and resistance levels. The relatively high volume during this period, particularly on April 9 and April 15, supports the likelihood of institutional participation, which aligns with a strong probability setup. Minor fluctuations within the range account for the slightly less than perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ESABINDIA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The price data shows a series of higher lows starting from early April with a relatively flat high resistance level around 6000-6200 observed recently. This forms the textbook characteristics of an ascending triangle. The volume on April 14 was significantly high, suggesting institutional interest or accumulation, and the subsequent price action confirmed a breakout above previous resistance levels, indicative of a strong continuation pattern. However, there was a slight noise in the form of intraday volatility, affecting the score slightly.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ADOR_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The price data shows a series of higher lows and relatively consistent highs around the 1070-1100 level. Volume tends to decrease as the pattern progresses, which is typical for an ascending triangle. This pattern suggests accumulation and potential bullish breakout, contributing to a strong, yet not perfect, pattern setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "TCPLPACK_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for TCPLPACK suggests a consolidation phase with alternating highs and lows maintaining a relatively horizontal pattern. The highs and lows for the period do not show a clear upward or downward trend; rather, they oscillate within a horizontal channel, indicative of a rectangle pattern. Volumes have fluctuated but remained significant, supporting the notion of accumulation or distribution within this range. The pattern is not perfectly defined, with some minor deviation, but overall resembles a rectangle more than other patterns on the list, leading to a strong but not perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "COSMOFIRST_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data for COSMOFIRST suggests an ascending triangle pattern characterized by higher lows observed on 2026-04-08 (L: 640.0), 2026-04-21 (L: 671.0), and 2026-04-28 (L: 710.0), while the highs are relatively stable around the 740 level on 2026-04-22 (H: 741.3) and 2026-04-27 (H: 744.0). The volume appears to decrease as the pattern progresses, which is typical for an ascending triangle setup. This setup indicates a potential bullish breakout with a high-probability structure, thus earning a strong score of 85.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "HARRMALAYA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a consistent pattern of higher lows with resistance around the 230 level, indicative of an ascending triangle. The volume spikes on upward movements, particularly around April 22 and April 26, support the presence of buying pressure. Although some noise and minor deviations exist, the pattern assigns a high probability to a bullish breakout, hence a STRONG score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "DELTAMAGNT_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The OHLCV data reveals a series of higher lows from March 31 to April 22, suggesting accumulation at higher prices. The resistance appears to be around the high prices observed in April, specifically around the 66.99 level. Despite some fluctuations, the highs in this area suggest resistance, typical of an ascending triangle formation. The volume spikes, particularly on April 9 and April 22, indicate potential institutional interest. The pattern is strong with minor noise, aligning well with the characteristics of an ascending triangle.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GODFRYPHLP_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent data shows a pattern where there is a relatively flat upper resistance line around the 2290 level (highlighted on 2026-04-28 and 2026-04-29) and a series of higher lows forming over time, indicated by April dates like 2026-04-07, 2026-04-08, and onward. The trading volume also increases at certain key areas, which is indicative of accumulation. However, the pattern is not perfectly clean as there is some volatility around the middle of the sequence. Therefore, the setup is tradable but not flawless.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "HEG_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 90,
+        "identified_pattern": "head_and_shoulders_top",
+        "reason": "The recent price action displays characteristics of a head and shoulders top pattern, with a clear left shoulder on April 5-15, a head formed with the peaks around April 19-28, and a right shoulder from April 29 onwards. The neckline is roughly around the 550-560 level which previously acted as support. The breakdown observed on April 29 supports this pattern, indicating a potential decline. Volume spikes during the formation peaks and higher volume on the breakdown day add to the credibility of the pattern's completion, supporting the high vision score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GUJALKALI_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "head_and_shoulders_top",
+        "reason": "The price pattern demonstrates characteristics of a head and shoulders top. There is a distinct left shoulder (April 5 - April 9), a head formation (April 12 - April 16 with peaks in the range of April 16), and a right shoulder (April 19 - April 22). Volume tends to rise during these periods, especially notable during the initial shoulder and head formations, confirming shoulder presence but noise exists in post-right shoulder trading fluctuations.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "SCHAEFFLER_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data reveals a bounding pattern where prices move horizontally within a defined range. The highs and lows over the examined period show a periodic bounce between resistance around 4400 and support near 3750, indicating a rectangle pattern. The volume data does not show a definitive breakout, which aligns with the characteristics of a rectangle formation rather than any decisive bottom or top patterns. The vision score of 78 reflects a valid trading opportunity with recognizable characteristics of institutional setups but potential for noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "MASFIN_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The historical OHLCV data for MASFIN shows a pattern of higher lows forming a rising support line, while the highs are hitting resistance around the 325-328 range, suggesting an ascending triangle. The gradual increase in volume, particularly on April 21 and April 29, supports the formation, indicating accumulation and growing interest. These characteristics align with a strong institutional setup, hence the scoring within the 80-89 range, showing a high probability setup with minor noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GIPCL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The price data over the recent period shows consistent higher lows, typical of an ascending triangle pattern. Resistance seems to be near 159, with rising support from early April. The volume is relatively high during the formation, suggesting institutional accumulation. Minor noise in volume, but the pattern is strong enough with a clear upward trend since early April, giving a strong probability of an ascending triangle.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "FOSECOIND_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 79,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLC data demonstrates a horizontal movement with key support and resistance levels between approximately 4470 and 4868, indicating a rectangular trading range. The highs and lows are contained within this range without clear trend continuation or reversal signals, which is characteristic of a rectangle pattern. The volume's inconsistency, with spikes on some days, suggests consolidation but does not provide a strong breakout signal, keeping the rectangle pattern rating at a 'VALID' level at this moment.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "FEDERALBNK_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action displays characteristics of a rectangle pattern, with multiple touches in a range between approximately 280 and 298, consolidating sideways without a clear directional trend. The price has shown a tendency to bounce off the established levels, typical in a rectangle formation, suggesting potential accumulation or a continuation of the prior trend. The volume fluctuates without a consistent decreasing pattern, which slightly reduces the score due to minor noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BAJAJHIND_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLC data shows higher lows from 2026-03-31 to 2026-04-29, indicating an uptrend in the lower boundary. The upper boundary around the 20.30 level is consistent with horizontal highs from 2026-04-22 to 2026-04-29. This formation fits the characteristics of an ascending triangle, suggesting bullish pressure with a resistance level that might soon be tested or breached. Volume is generally decreasing with occasional spikes, typical during this pattern's formation, reflecting institutional interest.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ROML_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "symmetrical_triangle",
+        "reason": "The recent OHLCV data for ROML demonstrates a series of lower highs and higher lows over the analyzed period, which is characteristic of a symmetrical triangle. This pattern often indicates a consolidation phase where the price action is progressively narrowing, leading to a potential continuation or reversal. The high trading volume on certain large moves adds credibility to this pattern. However, the presence of some noise in the volume data slightly reduces the overall score, placing it within a strong but not perfect range.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "MAZDOCK_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data for MAZDOCK depicts higher lows with a relatively horizontal resistance level observed around the 2700s region. This configuration suggests an ascending triangle pattern, which is typically understood as a bullish continuation pattern, supported by increasing volume on up days. The pattern is also reinforced by repeated tests of the resistance level accompanied by rising troughs, indicating accumulation and increasing buying pressure. Minor fluctuations in volume and price might introduce minor noise, leading to the strong probability setup assessment.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "HAPPSTMNDS_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data indicates a potential rectangle pattern. Price movements over the analyzed period exhibit oscillation between key support and resistance levels, with two attempts to break higher or lower, but failing, returning to the previous range. The pattern lacks a significant breakout, and the volume profile does not show clear divergence indicative of a stronger setup, suggesting a 'Valid' score based on the oscillation within well-defined horizontal boundaries with stable support at approximately 370 and resistance near 382. These characteristics align with the formation of a rectangle pattern without decisive directional breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CESC_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "head_and_shoulders",
+        "reason": "The recent OHLCV data shows characteristics of a head-and-shoulders pattern. There are three peaks with the middle being the highest, evident from data around April 26 (H:193.3) serving as the head, and lower peaks around April 22 (H:182.04) and April 28 (H:195.0) serving as the shoulders. The pattern forms amid increased trading volumes, especially on April 26 with a volume of 10,065,502, which is characteristic of institutional activity in confirmation of the pattern. Although the head-and-shoulders pattern typically requires more symmetry, the deviations here are minor, resulting in a strong, albeit not perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "AARTIIND_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The price data for AARTIIND indicates a period of consolidation with sequential higher lows and a relatively flat top around the 510 level. This is a key characteristic of an ascending triangle pattern, where bullish pressure could be building up due to higher lows while resistance at the upper boundary remains constant. Volume trends support this interpretation as well, with increased volume noticed towards the recent highs, suggesting a strong interest and probable breakout attempt. Minor noise is present as not all highs are exactly aligned, but the overall structure and volume signal a strong ascending triangle formation.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BHEL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action of BHEL shows a series of higher lows from 2026-04-06 to 2026-04-29, indicating bullish sentiment. The high on 2026-04-28 and the high on 2026-04-29 create a resistance level, forming the horizontal top part of the triangle. Volume has been reducing in some sessions, which is typical as a pattern develops. The structure aligns with an ascending triangle, known for strong breakout potential, which gives it a strong vision score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BANARISUG_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "rectangle",
+        "reason": "The OHLCV data indicates a trading range with sideways movement, characterized by similar highs and lows without a clear trend. This consolidation suggests a rectangle pattern as both higher and lower boundaries have been consistently tested but not decisively broken. Volume fluctuations support this setup with no significant breakout signals, marking it as a VALID, tradable institutional footprint.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "DCMSHRIRAM_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "symmetrical_triangle",
+        "reason": "The recent data shows the formation of a symmetrical triangle as evident from the series of lower highs and higher lows visible from 2026-04-01 to 2026-04-29. The convergence of these price points, along with moderate volume throughout the period, suggests a consolidation phase typical of a symmetrical triangle. The pattern is further corroborated by the balanced alternating closing positions relative to the mid-point of the range, suggesting indecision in the market which aligns with this pattern type.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ATUL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 80,
+        "identified_pattern": "head_and_shoulders_top",
+        "reason": "The data exhibits a head and shoulders top pattern with a peak around April 23rd as the head, smaller peaks on April 12th and 27th as the shoulders, and a potential neckline around 6550-6600. Volume trends indicate an increase during the formation of the head, consistent with typical characteristics of a head and shoulders top. Minor noise due to fluctuations but otherwise a strong formation.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "EXIDEIND_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data of EXIDEIND shows a pattern where the highs are forming at a similar resistance level (370 region) while the lows are progressively getting higher, indicating an ascending triangle. This is further supported by increased volume on the high days and contraction on the low days, typical of this pattern, highlighting a strong accumulation phase likely preceding a bullish breakout. The consistency of the lows rising while the highs remaining constant suggests a bullish potential with minor irregularities in volume, fitting the qualifying criteria for an ascending triangle with a strong probability setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "KEEPLEARN_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a consolidation pattern with relatively equal highs and lows, which suggests price oscillating between support and resistance levels. This is indicative of a rectangle pattern. The consolidation is seen with prices consistently closing within a narrow range from approximately 1.93 to 2.2 over the observed period. The volume spikes in April 12th and April 21st indicate potential reaction points at the rectangle boundaries, supporting this assessment. Despite minor deviations, the setup maintains a strong rectangular form, justifying a strong vision score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "IGARASHI_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The OHLCV data suggests a potential ascending triangle formation with the price creating higher lows from 304.25 on 2026-04-05 to 365.3 on 2026-04-22, while the highs around 388-396 form a relatively flat resistance level. This pattern is indicative of accumulation by institutions on increased volume, particularly noticeable on 2026-04-21 and 2026-04-26. The overall market behavior suggests a bias towards a breakout above the resistance, thus establishing a strong probability setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ASHIMASYN_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "reverse_head_and_shoulders_bottom",
+        "reason": "The data from the recent trading days show characteristics of a reverse head and shoulders pattern. On April 19, the lowest price point forms the 'head' with prices subsequently increasing. Prior to and following this, slightly higher low points on April 15 and April 26 form the 'shoulders'. The increase in the closing prices and volume, especially from April 20 onwards, supports this interpretation as a potential reversal pattern, indicating strong buying interest. This setup has a high probability with minor fluctuations, justifying its classification as a strong institutional setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CAMS_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action suggests a sideways trading range, indicating formation of a rectangle pattern. The highs and lows have formed parallel support and resistance levels, with several touches on both boundaries. While volume shows fluctuations, it aligns with the sideways movement, confirming a strong setup with minor noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "EIDPARRY_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The OHLCV data for EIDPARRY indicates a trading range pattern where prices have repeatedly tested support and resistance levels without breakout continuation. There are multiple touches of highs near 860 and lows around 830-850, forming a parallel or horizontal pattern typically identified as a rectangle. The volume shows no significant directional bias, adding to the sideways movement characteristic, hence scoring it as a strong rectangle pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CIPLA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The price data shows a horizontal trading range between the levels of approximately 1225 and 1325 with multiple touches on both support and resistance levels. There are consistent highs and lows within this range, supporting the formation of a rectangle pattern. Additionally, trading volumes spike near the edges of the range, characteristic of rectangle formations, indicating potential accumulation or distribution actions by institutions.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "21STCENMGM_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "reverse_head_and_shoulders_bottom",
+        "reason": "The price action from 2026-04-05 to 2026-04-29 shows a reversal structure typical of a 'reverse head and shoulders bottom' pattern. There are three distinct lows with the middle (the 'head') at around 29.75 on 2026-04-09, flanked by two higher lows (the 'shoulders') around 28.62 and 30.55. The volume on 2026-04-12 supports a breakout expectation, displaying a significant increase consistent with institutional interest. While the neckline is slightly sloping upward, it maintains a recognizable structure with recent highs displaying breakout characteristics.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ROUTE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "rectangle",
+        "reason": "The OHLCV data shows movement within a parallel channel, with prices oscillating between key support and resistance levels without breaking out significantly beyond these limits. This is indicative of a rectangle pattern, where accumulation and distribution tend to be in balance. The consistent horizontal movements and lack of pronounced highs or lows lend credence to this pattern, scoring it as a valid institutional footprint.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "NEWGEN_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a series of higher lows from late March through April, with a fairly consistent horizontal resistance level around 485-490. This formation suggests an ascending triangle pattern, which is often seen as a bullish continuation signal. The pattern is validated by increasing volume on upward movements and a squeeze in price action indicating pressure building towards a breakout. Although there is some noise present in the volume data, the overall setup retains its strength.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ORCHPHARMA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 87,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data for ORCHPHARMA indicates a pattern where the price levels have been forming higher lows, particularly noticeable since early April, while the highs around 584.9 and 585.9 suggest a resistance level is being tested. This aligns with the characteristics of an ascending triangle, commonly a bullish continuation pattern. The gradual increase in volume on upticks and the retesting of the horizontal resistance level further corroborate this identification. The score is strong due to the clear structure, though minor variations in the highs introduce slight noise.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "BALMLAWRIE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "rectangle",
+        "reason": "From the OHLC data spanning from March 31, 2026, to April 29, 2026, the price of BALMLAWRIE appears to be consolidating within a range, which is suggestive of a rectangle pattern. The highs are generally capped around 188 over the last few days, while the lows hover around the mid-170s, creating a clear horizontal channel. The incremental volume changes further support the pattern by showing periodic interest in a confined price zone. Given the consistent price moves without significant breakout or breakdown, this indicates a tradable setup, although not all classic rectangle characteristics are present for a perfect score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    }
+}

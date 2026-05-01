@@ -1,25 +1,37 @@
 [
     {
         "date": "2026-02-01",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "ARVIND",
-            "BEL",
-            "APOLLO"
-        ],
-        "gate_2_approved": [
             "APOLLO",
+            "BEL",
             "ARVIND"
         ],
-        "trades": [
-            {
-                "symbol": "APOLLO",
-                "entry_price": 246.65,
-                "current_price": 200.67,
-                "outcome": "LOSS",
-                "pnl": -15.0,
-                "exit_date": "2026-03-12"
+        "gate_2_approved": [
+            "ARVIND"
+        ],
+        "agent_scores": {
+            "APOLLO": {
+                "dtw": 86.43032504176743,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
             },
+            "BEL": {
+                "dtw": 90.51840087162225,
+                "entry": 31.654610713998682,
+                "vision": 83.0,
+                "sector": 50.0
+            },
+            "ARVIND": {
+                "dtw": 93.79074688231795,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
             {
                 "symbol": "ARVIND",
                 "entry_price": 326.4,
@@ -32,41 +44,166 @@
     },
     {
         "date": "2026-02-02",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "KANSAINER",
-            "GODREJAGRO"
+            "GODREJAGRO",
+            "KANSAINER"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "KANSAINER": {
+                "dtw": 89.30766962225945,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GODREJAGRO": {
+                "dtw": 88.44533522304204,
+                "entry": 42.558578425905175,
+                "vision": 82.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-02-03",
+        "market_regime": "NEUTRAL",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "ATUL",
-            "ELGIEQUIP",
-            "BHARATFORG",
-            "BALKRISIND",
-            "ADL",
-            "ICICIB22",
-            "UFLEX",
-            "AUROPHARMA",
-            "CENTENKA",
-            "ANGELONE",
-            "BANARBEADS",
-            "GARFIBRES",
-            "CGPOWER",
-            "GINNIFILA",
             "SHIVATEX",
-            "ADANIENT"
+            "AUROPHARMA",
+            "ELGIEQUIP",
+            "CENTENKA",
+            "GARFIBRES",
+            "ANGELONE",
+            "ATUL",
+            "UFLEX",
+            "BALKRISIND",
+            "ICICIB22",
+            "GINNIFILA",
+            "ADANIENT",
+            "CGPOWER",
+            "BHARATFORG",
+            "ADL",
+            "BANARBEADS"
         ],
         "gate_2_approved": [
+            "ADANIENT",
             "BANARBEADS",
-            "ATUL",
-            "ADL"
+            "BHARATFORG",
+            "UFLEX",
+            "GINNIFILA",
+            "SHIVATEX"
         ],
+        "agent_scores": {
+            "ADANIENT": {
+                "dtw": 88.42309749616737,
+                "entry": 71.88546911049033,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "CENTENKA": {
+                "dtw": 89.92485273028348,
+                "entry": 37.0,
+                "vision": 88.0,
+                "sector": 50.0
+            },
+            "ADL": {
+                "dtw": 90.49965801720009,
+                "entry": 40.74442158974658,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BANARBEADS": {
+                "dtw": 87.92179190475812,
+                "entry": 70.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "ICICIB22": {
+                "dtw": 90.40909793114689,
+                "entry": 40.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "BALKRISIND": {
+                "dtw": 90.53317325720128,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CGPOWER": {
+                "dtw": 86.64591343667763,
+                "entry": 27.47253229786362,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ATUL": {
+                "dtw": 88.61911500491493,
+                "entry": 55.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "ELGIEQUIP": {
+                "dtw": 86.74842879771285,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "AUROPHARMA": {
+                "dtw": 84.06193540306154,
+                "entry": 10.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "BHARATFORG": {
+                "dtw": 89.13368626071372,
+                "entry": 92.88434754085748,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "UFLEX": {
+                "dtw": 87.80230823954878,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GINNIFILA": {
+                "dtw": 89.1442004576681,
+                "entry": 52.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GARFIBRES": {
+                "dtw": 85.80754012277436,
+                "entry": 45.94662070811558,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "SHIVATEX": {
+                "dtw": 87.84040367982487,
+                "entry": 73.75373315474161,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ANGELONE": {
+                "dtw": 88.2329589746517,
+                "entry": 10.0,
+                "vision": 82.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
+            {
+                "symbol": "ADANIENT",
+                "entry_price": 2228.2,
+                "current_price": 1833.0,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-22"
+            },
             {
                 "symbol": "BANARBEADS",
                 "entry_price": 121.38,
@@ -76,61 +213,132 @@
                 "exit_date": "2026-03-26"
             },
             {
-                "symbol": "ATUL",
-                "entry_price": 6317.5,
-                "current_price": 6817.5,
+                "symbol": "BHARATFORG",
+                "entry_price": 1591.0,
+                "current_price": 1881.6,
                 "outcome": "OPEN",
-                "pnl": 7.91,
+                "pnl": 18.27,
                 "exit_date": "N/A"
             },
             {
-                "symbol": "ADL",
-                "entry_price": 72.89,
-                "current_price": 58.34,
+                "symbol": "UFLEX",
+                "entry_price": 488.85,
+                "current_price": 398.85,
                 "outcome": "LOSS",
                 "pnl": -15.0,
-                "exit_date": "2026-03-26"
+                "exit_date": "2026-03-22"
+            },
+            {
+                "symbol": "GINNIFILA",
+                "entry_price": 39.2,
+                "current_price": 33.05,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-08"
+            },
+            {
+                "symbol": "SHIVATEX",
+                "entry_price": 179.2,
+                "current_price": 152.08,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-01"
             }
         ]
     },
     {
         "date": "2026-02-04",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "ANDHRAPAP",
-            "SHIVATEX",
             "DHAMPURSUG",
+            "ESG",
             "BAJFINANCE",
-            "BIRLACORPN",
+            "ANDHRAPAP",
+            "BHARATGEAR",
             "GABRIEL",
             "CASTROLIND",
-            "ESG",
-            "BHARATGEAR",
             "ICICIB22",
+            "BIRLACORPN",
             "BOMDYEING"
         ],
         "gate_2_approved": [
-            "ANDHRAPAP",
-            "BAJFINANCE",
+            "ESG",
             "DHAMPURSUG",
-            "BOMDYEING"
+            "CASTROLIND",
+            "GABRIEL",
+            "BAJFINANCE"
         ],
+        "agent_scores": {
+            "ESG": {
+                "dtw": 90.29556596964147,
+                "entry": 65.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "DHAMPURSUG": {
+                "dtw": 86.94653653016032,
+                "entry": 115.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "BHARATGEAR": {
+                "dtw": 89.77138685330365,
+                "entry": 25.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "ICICIB22": {
+                "dtw": 90.40909793114689,
+                "entry": 40.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "ANDHRAPAP": {
+                "dtw": 87.94167597140154,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CASTROLIND": {
+                "dtw": 90.59308488913,
+                "entry": 71.14072911072898,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "GABRIEL": {
+                "dtw": 88.52234941881485,
+                "entry": 82.02985424846409,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BOMDYEING": {
+                "dtw": 87.86971498184853,
+                "entry": 40.0,
+                "vision": 79.0,
+                "sector": 50.0
+            },
+            "BIRLACORPN": {
+                "dtw": 90.12116618539756,
+                "entry": 27.728732758810743,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BAJFINANCE": {
+                "dtw": 91.23904882634051,
+                "entry": 115.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
-                "symbol": "ANDHRAPAP",
-                "entry_price": 65.53,
-                "current_price": 66.57,
+                "symbol": "ESG",
+                "entry_price": 43.68,
+                "current_price": 40.89,
                 "outcome": "OPEN",
-                "pnl": 1.59,
+                "pnl": -6.39,
                 "exit_date": "N/A"
-            },
-            {
-                "symbol": "BAJFINANCE",
-                "entry_price": 964.75,
-                "current_price": 812.6,
-                "outcome": "LOSS",
-                "pnl": -15.0,
-                "exit_date": "2026-03-22"
             },
             {
                 "symbol": "DHAMPURSUG",
@@ -141,45 +349,161 @@
                 "exit_date": "N/A"
             },
             {
-                "symbol": "BOMDYEING",
-                "entry_price": 121.49,
-                "current_price": 101.9,
+                "symbol": "CASTROLIND",
+                "entry_price": 180.41,
+                "current_price": 184.82,
+                "outcome": "OPEN",
+                "pnl": 2.44,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "GABRIEL",
+                "entry_price": 986.2,
+                "current_price": 830.7,
                 "outcome": "LOSS",
                 "pnl": -15.0,
-                "exit_date": "2026-03-08"
+                "exit_date": "2026-03-15"
+            },
+            {
+                "symbol": "BAJFINANCE",
+                "entry_price": 964.75,
+                "current_price": 812.6,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-22"
             }
         ]
     },
     {
         "date": "2026-02-05",
+        "market_regime": "NEUTRAL",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "AUTOAXLES",
             "BAJAJHLDNG",
+            "AUTOAXLES",
+            "ANDHRSUGAR",
             "APOLLOTYRE",
-            "VALIANTORG",
-            "SHIVATEX",
-            "ANDHRSUGAR"
+            "VALIANTORG"
         ],
-        "gate_2_approved": [],
-        "trades": []
+        "gate_2_approved": [
+            "VALIANTORG",
+            "ANDHRSUGAR",
+            "BAJAJHLDNG"
+        ],
+        "agent_scores": {
+            "APOLLOTYRE": {
+                "dtw": 88.79014375233523,
+                "entry": 28.470379494734264,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "VALIANTORG": {
+                "dtw": 91.6439093716212,
+                "entry": 55.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "ANDHRSUGAR": {
+                "dtw": 84.87803761822053,
+                "entry": 51.763340880865655,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "AUTOAXLES": {
+                "dtw": 88.39353879049446,
+                "entry": 40.0,
+                "vision": 86.0,
+                "sector": 50.0
+            },
+            "BAJAJHLDNG": {
+                "dtw": 90.12016895878149,
+                "entry": 52.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "VALIANTORG",
+                "entry_price": 270.41,
+                "current_price": 229.58,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-02-26"
+            },
+            {
+                "symbol": "ANDHRSUGAR",
+                "entry_price": 74.0,
+                "current_price": 97.67,
+                "outcome": "OPEN",
+                "pnl": 31.99,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BAJAJHLDNG",
+                "entry_price": 10999.0,
+                "current_price": 9162.0,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-22"
+            }
+        ]
     },
     {
         "date": "2026-02-08",
+        "market_regime": "NEUTRAL",
         "gate_1_candidates": [
             "ICICIB22"
         ],
         "gate_1_incubator": [
-            "EIHOTEL",
-            "DALMIASUG",
+            "FINCABLES",
             "BHARATGEAR",
             "CENTENKA",
-            "FINCABLES",
-            "VALIANTORG"
+            "DALMIASUG",
+            "EIHOTEL"
         ],
         "gate_2_approved": [
-            "DALMIASUG"
+            "DALMIASUG",
+            "FINCABLES"
         ],
+        "agent_scores": {
+            "CENTENKA": {
+                "dtw": 89.92485273028348,
+                "entry": 37.0,
+                "vision": 88.0,
+                "sector": 50.0
+            },
+            "DALMIASUG": {
+                "dtw": 86.63738874424625,
+                "entry": 70.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "BHARATGEAR": {
+                "dtw": 89.77138685330365,
+                "entry": 25.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "ICICIB22": {
+                "dtw": 90.40909793114689,
+                "entry": 40.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "FINCABLES": {
+                "dtw": 86.02627414255912,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "EIHOTEL": {
+                "dtw": 92.26324330425943,
+                "entry": 10.0,
+                "vision": 83.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
                 "symbol": "DALMIASUG",
@@ -188,33 +512,108 @@
                 "outcome": "OPEN",
                 "pnl": 30.84,
                 "exit_date": "N/A"
+            },
+            {
+                "symbol": "FINCABLES",
+                "entry_price": 792.65,
+                "current_price": 990.55,
+                "outcome": "OPEN",
+                "pnl": 24.97,
+                "exit_date": "N/A"
             }
         ]
     },
     {
         "date": "2026-02-09",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [
             "BHARATGEAR",
             "GRAPHITE"
         ],
         "gate_1_incubator": [
             "ELECTCAST",
-            "BASF",
-            "BEML",
-            "UFLEX",
+            "FMGOETZE",
             "3MINDIA",
-            "SHAREINDIA",
-            "FMGOETZE"
+            "ANDHRAPAP",
+            "BEML",
+            "BASF",
+            "SHAREINDIA"
         ],
         "gate_2_approved": [
             "3MINDIA",
-            "BEML"
+            "BASF",
+            "BEML",
+            "FMGOETZE"
         ],
+        "agent_scores": {
+            "GRAPHITE": {
+                "dtw": 83.76458609626233,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "3MINDIA": {
+                "dtw": 88.62055206130309,
+                "entry": 70.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "ELECTCAST": {
+                "dtw": 90.00149451369025,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "BHARATGEAR": {
+                "dtw": 89.77138685330365,
+                "entry": 25.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "BASF": {
+                "dtw": 89.31873446709736,
+                "entry": 55.12710034983129,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "ANDHRAPAP": {
+                "dtw": 87.94167597140154,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BEML": {
+                "dtw": 88.25419501484667,
+                "entry": 55.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "FMGOETZE": {
+                "dtw": 89.36866582042128,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "SHAREINDIA": {
+                "dtw": 89.91971448590307,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
                 "symbol": "3MINDIA",
                 "entry_price": 37635.0,
                 "current_price": 31100.0,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-22"
+            },
+            {
+                "symbol": "BASF",
+                "entry_price": 3855.8,
+                "current_price": 3163.4,
                 "outcome": "LOSS",
                 "pnl": -15.0,
                 "exit_date": "2026-03-22"
@@ -226,38 +625,154 @@
                 "outcome": "LOSS",
                 "pnl": -15.0,
                 "exit_date": "2026-03-15"
+            },
+            {
+                "symbol": "FMGOETZE",
+                "entry_price": 475.05,
+                "current_price": 393.25,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-01"
             }
         ]
     },
     {
         "date": "2026-02-10",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [
             "GRAPHITE"
         ],
         "gate_1_incubator": [
+            "PGHL",
+            "GLAXO",
             "ESCORTS",
             "ELECTCAST",
             "BIRLACORPN",
-            "NIACL",
-            "GICRE",
-            "FMGOETZE",
+            "ESABINDIA",
             "STYRENIX",
             "ADOR",
-            "HEMIPROP",
-            "TCPLPACK",
-            "FINCABLES",
-            "GLAXO",
-            "PGHL",
+            "GICRE",
             "BALRAMCHIN",
+            "TCPLPACK",
             "BATAINDIA",
-            "ICICIB22",
-            "ESABINDIA"
+            "HEMIPROP",
+            "NIACL",
+            "ICICIB22"
         ],
         "gate_2_approved": [
+            "BALRAMCHIN",
             "PGHL",
-            "ESABINDIA"
+            "ESABINDIA",
+            "ADOR",
+            "TCPLPACK"
         ],
+        "agent_scores": {
+            "GRAPHITE": {
+                "dtw": 83.76458609626233,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "NIACL": {
+                "dtw": 85.3457698154098,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ELECTCAST": {
+                "dtw": 90.00149451369025,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "GLAXO": {
+                "dtw": 88.52556943493907,
+                "entry": 37.24859409008023,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "BALRAMCHIN": {
+                "dtw": 84.72583819314588,
+                "entry": 115.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BATAINDIA": {
+                "dtw": 92.64517095370388,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "ICICIB22": {
+                "dtw": 90.40909793114689,
+                "entry": 40.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "PGHL": {
+                "dtw": 86.22592601642145,
+                "entry": 70.0,
+                "vision": 88.0,
+                "sector": 50.0
+            },
+            "ESCORTS": {
+                "dtw": 89.84136443375866,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ESABINDIA": {
+                "dtw": 87.16830067624689,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "GICRE": {
+                "dtw": 89.47651202979688,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "HEMIPROP": {
+                "dtw": 88.3018871838817,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ADOR": {
+                "dtw": 83.918395753919,
+                "entry": 95.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BIRLACORPN": {
+                "dtw": 90.12116618539756,
+                "entry": 27.728732758810743,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "TCPLPACK": {
+                "dtw": 89.93667014687043,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
+            {
+                "symbol": "BALRAMCHIN",
+                "entry_price": 461.2,
+                "current_price": 521.05,
+                "outcome": "OPEN",
+                "pnl": 12.98,
+                "exit_date": "N/A"
+            },
             {
                 "symbol": "PGHL",
                 "entry_price": 5323.0,
@@ -273,39 +788,93 @@
                 "outcome": "OPEN",
                 "pnl": 10.98,
                 "exit_date": "N/A"
+            },
+            {
+                "symbol": "ADOR",
+                "entry_price": 1084.6,
+                "current_price": 917.1,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-19"
+            },
+            {
+                "symbol": "TCPLPACK",
+                "entry_price": 2927.0,
+                "current_price": 2477.5,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-09"
             }
         ]
     },
     {
         "date": "2026-02-11",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "COSMOFIRST",
-            "GABRIEL",
             "EICHERMOT",
+            "CARBORUNIV",
             "BIRLACORPN",
             "CHAMBLFERT",
-            "FINCABLES",
-            "UFLEX",
+            "COSMOFIRST",
             "BBTC",
             "APOLLOTYRE",
-            "CARBORUNIV",
-            "APOLLOHOSP",
-            "FMGOETZE"
+            "APOLLOHOSP"
         ],
         "gate_2_approved": [
-            "BBTC",
             "COSMOFIRST"
         ],
-        "trades": [
-            {
-                "symbol": "BBTC",
-                "entry_price": 1813.0,
-                "current_price": 1538.2,
-                "outcome": "LOSS",
-                "pnl": -15.0,
-                "exit_date": "2026-03-08"
+        "agent_scores": {
+            "APOLLOTYRE": {
+                "dtw": 88.79014375233523,
+                "entry": 28.470379494734264,
+                "vision": 85.0,
+                "sector": 50.0
             },
+            "EICHERMOT": {
+                "dtw": 87.36974265948,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BBTC": {
+                "dtw": 89.16963725969195,
+                "entry": 37.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CHAMBLFERT": {
+                "dtw": 92.69276007577548,
+                "entry": 26.823444064063295,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "APOLLOHOSP": {
+                "dtw": 87.55788931754812,
+                "entry": 26.29682364032398,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "COSMOFIRST": {
+                "dtw": 87.80816448397472,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CARBORUNIV": {
+                "dtw": 91.94596312099995,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BIRLACORPN": {
+                "dtw": 90.12116618539756,
+                "entry": 27.728732758810743,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
             {
                 "symbol": "COSMOFIRST",
                 "entry_price": 700.0,
@@ -318,23 +887,86 @@
     },
     {
         "date": "2026-02-12",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [
             "ICICIB22",
             "AUTOAXLES"
         ],
         "gate_1_incubator": [
             "ELGIEQUIP",
-            "GARFIBRES",
-            "EICHERMOT",
-            "FINPIPE",
             "HARRMALAYA",
-            "DANGEE",
-            "UFLEX",
-            "DELTAMAGNT"
+            "EICHERMOT",
+            "GARFIBRES",
+            "ANDHRAPAP",
+            "FINPIPE",
+            "DELTAMAGNT",
+            "DANGEE"
         ],
         "gate_2_approved": [
             "HARRMALAYA"
         ],
+        "agent_scores": {
+            "EICHERMOT": {
+                "dtw": 87.36974265948,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ICICIB22": {
+                "dtw": 90.40909793114689,
+                "entry": 40.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "HARRMALAYA": {
+                "dtw": 86.90048427970486,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ANDHRAPAP": {
+                "dtw": 87.94167597140154,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "FINPIPE": {
+                "dtw": 85.8929329193734,
+                "entry": 25.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "AUTOAXLES": {
+                "dtw": 88.39353879049446,
+                "entry": 40.0,
+                "vision": 86.0,
+                "sector": 50.0
+            },
+            "DANGEE": {
+                "dtw": 85.89776648571677,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "DELTAMAGNT": {
+                "dtw": 92.23619509089347,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GARFIBRES": {
+                "dtw": 85.80754012277436,
+                "entry": 45.94662070811558,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ELGIEQUIP": {
+                "dtw": 86.74842879771285,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
                 "symbol": "HARRMALAYA",
@@ -348,103 +980,237 @@
     },
     {
         "date": "2026-02-15",
+        "market_regime": "NEUTRAL",
         "gate_1_candidates": [],
         "gate_1_incubator": [
             "ELGIEQUIP",
             "DANGEE"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "ELGIEQUIP": {
+                "dtw": 86.74842879771285,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "DANGEE": {
+                "dtw": 85.89776648571677,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-02-16",
+        "market_regime": "NEUTRAL",
         "gate_1_candidates": [],
         "gate_1_incubator": [
             "ICEMAKE"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "ICEMAKE": {
+                "dtw": 91.93485147258659,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-02-17",
+        "market_regime": "NEUTRAL",
         "gate_1_candidates": [],
         "gate_1_incubator": [
             "ICEMAKE",
-            "EPL",
-            "GALAXYSURF",
             "BHARATGEAR",
-            "SHRADHA"
+            "SHRADHA",
+            "EPL",
+            "GALAXYSURF"
+        ],
+        "gate_2_approved": [],
+        "agent_scores": {
+            "GALAXYSURF": {
+                "dtw": 90.46420628193536,
+                "entry": 40.0,
+                "vision": 88.0,
+                "sector": 50.0
+            },
+            "SHRADHA": {
+                "dtw": 88.20096111128512,
+                "entry": 14.021127287434755,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ICEMAKE": {
+                "dtw": 91.93485147258659,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BHARATGEAR": {
+                "dtw": 89.77138685330365,
+                "entry": 25.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "EPL": {
+                "dtw": 87.81422138781326,
+                "entry": 37.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": []
+    },
+    {
+        "date": "2026-02-18",
+        "market_regime": "BULLISH",
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "HEG",
+            "GODFRYPHLP",
+            "HEMIPROP",
+            "ICEMAKE"
         ],
         "gate_2_approved": [
-            "EPL"
+            "GODFRYPHLP",
+            "HEG"
         ],
+        "agent_scores": {
+            "HEMIPROP": {
+                "dtw": 88.3018871838817,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ICEMAKE": {
+                "dtw": 91.93485147258659,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GODFRYPHLP": {
+                "dtw": 87.59318332403362,
+                "entry": 55.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "HEG": {
+                "dtw": 84.65061588383305,
+                "entry": 50.80608051967322,
+                "vision": 90.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
-                "symbol": "EPL",
-                "entry_price": 218.32,
-                "current_price": 183.93,
+                "symbol": "GODFRYPHLP",
+                "entry_price": 2523.7,
+                "current_price": 2093.4,
                 "outcome": "LOSS",
                 "pnl": -15.0,
-                "exit_date": "2026-03-12"
+                "exit_date": "2026-02-24"
+            },
+            {
+                "symbol": "HEG",
+                "entry_price": 545.8,
+                "current_price": 596.05,
+                "outcome": "OPEN",
+                "pnl": 9.21,
+                "exit_date": "N/A"
             }
         ]
     },
     {
-        "date": "2026-02-18",
-        "gate_1_candidates": [],
-        "gate_1_incubator": [
-            "HEMIPROP",
-            "ADOR",
-            "ICEMAKE",
-            "HEG",
-            "GODFRYPHLP"
-        ],
-        "gate_2_approved": [],
-        "trades": []
-    },
-    {
         "date": "2026-02-19",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "HEMIPROP",
-            "GODFRYPHLP"
+            "HEMIPROP"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "HEMIPROP": {
+                "dtw": 88.3018871838817,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-02-22",
+        "market_regime": "NEUTRAL",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "ICEMAKE",
-            "CARBORUNIV"
+            "CARBORUNIV",
+            "ICEMAKE"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "ICEMAKE": {
+                "dtw": 91.93485147258659,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CARBORUNIV": {
+                "dtw": 91.94596312099995,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-02-23",
+        "market_regime": "NEUTRAL",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "DICIND",
-            "BAJAJHLDNG",
-            "MASFIN",
             "SCHAEFFLER",
+            "MASFIN",
+            "DICIND",
             "GUJALKALI"
         ],
         "gate_2_approved": [
-            "MASFIN",
-            "GUJALKALI"
+            "GUJALKALI",
+            "SCHAEFFLER",
+            "MASFIN"
         ],
-        "trades": [
-            {
-                "symbol": "MASFIN",
-                "entry_price": 338.15,
-                "current_price": 279.65,
-                "outcome": "LOSS",
-                "pnl": -15.0,
-                "exit_date": "2026-03-29"
+        "agent_scores": {
+            "GUJALKALI": {
+                "dtw": 85.12585094937327,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
             },
+            "SCHAEFFLER": {
+                "dtw": 87.01625996957942,
+                "entry": 65.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "MASFIN": {
+                "dtw": 88.67624734095163,
+                "entry": 115.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "DICIND": {
+                "dtw": 90.80881896681922,
+                "entry": 37.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
             {
                 "symbol": "GUJALKALI",
                 "entry_price": 475.2,
@@ -452,22 +1218,46 @@
                 "outcome": "PROFIT",
                 "pnl": 50.0,
                 "exit_date": "2026-04-16"
+            },
+            {
+                "symbol": "SCHAEFFLER",
+                "entry_price": 4084.8,
+                "current_price": 4124.8,
+                "outcome": "OPEN",
+                "pnl": 0.98,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "MASFIN",
+                "entry_price": 338.15,
+                "current_price": 279.65,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-29"
             }
         ]
     },
     {
         "date": "2026-02-24",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "BALKRISIND"
         ],
-        "gate_1_incubator": [
-            "SCHAEFFLER"
-        ],
+        "gate_1_incubator": [],
         "gate_2_approved": [],
+        "agent_scores": {
+            "BALKRISIND": {
+                "dtw": 90.53317325720128,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-02-25",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "DABUR"
         ],
@@ -475,30 +1265,63 @@
             "GIPCL"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "GIPCL": {
+                "dtw": 87.54040280852328,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "DABUR": {
+                "dtw": 87.13948940135622,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-02-26",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "FEDERALBNK"
         ],
         "gate_1_incubator": [
             "CHOLAFIN",
-            "FOSECOIND"
+            "FOSECOIND",
+            "APOLLO"
         ],
         "gate_2_approved": [
-            "FOSECOIND",
             "CHOLAFIN"
         ],
-        "trades": [
-            {
-                "symbol": "FOSECOIND",
-                "entry_price": 5325.1,
-                "current_price": 4518.4,
-                "outcome": "LOSS",
-                "pnl": -15.0,
-                "exit_date": "2026-04-06"
+        "agent_scores": {
+            "CHOLAFIN": {
+                "dtw": 90.27726099800343,
+                "entry": 115.0,
+                "vision": 82.0,
+                "sector": 50.0
             },
+            "FOSECOIND": {
+                "dtw": 88.81806788452057,
+                "entry": 55.0,
+                "vision": 79.0,
+                "sector": 50.0
+            },
+            "FEDERALBNK": {
+                "dtw": 90.17839160182457,
+                "entry": 68.10463459522427,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "APOLLO": {
+                "dtw": 86.43032504176743,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
             {
                 "symbol": "CHOLAFIN",
                 "entry_price": 1730.8,
@@ -511,16 +1334,32 @@
     },
     {
         "date": "2026-03-01",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "DABUR",
             "BEL"
         ],
         "gate_1_incubator": [],
         "gate_2_approved": [],
+        "agent_scores": {
+            "BEL": {
+                "dtw": 90.51840087162225,
+                "entry": 31.654610713998682,
+                "vision": 83.0,
+                "sector": 50.0
+            },
+            "DABUR": {
+                "dtw": 87.13948940135622,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-03",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "ICICIB22"
         ],
@@ -528,19 +1367,47 @@
             "BEL"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "ICICIB22": {
+                "dtw": 90.40909793114689,
+                "entry": 40.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "BEL": {
+                "dtw": 90.51840087162225,
+                "entry": 31.654610713998682,
+                "vision": 83.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-04",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "BALRAMCHIN",
-            "BAJAJHIND",
-            "BEL"
+            "BEL",
+            "BAJAJHIND"
         ],
         "gate_2_approved": [
             "BAJAJHIND"
         ],
+        "agent_scores": {
+            "BAJAJHIND": {
+                "dtw": 85.79806932557632,
+                "entry": 115.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BEL": {
+                "dtw": 90.51840087162225,
+                "entry": 31.654610713998682,
+                "vision": 83.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
                 "symbol": "BAJAJHIND",
@@ -554,57 +1421,102 @@
     },
     {
         "date": "2026-03-05",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "BALRAMCHIN",
             "ROML",
             "BEL"
         ],
-        "gate_2_approved": [
-            "ROML"
-        ],
-        "trades": [
-            {
-                "symbol": "ROML",
-                "entry_price": 44.98,
-                "current_price": 36.32,
-                "outcome": "LOSS",
-                "pnl": -15.0,
-                "exit_date": "2026-03-29"
+        "gate_2_approved": [],
+        "agent_scores": {
+            "BEL": {
+                "dtw": 90.51840087162225,
+                "entry": 31.654610713998682,
+                "vision": 83.0,
+                "sector": 50.0
+            },
+            "ROML": {
+                "dtw": 89.27154189226691,
+                "entry": 70.0,
+                "vision": 82.0,
+                "sector": 50.0
             }
-        ]
+        },
+        "trades": []
     },
     {
         "date": "2026-03-08",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "MARINE",
-            "MAZDOCK"
+            "MAZDOCK",
+            "MARINE"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "MAZDOCK": {
+                "dtw": 88.43138751644274,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "MARINE": {
+                "dtw": 88.12301114249627,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-09",
+        "market_regime": "UNKNOWN",
         "gate_1_candidates": [],
-        "gate_1_incubator": [
-            "BALRAMCHIN"
-        ],
+        "gate_1_incubator": [],
         "gate_2_approved": [],
+        "agent_scores": {},
         "trades": []
     },
     {
         "date": "2026-03-10",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
             "GTECJAINX",
-            "HAPPSTMNDS",
             "STYRENIX",
-            "FACT"
+            "FACT",
+            "HAPPSTMNDS"
         ],
         "gate_2_approved": [
             "GTECJAINX"
         ],
+        "agent_scores": {
+            "GTECJAINX": {
+                "dtw": 91.8567075456452,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "FACT": {
+                "dtw": 89.04483586631956,
+                "entry": 40.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "HAPPSTMNDS": {
+                "dtw": 88.13361229242183,
+                "entry": 55.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
                 "symbol": "GTECJAINX",
@@ -618,121 +1530,294 @@
     },
     {
         "date": "2026-03-11",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "HAPPSTMNDS",
-            "ELECTCAST",
-            "STYRENIX",
             "EUROTEXIND",
-            "FACT"
+            "FACT",
+            "STYRENIX",
+            "HAPPSTMNDS",
+            "ELECTCAST"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "ELECTCAST": {
+                "dtw": 90.00149451369025,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "FACT": {
+                "dtw": 89.04483586631956,
+                "entry": 40.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "EUROTEXIND": {
+                "dtw": 86.61437142147975,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "HAPPSTMNDS": {
+                "dtw": 88.13361229242183,
+                "entry": 55.0,
+                "vision": 78.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-12",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "ELECTCAST",
             "CESC",
             "HAPPSTMNDS",
-            "AARTIIND"
+            "AARTIIND",
+            "ELECTCAST"
         ],
         "gate_2_approved": [
-            "CESC"
+            "AARTIIND"
         ],
+        "agent_scores": {
+            "CESC": {
+                "dtw": 83.77098917202295,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ELECTCAST": {
+                "dtw": 90.00149451369025,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "HAPPSTMNDS": {
+                "dtw": 88.13361229242183,
+                "entry": 55.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "AARTIIND": {
+                "dtw": 85.37568731965895,
+                "entry": 73.89299156600012,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
-                "symbol": "CESC",
-                "entry_price": 159.73,
-                "current_price": 187.53,
+                "symbol": "AARTIIND",
+                "entry_price": 420.75,
+                "current_price": 507.5,
                 "outcome": "OPEN",
-                "pnl": 17.4,
+                "pnl": 20.62,
                 "exit_date": "N/A"
             }
         ]
     },
     {
         "date": "2026-03-15",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "ABB",
             "BEL"
         ],
         "gate_1_incubator": [
-            "STYRENIX",
-            "BEPL",
             "FACT",
+            "CESC",
+            "BEPL",
+            "STYRENIX",
             "ELECTCAST"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "BEPL": {
+                "dtw": 87.26321505387304,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BEL": {
+                "dtw": 90.51840087162225,
+                "entry": 31.654610713998682,
+                "vision": 83.0,
+                "sector": 50.0
+            },
+            "ELECTCAST": {
+                "dtw": 90.00149451369025,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "CESC": {
+                "dtw": 83.77098917202295,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "FACT": {
+                "dtw": 89.04483586631956,
+                "entry": 40.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "ABB": {
+                "dtw": 89.15821243937506,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-16",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
             "STYRENIX"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-17",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
-        "gate_1_incubator": [],
+        "gate_1_incubator": [
+            "FOSECOIND"
+        ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "FOSECOIND": {
+                "dtw": 88.81806788452057,
+                "entry": 55.0,
+                "vision": 79.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-18",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "BEPL",
-            "GMBREW",
             "STYRENIX",
-            "CASTROLIND",
-            "VALIANTORG"
+            "GMBREW",
+            "BEPL"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "BEPL": {
+                "dtw": 87.26321505387304,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GMBREW": {
+                "dtw": 85.8583431571685,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-19",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "EUROTEXIND",
-            "CASTROLIND",
-            "VALIANTORG"
+            "EUROTEXIND"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "EUROTEXIND": {
+                "dtw": 86.61437142147975,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-22",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "HAPPSTMNDS",
-            "CASTROLIND",
-            "ELECTCAST",
             "BANARISUG",
-            "GINNIFILA",
-            "BHEL",
+            "HAPPSTMNDS",
             "DRREDDY",
-            "VALIANTORG"
+            "BHEL",
+            "ELECTCAST"
         ],
         "gate_2_approved": [
-            "BHEL",
             "BANARISUG"
         ],
-        "trades": [
-            {
-                "symbol": "BHEL",
-                "entry_price": 252.85,
-                "current_price": 352.41,
-                "outcome": "OPEN",
-                "pnl": 39.38,
-                "exit_date": "N/A"
+        "agent_scores": {
+            "ELECTCAST": {
+                "dtw": 90.00149451369025,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
             },
+            "DRREDDY": {
+                "dtw": 85.94715670748448,
+                "entry": 40.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "BHEL": {
+                "dtw": 87.04282196249305,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "HAPPSTMNDS": {
+                "dtw": 88.13361229242183,
+                "entry": 55.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "BANARISUG": {
+                "dtw": 87.61638512825327,
+                "entry": 115.0,
+                "vision": 78.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
             {
                 "symbol": "BANARISUG",
                 "entry_price": 3596.6,
@@ -745,43 +1830,105 @@
     },
     {
         "date": "2026-03-23",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "AUROPHARMA"
         ],
         "gate_1_incubator": [],
         "gate_2_approved": [],
+        "agent_scores": {
+            "AUROPHARMA": {
+                "dtw": 84.06193540306154,
+                "entry": 10.0,
+                "vision": 75.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-24",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "AUROPHARMA"
         ],
         "gate_1_incubator": [
-            "GMBREW",
-            "BEPL"
+            "BEPL",
+            "GMBREW"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "BEPL": {
+                "dtw": 87.26321505387304,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GMBREW": {
+                "dtw": 85.8583431571685,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "AUROPHARMA": {
+                "dtw": 84.06193540306154,
+                "entry": 10.0,
+                "vision": 75.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-26",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "AUROPHARMA"
         ],
         "gate_1_incubator": [
-            "ANDHRSUGAR",
-            "BALRAMCHIN",
+            "EPL",
             "BEPL",
             "CARBORUNIV",
-            "GMBREW",
-            "GODFRYPHLP"
+            "GMBREW"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "BEPL": {
+                "dtw": 87.26321505387304,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "AUROPHARMA": {
+                "dtw": 84.06193540306154,
+                "entry": 10.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "GMBREW": {
+                "dtw": 85.8583431571685,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "EPL": {
+                "dtw": 87.81422138781326,
+                "entry": 37.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CARBORUNIV": {
+                "dtw": 91.94596312099995,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-29",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "AUROPHARMA",
             "ABB"
@@ -789,25 +1936,90 @@
         "gate_1_incubator": [
             "GRAPHITE",
             "GMBREW",
-            "EUROTEXIND",
             "ELECTCAST",
-            "HEG"
+            "EUROTEXIND"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "GRAPHITE": {
+                "dtw": 83.76458609626233,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ELECTCAST": {
+                "dtw": 90.00149451369025,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "AUROPHARMA": {
+                "dtw": 84.06193540306154,
+                "entry": 10.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "EUROTEXIND": {
+                "dtw": 86.61437142147975,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GMBREW": {
+                "dtw": 85.8583431571685,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ABB": {
+                "dtw": 89.15821243937506,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-03-31",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "AUROPHARMA"
         ],
         "gate_1_incubator": [
-            "HEG",
-            "DCMSHRIRAM"
+            "EPL",
+            "DCMSHRIRAM",
+            "ATUL"
         ],
         "gate_2_approved": [
             "DCMSHRIRAM"
         ],
+        "agent_scores": {
+            "DCMSHRIRAM": {
+                "dtw": 85.6602840501371,
+                "entry": 115.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "EPL": {
+                "dtw": 87.81422138781326,
+                "entry": 37.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ATUL": {
+                "dtw": 88.61911500491493,
+                "entry": 55.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "AUROPHARMA": {
+                "dtw": 84.06193540306154,
+                "entry": 10.0,
+                "vision": 75.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
                 "symbol": "DCMSHRIRAM",
@@ -821,83 +2033,262 @@
     },
     {
         "date": "2026-04-01",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [
             "AUROPHARMA"
         ],
         "gate_1_incubator": [
+            "EPL",
             "GICRE"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "GICRE": {
+                "dtw": 89.47651202979688,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "EPL": {
+                "dtw": 87.81422138781326,
+                "entry": 37.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "AUROPHARMA": {
+                "dtw": 84.06193540306154,
+                "entry": 10.0,
+                "vision": 75.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-04-05",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "DANGEE",
             "BSHSL",
+            "DANGEE",
             "CARBORUNIV"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "BSHSL": {
+                "dtw": 93.66238404633117,
+                "entry": 37.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CARBORUNIV": {
+                "dtw": 91.94596312099995,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "DANGEE": {
+                "dtw": 85.89776648571677,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-04-06",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
             "UNIDT",
             "CARBORUNIV"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "CARBORUNIV": {
+                "dtw": 91.94596312099995,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "UNIDT": {
+                "dtw": 93.67765142071173,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-04-07",
+        "market_regime": "BEARISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
             "CARBORUNIV"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "CARBORUNIV": {
+                "dtw": 91.94596312099995,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-04-08",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [
             "GMBREW"
         ],
         "gate_1_incubator": [
+            "ABREL",
             "GALAXYSURF",
-            "MAHLOG",
-            "ABREL"
+            "MAHLOG"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "MAHLOG": {
+                "dtw": 88.23966553022647,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GALAXYSURF": {
+                "dtw": 90.46420628193536,
+                "entry": 40.0,
+                "vision": 88.0,
+                "sector": 50.0
+            },
+            "ABREL": {
+                "dtw": 88.46444483028499,
+                "entry": 40.0,
+                "vision": 87.0,
+                "sector": 50.0
+            },
+            "GMBREW": {
+                "dtw": 85.8583431571685,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-04-09",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [],
-        "gate_1_incubator": [],
-        "gate_2_approved": [],
-        "trades": []
+        "gate_1_incubator": [
+            "APOLLO",
+            "BHEL"
+        ],
+        "gate_2_approved": [
+            "BHEL"
+        ],
+        "agent_scores": {
+            "APOLLO": {
+                "dtw": 86.43032504176743,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BHEL": {
+                "dtw": 87.04282196249305,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "BHEL",
+                "entry_price": 284.71,
+                "current_price": 352.41,
+                "outcome": "OPEN",
+                "pnl": 23.78,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-04-12",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
             "SHRADHA",
-            "ANDHRSUGAR",
-            "GICRE",
             "ABREL",
+            "GICRE",
+            "APOLLO",
             "ASIANPAINT",
             "EXIDEIND",
             "NIACL",
-            "ESG",
-            "ARENTERP",
-            "SDBL"
+            "SDBL",
+            "ARENTERP"
         ],
         "gate_2_approved": [
             "EXIDEIND"
         ],
+        "agent_scores": {
+            "NIACL": {
+                "dtw": 85.3457698154098,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "APOLLO": {
+                "dtw": 86.43032504176743,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "EXIDEIND": {
+                "dtw": 86.77744716454444,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "SDBL": {
+                "dtw": 87.52459376613325,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GICRE": {
+                "dtw": 89.47651202979688,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "ARENTERP": {
+                "dtw": 91.24948546832647,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "SHRADHA": {
+                "dtw": 88.20096111128512,
+                "entry": 14.021127287434755,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ASIANPAINT": {
+                "dtw": 87.56115091773984,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ABREL": {
+                "dtw": 88.46444483028499,
+                "entry": 40.0,
+                "vision": 87.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
                 "symbol": "EXIDEIND",
@@ -911,32 +2302,111 @@
     },
     {
         "date": "2026-04-14",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [
             "GICRE"
         ],
         "gate_1_incubator": [
             "KEEPLEARN",
-            "AARTIIND",
-            "STYRENIX"
+            "STYRENIX",
+            "ADL"
         ],
-        "gate_2_approved": [],
-        "trades": []
+        "gate_2_approved": [
+            "KEEPLEARN"
+        ],
+        "agent_scores": {
+            "GICRE": {
+                "dtw": 89.47651202979688,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "ADL": {
+                "dtw": 90.49965801720009,
+                "entry": 40.74442158974658,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "KEEPLEARN": {
+                "dtw": 91.75187076953391,
+                "entry": 110.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "KEEPLEARN",
+                "entry_price": 1.99,
+                "current_price": 2.08,
+                "outcome": "OPEN",
+                "pnl": 4.52,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-04-15",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
+            "MAHLOG",
+            "AEGISLOG",
             "BHARATGEAR",
             "UTIAMC",
-            "IGARASHI",
-            "MAHLOG",
-            "AARTIIND",
-            "AEGISLOG"
-        ],
-        "gate_2_approved": [
             "IGARASHI"
         ],
+        "gate_2_approved": [
+            "AEGISLOG",
+            "IGARASHI"
+        ],
+        "agent_scores": {
+            "MAHLOG": {
+                "dtw": 88.23966553022647,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BHARATGEAR": {
+                "dtw": 89.77138685330365,
+                "entry": 25.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "AEGISLOG": {
+                "dtw": 85.05237127811179,
+                "entry": 25.0,
+                "vision": 88.0,
+                "sector": 50.0
+            },
+            "UTIAMC": {
+                "dtw": 86.8503922217584,
+                "entry": 32.499275082856336,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "IGARASHI": {
+                "dtw": 86.66197450544571,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
+            {
+                "symbol": "AEGISLOG",
+                "entry_price": 659.55,
+                "current_price": 700.95,
+                "outcome": "OPEN",
+                "pnl": 6.28,
+                "exit_date": "N/A"
+            },
             {
                 "symbol": "IGARASHI",
                 "entry_price": 349.85,
@@ -949,76 +2419,235 @@
     },
     {
         "date": "2026-04-16",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [
             "ICICIB22"
         ],
         "gate_1_incubator": [
             "SINTERCOM",
-            "GLAND",
+            "GIPCL",
+            "CESC",
             "GICRE",
-            "GIPCL",
-            "ZENSARTECH",
+            "GLAND",
             "CANFINHOME",
-            "BHARATGEAR",
-            "ADOR"
-        ],
-        "gate_2_approved": [],
-        "trades": []
-    },
-    {
-        "date": "2026-04-19",
-        "gate_1_candidates": [
-            "MAHLOG"
-        ],
-        "gate_1_incubator": [
-            "GODFRYPHLP",
-            "BHARATGEAR",
-            "CRISIL",
-            "GNFC",
-            "BALKRISIND",
-            "SINTERCOM",
-            "AEGISLOG"
-        ],
-        "gate_2_approved": [],
-        "trades": []
-    },
-    {
-        "date": "2026-04-20",
-        "gate_1_candidates": [],
-        "gate_1_incubator": [
-            "GRAPHITE",
-            "ADOR",
-            "DPABHUSHAN",
-            "TIINDIA",
-            "GIPCL",
-            "BALRAMCHIN"
+            "ZENSARTECH",
+            "BHARATGEAR"
         ],
         "gate_2_approved": [
-            "TIINDIA"
+            "GIPCL",
+            "CESC"
         ],
+        "agent_scores": {
+            "GLAND": {
+                "dtw": 89.65368292073981,
+                "entry": 43.725704088678555,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GIPCL": {
+                "dtw": 87.54040280852328,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BHARATGEAR": {
+                "dtw": 89.77138685330365,
+                "entry": 25.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "CANFINHOME": {
+                "dtw": 86.53791409845388,
+                "entry": 10.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "ICICIB22": {
+                "dtw": 90.40909793114689,
+                "entry": 40.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "CESC": {
+                "dtw": 83.77098917202295,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ZENSARTECH": {
+                "dtw": 94.43120261172207,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GICRE": {
+                "dtw": 89.47651202979688,
+                "entry": 25.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "SINTERCOM": {
+                "dtw": 88.76007659478385,
+                "entry": 10.0,
+                "vision": 81.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
-                "symbol": "TIINDIA",
-                "entry_price": 2885.2,
-                "current_price": 2947.9,
+                "symbol": "GIPCL",
+                "entry_price": 154.44,
+                "current_price": 156.85,
                 "outcome": "OPEN",
-                "pnl": 2.17,
+                "pnl": 1.56,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "CESC",
+                "entry_price": 171.49,
+                "current_price": 187.53,
+                "outcome": "OPEN",
+                "pnl": 9.35,
                 "exit_date": "N/A"
             }
         ]
     },
     {
-        "date": "2026-04-21",
+        "date": "2026-04-19",
+        "market_regime": "BULLISH",
+        "gate_1_candidates": [
+            "MAHLOG"
+        ],
+        "gate_1_incubator": [
+            "CRISIL",
+            "GNFC",
+            "SINTERCOM",
+            "BHARATGEAR",
+            "BALKRISIND"
+        ],
+        "gate_2_approved": [],
+        "agent_scores": {
+            "MAHLOG": {
+                "dtw": 88.23966553022647,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GNFC": {
+                "dtw": 89.47282509147423,
+                "entry": 25.0,
+                "vision": 83.0,
+                "sector": 50.0
+            },
+            "BHARATGEAR": {
+                "dtw": 89.77138685330365,
+                "entry": 25.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "BALKRISIND": {
+                "dtw": 90.53317325720128,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "SINTERCOM": {
+                "dtw": 88.76007659478385,
+                "entry": 10.0,
+                "vision": 81.0,
+                "sector": 50.0
+            },
+            "CRISIL": {
+                "dtw": 88.6201954289831,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": []
+    },
+    {
+        "date": "2026-04-20",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
+            "GRAPHITE",
+            "DPABHUSHAN",
+            "TIINDIA"
+        ],
+        "gate_2_approved": [],
+        "agent_scores": {
+            "GRAPHITE": {
+                "dtw": 83.76458609626233,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "DPABHUSHAN": {
+                "dtw": 87.94384171209796,
+                "entry": 17.31935699113351,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "TIINDIA": {
+                "dtw": 86.90099662769404,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": []
+    },
+    {
+        "date": "2026-04-21",
+        "market_regime": "BULLISH",
+        "gate_1_candidates": [
+            "ATUL"
+        ],
+        "gate_1_incubator": [
+            "CENTENKA",
             "ASHIMASYN",
-            "CANFINHOME",
-            "CENTENKA"
+            "CANFINHOME"
         ],
         "gate_2_approved": [
+            "ATUL",
             "ASHIMASYN"
         ],
+        "agent_scores": {
+            "ATUL": {
+                "dtw": 88.61911500491493,
+                "entry": 55.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "CANFINHOME": {
+                "dtw": 86.53791409845388,
+                "entry": 10.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "ASHIMASYN": {
+                "dtw": 90.26142956368189,
+                "entry": 67.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CENTENKA": {
+                "dtw": 89.92485273028348,
+                "entry": 37.0,
+                "vision": 88.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
+            {
+                "symbol": "ATUL",
+                "entry_price": 6666.5,
+                "current_price": 6817.5,
+                "outcome": "OPEN",
+                "pnl": 2.27,
+                "exit_date": "N/A"
+            },
             {
                 "symbol": "ASHIMASYN",
                 "entry_price": 16.49,
@@ -1031,36 +2660,115 @@
     },
     {
         "date": "2026-04-22",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
             "ELGIEQUIP"
         ],
         "gate_2_approved": [],
+        "agent_scores": {
+            "ELGIEQUIP": {
+                "dtw": 86.74842879771285,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            }
+        },
         "trades": []
     },
     {
         "date": "2026-04-23",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
+            "CIPLA",
             "DCM",
             "CAMS",
             "EIDPARRY",
-            "DRREDDY",
+            "DRREDDY"
+        ],
+        "gate_2_approved": [
+            "CAMS",
+            "EIDPARRY",
             "CIPLA"
         ],
-        "gate_2_approved": [],
-        "trades": []
+        "agent_scores": {
+            "DCM": {
+                "dtw": 87.26894314673231,
+                "entry": 40.0,
+                "vision": 88.0,
+                "sector": 50.0
+            },
+            "DRREDDY": {
+                "dtw": 85.94715670748448,
+                "entry": 40.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "CAMS": {
+                "dtw": 89.4533970117311,
+                "entry": 64.72129493165261,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "EIDPARRY": {
+                "dtw": 89.48024694079253,
+                "entry": 78.41291534921213,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CIPLA": {
+                "dtw": 85.9733679996825,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "CAMS",
+                "entry_price": 760.8,
+                "current_price": 738.6,
+                "outcome": "OPEN",
+                "pnl": -2.92,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "EIDPARRY",
+                "entry_price": 845.1,
+                "current_price": 844.0,
+                "outcome": "OPEN",
+                "pnl": -0.13,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "CIPLA",
+                "entry_price": 1295.0,
+                "current_price": 1309.6,
+                "outcome": "OPEN",
+                "pnl": 1.13,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-04-26",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "21STCENMGM",
-            "CIPLA"
+            "21STCENMGM"
         ],
         "gate_2_approved": [
             "21STCENMGM"
         ],
+        "agent_scores": {
+            "21STCENMGM": {
+                "dtw": 84.73899081859535,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
         "trades": [
             {
                 "symbol": "21STCENMGM",
@@ -1074,40 +2782,168 @@
     },
     {
         "date": "2026-04-27",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
-            "SHALBY",
             "NEWGEN",
-            "ROUTE",
+            "CANFINHOME",
+            "ROML",
             "BPL",
-            "CANFINHOME"
+            "SHALBY",
+            "ROUTE"
         ],
-        "gate_2_approved": [],
-        "trades": []
+        "gate_2_approved": [
+            "ROUTE",
+            "NEWGEN",
+            "ROML"
+        ],
+        "agent_scores": {
+            "ROUTE": {
+                "dtw": 90.1853494682278,
+                "entry": 55.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "CANFINHOME": {
+                "dtw": 86.53791409845388,
+                "entry": 10.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "SHALBY": {
+                "dtw": 90.10638268755285,
+                "entry": 40.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "BPL": {
+                "dtw": 86.66553527677145,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "NEWGEN": {
+                "dtw": 88.41114679698816,
+                "entry": 115.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "ROML": {
+                "dtw": 89.27154189226691,
+                "entry": 70.0,
+                "vision": 82.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "ROUTE",
+                "entry_price": 530.0,
+                "current_price": 527.15,
+                "outcome": "OPEN",
+                "pnl": -0.54,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "NEWGEN",
+                "entry_price": 482.8,
+                "current_price": 505.75,
+                "outcome": "OPEN",
+                "pnl": 4.75,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ROML",
+                "entry_price": 44.92,
+                "current_price": 45.15,
+                "outcome": "OPEN",
+                "pnl": 0.51,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-04-28",
+        "market_regime": "UNKNOWN",
         "gate_1_candidates": [],
-        "gate_1_incubator": [
-            "UFLEX",
-            "ADOR"
-        ],
+        "gate_1_incubator": [],
         "gate_2_approved": [],
+        "agent_scores": {},
         "trades": []
     },
     {
         "date": "2026-04-29",
+        "market_regime": "BULLISH",
         "gate_1_candidates": [],
         "gate_1_incubator": [
+            "DCW",
             "BSL",
+            "BALMLAWRIE",
             "GALAXYSURF",
-            "GODFRYPHLP",
+            "ORCHPHARMA"
+        ],
+        "gate_2_approved": [
             "ORCHPHARMA",
             "BALMLAWRIE",
-            "DCW",
-            "UFLEX"
+            "DCW"
         ],
-        "gate_2_approved": [],
-        "trades": []
+        "agent_scores": {
+            "GALAXYSURF": {
+                "dtw": 90.46420628193536,
+                "entry": 40.0,
+                "vision": 88.0,
+                "sector": 50.0
+            },
+            "ORCHPHARMA": {
+                "dtw": 86.42430268934221,
+                "entry": 86.13539284387663,
+                "vision": 87.0,
+                "sector": 50.0
+            },
+            "BSL": {
+                "dtw": 87.97633014550152,
+                "entry": 10.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "BALMLAWRIE": {
+                "dtw": 87.63687550938867,
+                "entry": 72.15479372646898,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "DCW": {
+                "dtw": 87.73625129911717,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "ORCHPHARMA",
+                "entry_price": 625.75,
+                "current_price": 625.75,
+                "outcome": "OPEN",
+                "pnl": 0.0,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BALMLAWRIE",
+                "entry_price": 187.99,
+                "current_price": 187.99,
+                "outcome": "OPEN",
+                "pnl": 0.0,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "DCW",
+                "entry_price": 47.11,
+                "current_price": 47.11,
+                "outcome": "OPEN",
+                "pnl": 0.0,
+                "exit_date": "N/A"
+            }
+        ]
     }
 ]
