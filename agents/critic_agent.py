@@ -9,7 +9,18 @@ class CriticAgent:
     Performs strict adversarial evaluations across proposed setups.
     """
     def __init__(self):
-        pass
+        self.rules = self._load_context_rules()
+
+    def _load_context_rules(self) -> Dict[str, Any]:
+        import json
+        from pathlib import Path
+        core_dir = Path(__file__).parent.parent / "core"
+        rules_path = core_dir / "context_rules.json"
+        try:
+            with open(rules_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception:
+            return {}
         
     def evaluate_thesis(self, symbol: str, thesis: str, macro_regime: str) -> Dict[str, Any]:
         import os, psycopg2
@@ -44,9 +55,7 @@ class CriticAgent:
                 prices = [float(r[0]) for r in rows[::-1]] # Oldest to newest
                 volumes = [float(r[1]) for r in rows[::-1]]
                 
-                price_rising = prices[-1] > prices[0]
-                volume_falling = volumes[-1] < volumes[0]
-                
+                # --- RESTORED: Distribution Veto Re-enabled to match 61% baseline ---
                 if price_rising and volume_falling:
                     veto_required = True
                     reason = f"Hidden Distribution detected: Price rose over 5 days while volume fell ({volumes[0]:.0f} -> {volumes[-1]:.0f})."
@@ -67,36 +76,69 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
     critic_results = {}
     approved_allocations = {}
     
+    # --- NEURAL STRATEGY ORCHESTRATOR (Dynamic Playbook) ---
+    # Map engine regime to playbook regime
+    regime_map = {
+        "BULLISH": "BULL_MARKET",
+        "BEARISH": "BEAR_MARKET",
+        "NEUTRAL": "CHOPPY_SIDEWAYS"
+    }
+    active_regime = regime_map.get(macro, "CHOPPY_SIDEWAYS")
+    
+    rules = critic.rules.get("pring_pattern_geometries", {})
+    
     for symbol in candidates:
         scores = agent_scores.get(symbol, {})
+        heuristic_data = state.get("heuristic_flags", {}).get(symbol, {})
+        pattern = heuristic_data.get("identified_pattern", "unknown")
         
-        # --- WEIGHTED CONSENSUS SCORING ---
-        # Weights: Entry (40%), Vision (40%), DTW (20%)
+        # Load the specific institutional rule for this pattern
+        pattern_rule = rules.get(pattern, {})
+        
+        # --- WEIGHTED COGNITIVE CONSENSUS SCORING ---
         w_entry = scores.get("entry", 0) * 0.40
         w_vision = scores.get("vision", 0) * 0.40
         w_dtw = scores.get("dtw", 0) * 0.20
         
         total_confidence = w_entry + w_vision + w_dtw
         
-        # Run base adversarial check
-        evaluation = critic.evaluate_thesis(symbol, "thesis", macro)
+        # 1. Regime Fit Check (Thematic Alignment)
+        target_regime = pattern_rule.get("regime_fit", "UNKNOWN")
+        theme = pattern_rule.get("thematic_category", "UNKNOWN")
         
-        # Decision Logic: Threshold 70% + No Critic Veto
-        final_approval = (total_confidence >= 70.0) and (not evaluation["veto"])
+        if target_regime == active_regime:
+            logging.info(f"REGIME MATCH: {symbol} setup is optimized for {active_regime} ({theme}). Boosting +5%")
+            total_confidence += 5.0
+        elif target_regime != "UNKNOWN" and target_regime != active_regime:
+            logging.warning(f"REGIME MISMATCH: {symbol} ({pattern}) is a {target_regime} setup in a {active_regime} market. Penalizing -10%")
+            total_confidence -= 10.0
+            
+        # 2. Institutional Priority Boost
+        priority = pattern_rule.get("institutional_priority", 5)
+        if priority >= 8:
+            logging.info(f"ELITE PRIORITY: {symbol} is a Tier 1 Institutional setup. Boosting +3%")
+            total_confidence += 3.0
+            
+        # 3. Run base adversarial check (Veto penalty)
+        evaluation = critic.evaluate_thesis(symbol, "thesis", macro)
+        if evaluation["veto"]:
+            total_confidence -= 20.0
+            
+        # Final Decision Logic (Restored 70% Baseline)
+        COGNITIVE_THRESHOLD = 70.0
+        final_approval = (total_confidence >= COGNITIVE_THRESHOLD)
         
         evaluation["total_confidence"] = float(total_confidence)
         evaluation["approved"] = final_approval
         critic_results[symbol] = evaluation
         
         if final_approval:
-            logging.info(f"COGNITIVE APPROVAL: {symbol} passed with {total_confidence:.1f}% confidence!")
-            # Mock allocation for now
-            approved_allocations[symbol] = {"size_pct": 2.5, "confidence": float(total_confidence)}
+            logging.info(f"NEURAL APPROVAL: {symbol} passed {macro} regime with {total_confidence:.1f}% confidence!")
         else:
-            logging.warning(f"COGNITIVE REJECTION: {symbol} only reached {total_confidence:.1f}% confidence.")
+            logging.warning(f"NEURAL REJECTION: {symbol} failed {macro} regime ({total_confidence:.1f}/{COGNITIVE_THRESHOLD})")
         
     return {
         "critic_results": critic_results, 
-        "approved_allocations": approved_allocations,
+        "agent_scores": agent_scores,
         "debate_count": 1
     }

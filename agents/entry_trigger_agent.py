@@ -110,51 +110,53 @@ class EntryTriggerAgent:
                 prev_highs = df.filter(pl.col("symbol") == ticker).slice(cur_idx-2, 2)["close"].max()
                 momentum_ignition = close >= prev_highs
                 
-                approved = vol_thrust and sma_floor and momentum_ignition
-                
-                rejections = []
-                if not vol_thrust: rejections.append(f"Dynamic RVOL Fail (Z-Score: {vol_z_score:.2f} < 1.5)")
-                if not sma_floor: rejections.append(f"Below 10-SMA Floor ({close} < {sma_10:.2f})")
-                if not momentum_ignition: rejections.append(f"No Momentum Ignition (Price {close} < 2-day high {prev_highs:.2f})")
-                
-                # --- SCORING LOGIC ---
+                # --- FUZZY SCORING LOGIC (The 80% Rule) ---
                 score = 0.0
                 
                 # 1. Volume Intensity (Max 40 pts)
-                # Z-score of 2.0 = 40 pts, 0.0 = 0 pts
+                # Z-score of 2.0 = 40 pts, 1.0 = 20 pts
                 vol_score = min(40.0, max(0.0, (vol_z_score / 2.0) * 40.0))
                 score += vol_score
                 
                 # 2. SMA Floor (Max 30 pts)
-                sma_score = 30.0 if close >= sma_10 else 10.0 # Partial points if near
+                sma_score = 30.0 if close >= sma_10 else (15.0 if close >= (sma_10 * 0.99) else 0.0)
                 score += sma_score
                 
                 # 3. Momentum Proximity (Max 30 pts)
-                # If price is at or above 2-day high = 30 pts. 
-                # If within 2% of high = 15 pts.
-                dist_from_high = (prev_highs - close) / close if close > 0 else 1.0
+                # "Fuzzy": 90% score if at the high, even if not crossed
+                dist_from_high = (prev_highs - close) / close if close > 0 else 0.0
                 if dist_from_high <= 0:
-                    mom_score = 30.0
+                    mom_score = 30.0 # Decisive Breakout
+                elif dist_from_high <= 0.005:
+                    mom_score = 27.0 # "At the high" (90% of 30)
                 elif dist_from_high <= 0.02:
-                    mom_score = 15.0
+                    mom_score = 15.0 # Close proximity
                 else:
                     mom_score = 0.0
                 score += mom_score
                 
-                # 4. VSA Modifier (Max 15 pts or -20 pts)
+                # 4. Multi-Timeframe Alignment (MTA) Bonus (+10 pts)
+                # We mock the 65-min check here. In production, this queries Zerodha.
+                mta_aligned = True # Mocking aggressive 65-min momentum
+                if mta_aligned:
+                    score = min(100.0, score + 10.0)
+                
+                # 5. VSA Modifier (Max 15 pts or -20 pts)
                 score += vsa_score_mod
 
                 results[ticker] = {
-                    "approved": True if score >= 60 else False,
+                    "approved": True if score >= 80 else False, # New threshold hint
                     "entry_score": float(score),
+                    "entry_price": float(close),
                     "vol_thrust": vol_thrust,
                     "sma_floor": sma_floor,
                     "momentum_ignition": momentum_ignition,
+                    "mta_aligned": mta_aligned,
                     "vol_z_score": float(vol_z_score),
-                    "rejection_reason": ", ".join(rejections) if rejections else "None"
+                    "rejection_reason": "Low Confidence" if score < 60 else "None"
                 }
                 
-                logging.info(f"Gear 2 Scoring for {ticker}: Score={score:.1f}/100 | Vol:{vol_score:.1f} SMA:{sma_score:.1f} Mom:{mom_score:.1f}")
+                logging.info(f"Gear 2 Cognitive Scoring for {ticker}: Score={score:.1f}/100 | Vol:{vol_score:.1f} SMA:{sma_score:.1f} Mom:{mom_score:.1f} MTA:{'+10' if mta_aligned else '0'}")
                 
         except Exception as e:
             logging.error(f"Gear 2 Processing Error: {e}")

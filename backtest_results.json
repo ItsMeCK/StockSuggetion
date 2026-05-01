@@ -1,70 +1,165 @@
 [
     {
         "date": "2026-02-01",
-        "gate_1_candidates": [
-            "BEL"
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "ARVIND",
+            "BEL",
+            "APOLLO"
         ],
-        "gate_2_approved": [],
-        "trades": []
+        "gate_2_approved": [
+            "APOLLO",
+            "ARVIND"
+        ],
+        "trades": [
+            {
+                "symbol": "APOLLO",
+                "entry_price": 246.65,
+                "current_price": 200.67,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-12"
+            },
+            {
+                "symbol": "ARVIND",
+                "entry_price": 326.4,
+                "current_price": 398.55,
+                "outcome": "OPEN",
+                "pnl": 22.1,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-02-02",
-        "gate_1_candidates": [
-            "KANSAINER"
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "KANSAINER",
+            "GODREJAGRO"
         ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-02-03",
-        "gate_1_candidates": [
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
             "ATUL",
+            "ELGIEQUIP",
+            "BHARATFORG",
             "BALKRISIND",
-            "GINNIFILA"
+            "ADL",
+            "ICICIB22",
+            "UFLEX",
+            "AUROPHARMA",
+            "CENTENKA",
+            "ANGELONE",
+            "BANARBEADS",
+            "GARFIBRES",
+            "CGPOWER",
+            "GINNIFILA",
+            "SHIVATEX",
+            "ADANIENT"
         ],
         "gate_2_approved": [
             "BANARBEADS",
-            "SHIVATEX",
-            "ADANIENT"
+            "ATUL",
+            "ADL"
         ],
         "trades": [
             {
                 "symbol": "BANARBEADS",
                 "entry_price": 121.38,
-                "current_price": 111.54,
+                "current_price": 99.36,
                 "outcome": "LOSS",
-                "pnl": -5.0,
-                "exit_date": "2026-03-03"
+                "pnl": -15.0,
+                "exit_date": "2026-03-26"
             },
             {
-                "symbol": "SHIVATEX",
-                "entry_price": 179.2,
-                "current_price": 167.7,
-                "outcome": "LOSS",
-                "pnl": -5.0,
-                "exit_date": "2026-02-09"
+                "symbol": "ATUL",
+                "entry_price": 6317.5,
+                "current_price": 6817.5,
+                "outcome": "OPEN",
+                "pnl": 7.91,
+                "exit_date": "N/A"
             },
             {
-                "symbol": "ADANIENT",
-                "entry_price": 2228.2,
-                "current_price": 2076.5,
+                "symbol": "ADL",
+                "entry_price": 72.89,
+                "current_price": 58.34,
                 "outcome": "LOSS",
-                "pnl": -5.0,
-                "exit_date": "2026-03-03"
+                "pnl": -15.0,
+                "exit_date": "2026-03-26"
             }
         ]
     },
     {
         "date": "2026-02-04",
         "gate_1_candidates": [],
-        "gate_2_approved": [],
-        "trades": []
+        "gate_1_incubator": [
+            "ANDHRAPAP",
+            "SHIVATEX",
+            "DHAMPURSUG",
+            "BAJFINANCE",
+            "BIRLACORPN",
+            "GABRIEL",
+            "CASTROLIND",
+            "ESG",
+            "BHARATGEAR",
+            "ICICIB22",
+            "BOMDYEING"
+        ],
+        "gate_2_approved": [
+            "ANDHRAPAP",
+            "BAJFINANCE",
+            "DHAMPURSUG",
+            "BOMDYEING"
+        ],
+        "trades": [
+            {
+                "symbol": "ANDHRAPAP",
+                "entry_price": 65.53,
+                "current_price": 66.57,
+                "outcome": "OPEN",
+                "pnl": 1.59,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BAJFINANCE",
+                "entry_price": 964.75,
+                "current_price": 812.6,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-22"
+            },
+            {
+                "symbol": "DHAMPURSUG",
+                "entry_price": 120.35,
+                "current_price": 155.35,
+                "outcome": "OPEN",
+                "pnl": 29.08,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BOMDYEING",
+                "entry_price": 121.49,
+                "current_price": 101.9,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-08"
+            }
+        ]
     },
     {
         "date": "2026-02-05",
-        "gate_1_candidates": [
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
             "AUTOAXLES",
-            "VALIANTORG"
+            "BAJAJHLDNG",
+            "APOLLOTYRE",
+            "VALIANTORG",
+            "SHIVATEX",
+            "ANDHRSUGAR"
         ],
         "gate_2_approved": [],
         "trades": []
@@ -72,139 +167,256 @@
     {
         "date": "2026-02-08",
         "gate_1_candidates": [
+            "ICICIB22"
+        ],
+        "gate_1_incubator": [
+            "EIHOTEL",
+            "DALMIASUG",
+            "BHARATGEAR",
             "CENTENKA",
-            "ICICIB22",
+            "FINCABLES",
             "VALIANTORG"
         ],
-        "gate_2_approved": [],
-        "trades": []
+        "gate_2_approved": [
+            "DALMIASUG"
+        ],
+        "trades": [
+            {
+                "symbol": "DALMIASUG",
+                "entry_price": 303.8,
+                "current_price": 397.5,
+                "outcome": "OPEN",
+                "pnl": 30.84,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-02-09",
         "gate_1_candidates": [
-            "ANDHRAPAP",
             "BHARATGEAR",
-            "FMGOETZE",
             "GRAPHITE"
         ],
-        "gate_2_approved": [],
-        "trades": []
-    },
-    {
-        "date": "2026-02-10",
-        "gate_1_candidates": [
-            "GLAXO",
-            "FINCABLES",
-            "NIACL",
-            "ICICIB22",
-            "TCPLPACK",
-            "GRAPHITE",
-            "BIRLACORPN",
-            "HEMIPROP"
+        "gate_1_incubator": [
+            "ELECTCAST",
+            "BASF",
+            "BEML",
+            "UFLEX",
+            "3MINDIA",
+            "SHAREINDIA",
+            "FMGOETZE"
         ],
         "gate_2_approved": [
-            "3MINDIA"
+            "3MINDIA",
+            "BEML"
         ],
         "trades": [
             {
                 "symbol": "3MINDIA",
-                "entry_price": 37580.0,
-                "current_price": 35115.0,
+                "entry_price": 37635.0,
+                "current_price": 31100.0,
                 "outcome": "LOSS",
-                "pnl": -5.0,
-                "exit_date": "2026-02-12"
+                "pnl": -15.0,
+                "exit_date": "2026-03-22"
+            },
+            {
+                "symbol": "BEML",
+                "entry_price": 1768.2,
+                "current_price": 1495.9,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-15"
+            }
+        ]
+    },
+    {
+        "date": "2026-02-10",
+        "gate_1_candidates": [
+            "GRAPHITE"
+        ],
+        "gate_1_incubator": [
+            "ESCORTS",
+            "ELECTCAST",
+            "BIRLACORPN",
+            "NIACL",
+            "GICRE",
+            "FMGOETZE",
+            "STYRENIX",
+            "ADOR",
+            "HEMIPROP",
+            "TCPLPACK",
+            "FINCABLES",
+            "GLAXO",
+            "PGHL",
+            "BALRAMCHIN",
+            "BATAINDIA",
+            "ICICIB22",
+            "ESABINDIA"
+        ],
+        "gate_2_approved": [
+            "PGHL",
+            "ESABINDIA"
+        ],
+        "trades": [
+            {
+                "symbol": "PGHL",
+                "entry_price": 5323.0,
+                "current_price": 5216.9,
+                "outcome": "OPEN",
+                "pnl": -1.99,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ESABINDIA",
+                "entry_price": 5647.0,
+                "current_price": 6266.9,
+                "outcome": "OPEN",
+                "pnl": 10.98,
+                "exit_date": "N/A"
             }
         ]
     },
     {
         "date": "2026-02-11",
-        "gate_1_candidates": [
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
             "COSMOFIRST",
-            "BBTC",
-            "APOLLOHOSP",
+            "GABRIEL",
             "EICHERMOT",
-            "BIRLACORPN"
+            "BIRLACORPN",
+            "CHAMBLFERT",
+            "FINCABLES",
+            "UFLEX",
+            "BBTC",
+            "APOLLOTYRE",
+            "CARBORUNIV",
+            "APOLLOHOSP",
+            "FMGOETZE"
         ],
-        "gate_2_approved": [],
-        "trades": []
+        "gate_2_approved": [
+            "BBTC",
+            "COSMOFIRST"
+        ],
+        "trades": [
+            {
+                "symbol": "BBTC",
+                "entry_price": 1813.0,
+                "current_price": 1538.2,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-08"
+            },
+            {
+                "symbol": "COSMOFIRST",
+                "entry_price": 700.0,
+                "current_price": 588.9,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-22"
+            }
+        ]
     },
     {
         "date": "2026-02-12",
         "gate_1_candidates": [
-            "GARFIBRES",
-            "COSMOFIRST",
-            "ANDHRAPAP",
             "ICICIB22",
-            "DANGEE",
             "AUTOAXLES"
         ],
+        "gate_1_incubator": [
+            "ELGIEQUIP",
+            "GARFIBRES",
+            "EICHERMOT",
+            "FINPIPE",
+            "HARRMALAYA",
+            "DANGEE",
+            "UFLEX",
+            "DELTAMAGNT"
+        ],
         "gate_2_approved": [
-            "PRAXIS",
             "HARRMALAYA"
         ],
         "trades": [
             {
-                "symbol": "PRAXIS",
-                "entry_price": 8.76,
-                "current_price": 8.12,
-                "outcome": "LOSS",
-                "pnl": -5.0,
-                "exit_date": "2026-02-17"
-            },
-            {
                 "symbol": "HARRMALAYA",
                 "entry_price": 170.02,
-                "current_price": 188.58,
-                "outcome": "PROFIT",
-                "pnl": 10.0,
-                "exit_date": "2026-02-16"
+                "current_price": 223.5,
+                "outcome": "OPEN",
+                "pnl": 31.46,
+                "exit_date": "N/A"
             }
         ]
     },
     {
         "date": "2026-02-15",
         "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "ELGIEQUIP",
+            "DANGEE"
+        ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-02-16",
         "gate_1_candidates": [],
-        "gate_2_approved": [],
-        "trades": []
-    },
-    {
-        "date": "2026-02-17",
-        "gate_1_candidates": [
-            "EPL",
-            "GALAXYSURF",
-            "SHRADHA",
-            "BHARATGEAR"
+        "gate_1_incubator": [
+            "ICEMAKE"
         ],
         "gate_2_approved": [],
         "trades": []
     },
     {
+        "date": "2026-02-17",
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "ICEMAKE",
+            "EPL",
+            "GALAXYSURF",
+            "BHARATGEAR",
+            "SHRADHA"
+        ],
+        "gate_2_approved": [
+            "EPL"
+        ],
+        "trades": [
+            {
+                "symbol": "EPL",
+                "entry_price": 218.32,
+                "current_price": 183.93,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-12"
+            }
+        ]
+    },
+    {
         "date": "2026-02-18",
-        "gate_1_candidates": [
-            "GODFRYPHLP",
-            "HEMIPROP"
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "HEMIPROP",
+            "ADOR",
+            "ICEMAKE",
+            "HEG",
+            "GODFRYPHLP"
         ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-02-19",
-        "gate_1_candidates": [
-            "GODFRYPHLP",
-            "HEMIPROP"
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "HEMIPROP",
+            "GODFRYPHLP"
         ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-02-22",
-        "gate_1_candidates": [
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "ICEMAKE",
             "CARBORUNIV"
         ],
         "gate_2_approved": [],
@@ -213,35 +425,54 @@
     {
         "date": "2026-02-23",
         "gate_1_candidates": [],
-        "gate_2_approved": [],
-        "trades": []
-    },
-    {
-        "date": "2026-02-24",
-        "gate_1_candidates": [
-            "BALKRISIND",
-            "SCHAEFFLER"
+        "gate_1_incubator": [
+            "DICIND",
+            "BAJAJHLDNG",
+            "MASFIN",
+            "SCHAEFFLER",
+            "GUJALKALI"
         ],
         "gate_2_approved": [
-            "SCHAEFFLER"
+            "MASFIN",
+            "GUJALKALI"
         ],
         "trades": [
             {
-                "symbol": "SCHAEFFLER",
-                "entry_price": 4264.4,
-                "current_price": 4050.4,
+                "symbol": "MASFIN",
+                "entry_price": 338.15,
+                "current_price": 279.65,
                 "outcome": "LOSS",
-                "pnl": -5.0,
-                "exit_date": "2026-03-10"
+                "pnl": -15.0,
+                "exit_date": "2026-03-29"
+            },
+            {
+                "symbol": "GUJALKALI",
+                "entry_price": 475.2,
+                "current_price": 722.55,
+                "outcome": "PROFIT",
+                "pnl": 50.0,
+                "exit_date": "2026-04-16"
             }
         ]
     },
     {
+        "date": "2026-02-24",
+        "gate_1_candidates": [
+            "BALKRISIND"
+        ],
+        "gate_1_incubator": [
+            "SCHAEFFLER"
+        ],
+        "gate_2_approved": [],
+        "trades": []
+    },
+    {
         "date": "2026-02-25",
         "gate_1_candidates": [
-            "COSMOFIRST",
-            "GRAPHITE",
             "DABUR"
+        ],
+        "gate_1_incubator": [
+            "GIPCL"
         ],
         "gate_2_approved": [],
         "trades": []
@@ -251,35 +482,30 @@
         "gate_1_candidates": [
             "FEDERALBNK"
         ],
-        "gate_2_approved": [
-            "DHAMPURSUG",
+        "gate_1_incubator": [
             "CHOLAFIN",
-            "FEDERALBNK"
+            "FOSECOIND"
+        ],
+        "gate_2_approved": [
+            "FOSECOIND",
+            "CHOLAFIN"
         ],
         "trades": [
             {
-                "symbol": "DHAMPURSUG",
-                "entry_price": 126.64,
-                "current_price": 118.81,
+                "symbol": "FOSECOIND",
+                "entry_price": 5325.1,
+                "current_price": 4518.4,
                 "outcome": "LOSS",
-                "pnl": -5.0,
-                "exit_date": "2026-03-12"
+                "pnl": -15.0,
+                "exit_date": "2026-04-06"
             },
             {
                 "symbol": "CHOLAFIN",
                 "entry_price": 1730.8,
-                "current_price": 1626.3,
+                "current_price": 1455.1,
                 "outcome": "LOSS",
-                "pnl": -5.0,
-                "exit_date": "2026-03-05"
-            },
-            {
-                "symbol": "FEDERALBNK",
-                "entry_price": 299.85,
-                "current_price": 273.3,
-                "outcome": "LOSS",
-                "pnl": -5.0,
-                "exit_date": "2026-03-08"
+                "pnl": -15.0,
+                "exit_date": "2026-03-18"
             }
         ]
     },
@@ -287,9 +513,9 @@
         "date": "2026-03-01",
         "gate_1_candidates": [
             "DABUR",
-            "BEL",
-            "BIRLACABLE"
+            "BEL"
         ],
+        "gate_1_incubator": [],
         "gate_2_approved": [],
         "trades": []
     },
@@ -298,26 +524,62 @@
         "gate_1_candidates": [
             "ICICIB22"
         ],
+        "gate_1_incubator": [
+            "BEL"
+        ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-03-04",
         "gate_1_candidates": [],
-        "gate_2_approved": [],
-        "trades": []
+        "gate_1_incubator": [
+            "BALRAMCHIN",
+            "BAJAJHIND",
+            "BEL"
+        ],
+        "gate_2_approved": [
+            "BAJAJHIND"
+        ],
+        "trades": [
+            {
+                "symbol": "BAJAJHIND",
+                "entry_price": 16.8,
+                "current_price": 20.3,
+                "outcome": "OPEN",
+                "pnl": 20.83,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-03-05",
         "gate_1_candidates": [],
-        "gate_2_approved": [],
-        "trades": []
+        "gate_1_incubator": [
+            "BALRAMCHIN",
+            "ROML",
+            "BEL"
+        ],
+        "gate_2_approved": [
+            "ROML"
+        ],
+        "trades": [
+            {
+                "symbol": "ROML",
+                "entry_price": 44.98,
+                "current_price": 36.32,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-29"
+            }
+        ]
     },
     {
         "date": "2026-03-08",
-        "gate_1_candidates": [
-            "MAZDOCK",
-            "COSMOFIRST"
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "MARINE",
+            "MAZDOCK"
         ],
         "gate_2_approved": [],
         "trades": []
@@ -325,44 +587,82 @@
     {
         "date": "2026-03-09",
         "gate_1_candidates": [],
-        "gate_2_approved": [],
-        "trades": []
-    },
-    {
-        "date": "2026-03-10",
-        "gate_1_candidates": [
-            "STYRENIX"
+        "gate_1_incubator": [
+            "BALRAMCHIN"
         ],
         "gate_2_approved": [],
         "trades": []
     },
     {
-        "date": "2026-03-11",
-        "gate_1_candidates": [
+        "date": "2026-03-10",
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "GTECJAINX",
             "HAPPSTMNDS",
-            "FACT",
-            "EUROTEXIND",
             "STYRENIX",
-            "ELECTCAST"
+            "FACT"
+        ],
+        "gate_2_approved": [
+            "GTECJAINX"
+        ],
+        "trades": [
+            {
+                "symbol": "GTECJAINX",
+                "entry_price": 21.05,
+                "current_price": 17.28,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-29"
+            }
+        ]
+    },
+    {
+        "date": "2026-03-11",
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "HAPPSTMNDS",
+            "ELECTCAST",
+            "STYRENIX",
+            "EUROTEXIND",
+            "FACT"
         ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-03-12",
-        "gate_1_candidates": [
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "ELECTCAST",
+            "CESC",
             "HAPPSTMNDS",
+            "AARTIIND"
+        ],
+        "gate_2_approved": [
             "CESC"
         ],
-        "gate_2_approved": [],
-        "trades": []
+        "trades": [
+            {
+                "symbol": "CESC",
+                "entry_price": 159.73,
+                "current_price": 187.53,
+                "outcome": "OPEN",
+                "pnl": 17.4,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-03-15",
         "gate_1_candidates": [
+            "ABB",
+            "BEL"
+        ],
+        "gate_1_incubator": [
+            "STYRENIX",
+            "BEPL",
             "FACT",
-            "CESC",
-            "BEPL"
+            "ELECTCAST"
         ],
         "gate_2_approved": [],
         "trades": []
@@ -370,27 +670,38 @@
     {
         "date": "2026-03-16",
         "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "STYRENIX"
+        ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-03-17",
         "gate_1_candidates": [],
+        "gate_1_incubator": [],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-03-18",
-        "gate_1_candidates": [
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
             "BEPL",
-            "GMBREW"
+            "GMBREW",
+            "STYRENIX",
+            "CASTROLIND",
+            "VALIANTORG"
         ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-03-19",
-        "gate_1_candidates": [
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "EUROTEXIND",
+            "CASTROLIND",
             "VALIANTORG"
         ],
         "gate_2_approved": [],
@@ -398,39 +709,73 @@
     },
     {
         "date": "2026-03-22",
-        "gate_1_candidates": [
-            "HAPPSTMNDS"
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "HAPPSTMNDS",
+            "CASTROLIND",
+            "ELECTCAST",
+            "BANARISUG",
+            "GINNIFILA",
+            "BHEL",
+            "DRREDDY",
+            "VALIANTORG"
         ],
         "gate_2_approved": [
-            "CASTROLIND"
+            "BHEL",
+            "BANARISUG"
         ],
         "trades": [
             {
-                "symbol": "CASTROLIND",
-                "entry_price": 177.29,
-                "current_price": 184.82,
+                "symbol": "BHEL",
+                "entry_price": 252.85,
+                "current_price": 352.41,
                 "outcome": "OPEN",
-                "pnl": 4.25,
+                "pnl": 39.38,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BANARISUG",
+                "entry_price": 3596.6,
+                "current_price": 3725.4,
+                "outcome": "OPEN",
+                "pnl": 3.58,
                 "exit_date": "N/A"
             }
         ]
     },
     {
         "date": "2026-03-23",
-        "gate_1_candidates": [],
+        "gate_1_candidates": [
+            "AUROPHARMA"
+        ],
+        "gate_1_incubator": [],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-03-24",
-        "gate_1_candidates": [],
+        "gate_1_candidates": [
+            "AUROPHARMA"
+        ],
+        "gate_1_incubator": [
+            "GMBREW",
+            "BEPL"
+        ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-03-26",
         "gate_1_candidates": [
-            "ANDHRSUGAR"
+            "AUROPHARMA"
+        ],
+        "gate_1_incubator": [
+            "ANDHRSUGAR",
+            "BALRAMCHIN",
+            "BEPL",
+            "CARBORUNIV",
+            "GMBREW",
+            "GODFRYPHLP"
         ],
         "gate_2_approved": [],
         "trades": []
@@ -438,6 +783,14 @@
     {
         "date": "2026-03-29",
         "gate_1_candidates": [
+            "AUROPHARMA",
+            "ABB"
+        ],
+        "gate_1_incubator": [
+            "GRAPHITE",
+            "GMBREW",
+            "EUROTEXIND",
+            "ELECTCAST",
             "HEG"
         ],
         "gate_2_approved": [],
@@ -446,35 +799,53 @@
     {
         "date": "2026-03-31",
         "gate_1_candidates": [
-            "EPL",
-            "HEG",
             "AUROPHARMA"
         ],
-        "gate_2_approved": [],
-        "trades": []
+        "gate_1_incubator": [
+            "HEG",
+            "DCMSHRIRAM"
+        ],
+        "gate_2_approved": [
+            "DCMSHRIRAM"
+        ],
+        "trades": [
+            {
+                "symbol": "DCMSHRIRAM",
+                "entry_price": 1151.9,
+                "current_price": 1227.5,
+                "outcome": "OPEN",
+                "pnl": 6.56,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-04-01",
         "gate_1_candidates": [
-            "EPL",
             "AUROPHARMA"
+        ],
+        "gate_1_incubator": [
+            "GICRE"
         ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-04-05",
-        "gate_1_candidates": [
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "DANGEE",
             "BSHSL",
-            "CARBORUNIV",
-            "DANGEE"
+            "CARBORUNIV"
         ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-04-06",
-        "gate_1_candidates": [
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "UNIDT",
             "CARBORUNIV"
         ],
         "gate_2_approved": [],
@@ -483,53 +854,57 @@
     {
         "date": "2026-04-07",
         "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "CARBORUNIV"
+        ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-04-08",
         "gate_1_candidates": [
-            "ABREL",
             "GMBREW"
+        ],
+        "gate_1_incubator": [
+            "GALAXYSURF",
+            "MAHLOG",
+            "ABREL"
         ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-04-09",
-        "gate_1_candidates": [
-            "APOLLO",
-            "BHEL"
-        ],
-        "gate_2_approved": [
-            "BHEL"
-        ],
-        "trades": [
-            {
-                "symbol": "BHEL",
-                "entry_price": 284.71,
-                "current_price": 316.79,
-                "outcome": "PROFIT",
-                "pnl": 10.0,
-                "exit_date": "2026-04-16"
-            }
-        ]
+        "gate_1_candidates": [],
+        "gate_1_incubator": [],
+        "gate_2_approved": [],
+        "trades": []
     },
     {
         "date": "2026-04-12",
-        "gate_1_candidates": [
-            "ARENTERP"
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "SHRADHA",
+            "ANDHRSUGAR",
+            "GICRE",
+            "ABREL",
+            "ASIANPAINT",
+            "EXIDEIND",
+            "NIACL",
+            "ESG",
+            "ARENTERP",
+            "SDBL"
         ],
         "gate_2_approved": [
-            "667GS2050-GS"
+            "EXIDEIND"
         ],
         "trades": [
             {
-                "symbol": "667GS2050-GS",
-                "entry_price": 92.0,
-                "current_price": 94.3,
+                "symbol": "EXIDEIND",
+                "entry_price": 324.8,
+                "current_price": 360.55,
                 "outcome": "OPEN",
-                "pnl": 2.5,
+                "pnl": 11.01,
                 "exit_date": "N/A"
             }
         ]
@@ -537,28 +912,26 @@
     {
         "date": "2026-04-14",
         "gate_1_candidates": [
-            "BIRLACABLE",
-            "ADL"
+            "GICRE"
         ],
-        "gate_2_approved": [
-            "INDIA VIX"
+        "gate_1_incubator": [
+            "KEEPLEARN",
+            "AARTIIND",
+            "STYRENIX"
         ],
-        "trades": [
-            {
-                "symbol": "INDIA VIX",
-                "entry_price": 18.67,
-                "current_price": 17.21,
-                "outcome": "LOSS",
-                "pnl": -5.0,
-                "exit_date": "2026-04-16"
-            }
-        ]
+        "gate_2_approved": [],
+        "trades": []
     },
     {
         "date": "2026-04-15",
-        "gate_1_candidates": [
-            "AEGISLOG",
-            "UTIAMC"
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "BHARATGEAR",
+            "UTIAMC",
+            "IGARASHI",
+            "MAHLOG",
+            "AARTIIND",
+            "AEGISLOG"
         ],
         "gate_2_approved": [
             "IGARASHI"
@@ -567,107 +940,85 @@
             {
                 "symbol": "IGARASHI",
                 "entry_price": 349.85,
-                "current_price": 385.75,
-                "outcome": "PROFIT",
-                "pnl": 10.0,
-                "exit_date": "2026-04-23"
+                "current_price": 387.3,
+                "outcome": "OPEN",
+                "pnl": 10.7,
+                "exit_date": "N/A"
             }
         ]
     },
     {
         "date": "2026-04-16",
         "gate_1_candidates": [
-            "BHARATGEAR",
-            "SINTERCOM",
             "ICICIB22"
         ],
-        "gate_2_approved": [
-            "DCMSHRIRAM",
-            "PGHL"
+        "gate_1_incubator": [
+            "SINTERCOM",
+            "GLAND",
+            "GICRE",
+            "GIPCL",
+            "ZENSARTECH",
+            "CANFINHOME",
+            "BHARATGEAR",
+            "ADOR"
         ],
-        "trades": [
-            {
-                "symbol": "DCMSHRIRAM",
-                "entry_price": 1226.1,
-                "current_price": 1227.5,
-                "outcome": "OPEN",
-                "pnl": 0.11,
-                "exit_date": "N/A"
-            },
-            {
-                "symbol": "PGHL",
-                "entry_price": 5022.9,
-                "current_price": 5216.9,
-                "outcome": "OPEN",
-                "pnl": 3.86,
-                "exit_date": "N/A"
-            }
-        ]
+        "gate_2_approved": [],
+        "trades": []
     },
     {
         "date": "2026-04-19",
         "gate_1_candidates": [
-            "AEGISLOG",
-            "MAHLOG",
-            "SINTERCOM",
+            "MAHLOG"
+        ],
+        "gate_1_incubator": [
             "GODFRYPHLP",
-            "CRISIL"
+            "BHARATGEAR",
+            "CRISIL",
+            "GNFC",
+            "BALKRISIND",
+            "SINTERCOM",
+            "AEGISLOG"
         ],
-        "gate_2_approved": [
-            "ARVIND"
-        ],
-        "trades": [
-            {
-                "symbol": "ARVIND",
-                "entry_price": 385.2,
-                "current_price": 398.55,
-                "outcome": "OPEN",
-                "pnl": 3.47,
-                "exit_date": "N/A"
-            }
-        ]
+        "gate_2_approved": [],
+        "trades": []
     },
     {
         "date": "2026-04-20",
-        "gate_1_candidates": [
-            "GRAPHITE"
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "GRAPHITE",
+            "ADOR",
+            "DPABHUSHAN",
+            "TIINDIA",
+            "GIPCL",
+            "BALRAMCHIN"
         ],
         "gate_2_approved": [
-            "BALRAMCHIN"
+            "TIINDIA"
         ],
         "trades": [
             {
-                "symbol": "BALRAMCHIN",
-                "entry_price": 508.85,
-                "current_price": 521.05,
+                "symbol": "TIINDIA",
+                "entry_price": 2885.2,
+                "current_price": 2947.9,
                 "outcome": "OPEN",
-                "pnl": 2.4,
+                "pnl": 2.17,
                 "exit_date": "N/A"
             }
         ]
     },
     {
         "date": "2026-04-21",
-        "gate_1_candidates": [
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "ASHIMASYN",
             "CANFINHOME",
-            "ATUL",
-            "FINCABLES",
-            "CENTENKA",
-            "ASHIMASYN"
+            "CENTENKA"
         ],
         "gate_2_approved": [
-            "MASFIN",
             "ASHIMASYN"
         ],
         "trades": [
-            {
-                "symbol": "MASFIN",
-                "entry_price": 323.05,
-                "current_price": 339.9,
-                "outcome": "OPEN",
-                "pnl": 5.22,
-                "exit_date": "N/A"
-            },
             {
                 "symbol": "ASHIMASYN",
                 "entry_price": 16.49,
@@ -681,178 +1032,82 @@
     {
         "date": "2026-04-22",
         "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "ELGIEQUIP"
+        ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-04-23",
-        "gate_1_candidates": [
-            "MAHLOG",
-            "ATUL",
-            "CIPLA",
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "DCM",
+            "CAMS",
             "EIDPARRY",
-            "DRREDDY"
-        ],
-        "gate_2_approved": [
-            "EIDPARRY"
-        ],
-        "trades": [
-            {
-                "symbol": "EIDPARRY",
-                "entry_price": 845.1,
-                "current_price": 844.0,
-                "outcome": "OPEN",
-                "pnl": -0.13,
-                "exit_date": "N/A"
-            }
-        ]
-    },
-    {
-        "date": "2026-04-24",
-        "gate_1_candidates": [
-            "ATUL"
-        ],
-        "gate_2_approved": [
-            "ARVIND",
-            "BHARATFORG",
-            "INDIA VIX",
-            "FEDERALBNK"
-        ],
-        "trades": [
-            {
-                "symbol": "ARVIND",
-                "entry_price": 0.0,
-                "current_price": 390.7,
-                "outcome": "PROFIT",
-                "pnl": 10.0,
-                "exit_date": "2026-04-26"
-            },
-            {
-                "symbol": "BHARATFORG",
-                "entry_price": 0.0,
-                "current_price": 1901.1,
-                "outcome": "PROFIT",
-                "pnl": 10.0,
-                "exit_date": "2026-04-26"
-            },
-            {
-                "symbol": "INDIA VIX",
-                "entry_price": 0.0,
-                "current_price": 18.38,
-                "outcome": "PROFIT",
-                "pnl": 10.0,
-                "exit_date": "2026-04-26"
-            },
-            {
-                "symbol": "FEDERALBNK",
-                "entry_price": 0.0,
-                "current_price": 294.05,
-                "outcome": "PROFIT",
-                "pnl": 10.0,
-                "exit_date": "2026-04-26"
-            }
-        ]
-    },
-    {
-        "date": "2026-04-25",
-        "gate_1_candidates": [
-            "ATUL"
-        ],
-        "gate_2_approved": [
-            "ARVIND",
-            "BHARATFORG",
-            "INDIA VIX",
-            "FEDERALBNK"
-        ],
-        "trades": [
-            {
-                "symbol": "ARVIND",
-                "entry_price": 0.0,
-                "current_price": 390.7,
-                "outcome": "PROFIT",
-                "pnl": 10.0,
-                "exit_date": "2026-04-26"
-            },
-            {
-                "symbol": "BHARATFORG",
-                "entry_price": 0.0,
-                "current_price": 1901.1,
-                "outcome": "PROFIT",
-                "pnl": 10.0,
-                "exit_date": "2026-04-26"
-            },
-            {
-                "symbol": "INDIA VIX",
-                "entry_price": 0.0,
-                "current_price": 18.38,
-                "outcome": "PROFIT",
-                "pnl": 10.0,
-                "exit_date": "2026-04-26"
-            },
-            {
-                "symbol": "FEDERALBNK",
-                "entry_price": 0.0,
-                "current_price": 294.05,
-                "outcome": "PROFIT",
-                "pnl": 10.0,
-                "exit_date": "2026-04-26"
-            }
-        ]
-    },
-    {
-        "date": "2026-04-26",
-        "gate_1_candidates": [
-            "ATUL"
+            "DRREDDY",
+            "CIPLA"
         ],
         "gate_2_approved": [],
         "trades": []
     },
     {
-        "date": "2026-04-27",
-        "gate_1_candidates": [
-            "CANFINHOME",
-            "ROUTE"
+        "date": "2026-04-26",
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "21STCENMGM",
+            "CIPLA"
         ],
         "gate_2_approved": [
-            "NEWGEN"
+            "21STCENMGM"
         ],
         "trades": [
             {
-                "symbol": "NEWGEN",
-                "entry_price": 482.8,
-                "current_price": 505.75,
+                "symbol": "21STCENMGM",
+                "entry_price": 36.45,
+                "current_price": 36.58,
                 "outcome": "OPEN",
-                "pnl": 4.75,
+                "pnl": 0.36,
                 "exit_date": "N/A"
             }
         ]
     },
     {
+        "date": "2026-04-27",
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "SHALBY",
+            "NEWGEN",
+            "ROUTE",
+            "BPL",
+            "CANFINHOME"
+        ],
+        "gate_2_approved": [],
+        "trades": []
+    },
+    {
         "date": "2026-04-28",
         "gate_1_candidates": [],
+        "gate_1_incubator": [
+            "UFLEX",
+            "ADOR"
+        ],
         "gate_2_approved": [],
         "trades": []
     },
     {
         "date": "2026-04-29",
-        "gate_1_candidates": [
+        "gate_1_candidates": [],
+        "gate_1_incubator": [
             "BSL",
             "GALAXYSURF",
+            "GODFRYPHLP",
+            "ORCHPHARMA",
+            "BALMLAWRIE",
             "DCW",
-            "GODFRYPHLP"
+            "UFLEX"
         ],
-        "gate_2_approved": [
-            "BALMLAWRIE"
-        ],
-        "trades": [
-            {
-                "symbol": "BALMLAWRIE",
-                "entry_price": 187.99,
-                "current_price": 187.99,
-                "outcome": "OPEN",
-                "pnl": 0.0,
-                "exit_date": "N/A"
-            }
-        ]
+        "gate_2_approved": [],
+        "trades": []
     }
 ]

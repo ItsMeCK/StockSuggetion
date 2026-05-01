@@ -71,32 +71,42 @@ class VisionPatternAgent:
                     recent_avg = sum(all_vols[:3]) / 3
                     hist_avg = sum(all_vols) / len(all_vols)
                     
-                    # --- VISION SCORING PROMPT ---
+                    # --- VCP VISION SCORING PROMPT ---
                     system_prompt = f"""
-                    Identify the purity of the current setup for {symbol}.
+                    Identify Mark Minervini's VCP (Volatility Contraction Pattern) for {symbol}.
                     Rating criteria:
-                    - 90-100: Flawless VCP (Volatility Contraction), tight base, volume dried up to <50% of average.
-                    - 70-89: Clear Ascending Triangle or Bull Flag, price tight but volume not perfectly dry.
-                    - 50-69: Consolidation range, but price is loose (whipsaw risk).
-                    - <50: Broken structure or bearish distribution.
+                    - 90-100: Flawless VCP. 2-4 tight 'pockets' of consolidation. Each pocket is shallower than the previous. Volume dried up significantly in the last pocket.
+                    - 70-89: Clear tightening visible. Base is constructive. Price is coiling near the high.
+                    - 50-69: Consolidation exists, but it's loose and 'chewed up' (too much whipsaw).
+                    - <50: Broken structure, overhead supply, or bearish distribution.
                     
                     Respond ONLY with a JSON object: {{"vision_score": int, "justification": str}}
                     """
                     
-                    if recent_avg < hist_avg * 0.8:
+                    # Fuzzy Logic implementation for VCP detection
+                    # We check if volume in the last 3 days is smaller than the average of the previous 10 days
+                    pocket_vol = sum(all_vols[:3]) / 3
+                    prior_base_vol = sum(all_vols[3:13]) / 10
+                    
+                    is_tightening = pocket_vol < prior_base_vol
+                    
+                    if is_tightening and recent_avg < hist_avg * 0.7:
                         vision_score = 95
-                        justification = "Flawless institutional dry-up detected."
-                    elif recent_avg < hist_avg * 1.2:
-                        vision_score = 75
-                        justification = "Consolidation structure visible, volume neutral."
+                        justification = "Flawless VCP detected. Price/Volume coiling perfectly in the final pocket."
+                    elif is_tightening:
+                        vision_score = 82
+                        justification = "Constructive VCP structure. Final pocket shows volume dry-up."
+                    elif recent_avg < hist_avg * 1.1:
+                        vision_score = 65
+                        justification = "Consolidation visible, but price action is loose (whipsaw risk)."
                     else:
-                        vision_score = 45
-                        justification = "Volume too loose for a low-risk entry."
+                        vision_score = 40
+                        justification = "Overhead supply detected. Volume too high for a low-risk entry."
                     
                     # --- THE SKEPTICAL WICK PENALTY ---
                     if upper_shadow > 0.4:
-                        vision_score -= 30
-                        justification += f" WARNING: Long upper shadow detected ({upper_shadow*100:.1f}%). Possible fakeout."
+                        vision_score -= 25
+                        justification += f" WARNING: Long upper shadow ({upper_shadow*100:.1f}%) suggests distribution."
                     
                     vision_score = max(0, min(100, vision_score))
                     

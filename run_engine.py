@@ -81,8 +81,9 @@ def run_analysis_only():
     # 3. Phase 2: Polars Screener (REAL DATA)
     logging.info("--- PHASE 2: REAL DATA POLARS SCREENER ---")
     screener = SovereignScreener()
-    candidates, base_scores = screener.run_pipeline()
+    candidates, incubator, base_scores = screener.run_pipeline()
     initial_state["candidates"] = candidates
+    initial_state["incubator"] = incubator
     initial_state["base_scores"] = base_scores
 
     # Append SIGNALED status for all deterministic candidates
@@ -119,8 +120,8 @@ def run_analysis_only():
     except Exception as e:
         logging.error(f"Ledger append error for signals: {e}")
 
-    if not candidates:
-        logging.info("No candidates passed the Deterministic Screener. Ending run.")
+    if not candidates and not incubator:
+        logging.info("No candidates or incubator stocks passed the Deterministic Screener. Ending run.")
         return
 
     # 4. Phase 3 & 4: LangGraph Orchestration

@@ -1,7 +1,6 @@
 import os
 import json
 import logging
-import pandas as pd
 from datetime import datetime, timedelta
 from midnight_sovereign.pipeline.screener import SovereignScreener
 from midnight_sovereign.run_historical import run_historical_engine
@@ -51,15 +50,16 @@ def track_performance(symbol, entry_date, entry_price):
     cur.close()
     conn.close()
     
-    target = entry_price * 1.10
-    stop = entry_price * 0.95
+    # Sovereign Aggressive Exit Logic
+    target = entry_price * 1.50 # 50% Profit Target
+    stop = entry_price * 0.85   # 15% Stop Loss (to allow for Stage Transition volatility)
     
     for row in rows:
         price = float(row[1])
         if price >= target:
-            return "PROFIT", 10.0, row[0].strftime('%Y-%m-%d'), price
+            return "PROFIT", 50.0, row[0].strftime('%Y-%m-%d'), price
         if price <= stop:
-            return "LOSS", -5.0, row[0].strftime('%Y-%m-%d'), price
+            return "LOSS", -15.0, row[0].strftime('%Y-%m-%d'), price
             
     # If still open, calculate current PnL based on last known price
     if rows:
@@ -70,7 +70,7 @@ def track_performance(symbol, entry_date, entry_price):
     return "OPEN", 0.0, "N/A", entry_price
 
 def run_backtest():
-    start_date = "2026-02-01"
+    start_date = datetime(2026, 2, 1)
     end_date = "2026-04-30"
     trading_dates = get_trading_dates(start_date, end_date)
     
@@ -121,6 +121,7 @@ def run_backtest():
         results.append({
             "date": date,
             "gate_1_candidates": run_data["candidates"],
+            "gate_1_incubator": run_data.get("incubator", []),
             "gate_2_approved": run_data["approved"],
             "trades": trades
         })

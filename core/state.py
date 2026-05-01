@@ -60,8 +60,11 @@ class SovereignState(TypedDict):
     # Maps ticker -> vision results
     vision_validations: Annotated[Dict[str, Dict[str, Any]], merge_dicts]
     
-    # Maps ticker -> agent scores (e.g., {"entry": 85, "vision": 90, "critic": 75})
+    # Maps ticker -> agent scores (e.g., {"entry": 85, "vision": 90, "critic": 75, "sector": 80})
     agent_scores: Annotated[Dict[str, Dict[str, float]], merge_dicts]
+    
+    # Maps ticker -> Sector Relative Strength scores
+    sector_scores: Annotated[Dict[str, float], merge_dicts]
     
     # Maps ticker -> Critic Agent validations
     critic_results: Annotated[Dict[str, Dict[str, Any]], merge_dicts]
@@ -69,8 +72,8 @@ class SovereignState(TypedDict):
     # Maps ticker -> Watcher Agent notes
     incubator_notes: Annotated[Dict[str, str], merge_dicts]
     
-    # Maps ticker -> allocation details (size, entry, stop, Kelly fraction)
-    approved_allocations: Annotated[Dict[str, Dict[str, float]], merge_dicts]
+    # Maps ticker -> allocation details (size, entry, stop, Kelly fraction, final_confidence)
+    approved_allocations: Annotated[Dict[str, Dict[str, Any]], merge_dicts]
     
     # --- Phase 3: Telemetry & Execution ---
     # Maps ticker -> TWAP/VWAP execution metadata (arrival price, fill price, slippage bps)

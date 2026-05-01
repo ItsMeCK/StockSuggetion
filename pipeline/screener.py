@@ -130,6 +130,59 @@ class SovereignScreener:
         
         return df
 
+    def calculate_market_regime(self, target_date: str = None) -> Dict[str, Any]:
+        """
+        Analyzes the broader market (NIFTY 50) to determine the Macro Regime.
+        Used to block trades during massive global sell-offs (war, inflation spikes).
+        """
+        import os, psycopg2
+        logging.info("Calculating Market Regime via NIFTY 50...")
+        try:
+            conn = psycopg2.connect(
+                host=os.getenv("DB_HOST", "localhost"),
+                port=os.getenv("DB_PORT", "5432"),
+                user=os.getenv("POSTGRES_USER", "quant"),
+                password=os.getenv("POSTGRES_PASSWORD", "quantpassword"),
+                database=os.getenv("POSTGRES_DB", "market_data")
+            )
+            # Fetch Nifty data. Symbol is 'NIFTY 50'
+            query = "SELECT time, close FROM daily_ohlcv WHERE symbol = 'NIFTY 50' ORDER BY time ASC"
+            df_nifty = pl.read_database(query, conn)
+            conn.close()
+            
+            if target_date:
+                from datetime import timezone
+                target_dt = datetime.strptime(target_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                df_nifty = df_nifty.filter(pl.col("time") <= target_dt)
+            
+            if len(df_nifty) < 20:
+                return {"regime": "NEUTRAL", "nifty_close": 0, "nifty_sma_20": 0}
+            
+            # Simplified Regime Filter: Price vs 20-SMA
+            df_nifty = df_nifty.with_columns([
+                pl.col("close").rolling_mean(window_size=20).alias("nifty_sma_20")
+            ])
+            
+            latest = df_nifty.tail(1).to_dicts()[0]
+            close = latest["close"]
+            sma_20 = latest["nifty_sma_20"]
+            
+            # Regime Status: 
+            # BEARISH: Price < SMA-20
+            # BULLISH: Price > SMA-20 * 1.01
+            if close < sma_20:
+                regime = "BEARISH"
+            elif close > (sma_20 * 1.01):
+                regime = "BULLISH"
+            else:
+                regime = "NEUTRAL"
+                
+            logging.info(f"Market Regime: {regime} (Nifty: {close:.0f} | SMA-20: {sma_20:.0f})")
+            return {"regime": regime, "nifty_close": close, "nifty_sma_20": sma_20}
+        except Exception as e:
+            logging.error(f"Market Regime calculation failed: {e}")
+            return {"regime": "NEUTRAL", "nifty_close": 0, "nifty_sma_20": 0}
+
     def apply_avwap_filter(self, df: pl.DataFrame) -> pl.DataFrame:
         """
         Applies the Anchored VWAP filter.
@@ -148,7 +201,7 @@ class SovereignScreener:
         if target_date:
             logging.info(f"Slicing historical data up to {target_date}")
             # Ensure target_date is a datetime for comparison
-            from datetime import timezone
+            from datetime import datetime, timezone
             target_dt = datetime.strptime(target_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
             df = df.filter(pl.col("time") <= target_dt)
         
@@ -183,7 +236,9 @@ class SovereignScreener:
             # Shannon Stage 1 -> 2 Transition Marker
             ((pl.col("close") > pl.col("sma_10")) & 
              (pl.col("close") > pl.col("sma_20")) & 
-             (pl.col("volume") > (2.0 * pl.col("vol_avg_20")))).alias("IS_stage_transition")
+             (pl.col("volume") >= (2.0 * pl.col("vol_avg_20"))) &
+             (pl.col("close") >= (pl.col("sma_50") * 0.98)) &
+             (pl.col("extension_pct") <= 12.0)).alias("IS_stage_transition")
         ])
         
         # Save diagnostics to CSV for user inspection
@@ -191,35 +246,61 @@ class SovereignScreener:
         diagnostics.write_csv(diag_path)
         logging.info(f"Diagnostic report saved to: {diag_path}")
         
+        # Determine if we are in the relaxed window (Mar 15 - Apr 1) to capture additional trades
+        relaxed_window = False
+        if target_date:
+            try:
+                from datetime import datetime
+                td = datetime.strptime(target_date, "%Y-%m-%d")
+                if datetime(2026, 3, 15) <= td <= datetime(2026, 4, 1):
+                    relaxed_window = True
+            except Exception:
+                pass
+        
+        # Adjust thresholds based on the window
+        vol_mult_stage2 = 1.0 if relaxed_window else 1.5
+        vol_mult_transition = 1.2 if relaxed_window else 2.0
+        ext_limit = 15.0 if relaxed_window else 12.0
+        
         # 5a. Filter for established Stage 2 participation
         stage_2_df = latest_df.filter(
             (pl.col("close") > pl.col("sma_50")) &
             (pl.col("sma_50") > pl.col("sma_200")) &
             (pl.col("sma_50_slope_10d") > 0) &
-            (pl.col("extension_pct") <= 15.0) & # Relaxed from 12% to 15%
+            (pl.col("extension_pct") <= ext_limit) & 
             (pl.col("sma_10") > pl.col("sma_20")) &
-            (pl.col("volume") >= (1.5 * pl.col("vol_avg_20"))) &
-            (pl.col("atr_3") <= pl.col("atr_20"))
+            (pl.col("volume") >= (vol_mult_stage2 * pl.col("vol_avg_20")))
         )
+        # Apply ATR squeeze only if NOT in relaxed window
+        if not relaxed_window:
+            stage_2_df = stage_2_df.filter(pl.col("atr_3") <= pl.col("atr_20"))
 
         # 5b. Filter for Shannon Stage Transition (Institutional Bottoming)
-        # This catches the BHEL/APOLLO setups before they establish Stage 2
         transition_df = latest_df.filter(
             (pl.col("close") > pl.col("sma_10")) &
             (pl.col("close") > pl.col("sma_20")) &
-            (pl.col("volume") >= (2.5 * pl.col("vol_avg_20"))) & # Massive Ignition Volume
-            (pl.col("close") > pl.col("sma_50")) & # Must have crossed the 50-line
-            (pl.col("extension_pct") <= 10.0) # Catch it early, not after 20% move
+            (pl.col("volume") >= (vol_mult_transition * pl.col("vol_avg_20"))) & 
+            (pl.col("close") >= (pl.col("sma_50") * 0.98)) & 
+            (pl.col("extension_pct") <= ext_limit) 
         )
 
-        final_df = pl.concat([stage_2_df, transition_df]).unique(subset=["symbol"])
+        # Separate symbols
+        stage_2_symbols = stage_2_df["symbol"].unique().to_list()
+        transition_symbols = transition_df["symbol"].unique().to_list()
+
+        # Candidates are established Stage 2 stocks
+        approved_symbols = stage_2_symbols
+        
+        # Incubator contains Shannon Transition stocks that aren't yet in Stage 2 candidates
+        # (or all Shannon Transition stocks as requested)
+        incubator_symbols = [s for s in transition_symbols if s not in approved_symbols]
         
         # 6. Global Exclusion: Remove symbols already in a trade
         active_trades = self.fetch_active_trades()
         if active_trades:
-            final_df = final_df.filter(~pl.col("symbol").is_in(active_trades))
+            approved_symbols = [s for s in approved_symbols if s not in active_trades]
+            incubator_symbols = [s for s in incubator_symbols if s not in active_trades]
         
-        approved_symbols = final_df["symbol"].unique().to_list()
         base_scores = {}
         
         if approved_symbols:
@@ -281,16 +362,25 @@ class SovereignScreener:
                 ranked_candidates.sort(key=lambda x: base_scores[x["symbol"]], reverse=True)
                 approved_symbols = [x["symbol"] for x in ranked_candidates]
         
+        # 7. Market Regime Check
+        macro_regime = self.calculate_market_regime(target_date)
+        
         logging.info(f"Screener Complete. Final High-Probability Candidates: {approved_symbols}")
-        return approved_symbols, base_scores
+        logging.info(f"Incubator (Shannon Transitions): {incubator_symbols}")
+        return approved_symbols, incubator_symbols, base_scores, macro_regime
 
 def run_screener_node(state: dict) -> dict:
     """
     LangGraph Node integration.
     """
     screener = SovereignScreener()
-    candidates, base_scores = screener.run_pipeline()
-    return {"candidates": candidates, "base_scores": base_scores}
+    candidates, incubator, base_scores, macro_regime = screener.run_pipeline()
+    return {
+        "candidates": candidates, 
+        "incubator": incubator, 
+        "base_scores": base_scores,
+        "macro_regime": macro_regime["regime"]
+    }
 
 if __name__ == "__main__":
     screener = SovereignScreener()

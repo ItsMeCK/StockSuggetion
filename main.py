@@ -55,12 +55,14 @@ def execute_daily_run():
 
     # Run the Polars Screener
     screener = SovereignScreener()
-    candidates = screener.run_pipeline()
+    candidates, incubator, base_scores = screener.run_pipeline()
     initial_state["candidates"] = candidates
+    initial_state["incubator"] = incubator
+    initial_state["base_scores"] = base_scores
 
     # 5. Phase 3 & 4: LangGraph Orchestration (Cognitive Engine + Execution + Reflection)
-    if not candidates:
-        logging.info("No candidates passed the Deterministic Screener. Ending run.")
+    if not candidates and not incubator:
+        logging.info("No candidates or incubator stocks passed the Deterministic Screener. Ending run.")
         return
 
     logging.info("--- PHASE 3 & 4: LANGGRAPH COGNITIVE ORCHESTRATION ---")

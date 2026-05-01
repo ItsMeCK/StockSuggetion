@@ -12,6 +12,7 @@ from midnight_sovereign.agents.reflection_engine import run_reflection_engine as
 from midnight_sovereign.agents.entry_trigger_agent import run_entry_trigger_agent as entry_trigger_agent
 from midnight_sovereign.agents.critic_agent import run_critic_agent as critic_agent
 from midnight_sovereign.agents.watcher_agent import run_watcher_agent as watcher_agent
+from midnight_sovereign.agents.sector_agent import run_sector_agent as sector_agent
 
 def should_execute(state: SovereignState) -> str:
     """Conditional edge router: proceed to execution if we have approved allocations, else END."""
@@ -32,6 +33,7 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.add_node("meta_gate_experience_check", meta_gate_experience_check)
     workflow.add_node("entry_trigger_agent", entry_trigger_agent)
     workflow.add_node("pattern_agent_vision", pattern_agent_vision)
+    workflow.add_node("sector_agent", sector_agent)
     workflow.add_node("watcher_agent", watcher_agent)
     workflow.add_node("critic_agent", critic_agent)
     workflow.add_node("risk_and_position_sizing", risk_and_position_sizing)
@@ -45,7 +47,8 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.add_edge("meta_gate_experience_check", "entry_trigger_agent")
     workflow.add_edge("entry_trigger_agent", "watcher_agent")
     workflow.add_edge("watcher_agent", "pattern_agent_vision")
-    workflow.add_edge("pattern_agent_vision", "critic_agent")
+    workflow.add_edge("pattern_agent_vision", "sector_agent")
+    workflow.add_edge("sector_agent", "critic_agent")
     
     def critic_debate_router(state: SovereignState) -> str:
         count = state.get("debate_count", 0)

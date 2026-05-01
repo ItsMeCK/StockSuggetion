@@ -27,17 +27,29 @@
             "math": "Price < 10 SMA < 20 SMA < 50 SMA < 200 SMA. 200 SMA slope < 0. Lower highs and lower lows.",
             "psychology": "Panic, capitulation, fear, depression, and despair. Sellers aggressively control the trend.",
             "action": "Maintain cash or aggressively initiate short setups."
+        },
+        "rectangle_consolidation": {
+            "math": "Volume contractions as patterns form; breakout points use pattern depth for projection.",
+            "action": "Await clear breakout direction before committing; use stop-loss to protect against whipsaws."
+        },
+        "head_and_shoulders_top": {
+            "math": "Neckline breach confirms reversal; slower volume during right shoulder.",
+            "action": "Prepare for short positions upon confirmation; watch for rally attempts after neckline breach as potential short opportunities."
         }
     },
     "pring_pattern_geometries": {
         "rectangle": {
-            "structure": "Horizontal range bounded by parallel resistance and support lines touched at least twice.",
-            "psychology": "Protracted trench warfare between accumulation and distribution. Evenly matched buyers and sellers.",
-            "volume_confirmation": "Volume must generally shrink during consolidation and spike >150% of average on breakout.",
+            "structure": "Volume trends shrink; breakout direction implies move; depth projects move.",
+            "psychology": "Price history shows a balance between buyers and sellers leading to sharp moves.",
+            "suitable_regime": [
+                "TRENDING",
+                "VOLATILE",
+                "MEAN_REVERTING"
+            ],
+            "risk_weight": 6,
             "vision_failure_markers": [
-                "Pinocchio Bar (Whipsaw) creating a false break",
-                "Breakout on declining or weak volume",
-                "Price falls back into the pattern violating a minor low"
+                "Shrinking volume on upside breakout implies potential whipsaw.",
+                "No expansion in volume during breakout."
             ]
         },
         "symmetrical_triangle": {
@@ -129,6 +141,139 @@
             "vision_failure_markers": [
                 "Bar fails to close significantly back inside the range",
                 "Low volume at the extreme wick"
+            ]
+        },
+        "head_and_shoulders": {
+            "structure": "Volume higher on left shoulder, declines on right shoulder; neckline violation confirms pattern.",
+            "psychology": "Market psychology shifts from bullish to bearish, signaling trend reversal.",
+            "suitable_regime": [
+                "TRENDING"
+            ],
+            "risk_weight": 8,
+            "vision_failure_markers": [
+                "Lack of clear inbound uptrend preceding the pattern.",
+                "Volume characteristics not aligning with typical H&S formations."
+            ]
+        },
+        "rectangle_reversal_pattern": {
+            "structure": "Identify support and resistance levels with horizontal trendlines; monitor break below support for downside reversal signal or break above for upside reversal.",
+            "psychology": "Transitional phase where optimism and pessimism balance out before one gains upper hand.",
+            "regime_fit": "CHOPPY_SIDEWAYS",
+            "thematic_category": "MEAN_REVERSION",
+            "institutional_priority": 8,
+            "vision_failure_markers": [
+                "Failure to break out decisively from the trading range",
+                "False breakouts with insufficient volume"
+            ]
+        },
+        "rectangle_continuation_pattern": {
+            "structure": "Monitor upper resistance breakout for uptrend continuation; count the number of touches on boundaries to assess significance.",
+            "psychology": "Buyers take control post-consolidation, optimism in prevailing trend continues.",
+            "regime_fit": "BULL_MARKET",
+            "thematic_category": "MOMENTUM_IGNITION",
+            "institutional_priority": 7,
+            "vision_failure_markers": [
+                "Break fails to hold above previous resistance",
+                "Entering new range without directional flow confirmation"
+            ]
+        },
+        "accumulation_formation": {
+            "structure": "Identify bottoming phase with support level that fails to break lower; observe for decisive break above resistance to confirm upward trend reversal.",
+            "psychology": "Informed buyers accumulating from pessimistic sellers amidst bad news, betting on future improvements.",
+            "regime_fit": "BEAR_MARKET",
+            "thematic_category": "WAR_HEDGE",
+            "institutional_priority": 9,
+            "vision_failure_markers": [
+                "Protracted low volume during consolidation",
+                "Lack of bullish follow-through post-breakout"
+            ]
+        },
+        "distribution_formation": {
+            "structure": "Identify topping phase with resistance level repeatedly tested; look for break below support to confirm downward trend reversal.",
+            "psychology": "Informed sellers distributing to uninformed buyers amid good news, signaling market top.",
+            "regime_fit": "BULL_MARKET",
+            "thematic_category": "DEFENSIVE_CAPITULATION",
+            "institutional_priority": 6,
+            "vision_failure_markers": [
+                "Sustained buying interest at support levels",
+                "Resilient upward spikes on high volume"
+            ]
+        },
+        "always_in": {
+            "structure": "Spike in direction of the trend required for confidence",
+            "psychology": "High confidence in trend direction",
+            "regime_fit": "CHOPPY_SIDEWAYS",
+            "thematic_category": "MOMENTUM_IGNITION",
+            "institutional_priority": 7,
+            "vision_failure_markers": [
+                "Lack of directional conviction",
+                "Contrary large moves"
+            ]
+        },
+        "barbwire": {
+            "structure": "Three or more overlapping bars with tails",
+            "psychology": "Indecision and confusion in the market",
+            "regime_fit": "CHOPPY_SIDEWAYS",
+            "thematic_category": "MEAN_REVERSION",
+            "institutional_priority": 5,
+            "vision_failure_markers": [
+                "Trend breakout",
+                "Sharp directional move"
+            ]
+        },
+        "breakout_bar": {
+            "structure": "Strong trend bar creating new highs/lows",
+            "psychology": "Market confidence in new price levels",
+            "regime_fit": "BULL_MARKET, BEAR_MARKET",
+            "thematic_category": "MOMENTUM_IGNITION",
+            "institutional_priority": 9,
+            "vision_failure_markers": [
+                "Immediate reversal",
+                "Weak follow-through"
+            ]
+        },
+        "breakout_pullback": {
+            "structure": "Pullback within a few bars after breakout",
+            "psychology": "Continuation expectation post breakout",
+            "regime_fit": "BULL_MARKET, BEAR_MARKET",
+            "thematic_category": "MOMENTUM_IGNITION",
+            "institutional_priority": 8,
+            "vision_failure_markers": [
+                "Extended consolidation",
+                "Breakout failure"
+            ]
+        },
+        "double_bottom": {
+            "structure": "Low of current bar matches earlier swing low",
+            "psychology": "Support confluence and bullish reversal anticipation",
+            "regime_fit": "BULL_MARKET",
+            "thematic_category": "MEAN_REVERSION",
+            "institutional_priority": 6,
+            "vision_failure_markers": [
+                "Failure to hold support",
+                "Strong downtrend override"
+            ]
+        },
+        "double_top": {
+            "structure": "High of current bar matches earlier swing high",
+            "psychology": "Resistance confluence and bearish reversal anticipation",
+            "regime_fit": "BEAR_MARKET",
+            "thematic_category": "MEAN_REVERSION",
+            "institutional_priority": 6,
+            "vision_failure_markers": [
+                "Failure to hold resistance",
+                "Strong uptrend override"
+            ]
+        },
+        "climax": {
+            "structure": "Rapid move followed by sharp reversal",
+            "psychology": "Exhaustion of trend followed by reversion",
+            "regime_fit": "VOLATILE_CRASH",
+            "thematic_category": "DEFENSIVE_CAPITULATION",
+            "institutional_priority": 9,
+            "vision_failure_markers": [
+                "Trend continuation",
+                "Consolidation instead of reversal"
             ]
         }
     },

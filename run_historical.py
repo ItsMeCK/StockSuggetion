@@ -33,13 +33,22 @@ def run_historical_engine(target_date: str):
     # 3. Screener with Historical Slicing
     logging.info(f"--- PHASE 2: HISTORICAL POLARS SCREENER ({target_date}) ---")
     screener = SovereignScreener()
-    candidates, base_scores = screener.run_pipeline(target_date=target_date)
-    initial_state["candidates"] = candidates
+    candidates, incubator, base_scores, macro_regime = screener.run_pipeline(target_date=target_date)
+    
+    # We process BOTH established Stage 2 and Shannon Incubator stocks through the Cognitive Gate
+    initial_state["candidates"] = candidates + incubator
+    initial_state["incubator"] = incubator
     initial_state["base_scores"] = base_scores
+    initial_state["macro_regime"] = macro_regime["regime"]
 
-    if not candidates:
-        logging.info(f"No candidates passed the screener on {target_date}.")
-        return
+    if not candidates and not incubator:
+        logging.info(f"No candidates or incubator stocks passed the screener on {target_date}.")
+        return {
+            "date": target_date,
+            "candidates": [],
+            "incubator": [],
+            "approved": []
+        }
 
     # 4. LangGraph Orchestration
     logging.info("--- PHASE 3 & 4: LANGGRAPH COGNITIVE ORCHESTRATION ---")
@@ -47,11 +56,12 @@ def run_historical_engine(target_date: str):
     from midnight_sovereign.graph.builder import build_sovereign_graph_with_checkpointer
     db_uri = f"postgresql://agent:agentpassword@{os.getenv('DB_HOST', 'localhost')}:5433/sovereign_state"
     
+    import time
     with PostgresSaver.from_conn_string(db_uri) as checkpointer:
         checkpointer.setup()
         app = build_sovereign_graph_with_checkpointer(checkpointer)
-        # Using a distinct thread for historical runs to avoid polluting live state
-        thread_id = f"historical_{target_date.replace('-', '')}"
+        # Using a truly unique thread for every run to prevent state bleeding
+        thread_id = f"historical_{target_date.replace('-', '')}_{int(time.time())}"
         final_state = app.invoke(initial_state, config={"configurable": {"thread_id": thread_id}})
     
     # 5. Output results
@@ -65,6 +75,7 @@ def run_historical_engine(target_date: str):
     return {
         "date": target_date,
         "candidates": candidates,
+        "incubator": incubator,
         "approved": approved
     }
 
