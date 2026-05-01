@@ -1,18 +1,18 @@
 from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.postgres import PostgresSaver
 
-from midnight_sovereign.core.state import SovereignState
+from core.state import SovereignState
 
-from midnight_sovereign.agents.heuristic_dtw import run_heuristic_pre_processor as heuristic_pre_processor
-from midnight_sovereign.agents.meta_gate import run_meta_gate as meta_gate_experience_check
-from midnight_sovereign.agents.pattern_agent import run_pattern_agent as pattern_agent_vision
-from midnight_sovereign.agents.risk_agent import run_risk_agent as risk_and_position_sizing
-from midnight_sovereign.agents.execution_agent import run_execution_agent as execution_agent
-from midnight_sovereign.agents.reflection_engine import run_reflection_engine as reflection_engine_post_mortem
-from midnight_sovereign.agents.entry_trigger_agent import run_entry_trigger_agent as entry_trigger_agent
-from midnight_sovereign.agents.critic_agent import run_critic_agent as critic_agent
-from midnight_sovereign.agents.watcher_agent import run_watcher_agent as watcher_agent
-from midnight_sovereign.agents.sector_agent import run_sector_agent as sector_agent
+from agents.heuristic_dtw import run_heuristic_pre_processor as heuristic_pre_processor
+from agents.meta_gate import run_meta_gate as meta_gate_experience_check
+from agents.pattern_agent import run_pattern_agent as pattern_agent_vision
+from agents.risk_agent import run_risk_agent as risk_and_position_sizing
+from agents.execution_agent import run_execution_agent as execution_agent
+from agents.reflection_engine import run_reflection_engine as reflection_engine_post_mortem
+from agents.entry_trigger_agent import run_entry_trigger_agent as entry_trigger_agent
+from agents.critic_agent import run_critic_agent as critic_agent
+from agents.watcher_agent import run_watcher_agent as watcher_agent
+from agents.sector_agent import run_sector_agent as sector_agent
 
 def should_execute(state: SovereignState) -> str:
     """Conditional edge router: proceed to execution if we have approved allocations, else END."""

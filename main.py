@@ -5,11 +5,11 @@ import os
 # Load environment variables from .env file securely
 load_dotenv()
 
-from midnight_sovereign.core.state import SovereignState
-from midnight_sovereign.graph.builder import build_sovereign_graph
-from midnight_sovereign.pipeline.screener import SovereignScreener
-from midnight_sovereign.agents.macro_gate import run_macro_regime_gate
-from midnight_sovereign.pipeline.ingestion import run_eod_ingestion
+from core.state import SovereignState
+from graph.builder import build_sovereign_graph
+from pipeline.screener import SovereignScreener
+from agents.macro_gate import run_macro_regime_gate
+from pipeline.ingestion import run_eod_ingestion
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 

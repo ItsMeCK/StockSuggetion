@@ -4,7 +4,7 @@ import psycopg2
 import polars as pl
 from typing import Dict, Any
 
-from midnight_sovereign.core.state import SovereignState
+from core.state import SovereignState
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 

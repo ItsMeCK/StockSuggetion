@@ -3,7 +3,7 @@ import logging
 from typing import Dict, Any
 from pathlib import Path
 
-from midnight_sovereign.core.state import SovereignState
+from core.state import SovereignState
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -46,7 +46,7 @@ class VisionPatternAgent:
             logging.error(f"Rulebook not found at {rules_path}. Did you run offline_compiler.py?")
             return {}
 
-    def analyze_chart(self, symbol: str, pattern_hint: str) -> Dict[str, Any]:
+    def analyze_chart(self, symbol: str, pattern_hint: str, target_date: str = None) -> Dict[str, Any]:
         """
         Dynamically identifies institutional setups using OpenAI GPT-4o with neural caching.
         """
@@ -61,8 +61,14 @@ class VisionPatternAgent:
                 database=os.getenv('TIMESCALE_DB', 'market_data')
             )
             cur = conn.cursor()
-            query = "SELECT time, high, low, close, volume FROM daily_ohlcv WHERE symbol = %s ORDER BY time DESC LIMIT 20"
-            cur.execute(query, (symbol,))
+            
+            if target_date:
+                query = "SELECT time, high, low, close, volume FROM daily_ohlcv WHERE symbol = %s AND time <= %s ORDER BY time DESC LIMIT 60"
+                cur.execute(query, (symbol, target_date))
+            else:
+                query = "SELECT time, high, low, close, volume FROM daily_ohlcv WHERE symbol = %s ORDER BY time DESC LIMIT 60"
+                cur.execute(query, (symbol,))
+                
             rows = cur.fetchall()
             cur.close()
             conn.close()
@@ -88,14 +94,19 @@ class VisionPatternAgent:
             prompt = f"""
             Identify the most likely institutional setup for {symbol} from this list: {pattern_list}.
             
+            Context: This is the Indian Stock Market (NSE). Markets are CLOSED on Saturdays, Sundays, and public holidays. 
+            If the latest data is a Friday and today is a Sunday, the Friday data is the correct "latest" footprint.
+            
             Recent OHLCV Data:
             {data_str}
             
             SCORING (0-100):
-            - 90-100: PERFECT. All institutional markers present.
-            - 80-89: STRONG. High probability setup with minor noise.
-            - 70-79: VALID. Tradable institutional footprint.
-            - <70: REJECT. Loose structure or distribution.
+            - 90-100: PERFECT. Strong breakout on massive volume (>3x avg).
+            - 80-89: STRONG. Institutional footprints clearly visible.
+            - 70-79: VALID. Tradable setup.
+            - <70: REJECT.
+            
+            CRITICAL: If you see a VOLUME SURGE where the latest volume is >3x the previous average, this is an Institutional Footprint. Score it HIGH.
             
             Return ONLY a JSON object: {{"identified_pattern": "string", "vision_score": int, "justification": "str"}}
             """
@@ -134,57 +145,49 @@ class VisionPatternAgent:
         except Exception as e:
             logging.error(f"GPT-4o Vision Analysis failed: {e}")
             return {"vision_approved": True, "vision_score": 50, "identified_pattern": "unknown", "reason": "Error"}
-            
-        except Exception as e:
-            logging.error(f"GPT-4o Vision Analysis failed: {e}")
-            return {"vision_approved": True, "vision_score": 50, "identified_pattern": "unknown", "reason": "Error"}
-        except Exception as e:
-            logging.error(f"Vision Agent error for {symbol}: {e}")
-            
-        return {
-            "vision_approved": True,
-            "vision_score": 50,
-            "reason": f"{pattern} geometry approved.",
-            "whipsaw_risk": "Low",
-            "volume_dryup_confirmed": True
-        }
 
 def run_pattern_agent(state: SovereignState) -> Dict[str, Any]:
     """
     LangGraph Node integration for the Pattern Agent.
-    Only evaluates candidates that passed the DTW and Meta-Gate checks.
     """
     heuristic_flags = state.get("heuristic_flags", {})
     experience_warnings = state.get("experience_warnings", {})
     
     vision_agent = VisionPatternAgent()
     vision_validations = {}
+    target_date = state.get("target_date")
+    candidates = state.get("candidates", [])
     
-    for symbol, setup_data in heuristic_flags.items():
+    # Initialize a new agent_scores map to return (LangGraph reducer pattern)
+    agent_scores = state.get("agent_scores", {})
+    new_agent_scores = {k: v.copy() for k, v in agent_scores.items()}
+    
+    for symbol in candidates:
         # Skip if the Meta-Gate vetoed this setup
         if symbol in experience_warnings and len(experience_warnings[symbol]) > 0:
             logging.info(f"Skipping Vision analysis for {symbol} due to Meta-Gate VETO.")
             continue
             
-        pattern = setup_data.get("identified_pattern", "unknown")
+        # Get hint if available from DTW
+        pattern = heuristic_flags.get(symbol, {}).get("identified_pattern", "unknown")
         
         # Execute Vision Analysis
-        vision_result = vision_agent.analyze_chart(symbol, pattern)
+        vision_result = vision_agent.analyze_chart(symbol, pattern, target_date)
         vision_validations[symbol] = vision_result
         
-        # Update global agent_scores in state
-        if "agent_scores" not in state:
-            state["agent_scores"] = {}
-        if symbol not in state["agent_scores"]:
-            state["agent_scores"][symbol] = {}
-        state["agent_scores"][symbol]["vision"] = float(vision_result.get("vision_score", 50))
+        # Update local agent_scores
+        if symbol not in new_agent_scores:
+            new_agent_scores[symbol] = {}
+        new_agent_scores[symbol]["vision"] = float(vision_result.get("vision_score", 50))
+        
+        logging.info(f"FINAL VISION SCORE for {symbol}: {new_agent_scores[symbol]['vision']}")
         
         if vision_result["vision_approved"]:
             logging.info(f"VISION APPROVED: {symbol} is a valid {pattern} setup.")
         else:
             logging.warning(f"VISION REJECTED: {symbol} - {vision_result['reason']}")
-
-    return {"vision_validations": vision_validations, "agent_scores": state.get("agent_scores", {})}
+    
+    return {"vision_validations": vision_validations, "agent_scores": new_agent_scores}
 
 if __name__ == "__main__":
     # Test execution

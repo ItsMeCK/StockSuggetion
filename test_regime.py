@@ -1,6 +1,6 @@
 import os
 import polars as pl
-from midnight_sovereign.pipeline.screener import SovereignScreener
+from pipeline.screener import SovereignScreener
 from dotenv import load_dotenv
 
 load_dotenv()

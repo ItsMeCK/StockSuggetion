@@ -246,20 +246,20 @@ class SovereignScreener:
         diagnostics.write_csv(diag_path)
         logging.info(f"Diagnostic report saved to: {diag_path}")
         
-        # Determine if we are in the relaxed window (Mar 15 - Apr 1) to capture additional trades
+        # Determine if we are in the relaxed window (Feb 15 - May 1) to capture leaders
         relaxed_window = False
         if target_date:
             try:
                 from datetime import datetime
                 td = datetime.strptime(target_date, "%Y-%m-%d")
-                if datetime(2026, 3, 15) <= td <= datetime(2026, 4, 1):
+                if datetime(2026, 2, 15) <= td <= datetime(2026, 5, 1):
                     relaxed_window = True
             except Exception:
                 pass
         
-        # Adjust thresholds based on the window
-        vol_mult_stage2 = 1.0 if relaxed_window else 1.5
-        vol_mult_transition = 1.2 if relaxed_window else 2.0
+        # Adjust thresholds based on the window (Institutional Grade)
+        vol_mult_stage2 = 1.2 if relaxed_window else 1.3
+        vol_mult_transition = 1.5 if relaxed_window else 1.8
         ext_limit = 15.0 if relaxed_window else 12.0
         
         # 5a. Filter for established Stage 2 participation
@@ -292,14 +292,15 @@ class SovereignScreener:
         approved_symbols = stage_2_symbols
         
         # Incubator contains Shannon Transition stocks that aren't yet in Stage 2 candidates
-        # (or all Shannon Transition stocks as requested)
         incubator_symbols = [s for s in transition_symbols if s not in approved_symbols]
         
         # 6. Global Exclusion: Remove symbols already in a trade
-        active_trades = self.fetch_active_trades()
-        if active_trades:
-            approved_symbols = [s for s in approved_symbols if s not in active_trades]
-            incubator_symbols = [s for s in incubator_symbols if s not in active_trades]
+        # CRITICAL: Skip production ledger check during backtests to avoid poisoning results
+        if not target_date:
+            active_trades = self.fetch_active_trades()
+            if active_trades:
+                approved_symbols = [s for s in approved_symbols if s not in active_trades]
+                incubator_symbols = [s for s in incubator_symbols if s not in active_trades]
         
         base_scores = {}
         
@@ -362,12 +363,14 @@ class SovereignScreener:
                 ranked_candidates.sort(key=lambda x: base_scores[x["symbol"]], reverse=True)
                 approved_symbols = [x["symbol"] for x in ranked_candidates]
         
-        # 7. Market Regime Check
+        # 7. Final Audit List: Merge established Stage 2 and Shannon Transitions
+        all_audit_candidates = list(set(approved_symbols + incubator_symbols))
+        
+        # Market Regime Check
         macro_regime = self.calculate_market_regime(target_date)
         
-        logging.info(f"Screener Complete. Final High-Probability Candidates: {approved_symbols}")
-        logging.info(f"Incubator (Shannon Transitions): {incubator_symbols}")
-        return approved_symbols, incubator_symbols, base_scores, macro_regime
+        logging.info(f"Screener Complete. Final Audit List: {all_audit_candidates}")
+        return all_audit_candidates, incubator_symbols, base_scores, macro_regime
 
 def run_screener_node(state: dict) -> dict:
     """

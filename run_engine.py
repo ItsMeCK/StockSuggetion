@@ -9,11 +9,11 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-from midnight_sovereign.core.state import SovereignState
-from midnight_sovereign.graph.builder import build_sovereign_graph, build_sovereign_graph_with_checkpointer
-from midnight_sovereign.pipeline.screener import SovereignScreener
-from midnight_sovereign.agents.macro_gate import run_macro_regime_gate
-from midnight_sovereign.agents.reconciliation_node import run_phase_0_reconciliation
+from core.state import SovereignState
+from graph.builder import build_sovereign_graph, build_sovereign_graph_with_checkpointer
+from pipeline.screener import SovereignScreener
+from agents.macro_gate import run_macro_regime_gate
+from agents.reconciliation_node import run_phase_0_reconciliation
 from langgraph.checkpoint.postgres import PostgresSaver
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

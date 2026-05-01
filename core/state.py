@@ -33,6 +33,7 @@ class SovereignState(TypedDict):
     """
     
     # --- Phase 1: Macro & Deterministic Output ---
+    target_date: str
     macro_regime: str 
     fii_net: float
     dii_net: float

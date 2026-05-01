@@ -3,7 +3,7 @@ import logging
 import psycopg2
 import numpy as np
 from typing import Dict, Any
-from midnight_sovereign.core.state import SovereignState
+from core.state import SovereignState
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 

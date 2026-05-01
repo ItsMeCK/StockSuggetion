@@ -3,9 +3,9 @@ import os
 import argparse
 from datetime import datetime
 from dotenv import load_dotenv
-from midnight_sovereign.core.state import SovereignState
-from midnight_sovereign.pipeline.screener import SovereignScreener
-from midnight_sovereign.agents.macro_gate import run_macro_regime_gate
+from core.state import SovereignState
+from pipeline.screener import SovereignScreener
+from agents.macro_gate import run_macro_regime_gate
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -53,7 +53,7 @@ def run_historical_engine(target_date: str):
     # 4. LangGraph Orchestration
     logging.info("--- PHASE 3 & 4: LANGGRAPH COGNITIVE ORCHESTRATION ---")
     from langgraph.checkpoint.postgres import PostgresSaver
-    from midnight_sovereign.graph.builder import build_sovereign_graph_with_checkpointer
+    from graph.builder import build_sovereign_graph_with_checkpointer
     db_uri = f"postgresql://agent:agentpassword@{os.getenv('DB_HOST', 'localhost')}:5433/sovereign_state"
     
     import time

@@ -2,8 +2,8 @@ import os
 import json
 import logging
 from datetime import datetime, timedelta
-from midnight_sovereign.pipeline.screener import SovereignScreener
-from midnight_sovereign.run_historical import run_historical_engine
+from pipeline.screener import SovereignScreener
+from run_historical import run_historical_engine
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -52,14 +52,23 @@ def track_performance(symbol, entry_date, entry_price):
     
     # Sovereign Aggressive Exit Logic
     target = entry_price * 1.50 # 50% Profit Target
-    stop = entry_price * 0.85   # 15% Stop Loss (to allow for Stage Transition volatility)
+    base_stop = entry_price * 0.85 # 15% Stop Loss
+    current_stop = base_stop
+    breakeven_triggered = False
     
     for row in rows:
         price = float(row[1])
+        
+        # Breakeven Trigger (Protect the base)
+        if not breakeven_triggered and price >= (entry_price * 1.15):
+            current_stop = entry_price
+            breakeven_triggered = True
+            
         if price >= target:
             return "PROFIT", 50.0, row[0].strftime('%Y-%m-%d'), price
-        if price <= stop:
-            return "LOSS", -15.0, row[0].strftime('%Y-%m-%d'), price
+        if price <= current_stop:
+            pnl = 0.0 if breakeven_triggered else -15.0
+            return "LOSS", pnl, row[0].strftime('%Y-%m-%d'), price
             
     # If still open, calculate current PnL based on last known price
     if rows:
@@ -70,8 +79,8 @@ def track_performance(symbol, entry_date, entry_price):
     return "OPEN", 0.0, "N/A", entry_price
 
 def run_backtest():
-    start_date = datetime(2026, 2, 1)
-    end_date = "2026-04-30"
+    start_date = datetime(2026, 3, 1)
+    end_date = "2026-05-01"
     trading_dates = get_trading_dates(start_date, end_date)
     
     results = []
@@ -101,8 +110,15 @@ def run_backtest():
                 database=os.getenv("POSTGRES_DB", "market_data")
             )
             cur = conn.cursor()
-            cur.execute("SELECT close FROM daily_ohlcv WHERE symbol = %s AND time >= %s AND time < %s", 
-                       (symbol, date, (datetime.strptime(date, '%Y-%m-%d') + timedelta(days=1)).strftime('%Y-%m-%d')))
+            cur.execute("""
+                SELECT close 
+                FROM daily_ohlcv 
+                WHERE symbol = %s 
+                AND time >= %s::timestamp - interval '24 hours'
+                AND time <= %s::timestamp + interval '24 hours'
+                ORDER BY ABS(EXTRACT(EPOCH FROM (time - %s::timestamp)))
+                LIMIT 1
+            """, (symbol, date, date, date))
             row = cur.fetchone()
             entry_price = float(row[0]) if row else 0.0
             cur.close()

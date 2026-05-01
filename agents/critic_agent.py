@@ -1,6 +1,6 @@
 import logging
 from typing import Dict, Any
-from midnight_sovereign.core.state import SovereignState
+from core.state import SovereignState
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -22,7 +22,7 @@ class CriticAgent:
         except Exception:
             return {}
         
-    def evaluate_thesis(self, symbol: str, thesis: str, macro_regime: str) -> Dict[str, Any]:
+    def evaluate_thesis(self, symbol: str, thesis: str, macro_regime: str, target_date: str = None) -> Dict[str, Any]:
         import os, psycopg2
         logging.info(f"Critic Agent: Evaluating deployment parameters for {symbol} under regime {macro_regime}...")
         
@@ -38,14 +38,25 @@ class CriticAgent:
                 database=os.getenv('TIMESCALE_DB', 'market_data')
             )
             cur = conn.cursor()
-            query = """
-                SELECT close, volume 
-                FROM daily_ohlcv 
-                WHERE symbol = %s 
-                ORDER BY time DESC 
-                LIMIT 5
-            """
-            cur.execute(query, (symbol,))
+            
+            if target_date:
+                query = """
+                    SELECT close, volume 
+                    FROM daily_ohlcv 
+                    WHERE symbol = %s AND time <= %s
+                    ORDER BY time DESC 
+                    LIMIT 5
+                """
+                cur.execute(query, (symbol, target_date))
+            else:
+                query = """
+                    SELECT close, volume 
+                    FROM daily_ohlcv 
+                    WHERE symbol = %s 
+                    ORDER BY time DESC 
+                    LIMIT 5
+                """
+                cur.execute(query, (symbol,))
             rows = cur.fetchall()
             cur.close()
             conn.close()
@@ -55,7 +66,10 @@ class CriticAgent:
                 prices = [float(r[0]) for r in rows[::-1]] # Oldest to newest
                 volumes = [float(r[1]) for r in rows[::-1]]
                 
-                # --- RESTORED: Distribution Veto Re-enabled to match 61% baseline ---
+                # --- RESTORED: Distribution Veto Re-enabled ---
+                price_rising = prices[-1] > prices[0]
+                volume_falling = volumes[-1] < volumes[0]
+                
                 if price_rising and volume_falling:
                     veto_required = True
                     reason = f"Hidden Distribution detected: Price rose over 5 days while volume fell ({volumes[0]:.0f} -> {volumes[-1]:.0f})."
@@ -98,11 +112,11 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
             if rs_score < 1.2:
                 # Stock is failing to lead in a bad market
                 logging.warning(f"REGIME FRICTION: {symbol} has insufficient RS ({rs_score:.2f}) for BEARISH market. Tightening Hurdle.")
-                COGNITIVE_THRESHOLD = 80.0
+                COGNITIVE_THRESHOLD = 70.0
             else:
                 # Institutional Strength detected!
-                logging.info(f"RESILIENCE ALPHA: {symbol} is outperforming Nifty (RS: {rs_score:.2f}). Maintaining 70% Hurdle.")
-                COGNITIVE_THRESHOLD = 70.0
+                logging.info(f"RESILIENCE ALPHA: {symbol} is outperforming Nifty (RS: {rs_score:.2f}). Maintaining 65% Hurdle.")
+                COGNITIVE_THRESHOLD = 65.0
         else:
             # Bullish market: Be more aggressive
             COGNITIVE_THRESHOLD = 65.0 if priority >= 8 else 70.0
@@ -123,7 +137,8 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
         if target_regime == active_regime:
             total_confidence += 15.0
             
-        evaluation = critic.evaluate_thesis(symbol, "thesis", macro)
+        target_date = state.get("target_date")
+        evaluation = critic.evaluate_thesis(symbol, "thesis", macro, target_date)
         if evaluation["veto"]:
             total_confidence -= 20.0
             
