@@ -12,6 +12,7 @@ from midnight_sovereign.agents.reflection_engine import run_reflection_engine as
 from midnight_sovereign.agents.entry_trigger_agent import run_entry_trigger_agent as entry_trigger_agent
 from midnight_sovereign.agents.critic_agent import run_critic_agent as critic_agent
 from midnight_sovereign.agents.watcher_agent import run_watcher_agent as watcher_agent
+from midnight_sovereign.agents.macro_gate import run_macro_regime_gate as macro_gate
 
 def should_execute(state: SovereignState) -> str:
     """Conditional edge router: proceed to execution if we have approved allocations, else END."""
@@ -28,6 +29,7 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow = StateGraph(SovereignState)
 
     # 1. Add all nodes
+    workflow.add_node("macro_gate", macro_gate)
     workflow.add_node("heuristic_pre_processor", heuristic_pre_processor)
     workflow.add_node("meta_gate_experience_check", meta_gate_experience_check)
     workflow.add_node("entry_trigger_agent", entry_trigger_agent)
@@ -39,34 +41,18 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.add_node("reflection_engine_post_mortem", reflection_engine_post_mortem)
 
     # 2. Define the flow
-    workflow.set_entry_point("heuristic_pre_processor")
+    workflow.set_entry_point("macro_gate")
     
+    workflow.add_edge("macro_gate", "heuristic_pre_processor")
     workflow.add_edge("heuristic_pre_processor", "meta_gate_experience_check")
     workflow.add_edge("meta_gate_experience_check", "entry_trigger_agent")
     workflow.add_edge("entry_trigger_agent", "watcher_agent")
     workflow.add_edge("watcher_agent", "pattern_agent_vision")
     workflow.add_edge("pattern_agent_vision", "critic_agent")
     
-    def critic_debate_router(state: SovereignState) -> str:
-        count = state.get("debate_count", 0)
-        results = state.get("critic_results", {})
-        
-        # Check if any vetoes happened
-        has_veto = any(res.get("veto", False) for res in results.values())
-        
-        # Allow 1 correction cycle
-        if has_veto and count < 1:
-            return "proposer"
-        return "risk"
-
-    workflow.add_conditional_edges(
-        "critic_agent",
-        critic_debate_router,
-        {
-            "proposer": "pattern_agent_vision",
-            "risk": "risk_and_position_sizing"
-        }
-    )
+    workflow.add_edge("critic_agent", "risk_and_position_sizing")
+    
+    # Branching logic: Only execute if trades are approved by the Risk Agent
     
     # Branching logic: Only execute if trades are approved by the Risk Agent
     workflow.add_conditional_edges(

@@ -20,11 +20,11 @@ class CriticAgent:
         
         try:
             conn = psycopg2.connect(
-                host=os.getenv('DB_HOST', 'localhost'),
-                port=os.getenv('TIMESCALE_PORT', '5432'),
-                user=os.getenv('TIMESCALE_USER', 'quant'),
-                password=os.getenv('TIMESCALE_PASSWORD', 'quantpassword'),
-                database=os.getenv('TIMESCALE_DB', 'market_data')
+                host=os.getenv("DB_HOST", "localhost"),
+                port=os.getenv("DB_PORT", "5432"),
+                user=os.getenv("POSTGRES_USER", "quant"),
+                password=os.getenv("POSTGRES_PASSWORD", "quantpassword"),
+                dbname=os.getenv("POSTGRES_DB", "market_data")
             )
             cur = conn.cursor()
             query = """
@@ -44,12 +44,13 @@ class CriticAgent:
                 prices = [float(r[0]) for r in rows[::-1]] # Oldest to newest
                 volumes = [float(r[1]) for r in rows[::-1]]
                 
-                price_rising = prices[-1] > prices[0]
-                volume_falling = volumes[-1] < volumes[0]
+                # Veto only if the divergence is extreme (Price up > 1%, Volume down > 15%)
+                price_change = (prices[-1] - prices[0]) / prices[0] * 100
+                vol_change = (volumes[-1] - volumes[0]) / volumes[0] * 100
                 
-                if price_rising and volume_falling:
+                if price_change > 2.0 and vol_change < -20.0:
                     veto_required = True
-                    reason = f"Hidden Distribution detected: Price rose over 5 days while volume fell ({volumes[0]:.0f} -> {volumes[-1]:.0f})."
+                    reason = f"Extreme Distribution detected: Price rose {price_change:.1f}% while volume collapsed {vol_change:.1f}%."
         except Exception as e:
             logging.error(f"Critic Agent calculation error for {symbol}: {e}")
             
@@ -81,8 +82,11 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
         # Run base adversarial check
         evaluation = critic.evaluate_thesis(symbol, "thesis", macro)
         
-        # Decision Logic: Threshold 70% + No Critic Veto
-        final_approval = (total_confidence >= 70.0) and (not evaluation["veto"])
+        # GEAR 3: VISION HARD GATE
+        vision_passed = state.get("vision_validations", {}).get(symbol, {}).get("vision_approved", True)
+        
+        # Decision Logic: Threshold 70% + No Critic Veto + Vision Approved
+        final_approval = (total_confidence >= 70.0) and (not evaluation["veto"]) and vision_passed
         
         evaluation["total_confidence"] = float(total_confidence)
         evaluation["approved"] = final_approval
@@ -90,13 +94,13 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
         
         if final_approval:
             logging.info(f"COGNITIVE APPROVAL: {symbol} passed with {total_confidence:.1f}% confidence!")
-            # Mock allocation for now
-            approved_allocations[symbol] = {"size_pct": 2.5, "confidence": float(total_confidence)}
         else:
             logging.warning(f"COGNITIVE REJECTION: {symbol} only reached {total_confidence:.1f}% confidence.")
         
+    approved_candidates = [s for s, res in critic_results.items() if res.get("approved")]
     return {
         "critic_results": critic_results, 
         "approved_allocations": approved_allocations,
+        "approved_candidates": approved_candidates,
         "debate_count": 1
     }

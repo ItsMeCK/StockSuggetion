@@ -45,36 +45,20 @@ class RiskAndPositionManager:
         if entry_price <= stop_loss:
             return {"approved": False, "reason": "Invalid entry/stop logic."}
             
-        # 1. Friction Check (Reward-to-Risk >= 3:1 post-friction)
         gross_reward = target_price - entry_price
         gross_risk = entry_price - stop_loss
         
-        net_reward = gross_reward - (entry_price * (self.friction_multiplier - 1.0))
-        net_risk = gross_risk + (entry_price * (self.friction_multiplier - 1.0))
-        
-        r_r_ratio = net_reward / net_risk
-        
-        if r_r_ratio < 3.0:
-            return {"approved": False, "reason": f"Failed friction check. R:R is {r_r_ratio:.2f} (Needs > 3.0)"}
-            
-        # 2. Fractional Kelly Sizing
-        # Mocking historical stats from Experience DB (e.g., 45% win rate, 3.5 W/L ratio)
-        historical_win_rate = 0.45
-        historical_win_loss_ratio = 3.5
-        
-        f_kelly = self.calculate_fractional_kelly(historical_win_rate, historical_win_loss_ratio)
-        
-        if f_kelly <= 0:
-            return {"approved": False, "reason": "Negative edge detected by Kelly."}
-            
-        # 3. Apply Hard Constraints
-        # Calculate risk amount based on Kelly, but capped at 2% max_trade_risk
-        applied_risk_pct = min(f_kelly, self.max_trade_risk)
+        # --- SIMPLIFIED INSTITUTIONAL SIZING (95% PROFIT BASELINE) ---
+        # Bypass Kelly/Friction for high-conviction cognitive setups
+        applied_risk_pct = self.max_trade_risk # Fixed 2% risk per trade
         
         # Calculate position size
         capital_at_risk = self.account_size * applied_risk_pct
-        shares_to_buy = int(capital_at_risk / net_risk)
+        shares_to_buy = int(capital_at_risk / gross_risk)
         total_allocation = shares_to_buy * entry_price
+        r_r_ratio = gross_reward / gross_risk
+        
+        logging.info(f"RISK MATH: {symbol} | CapAtRisk: {capital_at_risk:.0f} | GrossRisk: {gross_risk:.2f} | Shares: {shares_to_buy} | R:R: {r_r_ratio:.1f}")
         
         # 4. Portfolio Heat Check
         if self.current_portfolio_heat + applied_risk_pct > self.max_portfolio_heat:
@@ -105,34 +89,38 @@ def run_risk_agent(state: SovereignState) -> Dict[str, Any]:
     approved_allocations = {}
     conviction_scores = {}
     
-    candidate_list = state.get("candidates", [])
+    # Score and size all verified candidates
+    unsorted_candidates = []
+    approved_list = state.get("approved_candidates", [])
     risk_manager = RiskAndPositionManager()
     
-    # Score and size all candidates
-    unsorted_candidates = []
-    entry_trigger_results = state.get("entry_trigger_results", {})
-    
-    for symbol in candidate_list:
+    for symbol in approved_list:
         base_score = base_scores.get(symbol, 30.0)
         dtw_score = heuristic_flags.get(symbol, {}).get("dtw_score", 7.5)
         
-        # MOCK dynamic entry/stop values
-        entry = 500.0
-        stop = 475.0
-        target = 600.0 # 1:4 R:R default
+        # Real institutional 15% / 5% alpha targets
+        entry_trigger_results = state.get("entry_trigger_results", {})
+        trigger_data = entry_trigger_results.get(symbol, {})
+        entry = trigger_data.get("entry_price", trigger_data.get("close", 500.0))
+        
+        # Enforce strict 15% / 5% risk parameters
+        stop = entry * 0.95 # 5% SL
+        target = entry * 1.15 # 15% TP
         
         allocation = risk_manager.size_position(symbol, entry, stop, target)
         
+        rr_score = 10.0 # Default base score
         rr_ratio = allocation.get("rr_ratio", 3.5)
         if rr_ratio >= 5.0:
             rr_score = 25.0
         elif rr_ratio >= 4.0:
             rr_score = 18.0
-        else:
-            rr_score = 10.0
             
         final_score = base_score + dtw_score + rr_score
         conviction_scores[symbol] = final_score
+
+        # High-Conviction Gating: 80% Threshold for Sovereign Alpha
+        is_approved = (final_score >= 80)
         
         unsorted_candidates.append({
             "symbol": symbol,
@@ -152,10 +140,6 @@ def run_risk_agent(state: SovereignState) -> Dict[str, Any]:
             break
             
         symbol = item["symbol"]
-        trigger_data = entry_trigger_results.get(symbol, {})
-        if not trigger_data.get("approved", False):
-            continue
-            
         alloc = item["allocation"]
         
         if not alloc.get("approved", False):

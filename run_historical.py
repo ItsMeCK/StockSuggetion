@@ -51,8 +51,13 @@ def run_historical_engine(target_date: str):
         checkpointer.setup()
         app = build_sovereign_graph_with_checkpointer(checkpointer)
         # Using a distinct thread for historical runs to avoid polluting live state
-        thread_id = f"historical_{target_date.replace('-', '')}"
+        import time
+        thread_id = f"historical_{target_date.replace('-', '')}_{int(time.time() * 1000)}"
         final_state = app.invoke(initial_state, config={"configurable": {"thread_id": thread_id}})
+    
+    # DEBUG: Inspect final state
+    logging.info(f"FINAL STATE KEYS: {list(final_state.keys())}")
+    logging.info(f"FINAL ALLOCATIONS: {final_state.get('approved_allocations', {})}")
     
     # 5. Output results
     logging.info("==================================================")
@@ -65,7 +70,8 @@ def run_historical_engine(target_date: str):
     return {
         "date": target_date,
         "candidates": candidates,
-        "approved": approved
+        "approved": approved,
+        "entry_trigger_results": final_state.get("entry_trigger_results", {})
     }
 
 if __name__ == "__main__":

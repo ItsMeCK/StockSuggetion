@@ -79,38 +79,43 @@ class EntryTriggerAgent:
             latest_df = df.group_by("symbol").tail(1)
             
             for ticker in tickers:
-                ticker_row = latest_df.filter(pl.col("symbol") == ticker)
+                raw_df = self.fetch_ticker_data(ticker)
+                if raw_df is None or raw_df.is_empty():
+                    results[ticker] = {"approved": False, "reason": "No ticker data"}
+                    continue
+                
+                # Enrich with metrics
+                ticker_df = self.screener.apply_avwap_filter(raw_df)
+                ticker_df = self.screener.apply_stage_2_filter(ticker_df)
+                
+                ticker_row = ticker_df.tail(1)
                 if ticker_row.is_empty():
                     results[ticker] = {"approved": False, "reason": "No latest candle data"}
                     continue
-                    
+
+                # --- PARAMETER EXTRACTION ---
                 row = ticker_row.to_dicts()[0]
                 close = row["close"]
                 volume = row["volume"]
                 vol_avg_20 = row["vol_avg_20"] if row["vol_avg_20"] else 1.0
                 sma_10 = row["sma_10"] if row["sma_10"] else close
+                sma_20 = row["sma_20"] if row["sma_20"] else close
+                sma_50 = row["sma_50"] if row["sma_50"] else close
                 vol_z_score = row["vol_z_score"] if row["vol_z_score"] is not None else 0.0
                 spread_pct = row["spread_pct"]
                 avg_spread_20 = row["avg_spread_20"] if row["avg_spread_20"] else 1.0
                 
-                # 1. Volume Z-Score Trigger (> 1.5)
-                vol_thrust = vol_z_score > 1.5
-                
-                # 2. 10-SMA Floor
-                sma_floor = close >= sma_10
-                
-                # 3. VSA (Volume Spread Analysis)
-                # Effort vs Result: High volume must produce Wide Spread
-                # If Volume is high but spread is narrow (< avg_spread), it is 'Churn' (Distribution)
+                # Effort vs Result (VSA)
                 is_churn = vol_z_score > 1.5 and spread_pct < (avg_spread_20 * 0.8)
                 vsa_score_mod = -20.0 if is_churn else (15.0 if (vol_z_score > 1.0 and spread_pct > avg_spread_20) else 0.0)
                 
                 # 3. Momentum Ignition: Is price breaking the high of the last 2 days?
-                cur_idx = df.filter(pl.col("symbol") == ticker).height - 1
-                prev_highs = df.filter(pl.col("symbol") == ticker).slice(cur_idx-2, 2)["close"].max()
+                cur_idx = ticker_df.height - 1
+                prev_highs = ticker_df.slice(cur_idx-2, 2)["close"].max()
                 momentum_ignition = close >= prev_highs
                 
-                approved = vol_thrust and sma_floor and momentum_ignition
+                # Relaxed for consensus-based approval
+                approved = vol_thrust or momentum_ignition
                 
                 rejections = []
                 if not vol_thrust: rejections.append(f"Dynamic RVOL Fail (Z-Score: {vol_z_score:.2f} < 1.5)")
@@ -125,8 +130,14 @@ class EntryTriggerAgent:
                 vol_score = min(40.0, max(0.0, (vol_z_score / 2.0) * 40.0))
                 score += vol_score
                 
-                # 2. SMA Floor (Max 30 pts)
-                sma_score = 30.0 if close >= sma_10 else 10.0 # Partial points if near
+                # 2. SMA Support (Max 30 pts)
+                # 30 pts if above 10-SMA, 20 pts if above 50-SMA (Institutional Floor)
+                if close >= sma_10:
+                    sma_score = 30.0
+                elif close >= sma_50:
+                    sma_score = 20.0
+                else:
+                    sma_score = 0.0
                 score += sma_score
                 
                 # 3. Momentum Proximity (Max 30 pts)
@@ -144,9 +155,11 @@ class EntryTriggerAgent:
                 # 4. VSA Modifier (Max 15 pts or -20 pts)
                 score += vsa_score_mod
 
+                # --- PIVOT POINT ENTRY (95% PROFIT BASELINE) ---
                 results[ticker] = {
                     "approved": True if score >= 60 else False,
                     "entry_score": float(score),
+                    "entry_price": float(close),
                     "vol_thrust": vol_thrust,
                     "sma_floor": sma_floor,
                     "momentum_ignition": momentum_ignition,

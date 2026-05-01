@@ -44,11 +44,11 @@ class VisionPatternAgent:
         import os, psycopg2
         try:
             conn = psycopg2.connect(
-                host=os.getenv('DB_HOST', 'localhost'),
-                port=os.getenv('TIMESCALE_PORT', '5432'),
-                user=os.getenv('TIMESCALE_USER', 'quant'),
-                password=os.getenv('TIMESCALE_PASSWORD', 'quantpassword'),
-                database=os.getenv('TIMESCALE_DB', 'market_data')
+                host=os.getenv("DB_HOST", "localhost"),
+                port=os.getenv("DB_PORT", "5432"),
+                user=os.getenv("POSTGRES_USER", "quant"),
+                password=os.getenv("POSTGRES_PASSWORD", "quantpassword"),
+                dbname=os.getenv("POSTGRES_DB", "market_data")
             )
             if conn:
                 cur = conn.cursor()
@@ -94,14 +94,14 @@ class VisionPatternAgent:
                         justification = "Volume too loose for a low-risk entry."
                     
                     # --- THE SKEPTICAL WICK PENALTY ---
-                    if upper_shadow > 0.4:
-                        vision_score -= 30
-                        justification += f" WARNING: Long upper shadow detected ({upper_shadow*100:.1f}%). Possible fakeout."
+                    if upper_shadow > 0.45: # Slightly more lenient shadow
+                        vision_score -= 15 # 15 instead of 30
+                        justification += f" WARNING: Long upper shadow detected ({upper_shadow*100:.1f}%). Potential fakeout risk."
                     
                     vision_score = max(0, min(100, vision_score))
                     
                     return {
-                        "vision_approved": vision_score >= 70,
+                        "vision_approved": vision_score >= 60, # 60 instead of 70
                         "vision_score": vision_score,
                         "reason": justification,
                         "whipsaw_risk": "Low" if vision_score > 70 else "High",

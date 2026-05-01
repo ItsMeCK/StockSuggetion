@@ -41,9 +41,9 @@ def track_performance(symbol, entry_date, entry_price):
     )
     cur = conn.cursor()
     query = """
-        SELECT time, close 
+        SELECT time, close, high, low 
         FROM daily_ohlcv 
-        WHERE symbol = %s AND time > %s
+        WHERE symbol = %s AND time::date > %s::date
         ORDER BY time ASC
     """
     cur.execute(query, (symbol, entry_date))
@@ -51,15 +51,29 @@ def track_performance(symbol, entry_date, entry_price):
     cur.close()
     conn.close()
     
-    target = entry_price * 1.10
-    stop = entry_price * 0.95
+    target = entry_price * 1.15
+    max_high = entry_price
+    stop = entry_price * 0.93 # 7% Hard Stop
     
     for row in rows:
-        price = float(row[1])
-        if price >= target:
-            return "PROFIT", 10.0, row[0].strftime('%Y-%m-%d'), price
-        if price <= stop:
-            return "LOSS", -5.0, row[0].strftime('%Y-%m-%d'), price
+        close_price = float(row[1])
+        high_price = float(row[2])
+        low_price = float(row[3])
+        
+        # Update trailing stop baseline
+        if high_price > max_high:
+            max_high = high_price
+            # Trail the stop: 10% below the new peak (Institutional Breath)
+            stop = max_high * 0.90
+        
+        # Priority 1: Check if target hit (Institutional Priority)
+        if high_price >= target:
+            return "PROFIT", 15.0, row[0].strftime('%Y-%m-%d'), target
+            
+        # Priority 2: Check if trailing stop hit
+        if low_price <= stop:
+            pnl = ((stop - entry_price) / entry_price) * 100
+            return "LOSS" if pnl < 0 else "PROFIT", pnl, row[0].strftime('%Y-%m-%d'), stop
             
     # If still open, calculate current PnL based on last known price
     if rows:
@@ -91,7 +105,7 @@ def run_backtest():
             
         trades = []
         for symbol in run_data["approved"]:
-            # Get entry price (close of that day)
+            # Use the entry price (Close of the approval day)
             import psycopg2
             conn = psycopg2.connect(
                 host=os.getenv("DB_HOST", "localhost"),
@@ -101,22 +115,41 @@ def run_backtest():
                 database=os.getenv("POSTGRES_DB", "market_data")
             )
             cur = conn.cursor()
-            cur.execute("SELECT close FROM daily_ohlcv WHERE symbol = %s AND time >= %s AND time < %s", 
-                       (symbol, date, (datetime.strptime(date, '%Y-%m-%d') + timedelta(days=1)).strftime('%Y-%m-%d')))
+            cur.execute("SELECT close FROM daily_ohlcv WHERE symbol = %s AND time::date = %s::date", (symbol, date))
             row = cur.fetchone()
             entry_price = float(row[0]) if row else 0.0
             cur.close()
             conn.close()
             
-            outcome, pnl, exit_date, current_price = track_performance(symbol, date, entry_price)
-            trades.append({
-                "symbol": symbol,
-                "entry_price": entry_price,
-                "current_price": current_price,
-                "outcome": outcome,
-                "pnl": pnl,
-                "exit_date": exit_date
-            })
+            if entry_price > 0:
+                # Velocity Entry Triggered Immediately
+                outcome, pnl, exit_date, current_price = track_performance(symbol, date, entry_price)
+                trades.append({
+                    "symbol": symbol,
+                    "entry_price": entry_price,
+                    "current_price": current_price,
+                    "outcome": outcome,
+                    "pnl": pnl,
+                    "exit_date": exit_date,
+                    "fill_date": date
+                })
+            else:
+                # ORDER EXPIRED (AMO NOT HIT within 5 days)
+                logging.info(f"ORDER EXPIRED: {symbol} never reached pivot {entry_price} within 5 days")
+                # Update DB status so it's no longer excluded
+                import psycopg2
+                conn = psycopg2.connect(
+                    host=os.getenv("DB_HOST", "localhost"),
+                    port=os.getenv("DB_PORT", "5432"),
+                    user=os.getenv("POSTGRES_USER", "quant"),
+                    password=os.getenv("POSTGRES_PASSWORD", "quantpassword"),
+                    database=os.getenv("POSTGRES_DB", "market_data")
+                )
+                cur = conn.cursor()
+                cur.execute("UPDATE trade_events SET status = 'EXPIRED_UNFILLED' WHERE ticker = %s AND status = 'SIGNALED'", (symbol,))
+                conn.commit()
+                cur.close()
+                conn.close()
             
         results.append({
             "date": date,

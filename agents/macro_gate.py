@@ -103,9 +103,9 @@ def evaluate_market_regime(fii_dii: Dict[str, float], health: Dict[str, Any]) ->
     if nifty_ret < -0.8:
         return "CAPITULATION" # Force halt on deep red days
         
-    # --- RULE 2: BREADTH CHECK ---
-    if adr < 0.6: # Fewer than 3 stocks up for every 5 down
-        return "TUG_OF_WAR" # Restrictive regime
+    # --- RULE 2: BREADTH CHECK (STRICT ALPHA) ---
+    if adr < 0.9: # High-conviction breadth only
+        return "TUG_OF_WAR"
         
     return "EXPANSION"
 
@@ -132,12 +132,12 @@ def run_macro_regime_gate(state: SovereignState) -> SovereignState:
     logging.info(f"Identified Market Regime: {regime}")
     
     # 3. Return Delta State Update
-    if regime == "CAPITULATION":
-        logging.warning(f"🚨 MARKET KILL-SWITCH TRIGGERED ({target_date}). Nifty Return: {market_health['nifty_return']:.2f}%. Halting Longs.")
+    if regime in ["CAPITULATION", "TUG_OF_WAR"]:
+        logging.warning(f"🚨 MARKET KILL-SWITCH TRIGGERED ({target_date}). Regime: {regime}. Nifty Return: {market_health['nifty_return']:.2f}%. Halting Longs.")
         return {
             "macro_regime": regime, 
             "candidates": [], 
-            "error_log": [f"Halted due to Market Capitulation on {target_date}"]
+            "error_log": [f"Halted due to {regime} on {target_date}"]
         }
     
     return {

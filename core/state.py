@@ -33,13 +33,15 @@ class SovereignState(TypedDict):
     """
     
     # --- Phase 1: Macro & Deterministic Output ---
+    target_date: str
     macro_regime: str 
     fii_net: float
     dii_net: float
     india_vix: float
     dxy: float
-    # Using add_lists in case we append candidates from multiple sector screeners.
-    candidates: Annotated[List[str], add_lists]
+    # Standard list (Overwrite) so Macro Gate can clear candidates on halt.
+    candidates: List[str]
+    approved_candidates: List[str]
     incubator: Annotated[List[str], add_lists]
     breakouts: Annotated[List[str], add_lists]
     

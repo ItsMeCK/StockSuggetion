@@ -109,6 +109,30 @@ class SovereignScreener:
             (pl.col("sma_50") - pl.col("sma_50").shift(10).over("symbol")).alias("sma_50_slope_10d")
         ])
         
+        # --- STAGE 2 & TRANSITION FOCUS ---
+        # Traditional Stage 2: 50 SMA > 200 SMA
+        # Transition: 50 SMA is SLOPING UP significantly + Volume Thrust
+        is_stage_2 = (pl.col("sma_50") > pl.col("sma_200"))
+        is_transition = (pl.col("sma_50_slope_10d") > 0) & (pl.col("volume") > (pl.col("vol_avg_20") * 1.5))
+        
+        df = df.with_columns([
+            # Mandatory: Price > 50 SMA for any long
+            (pl.col("close") > pl.col("sma_50")).alias("price_above_50"),
+            # Macro Stage: Either Stage 2 or explosive Transition
+            (is_stage_2 | is_transition).alias("in_macro_regime")
+        ])
+        
+        # --- PRIMARY FILTERS ---
+        # 1. Macro Regime Gate
+        df = df.with_columns([
+            (pl.col("price_above_50") & pl.col("in_macro_regime")).alias("passed_regime")
+        ])
+        
+        # 2. Momentum Ignition Gate (Relaxed)
+        df = df.with_columns([
+            ((pl.col("close") > pl.col("sma_10")) & (pl.col("close") > pl.col("mock_avwap"))).alias("passed_momentum")
+        ])
+        
         # Calculate extension from 50 SMA
         df = df.with_columns([
             (((pl.col("close") - pl.col("sma_50")) / pl.col("sma_50")) * 100).alias("extension_pct")
@@ -161,8 +185,8 @@ class SovereignScreener:
         )
         
         # 2. Calculate metrics
-        df = self.apply_stage_2_filter(df)
-        df_metrics = self.apply_avwap_filter(df)
+        df = self.apply_avwap_filter(df)
+        df_metrics = self.apply_stage_2_filter(df)
         
         # 3. Take the latest row for each stock (relative to the target_date or current)
         latest_df = df_metrics.group_by("symbol").tail(1)
@@ -194,22 +218,19 @@ class SovereignScreener:
         # 5a. Filter for established Stage 2 participation
         stage_2_df = latest_df.filter(
             (pl.col("close") > pl.col("sma_50")) &
-            (pl.col("sma_50") > pl.col("sma_200")) &
-            (pl.col("sma_50_slope_10d") > 0) &
-            (pl.col("extension_pct") <= 15.0) & # Relaxed from 12% to 15%
+            (pl.col("sma_50_slope_10d") > -2.0) & # Allow flat/slight drift
+            (pl.col("extension_pct") <= 18.0) & # Catch more momentum
             (pl.col("sma_10") > pl.col("sma_20")) &
-            (pl.col("volume") >= (1.5 * pl.col("vol_avg_20"))) &
-            (pl.col("atr_3") <= pl.col("atr_20"))
+            (pl.col("volume") >= (1.2 * pl.col("vol_avg_20"))) & # Relaxed Volume
+            (pl.col("atr_3") <= (pl.col("atr_20") * 1.1)) # Slight wiggle in volatility
         )
 
         # 5b. Filter for Shannon Stage Transition (Institutional Bottoming)
-        # This catches the BHEL/APOLLO setups before they establish Stage 2
         transition_df = latest_df.filter(
             (pl.col("close") > pl.col("sma_10")) &
-            (pl.col("close") > pl.col("sma_20")) &
-            (pl.col("volume") >= (2.5 * pl.col("vol_avg_20"))) & # Massive Ignition Volume
-            (pl.col("close") > pl.col("sma_50")) & # Must have crossed the 50-line
-            (pl.col("extension_pct") <= 10.0) # Catch it early, not after 20% move
+            (pl.col("volume") >= (2.0 * pl.col("vol_avg_20"))) & # Relaxed Ignition
+            (pl.col("close") > pl.col("sma_50")) &
+            (pl.col("extension_pct") <= 12.0)
         )
 
         final_df = pl.concat([stage_2_df, transition_df]).unique(subset=["symbol"])
@@ -225,7 +246,7 @@ class SovereignScreener:
         if approved_symbols:
             ranked_candidates = []
             for sym in approved_symbols:
-                sym_df = df.filter(pl.col("symbol") == sym).sort("time")
+                sym_df = df_metrics.filter(pl.col("symbol") == sym).sort("time")
                 if len(sym_df) < 20:
                     continue
                 
