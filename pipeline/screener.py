@@ -71,7 +71,19 @@ class SovereignScreener:
             database=os.getenv("POSTGRES_DB", "market_data")
         )
         
-        query = "SELECT time, symbol, open, high, low, close, volume FROM daily_ohlcv ORDER BY symbol, time ASC"
+        # 1. Load Data from TimescaleDB
+        query = """
+            SELECT time, symbol, open, high, low, close, volume 
+            FROM daily_ohlcv 
+            WHERE symbol ~ '^[A-Z0-9]+$' 
+              AND LENGTH(symbol) <= 10
+              AND symbol NOT ILIKE '%%NIFTY%%'
+              AND symbol NOT ILIKE '%%INDEX%%'
+              AND symbol NOT ILIKE '%%GS%%'
+              AND symbol NOT ILIKE '%%BOND%%'
+              AND symbol NOT ILIKE '%%MOMENT%%'
+            ORDER BY time ASC
+        """
         
         # Read into Polars
         df = pl.read_database(query, conn)
@@ -141,7 +153,12 @@ class SovereignScreener:
             df = df.filter(pl.col("time") <= target_dt)
         
         # 1. Drop non-equities first from main dataset (expanded regex)
-        df = df.filter(~pl.col("symbol").str.contains("NIFTY|BOND|INV|ETF|B22|BEES"))
+        # Filters for alphanumeric NSE symbols, blocks noise, and enforces length
+        df = df.filter(
+            (pl.col("symbol").str.contains("^[A-Z0-9]+$")) & 
+            (pl.col("symbol").str.len_chars() < 15) &
+            (~pl.col("symbol").str.contains("VIX|BOND|GS|INDEX|ETF|BEES|NIFTY"))
+        )
         
         # 2. Calculate metrics
         df = self.apply_stage_2_filter(df)
@@ -162,7 +179,11 @@ class SovereignScreener:
             (pl.col("sma_10") <= pl.col("sma_20")).alias("REJECT_reason_velocity_cross_fail"),
             (pl.col("volume") < (1.5 * pl.col("vol_avg_20"))).alias("REJECT_reason_volume_thrust_fail"),
             (pl.col("atr_3") > pl.col("atr_20")).alias("REJECT_reason_atr_squeeze_fail"),
-            (pl.col("symbol").is_in(active_trades)).alias("EXCLUDED_active_trade")
+            (pl.col("symbol").is_in(active_trades)).alias("EXCLUDED_active_trade"),
+            # Shannon Stage 1 -> 2 Transition Marker
+            ((pl.col("close") > pl.col("sma_10")) & 
+             (pl.col("close") > pl.col("sma_20")) & 
+             (pl.col("volume") > (2.0 * pl.col("vol_avg_20")))).alias("IS_stage_transition")
         ])
         
         # Save diagnostics to CSV for user inspection
@@ -170,18 +191,28 @@ class SovereignScreener:
         diagnostics.write_csv(diag_path)
         logging.info(f"Diagnostic report saved to: {diag_path}")
         
-        # 5. Filter for high-probability candidates (aligned multiple timeframes)
-        final_df = latest_df.filter(
+        # 5a. Filter for established Stage 2 participation
+        stage_2_df = latest_df.filter(
             (pl.col("close") > pl.col("sma_50")) &
             (pl.col("sma_50") > pl.col("sma_200")) &
             (pl.col("sma_50_slope_10d") > 0) &
-            (pl.col("sma_50_slope_10d") <= 150.0) &
-            (pl.col("close") > pl.col("mock_avwap")) &
-            (pl.col("extension_pct") <= 12.0) &
-            (pl.col("sma_10") > pl.col("sma_20")) & # Added Velocity Cross
-            (pl.col("volume") >= (1.5 * pl.col("vol_avg_20"))) & # Added Volume Thrust
-            (pl.col("atr_3") <= pl.col("atr_20")) # Added ATR Squeeze
+            (pl.col("extension_pct") <= 15.0) & # Relaxed from 12% to 15%
+            (pl.col("sma_10") > pl.col("sma_20")) &
+            (pl.col("volume") >= (1.5 * pl.col("vol_avg_20"))) &
+            (pl.col("atr_3") <= pl.col("atr_20"))
         )
+
+        # 5b. Filter for Shannon Stage Transition (Institutional Bottoming)
+        # This catches the BHEL/APOLLO setups before they establish Stage 2
+        transition_df = latest_df.filter(
+            (pl.col("close") > pl.col("sma_10")) &
+            (pl.col("close") > pl.col("sma_20")) &
+            (pl.col("volume") >= (2.5 * pl.col("vol_avg_20"))) & # Massive Ignition Volume
+            (pl.col("close") > pl.col("sma_50")) & # Must have crossed the 50-line
+            (pl.col("extension_pct") <= 10.0) # Catch it early, not after 20% move
+        )
+
+        final_df = pl.concat([stage_2_df, transition_df]).unique(subset=["symbol"])
         
         # 6. Global Exclusion: Remove symbols already in a trade
         active_trades = self.fetch_active_trades()

@@ -60,15 +60,43 @@ class CriticAgent:
 
 def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
     candidates = state.get("candidates", [])
-    heuristic_flags = state.get("heuristic_flags", {})
+    agent_scores = state.get("agent_scores", {})
     macro = state.get("macro_regime", "UNKNOWN")
     
     critic = CriticAgent()
     critic_results = {}
+    approved_allocations = {}
     
     for symbol in candidates:
-        thesis = heuristic_flags.get(symbol, {}).get("pattern", "None")
-        evaluation = critic.evaluate_thesis(symbol, thesis, macro)
+        scores = agent_scores.get(symbol, {})
+        
+        # --- WEIGHTED CONSENSUS SCORING ---
+        # Weights: Entry (40%), Vision (40%), DTW (20%)
+        w_entry = scores.get("entry", 0) * 0.40
+        w_vision = scores.get("vision", 0) * 0.40
+        w_dtw = scores.get("dtw", 0) * 0.20
+        
+        total_confidence = w_entry + w_vision + w_dtw
+        
+        # Run base adversarial check
+        evaluation = critic.evaluate_thesis(symbol, "thesis", macro)
+        
+        # Decision Logic: Threshold 70% + No Critic Veto
+        final_approval = (total_confidence >= 70.0) and (not evaluation["veto"])
+        
+        evaluation["total_confidence"] = float(total_confidence)
+        evaluation["approved"] = final_approval
         critic_results[symbol] = evaluation
         
-    return {"critic_results": critic_results, "debate_count": 1}
+        if final_approval:
+            logging.info(f"COGNITIVE APPROVAL: {symbol} passed with {total_confidence:.1f}% confidence!")
+            # Mock allocation for now
+            approved_allocations[symbol] = {"size_pct": 2.5, "confidence": float(total_confidence)}
+        else:
+            logging.warning(f"COGNITIVE REJECTION: {symbol} only reached {total_confidence:.1f}% confidence.")
+        
+    return {
+        "critic_results": critic_results, 
+        "approved_allocations": approved_allocations,
+        "debate_count": 1
+    }

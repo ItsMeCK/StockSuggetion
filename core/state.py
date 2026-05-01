@@ -57,8 +57,11 @@ class SovereignState(TypedDict):
     # Maps ticker -> list of warnings retrieved from pgvector Experience DB
     experience_warnings: Annotated[Dict[str, List[str]], merge_dicts]
     
-    # Maps ticker -> Vision Agent validation results (e.g., {"whipsaw_risk": "low", "volume_dryup": True})
+    # Maps ticker -> vision results
     vision_validations: Annotated[Dict[str, Dict[str, Any]], merge_dicts]
+    
+    # Maps ticker -> agent scores (e.g., {"entry": 85, "vision": 90, "critic": 75})
+    agent_scores: Annotated[Dict[str, Dict[str, float]], merge_dicts]
     
     # Maps ticker -> Critic Agent validations
     critic_results: Annotated[Dict[str, Dict[str, Any]], merge_dicts]

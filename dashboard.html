@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Sovereign: April Backtest Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b0e14;
+            --card-bg: rgba(23, 28, 38, 0.7);
+            --accent: #00f2ff;
+            --secondary: #bd00ff;
+            --text: #ffffff;
+            --text-dim: #94a3b8;
+            --green: #10b981;
+            --red: #ef4444;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: radial-gradient(circle at top right, #1a1b3a, var(--bg));
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        .table-container {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(255,255,255,0.02);
+            padding: 1.2rem;
+            color: var(--text-dim);
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+
+        td {
+            padding: 1.2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+        }
+
+        tr:hover td {
+            background: rgba(0, 242, 255, 0.05);
+        }
+
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-gate1 { background: rgba(0, 242, 255, 0.1); color: var(--accent); border: 1px solid var(--accent); }
+        .badge-gate2 { background: rgba(189, 0, 255, 0.1); color: var(--secondary); border: 1px solid var(--secondary); }
+        .badge-profit { background: rgba(16, 185, 129, 0.1); color: var(--green); border: 1px solid var(--green); }
+        .badge-open { background: rgba(255, 255, 255, 0.1); color: var(--text); border: 1px solid var(--text); }
+
+        .chart-mock {
+            height: 40px;
+            width: 100px;
+            background: linear-gradient(90deg, transparent, rgba(0,242,255,0.2), transparent);
+            border-bottom: 1px solid var(--accent);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MIDNIGHT SOVEREIGN <span>V2.1</span></h1>
+            <div style="color: var(--text-dim)">April 2026 Backtest Report</div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="total-days">21</div>
+                <div class="stat-label">Trading Days</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="gate1-count" style="color: var(--accent)">59</div>
+                <div class="stat-label">Gate 1 Candidates</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="gate2-count" style="color: var(--secondary)">4</div>
+                <div class="stat-label">Gate 2 Approvals</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" style="color: var(--green)">100%</div>
+                <div class="stat-label">Strike Rate (Active)</div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Gate 1 (Candidates)</th>
+                        <th>Gate 2 (Approved)</th>
+                        <th>Trade Status</th>
+                        <th>PnL (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Data will be injected here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const data = [
+            { date: "2026-04-09", candidates: "APOLLO, BHEL", approved: "-", status: "VETOED", pnl: "0.0" },
+            { date: "2026-04-16", candidates: "DCMSHRIRAM", approved: "DCMSHRIRAM", status: "OPEN", pnl: "+2.4" },
+            { date: "2026-04-20", candidates: "BALRAMCHIN", approved: "BALRAMCHIN", status: "OPEN", pnl: "+1.8" },
+            { date: "2026-04-21", candidates: "MASFIN", approved: "MASFIN", status: "OPEN", pnl: "+3.1" },
+            { date: "2026-04-27", candidates: "NEWGEN", approved: "NEWGEN", status: "OPEN", pnl: "+4.7" }
+        ];
+
+        const body = document.getElementById('results-body');
+        data.forEach(row => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${row.date}</td>
+                <td><span class="badge badge-gate1">${row.candidates}</span></td>
+                <td><span class="badge ${row.approved !== '-' ? 'badge-gate2' : ''}">${row.approved}</span></td>
+                <td><span class="badge ${row.status === 'OPEN' ? 'badge-open' : ''}">${row.status}</span></td>
+                <td style="color: ${row.pnl.startsWith('+') ? 'var(--green)' : 'inherit'}">${row.pnl}%</td>
+            `;
+            body.appendChild(tr);
+        });
+    </script>
+</body>
+</html>

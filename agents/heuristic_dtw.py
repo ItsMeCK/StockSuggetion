@@ -105,7 +105,16 @@ def run_heuristic_pre_processor(state: SovereignState) -> Dict[str, Any]:
     dtw_processor = HeuristicDTWProcessor()
     flagged_setups = dtw_processor.evaluate_candidates(candidates)
 
-    return {"heuristic_flags": flagged_setups}
+    # Update global agent_scores in state
+    agent_scores = state.get("agent_scores", {})
+    for symbol, setup_data in flagged_setups.items():
+        if symbol not in agent_scores:
+            agent_scores[symbol] = {}
+        # Normalize DTW score to 0-100 scale (from 0-15)
+        dtw_score = setup_data.get("dtw_score", 0)
+        agent_scores[symbol]["dtw"] = float(dtw_score * (100.0/15.0))
+
+    return {"heuristic_flags": flagged_setups, "agent_scores": agent_scores}
 
 if __name__ == "__main__":
     # Test execution

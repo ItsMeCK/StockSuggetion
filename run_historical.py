@@ -17,6 +17,7 @@ def run_historical_engine(target_date: str):
 
     # 1. Initialize State
     initial_state = SovereignState(
+        target_date=target_date,
         macro_regime="",
         candidates=[],
         heuristic_flags={},
@@ -26,9 +27,8 @@ def run_historical_engine(target_date: str):
         error_log=[]
     )
 
-    # 2. Macro Regime (Mocked for historical run if not available)
-    initial_state["macro_regime"] = "TUG_OF_WAR"
-    initial_state["india_vix"] = 18.5
+    # 2. Macro Regime (Handled by the Gate now)
+    initial_state["macro_regime"] = ""
 
     # 3. Screener with Historical Slicing
     logging.info(f"--- PHASE 2: HISTORICAL POLARS SCREENER ({target_date}) ---")

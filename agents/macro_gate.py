@@ -22,10 +22,13 @@ class MacroDataFetcher:
         return {"fii_net": 0.0, "dii_net": 0.0}
 
     @staticmethod
-    def fetch_global_macro() -> Dict[str, float]:
-        # India VIX and US Dollar Index (DXY)
-        vix = 15.0 # Default neutral
-        dxy = 103.0
+    def fetch_market_health(target_date: str = None) -> Dict[str, Any]:
+        """
+        Fetches Nifty 50 momentum and overall market breadth (Advancing vs Declining).
+        """
+        nifty_return = 0.0
+        advancing = 0
+        declining = 0
         
         try:
             conn = psycopg2.connect(
@@ -36,43 +39,75 @@ class MacroDataFetcher:
                 dbname=os.getenv("POSTGRES_DB", "market_data")
             )
             cur = conn.cursor()
-            cur.execute("SELECT close FROM daily_ohlcv WHERE symbol = 'INDIA VIX' ORDER BY time DESC LIMIT 1")
+            
+            # 1. Nifty Momentum
+            nifty_query = """
+                WITH prev AS (
+                    SELECT close FROM daily_ohlcv WHERE symbol = 'NIFTY 50' AND time < %s ORDER BY time DESC LIMIT 1
+                )
+                SELECT (close - (SELECT close FROM prev)) / (SELECT close FROM prev) * 100 
+                FROM daily_ohlcv WHERE symbol = 'NIFTY 50' AND time::date = %s
+            """
+            cur.execute(nifty_query, (target_date, target_date))
             row = cur.fetchone()
-            if row:
-                vix = float(row[0])
-                logging.info(f"Retrieved real INDIA VIX from DB: {vix}")
+            nifty_return = float(row[0]) if row else 0.0
+            
+            # 2. Market Breadth (NSE 500 equivalent)
+            breadth_query = """
+                WITH daily_returns AS (
+                    SELECT symbol, 
+                           (close - LAG(close) OVER (PARTITION BY symbol ORDER BY time)) / LAG(close) OVER (PARTITION BY symbol ORDER BY time) as ret
+                    FROM daily_ohlcv 
+                    WHERE time <= %s
+                )
+                SELECT 
+                    COUNT(*) FILTER (WHERE ret > 0) as adv,
+                    COUNT(*) FILTER (WHERE ret < 0) as dec
+                FROM daily_returns
+                WHERE symbol IN (SELECT DISTINCT symbol FROM daily_ohlcv)
+            """
+            # This is a bit slow for every day, so we optimize to only the specific target day
+            # Simplified for speed:
+            breadth_query_fast = """
+                SELECT 
+                    COUNT(*) FILTER (WHERE close > open) as adv,
+                    COUNT(*) FILTER (WHERE close < open) as dec
+                FROM daily_ohlcv 
+                WHERE time::date = %s
+            """
+            cur.execute(breadth_query_fast, (target_date,))
+            b_row = cur.fetchone()
+            if b_row:
+                advancing, declining = b_row
+            
             cur.close()
             conn.close()
         except Exception as e:
-            logging.error(f"Error fetching VIX from DB: {e}")
+            logging.error(f"Macro Data fetch error: {e}")
             
-        return {"india_vix": vix, "dxy": dxy}
+        return {
+            "nifty_return": nifty_return,
+            "advancing": advancing,
+            "declining": declining,
+            "adr": advancing / max(1, declining)
+        }
 
-def evaluate_market_regime(fii_dii: Dict[str, float], macro: Dict[str, float]) -> str:
+def evaluate_market_regime(fii_dii: Dict[str, float], health: Dict[str, Any]) -> str:
     """
-    Evaluates the current market regime based on institutional flow and global macro data.
+    Enhanced Regime Evaluation with Nifty Momentum and Breadth.
+    """
+    nifty_ret = health.get("nifty_return", 0.0)
+    adr = health.get("adr", 1.0)
     
-    Regimes:
-    - EXPANSION: FII Buy, DII Buy (High confidence, broad-based rally)
-    - TUG_OF_WAR: FII Sell, DII Buy (Range-bound, sector rotation)
-    - CAPITULATION: FII Sell, DII Sell + VIX Spiking (Systemic liquidity withdrawal)
-    """
-    fii_net = fii_dii.get("fii_net", 0)
-    dii_net = fii_dii.get("dii_net", 0)
-    vix = macro.get("india_vix", 15.0)
-
-    # Thresholds for 'spiking' VIX could be dynamic, hardcoded for demonstration
-    VIX_PANIC_THRESHOLD = 22.0
-
-    if fii_net < 0 and dii_net < 0 and vix >= VIX_PANIC_THRESHOLD:
-        return "CAPITULATION"
-    elif fii_net < 0 and dii_net > 0:
-        return "TUG_OF_WAR"
-    elif fii_net > 0 and dii_net > 0:
-        return "EXPANSION"
-    else:
-        # Default fallback for mixed/neutral scenarios
-        return "NEUTRAL"
+    # --- RULE 1: THE NIFTY KILL-SWITCH ---
+    if nifty_ret < -0.8:
+        return "CAPITULATION" # Force halt on deep red days
+        
+    # --- RULE 2: BREADTH CHECK ---
+    if adr < 0.6: # Fewer than 3 stocks up for every 5 down
+        return "TUG_OF_WAR" # Restrictive regime
+        
+    return "EXPANSION"
 
 def run_macro_regime_gate(state: SovereignState) -> SovereignState:
     """
@@ -81,36 +116,34 @@ def run_macro_regime_gate(state: SovereignState) -> SovereignState:
     """
     logging.info("Executing Macro Regime Gate...")
     
-    # 1. Fetch Data
-    fii_dii_data = MacroDataFetcher.fetch_fii_dii_flow()
-    macro_data = MacroDataFetcher.fetch_global_macro()
-    
-    logging.info(f"FII Net: {fii_dii_data['fii_net']} Cr | DII Net: {fii_dii_data['dii_net']} Cr")
-    logging.info(f"India VIX: {macro_data['india_vix']} | DXY: {macro_data['dxy']}")
+    # Get target date from state (for historical simulation support)
+    target_date = state.get("target_date")
+    if not target_date:
+        # Fallback to current date for live runs
+        from datetime import datetime
+        target_date = datetime.now().strftime('%Y-%m-%d')
+
+    # 1. Fetch Market Health
+    market_health = MacroDataFetcher.fetch_market_health(target_date)
+    logging.info(f"Nifty Return: {market_health['nifty_return']:.2f}% | ADR: {market_health['adr']:.2f}")
     
     # 2. Evaluate Regime
-    regime = evaluate_market_regime(fii_dii_data, macro_data)
+    regime = evaluate_market_regime({}, market_health)
     logging.info(f"Identified Market Regime: {regime}")
     
     # 3. Return Delta State Update
     if regime == "CAPITULATION":
-        logging.warning("🚨 CAPITULATION REGIME DETECTED. Halting all long-side processing.")
+        logging.warning(f"🚨 MARKET KILL-SWITCH TRIGGERED ({target_date}). Nifty Return: {market_health['nifty_return']:.2f}%. Halting Longs.")
         return {
             "macro_regime": regime, 
-            "fii_net": fii_dii_data['fii_net'],
-            "dii_net": fii_dii_data['dii_net'],
-            "india_vix": macro_data['india_vix'],
-            "dxy": macro_data['dxy'],
             "candidates": [], 
-            "error_log": ["Halted due to CAPITULATION regime."]
+            "error_log": [f"Halted due to Market Capitulation on {target_date}"]
         }
     
     return {
         "macro_regime": regime,
-        "fii_net": fii_dii_data['fii_net'],
-        "dii_net": fii_dii_data['dii_net'],
-        "india_vix": macro_data['india_vix'],
-        "dxy": macro_data['dxy']
+        "nifty_momentum": market_health['nifty_return'],
+        "market_breadth": market_health['adr']
     }
 
 if __name__ == "__main__":
