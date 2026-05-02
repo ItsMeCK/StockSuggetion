@@ -56,18 +56,26 @@ def generate_dashboard():
             
             # --- RUTHLESS SOVEREIGN AUDIT DATA (MAY 4TH PROTOCOL) ---
             audit_data = {
+                "ADANIPORTS": {"grade": "A", "action": "DEPLOY", "insight": "Elite Port Moat. Strong earnings momentum. Clean Audit.", "sector": "INFRA", "rigor": "Clean"},
+                "COALINDIA": {"grade": "A", "action": "DEPLOY", "insight": "High Dividend + Volume Breakout. Institutional heavy buying.", "sector": "ENERGY", "rigor": "Clean"},
+                "SYNGENE": {"grade": "A-", "action": "DEPLOY", "insight": "Pharma R&D Breakout. Bullish Sector Tailwind.", "sector": "PHARMA", "rigor": "Clean"},
+                "TIMKEN": {"grade": "A-", "action": "DEPLOY", "insight": "Industrial High-Precision leader. Technically perfect base.", "sector": "INDUSTRIAL", "rigor": "Clean"},
+                "RRKABEL": {"grade": "A", "action": "DEPLOY", "insight": "Wires & Cables dominance. Fresh breakout from flag.", "sector": "INFRA", "rigor": "Clean"},
                 "CHOLAFIN": {"grade": "A", "action": "DEPLOY", "insight": "Confirmed Cup & Handle Breakout. High Conviction.", "sector": "FINTECH", "rigor": "Clean"},
                 "BHARATFORG": {"grade": "A", "action": "DEPLOY", "insight": "Confirmed Stage 2 Uptrend. Defense Tailwind.", "sector": "DEFENSE", "rigor": "Clean"},
                 "MASFIN": {"grade": "A-", "action": "DEPLOY", "insight": "Confirmed High-Momentum Thrust. NBFC Leader.", "sector": "FINTECH", "rigor": "Clean"},
+                "BAJFINANCE": {"grade": "A-", "action": "DEPLOY", "insight": "Institutional Leadership. Technical Resilience.", "sector": "FINTECH", "rigor": "Clean"},
+                "MOTILALOFS": {"grade": "B+", "action": "ACCUMULATE", "insight": "Market proxy. Strong AUM growth. Watch for dips.", "sector": "FINTECH", "rigor": "Clean"},
                 "BALRAMCHIN": {"grade": "B+", "action": "ACCUMULATE", "insight": "Macro Sugar Reversal. Buy on Dips.", "sector": "AGRI", "rigor": "Cyclical"},
                 "NEWGEN": {"grade": "B", "action": "ACCUMULATE", "insight": "Volatile Range-Bound Base. Mean-Reversion only.", "sector": "SAAS", "rigor": "Range"},
                 "FEDERALBNK": {"grade": "D", "action": "AVOID", "insight": "TRAP: Overhead Resistance (5.2%) + RSI Divergence.", "sector": "BANKING", "rigor": "VETO"},
                 "DCMSHRIRAM": {"grade": "C", "action": "AVOID", "insight": "STATIC: Accumulation Phase. No Breakout Ignition.", "sector": "CHEMICALS", "rigor": "VETO"},
-                "BANARISUG": {"grade": "B+", "action": "ACCUMULATE", "insight": "Sugar Reversal support. Wait for ignition.", "sector": "AGRI", "rigor": "Cyclical"},
-                "BAJFINANCE": {"grade": "A-", "action": "DEPLOY", "insight": "Institutional Leadership. Technical Resilience.", "sector": "FINTECH", "rigor": "Clean"},
-                "ADOR": {"grade": "B", "action": "ACCUMULATE", "insight": "Industrial proxy. Infrastructure tailwind.", "sector": "INFRA", "rigor": "Slow"},
-                "5PAISA": {"grade": "B", "action": "ACCUMULATE", "insight": "Mid-Cap momentum. Watch for breakout.", "sector": "FINTECH", "rigor": "Slow"},
-                "KEEPLEARN": {"grade": "D", "action": "AVOID", "insight": "Edtech Headwinds. Small Cap Volatility.", "sector": "EDTECH", "rigor": "VETO"}
+                "KEEPLEARN": {"grade": "D", "action": "AVOID", "insight": "Edtech Headwinds. Small Cap Volatility.", "sector": "EDTECH", "rigor": "VETO"},
+                "SAPPHIRE": {"grade": "B+", "action": "ACCUMULATE", "insight": "QSR recovery play. Technical bottoming confirmed.", "sector": "RETAIL", "rigor": "Clean"},
+                "SUNTV": {"grade": "B", "action": "ACCUMULATE", "insight": "Cash rich. High dividend. Range-bound play.", "sector": "MEDIA", "rigor": "Range"},
+                "IPCALAB": {"grade": "B+", "action": "ACCUMULATE", "insight": "Pharma export strength. 200-SMA support bounce.", "sector": "PHARMA", "rigor": "Clean"},
+                "GESHIP": {"grade": "B+", "action": "ACCUMULATE", "insight": "Shipping rates tailwind. Buying at support.", "sector": "SHIPPING", "rigor": "Clean"},
+                "ACUTAAS": {"grade": "A-", "action": "DEPLOY", "insight": "High growth chemical. Fresh Stage 2 ignition.", "sector": "CHEMICALS", "rigor": "Clean"}
             }
             
             info = audit_data.get(symbol, {"grade": "N/A", "action": "WATCH", "insight": "Audit Pending...", "sector": "GENERIC", "rigor": "N/A"})

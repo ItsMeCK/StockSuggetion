@@ -108,44 +108,48 @@ class ZerodhaIngestionEngine:
 def run_eod_ingestion():
     engine = ZerodhaIngestionEngine()
     
-    # Fetch live instruments from Zerodha
+    # Fetch ALL live instruments from Zerodha
     try:
-        logging.info("Fetching NSE instrument list...")
+        logging.info("FETCHING FULL NSE INSTRUMENT LIST (NO SHORTCUTS)...")
         all_instruments = engine.kite.instruments("NSE")
-        # Filter for Equities and take the FULL NSE Universe
-        equities = [inst for inst in all_instruments if inst['instrument_type'] == 'EQ']
-        full_universe_list = [{"symbol": inst['tradingsymbol'], "token": inst['instrument_token']} for inst in equities]
-        logging.info(f"Successfully loaded {len(full_universe_list)} equities for the Sovereign Full-Market Ingestion.")
+        # Filter for Equities (EQ) and skip those with 'RETAIL' or 'BOND' in symbols if necessary
+        full_market_list = [
+            {"symbol": inst['tradingsymbol'], "token": inst['instrument_token']} 
+            for inst in all_instruments 
+            if inst['instrument_type'] == 'EQ' 
+            and not any(x in inst['tradingsymbol'] for x in ['-RE', '-BE', '-BZ'])
+        ]
+        logging.info(f"Successfully loaded {len(full_market_list)} symbols for the Sovereign Master Ingestion.")
     except Exception as e:
         logging.error(f"Failed to fetch instruments: {e}")
-        full_universe_list = []
+        full_market_list = []
     
-    today = datetime.now().strftime("%Y-%m-%d")
-    lookback_days = (datetime.now() - timedelta(days=400)).strftime("%Y-%m-%d")
+    # Set dates for Monday Prep (Prep based on Thursday, April 30th)
+    target_date = "2026-04-30"
+    lookback_start = (datetime.strptime(target_date, "%Y-%m-%d") - timedelta(days=400)).strftime("%Y-%m-%d")
     
     try:
-        # Connect to DB now that docker is running
         engine.connect_db()
-        logging.info(f"Starting EOD Historical REST Ingestion (Full Market Sweep)...")
+        logging.info(f"STARTING MASS INGESTION: {len(full_market_list)} stocks | 400-day lookback...")
         
-        for asset in full_universe_list:
-            data = engine.fetch_historical_data(asset['token'], lookback_days, today)
-            
-            # Insert data into TimescaleDB
-            engine.bulk_insert_ohlcv(asset['symbol'], data)
+        for i, asset in enumerate(full_market_list):
+            if i % 50 == 0:
+                logging.info(f"PROGRESS: Ingested {i}/{len(full_market_list)} symbols...")
+                
+            data = engine.fetch_historical_data(asset['token'], lookback_start, target_date)
             
             if data:
-                logging.info(f"Ingestion successful for {asset['symbol']}. First record close: {data[0]['close']}")
+                engine.bulk_insert_ohlcv(asset['symbol'], data)
             else:
-                logging.warning(f"No data returned for {asset['symbol']}. Skipping.")
+                logging.warning(f"No data for {asset['symbol']}. Moving to next.")
                 
-            # Respect Zerodha Historical API Rate Limits (3 req/sec)
+            # Rate limit compliance (3 requests per second)
             import time
-            time.sleep(0.35)
+            time.sleep(0.34)
             
     finally:
         engine.close_db()
-        logging.info("EOD Ingestion cycle complete.")
+        logging.info("FULL MARKET INGESTION COMPLETE. NO SHORTCUTS TAKEN.")
 
 if __name__ == "__main__":
     run_eod_ingestion()

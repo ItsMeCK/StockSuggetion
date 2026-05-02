@@ -3678,5 +3678,197 @@
         "reason": "The data presents a clear pattern of price oscillation between a high of approximately 4500 and a low of around 4000, forming a rectangle pattern. This pattern has consistent highs and lows over the past month, suggesting a period of consolidation. Noticeable is the volume spike on April 30, 2026, with volume hitting 500,000, which is exactly twice the typical daily volume, indicating institutional activity. The characteristics observed are indicative of a rectangle pattern with institutional buying, justifying a strong score due to visible institutional footprints.",
         "whipsaw_risk": "Low",
         "cached_at": "2026-04-30"
+    },
+    "SAPPHIRE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "reverse_head_and_shoulders_bottom",
+        "reason": "The recent price action displays characteristics of a reverse head and shoulders bottom formation, with the shoulders around April 15-19 and April 26-29, and the head around April 23. The breakout on April 28 is accompanied by a volume surge of 41,377,762, which is significantly greater than the previous days, indicating strong institutional interest and marking a potential reversal. The surge in volume gives this pattern a strong rating based on institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "SUNTV_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 81,
+        "identified_pattern": "rectangle",
+        "reason": "The observed price action of SUNTV over the past months shows a trading range, creating a rectangle pattern. This is characterized by clear resistance near the high of 660.7 and support around the low of 563.75. Additionally, multiple swings within this range confirm the pattern, indicative of institutional accumulation or distribution. The volume spikes on 2026-03-24 and 2026-02-26 suggest institutional activity, showing footprints but not exceeding 3x the average volume, qualifying it as a strong but not perfect pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "LAURUSLABS_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price data for LAURUSLABS indicates an ascending triangle formation with higher lows established at 1093.75, 1079.6, and 1085.0, while resistance has been forming around the 1130.0 level. Volume patterns support the presence of this formation, with volume generally decreasing during the consolidation phase, indicating a potential bullish breakout. No extreme volume surges (>3x average) are present, but the steadiness in ascending lows and resistance suggests a strong institutional presence, warranting a high vision score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "FLUOROCHEM_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price data for FLUOROCHEM indicates a series of higher low patterns within a consolidating horizontal resistance range (around 3600), which is characteristic of an ascending triangle formation. The breakout from the 3345.1 range on 2026-04-29 to a high of 3624.0 signifies an attempt to breach the upper resistance. The significant volume spike (507,417 on 2026-04-29) compared to the previous trading days also suggests institutional buying interest, supporting the ascending triangle breakout scenario.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ANURAS_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 70,
+        "identified_pattern": "head_and_shoulders",
+        "reason": "The data exhibits characteristics of a head and shoulders pattern. Over the span of several weeks, there are three distinct price peaks, with the middle peak (head) being the highest, and the flanking peaks (shoulders) being lower and relatively symmetrical. The recent decline in prices after the peak on April 22 indicates a breakdown from the pattern. Volume does not show a significant surge to indicate a strong institutional footprint or massive breakout, hence the score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "NATIONALUM_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "double_top",
+        "reason": "The data shows potential double top characteristics with peaks around mid-March (410-411) and early-April (440-445), indicating a potential reversal as the price struggled to break above these levels. The recent price decline and increased volume further support this hypothesis, suggesting a possible tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "ADANIPORTS_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "broadening_formation",
+        "reason": "The recent price data for ADANIPORTS shows characteristics of a broadening formation with increasing volatility and price swings without a clear directional breakout yet. The latest volume is not >3x average, thus no institutional footprint is detected. The pattern is promising due to the expanding volatility range, which may lead to an eventual decisive move. Patterns such as these are indicative of market indecision and prior consolidation, making it a strong reason for the current score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "KPITTECH_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a consolidation phase with clear horizontal resistance around 762-767 and support around 690-700. This suggests a range-bound, sideways movement typical of a rectangle formation. Although there isn\u2019t a volume surge >3x average to warrant a PERFECT score, the consolidation pattern is strong, and the volume levels indicate institutional support, especially around the lows. This offers a STRONG setup with potential for a breakout in either direction.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "TIMKEN_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "descending_triangle",
+        "reason": "The data shows a clear pattern of lower highs with a relatively flat level of support, which is characteristic of a descending triangle. Volume has not shown a massive spike but has increased during declines, suggesting distribution consistent with an institutional footprint. The setup is strong, as the price is nearing the supportive level with potential for a breakout, supported by increasing volume on recent declining sessions.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "SYNGENE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 80,
+        "identified_pattern": "broadening_formation",
+        "reason": "The data shows a significant increase in price volatility over the period with higher highs and lower lows, typical of a broadening formation. The most recent data on 2026-04-29 reflects a breakout on massive volume (59,274,654), which far exceeds the previous average, indicating an institutional footprint and suggesting the potential for strong movement. The pattern's clear volume and price characteristics align well with institutional activity, warranting a strong score based on the visible footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "CGCL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action for CGCL suggests a consolidation pattern that resembles a rectangle. The support and resistance levels are largely defined, with the price oscillating between approximately 181 and 188 over the past few weeks. The volume overall is relatively stable, without significant surges that would indicate a breakout or a breakdown. Subsequently, this indicates a valid tradable setup, but lacks strong institutional activity. A clear breakout on either the upside or downside with a substantial volume surge would enhance the grading further.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "MEDANTA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price data for MEDANTA suggests a consolidation in a sideways trend since early April, characterized by roughly similar highs and lows, forming a rectangle pattern. There is an absence of a volume surge or strong breakout, but the consistent trading within a range indicates a tradeable setup. Volume has been relatively moderate with no significant spikes indicative of a major institutional footprint, resulting in a 'valid' score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "KEI_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "reverse_head_and_shoulders_bottom",
+        "reason": "The recent price action suggests the formation of a reverse head and shoulders pattern. This is identified by the price reaching a low at 4216.5, recovering to form a higher low at 3990.5, and then moving higher, which forms the left shoulder, head, and right shoulder respectively. Further confirmation is provided by the relatively high volume during the right shoulder compared to the left shoulder. Although not a massive surge (>3x average), the visible structured pattern supports the presence of institutional involvement.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "IPCALAB_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data indicates a trading range formation, characterized by the stock oscillating between predefined resistance and support levels, suggesting a rectangle pattern. The stock has had several touches around highs of ~1570-1590 and lows of ~1460-1480 over time. Although there hasn't been a volume surge indicative of a strong breakout, the consistent range-bound movement is indicative of the rectangle pattern. Scoring reflects a valid but not extraordinary tradable setup due to absence of massive volume spikes.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "GESHIP_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 80,
+        "identified_pattern": "head_and_shoulders_top",
+        "reason": "The data exhibits characteristics of a head and shoulders top pattern, with peaks on 2026-04-05, 2026-04-19, and 2026-04-28 forming the left shoulder, head, and right shoulder, respectively. The volume during these periods is considerable, indicating significant trading activity. Although there isn't a perfect 3x volume spike to confirm an outright breakout, the volume is significantly elevated during the formation. This suggests institutional involvement, qualifying it as a 'strong' signal.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "NAVINFLUOR_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action for NAVINFLUOR shows a consolidation between the highs around 7200 and lows near 6000. This suggests a rectangular pattern where the stock is moving sideways within well-defined horizontal boundaries. The volume does not show any significant surges, indicating a lack of a strong breakout or institutional presence, which aligns with a valid setup but not a highly convincing institutional pattern.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "NSLNISP_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 80,
+        "identified_pattern": "broadening_formation",
+        "reason": "The recent OHLCV data suggests a broadening pattern due to the expanding range of highs and lows over the dataset, noticeable in the more volatile recent prices. The volume does not show a surge exceeding three times the average; however, the pattern indicates clear institutional footprints which are prominent within the formation, diagnostic of this choice.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "SAILIFE_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent data for SAILIFE suggests an ascending triangle pattern characterized by a series of higher lows, visible on dates like 2026-04-05 (L: 935.0) and 2026-04-20 (L: 944.0), while the highs have remained near 1080, forming a horizontal resistance level reflected on days such as 2026-03-04 (H: 1084.0). The volume shows periods of surges, notably on 2026-02-26 with 2,428,681, indicating institutional interest, though no recent volume is over 3 times average. Thus, scoring is strong as the pattern is well-formed and supported by institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "INDGN_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for INDGN shows a trading range between approximately 460 and 510 over the past few months. The price has oscillated within these boundaries with no clear breakout above the resistance or breakdown below the support, characteristic of a rectangle pattern. The volume has not shown a significant surge (greater than 3x the average) in the latest data, indicating no strong institutional activity. Therefore, this setup is considered tradable but not strong, resulting in a valid vision score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "RRKABEL_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The price data from March to late April shows a pattern marked by a series of higher lows, while the highs appear to hit a common resistance around the 1600 region, indicative of an ascending triangle. This suggests accumulation or a bullish continuation pattern. Moreover, a volume surge was observed on 2026-04-27 and 2026-04-29, suggesting potential institutional interest, further validating the pattern with a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "USHAMART_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "broadening_formation",
+        "reason": "The analysis of USHAMART's recent OHLCV data suggests a broadening formation. This is characterized by higher highs and lower lows over the period, which displays a pattern of increased volatility and uncertainty. Despite the lack of a single huge volume spike surpassing 3x average, there is a gradual increase in volatility and volume. While not perfect, this indicates potential institutional activity with clearly visible footprints. Recent trading days also show significant volume increases compared to the early March levels, supporting the presence of larger market participants.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "MOTILALOFS_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 70,
+        "identified_pattern": "rectangle",
+        "reason": "The price action for MOTILALOFS has been oscillating within a horizontal range between approximately 770 and 820 over the recent data period. This suggests a rectangle pattern. Volume has not shown the massive surge indicative of strong institutional activity, thus it scores as a tradable setup but not higher. The average volume does not show a significant spike over the range period which would indicate stronger institutional interest.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "COALINDIA_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The price data for COALINDIA shows a pattern characteristic of an ascending triangle, where resistance is approximately horizontal around the 485 mark, formed by previous highs, and there is a series of higher lows, indicating bullish accumulation. The pattern is accentuated by increased volatility since early March 2026, with a notable upward momentum in the last week of April. Although there is a lack of a massive volume surge, the increasing price levels and consistent volume suggest that institutions are likely accumulating positions, thus warranting a strong, tradable score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "ACUTAAS_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "broadening_formation",
+        "reason": "The observed price action demonstrates a broadening pattern, characterized by higher highs and lower lows over the recent period (from early April to late April). This typically indicates increasing volatility and lack of a clear trend direction, often seen as indicative of distribution phases in the market. The volume patterns do not show a massive surge (i.e., latest volume is not >3x average), suggesting that while this is a valid setup, it lacks strong institutional signals, leading to a score in the 'VALID' range.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
     }
 }
