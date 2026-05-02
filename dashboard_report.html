@@ -1,563 +1,2123 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midnight Sovereign: Signal Audit Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #0b0e14;
-            --card-bg: rgba(23, 28, 38, 0.7);
-            --accent: #00f2ff;
-            --secondary: #bd00ff;
-            --text: #ffffff;
-            --text-dim: #94a3b8;
-            --green: #10b981;
-            --red: #ef4444;
-            --gold: #f59e0b;
-        }
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sovereign Elite Dashboard</title>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --bg: #05070a;
+                --card-bg: rgba(15, 20, 28, 0.8);
+                --accent: #00f2ff;
+                --secondary: #bd00ff;
+                --text: #ffffff;
+                --text-dim: #94a3b8;
+                --green: #10b981;
+                --red: #ef4444;
+                --gold: #f59e0b;
+            }
+            body {
+                background: var(--bg);
+                color: var(--text);
+                font-family: 'Outfit', sans-serif;
+                margin: 0;
+                padding: 2rem;
+                background: radial-gradient(circle at 0% 0%, #1a1b3a 0%, var(--bg) 50%);
+                min-height: 100vh;
+            }
+            .container { max-width: 1400px; margin: 0 auto; }
+            header {
+                display: flex; justify-content: space-between; align-items: center;
+                margin-bottom: 3rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            h1 {
+                font-size: 2.2rem; margin: 0;
+                background: linear-gradient(to right, var(--accent), var(--secondary));
+                -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                letter-spacing: -1px;
+            }
+            .stats-grid {
+                display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 1.5rem; margin-bottom: 2rem;
+            }
+            .stat-card {
+                background: var(--card-bg); border-radius: 1.5rem; padding: 1.5rem;
+                border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(20px);
+                position: relative; overflow: hidden;
+            }
+            .stat-card::after {
+                content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+                background: linear-gradient(to right, var(--accent), var(--secondary));
+                opacity: 0.3;
+            }
+            .stat-value { font-size: 2.5rem; font-weight: 600; margin-bottom: 0.2rem; }
+            .stat-label { color: var(--text-dim); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; }
+            
+            .impact-banner {
+                background: linear-gradient(45deg, rgba(189, 0, 255, 0.1), rgba(0, 242, 255, 0.1));
+                border: 1px solid var(--accent); border-radius: 1rem; padding: 1.5rem;
+                margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between;
+            }
+            .impact-title { font-weight: 600; font-size: 1.1rem; color: var(--accent); }
+            
+            .table-container {
+                background: var(--card-bg); border-radius: 1.5rem; overflow: hidden;
+                border: 1px solid rgba(255,255,255,0.05);
+            }
+            table { width: 100%; border-collapse: collapse; }
+            th { background: rgba(255,255,255,0.02); padding: 1.2rem; color: var(--text-dim); text-align: left; font-size: 0.75rem; letter-spacing: 1px; }
+            td { padding: 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 0.95rem; }
+            .symbol-tag { background: rgba(0, 242, 255, 0.1); color: var(--accent); padding: 4px 10px; border-radius: 8px; font-weight: 600; font-family: monospace; }
+            
+            .score-bar { display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: var(--text-dim); }
+            .score-fill-bg { width: 60px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+            .score-fill { height: 100%; background: var(--accent); border-radius: 3px; }
+            
+            .badge { padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+            .status-profit { background: rgba(16, 185, 129, 0.2); color: var(--green); }
+            .status-loss { background: rgba(239, 68, 68, 0.2); color: var(--red); }
+            .status-open { background: rgba(0, 242, 255, 0.2); color: var(--accent); }
+            .elite-badge { background: linear-gradient(45deg, #f59e0b, #d97706); color: #fff; box-shadow: 0 0 10px rgba(245, 158, 11, 0.5); }
+            .mom-badge { background: rgba(189, 0, 255, 0.2); color: var(--secondary); border: 1px solid var(--secondary); }
+            .acc-badge { background: rgba(16, 185, 129, 0.2); color: var(--green); border: 1px solid var(--green); }
+            .elite-row { background: rgba(245, 158, 11, 0.03) !important; }
+            .elite-row td { border-bottom: 1px solid rgba(245, 158, 11, 0.1) !important; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>MIDNIGHT SOVEREIGN <span style="font-weight: 300; opacity: 0.6">/ Elite Audit</span></h1>
+                <div style="text-align: right">
+                    <div style="font-size: 0.8rem; color: var(--text-dim)">SYSTEM STATUS: <span style="color: var(--green)">ACTIVE</span></div>
+                    <div style="font-size: 0.7rem; color: var(--text-dim); opacity: 0.5">2026-05-02 12:28</div>
+                </div>
+            </header>
 
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Outfit', sans-serif;
-            margin: 0;
-            padding: 2rem;
-            background: radial-gradient(circle at top right, #1a1b3a, var(--bg));
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 3rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin: 0;
-            background: linear-gradient(to right, var(--accent), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .stat-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem;
-            border-radius: 1rem;
-            border: 1px solid rgba(255,255,255,0.05);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-        }
-
-        .stat-value {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.7rem;
-        }
-
-        .table-container {
-            background: var(--card-bg);
-            border-radius: 1rem;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05);
-            margin-bottom: 2rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-        }
-
-        th {
-            background: rgba(255,255,255,0.02);
-            padding: 1.2rem;
-            color: var(--text-dim);
-            font-weight: 400;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 1.5px;
-        }
-
-        td {
-            padding: 1.2rem;
-            border-bottom: 1px solid rgba(255,255,255,0.02);
-            font-size: 0.95rem;
-        }
-
-        tr:hover td {
-            background: rgba(0, 242, 255, 0.05);
-        }
-
-        .badge {
-            padding: 0.3rem 0.8rem;
-            border-radius: 0.5rem;
-            font-size: 0.7rem;
-            font-weight: 700;
-            display: inline-block;
-        }
-
-        .outcome-profit { color: var(--green); font-weight: 600; }
-        .outcome-loss { color: var(--red); font-weight: 600; }
-        .outcome-open { color: var(--accent); font-weight: 600; }
-
-        .symbol-tag {
-            background: rgba(255,255,255,0.05);
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-family: monospace;
-            border: 1px solid rgba(255,255,255,0.1);
-            color: var(--accent);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>MIDNIGHT SOVEREIGN <span>SIGNAL AUDIT</span></h1>
-            <div style="color: var(--text-dim)">3-Month Performance | Generated: 2026-05-01 22:59</div>
-        </header>
-
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-value">41</div>
-                <div class="stat-label">Total Signals</div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">141</div>
+                    <div class="stat-label">Total Signals</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--green)">73.8%</div>
+                    <div class="stat-label">Success Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--gold)">2</div>
+                    <div class="stat-label">Hard Profits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--accent)">268</div>
+                    <div class="stat-label">Active Deployments</div>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-value" style="color: var(--green)">0</div>
-                <div class="stat-label">Profits (10%)</div>
+
+            <div class="impact-banner">
+                <div>
+                    <div class="impact-title">HYBRID ELITE STRATEGY (MOMENTUM OR ACCUMULATION)</div>
+                    <div style="font-size: 0.85rem; opacity: 0.8">Approving <b>Momentum (Entry >= 75)</b> OR <b>Institutional Accumulation (Vision >= 80 & DTW >= 85)</b>.</div>
+                </div>
+                <div style="text-align: right">
+                    <div style="font-size: 0.75rem; color: var(--text-dim)">LOSSES BLOCKED</div>
+                    <div style="font-size: 1.5rem; font-weight: 600; color: var(--green)">58.3%</div>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-value" style="color: var(--red)">14</div>
-                <div class="stat-label">Losses (5%)</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value" style="color: var(--accent)">0.0%</div>
-                <div class="stat-label">Win Rate</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value" style="color: #10b981">+71.8%</div>
-                <div class="stat-label">Net Performance</div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Symbol</th>
+                            <th>Entry</th>
+                            <th>Current</th>
+                            <th>PnL</th>
+                            <th>Conviction</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+            <tr class="">
+                <td>2026-03-01</td>
+                <td><span class="symbol-tag">BRITANNIA</span>   </td>
+                <td>₹5,959.00</td>
+                <td>₹5,726.00</td>
+                <td style="color: var(--accent); font-weight: 600;">-3.9%</td>
+                <td>
+                    <div class="score-bar"><span>V: 75</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-01</td>
+                <td><span class="symbol-tag">DALMIASUG</span>   </td>
+                <td>₹303.75</td>
+                <td>₹397.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+30.9%</td>
+                <td>
+                    <div class="score-bar"><span>V: 78</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-01</td>
+                <td><span class="symbol-tag">3MINDIA</span>   </td>
+                <td>₹35,675.00</td>
+                <td>₹30,120.00</td>
+                <td style="color: var(--red); font-weight: 600;">-15.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 72</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-loss">LOSS</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-01</td>
+                <td><span class="symbol-tag">DHAMPURSUG</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹124.71</td>
+                <td>₹155.35</td>
+                <td style="color: var(--accent); font-weight: 600;">+24.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 77</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-01</td>
+                <td><span class="symbol-tag">FOSECOIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹5,370.50</td>
+                <td>₹4,518.40</td>
+                <td style="color: var(--red); font-weight: 600;">-15.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 95</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-loss">LOSS</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-03</td>
+                <td><span class="symbol-tag">DALMIASUG</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹321.80</td>
+                <td>₹397.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+23.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-03</td>
+                <td><span class="symbol-tag">DHAMPURSUG</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹129.02</td>
+                <td>₹155.35</td>
+                <td style="color: var(--accent); font-weight: 600;">+20.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-03</td>
+                <td><span class="symbol-tag">FOSECOIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹5,128.50</td>
+                <td>₹4,719.10</td>
+                <td style="color: var(--accent); font-weight: 600;">-8.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-04</td>
+                <td><span class="symbol-tag">DALMIASUG</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹321.80</td>
+                <td>₹397.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+23.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 95</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-04</td>
+                <td><span class="symbol-tag">BALRAMCHIN</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹491.70</td>
+                <td>₹521.05</td>
+                <td style="color: var(--accent); font-weight: 600;">+6.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 87</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-04</td>
+                <td><span class="symbol-tag">FEDERALBNK</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹286.45</td>
+                <td>₹286.95</td>
+                <td style="color: var(--accent); font-weight: 600;">+0.2%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 68</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-04</td>
+                <td><span class="symbol-tag">DHAMPURSUG</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹129.02</td>
+                <td>₹155.35</td>
+                <td style="color: var(--accent); font-weight: 600;">+20.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-04</td>
+                <td><span class="symbol-tag">BAJAJHIND</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹17.21</td>
+                <td>₹20.30</td>
+                <td style="color: var(--accent); font-weight: 600;">+17.9%</td>
+                <td>
+                    <div class="score-bar"><span>V: 89</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-05</td>
+                <td><span class="symbol-tag">ROML</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹45.21</td>
+                <td>₹36.32</td>
+                <td style="color: var(--red); font-weight: 600;">-15.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 81</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-loss">LOSS</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-05</td>
+                <td><span class="symbol-tag">BALRAMCHIN</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹490.65</td>
+                <td>₹521.05</td>
+                <td style="color: var(--accent); font-weight: 600;">+6.2%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-05</td>
+                <td><span class="symbol-tag">BAJAJHIND</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹16.80</td>
+                <td>₹20.30</td>
+                <td style="color: var(--accent); font-weight: 600;">+20.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 90</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-08</td>
+                <td><span class="symbol-tag">MAZDOCK</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹2,387.00</td>
+                <td>₹2,733.20</td>
+                <td style="color: var(--accent); font-weight: 600;">+14.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-08</td>
+                <td><span class="symbol-tag">BRITANNIA</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹5,890.00</td>
+                <td>₹5,726.00</td>
+                <td style="color: var(--accent); font-weight: 600;">-2.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-08</td>
+                <td><span class="symbol-tag">COSMOFIRST</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹671.75</td>
+                <td>₹713.75</td>
+                <td style="color: var(--accent); font-weight: 600;">+6.2%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-09</td>
+                <td><span class="symbol-tag">DALMIASUG</span>   </td>
+                <td>₹316.00</td>
+                <td>₹397.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+25.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 78</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-09</td>
+                <td><span class="symbol-tag">BALRAMCHIN</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹492.60</td>
+                <td>₹521.05</td>
+                <td style="color: var(--accent); font-weight: 600;">+5.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-09</td>
+                <td><span class="symbol-tag">DHAMPURSUG</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹126.82</td>
+                <td>₹155.35</td>
+                <td style="color: var(--accent); font-weight: 600;">+22.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 81</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-10</td>
+                <td><span class="symbol-tag">MAZDOCK</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹2,482.10</td>
+                <td>₹2,065.20</td>
+                <td style="color: var(--red); font-weight: 600;">-15.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 81</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-loss">LOSS</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-10</td>
+                <td><span class="symbol-tag">GTECJAINX</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹20.11</td>
+                <td>₹20.19</td>
+                <td style="color: var(--accent); font-weight: 600;">+0.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 92</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-10</td>
+                <td><span class="symbol-tag">HAPPSTMNDS</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹400.45</td>
+                <td>₹373.10</td>
+                <td style="color: var(--accent); font-weight: 600;">-6.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-10</td>
+                <td><span class="symbol-tag">FACT</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹794.50</td>
+                <td>₹899.20</td>
+                <td style="color: var(--accent); font-weight: 600;">+13.2%</td>
+                <td>
+                    <div class="score-bar"><span>V: 95</span></div>
+                    <div class="score-bar"><span>E: 40</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-11</td>
+                <td><span class="symbol-tag">ELECTCAST</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹75.62</td>
+                <td>₹81.99</td>
+                <td style="color: var(--accent); font-weight: 600;">+8.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 90</span></div>
+                    <div class="score-bar"><span>E: 40</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-11</td>
+                <td><span class="symbol-tag">HAPPSTMNDS</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹411.70</td>
+                <td>₹373.10</td>
+                <td style="color: var(--accent); font-weight: 600;">-9.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-12</td>
+                <td><span class="symbol-tag">ELECTCAST</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹79.19</td>
+                <td>₹81.99</td>
+                <td style="color: var(--accent); font-weight: 600;">+3.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 90</span></div>
+                    <div class="score-bar"><span>E: 40</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-12</td>
+                <td><span class="symbol-tag">HAPPSTMNDS</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹409.05</td>
+                <td>₹373.10</td>
+                <td style="color: var(--accent); font-weight: 600;">-8.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-12</td>
+                <td><span class="symbol-tag">AARTIIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹446.20</td>
+                <td>₹507.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+13.7%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 74</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-16</td>
+                <td><span class="symbol-tag">ESABINDIA</span>   </td>
+                <td>₹5,525.00</td>
+                <td>₹6,266.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+13.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 75</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-18</td>
+                <td><span class="symbol-tag">VALIANTORG</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹237.16</td>
+                <td>₹272.58</td>
+                <td style="color: var(--accent); font-weight: 600;">+14.9%</td>
+                <td>
+                    <div class="score-bar"><span>V: 95</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 92</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-18</td>
+                <td><span class="symbol-tag">CASTROLIND</span>   </td>
+                <td>₹181.96</td>
+                <td>₹184.82</td>
+                <td style="color: var(--accent); font-weight: 600;">+1.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 73</span></div>
+                    <div class="score-bar"><span>E: 71</span></div>
+                    <div class="score-bar"><span>D: 91</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-19</td>
+                <td><span class="symbol-tag">VALIANTORG</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹259.42</td>
+                <td>₹214.44</td>
+                <td style="color: var(--red); font-weight: 600;">-15.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 92</span></div>
+                </td>
+                <td><span class="badge status-loss">LOSS</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-19</td>
+                <td><span class="symbol-tag">EUROTEXIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹13.57</td>
+                <td>₹15.65</td>
+                <td style="color: var(--accent); font-weight: 600;">+15.3%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 40</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-19</td>
+                <td><span class="symbol-tag">GTECJAINX</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹20.20</td>
+                <td>₹20.19</td>
+                <td style="color: var(--accent); font-weight: 600;">-0.1%</td>
+                <td>
+                    <div class="score-bar"><span>V: 93</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 92</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-19</td>
+                <td><span class="symbol-tag">CASTROLIND</span>   </td>
+                <td>₹181.52</td>
+                <td>₹184.82</td>
+                <td style="color: var(--accent); font-weight: 600;">+1.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 78</span></div>
+                    <div class="score-bar"><span>E: 71</span></div>
+                    <div class="score-bar"><span>D: 91</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-19</td>
+                <td><span class="symbol-tag">GUJALKALI</span>   </td>
+                <td>₹486.50</td>
+                <td>₹734.80</td>
+                <td style="color: var(--green); font-weight: 600;">+50.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 77</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-profit">PROFIT</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-22</td>
+                <td><span class="symbol-tag">VALIANTORG</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹241.49</td>
+                <td>₹202.07</td>
+                <td style="color: var(--red); font-weight: 600;">-15.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 90</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 92</span></div>
+                </td>
+                <td><span class="badge status-loss">LOSS</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-22</td>
+                <td><span class="symbol-tag">CASTROLIND</span>   </td>
+                <td>₹177.29</td>
+                <td>₹184.82</td>
+                <td style="color: var(--accent); font-weight: 600;">+4.2%</td>
+                <td>
+                    <div class="score-bar"><span>V: 75</span></div>
+                    <div class="score-bar"><span>E: 71</span></div>
+                    <div class="score-bar"><span>D: 91</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-22</td>
+                <td><span class="symbol-tag">BHEL</span>   </td>
+                <td>₹252.85</td>
+                <td>₹352.41</td>
+                <td style="color: var(--accent); font-weight: 600;">+39.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 79</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-22</td>
+                <td><span class="symbol-tag">DALMIASUG</span>   </td>
+                <td>₹304.80</td>
+                <td>₹397.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+30.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 75</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-22</td>
+                <td><span class="symbol-tag">HAPPSTMNDS</span>   </td>
+                <td>₹392.65</td>
+                <td>₹373.10</td>
+                <td style="color: var(--accent); font-weight: 600;">-5.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 78</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-22</td>
+                <td><span class="symbol-tag">BAJAJHIND</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹15.32</td>
+                <td>₹20.30</td>
+                <td style="color: var(--accent); font-weight: 600;">+32.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 84</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-26</td>
+                <td><span class="symbol-tag">GODFRYPHLP</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹1,901.20</td>
+                <td>₹2,251.00</td>
+                <td style="color: var(--accent); font-weight: 600;">+18.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-26</td>
+                <td><span class="symbol-tag">BALRAMCHIN</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹497.20</td>
+                <td>₹521.05</td>
+                <td style="color: var(--accent); font-weight: 600;">+4.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-03-29</td>
+                <td><span class="symbol-tag">HEG</span>   </td>
+                <td>₹542.40</td>
+                <td>₹596.05</td>
+                <td style="color: var(--accent); font-weight: 600;">+9.9%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 51</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-29</td>
+                <td><span class="symbol-tag">ARVIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹338.70</td>
+                <td>₹398.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+17.7%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 94</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-29</td>
+                <td><span class="symbol-tag">DHAMPURSUG</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹141.77</td>
+                <td>₹155.35</td>
+                <td style="color: var(--accent); font-weight: 600;">+9.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 92</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-29</td>
+                <td><span class="symbol-tag">BAJAJHIND</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹16.47</td>
+                <td>₹20.30</td>
+                <td style="color: var(--accent); font-weight: 600;">+23.2%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-03-31</td>
+                <td><span class="symbol-tag">BAJAJHIND</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹16.96</td>
+                <td>₹20.30</td>
+                <td style="color: var(--accent); font-weight: 600;">+19.7%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-01</td>
+                <td><span class="symbol-tag">BANARISUG</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹3,650.60</td>
+                <td>₹3,725.40</td>
+                <td style="color: var(--accent); font-weight: 600;">+2.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-05</td>
+                <td><span class="symbol-tag">ARVIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹374.15</td>
+                <td>₹398.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+6.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 94</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-08</td>
+                <td><span class="symbol-tag">BHEL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹265.70</td>
+                <td>₹352.41</td>
+                <td style="color: var(--accent); font-weight: 600;">+32.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-08</td>
+                <td><span class="symbol-tag">ADANIENT</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹2,043.80</td>
+                <td>₹2,408.40</td>
+                <td style="color: var(--accent); font-weight: 600;">+17.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 72</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-08</td>
+                <td><span class="symbol-tag">BASF</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹3,578.10</td>
+                <td>₹3,641.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+1.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-08</td>
+                <td><span class="symbol-tag">GALAXYSURF</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹1,785.00</td>
+                <td>₹1,857.20</td>
+                <td style="color: var(--accent); font-weight: 600;">+4.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 91</span></div>
+                    <div class="score-bar"><span>E: 40</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-08</td>
+                <td><span class="symbol-tag">EXIDEIND</span>   </td>
+                <td>₹314.15</td>
+                <td>₹360.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+14.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 78</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-08</td>
+                <td><span class="symbol-tag">MASFIN</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹311.55</td>
+                <td>₹339.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+9.1%</td>
+                <td>
+                    <div class="score-bar"><span>V: 75</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-09</td>
+                <td><span class="symbol-tag">BHEL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹277.20</td>
+                <td>₹352.41</td>
+                <td style="color: var(--accent); font-weight: 600;">+27.1%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-12</td>
+                <td><span class="symbol-tag">ANDHRSUGAR</span>   </td>
+                <td>₹83.86</td>
+                <td>₹97.67</td>
+                <td style="color: var(--accent); font-weight: 600;">+16.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 52</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-12</td>
+                <td><span class="symbol-tag">ASIANPAINT</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹2,352.40</td>
+                <td>₹2,444.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+3.9%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 25</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-12</td>
+                <td><span class="symbol-tag">BERGEPAINT</span>   </td>
+                <td>₹460.70</td>
+                <td>₹473.10</td>
+                <td style="color: var(--accent); font-weight: 600;">+2.7%</td>
+                <td>
+                    <div class="score-bar"><span>V: 75</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-12</td>
+                <td><span class="symbol-tag">BHEL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹287.77</td>
+                <td>₹352.41</td>
+                <td style="color: var(--accent); font-weight: 600;">+22.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-12</td>
+                <td><span class="symbol-tag">ESABINDIA</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹5,401.20</td>
+                <td>₹6,266.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+16.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-12</td>
+                <td><span class="symbol-tag">ESG</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹40.62</td>
+                <td>₹40.89</td>
+                <td style="color: var(--accent); font-weight: 600;">+0.7%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 65</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-12</td>
+                <td><span class="symbol-tag">ROML</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹43.40</td>
+                <td>₹45.15</td>
+                <td style="color: var(--accent); font-weight: 600;">+4.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-12</td>
+                <td><span class="symbol-tag">PGHL</span>   </td>
+                <td>₹4,976.10</td>
+                <td>₹5,216.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+4.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 73</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-12</td>
+                <td><span class="symbol-tag">EXIDEIND</span>   </td>
+                <td>₹324.80</td>
+                <td>₹360.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+11.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 79</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-14</td>
+                <td><span class="symbol-tag">BHEL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹292.50</td>
+                <td>₹352.41</td>
+                <td style="color: var(--accent); font-weight: 600;">+20.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 88</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-14</td>
+                <td><span class="symbol-tag">DCW</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹48.24</td>
+                <td>₹47.11</td>
+                <td style="color: var(--accent); font-weight: 600;">-2.3%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-14</td>
+                <td><span class="symbol-tag">AARTIIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹431.70</td>
+                <td>₹507.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+17.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 74</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-14</td>
+                <td><span class="symbol-tag">KEEPLEARN</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹1.99</td>
+                <td>₹2.08</td>
+                <td style="color: var(--accent); font-weight: 600;">+4.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 110</span></div>
+                    <div class="score-bar"><span>D: 92</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-15</td>
+                <td><span class="symbol-tag">BHARATFORG</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹1,831.60</td>
+                <td>₹1,881.60</td>
+                <td style="color: var(--accent); font-weight: 600;">+2.7%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 93</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-15</td>
+                <td><span class="symbol-tag">ESABINDIA</span>   </td>
+                <td>₹5,463.60</td>
+                <td>₹6,266.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+14.7%</td>
+                <td>
+                    <div class="score-bar"><span>V: 79</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-15</td>
+                <td><span class="symbol-tag">ARVIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹388.65</td>
+                <td>₹398.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+2.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 94</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-15</td>
+                <td><span class="symbol-tag">PGHL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹4,939.20</td>
+                <td>₹5,216.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+5.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-15</td>
+                <td><span class="symbol-tag">AARTIIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹431.70</td>
+                <td>₹507.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+17.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 74</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-15</td>
+                <td><span class="symbol-tag">IGARASHI</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹349.15</td>
+                <td>₹387.30</td>
+                <td style="color: var(--accent); font-weight: 600;">+10.9%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-16</td>
+                <td><span class="symbol-tag">FINCABLES</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹913.55</td>
+                <td>₹990.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+8.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-16</td>
+                <td><span class="symbol-tag">DCMSHRIRAM</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹1,185.00</td>
+                <td>₹1,227.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+3.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-16</td>
+                <td><span class="symbol-tag">GIPCL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹153.90</td>
+                <td>₹156.85</td>
+                <td style="color: var(--accent); font-weight: 600;">+1.9%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-16</td>
+                <td><span class="symbol-tag">ICICIB22</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹123.88</td>
+                <td>₹124.46</td>
+                <td style="color: var(--accent); font-weight: 600;">+0.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 40</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-16</td>
+                <td><span class="symbol-tag">CESC</span>   </td>
+                <td>₹170.48</td>
+                <td>₹187.53</td>
+                <td style="color: var(--accent); font-weight: 600;">+10.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 84</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-16</td>
+                <td><span class="symbol-tag">ARVIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹385.15</td>
+                <td>₹398.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+3.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 94</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-16</td>
+                <td><span class="symbol-tag">PGHL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹4,997.70</td>
+                <td>₹5,216.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+4.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-19</td>
+                <td><span class="symbol-tag">FINCABLES</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹946.55</td>
+                <td>₹990.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+4.7%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-19</td>
+                <td><span class="symbol-tag">BEML</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹1,744.20</td>
+                <td>₹1,806.10</td>
+                <td style="color: var(--accent); font-weight: 600;">+3.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-19</td>
+                <td><span class="symbol-tag">CAMS</span>   </td>
+                <td>₹749.25</td>
+                <td>₹738.60</td>
+                <td style="color: var(--accent); font-weight: 600;">-1.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 79</span></div>
+                    <div class="score-bar"><span>E: 65</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-19</td>
+                <td><span class="symbol-tag">GFLLIMITED</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹47.03</td>
+                <td>₹48.58</td>
+                <td style="color: var(--accent); font-weight: 600;">+3.3%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-19</td>
+                <td><span class="symbol-tag">BALKRISIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹2,282.00</td>
+                <td>₹2,160.80</td>
+                <td style="color: var(--accent); font-weight: 600;">-5.3%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 25</span></div>
+                    <div class="score-bar"><span>D: 91</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-19</td>
+                <td><span class="symbol-tag">ESABINDIA</span>   </td>
+                <td>₹5,791.50</td>
+                <td>₹6,266.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+8.2%</td>
+                <td>
+                    <div class="score-bar"><span>V: 77</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-19</td>
+                <td><span class="symbol-tag">CESC</span>   </td>
+                <td>₹179.42</td>
+                <td>₹187.53</td>
+                <td style="color: var(--accent); font-weight: 600;">+4.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 84</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-19</td>
+                <td><span class="symbol-tag">ARVIND</span>   </td>
+                <td>₹385.20</td>
+                <td>₹398.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+3.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 72</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 94</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-19</td>
+                <td><span class="symbol-tag">GODFRYPHLP</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹2,137.80</td>
+                <td>₹2,251.00</td>
+                <td style="color: var(--accent); font-weight: 600;">+5.3%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-19</td>
+                <td><span class="symbol-tag">STYRENIX</span>   </td>
+                <td>₹2,183.90</td>
+                <td>₹2,260.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+3.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 75</span></div>
+                    <div class="score-bar"><span>E: 25</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-20</td>
+                <td><span class="symbol-tag">GIPCL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹154.79</td>
+                <td>₹156.85</td>
+                <td style="color: var(--accent); font-weight: 600;">+1.3%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-20</td>
+                <td><span class="symbol-tag">ESABINDIA</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹5,791.50</td>
+                <td>₹6,266.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+8.2%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-20</td>
+                <td><span class="symbol-tag">BALRAMCHIN</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹515.70</td>
+                <td>₹521.05</td>
+                <td style="color: var(--accent); font-weight: 600;">+1.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 78</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-20</td>
+                <td><span class="symbol-tag">PGHL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹5,086.00</td>
+                <td>₹5,216.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+2.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-20</td>
+                <td><span class="symbol-tag">FEDERALBNK</span>   </td>
+                <td>₹294.35</td>
+                <td>₹286.95</td>
+                <td style="color: var(--accent); font-weight: 600;">-2.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 70</span></div>
+                    <div class="score-bar"><span>E: 68</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-21</td>
+                <td><span class="symbol-tag">FINCABLES</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹953.50</td>
+                <td>₹990.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+3.9%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-21</td>
+                <td><span class="symbol-tag">APCOTEXIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹400.55</td>
+                <td>₹402.40</td>
+                <td style="color: var(--accent); font-weight: 600;">+0.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 92</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-21</td>
+                <td><span class="symbol-tag">ATUL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹6,557.00</td>
+                <td>₹6,817.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+4.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-21</td>
+                <td><span class="symbol-tag">ASHIMASYN</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹16.16</td>
+                <td>₹15.96</td>
+                <td style="color: var(--accent); font-weight: 600;">-1.2%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 67</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-21</td>
+                <td><span class="symbol-tag">MASFIN</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹315.90</td>
+                <td>₹339.90</td>
+                <td style="color: var(--accent); font-weight: 600;">+7.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 78</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-22</td>
+                <td><span class="symbol-tag">DPABHUSHAN</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹1,158.50</td>
+                <td>₹1,035.50</td>
+                <td style="color: var(--accent); font-weight: 600;">-10.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 17</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-22</td>
+                <td><span class="symbol-tag">BEML</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹1,830.90</td>
+                <td>₹1,806.10</td>
+                <td style="color: var(--accent); font-weight: 600;">-1.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-22</td>
+                <td><span class="symbol-tag">BALRAMCHIN</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹541.55</td>
+                <td>₹521.05</td>
+                <td style="color: var(--accent); font-weight: 600;">-3.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-22</td>
+                <td><span class="symbol-tag">SCHAEFFLER</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹4,288.80</td>
+                <td>₹4,124.80</td>
+                <td style="color: var(--accent); font-weight: 600;">-3.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 65</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-22</td>
+                <td><span class="symbol-tag">EXIDEIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹354.55</td>
+                <td>₹360.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+1.7%</td>
+                <td>
+                    <div class="score-bar"><span>V: 92</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-23</td>
+                <td><span class="symbol-tag">EIDPARRY</span>  <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹871.60</td>
+                <td>₹844.00</td>
+                <td style="color: var(--accent); font-weight: 600;">-3.2%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 78</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-23</td>
+                <td><span class="symbol-tag">BALMLAWRIE</span>   </td>
+                <td>₹179.61</td>
+                <td>₹187.99</td>
+                <td style="color: var(--accent); font-weight: 600;">+4.7%</td>
+                <td>
+                    <div class="score-bar"><span>V: 78</span></div>
+                    <div class="score-bar"><span>E: 72</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-23</td>
+                <td><span class="symbol-tag">DRREDDY</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹1,331.00</td>
+                <td>₹1,322.90</td>
+                <td style="color: var(--accent); font-weight: 600;">-0.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 95</span></div>
+                    <div class="score-bar"><span>E: 40</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-23</td>
+                <td><span class="symbol-tag">BALRAMCHIN</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹540.30</td>
+                <td>₹521.05</td>
+                <td style="color: var(--accent); font-weight: 600;">-3.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 90</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-23</td>
+                <td><span class="symbol-tag">5PAISA</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹336.59</td>
+                <td>₹335.49</td>
+                <td style="color: var(--accent); font-weight: 600;">-0.3%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 92</span></div>
+                    <div class="score-bar"><span>D: 92</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-23</td>
+                <td><span class="symbol-tag">GINNIFILA</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹43.89</td>
+                <td>₹42.19</td>
+                <td style="color: var(--accent); font-weight: 600;">-3.9%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 52</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-23</td>
+                <td><span class="symbol-tag">COSMOFIRST</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹716.00</td>
+                <td>₹713.75</td>
+                <td style="color: var(--accent); font-weight: 600;">-0.3%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-23</td>
+                <td><span class="symbol-tag">EXIDEIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹347.25</td>
+                <td>₹360.55</td>
+                <td style="color: var(--accent); font-weight: 600;">+3.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-26</td>
+                <td><span class="symbol-tag">ATUL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹6,700.00</td>
+                <td>₹6,817.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+1.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 83</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-26</td>
+                <td><span class="symbol-tag">21STCENMGM</span>   </td>
+                <td>₹36.45</td>
+                <td>₹36.58</td>
+                <td style="color: var(--accent); font-weight: 600;">+0.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-26</td>
+                <td><span class="symbol-tag">CIPLA</span>   </td>
+                <td>₹1,317.20</td>
+                <td>₹1,309.60</td>
+                <td style="color: var(--accent); font-weight: 600;">-0.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 78</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-27</td>
+                <td><span class="symbol-tag">ATUL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹6,700.00</td>
+                <td>₹6,817.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+1.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-27</td>
+                <td><span class="symbol-tag">ADOR</span>  <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹1,019.35</td>
+                <td>₹1,078.85</td>
+                <td style="color: var(--accent); font-weight: 600;">+5.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 50</span></div>
+                    <div class="score-bar"><span>E: 95</span></div>
+                    <div class="score-bar"><span>D: 84</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-27</td>
+                <td><span class="symbol-tag">21STCENMGM</span>   </td>
+                <td>₹36.45</td>
+                <td>₹36.58</td>
+                <td style="color: var(--accent); font-weight: 600;">+0.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 82</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-27</td>
+                <td><span class="symbol-tag">NEWGEN</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹491.55</td>
+                <td>₹505.75</td>
+                <td style="color: var(--accent); font-weight: 600;">+2.9%</td>
+                <td>
+                    <div class="score-bar"><span>V: 75</span></div>
+                    <div class="score-bar"><span>E: 115</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-27</td>
+                <td><span class="symbol-tag">ROUTE</span>   </td>
+                <td>₹531.60</td>
+                <td>₹527.15</td>
+                <td style="color: var(--accent); font-weight: 600;">-0.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 79</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-27</td>
+                <td><span class="symbol-tag">BPL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹57.30</td>
+                <td>₹55.88</td>
+                <td style="color: var(--accent); font-weight: 600;">-2.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 40</span></div>
+                    <div class="score-bar"><span>D: 87</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-28</td>
+                <td><span class="symbol-tag">ATUL</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹6,855.00</td>
+                <td>₹6,817.50</td>
+                <td style="color: var(--accent); font-weight: 600;">-0.6%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="">
+                <td>2026-04-28</td>
+                <td><span class="symbol-tag">UFLEX</span>   </td>
+                <td>₹431.85</td>
+                <td>₹445.30</td>
+                <td style="color: var(--accent); font-weight: 600;">+3.1%</td>
+                <td>
+                    <div class="score-bar"><span>V: 76</span></div>
+                    <div class="score-bar"><span>E: 70</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-28</td>
+                <td><span class="symbol-tag">ADOR</span>  <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹1,070.75</td>
+                <td>₹1,078.85</td>
+                <td style="color: var(--accent); font-weight: 600;">+0.8%</td>
+                <td>
+                    <div class="score-bar"><span>V: 50</span></div>
+                    <div class="score-bar"><span>E: 95</span></div>
+                    <div class="score-bar"><span>D: 84</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-28</td>
+                <td><span class="symbol-tag">GREAVESCOT</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹167.04</td>
+                <td>₹165.18</td>
+                <td style="color: var(--accent); font-weight: 600;">-1.1%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-28</td>
+                <td><span class="symbol-tag">AARTIIND</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹501.70</td>
+                <td>₹507.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+1.2%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 74</span></div>
+                    <div class="score-bar"><span>D: 85</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-28</td>
+                <td><span class="symbol-tag">GABRIEL</span>  <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹1,020.45</td>
+                <td>₹1,025.60</td>
+                <td style="color: var(--accent); font-weight: 600;">+0.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 50</span></div>
+                    <div class="score-bar"><span>E: 82</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-28</td>
+                <td><span class="symbol-tag">GRASIM</span>  <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹2,783.00</td>
+                <td>₹2,794.50</td>
+                <td style="color: var(--accent); font-weight: 600;">+0.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 50</span></div>
+                    <div class="score-bar"><span>E: 103</span></div>
+                    <div class="score-bar"><span>D: 90</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-29</td>
+                <td><span class="symbol-tag">BHARATFORG</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹1,907.80</td>
+                <td>₹1,881.60</td>
+                <td style="color: var(--accent); font-weight: 600;">-1.4%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 93</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-29</td>
+                <td><span class="symbol-tag">ORCHPHARMA</span>  <span class="badge mom-badge">IGNITED</span> <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹612.85</td>
+                <td>₹625.75</td>
+                <td style="color: var(--accent); font-weight: 600;">+2.1%</td>
+                <td>
+                    <div class="score-bar"><span>V: 80</span></div>
+                    <div class="score-bar"><span>E: 86</span></div>
+                    <div class="score-bar"><span>D: 86</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-29</td>
+                <td><span class="symbol-tag">GODFRYPHLP</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹2,275.30</td>
+                <td>₹2,251.00</td>
+                <td style="color: var(--accent); font-weight: 600;">-1.1%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 88</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-29</td>
+                <td><span class="symbol-tag">ADOR</span> <span class="badge elite-badge">ELITE</span> <span class="badge mom-badge">IGNITED</span> </td>
+                <td>₹1,106.05</td>
+                <td>₹1,078.85</td>
+                <td style="color: var(--accent); font-weight: 600;">-2.5%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 95</span></div>
+                    <div class="score-bar"><span>D: 84</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+            <tr class="elite-row">
+                <td>2026-04-29</td>
+                <td><span class="symbol-tag">FMGOETZE</span>   <span class="badge acc-badge">ACCUMULATION</span></td>
+                <td>₹474.85</td>
+                <td>₹469.90</td>
+                <td style="color: var(--accent); font-weight: 600;">-1.0%</td>
+                <td>
+                    <div class="score-bar"><span>V: 85</span></div>
+                    <div class="score-bar"><span>E: 55</span></div>
+                    <div class="score-bar"><span>D: 89</span></div>
+                </td>
+                <td><span class="badge status-open">OPEN</span></td>
+            </tr>
+            
+                    </tbody>
+                </table>
             </div>
         </div>
-
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Symbol</th>
-                        <th>Entry Price</th>
-                        <th>Exit/Current</th>
-                        <th>PnL (%)</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-        <tr>
-            <td>2026-04-29</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">BALMLAWRIE</span></td>
-            <td>₹184.85</td>
-            <td>₹187.99</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+1.7%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-04-29</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ORCHPHARMA</span></td>
-            <td>₹612.85</td>
-            <td>₹625.75</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+2.1%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-04-27</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">NEWGEN</span></td>
-            <td>₹491.55</td>
-            <td>₹505.75</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+2.9%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-04-23</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">EIDPARRY</span></td>
-            <td>₹871.60</td>
-            <td>₹844.00</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">-3.2%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-04-23</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">CAMS</span></td>
-            <td>₹770.40</td>
-            <td>₹738.60</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">-4.1%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-04-21</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ASHIMASYN</span></td>
-            <td>₹16.16</td>
-            <td>₹15.96</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">-1.2%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-04-16</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">CESC</span></td>
-            <td>₹170.48</td>
-            <td>₹187.53</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+10.0%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-04-15</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">AEGISLOG</span></td>
-            <td>₹658.80</td>
-            <td>₹700.95</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+6.4%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-04-14</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">KEEPLEARN</span></td>
-            <td>₹1.99</td>
-            <td>₹2.08</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+4.5%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-04-12</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">EXIDEIND</span></td>
-            <td>₹324.80</td>
-            <td>₹360.55</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+11.0%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-04-09</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">BHEL</span></td>
-            <td>₹277.20</td>
-            <td>₹352.41</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+27.1%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-03-31</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">DCMSHRIRAM</span></td>
-            <td>₹1151.90</td>
-            <td>₹1227.50</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+6.6%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-03-22</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">BANARISUG</span></td>
-            <td>₹3596.60</td>
-            <td>₹3725.40</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+3.6%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-03-12</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">AARTIIND</span></td>
-            <td>₹446.20</td>
-            <td>₹507.50</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+13.7%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-03-04</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">BAJAJHIND</span></td>
-            <td>₹17.21</td>
-            <td>₹20.30</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+17.9%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-26</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">CHOLAFIN</span></td>
-            <td>₹1748.10</td>
-            <td>₹1455.10</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-23</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">MASFIN</span></td>
-            <td>₹341.10</td>
-            <td>₹279.65</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-23</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">SCHAEFFLER</span></td>
-            <td>₹3950.20</td>
-            <td>₹4124.80</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+4.4%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-18</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">GODFRYPHLP</span></td>
-            <td>₹2477.70</td>
-            <td>₹2093.40</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-18</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">HEG</span></td>
-            <td>₹553.60</td>
-            <td>₹596.05</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+7.7%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-12</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">HARRMALAYA</span></td>
-            <td>₹169.94</td>
-            <td>₹223.50</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+31.5%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-10</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">PGHL</span></td>
-            <td>₹5337.50</td>
-            <td>₹5216.90</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">-2.3%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-10</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ADOR</span></td>
-            <td>₹1097.10</td>
-            <td>₹917.10</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-10</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">BALRAMCHIN</span></td>
-            <td>₹467.00</td>
-            <td>₹521.05</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+11.6%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-10</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">TCPLPACK</span></td>
-            <td>₹2998.60</td>
-            <td>₹2532.40</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-09</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">BASF</span></td>
-            <td>₹3925.70</td>
-            <td>₹3312.80</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-09</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">FMGOETZE</span></td>
-            <td>₹461.70</td>
-            <td>₹388.00</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-08</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">DALMIASUG</span></td>
-            <td>₹303.80</td>
-            <td>₹397.50</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+30.8%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-05</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ANDHRSUGAR</span></td>
-            <td>₹72.36</td>
-            <td>₹97.67</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+35.0%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-04</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">CASTROLIND</span></td>
-            <td>₹182.14</td>
-            <td>₹184.82</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+1.5%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-04</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ESG</span></td>
-            <td>₹43.91</td>
-            <td>₹40.89</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">-6.9%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-04</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">GABRIEL</span></td>
-            <td>₹968.90</td>
-            <td>₹823.10</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-04</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">BAJFINANCE</span></td>
-            <td>₹963.30</td>
-            <td>₹812.60</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-04</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">DHAMPURSUG</span></td>
-            <td>₹122.79</td>
-            <td>₹155.35</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+26.5%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-03</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">BANARBEADS</span></td>
-            <td>₹123.70</td>
-            <td>₹104.43</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-03</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ADANIENT</span></td>
-            <td>₹2202.60</td>
-            <td>₹1833.00</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-03</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">GINNIFILA</span></td>
-            <td>₹40.60</td>
-            <td>₹33.05</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-03</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">UFLEX</span></td>
-            <td>₹483.45</td>
-            <td>₹398.85</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-03</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">BHARATFORG</span></td>
-            <td>₹1539.00</td>
-            <td>₹1881.60</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+22.3%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-03</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">SHIVATEX</span></td>
-            <td>₹179.55</td>
-            <td>₹152.08</td>
-            <td class="outcome-loss" style="font-size: 1.1rem;">-15.0%</td>
-            <td><span class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444">LOSS</span></td>
-        </tr>
-        
-        <tr>
-            <td>2026-02-01</td>
-            <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ARVIND</span></td>
-            <td>₹330.25</td>
-            <td>₹398.55</td>
-            <td class="outcome-open" style="font-size: 1.1rem;">+20.7%</td>
-            <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">OPEN</span></td>
-        </tr>
-        
-                </tbody>
-            </table>
-        </div>
-    </div>
-</body>
-</html>
+    </body>
+    </html>
+    

@@ -3,95 +3,99 @@
         "date": "2026-03-01",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
-            "GRAPHITE",
-            "EICHERMOT",
-            "BRITANNIA",
             "DABUR",
-            "BEL",
-            "3MINDIA"
+            "BRITANNIA",
+            "FOSECOIND",
+            "DALMIASUG",
+            "EICHERMOT",
+            "GRAPHITE",
+            "3MINDIA",
+            "DHAMPURSUG",
+            "APOLLOHOSP",
+            "BEL"
         ],
         "gate_1_incubator": [
-            "DALMIASUG",
-            "APOLLOHOSP",
             "FOSECOIND",
-            "DHAMPURSUG"
+            "DHAMPURSUG",
+            "APOLLOHOSP",
+            "DALMIASUG"
         ],
         "gate_2_approved": [
-            "DHAMPURSUG",
-            "DALMIASUG",
             "BRITANNIA",
-            "FOSECOIND",
-            "3MINDIA"
+            "DALMIASUG",
+            "3MINDIA",
+            "DHAMPURSUG",
+            "FOSECOIND"
         ],
         "agent_scores": {
             "DABUR": {
                 "dtw": 87.13948940135622,
                 "entry": 10.0,
-                "vision": 70.0,
-                "sector": 50.0
-            },
-            "DHAMPURSUG": {
-                "dtw": 86.94653653016032,
-                "entry": 115.0,
-                "vision": 75.0,
-                "sector": 50.0
-            },
-            "EICHERMOT": {
-                "dtw": 87.36974265948,
-                "entry": 40.0,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "DALMIASUG": {
-                "dtw": 86.63738874424625,
-                "entry": 70.0,
-                "vision": 85.0,
+                "vision": 78.0,
                 "sector": 50.0
             },
             "BRITANNIA": {
                 "dtw": 87.97309988970957,
                 "entry": 70.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "DALMIASUG": {
+                "dtw": 86.63738874424625,
+                "entry": 70.0,
                 "vision": 78.0,
+                "sector": 50.0
+            },
+            "EICHERMOT": {
+                "dtw": 87.36974265948,
+                "entry": 40.0,
+                "vision": 80.0,
                 "sector": 50.0
             },
             "GRAPHITE": {
                 "dtw": 83.76458609626233,
                 "entry": 10.0,
-                "vision": 82.0,
-                "sector": 50.0
-            },
-            "FOSECOIND": {
-                "dtw": 88.81806788452057,
-                "entry": 55.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
-            "BEL": {
-                "dtw": 90.51840087162225,
-                "entry": 31.654610713998682,
-                "vision": 80.0,
-                "sector": 50.0
-            },
-            "APOLLOHOSP": {
-                "dtw": 87.55788931754812,
-                "entry": 26.29682364032398,
-                "vision": 89.0,
+                "vision": 90.0,
                 "sector": 50.0
             },
             "3MINDIA": {
                 "dtw": 88.62055206130309,
                 "entry": 70.0,
-                "vision": 89.0,
+                "vision": 72.0,
+                "sector": 50.0
+            },
+            "DHAMPURSUG": {
+                "dtw": 86.94653653016032,
+                "entry": 115.0,
+                "vision": 77.0,
+                "sector": 50.0
+            },
+            "APOLLOHOSP": {
+                "dtw": 87.55788931754812,
+                "entry": 26.29682364032398,
+                "vision": 70.0,
+                "sector": 50.0
+            },
+            "FOSECOIND": {
+                "dtw": 88.81806788452057,
+                "entry": 55.0,
+                "vision": 95.0,
+                "sector": 50.0
+            },
+            "BEL": {
+                "dtw": 90.51840087162225,
+                "entry": 31.654610713998796,
+                "vision": 80.0,
                 "sector": 50.0
             }
         },
         "trades": [
             {
-                "symbol": "DHAMPURSUG",
-                "entry_price": 124.71,
-                "current_price": 155.35,
+                "symbol": "BRITANNIA",
+                "entry_price": 5959.0,
+                "current_price": 5726.0,
                 "outcome": "OPEN",
-                "pnl": 24.57,
+                "pnl": -3.91,
                 "exit_date": "N/A"
             },
             {
@@ -103,11 +107,19 @@
                 "exit_date": "N/A"
             },
             {
-                "symbol": "BRITANNIA",
-                "entry_price": 5959.0,
-                "current_price": 5726.0,
+                "symbol": "3MINDIA",
+                "entry_price": 35675.0,
+                "current_price": 30120.0,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-29"
+            },
+            {
+                "symbol": "DHAMPURSUG",
+                "entry_price": 124.71,
+                "current_price": 155.35,
                 "outcome": "OPEN",
-                "pnl": -3.91,
+                "pnl": 24.57,
                 "exit_date": "N/A"
             },
             {
@@ -117,14 +129,6 @@
                 "outcome": "LOSS",
                 "pnl": -15.0,
                 "exit_date": "2026-04-06"
-            },
-            {
-                "symbol": "3MINDIA",
-                "entry_price": 35675.0,
-                "current_price": 30120.0,
-                "outcome": "LOSS",
-                "pnl": -15.0,
-                "exit_date": "2026-03-29"
             }
         ]
     },
@@ -132,51 +136,62 @@
         "date": "2026-03-03",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
-            "ICEMAKE",
             "ICICIB22",
+            "ICEMAKE",
+            "HARRMALAYA",
+            "DALMIASUG",
+            "DHAMPURSUG",
+            "TIINDIA",
+            "FOSECOIND",
             "BEL"
         ],
         "gate_1_incubator": [
-            "TIINDIA",
             "FOSECOIND",
-            "DALMIASUG",
             "HARRMALAYA",
-            "DHAMPURSUG"
+            "DALMIASUG",
+            "DHAMPURSUG",
+            "TIINDIA"
         ],
         "gate_2_approved": [
-            "DHAMPURSUG",
             "DALMIASUG",
+            "DHAMPURSUG",
             "FOSECOIND"
         ],
         "agent_scores": {
-            "DHAMPURSUG": {
-                "dtw": 86.94653653016032,
-                "entry": 115.0,
+            "ICICIB22": {
+                "dtw": 90.40909793114689,
+                "entry": 40.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "ICEMAKE": {
+                "dtw": 91.93485147258659,
+                "entry": 40.0,
                 "vision": 85.0,
                 "sector": 50.0
             },
             "HARRMALAYA": {
                 "dtw": 86.90048427970486,
                 "entry": 70.0,
-                "vision": 80.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
             "DALMIASUG": {
                 "dtw": 86.63738874424625,
                 "entry": 70.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "DHAMPURSUG": {
+                "dtw": 86.94653653016032,
+                "entry": 115.0,
                 "vision": 85.0,
                 "sector": 50.0
             },
-            "ICEMAKE": {
-                "dtw": 91.93485147258659,
+            "TIINDIA": {
+                "dtw": 86.90099662769404,
                 "entry": 40.0,
-                "vision": 75.0,
-                "sector": 50.0
-            },
-            "ICICIB22": {
-                "dtw": 90.40909793114689,
-                "entry": 40.0,
-                "vision": 78.0,
+                "vision": 79.0,
                 "sector": 50.0
             },
             "FOSECOIND": {
@@ -185,34 +200,28 @@
                 "vision": 82.0,
                 "sector": 50.0
             },
-            "TIINDIA": {
-                "dtw": 86.90099662769404,
-                "entry": 40.0,
-                "vision": 85.0,
-                "sector": 50.0
-            },
             "BEL": {
                 "dtw": 90.51840087162225,
-                "entry": 31.654610713998682,
+                "entry": 31.654610713998796,
                 "vision": 78.0,
                 "sector": 50.0
             }
         },
         "trades": [
             {
-                "symbol": "DHAMPURSUG",
-                "entry_price": 129.02,
-                "current_price": 155.35,
-                "outcome": "OPEN",
-                "pnl": 20.41,
-                "exit_date": "N/A"
-            },
-            {
                 "symbol": "DALMIASUG",
                 "entry_price": 321.8,
                 "current_price": 397.5,
                 "outcome": "OPEN",
                 "pnl": 23.52,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "DHAMPURSUG",
+                "entry_price": 129.02,
+                "current_price": 155.35,
+                "outcome": "OPEN",
+                "pnl": 20.41,
                 "exit_date": "N/A"
             },
             {
@@ -229,87 +238,100 @@
         "date": "2026-03-04",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
-            "ICEMAKE",
             "ICICIB22",
+            "ASHOKLEY",
+            "ICEMAKE",
+            "DALMIASUG",
+            "BALRAMCHIN",
             "FEDERALBNK",
+            "DHAMPURSUG",
             "BEL",
-            "ASHOKLEY"
+            "BAJAJHIND"
         ],
         "gate_1_incubator": [
             "BAJAJHIND",
-            "BALRAMCHIN",
             "DHAMPURSUG",
-            "DALMIASUG"
+            "DALMIASUG",
+            "BALRAMCHIN"
         ],
         "gate_2_approved": [
-            "DHAMPURSUG",
-            "FEDERALBNK",
+            "DALMIASUG",
             "BALRAMCHIN",
+            "FEDERALBNK",
+            "DHAMPURSUG",
             "BAJAJHIND"
         ],
         "agent_scores": {
-            "DHAMPURSUG": {
-                "dtw": 86.94653653016032,
-                "entry": 115.0,
-                "vision": 70.0,
+            "ICICIB22": {
+                "dtw": 90.40909793114689,
+                "entry": 40.0,
+                "vision": 82.0,
                 "sector": 50.0
             },
-            "FEDERALBNK": {
-                "dtw": 90.17839160182457,
-                "entry": 68.10463459522427,
+            "ASHOKLEY": {
+                "dtw": 89.03273485049402,
+                "entry": 10.0,
+                "vision": 79.0,
+                "sector": 50.0
+            },
+            "ICEMAKE": {
+                "dtw": 91.93485147258659,
+                "entry": 40.0,
                 "vision": 80.0,
                 "sector": 50.0
             },
             "DALMIASUG": {
                 "dtw": 86.63738874424625,
                 "entry": 70.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "ICEMAKE": {
-                "dtw": 91.93485147258659,
-                "entry": 40.0,
-                "vision": 85.0,
+                "vision": 95.0,
                 "sector": 50.0
             },
             "BALRAMCHIN": {
                 "dtw": 84.72583819314588,
                 "entry": 115.0,
-                "vision": 50.0,
+                "vision": 87.0,
                 "sector": 50.0
             },
-            "ICICIB22": {
-                "dtw": 90.40909793114689,
-                "entry": 40.0,
-                "vision": 72.0,
+            "FEDERALBNK": {
+                "dtw": 90.17839160182457,
+                "entry": 68.10463459522435,
+                "vision": 80.0,
                 "sector": 50.0
             },
-            "ASHOKLEY": {
-                "dtw": 89.03273485049402,
-                "entry": 10.0,
-                "vision": 50.0,
+            "DHAMPURSUG": {
+                "dtw": 86.94653653016032,
+                "entry": 115.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BEL": {
+                "dtw": 90.51840087162225,
+                "entry": 31.654610713998796,
+                "vision": 78.0,
                 "sector": 50.0
             },
             "BAJAJHIND": {
                 "dtw": 85.79806932557632,
                 "entry": 115.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
-            "BEL": {
-                "dtw": 90.51840087162225,
-                "entry": 31.654610713998682,
-                "vision": 88.0,
+                "vision": 89.0,
                 "sector": 50.0
             }
         },
         "trades": [
             {
-                "symbol": "DHAMPURSUG",
-                "entry_price": 129.02,
-                "current_price": 155.35,
+                "symbol": "DALMIASUG",
+                "entry_price": 321.8,
+                "current_price": 397.5,
                 "outcome": "OPEN",
-                "pnl": 20.41,
+                "pnl": 23.52,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BALRAMCHIN",
+                "entry_price": 491.7,
+                "current_price": 521.05,
+                "outcome": "OPEN",
+                "pnl": 5.97,
                 "exit_date": "N/A"
             },
             {
@@ -321,11 +343,11 @@
                 "exit_date": "N/A"
             },
             {
-                "symbol": "BALRAMCHIN",
-                "entry_price": 491.7,
-                "current_price": 521.05,
+                "symbol": "DHAMPURSUG",
+                "entry_price": 129.02,
+                "current_price": 155.35,
                 "outcome": "OPEN",
-                "pnl": 5.97,
+                "pnl": 20.41,
                 "exit_date": "N/A"
             },
             {
@@ -342,8 +364,11 @@
         "date": "2026-03-05",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
+            "ROML",
             "ICEMAKE",
-            "BEL"
+            "BALRAMCHIN",
+            "BEL",
+            "BAJAJHIND"
         ],
         "gate_1_incubator": [
             "BALRAMCHIN",
@@ -351,16 +376,21 @@
             "ROML"
         ],
         "gate_2_approved": [
-            "ICEMAKE",
-            "BALRAMCHIN",
             "ROML",
+            "BALRAMCHIN",
             "BAJAJHIND"
         ],
         "agent_scores": {
+            "ROML": {
+                "dtw": 89.27154189226691,
+                "entry": 70.0,
+                "vision": 81.0,
+                "sector": 50.0
+            },
             "ICEMAKE": {
                 "dtw": 91.93485147258659,
                 "entry": 40.0,
-                "vision": 80.0,
+                "vision": 89.0,
                 "sector": 50.0
             },
             "BALRAMCHIN": {
@@ -369,33 +399,27 @@
                 "vision": 85.0,
                 "sector": 50.0
             },
-            "ROML": {
-                "dtw": 89.27154189226691,
-                "entry": 70.0,
+            "BEL": {
+                "dtw": 90.51840087162225,
+                "entry": 31.654610713998796,
                 "vision": 85.0,
                 "sector": 50.0
             },
             "BAJAJHIND": {
                 "dtw": 85.79806932557632,
                 "entry": 115.0,
-                "vision": 87.0,
-                "sector": 50.0
-            },
-            "BEL": {
-                "dtw": 90.51840087162225,
-                "entry": 31.654610713998682,
-                "vision": 80.0,
+                "vision": 90.0,
                 "sector": 50.0
             }
         },
         "trades": [
             {
-                "symbol": "ICEMAKE",
-                "entry_price": 828.1,
-                "current_price": 695.85,
+                "symbol": "ROML",
+                "entry_price": 45.21,
+                "current_price": 36.32,
                 "outcome": "LOSS",
                 "pnl": -15.0,
-                "exit_date": "2026-03-26"
+                "exit_date": "2026-03-29"
             },
             {
                 "symbol": "BALRAMCHIN",
@@ -404,14 +428,6 @@
                 "outcome": "OPEN",
                 "pnl": 6.2,
                 "exit_date": "N/A"
-            },
-            {
-                "symbol": "ROML",
-                "entry_price": 45.21,
-                "current_price": 36.32,
-                "outcome": "LOSS",
-                "pnl": -15.0,
-                "exit_date": "2026-03-29"
             },
             {
                 "symbol": "BAJAJHIND",
@@ -427,85 +443,129 @@
         "date": "2026-03-08",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
+            "MAZDOCK",
+            "BRITANNIA",
+            "MARINE",
+            "TIINDIA",
             "BEL",
-            "BRITANNIA"
+            "COSMOFIRST"
         ],
         "gate_1_incubator": [
-            "MAZDOCK",
-            "COSMOFIRST",
             "TIINDIA",
-            "MARINE"
+            "MAZDOCK",
+            "MARINE",
+            "COSMOFIRST"
         ],
-        "gate_2_approved": [],
+        "gate_2_approved": [
+            "MAZDOCK",
+            "BRITANNIA",
+            "COSMOFIRST"
+        ],
         "agent_scores": {
-            "MARINE": {
-                "dtw": 88.12301114249627,
-                "entry": 40.0,
-                "vision": 75.0,
+            "MAZDOCK": {
+                "dtw": 88.43138751644274,
+                "entry": 55.0,
+                "vision": 82.0,
                 "sector": 50.0
             },
             "BRITANNIA": {
                 "dtw": 87.97309988970957,
                 "entry": 70.0,
-                "vision": 50.0,
+                "vision": 82.0,
                 "sector": 50.0
             },
-            "MAZDOCK": {
-                "dtw": 88.43138751644274,
-                "entry": 55.0,
-                "vision": 50.0,
+            "MARINE": {
+                "dtw": 88.12301114249627,
+                "entry": 40.0,
+                "vision": 81.0,
                 "sector": 50.0
             },
             "TIINDIA": {
                 "dtw": 86.90099662769404,
                 "entry": 40.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "BEL": {
+                "dtw": 90.51840087162225,
+                "entry": 31.654610713998796,
                 "vision": 85.0,
                 "sector": 50.0
             },
             "COSMOFIRST": {
                 "dtw": 87.80816448397472,
                 "entry": 55.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "BEL": {
-                "dtw": 90.51840087162225,
-                "entry": 31.654610713998682,
                 "vision": 80.0,
                 "sector": 50.0
             }
         },
-        "trades": []
+        "trades": [
+            {
+                "symbol": "MAZDOCK",
+                "entry_price": 2387.0,
+                "current_price": 2733.2,
+                "outcome": "OPEN",
+                "pnl": 14.5,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BRITANNIA",
+                "entry_price": 5890.0,
+                "current_price": 5726.0,
+                "outcome": "OPEN",
+                "pnl": -2.78,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "COSMOFIRST",
+                "entry_price": 671.75,
+                "current_price": 713.75,
+                "outcome": "OPEN",
+                "pnl": 6.25,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-03-09",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
+            "MAZDOCK",
+            "EUROTEXIND",
+            "DALMIASUG",
+            "BALRAMCHIN",
+            "DHAMPURSUG",
             "BEL"
         ],
         "gate_1_incubator": [
-            "BALRAMCHIN",
-            "MAZDOCK",
-            "EUROTEXIND",
             "DHAMPURSUG",
-            "DALMIASUG"
+            "EUROTEXIND",
+            "DALMIASUG",
+            "MAZDOCK",
+            "BALRAMCHIN"
         ],
         "gate_2_approved": [
-            "DHAMPURSUG",
+            "DALMIASUG",
             "BALRAMCHIN",
-            "MAZDOCK"
+            "DHAMPURSUG"
         ],
         "agent_scores": {
-            "DHAMPURSUG": {
-                "dtw": 86.94653653016032,
-                "entry": 115.0,
-                "vision": 82.0,
+            "MAZDOCK": {
+                "dtw": 88.43138751644274,
+                "entry": 55.0,
+                "vision": 70.0,
+                "sector": 50.0
+            },
+            "EUROTEXIND": {
+                "dtw": 86.61437142147975,
+                "entry": 40.0,
+                "vision": 75.0,
                 "sector": 50.0
             },
             "DALMIASUG": {
                 "dtw": 86.63738874424625,
                 "entry": 70.0,
-                "vision": 50.0,
+                "vision": 78.0,
                 "sector": 50.0
             },
             "BALRAMCHIN": {
@@ -514,32 +574,26 @@
                 "vision": 85.0,
                 "sector": 50.0
             },
-            "EUROTEXIND": {
-                "dtw": 86.61437142147975,
-                "entry": 40.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "MAZDOCK": {
-                "dtw": 88.43138751644274,
-                "entry": 55.0,
-                "vision": 80.0,
+            "DHAMPURSUG": {
+                "dtw": 86.94653653016032,
+                "entry": 115.0,
+                "vision": 81.0,
                 "sector": 50.0
             },
             "BEL": {
                 "dtw": 90.51840087162225,
-                "entry": 31.654610713998682,
-                "vision": 80.0,
+                "entry": 31.654610713998796,
+                "vision": 85.0,
                 "sector": 50.0
             }
         },
         "trades": [
             {
-                "symbol": "DHAMPURSUG",
-                "entry_price": 126.82,
-                "current_price": 155.35,
+                "symbol": "DALMIASUG",
+                "entry_price": 316.0,
+                "current_price": 397.5,
                 "outcome": "OPEN",
-                "pnl": 22.5,
+                "pnl": 25.79,
                 "exit_date": "N/A"
             },
             {
@@ -551,11 +605,11 @@
                 "exit_date": "N/A"
             },
             {
-                "symbol": "MAZDOCK",
-                "entry_price": 2387.0,
-                "current_price": 2733.2,
+                "symbol": "DHAMPURSUG",
+                "entry_price": 126.82,
+                "current_price": 155.35,
                 "outcome": "OPEN",
-                "pnl": 14.5,
+                "pnl": 22.5,
                 "exit_date": "N/A"
             }
         ]
@@ -563,66 +617,83 @@
     {
         "date": "2026-03-10",
         "market_regime": "BEARISH",
-        "gate_1_candidates": [],
-        "gate_1_incubator": [
-            "CGPOWER",
-            "DRREDDY",
+        "gate_1_candidates": [
             "MAZDOCK",
+            "GTECJAINX",
+            "DRREDDY",
+            "HAPPSTMNDS",
+            "CGPOWER",
+            "STYRENIX",
+            "FACT"
+        ],
+        "gate_1_incubator": [
+            "DRREDDY",
             "FACT",
             "HAPPSTMNDS",
-            "STYRENIX",
-            "GTECJAINX"
+            "GTECJAINX",
+            "CGPOWER",
+            "MAZDOCK",
+            "STYRENIX"
         ],
         "gate_2_approved": [
+            "MAZDOCK",
             "GTECJAINX",
             "HAPPSTMNDS",
             "FACT"
         ],
         "agent_scores": {
-            "STYRENIX": {
-                "dtw": 87.78360796750141,
-                "entry": 25.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
             "MAZDOCK": {
                 "dtw": 88.43138751644274,
                 "entry": 55.0,
-                "vision": 50.0,
+                "vision": 81.0,
                 "sector": 50.0
             },
             "GTECJAINX": {
                 "dtw": 91.8567075456452,
                 "entry": 70.0,
-                "vision": 82.0,
-                "sector": 50.0
-            },
-            "HAPPSTMNDS": {
-                "dtw": 88.13361229242183,
-                "entry": 55.0,
-                "vision": 92.0,
-                "sector": 50.0
-            },
-            "CGPOWER": {
-                "dtw": 86.64591343667763,
-                "entry": 27.47253229786362,
                 "vision": 85.0,
                 "sector": 50.0
             },
             "DRREDDY": {
                 "dtw": 85.94715670748448,
                 "entry": 40.0,
-                "vision": 50.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "HAPPSTMNDS": {
+                "dtw": 88.13361229242183,
+                "entry": 55.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "CGPOWER": {
+                "dtw": 86.64591343667763,
+                "entry": 27.472532297863612,
+                "vision": 89.0,
+                "sector": 50.0
+            },
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
+                "entry": 25.0,
+                "vision": 80.0,
                 "sector": 50.0
             },
             "FACT": {
                 "dtw": 89.04483586631956,
                 "entry": 40.0,
-                "vision": 92.0,
+                "vision": 95.0,
                 "sector": 50.0
             }
         },
         "trades": [
+            {
+                "symbol": "MAZDOCK",
+                "entry_price": 2482.1,
+                "current_price": 2065.2,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-29"
+            },
             {
                 "symbol": "GTECJAINX",
                 "entry_price": 20.11,
@@ -653,62 +724,69 @@
         "date": "2026-03-11",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
-            "AUROPHARMA"
-        ],
-        "gate_1_incubator": [
-            "STYRENIX",
             "EUROTEXIND",
-            "FACT",
-            "HAPPSTMNDS",
+            "AUROPHARMA",
+            "ELECTCAST",
             "ROML",
             "DRREDDY",
-            "ELECTCAST"
+            "HAPPSTMNDS",
+            "STYRENIX",
+            "FACT"
+        ],
+        "gate_1_incubator": [
+            "FACT",
+            "ELECTCAST",
+            "EUROTEXIND",
+            "STYRENIX",
+            "DRREDDY",
+            "ROML",
+            "HAPPSTMNDS"
         ],
         "gate_2_approved": [
             "ELECTCAST",
             "HAPPSTMNDS"
         ],
         "agent_scores": {
-            "STYRENIX": {
-                "dtw": 87.78360796750141,
-                "entry": 25.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
             "EUROTEXIND": {
                 "dtw": 86.61437142147975,
                 "entry": 40.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "ELECTCAST": {
-                "dtw": 90.00149451369025,
-                "entry": 40.0,
-                "vision": 95.0,
-                "sector": 50.0
-            },
-            "ROML": {
-                "dtw": 89.27154189226691,
-                "entry": 70.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "HAPPSTMNDS": {
-                "dtw": 88.13361229242183,
-                "entry": 55.0,
-                "vision": 88.0,
-                "sector": 50.0
-            },
-            "DRREDDY": {
-                "dtw": 85.94715670748448,
-                "entry": 40.0,
-                "vision": 50.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
             "AUROPHARMA": {
                 "dtw": 84.06193540306154,
                 "entry": 10.0,
+                "vision": 90.0,
+                "sector": 50.0
+            },
+            "ELECTCAST": {
+                "dtw": 90.00149451369025,
+                "entry": 40.0,
+                "vision": 90.0,
+                "sector": 50.0
+            },
+            "ROML": {
+                "dtw": 89.27154189226691,
+                "entry": 70.0,
                 "vision": 85.0,
+                "sector": 50.0
+            },
+            "DRREDDY": {
+                "dtw": 85.94715670748448,
+                "entry": 40.0,
+                "vision": 70.0,
+                "sector": 50.0
+            },
+            "HAPPSTMNDS": {
+                "dtw": 88.13361229242183,
+                "entry": 55.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
+                "entry": 25.0,
+                "vision": 50.0,
                 "sector": 50.0
             },
             "FACT": {
@@ -740,86 +818,50 @@
     {
         "date": "2026-03-12",
         "market_regime": "BEARISH",
-        "gate_1_candidates": [],
-        "gate_1_incubator": [
-            "STYRENIX",
-            "CESC",
-            "FACT",
-            "HAPPSTMNDS",
+        "gate_1_candidates": [
             "ELECTCAST",
+            "CESC",
+            "HAPPSTMNDS",
+            "AARTIIND",
+            "STYRENIX",
+            "FACT"
+        ],
+        "gate_1_incubator": [
+            "CESC",
+            "ELECTCAST",
+            "HAPPSTMNDS",
+            "FACT",
+            "STYRENIX",
             "AARTIIND"
         ],
-        "gate_2_approved": [],
+        "gate_2_approved": [
+            "ELECTCAST",
+            "HAPPSTMNDS",
+            "AARTIIND"
+        ],
         "agent_scores": {
-            "CESC": {
-                "dtw": 83.77098917202295,
-                "entry": 55.0,
-                "vision": 78.0,
-                "sector": 50.0
-            },
-            "AARTIIND": {
-                "dtw": 85.37568731965895,
-                "entry": 73.89299156600012,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "STYRENIX": {
-                "dtw": 87.78360796750141,
-                "entry": 25.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
             "ELECTCAST": {
                 "dtw": 90.00149451369025,
                 "entry": 40.0,
-                "vision": 75.0,
+                "vision": 90.0,
+                "sector": 50.0
+            },
+            "CESC": {
+                "dtw": 83.77098917202295,
+                "entry": 55.0,
+                "vision": 72.0,
                 "sector": 50.0
             },
             "HAPPSTMNDS": {
                 "dtw": 88.13361229242183,
                 "entry": 55.0,
-                "vision": 50.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
-            "FACT": {
-                "dtw": 89.04483586631956,
-                "entry": 40.0,
-                "vision": 90.0,
-                "sector": 50.0
-            }
-        },
-        "trades": []
-    },
-    {
-        "date": "2026-03-15",
-        "market_regime": "BEARISH",
-        "gate_1_candidates": [
-            "ABB"
-        ],
-        "gate_1_incubator": [
-            "STYRENIX",
-            "FACT",
-            "BEPL",
-            "CESC"
-        ],
-        "gate_2_approved": [],
-        "agent_scores": {
-            "CESC": {
-                "dtw": 83.77098917202295,
-                "entry": 55.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "ABB": {
-                "dtw": 89.15821243937506,
-                "entry": 25.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
-            "BEPL": {
-                "dtw": 87.26321505387304,
-                "entry": 10.0,
-                "vision": 80.0,
+            "AARTIIND": {
+                "dtw": 85.37568731965895,
+                "entry": 73.89299156600009,
+                "vision": 82.0,
                 "sector": 50.0
             },
             "STYRENIX": {
@@ -831,7 +873,83 @@
             "FACT": {
                 "dtw": 89.04483586631956,
                 "entry": 40.0,
-                "vision": 80.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "ELECTCAST",
+                "entry_price": 79.19,
+                "current_price": 81.99,
+                "outcome": "OPEN",
+                "pnl": 3.54,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "HAPPSTMNDS",
+                "entry_price": 409.05,
+                "current_price": 373.1,
+                "outcome": "OPEN",
+                "pnl": -8.79,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "AARTIIND",
+                "entry_price": 446.2,
+                "current_price": 507.5,
+                "outcome": "OPEN",
+                "pnl": 13.74,
+                "exit_date": "N/A"
+            }
+        ]
+    },
+    {
+        "date": "2026-03-15",
+        "market_regime": "BEARISH",
+        "gate_1_candidates": [
+            "BEPL",
+            "CESC",
+            "ABB",
+            "STYRENIX",
+            "FACT"
+        ],
+        "gate_1_incubator": [
+            "BEPL",
+            "FACT",
+            "CESC",
+            "STYRENIX"
+        ],
+        "gate_2_approved": [],
+        "agent_scores": {
+            "BEPL": {
+                "dtw": 87.26321505387304,
+                "entry": 10.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "CESC": {
+                "dtw": 83.77098917202295,
+                "entry": 55.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "ABB": {
+                "dtw": 89.15821243937506,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "FACT": {
+                "dtw": 89.04483586631956,
+                "entry": 40.0,
+                "vision": 85.0,
                 "sector": 50.0
             }
         },
@@ -840,20 +958,33 @@
     {
         "date": "2026-03-16",
         "market_regime": "BEARISH",
-        "gate_1_candidates": [],
+        "gate_1_candidates": [
+            "ESABINDIA"
+        ],
         "gate_1_incubator": [
             "ESABINDIA"
         ],
-        "gate_2_approved": [],
+        "gate_2_approved": [
+            "ESABINDIA"
+        ],
         "agent_scores": {
             "ESABINDIA": {
                 "dtw": 87.16830067624689,
                 "entry": 70.0,
-                "vision": 50.0,
+                "vision": 75.0,
                 "sector": 50.0
             }
         },
-        "trades": []
+        "trades": [
+            {
+                "symbol": "ESABINDIA",
+                "entry_price": 5525.0,
+                "current_price": 6266.9,
+                "outcome": "OPEN",
+                "pnl": 13.43,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-03-17",
@@ -867,43 +998,57 @@
     {
         "date": "2026-03-18",
         "market_regime": "BEARISH",
-        "gate_1_candidates": [],
-        "gate_1_incubator": [
-            "BEPL",
+        "gate_1_candidates": [
             "VALIANTORG",
+            "GMBREW",
             "CASTROLIND",
-            "GMBREW"
+            "BEPL"
+        ],
+        "gate_1_incubator": [
+            "GMBREW",
+            "VALIANTORG",
+            "BEPL",
+            "CASTROLIND"
         ],
         "gate_2_approved": [
+            "VALIANTORG",
             "CASTROLIND"
         ],
         "agent_scores": {
-            "BEPL": {
-                "dtw": 87.26321505387304,
-                "entry": 10.0,
-                "vision": 85.0,
+            "VALIANTORG": {
+                "dtw": 91.6439093716212,
+                "entry": 55.0,
+                "vision": 95.0,
                 "sector": 50.0
             },
             "GMBREW": {
                 "dtw": 85.8583431571685,
                 "entry": 25.0,
-                "vision": 50.0,
+                "vision": 80.0,
                 "sector": 50.0
             },
             "CASTROLIND": {
                 "dtw": 90.59308488913,
-                "entry": 71.14072911072898,
-                "vision": 78.0,
+                "entry": 71.14072911072859,
+                "vision": 73.0,
                 "sector": 50.0
             },
-            "VALIANTORG": {
-                "dtw": 91.6439093716212,
-                "entry": 55.0,
-                "vision": 50.0,
+            "BEPL": {
+                "dtw": 87.26321505387304,
+                "entry": 10.0,
+                "vision": 85.0,
                 "sector": 50.0
             }
         },
         "trades": [
+            {
+                "symbol": "VALIANTORG",
+                "entry_price": 237.16,
+                "current_price": 272.58,
+                "outcome": "OPEN",
+                "pnl": 14.94,
+                "exit_date": "N/A"
+            },
             {
                 "symbol": "CASTROLIND",
                 "entry_price": 181.96,
@@ -917,59 +1062,75 @@
     {
         "date": "2026-03-19",
         "market_regime": "BEARISH",
-        "gate_1_candidates": [],
-        "gate_1_incubator": [
-            "EUROTEXIND",
+        "gate_1_candidates": [
             "VALIANTORG",
+            "EUROTEXIND",
             "GTECJAINX",
+            "CASTROLIND",
+            "GUJALKALI"
+        ],
+        "gate_1_incubator": [
+            "VALIANTORG",
+            "CASTROLIND",
+            "EUROTEXIND",
             "GUJALKALI",
-            "CASTROLIND"
+            "GTECJAINX"
         ],
         "gate_2_approved": [
-            "GUJALKALI",
+            "VALIANTORG",
+            "EUROTEXIND",
             "GTECJAINX",
-            "VALIANTORG"
+            "CASTROLIND",
+            "GUJALKALI"
         ],
         "agent_scores": {
-            "GUJALKALI": {
-                "dtw": 85.12585094937327,
-                "entry": 70.0,
-                "vision": 92.0,
-                "sector": 50.0
-            },
-            "CASTROLIND": {
-                "dtw": 90.59308488913,
-                "entry": 71.14072911072898,
-                "vision": 50.0,
+            "VALIANTORG": {
+                "dtw": 91.6439093716212,
+                "entry": 55.0,
+                "vision": 80.0,
                 "sector": 50.0
             },
             "EUROTEXIND": {
                 "dtw": 86.61437142147975,
                 "entry": 40.0,
-                "vision": 75.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
             "GTECJAINX": {
                 "dtw": 91.8567075456452,
                 "entry": 70.0,
-                "vision": 85.0,
+                "vision": 93.0,
                 "sector": 50.0
             },
-            "VALIANTORG": {
-                "dtw": 91.6439093716212,
-                "entry": 55.0,
-                "vision": 85.0,
+            "CASTROLIND": {
+                "dtw": 90.59308488913,
+                "entry": 71.14072911072859,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "GUJALKALI": {
+                "dtw": 85.12585094937327,
+                "entry": 70.0,
+                "vision": 77.0,
                 "sector": 50.0
             }
         },
         "trades": [
             {
-                "symbol": "GUJALKALI",
-                "entry_price": 486.5,
-                "current_price": 734.8,
-                "outcome": "PROFIT",
-                "pnl": 50.0,
-                "exit_date": "2026-04-19"
+                "symbol": "VALIANTORG",
+                "entry_price": 259.42,
+                "current_price": 214.44,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-26"
+            },
+            {
+                "symbol": "EUROTEXIND",
+                "entry_price": 13.57,
+                "current_price": 15.65,
+                "outcome": "OPEN",
+                "pnl": 15.33,
+                "exit_date": "N/A"
             },
             {
                 "symbol": "GTECJAINX",
@@ -980,85 +1141,113 @@
                 "exit_date": "N/A"
             },
             {
-                "symbol": "VALIANTORG",
-                "entry_price": 259.42,
-                "current_price": 214.44,
-                "outcome": "LOSS",
-                "pnl": -15.0,
-                "exit_date": "2026-03-26"
+                "symbol": "CASTROLIND",
+                "entry_price": 181.52,
+                "current_price": 184.82,
+                "outcome": "OPEN",
+                "pnl": 1.82,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "GUJALKALI",
+                "entry_price": 486.5,
+                "current_price": 734.8,
+                "outcome": "PROFIT",
+                "pnl": 50.0,
+                "exit_date": "2026-04-19"
             }
         ]
     },
     {
         "date": "2026-03-22",
         "market_regime": "BEARISH",
-        "gate_1_candidates": [],
-        "gate_1_incubator": [
-            "HAPPSTMNDS",
+        "gate_1_candidates": [
             "VALIANTORG",
             "CASTROLIND",
             "BHEL",
-            "BAJAJHIND",
-            "DRREDDY",
             "ELECTCAST",
-            "DALMIASUG"
+            "DALMIASUG",
+            "DRREDDY",
+            "HAPPSTMNDS",
+            "BAJAJHIND"
+        ],
+        "gate_1_incubator": [
+            "DALMIASUG",
+            "BHEL",
+            "VALIANTORG",
+            "HAPPSTMNDS",
+            "ELECTCAST",
+            "DRREDDY",
+            "CASTROLIND",
+            "BAJAJHIND"
         ],
         "gate_2_approved": [
+            "VALIANTORG",
             "CASTROLIND",
-            "BAJAJHIND",
-            "VALIANTORG"
+            "BHEL",
+            "DALMIASUG",
+            "HAPPSTMNDS",
+            "BAJAJHIND"
         ],
         "agent_scores": {
-            "DALMIASUG": {
-                "dtw": 86.63738874424625,
-                "entry": 70.0,
-                "vision": 50.0,
+            "VALIANTORG": {
+                "dtw": 91.6439093716212,
+                "entry": 55.0,
+                "vision": 90.0,
                 "sector": 50.0
             },
             "CASTROLIND": {
                 "dtw": 90.59308488913,
-                "entry": 71.14072911072898,
+                "entry": 71.14072911072859,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "BHEL": {
+                "dtw": 87.04282196249305,
+                "entry": 55.0,
+                "vision": 79.0,
+                "sector": 50.0
+            },
+            "ELECTCAST": {
+                "dtw": 90.00149451369025,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "DALMIASUG": {
+                "dtw": 86.63738874424625,
+                "entry": 70.0,
                 "vision": 75.0,
                 "sector": 50.0
             },
             "DRREDDY": {
                 "dtw": 85.94715670748448,
                 "entry": 40.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "ELECTCAST": {
-                "dtw": 90.00149451369025,
-                "entry": 40.0,
-                "vision": 89.0,
+                "vision": 75.0,
                 "sector": 50.0
             },
             "HAPPSTMNDS": {
                 "dtw": 88.13361229242183,
                 "entry": 55.0,
-                "vision": 50.0,
+                "vision": 78.0,
                 "sector": 50.0
             },
             "BAJAJHIND": {
                 "dtw": 85.79806932557632,
                 "entry": 115.0,
-                "vision": 89.0,
-                "sector": 50.0
-            },
-            "BHEL": {
-                "dtw": 87.04282196249305,
-                "entry": 55.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "VALIANTORG": {
-                "dtw": 91.6439093716212,
-                "entry": 55.0,
-                "vision": 90.0,
+                "vision": 84.0,
                 "sector": 50.0
             }
         },
         "trades": [
+            {
+                "symbol": "VALIANTORG",
+                "entry_price": 241.49,
+                "current_price": 202.07,
+                "outcome": "LOSS",
+                "pnl": -15.0,
+                "exit_date": "2026-03-29"
+            },
             {
                 "symbol": "CASTROLIND",
                 "entry_price": 177.29,
@@ -1068,20 +1257,36 @@
                 "exit_date": "N/A"
             },
             {
+                "symbol": "BHEL",
+                "entry_price": 252.85,
+                "current_price": 352.41,
+                "outcome": "OPEN",
+                "pnl": 39.38,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "DALMIASUG",
+                "entry_price": 304.8,
+                "current_price": 397.5,
+                "outcome": "OPEN",
+                "pnl": 30.41,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "HAPPSTMNDS",
+                "entry_price": 392.65,
+                "current_price": 373.1,
+                "outcome": "OPEN",
+                "pnl": -4.98,
+                "exit_date": "N/A"
+            },
+            {
                 "symbol": "BAJAJHIND",
                 "entry_price": 15.32,
                 "current_price": 20.3,
                 "outcome": "OPEN",
                 "pnl": 32.51,
                 "exit_date": "N/A"
-            },
-            {
-                "symbol": "VALIANTORG",
-                "entry_price": 241.49,
-                "current_price": 202.07,
-                "outcome": "LOSS",
-                "pnl": -15.0,
-                "exit_date": "2026-03-29"
             }
         ]
     },
@@ -1097,7 +1302,9 @@
     {
         "date": "2026-03-24",
         "market_regime": "BEARISH",
-        "gate_1_candidates": [],
+        "gate_1_candidates": [
+            "GMBREW"
+        ],
         "gate_1_incubator": [
             "GMBREW"
         ],
@@ -1106,7 +1313,7 @@
             "GMBREW": {
                 "dtw": 85.8583431571685,
                 "entry": 25.0,
-                "vision": 85.0,
+                "vision": 80.0,
                 "sector": 50.0
             }
         },
@@ -1115,47 +1322,53 @@
     {
         "date": "2026-03-26",
         "market_regime": "BEARISH",
-        "gate_1_candidates": [],
-        "gate_1_incubator": [
-            "GODFRYPHLP",
-            "CARBORUNIV",
+        "gate_1_candidates": [
             "ANDHRSUGAR",
+            "CARBORUNIV",
+            "GODFRYPHLP",
+            "EPL",
+            "BALRAMCHIN"
+        ],
+        "gate_1_incubator": [
             "BALRAMCHIN",
-            "EPL"
+            "EPL",
+            "CARBORUNIV",
+            "GODFRYPHLP",
+            "ANDHRSUGAR"
         ],
         "gate_2_approved": [
             "GODFRYPHLP",
             "BALRAMCHIN"
         ],
         "agent_scores": {
-            "GODFRYPHLP": {
-                "dtw": 87.59318332403362,
-                "entry": 55.0,
-                "vision": 85.0,
+            "ANDHRSUGAR": {
+                "dtw": 84.87803761822053,
+                "entry": 51.763340880865655,
+                "vision": 50.0,
                 "sector": 50.0
             },
             "CARBORUNIV": {
                 "dtw": 91.94596312099995,
                 "entry": 40.0,
-                "vision": 75.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GODFRYPHLP": {
+                "dtw": 87.59318332403362,
+                "entry": 55.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "EPL": {
+                "dtw": 87.81422138781326,
+                "entry": 37.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
             "BALRAMCHIN": {
                 "dtw": 84.72583819314588,
                 "entry": 115.0,
                 "vision": 85.0,
-                "sector": 50.0
-            },
-            "EPL": {
-                "dtw": 87.81422138781326,
-                "entry": 37.0,
-                "vision": 78.0,
-                "sector": 50.0
-            },
-            "ANDHRSUGAR": {
-                "dtw": 84.87803761822053,
-                "entry": 51.763340880865655,
-                "vision": 50.0,
                 "sector": 50.0
             }
         },
@@ -1182,80 +1395,94 @@
         "date": "2026-03-29",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
-            "AUROPHARMA",
-            "ARVIND"
-        ],
-        "gate_1_incubator": [
-            "GRAPHITE",
             "HEG",
+            "AUROPHARMA",
             "ELECTCAST",
+            "ARVIND",
             "DHAMPURSUG",
+            "GRAPHITE",
             "BAJAJHIND"
         ],
-        "gate_2_approved": [
+        "gate_1_incubator": [
             "DHAMPURSUG",
+            "ELECTCAST",
+            "BAJAJHIND",
+            "GRAPHITE",
+            "HEG"
+        ],
+        "gate_2_approved": [
             "HEG",
+            "ARVIND",
+            "DHAMPURSUG",
             "BAJAJHIND"
         ],
         "agent_scores": {
-            "GRAPHITE": {
-                "dtw": 83.76458609626233,
-                "entry": 10.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "DHAMPURSUG": {
-                "dtw": 86.94653653016032,
-                "entry": 115.0,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "ELECTCAST": {
-                "dtw": 90.00149451369025,
-                "entry": 40.0,
+            "HEG": {
+                "dtw": 84.65061588383305,
+                "entry": 50.80608051967329,
                 "vision": 85.0,
                 "sector": 50.0
             },
             "AUROPHARMA": {
                 "dtw": 84.06193540306154,
                 "entry": 10.0,
-                "vision": 85.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "ELECTCAST": {
+                "dtw": 90.00149451369025,
+                "entry": 40.0,
+                "vision": 88.0,
                 "sector": 50.0
             },
             "ARVIND": {
                 "dtw": 93.79074688231795,
                 "entry": 70.0,
-                "vision": 50.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
-            "HEG": {
-                "dtw": 84.65061588383305,
-                "entry": 50.80608051967322,
-                "vision": 90.0,
+            "DHAMPURSUG": {
+                "dtw": 86.94653653016032,
+                "entry": 115.0,
+                "vision": 92.0,
+                "sector": 50.0
+            },
+            "GRAPHITE": {
+                "dtw": 83.76458609626233,
+                "entry": 10.0,
+                "vision": 95.0,
                 "sector": 50.0
             },
             "BAJAJHIND": {
                 "dtw": 85.79806932557632,
                 "entry": 115.0,
-                "vision": 50.0,
+                "vision": 85.0,
                 "sector": 50.0
             }
         },
         "trades": [
-            {
-                "symbol": "DHAMPURSUG",
-                "entry_price": 141.77,
-                "current_price": 155.35,
-                "outcome": "OPEN",
-                "pnl": 9.58,
-                "exit_date": "N/A"
-            },
             {
                 "symbol": "HEG",
                 "entry_price": 542.4,
                 "current_price": 596.05,
                 "outcome": "OPEN",
                 "pnl": 9.89,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ARVIND",
+                "entry_price": 338.7,
+                "current_price": 398.55,
+                "outcome": "OPEN",
+                "pnl": 17.67,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "DHAMPURSUG",
+                "entry_price": 141.77,
+                "current_price": 155.35,
+                "outcome": "OPEN",
+                "pnl": 9.58,
                 "exit_date": "N/A"
             },
             {
@@ -1272,27 +1499,24 @@
         "date": "2026-03-31",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
-            "AUROPHARMA"
+            "HEG",
+            "AUROPHARMA",
+            "EPL",
+            "BAJAJHIND"
         ],
         "gate_1_incubator": [
-            "HEG",
             "EPL",
+            "HEG",
             "BAJAJHIND"
         ],
         "gate_2_approved": [
             "BAJAJHIND"
         ],
         "agent_scores": {
-            "BAJAJHIND": {
-                "dtw": 85.79806932557632,
-                "entry": 115.0,
-                "vision": 70.0,
-                "sector": 50.0
-            },
             "HEG": {
                 "dtw": 84.65061588383305,
-                "entry": 50.80608051967322,
-                "vision": 50.0,
+                "entry": 50.80608051967329,
+                "vision": 80.0,
                 "sector": 50.0
             },
             "AUROPHARMA": {
@@ -1304,7 +1528,13 @@
             "EPL": {
                 "dtw": 87.81422138781326,
                 "entry": 37.0,
-                "vision": 89.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "BAJAJHIND": {
+                "dtw": 85.79806932557632,
+                "entry": 115.0,
+                "vision": 82.0,
                 "sector": 50.0
             }
         },
@@ -1323,12 +1553,15 @@
         "date": "2026-04-01",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
-            "AUROPHARMA"
+            "GICRE",
+            "BANARISUG",
+            "AUROPHARMA",
+            "EPL"
         ],
         "gate_1_incubator": [
+            "GICRE",
             "EPL",
-            "BANARISUG",
-            "GICRE"
+            "BANARISUG"
         ],
         "gate_2_approved": [
             "BANARISUG"
@@ -1337,25 +1570,25 @@
             "GICRE": {
                 "dtw": 89.47651202979688,
                 "entry": 25.0,
-                "vision": 79.0,
-                "sector": 50.0
-            },
-            "AUROPHARMA": {
-                "dtw": 84.06193540306154,
-                "entry": 10.0,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "EPL": {
-                "dtw": 87.81422138781326,
-                "entry": 37.0,
                 "vision": 75.0,
                 "sector": 50.0
             },
             "BANARISUG": {
                 "dtw": 87.61638512825327,
                 "entry": 115.0,
-                "vision": 78.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "AUROPHARMA": {
+                "dtw": 84.06193540306154,
+                "entry": 10.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "EPL": {
+                "dtw": 87.81422138781326,
+                "entry": 37.0,
+                "vision": 80.0,
                 "sector": 50.0
             }
         },
@@ -1374,48 +1607,66 @@
         "date": "2026-04-05",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
-            "ARVIND"
+            "DANGEE",
+            "ARVIND",
+            "BSHSL",
+            "CARBORUNIV"
         ],
         "gate_1_incubator": [
             "DANGEE",
             "BSHSL",
             "CARBORUNIV"
         ],
-        "gate_2_approved": [],
+        "gate_2_approved": [
+            "ARVIND"
+        ],
         "agent_scores": {
+            "DANGEE": {
+                "dtw": 85.89776648571677,
+                "entry": 10.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
             "ARVIND": {
                 "dtw": 93.79074688231795,
                 "entry": 70.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "CARBORUNIV": {
-                "dtw": 91.94596312099995,
-                "entry": 40.0,
-                "vision": 80.0,
+                "vision": 82.0,
                 "sector": 50.0
             },
             "BSHSL": {
                 "dtw": 93.66238404633117,
                 "entry": 37.0,
-                "vision": 50.0,
+                "vision": 90.0,
                 "sector": 50.0
             },
-            "DANGEE": {
-                "dtw": 85.89776648571677,
-                "entry": 10.0,
-                "vision": 78.0,
+            "CARBORUNIV": {
+                "dtw": 91.94596312099995,
+                "entry": 40.0,
+                "vision": 77.0,
                 "sector": 50.0
             }
         },
-        "trades": []
+        "trades": [
+            {
+                "symbol": "ARVIND",
+                "entry_price": 374.15,
+                "current_price": 398.55,
+                "outcome": "OPEN",
+                "pnl": 6.52,
+                "exit_date": "N/A"
+            }
+        ]
     },
     {
         "date": "2026-04-06",
         "market_regime": "BEARISH",
         "gate_1_candidates": [
+            "CARBORUNIV",
+            "GICRE",
+            "UNIDT",
+            "HARRMALAYA",
             "ARVIND",
-            "GICRE"
+            "IEX"
         ],
         "gate_1_incubator": [
             "IEX",
@@ -1431,34 +1682,34 @@
                 "vision": 80.0,
                 "sector": 50.0
             },
-            "HARRMALAYA": {
-                "dtw": 86.90048427970486,
-                "entry": 70.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
             "GICRE": {
                 "dtw": 89.47651202979688,
                 "entry": 25.0,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "IEX": {
-                "dtw": 91.82209787354988,
-                "entry": 25.0,
-                "vision": 75.0,
-                "sector": 50.0
-            },
-            "ARVIND": {
-                "dtw": 93.79074688231795,
-                "entry": 70.0,
-                "vision": 50.0,
+                "vision": 72.0,
                 "sector": 50.0
             },
             "UNIDT": {
                 "dtw": 93.67765142071173,
                 "entry": 10.0,
-                "vision": 90.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "HARRMALAYA": {
+                "dtw": 86.90048427970486,
+                "entry": 70.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "ARVIND": {
+                "dtw": 93.79074688231795,
+                "entry": 70.0,
+                "vision": 73.0,
+                "sector": 50.0
+            },
+            "IEX": {
+                "dtw": 91.82209787354988,
+                "entry": 25.0,
+                "vision": 89.0,
                 "sector": 50.0
             }
         },
@@ -1467,7 +1718,9 @@
     {
         "date": "2026-04-07",
         "market_regime": "BEARISH",
-        "gate_1_candidates": [],
+        "gate_1_candidates": [
+            "CARBORUNIV"
+        ],
         "gate_1_incubator": [
             "CARBORUNIV"
         ],
@@ -1486,46 +1739,59 @@
         "date": "2026-04-08",
         "market_regime": "BULLISH",
         "gate_1_candidates": [
-            "GMBREW",
+            "ANGELONE",
+            "AUROPHARMA",
+            "BHEL",
+            "CARBORUNIV",
             "GICRE",
-            "AUROPHARMA"
+            "GMBREW",
+            "ADANIENT",
+            "BASF",
+            "GALAXYSURF",
+            "EXIDEIND",
+            "MASFIN",
+            "ABB",
+            "ABREL",
+            "MAHLOG"
         ],
         "gate_1_incubator": [
             "BHEL",
-            "ABB",
-            "MASFIN",
-            "MAHLOG",
             "ABREL",
-            "ADANIENT",
             "EXIDEIND",
-            "ANGELONE",
-            "CARBORUNIV",
             "BASF",
-            "GALAXYSURF"
+            "GALAXYSURF",
+            "MAHLOG",
+            "CARBORUNIV",
+            "ABB",
+            "ADANIENT",
+            "MASFIN",
+            "ANGELONE"
         ],
         "gate_2_approved": [
-            "MASFIN",
-            "CARBORUNIV",
+            "BHEL",
             "ADANIENT",
-            "BHEL"
+            "BASF",
+            "GALAXYSURF",
+            "EXIDEIND",
+            "MASFIN"
         ],
         "agent_scores": {
-            "EXIDEIND": {
-                "dtw": 86.77744716454444,
-                "entry": 55.0,
-                "vision": 75.0,
+            "ANGELONE": {
+                "dtw": 88.2329589746517,
+                "entry": 10.0,
+                "vision": 89.0,
                 "sector": 50.0
             },
-            "MASFIN": {
-                "dtw": 88.67624734095163,
-                "entry": 115.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "MAHLOG": {
-                "dtw": 88.23966553022647,
-                "entry": 25.0,
+            "AUROPHARMA": {
+                "dtw": 84.06193540306154,
+                "entry": 10.0,
                 "vision": 85.0,
+                "sector": 50.0
+            },
+            "BHEL": {
+                "dtw": 87.04282196249305,
+                "entry": 55.0,
+                "vision": 80.0,
                 "sector": 50.0
             },
             "CARBORUNIV": {
@@ -1534,58 +1800,52 @@
                 "vision": 85.0,
                 "sector": 50.0
             },
-            "ABB": {
-                "dtw": 89.15821243937506,
-                "entry": 25.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
             "GICRE": {
                 "dtw": 89.47651202979688,
                 "entry": 25.0,
-                "vision": 70.0,
-                "sector": 50.0
-            },
-            "ANGELONE": {
-                "dtw": 88.2329589746517,
-                "entry": 10.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "GALAXYSURF": {
-                "dtw": 90.46420628193536,
-                "entry": 40.0,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "ADANIENT": {
-                "dtw": 88.42309749616737,
-                "entry": 71.88546911049033,
-                "vision": 85.0,
+                "vision": 75.0,
                 "sector": 50.0
             },
             "GMBREW": {
                 "dtw": 85.8583431571685,
                 "entry": 25.0,
-                "vision": 50.0,
+                "vision": 82.0,
                 "sector": 50.0
             },
-            "BHEL": {
-                "dtw": 87.04282196249305,
-                "entry": 55.0,
-                "vision": 85.0,
+            "ADANIENT": {
+                "dtw": 88.42309749616737,
+                "entry": 71.88546911049046,
+                "vision": 80.0,
                 "sector": 50.0
             },
             "BASF": {
                 "dtw": 89.31873446709736,
-                "entry": 55.12710034983129,
-                "vision": 50.0,
+                "entry": 55.12710034983138,
+                "vision": 80.0,
                 "sector": 50.0
             },
-            "AUROPHARMA": {
-                "dtw": 84.06193540306154,
-                "entry": 10.0,
-                "vision": 80.0,
+            "GALAXYSURF": {
+                "dtw": 90.46420628193536,
+                "entry": 40.0,
+                "vision": 91.0,
+                "sector": 50.0
+            },
+            "EXIDEIND": {
+                "dtw": 86.77744716454444,
+                "entry": 55.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "MASFIN": {
+                "dtw": 88.67624734095163,
+                "entry": 115.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "ABB": {
+                "dtw": 89.15821243937506,
+                "entry": 25.0,
+                "vision": 95.0,
                 "sector": 50.0
             },
             "ABREL": {
@@ -1593,23 +1853,21 @@
                 "entry": 40.0,
                 "vision": 85.0,
                 "sector": 50.0
+            },
+            "MAHLOG": {
+                "dtw": 88.23966553022647,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
             }
         },
         "trades": [
             {
-                "symbol": "MASFIN",
-                "entry_price": 311.55,
-                "current_price": 339.9,
+                "symbol": "BHEL",
+                "entry_price": 265.7,
+                "current_price": 352.41,
                 "outcome": "OPEN",
-                "pnl": 9.1,
-                "exit_date": "N/A"
-            },
-            {
-                "symbol": "CARBORUNIV",
-                "entry_price": 860.7,
-                "current_price": 951.75,
-                "outcome": "OPEN",
-                "pnl": 10.58,
+                "pnl": 32.63,
                 "exit_date": "N/A"
             },
             {
@@ -1621,11 +1879,35 @@
                 "exit_date": "N/A"
             },
             {
-                "symbol": "BHEL",
-                "entry_price": 265.7,
-                "current_price": 352.41,
+                "symbol": "BASF",
+                "entry_price": 3578.1,
+                "current_price": 3641.9,
                 "outcome": "OPEN",
-                "pnl": 32.63,
+                "pnl": 1.78,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "GALAXYSURF",
+                "entry_price": 1785.0,
+                "current_price": 1857.2,
+                "outcome": "OPEN",
+                "pnl": 4.04,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "EXIDEIND",
+                "entry_price": 314.15,
+                "current_price": 360.55,
+                "outcome": "OPEN",
+                "pnl": 14.77,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "MASFIN",
+                "entry_price": 311.55,
+                "current_price": 339.9,
+                "outcome": "OPEN",
+                "pnl": 9.1,
                 "exit_date": "N/A"
             }
         ]
@@ -1633,56 +1915,62 @@
     {
         "date": "2026-04-09",
         "market_regime": "BULLISH",
-        "gate_1_candidates": [],
+        "gate_1_candidates": [
+            "IFGLEXPOR",
+            "DPABHUSHAN",
+            "BHEL",
+            "APOLLO",
+            "SUDARCOLOR"
+        ],
         "gate_1_incubator": [
             "APOLLO",
             "BHEL",
-            "DPABHUSHAN",
             "SUDARCOLOR",
-            "IFGLEXPOR"
+            "IFGLEXPOR",
+            "DPABHUSHAN"
         ],
         "gate_2_approved": [
-            "DPABHUSHAN"
+            "BHEL"
         ],
         "agent_scores": {
             "IFGLEXPOR": {
                 "dtw": 91.16899812752024,
                 "entry": 40.0,
-                "vision": 79.0,
-                "sector": 50.0
-            },
-            "SUDARCOLOR": {
-                "dtw": 93.15839025031812,
-                "entry": 25.0,
-                "vision": 50.0,
+                "vision": 88.0,
                 "sector": 50.0
             },
             "DPABHUSHAN": {
                 "dtw": 87.94384171209796,
-                "entry": 17.31935699113351,
+                "entry": 17.319356991133503,
                 "vision": 85.0,
                 "sector": 50.0
             },
             "BHEL": {
                 "dtw": 87.04282196249305,
                 "entry": 55.0,
-                "vision": 50.0,
+                "vision": 80.0,
                 "sector": 50.0
             },
             "APOLLO": {
                 "dtw": 86.43032504176743,
                 "entry": 40.0,
-                "vision": 90.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "SUDARCOLOR": {
+                "dtw": 93.15839025031812,
+                "entry": 25.0,
+                "vision": 75.0,
                 "sector": 50.0
             }
         },
         "trades": [
             {
-                "symbol": "DPABHUSHAN",
-                "entry_price": 1126.6,
-                "current_price": 1035.5,
+                "symbol": "BHEL",
+                "entry_price": 277.2,
+                "current_price": 352.41,
                 "outcome": "OPEN",
-                "pnl": -8.09,
+                "pnl": 27.13,
                 "exit_date": "N/A"
             }
         ]
@@ -1691,130 +1979,80 @@
         "date": "2026-04-12",
         "market_regime": "BULLISH",
         "gate_1_candidates": [
-            "ABB",
-            "GICRE",
-            "BHEL"
-        ],
-        "gate_1_incubator": [
-            "ASIANPAINT",
-            "SDBL",
-            "ARENTERP",
-            "ABREL",
-            "ESG",
-            "SHRADHA",
-            "NIACL",
-            "BERGEPAINT",
-            "APOLLO",
-            "DELTAMAGNT",
-            "EXIDEIND",
             "ANDHRSUGAR",
-            "ROML",
+            "ARENTERP",
+            "ASIANPAINT",
+            "BERGEPAINT",
+            "NIACL",
+            "BHEL",
             "ESABINDIA",
             "GATECHDVR",
+            "DELTAMAGNT",
+            "ESG",
             "DANGEE",
-            "PGHL"
+            "ABREL",
+            "GICRE",
+            "SDBL",
+            "ROML",
+            "APOLLO",
+            "PGHL",
+            "EXIDEIND",
+            "ABB",
+            "SHRADHA"
+        ],
+        "gate_1_incubator": [
+            "ESG",
+            "ABREL",
+            "ARENTERP",
+            "SDBL",
+            "PGHL",
+            "BERGEPAINT",
+            "ROML",
+            "ESABINDIA",
+            "SHRADHA",
+            "DELTAMAGNT",
+            "DANGEE",
+            "NIACL",
+            "ASIANPAINT",
+            "ANDHRSUGAR",
+            "APOLLO",
+            "GATECHDVR",
+            "EXIDEIND"
         ],
         "gate_2_approved": [
-            "BERGEPAINT",
             "ANDHRSUGAR",
-            "EXIDEIND",
-            "ROML"
+            "ASIANPAINT",
+            "BERGEPAINT",
+            "BHEL",
+            "ESABINDIA",
+            "ESG",
+            "ROML",
+            "PGHL",
+            "EXIDEIND"
         ],
         "agent_scores": {
-            "BERGEPAINT": {
-                "dtw": 89.4724825556923,
-                "entry": 70.41245861038307,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "ESABINDIA": {
-                "dtw": 87.16830067624689,
-                "entry": 70.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "ABREL": {
-                "dtw": 88.46444483028499,
-                "entry": 40.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
-            "DANGEE": {
-                "dtw": 85.89776648571677,
-                "entry": 10.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "SHRADHA": {
-                "dtw": 88.20096111128512,
-                "entry": 14.021127287434755,
-                "vision": 82.0,
-                "sector": 50.0
-            },
-            "PGHL": {
-                "dtw": 86.22592601642145,
-                "entry": 70.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "ASIANPAINT": {
-                "dtw": 87.56115091773984,
-                "entry": 25.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "DELTAMAGNT": {
-                "dtw": 92.23619509089347,
-                "entry": 10.0,
-                "vision": 78.0,
-                "sector": 50.0
-            },
             "ANDHRSUGAR": {
                 "dtw": 84.87803761822053,
                 "entry": 51.763340880865655,
-                "vision": 83.0,
-                "sector": 50.0
-            },
-            "GATECHDVR": {
-                "dtw": 88.54684563546098,
-                "entry": 10.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "SDBL": {
-                "dtw": 87.52459376613325,
-                "entry": 10.0,
-                "vision": 75.0,
-                "sector": 50.0
-            },
-            "EXIDEIND": {
-                "dtw": 86.77744716454444,
-                "entry": 55.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
-            "GICRE": {
-                "dtw": 89.47651202979688,
-                "entry": 25.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "ABB": {
-                "dtw": 89.15821243937506,
-                "entry": 25.0,
                 "vision": 85.0,
                 "sector": 50.0
             },
             "ARENTERP": {
                 "dtw": 91.24948546832647,
                 "entry": 10.0,
-                "vision": 80.0,
+                "vision": 82.0,
                 "sector": 50.0
             },
-            "ESG": {
-                "dtw": 90.29556596964147,
-                "entry": 65.0,
-                "vision": 50.0,
+            "ASIANPAINT": {
+                "dtw": 87.56115091773984,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BERGEPAINT": {
+                "dtw": 89.4724825556923,
+                "entry": 70.41245861038306,
+                "vision": 75.0,
                 "sector": 50.0
             },
             "NIACL": {
@@ -1823,34 +2061,98 @@
                 "vision": 85.0,
                 "sector": 50.0
             },
+            "BHEL": {
+                "dtw": 87.04282196249305,
+                "entry": 55.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "ESABINDIA": {
+                "dtw": 87.16830067624689,
+                "entry": 70.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "GATECHDVR": {
+                "dtw": 88.54684563546098,
+                "entry": 10.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "DELTAMAGNT": {
+                "dtw": 92.23619509089347,
+                "entry": 10.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "ESG": {
+                "dtw": 90.29556596964147,
+                "entry": 65.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "DANGEE": {
+                "dtw": 85.89776648571677,
+                "entry": 10.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "ABREL": {
+                "dtw": 88.46444483028499,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GICRE": {
+                "dtw": 89.47651202979688,
+                "entry": 25.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "SDBL": {
+                "dtw": 87.52459376613325,
+                "entry": 10.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
             "ROML": {
                 "dtw": 89.27154189226691,
                 "entry": 70.0,
                 "vision": 85.0,
                 "sector": 50.0
             },
-            "BHEL": {
-                "dtw": 87.04282196249305,
-                "entry": 55.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
             "APOLLO": {
                 "dtw": 86.43032504176743,
                 "entry": 40.0,
-                "vision": 76.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "PGHL": {
+                "dtw": 86.22592601642145,
+                "entry": 70.0,
+                "vision": 73.0,
+                "sector": 50.0
+            },
+            "EXIDEIND": {
+                "dtw": 86.77744716454444,
+                "entry": 55.0,
+                "vision": 79.0,
+                "sector": 50.0
+            },
+            "ABB": {
+                "dtw": 89.15821243937506,
+                "entry": 25.0,
+                "vision": 90.0,
+                "sector": 50.0
+            },
+            "SHRADHA": {
+                "dtw": 88.20096111128512,
+                "entry": 14.021127287434755,
+                "vision": 85.0,
                 "sector": 50.0
             }
         },
         "trades": [
-            {
-                "symbol": "BERGEPAINT",
-                "entry_price": 460.7,
-                "current_price": 473.1,
-                "outcome": "OPEN",
-                "pnl": 2.69,
-                "exit_date": "N/A"
-            },
             {
                 "symbol": "ANDHRSUGAR",
                 "entry_price": 83.86,
@@ -1860,11 +2162,43 @@
                 "exit_date": "N/A"
             },
             {
-                "symbol": "EXIDEIND",
-                "entry_price": 324.8,
-                "current_price": 360.55,
+                "symbol": "ASIANPAINT",
+                "entry_price": 2352.4,
+                "current_price": 2444.5,
                 "outcome": "OPEN",
-                "pnl": 11.01,
+                "pnl": 3.92,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BERGEPAINT",
+                "entry_price": 460.7,
+                "current_price": 473.1,
+                "outcome": "OPEN",
+                "pnl": 2.69,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BHEL",
+                "entry_price": 287.77,
+                "current_price": 352.41,
+                "outcome": "OPEN",
+                "pnl": 22.46,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ESABINDIA",
+                "entry_price": 5401.2,
+                "current_price": 6266.9,
+                "outcome": "OPEN",
+                "pnl": 16.03,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ESG",
+                "entry_price": 40.62,
+                "current_price": 40.89,
+                "outcome": "OPEN",
+                "pnl": 0.66,
                 "exit_date": "N/A"
             },
             {
@@ -1874,6 +2208,22 @@
                 "outcome": "OPEN",
                 "pnl": 4.03,
                 "exit_date": "N/A"
+            },
+            {
+                "symbol": "PGHL",
+                "entry_price": 4976.1,
+                "current_price": 5216.9,
+                "outcome": "OPEN",
+                "pnl": 4.84,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "EXIDEIND",
+                "entry_price": 324.8,
+                "current_price": 360.55,
+                "outcome": "OPEN",
+                "pnl": 11.01,
+                "exit_date": "N/A"
             }
         ]
     },
@@ -1882,26 +2232,45 @@
         "market_regime": "BULLISH",
         "gate_1_candidates": [
             "BHEL",
-            "GICRE"
+            "BHARATGEAR",
+            "GICRE",
+            "KEEPLEARN",
+            "DCW",
+            "ADL",
+            "AARTIIND",
+            "STYRENIX"
         ],
         "gate_1_incubator": [
             "BHARATGEAR",
+            "STYRENIX",
             "AARTIIND",
-            "ADL",
-            "KEEPLEARN",
             "DCW",
-            "STYRENIX"
+            "ADL",
+            "KEEPLEARN"
         ],
         "gate_2_approved": [
-            "KEEPLEARN",
+            "BHEL",
             "DCW",
-            "BHEL"
+            "AARTIIND",
+            "KEEPLEARN"
         ],
         "agent_scores": {
-            "KEEPLEARN": {
-                "dtw": 91.75187076953391,
-                "entry": 110.0,
+            "BHEL": {
+                "dtw": 87.04282196249305,
+                "entry": 55.0,
+                "vision": 88.0,
+                "sector": 50.0
+            },
+            "BHARATGEAR": {
+                "dtw": 89.77138685330365,
+                "entry": 25.0,
                 "vision": 85.0,
+                "sector": 50.0
+            },
+            "GICRE": {
+                "dtw": 89.47651202979688,
+                "entry": 25.0,
+                "vision": 82.0,
                 "sector": 50.0
             },
             "DCW": {
@@ -1910,50 +2279,38 @@
                 "vision": 80.0,
                 "sector": 50.0
             },
-            "AARTIIND": {
-                "dtw": 85.37568731965895,
-                "entry": 73.89299156600012,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "GICRE": {
-                "dtw": 89.47651202979688,
-                "entry": 25.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
             "ADL": {
                 "dtw": 90.49965801720009,
-                "entry": 40.74442158974658,
-                "vision": 79.0,
+                "entry": 40.74442158974939,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "AARTIIND": {
+                "dtw": 85.37568731965895,
+                "entry": 73.89299156600009,
+                "vision": 80.0,
                 "sector": 50.0
             },
             "STYRENIX": {
                 "dtw": 87.78360796750141,
                 "entry": 25.0,
-                "vision": 82.0,
+                "vision": 80.0,
                 "sector": 50.0
             },
-            "BHARATGEAR": {
-                "dtw": 89.77138685330365,
-                "entry": 25.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "BHEL": {
-                "dtw": 87.04282196249305,
-                "entry": 55.0,
+            "KEEPLEARN": {
+                "dtw": 91.75187076953391,
+                "entry": 110.0,
                 "vision": 85.0,
                 "sector": 50.0
             }
         },
         "trades": [
             {
-                "symbol": "KEEPLEARN",
-                "entry_price": 1.99,
-                "current_price": 2.08,
+                "symbol": "BHEL",
+                "entry_price": 292.5,
+                "current_price": 352.41,
                 "outcome": "OPEN",
-                "pnl": 4.52,
+                "pnl": 20.48,
                 "exit_date": "N/A"
             },
             {
@@ -1965,11 +2322,19 @@
                 "exit_date": "N/A"
             },
             {
-                "symbol": "BHEL",
-                "entry_price": 292.5,
-                "current_price": 352.41,
+                "symbol": "AARTIIND",
+                "entry_price": 431.7,
+                "current_price": 507.5,
                 "outcome": "OPEN",
-                "pnl": 20.48,
+                "pnl": 17.56,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "KEEPLEARN",
+                "entry_price": 1.99,
+                "current_price": 2.08,
+                "outcome": "OPEN",
+                "pnl": 4.52,
                 "exit_date": "N/A"
             }
         ]
@@ -1978,53 +2343,61 @@
         "date": "2026-04-15",
         "market_regime": "BULLISH",
         "gate_1_candidates": [
-            "GRAPHITE",
-            "ARVIND",
-            "MAHLOG",
-            "GICRE",
-            "ABB",
             "BHARATFORG",
-            "CGPOWER"
+            "UTIAMC",
+            "DNAMEDIA",
+            "BHARATGEAR",
+            "GICRE",
+            "EVERESTIND",
+            "ESABINDIA",
+            "MARINE",
+            "ARVIND",
+            "PGHL",
+            "GRAPHITE",
+            "AARTIIND",
+            "IGARASHI",
+            "CGPOWER",
+            "ABB",
+            "AEGISLOG",
+            "MAHLOG",
+            "GICHSGFIN"
         ],
         "gate_1_incubator": [
-            "PGHL",
-            "GICHSGFIN",
             "AARTIIND",
-            "AEGISLOG",
-            "BHARATGEAR",
             "MARINE",
-            "IGARASHI",
-            "DNAMEDIA",
+            "GICHSGFIN",
             "UTIAMC",
-            "ESABINDIA",
-            "EVERESTIND"
+            "BHARATGEAR",
+            "PGHL",
+            "EVERESTIND",
+            "DNAMEDIA",
+            "IGARASHI",
+            "AEGISLOG",
+            "ESABINDIA"
         ],
         "gate_2_approved": [
+            "BHARATFORG",
+            "ESABINDIA",
+            "ARVIND",
+            "PGHL",
             "AARTIIND",
-            "MARINE",
             "IGARASHI"
         ],
         "agent_scores": {
             "BHARATFORG": {
                 "dtw": 89.13368626071372,
-                "entry": 92.88434754085748,
+                "entry": 92.88434754085732,
                 "vision": 80.0,
                 "sector": 50.0
             },
-            "MAHLOG": {
-                "dtw": 88.23966553022647,
-                "entry": 25.0,
-                "vision": 75.0,
+            "DNAMEDIA": {
+                "dtw": 90.91772857039675,
+                "entry": 40.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
-            "PGHL": {
-                "dtw": 86.22592601642145,
-                "entry": 70.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "ABB": {
-                "dtw": 89.15821243937506,
+            "BHARATGEAR": {
+                "dtw": 89.77138685330365,
                 "entry": 25.0,
                 "vision": 85.0,
                 "sector": 50.0
@@ -2032,24 +2405,54 @@
             "GICRE": {
                 "dtw": 89.47651202979688,
                 "entry": 25.0,
-                "vision": 50.0,
+                "vision": 80.0,
                 "sector": 50.0
             },
-            "AARTIIND": {
-                "dtw": 85.37568731965895,
-                "entry": 73.89299156600012,
-                "vision": 70.0,
+            "EVERESTIND": {
+                "dtw": 87.7744796503113,
+                "entry": 10.0,
+                "vision": 80.0,
                 "sector": 50.0
             },
-            "ARVIND": {
-                "dtw": 93.79074688231795,
+            "ESABINDIA": {
+                "dtw": 87.16830067624689,
                 "entry": 70.0,
-                "vision": 50.0,
+                "vision": 79.0,
                 "sector": 50.0
             },
             "MARINE": {
                 "dtw": 88.12301114249627,
                 "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "MAHLOG": {
+                "dtw": 88.23966553022647,
+                "entry": 25.0,
+                "vision": 79.0,
+                "sector": 50.0
+            },
+            "ARVIND": {
+                "dtw": 93.79074688231795,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "PGHL": {
+                "dtw": 86.22592601642145,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GRAPHITE": {
+                "dtw": 83.76458609626233,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "AARTIIND": {
+                "dtw": 85.37568731965895,
+                "entry": 73.89299156600009,
                 "vision": 85.0,
                 "sector": 50.0
             },
@@ -2059,16 +2462,28 @@
                 "vision": 85.0,
                 "sector": 50.0
             },
-            "GRAPHITE": {
-                "dtw": 83.76458609626233,
-                "entry": 10.0,
-                "vision": 50.0,
+            "CGPOWER": {
+                "dtw": 86.64591343667763,
+                "entry": 27.472532297863612,
+                "vision": 85.0,
                 "sector": 50.0
             },
-            "EVERESTIND": {
-                "dtw": 87.7744796503113,
-                "entry": 10.0,
+            "ABB": {
+                "dtw": 89.15821243937506,
+                "entry": 25.0,
                 "vision": 85.0,
+                "sector": 50.0
+            },
+            "AEGISLOG": {
+                "dtw": 85.05237127811179,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "UTIAMC": {
+                "dtw": 86.8503922217584,
+                "entry": 32.499275082856336,
+                "vision": 79.0,
                 "sector": 50.0
             },
             "GICHSGFIN": {
@@ -2076,59 +2491,47 @@
                 "entry": 25.0,
                 "vision": 80.0,
                 "sector": 50.0
-            },
-            "AEGISLOG": {
-                "dtw": 85.05237127811179,
-                "entry": 25.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
-            "BHARATGEAR": {
-                "dtw": 89.77138685330365,
-                "entry": 25.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "DNAMEDIA": {
-                "dtw": 90.91772857039675,
-                "entry": 40.0,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "UTIAMC": {
-                "dtw": 86.8503922217584,
-                "entry": 32.499275082856336,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "CGPOWER": {
-                "dtw": 86.64591343667763,
-                "entry": 27.47253229786362,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "ESABINDIA": {
-                "dtw": 87.16830067624689,
-                "entry": 70.0,
-                "vision": 50.0,
-                "sector": 50.0
             }
         },
         "trades": [
+            {
+                "symbol": "BHARATFORG",
+                "entry_price": 1831.6,
+                "current_price": 1881.6,
+                "outcome": "OPEN",
+                "pnl": 2.73,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ESABINDIA",
+                "entry_price": 5463.6,
+                "current_price": 6266.9,
+                "outcome": "OPEN",
+                "pnl": 14.7,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ARVIND",
+                "entry_price": 388.65,
+                "current_price": 398.55,
+                "outcome": "OPEN",
+                "pnl": 2.55,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "PGHL",
+                "entry_price": 4939.2,
+                "current_price": 5216.9,
+                "outcome": "OPEN",
+                "pnl": 5.62,
+                "exit_date": "N/A"
+            },
             {
                 "symbol": "AARTIIND",
                 "entry_price": 431.7,
                 "current_price": 507.5,
                 "outcome": "OPEN",
                 "pnl": 17.56,
-                "exit_date": "N/A"
-            },
-            {
-                "symbol": "MARINE",
-                "entry_price": 200.84,
-                "current_price": 229.3,
-                "outcome": "OPEN",
-                "pnl": 14.17,
                 "exit_date": "N/A"
             },
             {
@@ -2145,93 +2548,69 @@
         "date": "2026-04-16",
         "market_regime": "BULLISH",
         "gate_1_candidates": [
+            "FINCABLES",
+            "DCMSHRIRAM",
+            "GIPCL",
+            "BHARATGEAR",
+            "ASHAPURMIN",
+            "MARINE",
             "GRAPHITE",
-            "ELGIEQUIP",
-            "GICRE",
-            "MAHLOG",
-            "ABB",
-            "ARVIND",
             "ICICIB22",
-            "AUROPHARMA",
-            "CGPOWER",
-            "FINCABLES"
-        ],
-        "gate_1_incubator": [
+            "GLAND",
             "SINTERCOM",
             "CANFINHOME",
-            "MARINE",
-            "BHARATGEAR",
-            "PGHL",
-            "ZENSARTECH",
-            "DCMSHRIRAM",
+            "BEPL",
             "ADL",
+            "ELGIEQUIP",
             "CESC",
+            "ARVIND",
+            "MAHLOG",
+            "AUROPHARMA",
+            "GICRE",
+            "ADOR",
+            "ZENSARTECH",
+            "PGHL",
+            "CGPOWER",
+            "ABB",
+            "UTIAMC"
+        ],
+        "gate_1_incubator": [
+            "BHARATGEAR",
+            "ZENSARTECH",
+            "BEPL",
+            "PGHL",
             "ASHAPURMIN",
+            "SINTERCOM",
             "UTIAMC",
+            "ADL",
             "GIPCL",
             "ADOR",
-            "BEPL",
+            "CESC",
+            "CANFINHOME",
+            "MARINE",
+            "DCMSHRIRAM",
             "GLAND"
         ],
         "gate_2_approved": [
-            "PGHL",
-            "GIPCL",
             "FINCABLES",
-            "DCMSHRIRAM"
+            "DCMSHRIRAM",
+            "GIPCL",
+            "ICICIB22",
+            "CESC",
+            "ARVIND",
+            "PGHL"
         ],
         "agent_scores": {
-            "BEPL": {
-                "dtw": 87.26321505387304,
-                "entry": 10.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
-            "ICICIB22": {
-                "dtw": 90.40909793114689,
-                "entry": 40.0,
-                "vision": 79.0,
-                "sector": 50.0
-            },
-            "BHARATGEAR": {
-                "dtw": 89.77138685330365,
-                "entry": 25.0,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "ELGIEQUIP": {
-                "dtw": 86.74842879771285,
-                "entry": 40.0,
-                "vision": 79.0,
-                "sector": 50.0
-            },
-            "CESC": {
-                "dtw": 83.77098917202295,
+            "FINCABLES": {
+                "dtw": 86.02627414255912,
                 "entry": 55.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "PGHL": {
-                "dtw": 86.22592601642145,
-                "entry": 70.0,
-                "vision": 78.0,
-                "sector": 50.0
-            },
-            "UTIAMC": {
-                "dtw": 86.8503922217584,
-                "entry": 32.499275082856336,
-                "vision": 70.0,
-                "sector": 50.0
-            },
-            "ASHAPURMIN": {
-                "dtw": 85.78206458558459,
-                "entry": 40.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "ZENSARTECH": {
-                "dtw": 94.43120261172207,
-                "entry": 10.0,
                 "vision": 85.0,
+                "sector": 50.0
+            },
+            "DCMSHRIRAM": {
+                "dtw": 85.6602840501371,
+                "entry": 115.0,
+                "vision": 80.0,
                 "sector": 50.0
             },
             "GIPCL": {
@@ -2240,27 +2619,39 @@
                 "vision": 80.0,
                 "sector": 50.0
             },
-            "FINCABLES": {
-                "dtw": 86.02627414255912,
-                "entry": 55.0,
-                "vision": 80.0,
+            "BHARATGEAR": {
+                "dtw": 89.77138685330365,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ASHAPURMIN": {
+                "dtw": 85.78206458558459,
+                "entry": 40.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
             "MARINE": {
                 "dtw": 88.12301114249627,
                 "entry": 40.0,
-                "vision": 50.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
-            "ADL": {
-                "dtw": 90.49965801720009,
-                "entry": 40.74442158974658,
-                "vision": 75.0,
+            "GRAPHITE": {
+                "dtw": 83.76458609626233,
+                "entry": 10.0,
+                "vision": 80.0,
                 "sector": 50.0
             },
-            "DCMSHRIRAM": {
-                "dtw": 85.6602840501371,
-                "entry": 115.0,
+            "ICICIB22": {
+                "dtw": 90.40909793114689,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GLAND": {
+                "dtw": 89.65368292073981,
+                "entry": 43.72570408867621,
                 "vision": 75.0,
                 "sector": 50.0
             },
@@ -2270,84 +2661,98 @@
                 "vision": 85.0,
                 "sector": 50.0
             },
-            "MAHLOG": {
-                "dtw": 88.23966553022647,
-                "entry": 25.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "ABB": {
-                "dtw": 89.15821243937506,
-                "entry": 25.0,
-                "vision": 82.0,
-                "sector": 50.0
-            },
-            "GICRE": {
-                "dtw": 89.47651202979688,
-                "entry": 25.0,
-                "vision": 72.0,
-                "sector": 50.0
-            },
-            "ARVIND": {
-                "dtw": 93.79074688231795,
-                "entry": 70.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "GRAPHITE": {
-                "dtw": 83.76458609626233,
-                "entry": 10.0,
-                "vision": 83.0,
-                "sector": 50.0
-            },
             "CANFINHOME": {
                 "dtw": 86.53791409845388,
                 "entry": 10.0,
                 "vision": 80.0,
                 "sector": 50.0
             },
-            "ADOR": {
-                "dtw": 83.918395753919,
-                "entry": 95.0,
-                "vision": 82.0,
+            "BEPL": {
+                "dtw": 87.26321505387304,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ADL": {
+                "dtw": 90.49965801720009,
+                "entry": 40.74442158974939,
+                "vision": 83.0,
+                "sector": 50.0
+            },
+            "ELGIEQUIP": {
+                "dtw": 86.74842879771285,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CESC": {
+                "dtw": 83.77098917202295,
+                "entry": 55.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "ARVIND": {
+                "dtw": 93.79074688231795,
+                "entry": 70.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "MAHLOG": {
+                "dtw": 88.23966553022647,
+                "entry": 25.0,
+                "vision": 78.0,
                 "sector": 50.0
             },
             "AUROPHARMA": {
                 "dtw": 84.06193540306154,
                 "entry": 10.0,
-                "vision": 50.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "GICRE": {
+                "dtw": 89.47651202979688,
+                "entry": 25.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "ADOR": {
+                "dtw": 83.918395753919,
+                "entry": 95.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ZENSARTECH": {
+                "dtw": 94.43120261172207,
+                "entry": 10.0,
+                "vision": 70.0,
+                "sector": 50.0
+            },
+            "PGHL": {
+                "dtw": 86.22592601642145,
+                "entry": 70.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
             "CGPOWER": {
                 "dtw": 86.64591343667763,
-                "entry": 27.47253229786362,
-                "vision": 82.0,
+                "entry": 27.472532297863612,
+                "vision": 85.0,
                 "sector": 50.0
             },
-            "GLAND": {
-                "dtw": 89.65368292073981,
-                "entry": 43.725704088678555,
-                "vision": 80.0,
+            "ABB": {
+                "dtw": 89.15821243937506,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "UTIAMC": {
+                "dtw": 86.8503922217584,
+                "entry": 32.499275082856336,
+                "vision": 85.0,
                 "sector": 50.0
             }
         },
         "trades": [
-            {
-                "symbol": "PGHL",
-                "entry_price": 4997.7,
-                "current_price": 5216.9,
-                "outcome": "OPEN",
-                "pnl": 4.39,
-                "exit_date": "N/A"
-            },
-            {
-                "symbol": "GIPCL",
-                "entry_price": 153.9,
-                "current_price": 156.85,
-                "outcome": "OPEN",
-                "pnl": 1.92,
-                "exit_date": "N/A"
-            },
             {
                 "symbol": "FINCABLES",
                 "entry_price": 913.55,
@@ -2363,6 +2768,46 @@
                 "outcome": "OPEN",
                 "pnl": 3.59,
                 "exit_date": "N/A"
+            },
+            {
+                "symbol": "GIPCL",
+                "entry_price": 153.9,
+                "current_price": 156.85,
+                "outcome": "OPEN",
+                "pnl": 1.92,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ICICIB22",
+                "entry_price": 123.88,
+                "current_price": 124.46,
+                "outcome": "OPEN",
+                "pnl": 0.47,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "CESC",
+                "entry_price": 170.48,
+                "current_price": 187.53,
+                "outcome": "OPEN",
+                "pnl": 10.0,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ARVIND",
+                "entry_price": 385.15,
+                "current_price": 398.55,
+                "outcome": "OPEN",
+                "pnl": 3.48,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "PGHL",
+                "entry_price": 4997.7,
+                "current_price": 5216.9,
+                "outcome": "OPEN",
+                "pnl": 4.39,
+                "exit_date": "N/A"
             }
         ]
     },
@@ -2370,73 +2815,155 @@
         "date": "2026-04-19",
         "market_regime": "BULLISH",
         "gate_1_candidates": [
-            "MAHLOG",
-            "ABB",
-            "ARVIND",
             "FINCABLES",
-            "CGPOWER"
-        ],
-        "gate_1_incubator": [
-            "FACT",
-            "DANGEE",
-            "BEML",
-            "STYRENIX",
-            "ESABINDIA",
-            "GFLLIMITED",
-            "CRISIL",
-            "CESC",
-            "BALKRISIND",
-            "UTIAMC",
+            "BHARATGEAR",
             "ASHAPURMIN",
+            "BEML",
             "AEGISLOG",
             "CAMS",
-            "GLAND",
-            "GNFC",
-            "SINTERCOM",
             "IFGLEXPOR",
-            "BHARATGEAR",
+            "GLAND",
+            "GFLLIMITED",
+            "BALKRISIND",
+            "SINTERCOM",
+            "ESABINDIA",
             "ADL",
-            "GODFRYPHLP"
+            "CRISIL",
+            "CESC",
+            "ARVIND",
+            "STYRENIX",
+            "DANGEE",
+            "MAHLOG",
+            "FACT",
+            "GNFC",
+            "GODFRYPHLP",
+            "CGPOWER",
+            "ABB",
+            "UTIAMC"
+        ],
+        "gate_1_incubator": [
+            "GODFRYPHLP",
+            "BHARATGEAR",
+            "GNFC",
+            "IFGLEXPOR",
+            "SINTERCOM",
+            "ADL",
+            "UTIAMC",
+            "STYRENIX",
+            "DANGEE",
+            "GFLLIMITED",
+            "GLAND",
+            "CESC",
+            "CRISIL",
+            "FACT",
+            "ESABINDIA",
+            "BALKRISIND",
+            "ASHAPURMIN",
+            "BEML",
+            "CAMS",
+            "AEGISLOG"
         ],
         "gate_2_approved": [
-            "ESABINDIA",
-            "CESC",
-            "UTIAMC",
-            "FACT",
-            "ADL",
+            "FINCABLES",
+            "BEML",
             "CAMS",
             "GFLLIMITED",
-            "ARVIND"
+            "BALKRISIND",
+            "ESABINDIA",
+            "CESC",
+            "ARVIND",
+            "GODFRYPHLP",
+            "STYRENIX"
         ],
         "agent_scores": {
-            "CRISIL": {
-                "dtw": 88.6201954289831,
-                "entry": 40.0,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "GNFC": {
-                "dtw": 89.47282509147423,
-                "entry": 25.0,
+            "FINCABLES": {
+                "dtw": 86.02627414255912,
+                "entry": 55.0,
                 "vision": 85.0,
                 "sector": 50.0
             },
             "BHARATGEAR": {
                 "dtw": 89.77138685330365,
                 "entry": 25.0,
+                "vision": 90.0,
+                "sector": 50.0
+            },
+            "BEML": {
+                "dtw": 88.25419501484667,
+                "entry": 55.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "ASHAPURMIN": {
+                "dtw": 85.78206458558459,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "AEGISLOG": {
+                "dtw": 85.05237127811179,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CAMS": {
+                "dtw": 89.4533970117311,
+                "entry": 64.72129493165261,
+                "vision": 79.0,
+                "sector": 50.0
+            },
+            "IFGLEXPOR": {
+                "dtw": 91.16899812752024,
+                "entry": 40.0,
+                "vision": 89.0,
+                "sector": 50.0
+            },
+            "UTIAMC": {
+                "dtw": 86.8503922217584,
+                "entry": 32.499275082856336,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "GLAND": {
+                "dtw": 89.65368292073981,
+                "entry": 43.72570408867621,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "GFLLIMITED": {
+                "dtw": 90.26001191632778,
+                "entry": 70.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "BALKRISIND": {
+                "dtw": 90.53317325720128,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "SINTERCOM": {
+                "dtw": 88.76007659478385,
+                "entry": 10.0,
                 "vision": 85.0,
                 "sector": 50.0
             },
             "ESABINDIA": {
                 "dtw": 87.16830067624689,
                 "entry": 70.0,
+                "vision": 77.0,
+                "sector": 50.0
+            },
+            "ADL": {
+                "dtw": 90.49965801720009,
+                "entry": 40.74442158974939,
                 "vision": 85.0,
                 "sector": 50.0
             },
-            "DANGEE": {
-                "dtw": 85.89776648571677,
-                "entry": 10.0,
-                "vision": 50.0,
+            "CRISIL": {
+                "dtw": 88.6201954289831,
+                "entry": 40.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
             "CESC": {
@@ -2445,160 +2972,76 @@
                 "vision": 85.0,
                 "sector": 50.0
             },
-            "GODFRYPHLP": {
-                "dtw": 87.59318332403362,
-                "entry": 55.0,
-                "vision": 50.0,
+            "ARVIND": {
+                "dtw": 93.79074688231795,
+                "entry": 70.0,
+                "vision": 72.0,
                 "sector": 50.0
             },
-            "UTIAMC": {
-                "dtw": 86.8503922217584,
-                "entry": 32.499275082856336,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "ASHAPURMIN": {
-                "dtw": 85.78206458558459,
-                "entry": 40.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "FACT": {
-                "dtw": 89.04483586631956,
-                "entry": 40.0,
-                "vision": 90.0,
-                "sector": 50.0
-            },
-            "FINCABLES": {
-                "dtw": 86.02627414255912,
-                "entry": 55.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "ADL": {
-                "dtw": 90.49965801720009,
-                "entry": 40.74442158974658,
-                "vision": 80.0,
-                "sector": 50.0
-            },
-            "STYRENIX": {
-                "dtw": 87.78360796750141,
-                "entry": 25.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "BEML": {
-                "dtw": 88.25419501484667,
-                "entry": 55.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "SINTERCOM": {
-                "dtw": 88.76007659478385,
+            "DANGEE": {
+                "dtw": 85.89776648571677,
                 "entry": 10.0,
-                "vision": 80.0,
-                "sector": 50.0
-            },
-            "IFGLEXPOR": {
-                "dtw": 91.16899812752024,
-                "entry": 40.0,
                 "vision": 50.0,
-                "sector": 50.0
-            },
-            "CAMS": {
-                "dtw": 89.4533970117311,
-                "entry": 64.72129493165261,
-                "vision": 80.0,
                 "sector": 50.0
             },
             "MAHLOG": {
                 "dtw": 88.23966553022647,
                 "entry": 25.0,
-                "vision": 80.0,
+                "vision": 85.0,
                 "sector": 50.0
             },
-            "GFLLIMITED": {
-                "dtw": 90.26001191632778,
-                "entry": 70.0,
-                "vision": 75.0,
+            "FACT": {
+                "dtw": 89.04483586631956,
+                "entry": 40.0,
+                "vision": 87.0,
+                "sector": 50.0
+            },
+            "GNFC": {
+                "dtw": 89.47282509147423,
+                "entry": 25.0,
+                "vision": 79.0,
+                "sector": 50.0
+            },
+            "GODFRYPHLP": {
+                "dtw": 87.59318332403362,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CGPOWER": {
+                "dtw": 86.64591343667763,
+                "entry": 27.472532297863612,
+                "vision": 80.0,
                 "sector": 50.0
             },
             "ABB": {
                 "dtw": 89.15821243937506,
                 "entry": 25.0,
-                "vision": 50.0,
+                "vision": 88.0,
                 "sector": 50.0
             },
-            "ARVIND": {
-                "dtw": 93.79074688231795,
-                "entry": 70.0,
-                "vision": 77.0,
-                "sector": 50.0
-            },
-            "BALKRISIND": {
-                "dtw": 90.53317325720128,
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
                 "entry": 25.0,
-                "vision": 70.0,
-                "sector": 50.0
-            },
-            "AEGISLOG": {
-                "dtw": 85.05237127811179,
-                "entry": 25.0,
-                "vision": 50.0,
-                "sector": 50.0
-            },
-            "CGPOWER": {
-                "dtw": 86.64591343667763,
-                "entry": 27.47253229786362,
-                "vision": 85.0,
-                "sector": 50.0
-            },
-            "GLAND": {
-                "dtw": 89.65368292073981,
-                "entry": 43.725704088678555,
-                "vision": 50.0,
+                "vision": 75.0,
                 "sector": 50.0
             }
         },
         "trades": [
             {
-                "symbol": "ESABINDIA",
-                "entry_price": 5791.5,
-                "current_price": 6266.9,
+                "symbol": "FINCABLES",
+                "entry_price": 946.55,
+                "current_price": 990.55,
                 "outcome": "OPEN",
-                "pnl": 8.21,
+                "pnl": 4.65,
                 "exit_date": "N/A"
             },
             {
-                "symbol": "CESC",
-                "entry_price": 179.42,
-                "current_price": 187.53,
+                "symbol": "BEML",
+                "entry_price": 1744.2,
+                "current_price": 1806.1,
                 "outcome": "OPEN",
-                "pnl": 4.52,
-                "exit_date": "N/A"
-            },
-            {
-                "symbol": "UTIAMC",
-                "entry_price": 1032.3,
-                "current_price": 950.0,
-                "outcome": "OPEN",
-                "pnl": -7.97,
-                "exit_date": "N/A"
-            },
-            {
-                "symbol": "FACT",
-                "entry_price": 891.05,
-                "current_price": 899.2,
-                "outcome": "OPEN",
-                "pnl": 0.91,
-                "exit_date": "N/A"
-            },
-            {
-                "symbol": "ADL",
-                "entry_price": 75.89,
-                "current_price": 75.99,
-                "outcome": "OPEN",
-                "pnl": 0.13,
+                "pnl": 3.55,
                 "exit_date": "N/A"
             },
             {
@@ -2618,11 +3061,1353 @@
                 "exit_date": "N/A"
             },
             {
+                "symbol": "BALKRISIND",
+                "entry_price": 2282.0,
+                "current_price": 2160.8,
+                "outcome": "OPEN",
+                "pnl": -5.31,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ESABINDIA",
+                "entry_price": 5791.5,
+                "current_price": 6266.9,
+                "outcome": "OPEN",
+                "pnl": 8.21,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "CESC",
+                "entry_price": 179.42,
+                "current_price": 187.53,
+                "outcome": "OPEN",
+                "pnl": 4.52,
+                "exit_date": "N/A"
+            },
+            {
                 "symbol": "ARVIND",
                 "entry_price": 385.2,
                 "current_price": 398.55,
                 "outcome": "OPEN",
                 "pnl": 3.47,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "GODFRYPHLP",
+                "entry_price": 2137.8,
+                "current_price": 2251.0,
+                "outcome": "OPEN",
+                "pnl": 5.3,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "STYRENIX",
+                "entry_price": 2183.9,
+                "current_price": 2260.9,
+                "outcome": "OPEN",
+                "pnl": 3.53,
+                "exit_date": "N/A"
+            }
+        ]
+    },
+    {
+        "date": "2026-04-20",
+        "market_regime": "BULLISH",
+        "gate_1_candidates": [
+            "DPABHUSHAN",
+            "GIPCL",
+            "ADOR",
+            "ESABINDIA",
+            "CRISIL",
+            "BALRAMCHIN",
+            "AEGISLOG",
+            "PGHL",
+            "FEDERALBNK",
+            "GRAPHITE",
+            "TIINDIA",
+            "CGPOWER",
+            "STYRENIX"
+        ],
+        "gate_1_incubator": [
+            "STYRENIX",
+            "PGHL",
+            "CRISIL",
+            "AEGISLOG",
+            "DPABHUSHAN",
+            "TIINDIA",
+            "ESABINDIA",
+            "ADOR",
+            "GIPCL",
+            "BALRAMCHIN"
+        ],
+        "gate_2_approved": [
+            "GIPCL",
+            "ESABINDIA",
+            "BALRAMCHIN",
+            "PGHL",
+            "FEDERALBNK"
+        ],
+        "agent_scores": {
+            "DPABHUSHAN": {
+                "dtw": 87.94384171209796,
+                "entry": 17.319356991133503,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GIPCL": {
+                "dtw": 87.54040280852328,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ADOR": {
+                "dtw": 83.918395753919,
+                "entry": 95.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "ESABINDIA": {
+                "dtw": 87.16830067624689,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CRISIL": {
+                "dtw": 88.6201954289831,
+                "entry": 40.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "BALRAMCHIN": {
+                "dtw": 84.72583819314588,
+                "entry": 115.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "AEGISLOG": {
+                "dtw": 85.05237127811179,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "PGHL": {
+                "dtw": 86.22592601642145,
+                "entry": 70.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "FEDERALBNK": {
+                "dtw": 90.17839160182457,
+                "entry": 68.10463459522435,
+                "vision": 70.0,
+                "sector": 50.0
+            },
+            "GRAPHITE": {
+                "dtw": 83.76458609626233,
+                "entry": 10.0,
+                "vision": 88.0,
+                "sector": 50.0
+            },
+            "TIINDIA": {
+                "dtw": 86.90099662769404,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CGPOWER": {
+                "dtw": 86.64591343667763,
+                "entry": 27.472532297863612,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "STYRENIX": {
+                "dtw": 87.78360796750141,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "GIPCL",
+                "entry_price": 154.79,
+                "current_price": 156.85,
+                "outcome": "OPEN",
+                "pnl": 1.33,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ESABINDIA",
+                "entry_price": 5791.5,
+                "current_price": 6266.9,
+                "outcome": "OPEN",
+                "pnl": 8.21,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BALRAMCHIN",
+                "entry_price": 515.7,
+                "current_price": 521.05,
+                "outcome": "OPEN",
+                "pnl": 1.04,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "PGHL",
+                "entry_price": 5086.0,
+                "current_price": 5216.9,
+                "outcome": "OPEN",
+                "pnl": 2.57,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "FEDERALBNK",
+                "entry_price": 294.35,
+                "current_price": 286.95,
+                "outcome": "OPEN",
+                "pnl": -2.51,
+                "exit_date": "N/A"
+            }
+        ]
+    },
+    {
+        "date": "2026-04-21",
+        "market_regime": "BULLISH",
+        "gate_1_candidates": [
+            "FINCABLES",
+            "ATUL",
+            "APCOTEXIND",
+            "CANFINHOME",
+            "ASHIMASYN",
+            "CRISIL",
+            "CENTENKA",
+            "TIINDIA",
+            "GRAPHITE",
+            "ALEMBICLTD",
+            "MASFIN",
+            "GICHSGFIN"
+        ],
+        "gate_1_incubator": [
+            "TIINDIA",
+            "CENTENKA",
+            "CRISIL",
+            "APCOTEXIND",
+            "MASFIN",
+            "ASHIMASYN",
+            "CANFINHOME",
+            "GICHSGFIN",
+            "ALEMBICLTD"
+        ],
+        "gate_2_approved": [
+            "FINCABLES",
+            "APCOTEXIND",
+            "ATUL",
+            "ASHIMASYN",
+            "MASFIN"
+        ],
+        "agent_scores": {
+            "FINCABLES": {
+                "dtw": 86.02627414255912,
+                "entry": 55.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "APCOTEXIND": {
+                "dtw": 91.92534015456529,
+                "entry": 70.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ATUL": {
+                "dtw": 88.61911500491493,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CANFINHOME": {
+                "dtw": 86.53791409845388,
+                "entry": 10.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "ASHIMASYN": {
+                "dtw": 90.26142956368189,
+                "entry": 67.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CRISIL": {
+                "dtw": 88.6201954289831,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CENTENKA": {
+                "dtw": 89.92485273028348,
+                "entry": 37.0,
+                "vision": 89.0,
+                "sector": 50.0
+            },
+            "TIINDIA": {
+                "dtw": 86.90099662769404,
+                "entry": 40.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "GRAPHITE": {
+                "dtw": 83.76458609626233,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ALEMBICLTD": {
+                "dtw": 91.17184304427073,
+                "entry": 10.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "MASFIN": {
+                "dtw": 88.67624734095163,
+                "entry": 115.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "GICHSGFIN": {
+                "dtw": 91.14849813022546,
+                "entry": 25.0,
+                "vision": 70.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "FINCABLES",
+                "entry_price": 953.5,
+                "current_price": 990.55,
+                "outcome": "OPEN",
+                "pnl": 3.89,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "APCOTEXIND",
+                "entry_price": 400.55,
+                "current_price": 402.4,
+                "outcome": "OPEN",
+                "pnl": 0.46,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ATUL",
+                "entry_price": 6557.0,
+                "current_price": 6817.5,
+                "outcome": "OPEN",
+                "pnl": 3.97,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ASHIMASYN",
+                "entry_price": 16.16,
+                "current_price": 15.96,
+                "outcome": "OPEN",
+                "pnl": -1.24,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "MASFIN",
+                "entry_price": 315.9,
+                "current_price": 339.9,
+                "outcome": "OPEN",
+                "pnl": 7.6,
+                "exit_date": "N/A"
+            }
+        ]
+    },
+    {
+        "date": "2026-04-22",
+        "market_regime": "BULLISH",
+        "gate_1_candidates": [
+            "DPABHUSHAN",
+            "BSL",
+            "IFGLEXPOR",
+            "BEML",
+            "DICIND",
+            "GATECHDVR",
+            "ELGIEQUIP",
+            "BALRAMCHIN",
+            "APOLLOHOSP",
+            "AARTIIND",
+            "SCHAEFFLER",
+            "EXIDEIND",
+            "IGARASHI",
+            "MAHLOG"
+        ],
+        "gate_1_incubator": [
+            "BALRAMCHIN",
+            "EXIDEIND",
+            "IGARASHI",
+            "DPABHUSHAN",
+            "DICIND",
+            "GATECHDVR",
+            "BSL",
+            "IFGLEXPOR",
+            "BEML"
+        ],
+        "gate_2_approved": [
+            "DPABHUSHAN",
+            "BEML",
+            "BALRAMCHIN",
+            "SCHAEFFLER",
+            "EXIDEIND"
+        ],
+        "agent_scores": {
+            "DPABHUSHAN": {
+                "dtw": 87.94384171209796,
+                "entry": 17.319356991133503,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BSL": {
+                "dtw": 87.97633014550152,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "IFGLEXPOR": {
+                "dtw": 91.16899812752024,
+                "entry": 40.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "BEML": {
+                "dtw": 88.25419501484667,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "DICIND": {
+                "dtw": 90.80881896681922,
+                "entry": 37.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "GATECHDVR": {
+                "dtw": 88.54684563546098,
+                "entry": 10.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "ELGIEQUIP": {
+                "dtw": 86.74842879771285,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BALRAMCHIN": {
+                "dtw": 84.72583819314588,
+                "entry": 115.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "APOLLOHOSP": {
+                "dtw": 87.55788931754812,
+                "entry": 26.29682364032398,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "AARTIIND": {
+                "dtw": 85.37568731965895,
+                "entry": 73.89299156600009,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "SCHAEFFLER": {
+                "dtw": 87.01625996957942,
+                "entry": 65.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "EXIDEIND": {
+                "dtw": 86.77744716454444,
+                "entry": 55.0,
+                "vision": 92.0,
+                "sector": 50.0
+            },
+            "IGARASHI": {
+                "dtw": 86.66197450544571,
+                "entry": 70.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "MAHLOG": {
+                "dtw": 88.23966553022647,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "DPABHUSHAN",
+                "entry_price": 1158.5,
+                "current_price": 1035.5,
+                "outcome": "OPEN",
+                "pnl": -10.62,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BEML",
+                "entry_price": 1830.9,
+                "current_price": 1806.1,
+                "outcome": "OPEN",
+                "pnl": -1.35,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BALRAMCHIN",
+                "entry_price": 541.55,
+                "current_price": 521.05,
+                "outcome": "OPEN",
+                "pnl": -3.79,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "SCHAEFFLER",
+                "entry_price": 4288.8,
+                "current_price": 4124.8,
+                "outcome": "OPEN",
+                "pnl": -3.82,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "EXIDEIND",
+                "entry_price": 354.55,
+                "current_price": 360.55,
+                "outcome": "OPEN",
+                "pnl": 1.69,
+                "exit_date": "N/A"
+            }
+        ]
+    },
+    {
+        "date": "2026-04-23",
+        "market_regime": "BULLISH",
+        "gate_1_candidates": [
+            "EUROTEXIND",
+            "EIDPARRY",
+            "AUROPHARMA",
+            "ATUL",
+            "DCM",
+            "BALMLAWRIE",
+            "CAMS",
+            "DRREDDY",
+            "DELTAMAGNT",
+            "BALRAMCHIN",
+            "5PAISA",
+            "GINNIFILA",
+            "COSMOFIRST",
+            "EXIDEIND",
+            "CIPLA",
+            "MAHLOG"
+        ],
+        "gate_1_incubator": [
+            "CIPLA",
+            "DRREDDY",
+            "GINNIFILA",
+            "CAMS",
+            "BALRAMCHIN",
+            "DCM",
+            "5PAISA",
+            "EUROTEXIND",
+            "EIDPARRY",
+            "DELTAMAGNT",
+            "EXIDEIND",
+            "COSMOFIRST",
+            "BALMLAWRIE"
+        ],
+        "gate_2_approved": [
+            "EIDPARRY",
+            "BALMLAWRIE",
+            "DRREDDY",
+            "BALRAMCHIN",
+            "5PAISA",
+            "GINNIFILA",
+            "COSMOFIRST",
+            "EXIDEIND"
+        ],
+        "agent_scores": {
+            "EUROTEXIND": {
+                "dtw": 86.61437142147975,
+                "entry": 40.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "EIDPARRY": {
+                "dtw": 89.48024694079253,
+                "entry": 78.41291534921218,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "ATUL": {
+                "dtw": 88.61911500491493,
+                "entry": 55.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "AUROPHARMA": {
+                "dtw": 84.06193540306154,
+                "entry": 10.0,
+                "vision": 72.0,
+                "sector": 50.0
+            },
+            "DCM": {
+                "dtw": 87.26894314673231,
+                "entry": 40.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "BALMLAWRIE": {
+                "dtw": 87.63687550938867,
+                "entry": 72.154793726469,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "DRREDDY": {
+                "dtw": 85.94715670748448,
+                "entry": 40.0,
+                "vision": 95.0,
+                "sector": 50.0
+            },
+            "DELTAMAGNT": {
+                "dtw": 92.23619509089347,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "BALRAMCHIN": {
+                "dtw": 84.72583819314588,
+                "entry": 115.0,
+                "vision": 90.0,
+                "sector": 50.0
+            },
+            "5PAISA": {
+                "dtw": 91.9479218752233,
+                "entry": 92.41642230772794,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "GINNIFILA": {
+                "dtw": 89.1442004576681,
+                "entry": 52.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CAMS": {
+                "dtw": 89.4533970117311,
+                "entry": 64.72129493165261,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "COSMOFIRST": {
+                "dtw": 87.80816448397472,
+                "entry": 55.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "EXIDEIND": {
+                "dtw": 86.77744716454444,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "CIPLA": {
+                "dtw": 85.9733679996825,
+                "entry": 55.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "MAHLOG": {
+                "dtw": 88.23966553022647,
+                "entry": 25.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "EIDPARRY",
+                "entry_price": 871.6,
+                "current_price": 844.0,
+                "outcome": "OPEN",
+                "pnl": -3.17,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BALMLAWRIE",
+                "entry_price": 179.61,
+                "current_price": 187.99,
+                "outcome": "OPEN",
+                "pnl": 4.67,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "DRREDDY",
+                "entry_price": 1331.0,
+                "current_price": 1322.9,
+                "outcome": "OPEN",
+                "pnl": -0.61,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BALRAMCHIN",
+                "entry_price": 540.3,
+                "current_price": 521.05,
+                "outcome": "OPEN",
+                "pnl": -3.56,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "5PAISA",
+                "entry_price": 336.59,
+                "current_price": 335.49,
+                "outcome": "OPEN",
+                "pnl": -0.33,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "GINNIFILA",
+                "entry_price": 43.89,
+                "current_price": 42.19,
+                "outcome": "OPEN",
+                "pnl": -3.87,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "COSMOFIRST",
+                "entry_price": 716.0,
+                "current_price": 713.75,
+                "outcome": "OPEN",
+                "pnl": -0.31,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "EXIDEIND",
+                "entry_price": 347.25,
+                "current_price": 360.55,
+                "outcome": "OPEN",
+                "pnl": 3.83,
+                "exit_date": "N/A"
+            }
+        ]
+    },
+    {
+        "date": "2026-04-26",
+        "market_regime": "BULLISH",
+        "gate_1_candidates": [
+            "ATUL",
+            "ARENTERP",
+            "21STCENMGM",
+            "DRREDDY",
+            "TIINDIA",
+            "SCHAEFFLER",
+            "CIPLA",
+            "MAHLOG"
+        ],
+        "gate_1_incubator": [
+            "CIPLA",
+            "ARENTERP",
+            "TIINDIA",
+            "21STCENMGM"
+        ],
+        "gate_2_approved": [
+            "ATUL",
+            "21STCENMGM",
+            "CIPLA"
+        ],
+        "agent_scores": {
+            "ATUL": {
+                "dtw": 88.61911500491493,
+                "entry": 55.0,
+                "vision": 83.0,
+                "sector": 50.0
+            },
+            "ARENTERP": {
+                "dtw": 91.24948546832647,
+                "entry": 10.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "21STCENMGM": {
+                "dtw": 84.73899081859535,
+                "entry": 70.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "DRREDDY": {
+                "dtw": 85.94715670748448,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "TIINDIA": {
+                "dtw": 86.90099662769404,
+                "entry": 40.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "SCHAEFFLER": {
+                "dtw": 87.01625996957942,
+                "entry": 65.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "CIPLA": {
+                "dtw": 85.9733679996825,
+                "entry": 55.0,
+                "vision": 78.0,
+                "sector": 50.0
+            },
+            "MAHLOG": {
+                "dtw": 88.23966553022647,
+                "entry": 25.0,
+                "vision": 50.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "ATUL",
+                "entry_price": 6700.0,
+                "current_price": 6817.5,
+                "outcome": "OPEN",
+                "pnl": 1.75,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "21STCENMGM",
+                "entry_price": 36.45,
+                "current_price": 36.58,
+                "outcome": "OPEN",
+                "pnl": 0.36,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "CIPLA",
+                "entry_price": 1317.2,
+                "current_price": 1309.6,
+                "outcome": "OPEN",
+                "pnl": -0.58,
+                "exit_date": "N/A"
+            }
+        ]
+    },
+    {
+        "date": "2026-04-27",
+        "market_regime": "BULLISH",
+        "gate_1_candidates": [
+            "ATUL",
+            "ELECTCAST",
+            "CANFINHOME",
+            "ROML",
+            "AMBER",
+            "ADOR",
+            "21STCENMGM",
+            "ESABINDIA",
+            "NEWGEN",
+            "BRITANNIA",
+            "SHALBY",
+            "AARTIIND",
+            "ROUTE",
+            "BPL"
+        ],
+        "gate_1_incubator": [
+            "CANFINHOME",
+            "NEWGEN",
+            "ELECTCAST",
+            "ROUTE",
+            "ADOR",
+            "ROML",
+            "21STCENMGM",
+            "SHALBY",
+            "BPL",
+            "BRITANNIA"
+        ],
+        "gate_2_approved": [
+            "ATUL",
+            "ADOR",
+            "21STCENMGM",
+            "NEWGEN",
+            "ROUTE",
+            "BPL"
+        ],
+        "agent_scores": {
+            "ATUL": {
+                "dtw": 88.61911500491493,
+                "entry": 55.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "ELECTCAST": {
+                "dtw": 90.00149451369025,
+                "entry": 40.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "CANFINHOME": {
+                "dtw": 86.53791409845388,
+                "entry": 10.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ROML": {
+                "dtw": 89.27154189226691,
+                "entry": 70.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "AMBER": {
+                "dtw": 88.33351985221667,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "ADOR": {
+                "dtw": 83.918395753919,
+                "entry": 95.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "21STCENMGM": {
+                "dtw": 84.73899081859535,
+                "entry": 70.0,
+                "vision": 82.0,
+                "sector": 50.0
+            },
+            "ESABINDIA": {
+                "dtw": 87.16830067624689,
+                "entry": 70.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "NEWGEN": {
+                "dtw": 88.41114679698816,
+                "entry": 115.0,
+                "vision": 75.0,
+                "sector": 50.0
+            },
+            "BRITANNIA": {
+                "dtw": 87.97309988970957,
+                "entry": 70.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "SHALBY": {
+                "dtw": 90.10638268755285,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "AARTIIND": {
+                "dtw": 85.37568731965895,
+                "entry": 73.89299156600009,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "ROUTE": {
+                "dtw": 90.1853494682278,
+                "entry": 55.0,
+                "vision": 79.0,
+                "sector": 50.0
+            },
+            "BPL": {
+                "dtw": 86.66553527677145,
+                "entry": 40.0,
+                "vision": 80.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "ATUL",
+                "entry_price": 6700.0,
+                "current_price": 6817.5,
+                "outcome": "OPEN",
+                "pnl": 1.75,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ADOR",
+                "entry_price": 1019.35,
+                "current_price": 1078.85,
+                "outcome": "OPEN",
+                "pnl": 5.84,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "21STCENMGM",
+                "entry_price": 36.45,
+                "current_price": 36.58,
+                "outcome": "OPEN",
+                "pnl": 0.36,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "NEWGEN",
+                "entry_price": 491.55,
+                "current_price": 505.75,
+                "outcome": "OPEN",
+                "pnl": 2.89,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ROUTE",
+                "entry_price": 531.6,
+                "current_price": 527.15,
+                "outcome": "OPEN",
+                "pnl": -0.84,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "BPL",
+                "entry_price": 57.3,
+                "current_price": 55.88,
+                "outcome": "OPEN",
+                "pnl": -2.48,
+                "exit_date": "N/A"
+            }
+        ]
+    },
+    {
+        "date": "2026-04-28",
+        "market_regime": "BULLISH",
+        "gate_1_candidates": [
+            "VALIANTORG",
+            "ATUL",
+            "CASTROLIND",
+            "UFLEX",
+            "AMBER",
+            "ADOR",
+            "GREAVESCOT",
+            "FMGOETZE",
+            "AARTIIND",
+            "GABRIEL",
+            "GRASIM"
+        ],
+        "gate_1_incubator": [
+            "GREAVESCOT",
+            "GABRIEL",
+            "ADOR",
+            "FMGOETZE",
+            "UFLEX",
+            "VALIANTORG",
+            "CASTROLIND",
+            "GRASIM"
+        ],
+        "gate_2_approved": [
+            "ATUL",
+            "UFLEX",
+            "ADOR",
+            "GREAVESCOT",
+            "AARTIIND",
+            "GABRIEL",
+            "GRASIM"
+        ],
+        "agent_scores": {
+            "VALIANTORG": {
+                "dtw": 91.6439093716212,
+                "entry": 55.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "ATUL": {
+                "dtw": 88.61911500491493,
+                "entry": 55.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "CASTROLIND": {
+                "dtw": 90.59308488913,
+                "entry": 71.14072911072859,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "UFLEX": {
+                "dtw": 87.80230823954878,
+                "entry": 70.0,
+                "vision": 76.0,
+                "sector": 50.0
+            },
+            "AMBER": {
+                "dtw": 88.33351985221667,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ADOR": {
+                "dtw": 83.918395753919,
+                "entry": 95.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "GREAVESCOT": {
+                "dtw": 89.77477695113528,
+                "entry": 55.0,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "FMGOETZE": {
+                "dtw": 89.36866582042128,
+                "entry": 55.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "AARTIIND": {
+                "dtw": 85.37568731965895,
+                "entry": 73.89299156600009,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "GABRIEL": {
+                "dtw": 88.52234941881485,
+                "entry": 82.02985424846393,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "GRASIM": {
+                "dtw": 89.8606358171026,
+                "entry": 103.28408723270232,
+                "vision": 50.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "ATUL",
+                "entry_price": 6855.0,
+                "current_price": 6817.5,
+                "outcome": "OPEN",
+                "pnl": -0.55,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "UFLEX",
+                "entry_price": 431.85,
+                "current_price": 445.3,
+                "outcome": "OPEN",
+                "pnl": 3.11,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ADOR",
+                "entry_price": 1070.75,
+                "current_price": 1078.85,
+                "outcome": "OPEN",
+                "pnl": 0.76,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "GREAVESCOT",
+                "entry_price": 167.04,
+                "current_price": 165.18,
+                "outcome": "OPEN",
+                "pnl": -1.11,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "AARTIIND",
+                "entry_price": 501.7,
+                "current_price": 507.5,
+                "outcome": "OPEN",
+                "pnl": 1.16,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "GABRIEL",
+                "entry_price": 1020.45,
+                "current_price": 1025.6,
+                "outcome": "OPEN",
+                "pnl": 0.5,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "GRASIM",
+                "entry_price": 2783.0,
+                "current_price": 2794.5,
+                "outcome": "OPEN",
+                "pnl": 0.41,
+                "exit_date": "N/A"
+            }
+        ]
+    },
+    {
+        "date": "2026-04-29",
+        "market_regime": "BULLISH",
+        "gate_1_candidates": [
+            "BHARATFORG",
+            "BSL",
+            "ORCHPHARMA",
+            "GIPCL",
+            "BALMLAWRIE",
+            "GODFRYPHLP",
+            "UFLEX",
+            "ICEMAKE",
+            "ADOR",
+            "DCW",
+            "DRREDDY",
+            "ELGIEQUIP",
+            "GALAXYSURF",
+            "FEDERALBNK",
+            "FMGOETZE"
+        ],
+        "gate_1_incubator": [
+            "GIPCL",
+            "BALMLAWRIE",
+            "GALAXYSURF",
+            "GODFRYPHLP",
+            "UFLEX",
+            "BSL",
+            "ADOR",
+            "DCW",
+            "FMGOETZE",
+            "ORCHPHARMA"
+        ],
+        "gate_2_approved": [
+            "BHARATFORG",
+            "ORCHPHARMA",
+            "GODFRYPHLP",
+            "ADOR",
+            "FMGOETZE"
+        ],
+        "agent_scores": {
+            "BHARATFORG": {
+                "dtw": 89.13368626071372,
+                "entry": 92.88434754085732,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "BSL": {
+                "dtw": 87.97633014550152,
+                "entry": 10.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "ORCHPHARMA": {
+                "dtw": 86.42430268934221,
+                "entry": 86.1353928438768,
+                "vision": 80.0,
+                "sector": 50.0
+            },
+            "BALMLAWRIE": {
+                "dtw": 87.63687550938867,
+                "entry": 72.154793726469,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "GIPCL": {
+                "dtw": 87.54040280852328,
+                "entry": 55.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "GODFRYPHLP": {
+                "dtw": 87.59318332403362,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "UFLEX": {
+                "dtw": 87.80230823954878,
+                "entry": 70.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "ICEMAKE": {
+                "dtw": 91.93485147258659,
+                "entry": 40.0,
+                "vision": 79.0,
+                "sector": 50.0
+            },
+            "ADOR": {
+                "dtw": 83.918395753919,
+                "entry": 95.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "DCW": {
+                "dtw": 87.73625129911717,
+                "entry": 55.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "DRREDDY": {
+                "dtw": 85.94715670748448,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "ELGIEQUIP": {
+                "dtw": 86.74842879771285,
+                "entry": 40.0,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "GALAXYSURF": {
+                "dtw": 90.46420628193536,
+                "entry": 40.0,
+                "vision": 85.0,
+                "sector": 50.0
+            },
+            "FEDERALBNK": {
+                "dtw": 90.17839160182457,
+                "entry": 68.10463459522435,
+                "vision": 50.0,
+                "sector": 50.0
+            },
+            "FMGOETZE": {
+                "dtw": 89.36866582042128,
+                "entry": 55.0,
+                "vision": 85.0,
+                "sector": 50.0
+            }
+        },
+        "trades": [
+            {
+                "symbol": "BHARATFORG",
+                "entry_price": 1907.8,
+                "current_price": 1881.6,
+                "outcome": "OPEN",
+                "pnl": -1.37,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ORCHPHARMA",
+                "entry_price": 612.85,
+                "current_price": 625.75,
+                "outcome": "OPEN",
+                "pnl": 2.1,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "GODFRYPHLP",
+                "entry_price": 2275.3,
+                "current_price": 2251.0,
+                "outcome": "OPEN",
+                "pnl": -1.07,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "ADOR",
+                "entry_price": 1106.05,
+                "current_price": 1078.85,
+                "outcome": "OPEN",
+                "pnl": -2.46,
+                "exit_date": "N/A"
+            },
+            {
+                "symbol": "FMGOETZE",
+                "entry_price": 474.85,
+                "current_price": 469.9,
+                "outcome": "OPEN",
+                "pnl": -1.04,
                 "exit_date": "N/A"
             }
         ]

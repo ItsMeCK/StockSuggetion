@@ -142,16 +142,30 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
         if evaluation["veto"]:
             total_confidence -= 20.0
             
-        final_approval = (total_confidence >= COGNITIVE_THRESHOLD)
+        # --- HYBRID ELITE APPROVAL LOGIC ---
+        # 1. Total Consensus Elite
+        is_elite = total_confidence >= 85
+        
+        # 2. Momentum Runner (High Entry Score)
+        is_momentum = scores.get("entry", 0) >= 75
+        
+        # 3. Institutional Accumulator (High Vision + Perfect Pattern)
+        is_accumulator = (scores.get("vision", 0) >= 80) and (scores.get("dtw", 0) >= 85)
+        
+        final_approval = is_elite or is_momentum or is_accumulator
+        
         evaluation["total_confidence"] = float(total_confidence)
+        evaluation["is_elite"] = is_elite
+        evaluation["is_momentum"] = is_momentum
+        evaluation["is_accumulator"] = is_accumulator
         evaluation["approved"] = final_approval
         evaluation["rs_alpha"] = rs_score
-        critic_results[symbol] = evaluation
         
         if final_approval:
-            logging.info(f"ALPHA APPROVAL: {symbol} passed ({total_confidence:.1f}/{COGNITIVE_THRESHOLD}) - RS: {rs_score:.2f}")
+            critic_results[symbol] = evaluation
+            logging.info(f"HYBRID ELITE APPROVED: {symbol} (Elite: {is_elite}, Mom: {is_momentum}, Acc: {is_accumulator})")
         else:
-            logging.warning(f"ALPHA REJECTION: {symbol} failed ({total_confidence:.1f}/{COGNITIVE_THRESHOLD})")
+            logging.warning(f"CRITIC VETO: {symbol} - Failed Hybrid Elite criteria. (Conf: {total_confidence:.1f})")
         
     return {
         "critic_results": critic_results, 
