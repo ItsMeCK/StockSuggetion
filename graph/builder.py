@@ -11,6 +11,7 @@ from agents.execution_agent import run_execution_agent as execution_agent
 from agents.reflection_engine import run_reflection_engine as reflection_engine_post_mortem
 from agents.entry_trigger_agent import run_entry_trigger_agent as entry_trigger_agent
 from agents.critic_agent import run_critic_agent as critic_agent
+from agents.fundamental_audit import run_fundamental_audit_node as fundamental_audit
 from agents.watcher_agent import run_watcher_agent as watcher_agent
 from agents.sector_agent import run_sector_agent as sector_agent
 
@@ -19,11 +20,6 @@ def should_execute(state: SovereignState) -> str:
     if state.get("approved_allocations"):
         return "execution_agent"
     return END
-
-# --- LangGraph Topology Builder ---
-
-def build_sovereign_graph(connection_kwargs: dict) -> StateGraph:
-    return build_sovereign_graph_with_checkpointer(None)
 
 def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow = StateGraph(SovereignState)
@@ -36,6 +32,7 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.add_node("sector_agent", sector_agent)
     workflow.add_node("watcher_agent", watcher_agent)
     workflow.add_node("critic_agent", critic_agent)
+    workflow.add_node("fundamental_audit", fundamental_audit)
     workflow.add_node("risk_and_position_sizing", risk_and_position_sizing)
     workflow.add_node("execution_agent", execution_agent)
     workflow.add_node("reflection_engine_post_mortem", reflection_engine_post_mortem)
@@ -53,25 +50,23 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     def critic_debate_router(state: SovereignState) -> str:
         count = state.get("debate_count", 0)
         results = state.get("critic_results", {})
-        
-        # Check if any vetoes happened
         has_veto = any(res.get("veto", False) for res in results.values())
         
-        # Allow 1 correction cycle
         if has_veto and count < 1:
             return "proposer"
-        return "risk"
+        return "audit"
 
     workflow.add_conditional_edges(
         "critic_agent",
         critic_debate_router,
         {
             "proposer": "pattern_agent_vision",
-            "risk": "risk_and_position_sizing"
+            "audit": "fundamental_audit"
         }
     )
     
-    # Branching logic: Only execute if trades are approved by the Risk Agent
+    workflow.add_edge("fundamental_audit", "risk_and_position_sizing")
+    
     workflow.add_conditional_edges(
         "risk_and_position_sizing",
         should_execute,
@@ -81,8 +76,10 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
         }
     )
 
-    # Execution feeds directly into the Reflection Engine for continuous learning
     workflow.add_edge("execution_agent", "reflection_engine_post_mortem")
     workflow.add_edge("reflection_engine_post_mortem", END)
 
     return workflow.compile(checkpointer=checkpointer)
+
+def build_sovereign_graph(connection_kwargs: dict) -> StateGraph:
+    return build_sovereign_graph_with_checkpointer(None)

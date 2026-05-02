@@ -35,15 +35,15 @@ class VisionPatternAgent:
             logging.error(f"Failed to save vision cache: {e}")
 
     def _load_context_rules(self) -> Dict[str, Any]:
-        """Loads the pre-compiled institutional rules."""
+        """Loads the MASTER institutional rules (v2.3)."""
         core_dir = Path(__file__).parent.parent / "core"
-        rules_path = core_dir / "context_rules.json"
+        rules_path = core_dir / "context_rules_2.json"
         
         try:
             with open(rules_path, 'r', encoding='utf-8') as f:
                 return json.load(f)
         except FileNotFoundError:
-            logging.error(f"Rulebook not found at {rules_path}. Did you run offline_compiler.py?")
+            logging.error(f"Rulebook not found at {rules_path}. Ensure context_rules_2.json exists.")
             return {}
 
     def analyze_chart(self, symbol: str, pattern_hint: str, target_date: str = None) -> Dict[str, Any]:
@@ -86,29 +86,31 @@ class VisionPatternAgent:
                 
             logging.info(f"Analyzing {symbol} via GPT-4o (No Cache found for {latest_date})...")
             
-            pattern_list = list(self.rules.get("pring_pattern_geometries", {}).keys())
-            
-            # Format data for the prompt
-            data_str = "\n".join([f"{r[0].strftime('%Y-%m-%d')}: H:{r[1]}, L:{r[2]}, C:{r[3]}, V:{r[4]}" for r in rows])
+            disqualification_rules = self.rules.get("disqualification_rules", {})
+            pattern_details = self.rules.get("pring_pattern_geometries", {}).get(pattern_hint, {})
             
             prompt = f"""
-            Identify the most likely institutional setup for {symbol} from this list: {pattern_list}.
+            Identify the institutional validity of the '{pattern_hint}' setup for {symbol}.
             
-            Context: This is the Indian Stock Market (NSE). Markets are CLOSED on Saturdays, Sundays, and public holidays. 
-            If the latest data is a Friday and today is a Sunday, the Friday data is the correct "latest" footprint.
+            MASTER RULEBOOK (v2.3) CONTEXT:
+            - Institutional Footprint for this pattern: {pattern_details.get('institutional_footprint', 'N/A')}
+            - Disqualification Warning Signs to look for: {list(disqualification_rules.keys())}
             
-            Recent OHLCV Data:
+            RECENT OHLCV DATA:
             {data_str}
             
+            YOUR TASK (SKEPTICAL AUDITOR):
+            1. Validate the {pattern_hint} structure. Is it clean or messy?
+            2. TRAP AUDIT: Check for any Disqualification Warning Signs (e.g., Bull Trap, False Breakout, Volume Exhaustion).
+            3. INSTITUTIONAL CHECK: Is there a volume surge (>3x avg) on the breakout? Is the price respecting the 20-EMA?
+            
             SCORING (0-100):
-            - 90-100: PERFECT. Strong breakout on massive volume (>3x avg).
-            - 80-89: STRONG. Institutional footprints clearly visible.
-            - 70-79: VALID. Tradable setup.
-            - <70: REJECT.
+            - 90-100: ELITE. Institutional sponsorship is clear. No warning signs.
+            - 80-89: STRONG. High probability setup.
+            - 70-79: VALID but risky.
+            - <70: VETO. If you see a BULL TRAP or HEAD-FAKE, you MUST score below 70.
             
-            CRITICAL: If you see a VOLUME SURGE where the latest volume is >3x the previous average, this is an Institutional Footprint. Score it HIGH.
-            
-            Return ONLY a JSON object: {{"identified_pattern": "string", "vision_score": int, "justification": "str"}}
+            Return ONLY a JSON object: {{"identified_pattern": "string", "vision_score": int, "justification": "str", "disqualification_flag": "None or Name of Warning Sign"}}
             """
             
             from openai import OpenAI
@@ -117,7 +119,7 @@ class VisionPatternAgent:
             response = client.chat.completions.create(
                 model="gpt-4o",
                 messages=[
-                    {"role": "system", "content": "You are a world-class Technical Analyst specialized in Pring and Shannon methodologies."},
+                    {"role": "system", "content": "You are the Sovereign Disqualification Auditor. Your job is to VETO low-conviction setups using the Master Institutional Rulebook."},
                     {"role": "user", "content": prompt}
                 ],
                 response_format={ "type": "json_object" }
@@ -126,12 +128,18 @@ class VisionPatternAgent:
             result = json.loads(response.choices[0].message.content)
             vision_score = int(result.get("vision_score", 50))
             identified = result.get("identified_pattern", "unknown")
+            dq_flag = result.get("disqualification_flag", "None")
+            
+            # HARD VETO if a disqualification flag is raised
+            if dq_flag != "None":
+                vision_score = min(vision_score, 65)
             
             vision_result = {
                 "vision_approved": vision_score >= 70,
                 "vision_score": vision_score,
                 "identified_pattern": identified,
                 "reason": result.get("justification", "None"),
+                "disqualification_flag": dq_flag,
                 "whipsaw_risk": "Low" if vision_score > 75 else "High",
                 "cached_at": latest_date
             }

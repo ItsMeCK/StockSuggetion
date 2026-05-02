@@ -15,7 +15,7 @@ class CriticAgent:
         import json
         from pathlib import Path
         core_dir = Path(__file__).parent.parent / "core"
-        rules_path = core_dir / "context_rules.json"
+        rules_path = core_dir / "context_rules_2.json"
         try:
             with open(rules_path, 'r', encoding='utf-8') as f:
                 return json.load(f)
@@ -24,7 +24,7 @@ class CriticAgent:
         
     def evaluate_thesis(self, symbol: str, thesis: str, macro_regime: str, target_date: str = None) -> Dict[str, Any]:
         import os, psycopg2
-        logging.info(f"Critic Agent: Evaluating deployment parameters for {symbol} under regime {macro_regime}...")
+        logging.info(f"Critic Agent: Performing Master Audit for {symbol}...")
         
         veto_required = False
         reason = "None"
@@ -39,133 +39,102 @@ class CriticAgent:
             )
             cur = conn.cursor()
             
-            if target_date:
-                query = """
-                    SELECT close, volume 
-                    FROM daily_ohlcv 
-                    WHERE symbol = %s AND time <= %s
-                    ORDER BY time DESC 
-                    LIMIT 5
-                """
-                cur.execute(query, (symbol, target_date))
-            else:
-                query = """
-                    SELECT close, volume 
-                    FROM daily_ohlcv 
-                    WHERE symbol = %s 
-                    ORDER BY time DESC 
-                    LIMIT 5
-                """
-                cur.execute(query, (symbol,))
+            # --- RIGOR: Distribution Check (5-day volume profiling) ---
+            query = "SELECT close, volume FROM daily_ohlcv WHERE symbol = %s AND time <= %s ORDER BY time DESC LIMIT 5"
+            cur.execute(query, (symbol, target_date if target_date else '2099-01-01'))
             rows = cur.fetchall()
             cur.close()
             conn.close()
             
             if len(rows) >= 5:
-                # Veto if price is rising but volume is falling (bearish divergence)
-                prices = [float(r[0]) for r in rows[::-1]] # Oldest to newest
+                prices = [float(r[0]) for r in rows[::-1]]
                 volumes = [float(r[1]) for r in rows[::-1]]
                 
-                # --- RESTORED: Distribution Veto Re-enabled ---
-                price_rising = prices[-1] > prices[0]
-                volume_falling = volumes[-1] < volumes[0]
-                
-                if price_rising and volume_falling:
+                # Check for 'Hidden Distribution' (Price UP, Volume DOWN)
+                if prices[-1] > prices[0] and volumes[-1] < volumes[0]:
                     veto_required = True
-                    reason = f"Hidden Distribution detected: Price rose over 5 days while volume fell ({volumes[0]:.0f} -> {volumes[-1]:.0f})."
+                    reason = "VSA_TRAP: Hidden Distribution (Price rising on thinning volume)."
         except Exception as e:
-            logging.error(f"Critic Agent calculation error for {symbol}: {e}")
+            logging.error(f"Critic Agent Error: {e}")
             
-        return {
-            "veto": veto_required,
-            "critique": reason
-        }
+        return {"veto": veto_required, "critique": reason}
 
 def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
     candidates = state.get("candidates", [])
     agent_scores = state.get("agent_scores", {})
     macro = state.get("macro_regime", "UNKNOWN")
+    vision_validations = state.get("vision_validations", {})
     
     critic = CriticAgent()
     critic_results = {}
-    approved_allocations = {}
     
-    # --- SOVEREIGN RESILIENCE PROTOCOL (Dynamic Alpha) ---
     regime_map = {"BULLISH": "BULL_MARKET", "BEARISH": "BEAR_MARKET", "NEUTRAL": "CHOPPY_SIDEWAYS"}
     active_regime = regime_map.get(macro, "CHOPPY_SIDEWAYS")
-    rules = critic.rules.get("pring_pattern_geometries", {})
+    all_rules = critic.rules.get("pring_pattern_geometries", {})
     
     for symbol in candidates:
         scores = agent_scores.get(symbol, {})
-        vision_data = state.get("vision_validations", {}).get(symbol, {})
-        pattern = vision_data.get("identified_pattern", "unknown")
+        vision_res = vision_validations.get(symbol, {})
+        pattern = vision_res.get("identified_pattern", "unknown")
+        dq_flag = vision_res.get("disqualification_flag", "None")
         
-        # Calculate Relative Strength (RS) Alpha
-        # RS = Stock Performance / Nifty Performance (Simplified mock for logic)
-        rs_score = scores.get("sector", 50.0) / 50.0 # 1.0 is parity
+        # 1. FETCH MASTER WEIGHTS (v2.3)
+        rule = all_rules.get(pattern, {})
+        priority = rule.get("institutional_priority", 5)
+        risk_weight = rule.get("risk_weight", 5)
+        suitable_regimes = rule.get("suitable_regime", [])
+        if isinstance(suitable_regimes, str): suitable_regimes = [suitable_regimes]
         
-        pattern_rule = rules.get(pattern, {})
-        priority = pattern_rule.get("institutional_priority", 5)
-        
-        # --- DYNAMIC RISK GOVERNOR ---
-        if macro == "BEARISH":
-            if rs_score < 1.2:
-                # Stock is failing to lead in a bad market
-                logging.warning(f"REGIME FRICTION: {symbol} has insufficient RS ({rs_score:.2f}) for BEARISH market. Tightening Hurdle.")
-                COGNITIVE_THRESHOLD = 70.0
-            else:
-                # Institutional Strength detected!
-                logging.info(f"RESILIENCE ALPHA: {symbol} is outperforming Nifty (RS: {rs_score:.2f}). Maintaining 65% Hurdle.")
-                COGNITIVE_THRESHOLD = 65.0
-        else:
-            # Bullish market: Be more aggressive
-            COGNITIVE_THRESHOLD = 65.0 if priority >= 8 else 70.0
-            
-        # --- WEIGHTED COGNITIVE CONSENSUS SCORING ---
+        # 2. BASE WEIGHTED SCORE
         w_entry = scores.get("entry", 0) * 0.40
         w_vision = scores.get("vision", 0) * 0.40
         w_dtw = scores.get("dtw", 0) * 0.20
-        total_confidence = w_entry + w_vision + w_dtw
+        base_score = w_entry + w_vision + w_dtw
         
-        # 1. Resilience Boost
-        if macro == "BEARISH" and rs_score > 1.5:
-            logging.info(f"INSTITUTIONAL SUPPORT: {symbol} is an elite leader. Boosting +10%")
-            total_confidence += 10.0
+        # 3. MASTER JSON RIGOR ADJUSTMENTS
+        # A. Priority Boost
+        priority_boost = (priority - 5) * 2.0
+        # B. Risk Penalty
+        risk_penalty = (risk_weight - 5) * 3.0
+        # C. Regime Friction
+        regime_penalty = 0
+        if suitable_regimes and active_regime not in suitable_regimes:
+            regime_penalty = 20.0
             
-        # 2. Thematic Alignment
-        target_regime = pattern_rule.get("regime_fit", "UNKNOWN")
-        if target_regime == active_regime:
-            total_confidence += 15.0
-            
+        final_score = base_score + priority_boost - risk_penalty - regime_penalty
+        
+        # 4. THE MASTER VETO (Hard Rejections)
+        veto_reason = "None"
+        if dq_flag != "None":
+            final_score -= 50.0
+            veto_reason = f"HARD VETO: {dq_flag} detected by Auditor."
+        
+        # Distribution Audit
         target_date = state.get("target_date")
         evaluation = critic.evaluate_thesis(symbol, "thesis", macro, target_date)
         if evaluation["veto"]:
-            total_confidence -= 20.0
+            final_score -= 25.0
+            veto_reason = evaluation["critique"]
             
-        # --- HYBRID ELITE APPROVAL LOGIC ---
-        # 1. Total Consensus Elite
-        is_elite = total_confidence >= 85
+        # FINAL SOVEREIGN CRITERIA (Production Grade: 75% Hard Hurdle)
+        is_elite = final_score >= 80
+        is_momentum = scores.get("entry", 0) >= 80 and final_score >= 70
+        is_accumulator = (scores.get("vision", 0) >= 85) and (final_score >= 75)
         
-        # 2. Momentum Runner (High Entry Score)
-        is_momentum = scores.get("entry", 0) >= 75
+        final_approval = (is_elite or is_momentum or is_accumulator) and (final_score >= 65)
         
-        # 3. Institutional Accumulator (High Vision + Perfect Pattern)
-        is_accumulator = (scores.get("vision", 0) >= 80) and (scores.get("dtw", 0) >= 85)
-        
-        final_approval = is_elite or is_momentum or is_accumulator
-        
-        evaluation["total_confidence"] = float(total_confidence)
+        evaluation["total_confidence"] = float(final_score)
         evaluation["is_elite"] = is_elite
         evaluation["is_momentum"] = is_momentum
         evaluation["is_accumulator"] = is_accumulator
         evaluation["approved"] = final_approval
-        evaluation["rs_alpha"] = rs_score
+        evaluation["veto_reason"] = veto_reason
         
         if final_approval:
             critic_results[symbol] = evaluation
             logging.info(f"HYBRID ELITE APPROVED: {symbol} (Elite: {is_elite}, Mom: {is_momentum}, Acc: {is_accumulator})")
         else:
-            logging.warning(f"CRITIC VETO: {symbol} - Failed Hybrid Elite criteria. (Conf: {total_confidence:.1f})")
+            logging.warning(f"CRITIC VETO: {symbol} - Failed Hybrid Elite criteria. (Conf: {final_score:.1f})")
         
     return {
         "critic_results": critic_results, 
