@@ -112,13 +112,13 @@ def run_eod_ingestion():
     try:
         logging.info("Fetching NSE instrument list...")
         all_instruments = engine.kite.instruments("NSE")
-        # Filter for Equities and take 500 to represent our universe
+        # Filter for Equities and take the FULL NSE Universe
         equities = [inst for inst in all_instruments if inst['instrument_type'] == 'EQ']
-        nifty500_mock_list = [{"symbol": inst['tradingsymbol'], "token": inst['instrument_token']} for inst in equities[:500]]
-        logging.info(f"Successfully loaded {len(nifty500_mock_list)} equities for ingestion.")
+        full_universe_list = [{"symbol": inst['tradingsymbol'], "token": inst['instrument_token']} for inst in equities]
+        logging.info(f"Successfully loaded {len(full_universe_list)} equities for the Sovereign Full-Market Ingestion.")
     except Exception as e:
         logging.error(f"Failed to fetch instruments: {e}")
-        nifty500_mock_list = []
+        full_universe_list = []
     
     today = datetime.now().strftime("%Y-%m-%d")
     lookback_days = (datetime.now() - timedelta(days=400)).strftime("%Y-%m-%d")
@@ -126,9 +126,9 @@ def run_eod_ingestion():
     try:
         # Connect to DB now that docker is running
         engine.connect_db()
-        logging.info(f"Starting EOD Historical REST Ingestion (250-day lookback for 200 SMA)...")
+        logging.info(f"Starting EOD Historical REST Ingestion (Full Market Sweep)...")
         
-        for asset in nifty500_mock_list:
+        for asset in full_universe_list:
             data = engine.fetch_historical_data(asset['token'], lookback_days, today)
             
             # Insert data into TimescaleDB

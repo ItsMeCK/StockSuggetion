@@ -51,35 +51,56 @@ def generate_dashboard():
             
             is_elite = total_score >= 85
             is_momentum = e_score >= 75
-            # Institutional Accumulator Rule: Elite Vision + Perfect Pattern overrides weak momentum
             is_accumulator = (v_score >= 80 and d_score >= 85)
-            
             is_approved_by_smart_rule = (is_momentum or is_accumulator)
             
-            if outcome == "PROFIT": profits += 1
-            elif outcome == "LOSS": 
-                losses += 1
-                if not is_approved_by_smart_rule: elite_saved_losses += 1
-            elif outcome == "OPEN": open_trades += 1
+            # --- RUTHLESS SOVEREIGN AUDIT DATA (MAY 4TH PROTOCOL) ---
+            audit_data = {
+                "CHOLAFIN": {"grade": "A", "action": "DEPLOY", "insight": "Confirmed Cup & Handle Breakout. High Conviction.", "sector": "FINTECH", "rigor": "Clean"},
+                "BHARATFORG": {"grade": "A", "action": "DEPLOY", "insight": "Confirmed Stage 2 Uptrend. Defense Tailwind.", "sector": "DEFENSE", "rigor": "Clean"},
+                "MASFIN": {"grade": "A-", "action": "DEPLOY", "insight": "Confirmed High-Momentum Thrust. NBFC Leader.", "sector": "FINTECH", "rigor": "Clean"},
+                "BALRAMCHIN": {"grade": "B+", "action": "ACCUMULATE", "insight": "Macro Sugar Reversal. Buy on Dips.", "sector": "AGRI", "rigor": "Cyclical"},
+                "NEWGEN": {"grade": "B", "action": "ACCUMULATE", "insight": "Volatile Range-Bound Base. Mean-Reversion only.", "sector": "SAAS", "rigor": "Range"},
+                "FEDERALBNK": {"grade": "D", "action": "AVOID", "insight": "TRAP: Overhead Resistance (5.2%) + RSI Divergence.", "sector": "BANKING", "rigor": "VETO"},
+                "DCMSHRIRAM": {"grade": "C", "action": "AVOID", "insight": "STATIC: Accumulation Phase. No Breakout Ignition.", "sector": "CHEMICALS", "rigor": "VETO"},
+                "BANARISUG": {"grade": "B+", "action": "ACCUMULATE", "insight": "Sugar Reversal support. Wait for ignition.", "sector": "AGRI", "rigor": "Cyclical"},
+                "BAJFINANCE": {"grade": "A-", "action": "DEPLOY", "insight": "Institutional Leadership. Technical Resilience.", "sector": "FINTECH", "rigor": "Clean"},
+                "ADOR": {"grade": "B", "action": "ACCUMULATE", "insight": "Industrial proxy. Infrastructure tailwind.", "sector": "INFRA", "rigor": "Slow"},
+                "5PAISA": {"grade": "B", "action": "ACCUMULATE", "insight": "Mid-Cap momentum. Watch for breakout.", "sector": "FINTECH", "rigor": "Slow"},
+                "KEEPLEARN": {"grade": "D", "action": "AVOID", "insight": "Edtech Headwinds. Small Cap Volatility.", "sector": "EDTECH", "rigor": "VETO"}
+            }
             
-            elite_class = "elite-row" if is_approved_by_smart_rule else ""
+            info = audit_data.get(symbol, {"grade": "N/A", "action": "WATCH", "insight": "Audit Pending...", "sector": "GENERIC", "rigor": "N/A"})
+            grade_color = "var(--green)" if "A" in info["grade"] or "B+" in info["grade"] else "var(--gold)"
+            if "D" in info["grade"] or "F" in info["grade"]: grade_color = "var(--red)"
+            
+            action_bg = "rgba(16, 185, 129, 0.2)" if info["action"] == "DEPLOY" else "rgba(245, 158, 11, 0.2)"
+            if info["action"] == "AVOID": action_bg = "rgba(239, 68, 68, 0.2)"
+            action_color = "var(--green)" if info["action"] == "DEPLOY" else "var(--gold)"
+            if info["action"] == "AVOID": action_color = "var(--red)"
+
+            elite_class = "elite-row" if info["action"] == "DEPLOY" else ""
             elite_badge = '<span class="badge elite-badge">ELITE</span>' if is_elite else ""
             mom_badge = '<span class="badge mom-badge">IGNITED</span>' if is_momentum else ""
             acc_badge = '<span class="badge acc-badge">ACCUMULATION</span>' if is_accumulator else ""
             
-            outcome_class = f"outcome-{outcome.lower()}"
             status_badge = f'<span class="badge status-{outcome.lower()}">{outcome}</span>'
-            
-            pnl_color = "var(--green)" if pnl > 0 else "var(--red)"
-            if outcome == "OPEN": pnl_color = "var(--accent)"
 
             table_rows += f"""
             <tr class="{elite_class}">
                 <td>{date}</td>
-                <td><span class="symbol-tag">{symbol}</span> {elite_badge} {mom_badge} {acc_badge}</td>
-                <td>₹{entry:,.2f}</td>
-                <td>₹{exit_p:,.2f}</td>
-                <td style="color: {pnl_color}; font-weight: 600;">{pnl:+.1f}%</td>
+                <td>
+                    <div style="font-weight: 600;"><span class="symbol-tag">{symbol}</span> {elite_badge}</div>
+                    <div style="margin-top: 5px;">{mom_badge} {acc_badge}</div>
+                </td>
+                <td style="text-align: center;">
+                    <div class="badge" style="background: {action_bg}; color: {action_color}; border: 1px solid {action_color};">{info["action"]}</div>
+                    <div style="color: {grade_color}; font-weight: 800; font-size: 1.5rem; margin-top: 5px;">{info["grade"]}</div>
+                </td>
+                <td style="max-width: 350px;">
+                    <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px;">{info["sector"]} | {info["rigor"]}</div>
+                    <div style="font-size: 0.95rem; line-height: 1.4; font-weight: 400;">{info["insight"]}</div>
+                </td>
                 <td>
                     <div class="score-bar"><span>V: {v_score:.0f}</span></div>
                     <div class="score-bar"><span>E: {e_score:.0f}</span></div>
@@ -232,8 +253,8 @@ def generate_dashboard():
                             <th>Date</th>
                             <th>Symbol</th>
                             <th>Entry</th>
-                            <th>Current</th>
-                            <th>PnL</th>
+                            <th>Grade</th>
+                            <th>Audit Insight</th>
                             <th>Conviction</th>
                             <th>Status</th>
                         </tr>

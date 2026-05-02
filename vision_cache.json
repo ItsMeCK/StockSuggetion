@@ -3646,5 +3646,37 @@
         "reason": "The chart data reveals a potential reverse head and shoulders bottom pattern, characterized by three distinct troughs over the observed period with the middle trough (head) being the lowest. The shoulder levels around April 14 and April 28 suggest this reversal formation. Additionally, the significant volume increase on April 29, which is over 13 times the average volume of prior days, indicates the potential for an institutional footprint and a strong upward breakout, supporting a high scoring setup. Hence, the pattern qualifies as a STRONG reversal with visible institutional activity.",
         "whipsaw_risk": "Low",
         "cached_at": "2026-04-29"
+    },
+    "BALRAMCHIN_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "rectangle",
+        "reason": "Over the recent periods, BALRAMCHIN has demonstrated price fluctuations within a relatively bounded range, suggesting sideways movement. The data shows several instances where the price reached similar levels at the high side around the 550 mark and on the lower side around the 470 mark, typical of a rectangle formation. Volume has remained fairly constant without a significant surge signaling an institutional footprint, thus not qualifying for a score above 80. However, the repetition of these price levels indicates a valid tradable rectangle setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-29"
+    },
+    "SCHAEFFLER_2026-04-29": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "double_top_and_bottom",
+        "reason": "The recent price action suggests the formation of a potential double bottom pattern with a significant drop in mid-February 2026, followed by a similar bottom in late March/early April 2026, and a recovery upward thereafter. Volume was not consistently high over this period, indicating a lack of strong institutional activity. However, the pattern formed is tradable, thus achieving a 'VALID' scoring.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-29"
+    },
+    "HAL_2026-04-30": {
+        "vision_approved": true,
+        "vision_score": 80,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action displays characteristics of a rectangle pattern with a clear horizontal price range around the high 3700s to the low 3800s. The volume remains consistent, suggesting a consolidation phase, and this is common in rectangle patterns which denote accumulation or distribution phases by institutional players. The stability of the high and low during this period strengthens the case for an institutional footprint, scoring it strong.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-30"
+    },
+    "TRENT_2026-04-30": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "The data presents a clear pattern of price oscillation between a high of approximately 4500 and a low of around 4000, forming a rectangle pattern. This pattern has consistent highs and lows over the past month, suggesting a period of consolidation. Noticeable is the volume spike on April 30, 2026, with volume hitting 500,000, which is exactly twice the typical daily volume, indicating institutional activity. The characteristics observed are indicative of a rectangle pattern with institutional buying, justifying a strong score due to visible institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-30"
     }
 }
