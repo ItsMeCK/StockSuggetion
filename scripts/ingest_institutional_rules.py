@@ -2,7 +2,8 @@ import os
 import json
 import logging
 import fitz  # PyMuPDF
-from openai import OpenAI
+from groq import Groq
+from core.config import GROQ_API_KEY, GROQ_MODEL
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -12,10 +13,10 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 class InstitutionalKnowledgeIngestor:
     """
-    Parses PDF books and uses OpenAI to extract structured trading rules.
+    Parses PDF books and uses Groq to extract structured trading rules.
     """
     def __init__(self):
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.client = Groq(api_key=GROQ_API_KEY)
         self.downloads_path = Path.home() / "Downloads"
         self.rules_path = Path(__file__).parent.parent / "core" / "context_rules.json"
 
@@ -34,7 +35,7 @@ class InstitutionalKnowledgeIngestor:
         return text
 
     def extract_rules_with_llm(self, text: str, source_name: str) -> dict:
-        logging.info(f"Invoking OpenAI to extract rules from {source_name}...")
+        logging.info(f"Invoking Groq to extract rules from {source_name}...")
         
         prompt = f"""
         Analyze the following text from a technical analysis book: "{source_name}".
@@ -67,7 +68,7 @@ class InstitutionalKnowledgeIngestor:
         
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4o",
+                model=GROQ_MODEL,
                 messages=[
                     {"role": "system", "content": "You are a senior institutional quantitative analyst."},
                     {"role": "user", "content": prompt}
@@ -155,7 +156,7 @@ class InstitutionalKnowledgeIngestor:
                 
                 try:
                     response = self.client.chat.completions.create(
-                        model="gpt-4o",
+                        model=GROQ_MODEL,
                         messages=[
                             {"role": "system", "content": "You are a Chief Strategist at a Sovereign Wealth Fund."},
                             {"role": "user", "content": prompt}

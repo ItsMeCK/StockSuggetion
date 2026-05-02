@@ -1470,5 +1470,2733 @@
         "reason": "The recent price action from early February to mid-April shows a series of higher lows and lower highs, forming a symmetrical triangle pattern. The convergence towards a point suggests a consolidation phase with potential for a breakout. The volume does not show a significant surge, maintaining typical ranges, which supports the consolidation hypothesis but lacks a large institutional footprint indicative of a breakout. Hence, the pattern is tradable but does not exhibit the strong breakout characteristics that would warrant a higher score.",
         "whipsaw_risk": "High",
         "cached_at": "2026-04-19"
+    },
+    "RELIANCE_2026-05-01": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle",
+        "reason": "Strong breakout",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-05-01"
+    },
+    "APOLLO_2026-01-31": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a series of higher lows and similar highs, indicating an ascending triangle pattern. The volume on 2026-01-31 is 5420937, which is not >3x the previous average, but it is still a significant volume. The pattern is valid, and the vision score is 82, indicating a strong tradable setup with institutional footprints clearly visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-01-31"
+    },
+    "ARVIND_2026-01-31": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data shows a gradual increase in price with a steady volume, indicating a potential accumulation formation. On 2026-01-31, the volume surged to 1706614, which is significantly higher than the average volume, suggesting an institutional footprint. The price action and volume analysis indicate a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-01-31"
+    },
+    "BALMLAWRIE_2026-01-31": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "descending_triangle",
+        "reason": "The recent price action has formed a descending triangle pattern with a series of lower highs and a consistent support level, indicating a potential breakdown. The volume on the last trading day was not exceptionally high, but the overall pattern suggests institutional interest. The score is 82 due to the clear pattern and potential for a breakout, but lacks a massive volume surge.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-01-31"
+    },
+    "GODREJAGRO_2026-02-01": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action has been consolidating within a narrow range, forming a rectangle pattern. The volume has not shown a significant surge recently but has maintained a decent level, indicating some institutional interest. Given the recent breakout above the rectangle's upper boundary on 2026-02-01 with a closing price of 554.1, which is not on extremely high volume but still a significant move, it suggests that institutions are starting to take interest. The score is 82 due to the clear consolidation and initial signs of breakout without meeting the >3x average volume criteria for a perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-01"
+    },
+    "KANSAINER_2026-02-01": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data suggests a rectangle pattern, where the price has been trading within a range. The volume has not surged significantly to indicate an institutional footprint. However, the price action indicates a valid tradable setup, hence a score of 72.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-01"
+    },
+    "ANGELONE_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data indicates a potential accumulation formation with a series of higher lows and lower highs, suggesting a possible reversal. However, the volume surge is not significant enough to score it as a strong institutional setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-02"
+    },
+    "ADL_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The pattern resembles an accumulation formation with evidence of institutional buying, as seen in the volume surge on 2025-12-23, and the recent price action indicates a potential for a breakout. The vision score is 82 due to the presence of institutional footprints and a valid tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-02"
+    },
+    "ATUL_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a trading range with a high of 6304 and a low of 5800, indicating a rectangular pattern. The latest volume is not >3x the previous average, but the price action is bounded within a range, suggesting a valid tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-02"
+    },
+    "SHIVATEX_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data indicates a potential accumulation formation, with price action consolidating within a range. The volume on 2026-02-02 is higher than the previous days, but not exceeding 3x the average volume, resulting in a score of 72, indicating a valid tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-02"
+    },
+    "BAJFINANCE_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data for BAJFINANCE suggests an accumulation formation with a strong institutional setup. The volume on 2026-02-02 is not exceptionally high, but the overall volume trend and price action indicate a potential buildup of positions by institutions, scoring it as a STRONG pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-02"
+    },
+    "ICICIB22_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading in a range-bound manner with support and resistance levels clearly visible. The recent price action has been consolidating within this range, forming a rectangle pattern. The volume has been moderate, but there is no clear institutional footprint or volume surge. The setup is tradable, but not strongly indicative of a breakout.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-02"
+    },
+    "BHARATFORG_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action in BHARATFORG suggests an accumulation formation, where the stock is consolidating within a range, indicating a potential buildup of institutional interest. The volumes on 2026-02-01 and 2026-02-02 are significantly higher than the average, which could be indicative of institutional buying. However, the volume surge is not greater than 3 times the average volume, hence a score of 82, categorizing it as a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-02"
+    },
+    "GINNIFILA_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The given OHLCV data shows a steady increase in volume with moderate price movements, indicating a possible accumulation phase. Although there is no strong breakout or massive volume surge, the data suggests a tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-02"
+    },
+    "ELGIEQUIP_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent price action suggests a rectangle continuation pattern. The price has been trading within a narrow range, indicating a period of consolidation. The volume on the latest day is not >3x the previous average, but the overall volume profile suggests institutional involvement, with a few days of above-average volume. The scoring is based on the presence of institutional footprints and the tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-02"
+    },
+    "UFLEX_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action of UFLEX is characterized by a range-bound movement between 450 and 500, which resembles a rectangle pattern. The volume has been relatively stable, and there is no significant surge in volume (>3x avg) to indicate a strong institutional footprint. However, the price action is still tradable, and the setup is valid.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-02"
+    },
+    "BANARBEADS_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "reverse_head_and_shoulders_bottom",
+        "reason": "The recent OHLCV data shows a potential reverse head and shoulders bottom formation, with a significant volume surge on 2026-02-02, which is a characteristic of institutional buying. The volume on 2026-02-02 is 37742, which is substantially higher than the average volume, indicating a strong institutional footprint.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-02"
+    },
+    "GARFIBRES_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The price has been consolidating with higher lows and a steady volume, indicating a potential accumulation phase. The recent volume surge on 2026-02-02 is >3x the previous average, suggesting institutional involvement.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-02"
+    },
+    "ADANIENT_2026-02-02": {
+        "vision_approved": false,
+        "vision_score": 68,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action in ADANIENT indicates a potential distribution formation, with multiple tests of support and resistance levels. While the volume on the latest day is not >3x the average, there are signs of institutional selling, including the gap down on 2026-01-22 and the subsequent failure to regain the lost ground. However, the setup is not strong enough to score higher due to the lack of a clear institutional footprint and the fact that the latest volume is not >3x the average.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-02"
+    },
+    "CGPOWER_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Institutional footprints are visible with a volume surge on 2026-02-02, where the volume is 4.1x the previous average, indicating a strong accumulation phase.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-02"
+    },
+    "BALKRISIND_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action of BALKRISIND has been consolidating within a range, indicating a possible rectangle pattern. The volume has been relatively stable, without any significant surges. However, the price has been respecting the boundaries of the range, suggesting that institutional players are actively participating in the market. The score of 82 reflects the presence of institutional footprints and a clear tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-02"
+    },
+    "AUROPHARMA_2026-02-02": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock AUROPHARMA is seeing a volume surge on the latest day with a volume of 2827489, which is more than 3 times the average volume. This, combined with the overall price action, suggests an accumulation formation and strong institutional buying, hence a vision score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-02"
+    },
+    "BOMDYEING_2026-02-03": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "head_and_shoulders_top",
+        "reason": "The recent price action has formed a head and shoulders top pattern, a classic reversal setup. The left shoulder, head, and right shoulder are clearly visible. The volume on the breakout day (2026-02-03) is significantly higher than the average volume, indicating institutional participation. The score is 82 as the pattern is clearly visible and the volume surge is noticeable, but not extremely high.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-03"
+    },
+    "BHARATGEAR_2026-02-03": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading within a rectangular range, with recent volumes indicating institutional interest. The average volume over the past 10 days is around 23,000, while the latest volume is around 64,600, which is nearly 3 times the average, indicating a potential institutional footprint.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-03"
+    },
+    "GABRIEL_2026-02-03": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints are visible with a gradual increase in volume, and the price action is forming an ascending triangle pattern, indicating a potential breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-03"
+    },
+    "SHIVATEX_2026-02-03": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with several inside bars and a recent surge in volume on 2026-02-02, indicating potential institutional accumulation. However, the volume is not >3x the previous average, and the price action is not a strong breakout, resulting in a moderate score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-03"
+    },
+    "BAJFINANCE_2026-02-03": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action in BAJFINANCE suggests an accumulation formation, with the stock trading in a range and showing signs of institutional buying. The volume on 2026-02-02 and 2026-02-03 is higher than the previous average, indicating potential institutional participation. However, the volume surge is not >3x the previous average, so the score is not perfect. The overall setup is strong, with a score of 82, indicating a high probability of a breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-03"
+    },
+    "ICICIB22_2026-02-03": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The price has been ranging between 115 and 123, with multiple touches of the upper and lower boundaries, indicating an accumulation formation. The recent volumes have been moderate, with no significant surge. However, the price action suggests a buildup of buying interest, making it a valid tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-03"
+    },
+    "ANDHRAPAP_2026-02-03": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with decreasing volume, and the recent price action suggests accumulation. However, there is no clear institutional footprint or volume surge, resulting in a valid but not strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-03"
+    },
+    "CASTROLIND_2026-02-03": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The price action has been consolidating within a narrow range, with a slight upward bias, and the volume has been relatively steady. This suggests a continuation pattern, and the recent price action fits within a rectangle formation. The score is high due to the clear institutional footprint of a consolidation phase, but not perfect as the volume has not surged >3x the average.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-03"
+    },
+    "BIRLACORPN_2026-02-03": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The price action over the last few weeks has formed a rectangle pattern, which is a continuation pattern. The latest volume is not >3x the previous average, but the institutional footprints are visible with a slight surge in volume on 2026-02-03, indicating a potential breakout. The score is 82 as it is a strong setup but not a perfect breakout on massive volume.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-03"
+    },
+    "ESG_2026-02-03": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The given OHLCV data suggests a steady accumulation phase with institutional buying interest, as evident from the increasing volumes on up days and the overall pattern of higher lows and higher highs, indicating a strong setup for a potential breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-03"
+    },
+    "DHAMPURSUG_2026-02-03": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle_reversal_pattern",
+        "reason": "Recent price action shows a clear rectangle reversal pattern with a high volume surge on 2025-12-09, indicating institutional buying interest. The latest volume is not >3x the previous average, but the overall price action and volume profile suggest a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-03"
+    },
+    "BLUEDART_2026-02-04": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent price action of BLUEDART has been contained within a relatively narrow range, indicating a possible rectangle continuation pattern. The volume has been moderate, with no significant surges, but the overall trend suggests a tradable setup. The price has been oscillating between the highs and lows, with no clear breakout or breakdown, which is consistent with a rectangle pattern. The score of 82 reflects the presence of institutional footprints, but the lack of a strong breakout or volume surge prevents a higher score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-04"
+    },
+    "SHIVATEX_2026-02-04": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock is forming a base with repeated tests of support near 160-165 and resistance near 180-185. Volume has been relatively low, indicating a lack of institutional participation. However, the recent volume surge on 2026-02-02 (>8x avg) could be an early sign of institutional accumulation.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-04"
+    },
+    "ANDHRSUGAR_2026-02-04": {
+        "vision_approved": false,
+        "vision_score": 62,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action has been showing a series of lower highs and higher lows, indicating a potential distribution formation. However, the latest volume is not >3x the previous average, and there is no clear institutional footprint. The setup is still tradable, but the score is not high due to the lack of strong institutional interest.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-04"
+    },
+    "BANARBEADS_2026-02-04": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The given OHLCV data for BANARBEADS shows a potential ascending triangle pattern, which is a continuation pattern. The justification for this identification comes from the overall trend of the data, where the stock's lows are generally increasing, forming the ascending part of the triangle, while the highs are fairly consistent, forming the upper boundary. The volume on the most recent day (2026-02-04) is significantly higher than the previous days, suggesting institutional interest, but not quite at the 3x average volume threshold for a perfect score. The pattern's validity and the presence of institutional footprints justify a strong score, though the lack of a massive volume surge on the breakout prevents a perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-04"
+    },
+    "VALIANTORG_2026-02-04": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints are visible with a notable increase in volume on 2026-02-04, and the price has been forming an ascending triangle. The volume surge on 2026-02-04 is 3.75 times the 10-day average volume, indicating strong institutional participation.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-04"
+    },
+    "APOLLOTYRE_2026-02-04": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "distribution_formation",
+        "reason": "Recent price action shows a potential distribution formation with a volume surge on 2026-02-04, but it's not a strong breakout on massive volume (>3x avg), hence the score is below the strong setup threshold.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-04"
+    },
+    "BAJAJHLDNG_2026-02-04": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent highs and lows form a pattern that resembles an ascending triangle, with higher lows and consistent highs. While there isn't a massive volume surge >3x the average in the immediate latest data, the overall volume and price movement suggest institutional interest, scoring it as a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-04"
+    },
+    "AUTOAXLES_2026-02-04": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with increasing volumes, indicating accumulation by institutions. The latest volume is not >3x the previous average, but the overall pattern suggests institutional buying interest, hence a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-04"
+    },
+    "DALMIASUG_2026-02-05": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "descending_triangle",
+        "reason": "The recent OHLCV data suggests a descending triangle pattern, with a series of lower highs and a stable support level. The volume on 2026-02-05 is not significantly higher than the average, but the overall pattern and the volume surge on 2025-12-10 and 2025-12-09 indicate institutional involvement, resulting in a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-05"
+    },
+    "BHARATGEAR_2026-02-05": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a series of higher lows and equal highs, forming an ascending triangle pattern. The latest volume is not >3x the previous average, but the pattern is still visible and tradable, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-05"
+    },
+    "CENTENKA_2026-02-05": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a trading range between 450 and 505, with multiple touches of the upper and lower boundaries, indicating a rectangle pattern. The volume surge on 2026-02-05 with a volume of 123459, which is significantly higher than the previous average, suggests institutional involvement, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-05"
+    },
+    "ICICIB22_2026-02-05": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Institutional accumulation is evident, with a series of higher lows and higher highs, accompanied by increasing volume. Although not a perfect breakout on massive volume (>3x avg), the tradable setup and visible institutional footprints justify a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-05"
+    },
+    "FINCABLES_2026-02-05": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent price action is consolidating within a narrow range, forming a rectangle pattern. The volume is not excessively high, but there's a notable increase in trading activity. This setup indicates a potential continuation of the existing trend, and the score is accordingly set to 82, denoting a strong, tradable setup with visible institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-05"
+    },
+    "VALIANTORG_2026-02-05": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The latest OHLCV data shows a range-bound movement with moderate volume, indicating a potential accumulation phase. The volume surge on 2026-02-04 is notable but not extreme enough to be classified as an institutional footprint. The overall setup suggests a valid tradable setup but lacks strong breakout characteristics or clear institutional footprints.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-05"
+    },
+    "GICRE_2026-02-05": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_reversal_pattern",
+        "reason": "The stock has been trading in a rectangular range with highs around 380-384 and lows around 370-372. The recent volume surge on 2026-02-05 with a volume of 913822, which is more than 3x the previous average, suggests an institutional footprint, but not strong enough to be >3x the 3-day average. Hence, it's a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-05"
+    },
+    "EIHOTEL_2026-02-05": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The stock is trading within a range, with recent highs and lows forming a rectangle pattern. The volume on 2026-02-04 was significantly higher than the average, indicating institutional buying interest. The price action is also showing signs of accumulation, with the stock finding support near the lower end of the range.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-05"
+    },
+    "DALMIASUG_2026-02-08": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data for DALMIASUG indicates a potential accumulation formation, characterized by a stable price range with decreasing volume. The latest data point on 2026-02-08 shows a higher close with significant volume, which could be an early sign of institutional accumulation. The vision score of 82 reflects the presence of institutional footprints, albeit not a perfect breakout on massive volume.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-08"
+    },
+    "GRAPHITE_2026-02-08": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action in GRAPHITE shows a gradual increase in price with a series of higher lows and higher highs, indicating a potential accumulation formation. The volume on 2026-02-08 was 3304974, which is higher than the previous average, but not >3x. However, the overall volume trend is increasing, and the price is holding above the recent support levels, indicating institutional buying interest.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-08"
+    },
+    "BHARATGEAR_2026-02-08": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data for BHARATGEAR indicates an ascending triangle pattern, with a series of higher lows and a resistance level at around 120-122. The volume has increased significantly over the past few trading sessions, with a notable surge on 2026-02-08. However, the volume is not >3x the previous average, hence the score is not in the perfect range but indicates strong institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-08"
+    },
+    "FMGOETZE_2026-02-08": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action has formed a potential ascending triangle pattern, with higher lows and a flat high. The volume has not surged to 3x the average, but the setup is tradable with a score of 82. Institutional footprints are visible, but not extremely strong.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-08"
+    },
+    "ELECTCAST_2026-02-08": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading in a range with highs around 75 and lows around 70, indicating a rectangle pattern. The recent volume surge on 2026-02-08 with a volume of 4171670, which is approximately 2.8 times the previous average volume, suggests some institutional interest but not strong enough to classify as a perfect or strong breakout. The setup is tradable but lacks a clear institutional footprint to score higher.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-08"
+    },
+    "EPL_2026-02-08": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with increasing volume, indicating accumulation by institutional investors. The recent volume surge on 2026-02-08 is >2x the previous average, but not >3x, hence a score of 72.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-08"
+    },
+    "BEML_2026-02-08": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data suggests a rectangular pattern with trading ranges between 1600-1800, strong breakout bar on 2026-02-08 with high volume (1020909) close to 3x average, indicating institutional footprints",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-08"
+    },
+    "ANDHRAPAP_2026-02-08": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The price has been moving within a defined range, and the recent volume surge on 2026-02-08 with a volume of 719229, which is significantly higher than the previous average, indicates institutional interest. The price action is also showing signs of consolidation, which is a characteristic of a rectangle pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-08"
+    },
+    "UFLEX_2026-02-08": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "rectangle",
+        "reason": "The stock is trading in a range-bound manner with multiple highs and lows within a narrow range, indicating a rectangle pattern. However, there is no significant volume surge or strong breakout, resulting in a relatively low vision score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-08"
+    },
+    "3MINDIA_2026-02-08": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a trading range with support and resistance levels, indicating a rectangle pattern. The volume has been relatively consistent, with no significant surges. The price action is contained within a specific range, suggesting a valid tradable setup, but not strong enough to be considered a high-scoring institutional footprint.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-08"
+    },
+    "SHAREINDIA_2026-02-08": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data for SHAREINDIA suggests a potential accumulation formation, where the stock is experiencing a series of higher lows and lower highs, indicating a possible reversal. The volume on 2026-02-08 was significantly higher than the previous average, which could be an indication of institutional buying. The score of 82 indicates a strong setup, with institutional footprints clearly visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-08"
+    },
+    "BASF_2026-02-08": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action is ranging between 3550 and 3950, forming a rectangle pattern. The volume surge on 2025-12-29 and 2025-11-25 indicates institutional buying, but the recent volume is not >3x the previous average. However, the overall setup and the presence of institutional footprints score it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-08"
+    },
+    "BALRAMCHIN_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The price has been consolidating in a range with increasing volume, indicating a potential accumulation phase. The latest volume is not >3x the previous average, but the overall volume trend suggests institutional interest.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-09"
+    },
+    "GLAXO_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action indicates a gradual increase in price with decreasing volume, suggesting accumulation. The latest volume is not >3x the previous average, but institutional footprints are visible, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-09"
+    },
+    "STYRENIX_2026-02-09": {
+        "vision_approved": false,
+        "vision_score": 68,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent OHLCV data shows a potential distribution formation with a series of lower highs and lower lows, indicating a possible downtrend. The volume has been decreasing over the past few days, which further supports the distribution formation. However, there is no strong breakout or volume surge to indicate institutional footprints, resulting in a moderate vision score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-09"
+    },
+    "HEMIPROP_2026-02-09": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a trading range with highs around 144-145 and lows around 130-132, indicating a possible rectangle pattern. However, there's no significant volume surge or strong breakout, leading to a moderate score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-09"
+    },
+    "ELECTCAST_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action forms an ascending triangle, with higher lows and a flat top. The latest volume is not >3x the average, but the pattern is still visible. The setup is considered STRONG, with a score of 82, as the institutional footprints are clearly visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-09"
+    },
+    "ADOR_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a trading range between 1025 and 1120, with multiple tests of these levels, indicating a rectangle pattern. The volume has been relatively consistent, with some surges, but no massive breakout on high volume (>3x avg) has occurred yet. However, the data suggests institutional interest, with some days showing higher volume, indicating a score of 82, categorizing it as a STRONG setup with institutional footprints clearly visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-09"
+    },
+    "FINCABLES_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a pattern of higher lows and stable highs, indicating a potential ascending triangle formation. The volume on 2026-02-09 is significantly higher than the previous average, but not >3x, suggesting some institutional interest. The overall trend and volume patterns justify a STRONG score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-09"
+    },
+    "PGHL_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data suggests an accumulation formation with a series of higher lows and lower highs, indicating a potential buildup of institutional interest. While the volume has increased, it's not a significant surge (>3x avg), resulting in a valid but not strong tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-09"
+    },
+    "GICRE_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range for the past few weeks, with the price bouncing between 360 and 400 levels. The recent volume surge on 2026-02-09 with a volume of 1458486, which is more than 3 times the average volume, indicates institutional buying. The price action and volume pattern suggest an accumulation formation, which is a tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-09"
+    },
+    "GRAPHITE_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data reveals a pattern of higher lows and consistent highs, characteristic of an ascending triangle. The volume on 2026-02-08 is significantly higher than the previous days, indicating institutional buying interest. However, it's not a perfect breakout on massive volume (>3x avg), which prevents a perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-09"
+    },
+    "ESCORTS_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Institutional footprints are visible with a clear accumulation formation. The volume on 2026-02-09 is not >3x the average, but the overall pattern and increasing volume over the last few days indicate a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-09"
+    },
+    "BIRLACORPN_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints visible with a potential ascending triangle formation. Volume surge not observed in the latest data, but the price action suggests a tradable setup with a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-09"
+    },
+    "NIACL_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action of NIACL has been forming a base, with multiple tests of the 145-150 support zone. While there isn't a strong breakout on massive volume, the trading range suggests institutional accumulation. The latest volume is not significantly higher than the average, but the price action indicates a potential tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-09"
+    },
+    "TCPLPACK_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data indicates that the stock price has been trading within a narrow range, forming a rectangle pattern. The volume has been average, but there's no significant surge. However, the data shows a balance between buyers and sellers, indicating a potential for a strong breakout, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-09"
+    },
+    "GATECHDVR_2026-02-09": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "rectangle",
+        "reason": "The stock price has been consolidating in a narrow range (0.48-0.52) for an extended period, forming a rectangle pattern. However, the volume has not shown a significant surge (>3x avg) to indicate strong institutional buying or selling. The setup is tradable but lacks strong institutional footprints.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-09"
+    },
+    "3MINDIA_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent OHLCV data for 3MINDIA indicates a rectangle continuation pattern, with prices oscillating between 36375 and 37635. The volume profile supports this, with a slight increase in volume on the recent breakout (11004), but not exceeding 3x the average volume. Institutional footprints are visible, with a mix of buying and selling activity, but no clear signs of a strong breakout or massive volume surge. Hence, the score is 82, indicating a strong but not perfect setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-09"
+    },
+    "ESABINDIA_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The given OHLCV data for ESABINDIA shows a clear rectangular pattern with the stock oscillating between 5662 and 5838 levels, indicating a consolidation phase. The recent volumes are not indicative of a strong institutional footprint, hence a vision score of 72.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-09"
+    },
+    "FMGOETZE_2026-02-09": {
+        "vision_approved": false,
+        "vision_score": 68,
+        "identified_pattern": "distribution_formation",
+        "reason": "The pattern has a mix of higher highs and lower lows indicating a potential distribution formation, but lacks strong institutional footprints and volume surge.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-09"
+    },
+    "ICICIB22_2026-02-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent OHLCV data indicates a range-bound movement with support and resistance levels, hinting at a rectangle continuation pattern. The volume on 2026-02-09 is significantly higher than the previous days, but not >3x the average volume, thus scoring 82 as a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-09"
+    },
+    "BATAINDIA_2026-02-09": {
+        "vision_approved": false,
+        "vision_score": 62,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action shows a series of lower highs and lower lows, indicating a potential distribution formation. However, the volume on the last trading day (2026-02-09) is not significantly higher than the average volume, and there is no clear institutional footprint. The score is therefore below the tradable threshold.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-09"
+    },
+    "COSMOFIRST_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates a gradual increase in price with decreasing volatility, forming an ascending triangle pattern. The volume on 2026-02-10 is higher than the previous days, but not >3x the average. However, the overall trend and institutional footprints are clearly visible, indicating a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-10"
+    },
+    "HARRMALAYA_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action has been trading within a defined range, indicating a possible rectangle pattern. The volume has been relatively stable, but there's no significant surge to indicate a strong breakout. However, the price action and volume suggest institutional interest, resulting in a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-10"
+    },
+    "BBTC_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 80,
+        "identified_pattern": "rectangle",
+        "reason": "The given OHLCV data indicates that the price has been moving within a relatively narrow range, suggesting a rectangle pattern. The volume has not surged significantly to indicate a strong breakout, but the setup looks tradable with institutional footprints visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-10"
+    },
+    "FMGOETZE_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "descending_triangle",
+        "reason": "The recent OHLCV data shows a series of lower highs and a consistent low, forming a descending triangle pattern. The volume on 2026-02-10 is 293884, which is approximately 2x the previous average, but the overall volume trend and the pattern itself indicate institutional interest. Hence, it's scored as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-10"
+    },
+    "GABRIEL_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "descending_triangle",
+        "reason": "The recent price action shows a series of lower highs and a relatively flat low, which could indicate a descending triangle pattern. Although the volumes have been increasing, the latest volume is not more than 3 times the previous average, which prevents it from being scored higher. Nonetheless, the setup can be considered tradable.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-10"
+    },
+    "APOLLOTYRE_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data for APOLLOTYRE suggests an accumulation formation with a slight uptick in price over the past few days, accompanied by moderate volume. The volume on 2026-02-04 was significantly higher than the average volume, indicating institutional buying. The price has been consolidating between 500 and 520, which could be a sign of accumulation. The current price is near the upper end of this range, suggesting a potential breakout. The vision score is 82, indicating a strong setup with institutional footprints clearly visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-10"
+    },
+    "APOLLOHOSP_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action of APOLLOHOSP has been forming a rectangle pattern. The stock has been trading within a range of 7400-7600 for the past few days, with multiple touches of the support and resistance levels. The latest volume is not >3x the previous average, but the overall volume has been decent. The price action and volume suggest institutional interest, but it's not a perfect breakout. Hence, the vision score is 82, indicating a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-10"
+    },
+    "UFLEX_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action has been consolidating within a range, with the latest volume being significant but not exceeding 3x the average volume. The absence of a strong breakout or a volume surge characteristic of institutional footprints suggests a score below the perfect range but above the valid range, indicating a strong, tradable setup with visible institutional interest.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-10"
+    },
+    "BIRLACORPN_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_reversal_pattern",
+        "reason": "The stock has been trading in a range for several days, with a recent increase in volume. The latest volume is higher than the previous average, indicating institutional buying. The price action is also forming a rectangle pattern, which is a reversal pattern. The score is 82 as the setup is strong, but not perfect, with a volume surge that is not >3x the previous average.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-10"
+    },
+    "FINCABLES_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "Volume has been consistent, and price movement shows a clear consolidation phase, indicating a potential continuation pattern. The current volume is not a surge, but the overall setup suggests institutional involvement, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-10"
+    },
+    "EICHERMOT_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Institutional footprints are visible with a surge in volume on 2025-11-23, and the price has been consolidating in a range, indicating a potential accumulation phase.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-10"
+    },
+    "CHAMBLFERT_2026-02-10": {
+        "vision_approved": false,
+        "vision_score": 68,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action suggests a potential distribution formation, with a series of lower highs and lower lows. The volume has been increasing on down days, which could indicate institutional selling. However, the volume surge is not >3x the previous average, which prevents a higher score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-10"
+    },
+    "CARBORUNIV_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action shows a consolidation phase with decreasing volume, indicating a potential accumulation formation. The latest volume surge is not >3x the previous average, but the overall volume profile suggests institutional buying. The score is 82, indicating a strong setup with clear institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-10"
+    },
+    "PGHL_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The given data shows a range-bound movement with no clear breakout or breakdown, indicating an accumulation phase. While there is no massive volume surge (>3x avg), the overall volume trend is consistent, suggesting institutional interest. Score is 72 due to the lack of a strong breakout or breakdown.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-10"
+    },
+    "BRITANNIA_2026-02-10": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for BRITANNIA shows a trading range between 5800 and 6100, with multiple touches at these levels, indicating a rectangular pattern. The volume has not surged >3x the average, but the trading range is well-defined, indicating a valid tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-10"
+    },
+    "COSMOFIRST_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Higher lows and equal highs in recent candles indicate an ascending triangle pattern, with volumes supporting the validity of the setup. While not a perfect breakout on massive volume, institutional footprints are visible, suggesting a strong and tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-11"
+    },
+    "HARRMALAYA_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent price action forms a rectangular pattern with a slight upward bias, suggesting a continuation of the prevailing trend. The trading volumes are not exceptionally high, but they do indicate some buying interest in the security. The latest volume is not >3x the previous average, thus it is not an Institutional Footprint.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-11"
+    },
+    "ICICIB22_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "Given the recent OHLCV data, ICICIB22 seems to be trading within a range, with highs around 128 and lows around 123, suggesting a rectangle continuation pattern. Although there isn't a strong breakout on massive volume, the setup looks tradable, hence a valid score of 72.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-11"
+    },
+    "ELGIEQUIP_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action shows a range-bound movement with increasing volume, indicating institutional buying. The latest volume is not >3x the previous average, but the overall pattern suggests a tradable accumulation setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-11"
+    },
+    "ANDHRAPAP_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock is exhibiting a gradual increase in price with moderate volume, indicating a potential accumulation phase. There is no significant volume surge, but the price action suggests a tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-11"
+    },
+    "UFLEX_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action suggests a rectangle pattern with the stock trading within a defined range, and the volume on 2026-02-11 is higher than the previous days but not exceeding 3 times the average volume. The pattern is tradable but not a perfect breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-11"
+    },
+    "GARFIBRES_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data suggests an ascending triangle pattern with a series of higher lows and a resistance level around 740-750. The volume on 2026-02-11 is not >3x the average, but the pattern is still visible. The score of 82 indicates a strong institutional setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-11"
+    },
+    "EICHERMOT_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The stock is forming a rectangle continuation pattern with visible institutional buying, indicated by higher volumes on up days and lower volumes on down days, creating a strong support area.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-11"
+    },
+    "3MINDIA_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints are visible with a series of higher lows and a resistance level forming an ascending triangle pattern. The volume on 2026-02-09 is significantly higher than the previous days, indicating a potential breakout. However, it does not meet the criteria for a PERFECT score due to the lack of a strong breakout on massive volume (>3x avg).",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-11"
+    },
+    "DANGEE_2026-02-11": {
+        "vision_approved": false,
+        "vision_score": 62,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading in a range-bound pattern with support and resistance levels at 3.00 and 3.60 respectively, indicating a rectangle formation. However, the volume has not shown any significant surge, and the latest breakout is not accompanied by a massive volume (>3x avg), resulting in a moderate vision score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-11"
+    },
+    "FINPIPE_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data suggests an ascending triangle pattern with a gradual increase in volume, indicating institutional buying interest. The latest volume is not >3x the previous average, but the pattern is still tradable with a score of 82, classified as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-11"
+    },
+    "AUTOAXLES_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a series of higher lows and consistent highs, forming an ascending triangle pattern. The volume on 2026-02-11 is not exceptionally high, but the overall pattern and the volume on 2026-02-03 and 2026-02-05 indicate institutional buying interest. The score is 82 as it is a strong setup with clear institutional footprints, but not a perfect breakout on massive volume.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-11"
+    },
+    "DELTAMAGNT_2026-02-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The latest volume surge on 2026-02-11 with a volume of 32918 is >3x the previous average, indicating a potential institutional footprint. The recent price action also suggests a gradual accumulation of the stock, with a series of higher lows and a potential breakout above the recent highs. This setup is indicative of a strong tradable opportunity.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-11"
+    },
+    "HARRMALAYA_2026-02-12": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The chart shows a period of consolidation with a slight upward bias, indicating an accumulation formation. The recent volume surge on 2026-02-11 with 30787 volume, which is more than 3x the average volume of the previous 10 trading days, suggests institutional buying. The price action is also supported by a series of higher lows, further confirming the accumulation pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-12"
+    },
+    "COSMOFIRST_2026-02-12": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action has formed a series of higher lows and consistent highs, indicating a potential ascending triangle pattern. The latest volume surge on 2026-02-12 is >2x the previous average, but not >3x, suggesting some institutional interest. The overall pattern is still in its formation stage, and a strong breakout above the resistance level could confirm the pattern and attract more institutional buying.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-12"
+    },
+    "BAJFINANCE_2026-02-12": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints visible with a gradual increase in price and a surge in volume on 2026-02-12, indicating a potential breakout from the ascending triangle pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-12"
+    },
+    "ASHOKLEY_2026-02-12": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action of ASHOKLEY indicates an accumulation formation, characterized by a series of higher lows and a general uptrend. On 2026-02-10, the stock witnessed a large volume of 53661132, which is significantly higher than the average volume, suggesting institutional buying. The price has been consolidating in a range, and the latest close of 204.63 is near the upper end of this range, indicating potential for a breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-12"
+    },
+    "ELGIEQUIP_2026-02-12": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "distribution_formation",
+        "reason": "The stock has been trading in a range with decreasing volumes and a lack of clear direction, indicating a potential distribution phase. However, there is no significant volume surge or strong breakout to justify a higher score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-12"
+    },
+    "EICHERMOT_2026-02-12": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action in EICHERMOT has been forming an ascending triangle pattern, with a series of higher lows and a flat top. The latest volume is not >3x the previous average, but there are signs of institutional buying with increased volumes on up days. The pattern is valid and tradable, but not perfect due to the lack of a strong breakout on massive volume.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-12"
+    },
+    "3MINDIA_2026-02-12": {
+        "vision_approved": false,
+        "vision_score": 62,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent OHLCV data for 3MINDIA exhibits a distribution formation, characterized by a series of highs and lows within a narrow range, indicating a potential reversal in the trend. While the volume has been relatively stable, there is no clear indication of a volume surge (>3x avg) to suggest a strong institutional footprint. The setup is tradable, but caution is advised due to the lack of clear institutional participation.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-12"
+    },
+    "DANGEE_2026-02-12": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a range-bound movement with highs around 3.6-3.8 and lows around 3.0-3.2, indicating a potential rectangle pattern. However, the volume surges are not significant enough to confirm strong institutional footprints, resulting in a moderate vision score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-12"
+    },
+    "COSMOFIRST_2026-02-15": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action has formed a series of higher lows and similar highs, indicating a potential ascending triangle pattern. Additionally, the volume on 2026-02-12 was significantly higher than the previous days, suggesting institutional interest. The vision score is 82 due to the clear institutional footprints and the potential for a strong breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-15"
+    },
+    "HARRMALAYA_2026-02-15": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action has formed a series of higher lows and consistent highs, indicating a potential ascending triangle pattern. The volume on the latest day (56249) is significantly higher than the previous average, but not >3x, suggesting some institutional interest. However, the overall setup and the higher volume day suggest a strong tradable setup, hence a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-15"
+    },
+    "ICEMAKE_2026-02-15": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent price action has formed a rectangle pattern, which is a continuation pattern. The latest volume is not >3x the previous average, but the overall volume is significant, indicating institutional interest. The score is 82, indicating a strong setup with institutional footprints clearly visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-15"
+    },
+    "GRAPHITE_2026-02-15": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The price action has been consolidating in a narrow range, forming a rectangle pattern. The recent volume surge on 2026-02-09 (>2x avg) and the overall volume trend suggests institutional interest. The score is 82 as the breakout is not yet confirmed on massive volume (>3x avg).",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-15"
+    },
+    "3MINDIA_2026-02-15": {
+        "vision_approved": false,
+        "vision_score": 68,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action has formed a distribution pattern, indicated by a series of lower highs and lows, with a notable increase in volume on the latest bar (6516). However, this volume surge is still below the threshold of 3x the previous average volume, resulting in a lower score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-15"
+    },
+    "GALAXYSURF_2026-02-16": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_reversal_pattern",
+        "reason": "The price action over the past few weeks has been moving within a defined range, forming a rectangle pattern. This, combined with the recent increase in volume, suggests that institutions are actively participating in the market, setting up for a potential breakout. Although the latest volume is not >3x the average, the overall pattern and institutional footprints justify a score of 82, indicating a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-16"
+    },
+    "GRAPHITE_2026-02-16": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The data suggests an accumulation formation with a series of higher lows and equal highs, indicating a potential buildup of buying interest. The latest volume is not significantly higher than the average, but the overall pattern and the recent price action support the identified pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-16"
+    },
+    "BHARATGEAR_2026-02-16": {
+        "vision_approved": false,
+        "vision_score": 62,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action of BHARATGEAR indicates a potential distribution formation, with a series of lower highs and lower lows. The volume on 2026-02-09 was significantly higher than the previous days, which could be an indication of institutional selling. However, the volume surge on 2026-02-09 is not >3x the previous average, and the overall pattern is not strong enough to score higher than 70. The score of 62 indicates a valid but not highly convincing setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-16"
+    },
+    "ICEMAKE_2026-02-16": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "Institutional footprints are visible with recent volume surges and price action consolidating within a rectangular pattern, indicating a potential continuation setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-16"
+    },
+    "EPL_2026-02-16": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The OHLCV data indicates a gradual increase in price with moderate volume, suggesting an accumulation phase. The latest volume is not >3x the previous average, but the overall pattern and institutional footprints are clearly visible, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-16"
+    },
+    "SHRADHA_2026-02-16": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The price has been consolidating within a narrow range, forming a rectangle pattern. The volume on 2026-02-16 is significantly higher than the previous days, indicating potential institutional buying. However, it's not a massive volume surge (>3x avg) to score a perfect 90-100.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-16"
+    },
+    "GLOBE_2026-02-16": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent price action suggests a rectangle continuation pattern with the stock trading within a narrow range. The volume has not surged to 3x the average, but it has been relatively consistent, indicating some institutional participation. The setup appears valid for a tradable opportunity, but it lacks strong breakout characteristics on massive volume.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-16"
+    },
+    "AUROPHARMA_2026-02-16": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Institutional footprints are visible with a steady increase in volume over the past few days, indicating a potential accumulation phase. The price action is range-bound, with a slight upward bias, suggesting a buildup of buying interest. The latest volume is not >3x the previous average, but the overall trend and volume patterns suggest a strong institutional presence.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-16"
+    },
+    "GRAPHITE_2026-02-17": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The volume on 2026-02-17 is 4096246, which is greater than 3 times the average volume of the previous trading sessions, indicating a strong institutional footprint. The price action has also been consolidating in a range, forming a potential accumulation formation.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-17"
+    },
+    "BHARATGEAR_2026-02-17": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with increasing volumes, indicating accumulation by institutions. The latest volume is not >3x the previous average, but the overall pattern suggests institutional buying.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-17"
+    },
+    "ICEMAKE_2026-02-17": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Institutional footprints are visible with a series of higher lows and a surge in volume, indicating a potential strong uptrend. The latest volume is not greater than 3x the previous average, but the overall pattern suggests a tradable setup with a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-17"
+    },
+    "GODFRYPHLP_2026-02-17": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "descending_triangle",
+        "reason": "Institutional footprints visible with a potential descending triangle pattern, suggesting a possible breakdown. Volume analysis indicates a surge in the latest volume, but it's not >3x the previous average, hence a strong score but not perfect.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-17"
+    },
+    "HDFCLIFE_2026-02-17": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading in a rectangular range between 700 and 740, with no strong breakout or breakdown. The volume has not surged more than 3x the average, but the range-bound movement suggests institutional accumulation or distribution, hence a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-17"
+    },
+    "ADOR_2026-02-17": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints are visible with a steady volume, recent movement suggests an ascending triangle pattern, which is a continuation pattern and indicates a possible breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-17"
+    },
+    "ELGIEQUIP_2026-02-17": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates a gradual increase in price with a series of higher lows, suggesting an ascending triangle pattern. The volume on 2026-02-15 was significantly higher than the previous days, indicating a potential institutional footprint. However, the volume surge is not greater than 3 times the average volume. The overall setup indicates a strong tradable setup, but not a perfect breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-17"
+    },
+    "DABUR_2026-02-17": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with increasing volume, indicating accumulation by institutions. The latest volume is not >3x the average, but the overall pattern suggests a strong buildup of long positions.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-17"
+    },
+    "HEG_2026-02-17": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data reveals a trading range with support and resistance levels at approximately 520 and 560, respectively. While there is no strong breakout or massive volume surge (>3x avg), the setup is still tradable. However, the current price action does not display definitive institutional footprints, leading to a moderate vision score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-17"
+    },
+    "HEMIPROP_2026-02-17": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The price action is consolidating within a rectangle pattern, with clear support and resistance levels. The volume is not surging, but the setup looks tradable. No strong breakout or massive volume spike is observed, but institutional footprints are visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-17"
+    },
+    "AARON_2026-02-18": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints visible with price forming higher lows and a flat upper resistance, suggesting a potential ascending triangle pattern. The recent volume is not >3x the average, but the pattern's structure is evident, leading to a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-18"
+    },
+    "GODFRYPHLP_2026-02-18": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "descending_triangle",
+        "reason": "The recent OHLCV data shows a declining high and a relatively stable low, indicating a descending triangle pattern. The volume on 2026-02-17 is significantly higher than the previous average, suggesting institutional involvement. However, the volume is not more than 3 times the previous average, which prevents it from being a perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-18"
+    },
+    "DICIND_2026-02-18": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data shows a consistent high volume with minor fluctuations in price, indicating a strong accumulation phase. The volume surge on 2026-02-08 (>3x avg) is a clear institutional footprint.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-18"
+    },
+    "AUROPHARMA_2026-02-18": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action suggests a basing pattern with decreasing volume, indicating a potential accumulation phase. The latest volume is not >3x the previous average, but the overall structure suggests institutional buying interest, hence a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-18"
+    },
+    "HEMIPROP_2026-02-18": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates a gradual increase in price with decreasing volatility, which is characteristic of an ascending triangle pattern. Institutional footprints are visible, with a slight surge in volume on 2026-02-09, suggesting a potential breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-18"
+    },
+    "ICEMAKE_2026-02-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price movement shows a series of higher lows, indicating an ascending triangle pattern. Additionally, the volume on 2026-02-15 was significantly higher (138538) compared to the average volume, suggesting institutional buying interest, which aligns with the characteristics of an ascending triangle. The score is 82, indicating a strong setup, as the pattern is clearly visible but the volume surge is not greater than 3 times the average on the breakout day.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-19"
+    },
+    "GODFRYPHLP_2026-02-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent OHLCV data shows a high-volume bar on 2026-02-17 with a large range, indicating potential institutional selling. The subsequent bars have failed to reclaim the high of this bar, suggesting a distribution formation. The vision score of 82 is due to the clear institutional footprint visible, but the setup is not perfect as the breakout is not on massive volume (>3x avg).",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-19"
+    },
+    "ICICIB22_2026-02-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The price has been moving within a rectangular range, making higher lows and lower highs, which is typical of a rectangle continuation pattern. Although there isn't a massive volume surge, the recent volume is higher than the previous average, indicating some level of institutional interest. Hence, this setup is considered strong with a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-19"
+    },
+    "CESC_2026-02-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_reversal_pattern",
+        "reason": "The recent price action has formed a rectangle pattern, and the latest volume surge is >2x the previous average, indicating institutional buying interest, however it's not >3x to be considered a perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-19"
+    },
+    "GLOBE_2026-02-19": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "rectangle",
+        "reason": "The given OHLCV data shows a range-bound movement with no clear breakout or volume surge, characteristic of a rectangle pattern. While there is some volatility, the price action remains within a defined range, suggesting a continuation pattern. However, the absence of a strong breakout or significant volume surge keeps the vision score at 60, indicating a valid but not highly scored setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-19"
+    },
+    "CARBORUNIV_2026-02-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates a gradual increase in price with a series of higher lows, suggesting an ascending triangle pattern. The volume on 2026-02-19 is 662821, which is more than 2x the average volume, but not quite 3x, indicating some institutional interest. The overall setup is strong, with a score of 82, indicating a tradable setup with visible institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-19"
+    },
+    "ABB_2026-02-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints are visible with a gradual increase in price, forming an ascending triangle pattern. The latest volume is not a surge (>3x avg), but the pattern is tradable.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-19"
+    },
+    "GUJALKALI_2026-02-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "descending_triangle",
+        "reason": "The stock has been forming a descending triangle pattern, with a series of lower highs and a consistent low. The recent volume surge on 2026-02-08, with a volume of 71433, is approximately 3x the previous average volume, indicating a potential institutional footprint. However, the breakout on 2026-02-22, with a volume of 128312, is massive and further supports the institutional buying theory. The price has broken out of the triangle, but the volume on the breakout day is not a clear indication of institutional buying as the average volume needs to be calculated for a larger dataset.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-22"
+    },
+    "ICEMAKE_2026-02-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data suggests a potential ascending triangle formation, which is a continuation pattern. The volume on 2026-02-15 (138538) and 2026-01-18 (28967) are noticeably higher than the average volume, indicating institutional buying. However, the latest volume (52152) is not >3x the previous average, hence the score is not perfect. The price has been consolidating, and a breakout above the resistance level could confirm the pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-22"
+    },
+    "EQUITASBNK_2026-02-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "head_and_shoulders",
+        "reason": "The recent OHLCV data indicates a potential head and shoulders pattern, which is a reversal pattern. The volume on 2026-01-22 was significantly higher than average, indicating institutional involvement. The score is 82 as it is a strong setup with institutional footprints visible, but not a perfect breakout on massive volume.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-22"
+    },
+    "DICIND_2026-02-22": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action is forming a potential distribution pattern. The volume on 2026-02-08 was high, but not >3x the previous average. However, the overall trading range and volume profile suggest institutional selling, which is a characteristic of a distribution formation. The score is 60 as it is a valid trade setup, but not a strong institutional footprint.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-22"
+    },
+    "SCHAEFFLER_2026-02-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Institutional footprints are visible, with a gradual increase in price over the past few days, indicating a potential accumulation phase. The volume has been relatively stable, with no significant surges, but the overall trend suggests a strong setup. The latest close is near the higher end of the recent range, indicating a potential breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-22"
+    },
+    "FINCABLES_2026-02-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action shows a steady increase in price with moderate volume, indicating an accumulation phase. The latest close is near the high of the range, suggesting strength. While there isn't a massive volume surge (>3x avg), the volume on 2026-02-09 was significantly higher than the previous days, which could be an early indication of institutional buying. The score of 82 indicates a strong setup with visible institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-22"
+    },
+    "DRREDDY_2026-02-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The price has been moving within a narrow range, indicating a consolidating rectangle pattern. The volume on the last trading day (2026-02-22) was not exceptionally high, but still within the range of recent trading days. No significant breakout or breakdown was observed, suggesting a continuation of the rectangular pattern. Institutional participation is evident from the steady and consistent trading volume, scoring this setup as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-22"
+    },
+    "MASFIN_2026-02-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent OHLCV data shows a trading range with highs around 345 and lows around 325, which could indicate a rectangle continuation pattern. The volume on 2026-02-22 is not a surge, but the overall volume trend and price action suggest institutional presence, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-22"
+    },
+    "BAJAJHLDNG_2026-02-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent price action suggests a rectangular pattern with prices bouncing between 11000 and 11600. The volume on 2026-02-04 was significantly higher than the average, indicating institutional interest. The price breakout on 2026-02-22 with a high of 11632.0 and a close of 11501.0, also suggests a strong institutional footprint.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-22"
+    },
+    "BALKRISIND_2026-02-23": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action has formed a potential distribution formation, with a slight decline in price and an increase in volume. The latest volume is not >3x the previous average, but it's still a tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-23"
+    },
+    "HEG_2026-02-23": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data indicates a trading range between 520 and 570, with the stock oscillating within this range. The volume on 2026-02-10 was significantly higher than the average volume, indicating an institutional footprint. However, the latest breakout on 2026-02-23 did not occur on massive volume, resulting in a score of 82, categorizing it as a strong setup with visible institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-23"
+    },
+    "SCHAEFFLER_2026-02-23": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock is forming a base with a series of higher lows, indicating accumulation. While the recent volume is not >3x the average, the overall price action suggests institutional buying interest, contributing to a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-23"
+    },
+    "FEDERALBNK_2026-02-23": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data indicates a tightening of the trading range with decreasing volatility, characteristic of an accumulation phase. While there isn't a clear volume surge (>3x avg), the overall structure suggests a valid tradable setup with institutional interest, thus scoring it as VALID.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-23"
+    },
+    "COSMOFIRST_2026-02-24": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action in COSMOFIRST indicates a potential accumulation formation. The volume surge on 2026-02-24 with a volume of 917241, which is greater than 3 times the average volume, suggests institutional buying. The price action is also characterized by a series of higher lows and lower highs, indicating a potential reversal. The vision score is 82, indicating a strong tradable setup with institutional footprints clearly visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-24"
+    },
+    "GRAPHITE_2026-02-24": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data indicates a steady increase in price with moderate volume, suggesting an accumulation formation. The latest volume is not >3x the previous average, but the overall trend and institutional footprints are visible, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-24"
+    },
+    "GABRIEL_2026-02-24": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_reversal_pattern",
+        "reason": "The recent OHLCV data exhibits a rectangular pattern with a slight inclination towards the upper boundary, indicating a potential reversal. The volume on 2026-02-24 is not a volume surge, but the overall volume trend suggests institutional participation. The price action is bounded within a narrow range, which is a characteristic of a rectangle pattern. The scoring is based on the visible institutional footprints and the potential for a tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-24"
+    },
+    "GIPCL_2026-02-24": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle_reversal_pattern",
+        "reason": "The recent price action indicates a trading range between 137 and 144, with a slight inclination to the upside, hinting at a potential rectangle reversal pattern. Volume has not surged significantly but remains moderate, suggesting a tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-24"
+    },
+    "DABUR_2026-02-24": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The chart shows a steady increase in price with moderate volume, indicating a potential accumulation phase. The latest volume is not >3x the average, but the overall trend and volume pattern suggest institutional buying, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-24"
+    },
+    "SCHAEFFLER_2026-02-24": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for SCHAEFFLER indicates a trading range between 3800 and 4100, with multiple touches at these levels, suggesting a rectangle pattern. The volume on 2026-02-24 is 1238284, which is approximately 2.5 times the average volume, but not exceeding 3 times, hence it's a strong indication of institutional interest but not a perfect breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-24"
+    },
+    "FOSECOIND_2026-02-24": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints clearly visible with a consistent volume pattern and price action forming an ascending triangle, indicating a potential breakout. The volumes on 2026-02-09 and 2025-12-04 are significantly higher than the average, suggesting institutional involvement.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-24"
+    },
+    "DRREDDY_2026-02-24": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a trading range with consistent highs and lows, indicating a rectangular pattern. The volume on 2026-02-24 is higher than the previous days, but not a massive surge. The overall setup suggests institutional footprints, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-24"
+    },
+    "HEG_2026-02-24": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with increasing volumes, indicating accumulation. The latest volume is not >3x the previous average, but the overall volume trend and price action suggest institutional buying, scoring it as a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-24"
+    },
+    "CHOLAFIN_2026-02-25": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data indicates a gradual increase in price with moderate volume, suggesting an accumulation formation. The volume surge on 2026-02-25 is notable, but not exceeding 3x the previous average, hence a valid tradable setup with a score of 72.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-25"
+    },
+    "DALMIASUG_2026-02-25": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "rectangle",
+        "reason": "The stock price has been fluctuating within a narrow range (280-300) for an extended period, indicating a rectangular pattern. However, there is no strong breakout or massive volume surge (>3x avg) to justify a higher score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-25"
+    },
+    "APOLLO_2026-02-25": {
+        "vision_approved": false,
+        "vision_score": 62,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent OHLCV data shows a general downtrend with some fluctuations, indicating a potential distribution formation. However, there isn't a strong breakout or a volume surge (>3x avg) to justify a higher score. The latest volume is not significantly higher than the previous average, and the price movement is not strongly indicative of institutional footprints. Hence, the score is below the 'VALID' threshold.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-25"
+    },
+    "SCHAEFFLER_2026-02-25": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with increasing volume, indicating accumulation by institutional investors. The latest volume is not >3x the previous average, but the overall pattern suggests a tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-25"
+    },
+    "FINCABLES_2026-02-25": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent OHLCV data indicates a rectangle continuation pattern, which is a tradable setup. The latest volume is not >3x the previous average, but the pattern is clearly visible, and the scoring falls under the 'STRONG' category with a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-25"
+    },
+    "FOSECOIND_2026-02-25": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action in FOSECOIND has formed a distribution pattern with multiple highs and lows within a specific range, indicating a potential reversal. The volume on 2026-02-25 is relatively high but not a significant surge (>3x avg). However, the price action and volume collectively suggest a valid tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-02-25"
+    },
+    "DHAMPURSUG_2026-02-25": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_reversal_pattern",
+        "reason": "The DHAMPURSUG stock has been trading in a rectangular pattern with support and resistance levels clearly defined. The recent price action has seen a breakout above the resistance level on increased volume, indicating institutional buying interest. The current volume is not >3x the average, but the breakout is still a strong indication of institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-25"
+    },
+    "FEDERALBNK_2026-02-25": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action indicates a range-bound movement with gradual accumulation, characterized by higher lows and repeated tests of the upper boundary. The volume on 2026-02-10 was significantly higher than average, suggesting institutional buying interest. The overall pattern and volume activity are indicative of an accumulation formation with a strong institutional footprint.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-02-25"
+    },
+    "DALMIASUG_2026-03-03": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "Recent price action has been contained within a narrow range, with high and low prices forming a rectangular pattern. Volume has been moderate, but not excessive, suggesting a lack of institutional urgency. However, the current setup is tradable, and a breakout or breakdown from this range could attract institutional interest, thereby increasing the score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-03"
+    },
+    "BALRAMCHIN_2026-03-03": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints are visible, with a surge in volume on 2026-03-03, indicating a potential breakout. The pattern resembles an ascending triangle, with a series of higher lows and a flat upper resistance level, suggesting a potential bullish reversal.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-03"
+    },
+    "MAZDOCK_2026-03-05": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates a gradual increase in price with a series of higher lows, suggesting an ascending triangle formation. The volume has been relatively stable, but not excessively high, which is consistent with the characteristics of an ascending triangle. However, there is no strong breakout on massive volume, which prevents a perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-05"
+    },
+    "BEL_2026-03-08": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The stock price has been moving within a narrow range, forming a rectangle pattern. The recent volume is not exceptionally high, but the price action suggests a potential breakout. The score is 72, indicating a valid tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-03-08"
+    },
+    "DALMIASUG_2026-03-08": {
+        "vision_approved": true,
+        "vision_score": 75,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data indicates a potential accumulation formation, with the stock price consolidating within a range. While there isn't a strong breakout on massive volume, the setup appears tradable. The latest volume is not >3x the previous average, but the overall price action suggests institutional interest.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-03-08"
+    },
+    "GTECJAINX_2026-03-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The pattern exhibits a series of higher lows and a consistent resistance level, suggesting an ascending triangle formation. Although there is no massive volume breakout, the recent volume surge on 2026-03-09 with 11550 volume, which is above the average volume, indicates institutional interest. The setup is tradable with a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-09"
+    },
+    "STYRENIX_2026-03-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action forms an ascending triangle pattern, with higher lows and a resistance level at around 1950-1960. The volume on 2026-03-09 is significantly higher than the previous days, indicating institutional buying interest. However, it's not a massive volume surge (>3x avg), hence a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-09"
+    },
+    "HAPPSTMNDS_2026-03-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "head_and_shoulders",
+        "reason": "The recent price action indicates a potential head and shoulders pattern, with the left shoulder forming between 2026-02-01 and 2026-02-03, the head between 2026-02-08 and 2026-02-10, and the right shoulder forming between 2026-02-15 and 2026-02-17. The volume on 2026-03-09 is significantly higher than the previous average, indicating a potential institutional footprint. However, the volume surge is not >3x the previous average, which prevents it from being a perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-09"
+    },
+    "EUROTEXIND_2026-03-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a rectangular pattern with a slight inclination upwards, indicating a potential breakout. Although there isn't a massive volume surge, the volume on 2026-03-10 is 8285, which is higher than the previous days, suggesting some institutional interest. The overall price action and volume justify a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-10"
+    },
+    "ELECTCAST_2026-03-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The latest OHLCV data shows a potential ascending triangle pattern with a volume surge on 2026-03-10, indicating institutional buying interest. The volume on 2026-03-10 is 18948664, which is significantly higher than the previous average, suggesting a strong breakout. However, the score is not perfect as the breakout is not accompanied by a massive volume surge (>3x avg) on multiple days.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-10"
+    },
+    "FACT_2026-03-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data suggests a gradual increase in price with decreasing volatility, forming an ascending triangle pattern. The volume on 2026-03-10 is higher than the previous average, but not >3x, indicating some institutional involvement. However, the overall setup and price action justify a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-10"
+    },
+    "DRREDDY_2026-03-10": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The given OHLCV data shows a trading range between 1275 and 1325, indicating a rectangle pattern. The volume profile also supports this pattern, with moderate to high volumes within the range. The latest volume of 2454389 is not >3x the previous average, but the overall volume profile and price action suggest institutional interest, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-10"
+    },
+    "AARTIIND_2026-03-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action forms a series of higher lows and equal highs, indicating a potential accumulation phase. The volume on 2026-02-08 and 2026-02-04 exceeded 3x the average volume, suggesting institutional buying. Additionally, the overall trend is upward, with the price bouncing off the lower end of the range, further supporting the accumulation formation.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-11"
+    },
+    "FACT_2026-03-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent OHLCV data shows a distribution formation with institutional footprints clearly visible, as evidenced by the high volume on 2026-03-10 (25,190,904) and the subsequent decline in price. The volume surge on 2026-03-10 is >3x the previous average, indicating a strong institutional presence. However, the breakout is not massive enough to score a perfect 100.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-11"
+    },
+    "CESC_2026-03-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "High volume surge on 2026-03-11 with a volume of 16610060, which is >3x the previous average, indicates strong institutional interest. The price action is also forming a rectangular pattern, suggesting a consolidation phase before a potential breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-11"
+    },
+    "STYRENIX_2026-03-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data shows a gradual increase in price with significant volume surges, indicating institutional accumulation. The volume on 2026-03-09 is 242662, which is more than 3 times the average volume, suggesting a strong institutional footprint.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-11"
+    },
+    "HAPPSTMNDS_2026-03-11": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action has formed an ascending triangle pattern, with higher lows and a flat upper resistance level. The volume on 2026-03-10 was significantly higher than the previous days, indicating institutional interest. The score is 82 due to the clear institutional footprints and the formation of the ascending triangle, which is a valid tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-11"
+    },
+    "BEPL_2026-03-12": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "Trading range established between 80-88, with multiple touches of the range boundaries and lack of strong direction, indicative of a rectangle pattern. Volume has been declining in recent days, which is common in rectangle formations. No strong breakout or volume surge was observed to justify a higher score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-12"
+    },
+    "FACT_2026-03-12": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "double_bottom",
+        "reason": "The price has formed a double bottom pattern at 794.5 and 796.15, with a breakout above 916.5. The volume surge on 2026-03-10 (>3x avg) indicates institutional buying, and the price has maintained its upward momentum. However, the latest close (851.5) is below the breakout level, which prevents a perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-12"
+    },
+    "CESC_2026-03-12": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with increasing volume, indicating a potential accumulation phase. The latest volume is not >3x the average, but the overall trend and volume patterns suggest institutional involvement, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-12"
+    },
+    "STYRENIX_2026-03-12": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a series of higher lows and consistent highs, indicating an ascending triangle pattern. The latest volume is not >3x the previous average, but the pattern is still visible and tradable, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-12"
+    },
+    "ESABINDIA_2026-03-15": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The latest data shows a series of higher lows and lower highs, indicating a possible accumulation phase. The volume has been relatively stable, with some surges, but no significant breakout on massive volume (>3x avg) has been observed. However, the overall price action and volume behavior suggest that institutional players are actively participating in the market, hence a strong score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-15"
+    },
+    "VALIANTORG_2026-03-17": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a pattern of higher lows and consistent highs, indicating an ascending triangle formation. Additionally, the volume on 2026-03-17 is significantly higher than the previous average, suggesting institutional involvement. However, the volume surge is not greater than 3 times the average, thus the score is 82, indicating a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-17"
+    },
+    "GMBREW_2026-03-17": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "distribution_formation",
+        "reason": "The volume on 2026-01-05 was significantly higher than the average, indicating a potential institutional footprint. However, the recent price action and volume do not strongly support a specific institutional setup, leading to a moderate score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-03-17"
+    },
+    "CASTROLIND_2026-03-17": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading in a rectangular pattern, with a strong support and resistance level. The volume on 2026-01-20 and 2025-12-23 was significantly higher than the average, indicating institutional footprints. However, the latest volume is not a surge, hence a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-17"
+    },
+    "CASTROLIND_2026-03-18": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading in a narrow range with high volume on some days, indicating a possible accumulation or distribution phase. The recent price action shows a rectangular pattern, which is a continuation pattern. The volume surge on some days is noticeable, but it's not >3x the average volume, hence the score is 82, indicating a strong setup with institutional footprints visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-18"
+    },
+    "DALMIASUG_2026-03-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The price has been consolidating within a range (approx. 294-324) for several days, forming a rectangular pattern. Although there isn't a significant volume surge in the recent data, the overall volume has been moderate to high, indicating some level of institutional participation. The score of 82 reflects the presence of a valid, tradable setup with institutional footprints visible, albeit not extremely strong.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-19"
+    },
+    "BAJAJHIND_2026-03-19": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent OHLCV data shows a general downtrend, higher volume on down days, and lower volume on up days, indicating a distribution formation. However, the volumes are not significantly higher than the average, and there's no clear institutional footprint.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-03-19"
+    },
+    "DRREDDY_2026-03-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading within a defined range with highs around 1300 and lows around 1280, indicating a rectangular pattern. The volume on the last trading day was higher than the previous days, but not significantly higher than the 3-day average volume. However, the overall trading range and the recent price action suggest that institutions are involved, hence a strong setup is visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-19"
+    },
+    "VALIANTORG_2026-03-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Price has been consolidating within a triangle formation with higher lows, indicating a potential ascending triangle pattern. Volume has been moderate, but recent movements show signs of institutional accumulation, scoring it as a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-19"
+    },
+    "ANDHRSUGAR_2026-03-24": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The stock has been trading within a rectangle pattern for several weeks, with clear support and resistance levels. The recent volume surge on 2026-03-03 (754970) is >3x the previous average, indicating an institutional footprint. The breakdown on 2026-03-04 and the subsequent price action suggest a potential continuation of the trend, with a high score due to the clear institutional involvement.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-24"
+    },
+    "BAJAJHIND_2026-03-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "Institutional footprints are visible with recent price action forming a continuation rectangle pattern. The average volume of the last 10 days is around 9.5 million, and the latest volume on 2026-03-26 is approximately 33.7 million, which is >3x the average, indicating a potential institutional buying interest.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-26"
+    },
+    "DHAMPURSUG_2026-03-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates a steady increase in volume and a gradual ascending trend, suggestive of an ascending triangle pattern. The latest volume is not >3x the previous average, but the institutional footprints are visible, hence a strong score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-26"
+    },
+    "ARVIND_2026-03-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action of ARVIND has been consolidating within a narrow range, forming a rectangle pattern. The average volume over the past few days has been relatively stable, with no significant surges. However, the overall trading range and price action suggest a strong institutional presence, with a potential breakout or continuation setup emerging. The score of 82 indicates a strong setup with visible institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-03-26"
+    },
+    "BAJAJHIND_2026-03-29": {
+        "vision_approved": false,
+        "vision_score": 62,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action in BAJAJHIND stock shows a distribution formation with a series of lower highs and lower lows, indicating a potential downtrend. However, the volume surge on 2026-03-08 and 2026-03-03 is notable, but not enough to score higher than 70. The average volume is around 10 million, and the surge is around 22 million and 52 million respectively, which is not >3x the average volume consistently. The overall pattern suggests a distribution formation, but the institutional footprint is not strongly visible.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-03-29"
+    },
+    "BSHSL_2026-04-01": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "reverse_head_and_shoulders_bottom",
+        "reason": "The recent OHLCV data indicates a potential reverse head and shoulders bottom formation, with the latest candle (2026-04-01) showing a strong breakout on high volume (1319167), which is greater than 3 times the average volume. This suggests institutional buying interest, supporting the validity of the pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-01"
+    },
+    "ARVIND_2026-04-01": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Recent price action indicates a series of higher lows and equal highs, characteristic of an accumulation formation. The volumes on up days are significantly higher than on down days, suggesting institutional buying interest. The average volume over the last 10 trading sessions is approximately 341,000, and on 2026-04-01, the volume surged to 588,499, which is nearly 1.7x the average, but not quite >3x. However, the consistent higher lows and the surge in volume on up days justify a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-01"
+    },
+    "HARRMALAYA_2026-04-05": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action has formed an ascending triangle pattern with higher lows, indicating a potential breakout. The average volume over the past 10 days is approximately 18,000, and the latest volume is 47,658, which is >2.5x the average but not >3x. However, the overall pattern and recent volume increase suggest institutional involvement, warranting a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-05"
+    },
+    "ARVIND_2026-04-05": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates a gradual increase in price with diminishing volatility, hinting at an ascending triangle formation. Institutional footprints are visible with a notable increase in volume on certain days, although not a massive breakout on >3x average volume. The data suggests a strong, tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-05"
+    },
+    "ANGELONE_2026-04-07": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent OHLCV data shows a consistent trading range with a high volume on 2026-04-07, indicating a potential breakout. The volume surge on 2026-04-07 is not >3x the previous average, but the overall pattern suggests a strong institutional setup, scoring it as STRONG (80-89).",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-07"
+    },
+    "GMBREW_2026-04-07": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with increasing volume, indicating potential accumulation by institutions. However, there is no strong breakout or volume surge (>3x avg) to score it higher.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-07"
+    },
+    "BASF_2026-04-07": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been consolidating in a range for several days, with a clear rectangle pattern visible. The recent volume surge is >2x the previous average, but not >3x, indicating some institutional participation. The price action is also showing a potential breakout from the rectangle, which supports the scoring.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-07"
+    },
+    "MASFIN_2026-04-07": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The stock has been trading in a higher low and higher high formation with a resistance at 317-320 levels, indicating a potential ascending triangle pattern. The volume on the latest day (196163) is higher than the previous average, but not >3x, hence the score is not perfect. However, the setup is tradable, and institutional footprints are visible, suggesting a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-07"
+    },
+    "ABB_2026-04-07": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The latest OHLCV data reveals a series of higher lows and consistent highs, characteristic of an ascending triangle pattern. While the volume on the latest day is not significantly higher than the average, the pattern suggests institutional accumulation. The vision score is 82, indicating a strong setup with visible institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-07"
+    },
+    "BHEL_2026-04-08": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action in BHEL suggests an accumulation formation, as the stock has been consolidating in a narrow range with increasing volumes, indicating institutional buying interest. The latest volume is higher than the previous average, but not >3x, hence the score is 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-08"
+    },
+    "SUDARCOLOR_2026-04-08": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "Institutional footprints are visible with a high volume day on 2026-01-21 and the price action is respecting the rectangle pattern, but the latest volume is not >3x the average volume, thus a strong score of 82 is given.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-08"
+    },
+    "ESG_2026-04-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The price has been consolidating in a range with decreasing volumes, forming a potential accumulation pattern. The recent volume surge on 2026-04-08 is >3x the previous average, indicating institutional buying interest, but it's not a perfect breakout yet.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-09"
+    },
+    "ASIANPAINT_2026-04-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The stock price has been moving within a range, with multiple touches on the upper and lower boundaries, indicating a rectangle pattern. The recent volume surge on 2026-04-09 is notable, but not exceeding 3x the average volume, hence a strong score but not perfect.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-09"
+    },
+    "PGHL_2026-04-09": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates a potential ascending triangle pattern, with higher lows and a relatively stable high. The volume has been moderately increasing, but not surging. The setup is tradable, but lacks strong institutional footprints.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-09"
+    },
+    "GICRE_2026-04-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The pattern resembles an accumulation formation with multiple touches at the support level. The volume on 2026-02-09 is significantly higher than the average volume, indicating an institutional footprint. The price has been oscillating within a range, and the latest candlestick has a higher close, suggesting a potential breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-09"
+    },
+    "GATECHDVR_2026-04-09": {
+        "vision_approved": false,
+        "vision_score": 62,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action shows a range-bound movement with a slight downward bias, indicating a potential distribution formation. The volume has been relatively high but not excessively high, which suggests some institutional activity but not a strong breakout. The latest volume is not >3x the previous average, which would have indicated a strong institutional footprint.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-09"
+    },
+    "ESABINDIA_2026-04-09": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Institutional footprints are visible with recent volume surges and a general uptrend in the stock price, indicating a strong accumulation phase.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-09"
+    },
+    "BHEL_2026-04-09": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data for BHEL shows a gradual increase in price with a series of higher lows, indicating a potential ascending triangle pattern. While the volume has not surged to 3x the average, the overall trend and price action suggest a valid tradable setup, scoring 72.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-09"
+    },
+    "DANGEE_2026-04-09": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data shows a series of small range days with decreasing volumes, which may indicate accumulation. The high and low prices are converging, forming a coil-like structure, which is typical of an accumulation formation. However, there is no strong breakout or massive volume surge (>3x avg) to confirm institutional involvement, resulting in a score of 72, categorizing it as a VALID tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-09"
+    },
+    "ADL_2026-04-12": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints clearly visible with recent price action forming an ascending triangle pattern. Volume has been increasing, however, it is not >3x the previous average. The latest data shows a Friday close, which is the correct 'latest' footprint. Score is STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-12"
+    },
+    "DCW_2026-04-12": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action suggests an ascending triangle formation, with the price bouncing off the lower trendline and attempting to break out above the upper trendline. Institutional footprints are visible, with increased volume on up days, indicating a potential strong breakout. The latest volume is not >3x the previous average, but the overall volume pattern and price action suggest a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-12"
+    },
+    "GRAPHITE_2026-04-14": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data for GRAPHITE shows a period of consolidation with higher lows and higher highs, indicating a potential accumulation formation. The volume on 2026-04-14 is relatively high, but not >3x the previous average. However, the overall volume pattern suggests institutional buying, with an increase in volume on up days. The vision score is 82, indicating a strong setup with institutional footprints clearly visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-14"
+    },
+    "BHARATGEAR_2026-04-14": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action has formed a series of higher lows, suggesting an ascending triangle pattern. Additionally, the latest volume is not >3x the previous average, but the overall volume trend is increasing, indicating institutional interest. The vision score is 82, indicating a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-14"
+    },
+    "ESABINDIA_2026-04-14": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock is forming a higher low and the recent volume surge on 2026-04-14 indicates a potential institutional buying, with volume being 22798 which is higher than the average volume, however not >3x the previous average.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-14"
+    },
+    "ARVIND_2026-04-14": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Institutional buying is evident with increased volumes on up days and a general upward trajectory in the price action, indicating a potential accumulation phase. However, the current volume surge is not >3x the average, hence scoring it as STRONG rather than PERFECT.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-14"
+    },
+    "UTIAMC_2026-04-14": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action forms a distribution pattern, with a series of lower highs and lower lows, indicating institutional selling. The volume on 2026-04-14 is higher than the previous days, but not significantly higher than the average volume, suggesting some institutional involvement. However, the overall volume trend is decreasing, which is consistent with a distribution pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-14"
+    },
+    "PGHL_2026-04-14": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action has been consolidating within a narrow range, with multiple touches of the upper and lower boundaries, forming a rectangle pattern. The volume has been consistent, but not exceptionally high, suggesting institutional interest. However, there is no significant volume surge to indicate a strong breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-14"
+    },
+    "GICRE_2026-04-14": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent OHLCV data indicates a stable trading range with minimal volatility, characteristic of a rectangle continuation pattern. The volume has been relatively consistent, with no significant surges. However, the most recent volume is slightly higher than the previous average, suggesting some institutional participation, hence the strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-14"
+    },
+    "MAHLOG_2026-04-15": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The stock has been trading in a rectangular range with clear support and resistance levels. The recent price action suggests a continuation of the existing trend, with institutional footprints visible in the form of increased volume on key days. The latest volume is not >3x the previous average, but the overall setup looks strong, with a score of 82, indicating a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-15"
+    },
+    "MARINE_2026-04-15": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "High volume surge on 2026-04-15 (>3x average) indicates strong institutional buying interest, and the price action from 2026-03-15 to 2026-04-15 forms an ascending triangle, a continuation pattern. The score is 82 as it is a strong tradable setup with clear institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-15"
+    },
+    "CESC_2026-04-15": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "Recent price action has been confined within a narrow range, suggesting a rectangle pattern. The latest volume on 2026-04-15 is 5919386, which is roughly 2.5 times the average volume of the previous 10 trading days (2353478), indicating some level of institutional interest, but not a massive volume surge. The trading range has been established between 155 and 171, with multiple touches of these levels, further supporting the rectangle pattern identification.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-15"
+    },
+    "ASHAPURMIN_2026-04-15": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a pattern of higher lows and consistent highs, indicating a potential ascending triangle formation. The volume on 2026-04-15 is significantly higher than the previous days, but not more than 3x the average. The setup is tradable, but not a perfect breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-15"
+    },
+    "AUROPHARMA_2026-04-15": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The price has been forming higher lows and the volume on 2026-04-07 was significantly higher than the average, indicating a potential institutional footprint, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-15"
+    },
+    "ARVIND_2026-04-15": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been in a consolidation phase, and the volume on 2026-02-23 was 1712256, which is greater than 3 times the average volume, indicating a volume surge and potential institutional footprint. The recent price action has been forming a potential accumulation formation.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-15"
+    },
+    "UTIAMC_2026-04-16": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data indicates a potential accumulation formation with a series of higher lows and lower highs, suggesting a buildup of institutional interest. While the latest volume is not >3x the average, it is higher than the previous day, indicating a possible surge in institutional activity. The overall pattern and volume trend justify a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-16"
+    },
+    "BEML_2026-04-16": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action in BEML shows a gradual increase in price with moderate volume, indicating a potential accumulation phase. The latest volume is not >3x the average, but the overall pattern suggests institutional buying interest, scoring it as a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-16"
+    },
+    "CGPOWER_2026-04-16": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action has been forming a series of higher lows and higher highs, indicating a potential accumulation phase. The volumes on up days are significantly higher than on down days, suggesting institutional buying interest. Although there isn't a massive volume surge (>3x avg) in the latest data, the overall pattern and volume trends indicate a strong institutional setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-16"
+    },
+    "CAMS_2026-04-16": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The given OHLCV data suggests a trading range bound by support and resistance levels, characteristic of a rectangle pattern. While a volume surge isn't evident, the data indicates a tradable setup with potential institutional involvement, scoring it as a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-16"
+    },
+    "CESC_2026-04-16": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The given OHLCV data indicates a trading range with support and resistance levels, characteristic of a rectangle pattern. The volume surge on 2026-04-15 is notable but does not exceed 3 times the average volume, hence a valid but not strong institutional footprint is observed.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-16"
+    },
+    "ARVIND_2026-04-16": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action suggests a potential accumulation formation with increasing volumes, indicating institutional buying interest. The volumes on 2026-02-23 (1712256) and 2026-02-12 (2178374) significantly exceed the average volume, suggesting institutional footprints. The price has been consolidating, and the recent volumes are above average, indicating a strong setup for a potential breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-16"
+    },
+    "ESABINDIA_2026-04-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent price action is forming a rectangle pattern, which is a continuation pattern. The volume on 2026-04-14 was 22798, which is more than 3 times the previous average volume, indicating an institutional footprint. This, combined with the recent price action, suggests a strong setup for a continuation of the trend.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-19"
+    },
+    "GIPCL_2026-04-19": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The pattern resembles an ascending triangle with a series of higher lows and a resistance level around 158-159. The volume on 2026-04-19 is not a massive surge (>3x avg), but it's a respectable increase. The overall trend and the recent price action suggest a valid tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-19"
+    },
+    "ADOR_2026-04-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "distribution_formation",
+        "reason": "Institutional footprints are visible, with a recent volume surge and a high-low-close pattern indicating a potential distribution formation. The latest volume is not greater than 3 times the average volume, but the setup is tradable with a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-19"
+    },
+    "STYRENIX_2026-04-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action is bounded within a clear support and resistance level, with multiple touches on both levels, indicating a rectangle pattern. The average volume over the last 10 days is around 35000, and the latest volume is 59664, which is approximately 1.7 times the average, not meeting the 3x criteria for a perfect score but still indicating institutional interest.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-19"
+    },
+    "CGPOWER_2026-04-19": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action shows a series of higher lows and equal highs, indicating a potential accumulation phase. The volume on 2026-04-19 was significantly higher than the average volume, suggesting institutional buying interest. The price is also holding above the previous support level, adding to the accumulation case.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-19"
+    },
+    "PGHL_2026-04-19": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "Institutional footprints are visible, with recent price action forming a rectangle pattern. While there is no massive volume surge (>3x avg), the latest volume is significant, indicating institutional interest. The pattern is tradable, but a stronger breakout with higher volume would increase the score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-19"
+    },
+    "AEGISLOG_2026-04-19": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a trading range with support around 610-630 and resistance around 700-720, indicating a rectangle pattern. However, the latest volume is not a clear institutional footprint and does not exceed 3x the average volume, resulting in a moderate score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-19"
+    },
+    "FEDERALBNK_2026-04-19": {
+        "vision_approved": false,
+        "vision_score": 68,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action shows a series of lower highs and lower lows, indicating a potential distribution formation. However, the volume on the last trading day was not significantly higher than the average volume, scoring it below the strong breakout threshold. The price is currently trading near the lower end of the recent range, suggesting a potential breakdown. The volume surge is not present, hence scoring it as a valid but not strong setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-19"
+    },
+    "ASHIMASYN_2026-04-20": {
+        "vision_approved": false,
+        "vision_score": 60,
+        "identified_pattern": "rectangle",
+        "reason": "The stock is trading in a range-bound manner with multiple touches on the highs and lows, indicating a potential rectangle pattern. However, the volume surge is not significant enough to indicate a strong institutional footprint, resulting in a moderate score.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-20"
+    },
+    "GRAPHITE_2026-04-20": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a gradual increase in price with diminishing volatility, forming an ascending triangle pattern. The volume surge on 2026-04-19 (>3x avg) indicates strong institutional interest, justifying a high score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-20"
+    },
+    "GICHSGFIN_2026-04-20": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a clear rectangular pattern with high and low prices oscillating within a narrow range, indicating a potential consolidation phase. The latest volume is not >3x the previous average, but the pattern suggests institutional interest, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-20"
+    },
+    "ATUL_2026-04-20": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "Institutional footprints are visible with a rectangular pattern forming, and volumes are indicating a potential buildup for a breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-20"
+    },
+    "TIINDIA_2026-04-20": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action has formed an ascending triangle pattern, with a series of higher lows and a resistance level at around 2900. The volume on 2026-04-19 was significantly higher than the previous days, indicating institutional buying interest. Although it's not a massive volume surge (>3x avg), it's still a notable increase, suggesting that institutions are actively participating in the market. The overall setup is strong, with a valid breakout potential, hence a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-20"
+    },
+    "APCOTEXIND_2026-04-20": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The pattern shows a gradual increase in price with moderate volume, indicating a potential accumulation phase. The recent price action has been range-bound with a slight upward bias, suggesting institutional buying. The volume on 2026-04-20 was 53778, which is higher than the average volume, but not more than 3 times the average. However, the overall price action and volume suggest a strong institutional presence, warranting a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-20"
+    },
+    "FINCABLES_2026-04-20": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data shows a series of higher lows and lower highs, forming a trading range. The volume has been increasing over the past few days, with the latest volume being higher than the previous average, indicating institutional buying. The price has also been consolidating above the recent lows, forming a potential accumulation area.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-20"
+    },
+    "ALEMBICLTD_2026-04-20": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates a gradual increase in price with diminishing volatility, characteristic of an ascending triangle formation. The volume on 2026-04-20 is not >3x the average volume, but the overall pattern and increasing volume on certain days suggest institutional interest, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-20"
+    },
+    "CRISIL_2026-04-20": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action and volume data suggest a potential accumulation formation. The stock has been trading in a range with increasing volume, indicating institutional buying. The latest volume is higher than the previous average, but not more than 3 times, scoring it as a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-20"
+    },
+    "MASFIN_2026-04-20": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "Recent price action has been trading within a defined range, with support and resistance levels established. Volume has been moderate, but not excessive. The latest volume is not >3x the previous average, but the overall setup is indicative of a tradable rectangle continuation pattern, suggesting institutional interest and a potential breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-20"
+    },
+    "EXIDEIND_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Institutional footprints are visible with a surge in volume on 2026-04-21, indicating strong buying interest. The price action is forming a base, suggesting an accumulation phase.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "BALRAMCHIN_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data indicates a period of consolidation with a slight upward bias, which is characteristic of an accumulation formation. The latest volume is not >3x the previous average, but the overall volume trend suggests institutional buying interest. The score is 82, indicating a strong tradable setup with visible institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "AARTIIND_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data shows a steady increase in price with moderate volume, indicating a potential accumulation phase. The volume on 2026-04-21 is higher than the previous average, but not >3x, and the price action is forming a higher low pattern, suggesting institutional buying interest.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "IFGLEXPOR_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with increasing volume, indicating institutional accumulation. The latest volume is not >3x the average, but the overall trend and volume pattern suggest a strong institutional setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "IGARASHI_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent OHLCV data shows a steady decline in price with increasing volume, indicating a distribution formation. The volume surge on 2026-04-14 with a volume of 2288229, which is greater than 3x the previous average, is a strong indication of institutional footprint. The pattern is further validated by the consistent selling pressure and lack of significant buying interest, resulting in a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "MAHLOG_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "accumulation_formation",
+        "reason": "Volume has been increasing with a few instances of high volume days, indicating institutional buying. The price has also been consolidating, forming a potential accumulation pattern. Although the volume surge condition is not met, the overall setup appears strong with institutional footprints visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "ELGIEQUIP_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with increasing volumes, indicating accumulation by institutions. The latest volume is not >3x the previous average, but the overall pattern suggests institutional buying, hence a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "BEML_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action indicates a gradual accumulation of the stock, with a series of higher lows and a steady increase in volume. The latest volume is not >3x the previous average, but the overall pattern suggests institutional buying interest, warranting a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "APOLLOHOSP_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action suggests a potential accumulation formation, with the stock trading in a range and a slight increase in volume. The latest volume is not >3x the previous average, but the setup is still tradable.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-21"
+    },
+    "DICIND_2026-04-21": {
+        "vision_approved": false,
+        "vision_score": 68,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action has formed a distribution pattern with multiple highs around the 555 level, indicating institutional selling. The volume has been increasing, but it's not a massive surge (>3x avg). The latest volume is 3281, which is relatively high but not exceptional compared to the previous average.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-21"
+    },
+    "SCHAEFFLER_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action of SCHAEFFLER shows a series of higher lows and equal highs, which is a characteristic of an accumulation formation. The volume on 2026-04-21 is not significantly higher than the average, but the overall volume during the past few days has been steadily increasing. The price has been making a series of small range bars with the last close being near the high, indicating a potential breakout. This, combined with the recent upmove, indicates strong institutional buying interest, resulting in a high validity score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "DPABHUSHAN_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action suggests an ascending triangle formation, which is a continuation pattern. The volumes on 2026-04-19 and 2026-04-21 are significantly higher than the average volume, indicating institutional activity. However, the volume surge is not >3x the previous average, so the score is not perfect.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "GATECHDVR_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 80,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data shows a consistent trading range between 0.47 and 0.49, with high volumes on certain days. This indicates a possible rectangle formation, which is a valid trading setup. However, the lack of a strong breakout on massive volume prevents it from being a perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "BSL_2026-04-21": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "Institutional footprints are visible with a slight surge in volume on 2026-04-15, and the recent price movement is indicative of a continuation pattern after a brief consolidation, suggesting a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-21"
+    },
+    "EXIDEIND_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The stock has formed an ascending triangle pattern with a clear breakout on high volume. The latest volume is 15696406, which is more than 2x the previous average, indicating strong institutional participation. However, it's not >3x the average volume, so the score is not perfect.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "COSMOFIRST_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading sideways with increasing volumes over the last few days, indicating accumulation by institutions. The latest volume is higher than the previous average, but not more than 3 times, hence scoring it as STRONG (80-89).",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "BALRAMCHIN_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action has formed a series of higher lows and equal highs, indicative of an ascending triangle pattern. Volume has been increasing, with the latest volume being 1853307, which is roughly 1.5x the previous average, suggesting institutional interest. The score is 82 as the pattern is valid and tradable, but the volume surge is not >3x the average.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "CAMS_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent OHLCV data shows a trading range between 745 and 778, with a surge in volume on 2026-04-22, indicating a potential institutional footprint. The price action is consolidating within this range, suggesting a continuation pattern. The volume on 2026-04-22 is approximately 2.5 times the average volume, which is not a perfect score but indicates strong institutional interest.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "BALMLAWRIE_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The stock is trading within a tight range, with multiple days of consolidation. The volume is moderate, not indicating a strong breakout. However, the recent price action has been respecting the support and resistance levels, indicating a possible institutional setup for a rectangle pattern.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "EUROTEXIND_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 78,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The stock has been forming a series of higher lows and equal highs, indicating a potential ascending triangle pattern. Although there isn't a massive volume surge (>3x avg), the recent volume on 2026-04-22 is higher than the previous average, suggesting some institutional interest. The score is 78 due to the valid tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "ATUL_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The given OHLCV data indicates trading within a specific range, forming a rectangular pattern. While there isn't a volume surge >3x the average to indicate a strong institutional footprint, the pattern itself and the consistent volume support a strong, tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "5PAISA_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data shows a gradual increase in price with moderate volumes, indicating a potential accumulation phase. The volume surge on 2026-04-06 and 2026-04-22 is notable, but not exceeding 3x the average volume. The overall structure suggests a tradable setup with institutional footprints visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "MAHLOG_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action has formed an ascending triangle pattern, with higher lows and a flat top. The volume on 2026-04-07 and 2026-04-17 was significantly higher than the average volume, indicating institutional buying interest. The score is 82 as the pattern is valid and there are signs of institutional footprints, but the breakout is not yet confirmed on massive volume.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "GINNIFILA_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The stock has been forming an ascending triangle pattern over the past few weeks, with a series of higher lows and a flat top. The recent surge in volume on 2026-04-22, with a volume of 219132, which is greater than 3 times the average volume, indicates a potential institutional footprint, suggesting a strong buy signal.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "EIDPARRY_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The OHLCV data suggests an accumulation formation with a series of higher lows and lower highs, indicating a potential reversal. The volume on 2026-04-22 is significantly higher than the previous days, but not >3x the average volume, which would have indicated a strong institutional footprint. However, the overall pattern and volume activity suggest a tradable setup with a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "AUROPHARMA_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action in AUROPHARMA suggests an accumulation formation, where the stock has been trading in a range with increasing volume, indicating institutional buying interest. The volume on 2026-04-22 was 2238307, which is higher than the average volume, but not more than 3 times the average. However, the overall trend and volume pattern suggest a strong accumulation, scoring 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-22"
+    },
+    "DELTAMAGNT_2026-04-22": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent OHLCV data suggests a trading range between 60 and 65, which is a characteristic of a rectangle continuation pattern. Although there isn't a strong breakout on massive volume, the pattern is still valid and tradable, warranting a score of 72.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-22"
+    },
+    "ATUL_2026-04-23": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading in a range-bound manner, with clear support and resistance levels, indicating a rectangle pattern. The volume has been consistently moderate, with no significant surges, but the recent price action suggests institutional accumulation. The score is 82 due to the clear institutional footprints and the potential for a breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-23"
+    },
+    "TIINDIA_2026-04-23": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data shows a steady increase in volume with moderate price fluctuations, indicating a potential accumulation phase. The price action is forming a pattern that resembles a rectangle or a trading range, which is a common characteristic of accumulation formations. The volume surge on 2026-04-19 and the subsequent price movements suggest that institutional investors are actively participating in the market, thereby increasing the score. However, the lack of a strong breakout on massive volume prevents the score from reaching the 'PERFECT' range.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-23"
+    },
+    "MAHLOG_2026-04-23": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent OHLCV data shows a series of higher lows and equal highs, indicating a potential accumulation formation. The volume spike on 2026-01-27 and 2026-02-09 suggests institutional buying, further supporting the accumulation theory. The score is 82 as it meets the criteria for a STRONG setup with institutional footprints visible.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-23"
+    },
+    "21STCENMGM_2026-04-23": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a tight range with increasing volume, indicating accumulation by institutional investors. The latest volume is not >3x the previous average, but the overall pattern suggests a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-23"
+    },
+    "SCHAEFFLER_2026-04-23": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data for SCHAEFFLER shows a trading range between 4172.3 and 4351.0, with the latest close at 4286.6, indicating a 'rectangle' pattern. The volume on 2026-04-23 is 175146, which is higher than the previous average, but not more than 3 times, thus scoring 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-23"
+    },
+    "DRREDDY_2026-04-23": {
+        "vision_approved": true,
+        "vision_score": 85,
+        "identified_pattern": "head_and_shoulders",
+        "reason": "The OHLCV data shows a potential head and shoulders pattern forming, with a significant volume surge on 2026-04-22, indicating institutional buying interest. The latest volume is more than 2x the previous average, but not >3x, thus scoring in the STRONG category.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-23"
+    },
+    "ARENTERP_2026-04-23": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been trading in a range with increasing volume, indicating accumulation by institutions. The latest volume is not >3x the previous average, but the overall volume trend and price action suggest a strong institutional presence.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-23"
+    },
+    "NEWGEN_2026-04-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The price has been consolidating in a range with increasing volume, indicating institutional accumulation. The latest bar's volume is higher than the average volume, but not more than 3 times, suggesting a strong setup but not a perfect breakout.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-26"
+    },
+    "ESABINDIA_2026-04-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The given OHLCV data shows a series of higher lows and equal highs, which could indicate an accumulation formation. While there isn't a clear, strong breakout on massive volume, the recent price action suggests that institutional investors may be accumulating the stock, resulting in a score of 82, indicating a strong, tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-26"
+    },
+    "AARTIIND_2026-04-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The stock has been consolidating in a range with increasing volume, indicating accumulation by institutions. The latest volume is not >3x the average, but the overall pattern suggests institutional buying, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-26"
+    },
+    "ATUL_2026-04-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading in a tight range with high volumes on certain days, indicating institutional buying or selling. The latest volume is not >3x the previous average, but the overall volume pattern and price action suggest a tradable setup with institutional footprints.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-26"
+    },
+    "ELECTCAST_2026-04-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a pattern of higher lows and relatively constant highs, indicating a potential ascending triangle formation. The volume on 2026-04-26 was 10796873, which is greater than 3 times the average volume of the previous days, suggesting an institutional footprint. However, the score is not perfect as the breakout is not extremely strong and the volume surge is not excessively high.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-26"
+    },
+    "ADOR_2026-04-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Price has been consolidating in a narrowing range with a series of higher lows, indicating a potential ascending triangle pattern. The latest volume is not >3x the previous average, but the pattern is still visible and tradable, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-26"
+    },
+    "ROML_2026-04-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints visible, with a series of higher lows and a flat top, indicating a potential ascending triangle pattern. While the volume on the latest day is higher than the previous day, it is not >3x the previous average, thus scoring it as STRONG (80-89) rather than PERFECT.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-26"
+    },
+    "AMBER_2026-04-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data indicates a series of higher lows and consistent highs, suggesting an ascending triangle formation. While there isn't a massive volume surge, the volume on key days is notable, indicating institutional interest. The pattern is not perfect, but it shows a strong, tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-26"
+    },
+    "BRITANNIA_2026-04-26": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading in a range with multiple highs and lows creating a rectangle pattern. The latest volume surge on 2026-04-26 with a volume of 658091 is approximately 1.4 times the previous average, indicating some institutional interest, but not a massive breakout on huge volume. However, the overall pattern and volume activity suggest a strong tradable setup, warranting a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-26"
+    },
+    "AARTIIND_2026-04-27": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action shows a series of higher lows and equal highs, indicating a potential accumulation phase. The volume on 2026-04-27 is significantly higher than the previous days, but not greater than 3 times the average volume, suggesting some institutional participation.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-27"
+    },
+    "GABRIEL_2026-04-27": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints are visible with a notable volume increase, and the price action suggests a potential ascending triangle pattern, indicating a strong setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-27"
+    },
+    "FMGOETZE_2026-04-27": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "Institutional footprints are visible with high volume surges and the recent price action forming a rectangle pattern, indicating a potential breakout. While the volume on 2026-04-27 is not >3x the average, it's still higher than the previous days, supporting the score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-27"
+    },
+    "ATUL_2026-04-27": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action suggests an ascending triangle pattern. The score is 82 because the pattern is visible, but the volume surge is not >3x the average volume. The average volume over the last 10 days is approximately 30,000, and the latest volume is 72,001, which is about 2.4x the average, not meeting the >3x threshold for a perfect score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-27"
+    },
+    "ADOR_2026-04-27": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action has formed an ascending triangle pattern with higher lows and a flat top, indicating a potential breakout. The latest volume is not >3x the average volume, but the pattern is still a valid tradable setup, scoring 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-27"
+    },
+    "UFLEX_2026-04-27": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_reversal_pattern",
+        "reason": "The recent OHLCV data shows a trading range between 395 and 442, forming a rectangle pattern. The latest volume surge on 2026-04-27 with a volume of 594855 is significantly higher than the previous average volume, indicating an institutional footprint. This, combined with the strong close at 431.85, suggests a potential reversal setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-27"
+    },
+    "CASTROLIND_2026-04-27": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The stock price has been consolidating in a range with high volumes on certain days, indicating potential institutional buying or selling. The stock has been trading in a range between 182 and 185, with the latest day's volume (2809325) being higher than the average volume over the past few days, but not more than 3 times the average volume, suggesting some institutional activity.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-27"
+    },
+    "AMBER_2026-04-27": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints are visible with a strong surge in volume on 2026-04-26, indicating a potential breakout from the ascending triangle pattern. The volume on 2026-04-26 is 473818, which is approximately 2.5 times the average volume of the previous 10 days, suggesting strong institutional involvement.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-27"
+    },
+    "GRASIM_2026-04-27": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The stock price has been oscillating within a narrow range, forming a rectangle pattern. The recent volume surge on 2026-04-27 is >2x the previous average, indicating institutional interest. However, it's not >3x, so the score is not perfect. The setup is strong, with a clear rectangle pattern and increasing volume, but not extremely high volume, hence a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-27"
+    },
+    "VALIANTORG_2026-04-27": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a potential ascending triangle formation, with the price bouncing off the lower trendline and making higher lows. The volume on 2026-04-27 is higher than the previous day, but not a massive surge. However, the overall volume trend is increasing, indicating institutional interest. The price action and volume suggest a strong setup, but not a perfect breakout, hence a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-27"
+    },
+    "GREAVESCOT_2026-04-27": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data reveals a pattern of higher lows and consistent highs, indicating an ascending triangle formation. The volume surge on 2026-04-27 is not >3x the previous average, but the overall volume has been increasing, supporting the validity of the setup. The price action is also consistent with institutional buying, as the stock is making higher lows and the volume is increasing on up days.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-27"
+    },
+    "ICEMAKE_2026-04-28": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent OHLCV data indicates a range-bound movement with multiple touches of the upper and lower limits, characteristic of a rectangle pattern. The volume has been relatively stable without a major surge, indicating institutional accumulation or distribution within this range. The price action suggests that institutions are building positions within this rectangle, justifying a strong score.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-28"
+    },
+    "BALMLAWRIE_2026-04-28": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle",
+        "reason": "The stock has been trading within a range, with highs around 180-185 and lows around 175-180, forming a rectangular pattern. While there's no strong breakout on massive volume, the setup is tradable. The latest volume is not >3x the previous average, thus not an Institutional Footprint.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-28"
+    },
+    "GODFRYPHLP_2026-04-28": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints are visible with a strong volume on 2026-04-28, indicating a potential breakout. The price action is forming an ascending triangle pattern, which is a valid setup for a trade. However, the volume surge on 2026-04-28 is not >3x the previous average, hence a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-28"
+    },
+    "GIPCL_2026-04-28": {
+        "vision_approved": true,
+        "vision_score": 72,
+        "identified_pattern": "rectangle_continuation_pattern",
+        "reason": "The recent price action has formed a rectangular pattern with a slight upward bias, indicating a potential continuation of the trend. The volume has been relatively stable, with no significant surges above 3x the average. However, the overall structure and the lack of strong reversal signals suggest a valid tradable setup.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-28"
+    },
+    "FMGOETZE_2026-04-28": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Institutional footprints are visible with a gradual increase in price, forming an ascending triangle pattern. The recent volume surge on 2026-04-28 is notable, but not exceeding 3x the previous average. However, the overall trading activity and price movement suggest a strong interest from institutions, scoring it as a strong tradable setup.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-28"
+    },
+    "BHARATFORG_2026-04-28": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle_reversal_pattern",
+        "reason": "The stock has been consolidating in a range with high volumes on certain days, indicating institutional buying and selling. The recent price action has been forming a rectangle pattern, which could be a reversal pattern. The volumes on 2026-04-26 and 2026-04-22 are significantly higher than the average volume, suggesting institutional involvement.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-28"
+    },
+    "ELGIEQUIP_2026-04-28": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "accumulation_formation",
+        "reason": "The recent price action in ELGIEQUIP indicates a potential accumulation formation, with the stock trading in a relatively narrow range and higher lows being formed. The volume on 2026-04-21 was significantly higher than average, which could be indicative of institutional buying. The overall setup suggests a strong likelihood of an upside breakout, hence a high vision score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-28"
+    },
+    "ADOR_2026-04-28": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent OHLCV data shows a series of higher lows and consistent highs, indicating a potential ascending triangle pattern. The volume on 2026-04-27 is significantly higher than the previous days, suggesting institutional buying interest. However, the volume surge is not >3x the previous average, so the score is not perfect.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-28"
+    },
+    "UFLEX_2026-04-28": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "rectangle",
+        "reason": "The recent price action of UFLEX has been moving within a narrow range, with multiple touches of the upper and lower boundaries, characteristic of a rectangle pattern. Volume has not surged to >3x the average, but the pattern is clear and tradable, scoring it as STRONG.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-28"
+    },
+    "ORCHPHARMA_2026-04-28": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "The recent price action of ORCHPHARMA has formed an ascending triangle pattern. The volume on 2026-04-28 was 152931, which is approximately 2.5 times the average volume of the previous few days, indicating some institutional interest. However, it does not meet the criteria of >3x average volume for a perfect score. The pattern is still considered strong with a score of 82.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-28"
+    },
+    "DRREDDY_2026-04-28": {
+        "vision_approved": true,
+        "vision_score": 82,
+        "identified_pattern": "ascending_triangle",
+        "reason": "Higher highs and equal lows along with an increase in volume on the latest day suggest the presence of an ascending triangle pattern, indicating a potential breakout. The volume is not >3x the average, but it's higher than the previous days, indicating institutional interest.",
+        "whipsaw_risk": "Low",
+        "cached_at": "2026-04-28"
+    },
+    "FEDERALBNK_2026-04-28": {
+        "vision_approved": false,
+        "vision_score": 68,
+        "identified_pattern": "distribution_formation",
+        "reason": "The recent price action and volume suggest a distribution formation, with a slight downward bias. The volume on 2026-04-28 is not >3x the previous average, and the overall price action lacks a strong breakout or institutional footprint, resulting in a score of 68.",
+        "whipsaw_risk": "High",
+        "cached_at": "2026-04-28"
     }
 }

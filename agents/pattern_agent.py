@@ -48,7 +48,7 @@ class VisionPatternAgent:
 
     def analyze_chart(self, symbol: str, pattern_hint: str, target_date: str = None) -> Dict[str, Any]:
         """
-        Dynamically identifies institutional setups using OpenAI GPT-4o with neural caching.
+        Dynamically identifies institutional setups using Groq Llama-3 with neural caching.
         """
         # Fetch recent data first to determine the "Latest Date" for the cache key
         import os, psycopg2
@@ -84,7 +84,7 @@ class VisionPatternAgent:
                 logging.info(f"CACHE HIT: Retrieving neural audit for {symbol} on {latest_date}")
                 return self.cache[cache_key]
                 
-            logging.info(f"Analyzing {symbol} via GPT-4o (No Cache found for {latest_date})...")
+            logging.info(f"Analyzing {symbol} via Groq (No Cache found for {latest_date})...")
             
             pattern_list = list(self.rules.get("pring_pattern_geometries", {}).keys())
             
@@ -111,11 +111,12 @@ class VisionPatternAgent:
             Return ONLY a JSON object: {{"identified_pattern": "string", "vision_score": int, "justification": "str"}}
             """
             
-            from openai import OpenAI
-            client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            from groq import Groq
+            from core.config import GROQ_API_KEY, GROQ_MODEL
+            client = Groq(api_key=GROQ_API_KEY)
             
             response = client.chat.completions.create(
-                model="gpt-4o",
+                model=GROQ_MODEL,
                 messages=[
                     {"role": "system", "content": "You are a world-class Technical Analyst specialized in Pring and Shannon methodologies."},
                     {"role": "user", "content": prompt}
@@ -143,7 +144,7 @@ class VisionPatternAgent:
             return vision_result
             
         except Exception as e:
-            logging.error(f"GPT-4o Vision Analysis failed: {e}")
+            logging.error(f"Groq Analysis failed: {e}")
             return {"vision_approved": True, "vision_score": 50, "identified_pattern": "unknown", "reason": "Error"}
 
 def run_pattern_agent(state: SovereignState) -> Dict[str, Any]:
@@ -192,6 +193,7 @@ def run_pattern_agent(state: SovereignState) -> Dict[str, Any]:
 if __name__ == "__main__":
     # Test execution
     mock_state = SovereignState(
+        candidates=["RELIANCE", "INFY", "TCS"],
         heuristic_flags={
             "RELIANCE": {"identified_pattern": "rectangle"},
             "INFY": {"identified_pattern": "ascending_triangle"},

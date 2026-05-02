@@ -95,52 +95,54 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
     active_regime = regime_map.get(macro, "CHOPPY_SIDEWAYS")
     rules = critic.rules.get("pring_pattern_geometries", {})
     
+    # --- REGIME-BASED HURDLES (130-Point System) ---
+    if macro == "BEARISH":
+        COGNITIVE_THRESHOLD = 110.0 # Extreme selectivity
+    elif macro == "NEUTRAL":
+        COGNITIVE_THRESHOLD = 95.0  # High selectivity
+    else:
+        COGNITIVE_THRESHOLD = 85.0  # Bullish selectivity
+        
     for symbol in candidates:
         scores = agent_scores.get(symbol, {})
         vision_data = state.get("vision_validations", {}).get(symbol, {})
         pattern = vision_data.get("identified_pattern", "unknown")
         
         # Calculate Relative Strength (RS) Alpha
-        # RS = Stock Performance / Nifty Performance (Simplified mock for logic)
         rs_score = scores.get("sector", 50.0) / 50.0 # 1.0 is parity
         
         pattern_rule = rules.get(pattern, {})
         priority = pattern_rule.get("institutional_priority", 5)
         
-        # --- DYNAMIC RISK GOVERNOR ---
-        if macro == "BEARISH":
-            if rs_score < 1.2:
-                # Stock is failing to lead in a bad market
-                logging.warning(f"REGIME FRICTION: {symbol} has insufficient RS ({rs_score:.2f}) for BEARISH market. Tightening Hurdle.")
-                COGNITIVE_THRESHOLD = 70.0
-            else:
-                # Institutional Strength detected!
-                logging.info(f"RESILIENCE ALPHA: {symbol} is outperforming Nifty (RS: {rs_score:.2f}). Maintaining 65% Hurdle.")
-                COGNITIVE_THRESHOLD = 65.0
-        else:
-            # Bullish market: Be more aggressive
-            COGNITIVE_THRESHOLD = 65.0 if priority >= 8 else 70.0
-            
-        # --- WEIGHTED COGNITIVE CONSENSUS SCORING ---
+        # --- BASE WEIGHTED COGNITIVE CONSENSUS (Max 100) ---
         w_entry = scores.get("entry", 0) * 0.40
         w_vision = scores.get("vision", 0) * 0.40
         w_dtw = scores.get("dtw", 0) * 0.20
         total_confidence = w_entry + w_vision + w_dtw
         
-        # 1. Resilience Boost
-        if macro == "BEARISH" and rs_score > 1.5:
-            logging.info(f"INSTITUTIONAL SUPPORT: {symbol} is an elite leader. Boosting +10%")
-            total_confidence += 10.0
+        # --- ELITE BONUSES (The "Sovereign" Push) ---
+        # 1. Resilience Bonus
+        if macro == "BEARISH" and rs_score > 1.4:
+            logging.info(f"ELITE RESILIENCE: {symbol} leading in bad market. +20 pts")
+            total_confidence += 20.0
             
-        # 2. Thematic Alignment
+        # 2. Pattern-Regime Alignment
         target_regime = pattern_rule.get("regime_fit", "UNKNOWN")
         if target_regime == active_regime:
+            logging.info(f"REGIME ALIGNMENT: {pattern} fits {active_regime}. +15 pts")
             total_confidence += 15.0
+
+        # 3. Priority Multiplier
+        if priority >= 9:
+            logging.info(f"INSTITUTIONAL PRIORITY: {symbol} ({pattern}). +10 pts")
+            total_confidence += 10.0
             
+        # --- ADVERSARIAL CRITIQUE (The Veto) ---
         target_date = state.get("target_date")
         evaluation = critic.evaluate_thesis(symbol, "thesis", macro, target_date)
         if evaluation["veto"]:
-            total_confidence -= 20.0
+            logging.warning(f"CRITIC VETO: {symbol} - {evaluation['critique']}")
+            total_confidence -= 30.0 # Heavy penalty for distribution
             
         final_approval = (total_confidence >= COGNITIVE_THRESHOLD)
         evaluation["total_confidence"] = float(total_confidence)
@@ -149,9 +151,9 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
         critic_results[symbol] = evaluation
         
         if final_approval:
-            logging.info(f"ALPHA APPROVAL: {symbol} passed ({total_confidence:.1f}/{COGNITIVE_THRESHOLD}) - RS: {rs_score:.2f}")
+            logging.info(f"SOVEREIGN ELITE APPROVAL: {symbol} ({total_confidence:.1f}/{COGNITIVE_THRESHOLD})")
         else:
-            logging.warning(f"ALPHA REJECTION: {symbol} failed ({total_confidence:.1f}/{COGNITIVE_THRESHOLD})")
+            logging.info(f"SOVEREIGN REJECTION: {symbol} ({total_confidence:.1f}/{COGNITIVE_THRESHOLD})")
         
     return {
         "critic_results": critic_results, 
