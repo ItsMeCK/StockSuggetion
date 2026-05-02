@@ -99,16 +99,16 @@ class VisionPatternAgent:
             RECENT OHLCV DATA:
             {data_str}
             
-            YOUR TASK (SKEPTICAL AUDITOR):
-            1. Validate the {pattern_hint} structure. Is it clean or messy?
-            2. TRAP AUDIT: Check for any Disqualification Warning Signs (e.g., Bull Trap, False Breakout, Volume Exhaustion).
-            3. INSTITUTIONAL CHECK: Is there a volume surge (>3x avg) on the breakout? Is the price respecting the 20-EMA?
+            YOUR TASK (ELITE ALPHA HUNTER):
+            1. Identify INSTITUTIONAL IGNITION: Is there a massive volume thrust (>2x avg) suggesting large-scale accumulation?
+            2. STAGE 2 VELOCITY: Is the price breaking out with clean momentum above the 20-EMA?
+            3. TRAP AUDIT: Only veto if you see a clear, undeniable BULL TRAP (e.g., immediate reversal on high volume).
             
             SCORING (0-100):
-            - 90-100: ELITE. Institutional sponsorship is clear. No warning signs.
-            - 80-89: STRONG. High probability setup.
-            - 70-79: VALID but risky.
-            - <70: VETO. If you see a BULL TRAP or HEAD-FAKE, you MUST score below 70.
+            - 95-100: SOVEREIGN ELITE. Unmistakable institutional sponsorship. High velocity.
+            - 85-94: STRONG. Clear Stage 2 breakout.
+            - 75-84: VALID but requires patience.
+            - <75: WEAK or RETAIL NOISE.
             
             Return ONLY a JSON object: {{"identified_pattern": "string", "vision_score": int, "justification": "str", "disqualification_flag": "None or Name of Warning Sign"}}
             """

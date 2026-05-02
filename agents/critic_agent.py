@@ -85,21 +85,21 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
         suitable_regimes = rule.get("suitable_regime", [])
         if isinstance(suitable_regimes, str): suitable_regimes = [suitable_regimes]
         
-        # 2. BASE WEIGHTED SCORE
-        w_entry = scores.get("entry", 0) * 0.40
-        w_vision = scores.get("vision", 0) * 0.40
-        w_dtw = scores.get("dtw", 0) * 0.20
+        # 2. BASE WEIGHTED SCORE (v2.3 Additive Stack)
+        w_entry = scores.get("entry", 0) * 0.60
+        w_vision = scores.get("vision", 0) * 0.60
+        w_dtw = scores.get("dtw", 0) * 0.30
         base_score = w_entry + w_vision + w_dtw
         
-        # 3. MASTER JSON RIGOR ADJUSTMENTS
-        # A. Priority Boost
-        priority_boost = (priority - 5) * 2.0
-        # B. Risk Penalty
-        risk_penalty = (risk_weight - 5) * 3.0
+        # 3. MASTER JSON RIGOR ADJUSTMENTS (The 'Sovereign Multipliers')
+        # A. Priority Boost (High Institutional Priority = Massive Alpha)
+        priority_boost = (priority - 5) * 10.0
+        # B. Risk Penalty (High Risk = Massive Veto)
+        risk_penalty = (risk_weight - 5) * 8.0
         # C. Regime Friction
         regime_penalty = 0
         if suitable_regimes and active_regime not in suitable_regimes:
-            regime_penalty = 20.0
+            regime_penalty = 30.0
             
         final_score = base_score + priority_boost - risk_penalty - regime_penalty
         
@@ -116,12 +116,13 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
             final_score -= 25.0
             veto_reason = evaluation["critique"]
             
-        # FINAL SOVEREIGN CRITERIA (Production Grade: 75% Hard Hurdle)
-        is_elite = final_score >= 80
-        is_momentum = scores.get("entry", 0) >= 80 and final_score >= 70
-        is_accumulator = (scores.get("vision", 0) >= 85) and (final_score >= 75)
+        # FINAL SOVEREIGN CRITERIA (Sovereign v2.4 Elite Rigor: 130+ Hurdle)
+        is_elite = final_score >= 130
+        is_momentum = scores.get("entry", 0) >= 90 and final_score >= 120
+        is_accumulator = (scores.get("vision", 0) >= 95) and (final_score >= 115)
         
-        final_approval = (is_elite or is_momentum or is_accumulator) and (final_score >= 65)
+        # Restore the 'Sovereign Pure' Gate
+        final_approval = (is_elite or is_momentum or is_accumulator) and (final_score >= 110)
         
         evaluation["total_confidence"] = float(final_score)
         evaluation["is_elite"] = is_elite

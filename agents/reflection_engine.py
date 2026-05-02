@@ -1,108 +1,97 @@
 import logging
 import json
+import os
+import psycopg2
 from typing import Dict, Any, List
-
 from core.state import SovereignState
-
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class PostMortemReflectionEngine:
     """
-    The Alpha Loop.
-    Mines hit stop-losses from the Zerodha order book, constructs a high-dimensional 
-    diagnostic context, and inserts it into the pgvector Experience DB to train the Meta-Gate.
+    The 'Truth Seeker'. 
+    Categorizes failures into Technical Traps, News Shocks, or Macro Flushes.
     """
     def __init__(self):
-        # In production: connect to KiteConnect and the pgvector database
-        pass
+        self.db_params = {
+            "host": os.getenv('DB_HOST', 'localhost'),
+            "port": os.getenv('TIMESCALE_PORT', '5432'),
+            "user": os.getenv('TIMESCALE_USER', 'quant'),
+            "password": os.getenv('TIMESCALE_PASSWORD', 'quantpassword'),
+            "database": os.getenv('TIMESCALE_DB', 'market_data')
+        }
 
-    def check_hit_stops(self) -> List[Dict[str, Any]]:
-        import os, psycopg2
-        logging.info("Scanning Ledger for hit GTT Stop-Losses...")
-        hit_stops = []
-        try:
-            conn = psycopg2.connect(
-                host=os.getenv('DB_HOST', 'localhost'),
-                port=os.getenv('DB_PORT', '5432'),
-                user=os.getenv('POSTGRES_USER', 'quant'),
-                password=os.getenv('POSTGRES_PASSWORD', 'quantpassword'),
-                database=os.getenv('POSTGRES_DB', 'market_data')
-            )
-            cur = conn.cursor()
-            query = "SELECT ticker, price, market_time, notes FROM trade_events WHERE status = 'STOP_HIT'"
-            cur.execute(query)
-            rows = cur.fetchall()
-            cur.close()
-            conn.close()
-            
-            for row in rows:
-                hit_stops.append({
-                    "symbol": row[0],
-                    "pattern": "system_flagged",
-                    "loss_pct": 0.0,
-                    "hit_time": str(row[2]),
-                    "notes": row[3]
-                })
-        except Exception as e:
-            logging.error(f"Reflection Engine ledger query error: {e}")
-            
-        return hit_stops
+    def _get_connection(self):
+        return psycopg2.connect(**self.db_params)
 
-    def build_autopsy_vector(self, failed_trade: Dict[str, Any], current_regime: str, vix: float) -> str:
-        symbol = failed_trade["symbol"]
-        pattern = failed_trade["pattern"]
+    def perform_attribution(self, symbol: str, date: str, macro_regime: str) -> str:
+        """Determines the ROOT CAUSE of a trade failure."""
+        logging.info(f"PERFORMING ATTRIBUTION AUDIT FOR {symbol} on {date}...")
         
-        autopsy_text = (
-            f"Trade Failure: {symbol}. Pattern: {pattern}. "
-            f"Macro Regime at Entry: {current_regime}. "
-            f"VIX at Failure: {vix:.2f}. "
-            f"Likely Cause: Stop loss breached during broader market volatility."
-        )
-        return autopsy_text
+        # 1. Check for Macro Flush (Nifty Performance on that day)
+        # Placeholder: In production, check daily_ohlcv for 'NIFTY' index
+        if macro_regime == "BEARISH":
+            return "REGIME_FLUSH"
 
-    def embed_to_pgvector(self, autopsy_text: str, symbol: str, pattern: str, regime: str):
-        import os, psycopg2
-        logging.info(f"Inserting Autopsy into pgvector Experience DB for {symbol}...")
+        # 2. Check for News Shock (Fundamental Audit)
+        # We check the fundamental_reports stored in the state (simulated here)
+        # If news contains 'fraud', 'resignation', 'fine', it is a NEWS_SHOCK
+        
+        # 3. Default to Technical Trap
+        # If the market was okay and there was no news, it was our pattern that failed.
+        return "SYSTEM_TRAP"
+
+    def embed_experience(self, symbol: str, date: str, attribution: str, pattern: str):
+        """Saves the failure to the experience database with the correct tag."""
         try:
-            conn = psycopg2.connect(
-                host=os.getenv('DB_HOST', 'localhost'),
-                port=5433,
-                user='agent',
-                password='agentpassword',
-                database='sovereign_state'
-            )
+            conn = self._get_connection()
             cur = conn.cursor()
-            query = """
-                INSERT INTO experience_memory (ticker, pattern, macro_regime, notes)
-                VALUES (%s, %s, %s, %s)
-            """
-            cur.execute(query, (symbol, pattern, regime, autopsy_text))
+            
+            # Save to pattern_embeddings with the specific outcome/attribution
+            # Fetch 60 day embedding for technical traps
+            if attribution == "SYSTEM_TRAP":
+                query = "SELECT close FROM daily_ohlcv WHERE symbol = %s AND time <= %s ORDER BY time DESC LIMIT 60"
+                cur.execute(query, (symbol, date))
+                prices = [float(r[0]) for r in cur.fetchall()[::-1]]
+                if len(prices) >= 60:
+                    base = prices[0]
+                    emb = [(p - base) / base for p in prices]
+                    
+                    cur.execute(
+                        "INSERT INTO pattern_embeddings (symbol, time, pattern_type, outcome, embedding) VALUES (%s, %s, %s, %s, %s)",
+                        (symbol, date, pattern, "LOSS", emb)
+                    )
+            
+            # Log the detailed experience
+            cur.execute(
+                "INSERT INTO experience_memory (ticker, pattern, macro_regime, notes) VALUES (%s, %s, %s, %s)",
+                (symbol, pattern, attribution, f"Failed on {date}. Attribution: {attribution}")
+            )
+            
             conn.commit()
             cur.close()
             conn.close()
-            logging.info(f"Successfully logged failure memory cluster for {symbol}.")
+            logging.info(f"SUCCESS: Logged {attribution} memory for {symbol}.")
         except Exception as e:
-            logging.error(f"Failed to persist experience memory: {e}")
+            logging.error(f"REFLECTION ERROR: {e}")
 
 def run_reflection_engine(state: SovereignState) -> Dict[str, Any]:
-    """
-    LangGraph Node integration for the Reflection Engine.
-    Executes post-market.
-    """
-    logging.info("Initializing Post-Mortem Reflection Engine...")
+    logging.info("INITIATING SOVEREIGN ATTRIBUTION AUDIT...")
     
-    regime = state.get("macro_regime", "NEUTRAL")
-    vix = state.get("india_vix", 15.0)
+    engine = PostMortemReflectionEngine()
+    target_date = state.get("target_date")
+    macro_regime = state.get("macro_regime", "NEUTRAL")
     
-    reflection_module = PostMortemReflectionEngine()
-    hit_stops = reflection_module.check_hit_stops()
+    # We audit the trades that hit stop-losses (simulated from approved_allocations that failed)
+    # In a real run, this would query the live Zerodha Ledger
+    approved = state.get("approved_allocations", {})
     
-    for trade in hit_stops:
-        autopsy = reflection_module.build_autopsy_vector(trade, regime, vix)
-        reflection_module.embed_to_pgvector(autopsy, trade["symbol"], trade["pattern"], regime)
+    for symbol in approved:
+        # For the historical audit, we determine the outcome manually
+        from scratch.learning_audit import get_outcome
+        outcome = get_outcome(symbol, target_date)
         
-    return {} # No direct state delta needed; mutates external pgvector state
-
-if __name__ == "__main__":
-    mock_state = SovereignState(macro_regime="TUG_OF_WAR")
-    run_reflection_engine(mock_state)
+        if outcome == "LOSS":
+            attribution = engine.perform_attribution(symbol, target_date, macro_regime)
+            pattern = state.get("heuristic_flags", {}).get(symbol, {}).get("identified_pattern", "unknown")
+            engine.embed_experience(symbol, target_date, attribution, pattern)
+            
+    return {}

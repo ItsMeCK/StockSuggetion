@@ -6,6 +6,7 @@ from core.state import SovereignState
 from agents.heuristic_dtw import run_heuristic_pre_processor as heuristic_pre_processor
 from agents.meta_gate import run_meta_gate as meta_gate_experience_check
 from agents.pattern_agent import run_pattern_agent as pattern_agent_vision
+from agents.disqualification_agent import run_disqualification_agent as disqualification_agent
 from agents.risk_agent import run_risk_agent as risk_and_position_sizing
 from agents.execution_agent import run_execution_agent as execution_agent
 from agents.reflection_engine import run_reflection_engine as reflection_engine_post_mortem
@@ -16,7 +17,6 @@ from agents.watcher_agent import run_watcher_agent as watcher_agent
 from agents.sector_agent import run_sector_agent as sector_agent
 
 def should_execute(state: SovereignState) -> str:
-    """Conditional edge router: proceed to execution if we have approved allocations, else END."""
     if state.get("approved_allocations"):
         return "execution_agent"
     return END
@@ -28,9 +28,10 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.add_node("heuristic_pre_processor", heuristic_pre_processor)
     workflow.add_node("meta_gate_experience_check", meta_gate_experience_check)
     workflow.add_node("entry_trigger_agent", entry_trigger_agent)
+    workflow.add_node("watcher_agent", watcher_agent)
+    workflow.add_node("disqualification_agent", disqualification_agent)
     workflow.add_node("pattern_agent_vision", pattern_agent_vision)
     workflow.add_node("sector_agent", sector_agent)
-    workflow.add_node("watcher_agent", watcher_agent)
     workflow.add_node("critic_agent", critic_agent)
     workflow.add_node("fundamental_audit", fundamental_audit)
     workflow.add_node("risk_and_position_sizing", risk_and_position_sizing)
@@ -43,7 +44,8 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.add_edge("heuristic_pre_processor", "meta_gate_experience_check")
     workflow.add_edge("meta_gate_experience_check", "entry_trigger_agent")
     workflow.add_edge("entry_trigger_agent", "watcher_agent")
-    workflow.add_edge("watcher_agent", "pattern_agent_vision")
+    workflow.add_edge("watcher_agent", "disqualification_agent")
+    workflow.add_edge("disqualification_agent", "pattern_agent_vision")
     workflow.add_edge("pattern_agent_vision", "sector_agent")
     workflow.add_edge("sector_agent", "critic_agent")
     
