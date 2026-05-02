@@ -1,0 +1,298 @@
+{
+    "metadata": {
+        "version": "Sovereign-v1.1",
+        "extracted_on": "",
+        "sources": [
+            "Martin Pring - Price Patterns",
+            "Brian Shannon - Multiple Timeframes"
+        ]
+    },
+    "disqualification_rules": {
+        "false_breakout": {
+            "warning_signs": [
+                "Low volume on breakout",
+                "Immediate return below resistance level"
+            ],
+            "rejection_logic": "Lack of true institutional buying, indicative of retail-driven price action"
+        },
+        "failed_head_and_shoulders": {
+            "warning_signs": [
+                "Reversal after penetration of neckline",
+                "Violating a previously valid trendline"
+            ],
+            "rejection_logic": "Indicates a market reversal or failure of the anticipated trend, resulting in a sharp move in the opposite direction"
+        },
+        "failed_double_bottom": {
+            "warning_signs": [
+                "Low volume on breakout",
+                "Retracement of 50% or more of the rally from the second low to the breakout point"
+            ],
+            "rejection_logic": "Lack of buying pressure and momentum to sustain upward movement, indicating vulnerability to reversal"
+        },
+        "shrinking_volume_breakout_in_a_triangle": {
+            "warning_signs": [
+                "Volume fails to expand on breakout",
+                "Price struggles to move beyond previous highs/lows"
+            ],
+            "rejection_logic": "Lack of commitment from big money players on the breakout, increasing risk of false signal"
+        },
+        "failed_symmetrical_triangle": {
+            "warning_signs": [
+                "Lack of volume expansion on breakout",
+                "Formation morphs into another pattern (e.g., head-and-shoulders)"
+            ],
+            "rejection_logic": "The absence of volume suggests no institutional support for the breakout."
+        },
+        "failed_right-angled_triangle": {
+            "warning_signs": [
+                "Weak volume on breakout",
+                "False break past horizontal line followed by vigorous move in opposite direction"
+            ],
+            "rejection_logic": "Reflects false continuation signal, often reversed by large position unwinding."
+        },
+        "exhaustion_gap": {
+            "warning_signs": [
+                "Gap occurs after a long price advance",
+                "Volume very high but price fails to advance further"
+            ],
+            "rejection_logic": "Gap is caused by retail traders, while institutions are likely selling into strength"
+        },
+        "island_reversal": {
+            "warning_signs": [
+                "Gap up followed by a gap down creating an isolated price range",
+                "Accompanied by high volume"
+            ],
+            "rejection_logic": "Island reversals reflect an abrupt change in sentiment, usually resolving in the opposite direction."
+        },
+        "pinocchio_bar": {
+            "warning_signs": [
+                "Price temporarily breaks a significant level but closes back below/above it",
+                "Long wick above/below"
+            ],
+            "rejection_logic": "Signals a false breakout, typically a sucker move to trap uninformed traders into taking the wrong position."
+        },
+        "contra-trend_breakout": {
+            "warning_signs": [
+                "Breakout against the primary trend",
+                "RSI near oversold/overbought"
+            ],
+            "rejection_logic": "High likelihood of being a whipsaw due to dominant primary trend resuming"
+        },
+        "divergence_and_breakout": {
+            "warning_signs": [
+                "Price breaks resistance but oscillator shows negative divergence",
+                "Lack of volume expansion"
+            ],
+            "rejection_logic": "Potential momentum loss implied by divergence, indicating false breakout"
+        },
+        "bull_trap": {
+            "warning_signs": [
+                "Breakout with no surge in volume",
+                "Overextended price from 200-day SMA"
+            ],
+            "rejection_logic": "Unsustainable breakout subject to quick reversal, institutions not supporting the move"
+        },
+        "overhead_supply_resistance": {
+            "warning_signs": [
+                "Heavy price rejection at previous support levels now resistance",
+                "Weakening RSI below 50"
+            ],
+            "rejection_logic": "Institutional sellers stymie upward momentum, high risk of reversion"
+        },
+        "climactic_top": {
+            "warning_signs": [
+                "Exponential price move followed by high volume sell-off",
+                "Relative Strength drops sharply"
+            ],
+            "rejection_logic": "Distribution phase not recognized promptly, indicating a shift to bearish control"
+        },
+        "head-fake": {
+            "warning_signs": [
+                "Initial breakout followed by bearish engulfing candle",
+                "RSI divergence"
+            ],
+            "rejection_logic": "Institutional selling or short positions drive the immediate pullback"
+        },
+        "failed_breakout": {
+            "warning_signs": [
+                "Price closes below breakout level next day",
+                "Volume decreases"
+            ],
+            "rejection_logic": "Institutions may lack confidence, leading to a quick reversal and potential for deep pullbacks."
+        },
+        "false_start": {
+            "warning_signs": [
+                "Rapid price retreat post initial breakout",
+                "Lack of follow-through volume"
+            ],
+            "rejection_logic": "Indicates lack of institutional support; breakout lacks underlying demand."
+        },
+        "bear_trap": {
+            "warning_signs": [
+                "Price breaks below support but quickly rebounds",
+                "Significant volume spike"
+            ],
+            "rejection_logic": "Traders are tricked into selling at a perceived breakdown, but institutions accumulate shares at discounted prices."
+        }
+    },
+    "pattern_geometries": {
+        "rectangle_pattern": {
+            "logic": "Volume confirmation needed on breakout, monitor trendlines",
+            "institutional_footprint": "Institutions accumulate positions within the range before breakout"
+        },
+        "symmetrical_triangle": {
+            "logic": "Breakout occurs between one-half and two-thirds of the pattern, volume expands on breakout",
+            "institutional_footprint": "Institutions are moving to resolve the battle between buyers and sellers, usually indicated by volume expansion upon breakout"
+        },
+        "double_bottom": {
+            "logic": "Heavy volume on the first bottom, lower volume on the second, expanding volume on breakout",
+            "institutional_footprint": "Smart money accumulates at lower prices, evident in volume pattern"
+        },
+        "reverse_head_and_shoulders": {
+            "logic": "Heavy volume on left shoulder and/or head, low volume on right-shoulder decline, high volume accompanies upside breakout",
+            "institutional_footprint": "Accumulation phase where informed investors are accumulating in anticipation of rising prices"
+        },
+        "symmetrical_triangles": {
+            "logic": "Volume shrinking as pattern forms, expanding on breakout",
+            "institutional_footprint": "Heavy accumulation or distribution leading to decisive breakout"
+        },
+        "right-angled_triangles": {
+            "logic": "Strong volume expansion on breakout",
+            "institutional_footprint": "Follow-through confirming with buying or selling pressure"
+        },
+        "breakaway_gap": {
+            "logic": "High volume corroborating the gap, failure to close the gap on a retest, price makes a new high confirming the trend direction.",
+            "institutional_footprint": "Institutional buying typically follows a breakaway gap, indicating strong interest and conviction."
+        },
+        "two-bar_reversal": {
+            "logic": "Two wide bars with above-average volume, preceded by a strong trend",
+            "institutional_footprint": "Indicates strong change in sentiment from institutions, signifying a likely reversal"
+        },
+        "institutional_breakout": {
+            "logic": "Price breaks above key resistance with 10-day SMA rising and volume at least 50% above 20-day average",
+            "institutional_footprint": "Big money is accumulating shares, pushing price through resistance with conviction"
+        },
+        "transition_breakout": {
+            "logic": "Price above 50 SMA, Volume increase compared to prior days, Relative Strength above a threshold of 70",
+            "institutional_footprint": "Accumulation evident with increased institutional bid"
+        },
+        "retest_bounce": {
+            "logic": "Price retests and holds above previous resistance now turned support, 20 SMA turns upward, Volume supports breakout",
+            "institutional_footprint": "Big players using pullbacks to add to positions"
+        },
+        "trend_alignment_entry": {
+            "logic": "Price and 50 SMA both above 200 SMA, Volume sustains above moving average volume",
+            "institutional_footprint": "Alignment of trend and volume indicates strong institutional trend-following"
+        },
+        "ascending_triangle_breakout": {
+            "logic": "Price closes above the horizontal resistance line with 30-day average volume at least 20% higher than the previous day",
+            "institutional_footprint": "Significant volume on breakout day indicates that institutions are accumulating"
+        },
+        "cup_and_handle": {
+            "logic": "Price breaking above the rim of the cup, 50-day SMA rising, and volume increasing on breakout",
+            "institutional_footprint": "Large buying volume as institutions initiate positions"
+        },
+        "ascending_triangle": {
+            "logic": "Horizontal resistance and ascending trendline, 50-day SMA support, volume contraction followed by a surge",
+            "institutional_footprint": "Institutional interest builds as the price consistently tests resistance"
+        },
+        "breakout_from_range": {
+            "logic": "Price moves beyond a well-defined resistance level with volume 150% above average, 10-day SMA crosses above 50-day SMA",
+            "institutional_footprint": "Significant institutional buying seen in increased volume and SMA cross"
+        },
+        "high_volume_breakout": {
+            "logic": "Stock price moves above significant resistance with volume at least 50% greater than the average volume over the past 20 days.",
+            "institutional_footprint": "Large volume spike suggests institutions are accumulating shares aggressively."
+        },
+        "consolidation_breakout": {
+            "logic": "Price breaks above a defined range after a period of low volatility with a 10-day SMA turned upward.",
+            "institutional_footprint": "Institutions create price congestion to accumulate quietly."
+        },
+        "sma_crossover": {
+            "logic": "Short-term SMA (e.g., 10-day) crosses above long-term SMA (e.g., 50-day) with increasing volume.",
+            "institutional_footprint": "Institutions use crossover points as signals to increase positioning in anticipation of sustained moves."
+        }
+    },
+    "stage_transitions": {
+        "stage_1_-_accumulation": {
+            "math": "Prices move sideways, volume starts to increase within the range, 200 SMA flattens",
+            "action": "Hold or cautiously buy as accumulation hints at a potential upward breakout"
+        },
+        "stage_2_-_markup": {
+            "math": "Price consistently above rising 50 and 200 SMA, increasing volume",
+            "action": "Buy on dips as the uptrend is confirmed"
+        },
+        "stage_3_-_distribution": {
+            "math": "Price moves sideways with volatility, volume is choppy, SMA convergence",
+            "action": "Prepare to sell as institutions distribute shares"
+        },
+        "stage_4_-_markdown": {
+            "math": "Price below declining 50 and 200 SMA, increasing volume in selloffs",
+            "action": "Avoid buying, consider short positions or sell existing holdings"
+        },
+        "stage_1/accumulation": {
+            "math": "Price below 200 SMA, flat or turning up, volume lethargic",
+            "action": "Hold or Buy on initial breakout above trading range"
+        },
+        "stage_2/markup": {
+            "math": "Price above rising 200 SMA, volume expanding on up moves",
+            "action": "Buy and Hold until exhaustion signals or major resistance levels"
+        },
+        "stage_3/distribution": {
+            "math": "Price flattens, moving averages converge, volume starts picking up during declines",
+            "action": "Sell or Hold if already declining on breakdown from trading range"
+        },
+        "stage_4/markdown": {
+            "math": "Price below declining 200 SMA, volume expands on down moves",
+            "action": "Sell short or avoid, especially on breakdowns from consolidation patterns"
+        },
+        "stage_1_(accumulation)": {
+            "math": "SMA Flat, Volume decreasing, Occasional volume spikes",
+            "action": "Hold - Accumulate on dips with signs of institutional buying."
+        },
+        "stage_2_(markup)": {
+            "math": "SMA Upward Sloping, Volume above average on up days",
+            "action": "Buy aggressively during breakouts or retracements."
+        },
+        "stage_3_(distribution)": {
+            "math": "SMA Flat or Rolling Over, Volume increases indicating selling pressure",
+            "action": "Sell - Reduce positions as selling pressure mounts."
+        },
+        "stage_4_(markdown)": {
+            "math": "SMA Downward Sloping, Volume excessive on down days",
+            "action": "Avoid - Do not buy; wait for signs of accumulation."
+        },
+        "stage_1_accumulation": {
+            "math": "Price gravitates above 200 SMA with rising volume",
+            "action": "Hold"
+        },
+        "stage_2_markup": {
+            "math": "Price consistently above 200 SMA with increasing volume",
+            "action": "Buy"
+        },
+        "stage_3_distribution": {
+            "math": "Price fluctuates around 200 SMA with high volume variance",
+            "action": "Avoid new purchases"
+        },
+        "stage_4_markdown": {
+            "math": "Price consistently below 200 SMA with decreasing volume",
+            "action": "Sell or Avoid"
+        },
+        "stage_1": {
+            "math": "Flattening or slightly rising 200-day SMA, declining volume as the base forms",
+            "action": "Hold or Wait - accumulation phase, wait for confirmation of breakout"
+        },
+        "stage_2": {
+            "math": "Rising 50-day and 200-day SMA, increasing volume on upward moves",
+            "action": "Buy - markup phase, characterized by strong institutional accumulation"
+        },
+        "stage_3": {
+            "math": "Flattening or declining 50-day SMA, volume surges on declines",
+            "action": "Sell - distribution phase, institutions distribute shares before decline"
+        },
+        "stage_4": {
+            "math": "Declining 50-day and 200-day SMA, high volume on down days",
+            "action": "Avoid - markdown phase, characterized by institutional selling"
+        }
+    }
+}

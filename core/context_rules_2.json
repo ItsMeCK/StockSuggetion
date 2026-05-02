@@ -1,0 +1,417 @@
+{
+    "metadata": {
+        "version": "v2.3",
+        "sources": [
+            "Technical Analysis Using Multiple Timeframes by Brian Shannon",
+            "Pring on Price Patterns by Martin Pring",
+            "Sovereign-v1.1"
+        ],
+        "description": "MASTER JSON Rulebook for Midnight Sovereign Pattern Agent"
+    },
+    "shannon_stage_analysis": {
+        "stage_1_accumulation": {
+            "math": "Price crossing moving averages; 200 SMA flattening. Moving averages (10, 20, 50) begin to cross above and below each other. Contraction of price ranges.",
+            "psychology": "Boredom, skepticism, numbness, complacency, and denial. Gradual shift in control from sellers to a neutral environment. Institutional quiet accumulation.",
+            "action": "Avoid trend trading. Monitor for higher lows, increased volume, and frequent tests of resistance near the end of the stage for AVWAP/resistance breakout."
+        },
+        "stage_2_markup": {
+            "math": "Price > 10 SMA > 20 SMA > 50 SMA > 200 SMA. All SMAs have positive slope. Higher highs and higher lows.",
+            "psychology": "Greed, thrill, belief, optimism, and fear of missing out. Short sellers trapped (fear). Trend becomes obvious and participation accelerates.",
+            "action": "Aggressively scale positions via Fractional Kelly. Buy on strength or shallow pullbacks. Lock in partial profits on signs of tiring."
+        },
+        "stage_3_distribution": {
+            "math": "Price breaks short-term SMAs; 20/50 SMA crossing. 200 SMA flattening. High volatility and price contraction.",
+            "psychology": "Euphoria transitioning to anxiety and denial. Institutional unloading to retail. Buyers lose conviction as momentum stalls.",
+            "action": "Lock profits. Veto new long positions. Monitor for trend confusion and downward SMA crossovers."
+        },
+        "stage_4_decline": {
+            "math": "Price < 10 SMA < 20 SMA < 50 SMA < 200 SMA. 200 SMA slope < 0. Lower highs and lower lows.",
+            "psychology": "Panic, capitulation, fear, depression, and despair. Sellers aggressively control the trend.",
+            "action": "Maintain cash or aggressively initiate short setups."
+        },
+        "rectangle_consolidation": {
+            "math": "Volume contractions as patterns form; breakout points use pattern depth for projection.",
+            "action": "Await clear breakout direction before committing; use stop-loss to protect against whipsaws."
+        },
+        "head_and_shoulders_top": {
+            "math": "Neckline breach confirms reversal; slower volume during right shoulder.",
+            "action": "Prepare for short positions upon confirmation; watch for rally attempts after neckline breach as potential short opportunities."
+        }
+    },
+    "pring_pattern_geometries": {
+        "rectangle": {
+            "structure": "Volume trends shrink; breakout direction implies move; depth projects move.",
+            "psychology": "Price history shows a balance between buyers and sellers leading to sharp moves.",
+            "suitable_regime": [
+                "TRENDING",
+                "VOLATILE",
+                "MEAN_REVERTING"
+            ],
+            "risk_weight": 6,
+            "vision_failure_markers": [
+                "Shrinking volume on upside breakout implies potential whipsaw.",
+                "No expansion in volume during breakout."
+            ],
+            "institutional_footprint": "Institutions accumulate positions within the range before breakout"
+        },
+        "symmetrical_triangle": {
+            "structure": "Converging higher lows and lower highs indicating a price coil. Touched multiple times.",
+            "psychology": "Diminishing volatility leading to a dramatic imbalance between buyers and sellers. Fine balance before an explosive move.",
+            "volume_confirmation": "Progressive volume contraction into the apex. Explosion of volume on breakout.",
+            "vision_failure_markers": [
+                "Breakout occurring too deep into apex (>75%)",
+                "Lack of volume on thrust",
+                "Whipsaw fakeouts"
+            ],
+            "institutional_footprint": "Institutions are moving to resolve the battle between buyers and sellers, usually indicated by volume expansion upon breakout"
+        },
+        "ascending_triangle": {
+            "structure": "Flat upper resistance with rising lower support line.",
+            "psychology": "Buyers are increasingly aggressive, willing to buy at higher prices, while sellers hold firm at a specific resistance level.",
+            "volume_confirmation": "Drying up on pullbacks, expanding on advances toward resistance. Strong volume on breakout.",
+            "vision_failure_markers": [
+                "Spring/Upthrust failing to hold breakout level",
+                "Low volume on breakout"
+            ],
+            "institutional_footprint": "Institutional interest builds as the price consistently tests resistance"
+        },
+        "descending_triangle": {
+            "structure": "Flat lower support with a declining upper resistance line.",
+            "psychology": "Sellers are increasingly aggressive, willing to sell at lower prices, while buyers hold firm at a specific support level.",
+            "volume_confirmation": "Volume expands on declines toward support and shrinks on rallies.",
+            "vision_failure_markers": [
+                "Bear trap failing to hold breakdown level",
+                "Unusual volume expansion on upside retracements"
+            ]
+        },
+        "head_and_shoulders_top": {
+            "structure": "Final rally (Head) flanked by two smaller rallies (Shoulders) on a common neckline.",
+            "psychology": "Exhaustion of buying power. Transition from advancing peaks to declining peaks. Distribution from strong to weak hands.",
+            "volume_confirmation": "Heaviest volume on the left shoulder, lighter on head, lightest on right shoulder. Heavy volume on neckline break.",
+            "vision_failure_markers": [
+                "Neckline break fails to hold (Bear Trap)",
+                "Right shoulder shakeout (falsely breaks above resistance)",
+                "Expanding volume on right shoulder rally"
+            ],
+            "institutional_footprint": "The absence of volume suggests no institutional support for the breakout."
+        },
+        "reverse_head_and_shoulders_bottom": {
+            "structure": "Final decline (Head) flanked by two smaller declines (Shoulders) on a common neckline.",
+            "psychology": "Exhaustion of selling pressure. Transition from declining troughs to rising troughs. Accumulation by strong hands.",
+            "volume_confirmation": "Heavy volume on left shoulder/head, contracting on right shoulder decline, huge expansion on upside breakout.",
+            "vision_failure_markers": [
+                "Neckline break fails to hold (Bull Trap)",
+                "Lack of volume explosion on upside breakout"
+            ],
+            "institutional_footprint": "Accumulation phase where informed investors are accumulating in anticipation of rising prices"
+        },
+        "double_top_and_bottom": {
+            "structure": "Two peaks at roughly the same price level (Top) or two troughs at the same level (Bottom).",
+            "psychology": "Failure to push past a previously established extreme. Exhaustion and ultimate reversal of trend.",
+            "volume_confirmation": "Volume should be noticeably lighter on the second peak (or trough) and expand drastically on the reversal breakout.",
+            "vision_failure_markers": [
+                "Volume is heavier on the second peak",
+                "Failure to break the intervening trough/peak"
+            ],
+            "institutional_footprint": "Smart money accumulates at lower prices, evident in volume pattern"
+        },
+        "broadening_formation": {
+            "structure": "Expanding price range with higher highs and lower lows (reverse of a triangle).",
+            "psychology": "Highly emotional, out-of-control market. Lack of sponsorship from smart money. Extreme volatility.",
+            "volume_confirmation": "Irregular and expanding volume as the pattern widens.",
+            "vision_failure_markers": [
+                "Premature breakouts",
+                "Trendless volume behavior"
+            ]
+        },
+        "gaps": {
+            "structure": "A blank space on the chart where no trading occurred.",
+            "psychology": "Emotional reaction to news or panic/euphoria. Left behind spaces represent dynamic support/resistance.",
+            "volume_confirmation": "High volume on Breakaway Gaps; climax volume on Exhaustion Gaps.",
+            "vision_failure_markers": [
+                "Gap is quickly filled (closed), negating the momentum"
+            ],
+            "institutional_footprint": "Institutional buying typically follows a breakaway gap, indicating strong interest and conviction."
+        },
+        "outside_and_inside_bars": {
+            "structure": "Outside bar fully engulfs the prior bar's range. Inside bar is completely contained within the prior bar's range.",
+            "psychology": "Outside bar shows a dramatic battle and reversal of control. Inside bar shows extreme equilibrium and indecision.",
+            "volume_confirmation": "High volume on an outside reversal bar confirms the trend change.",
+            "vision_failure_markers": [
+                "Lack of volume on outside bar",
+                "Inside bar breakout failing to follow through"
+            ]
+        },
+        "pinocchio_bars_and_key_reversals": {
+            "structure": "Long wicks breaking a support/resistance level but closing back within the range.",
+            "psychology": "A 'lie' or trap. The market rejects the extreme price level, shaking out weak hands.",
+            "volume_confirmation": "Climax volume on the extreme wick, showing absorption by smart money.",
+            "vision_failure_markers": [
+                "Bar fails to close significantly back inside the range",
+                "Low volume at the extreme wick"
+            ]
+        },
+        "head_and_shoulders": {
+            "structure": "Volume higher on left shoulder, declines on right shoulder; neckline violation confirms pattern.",
+            "psychology": "Market psychology shifts from bullish to bearish, signaling trend reversal.",
+            "suitable_regime": [
+                "TRENDING"
+            ],
+            "risk_weight": 8,
+            "vision_failure_markers": [
+                "Lack of clear inbound uptrend preceding the pattern.",
+                "Volume characteristics not aligning with typical H&S formations."
+            ]
+        },
+        "rectangle_reversal_pattern": {
+            "structure": "Identify support and resistance levels with horizontal trendlines; monitor break below support for downside reversal signal or break above for upside reversal.",
+            "psychology": "Transitional phase where optimism and pessimism balance out before one gains upper hand.",
+            "suitable_regime": "CHOPPY_SIDEWAYS",
+            "risk_weight": 6,
+            "vision_failure_markers": [
+                "Failure to break out decisively from the trading range",
+                "False breakouts with insufficient volume"
+            ]
+        },
+        "rectangle_continuation_pattern": {
+            "structure": "Monitor upper resistance breakout for uptrend continuation; count the number of touches on boundaries to assess significance.",
+            "psychology": "Buyers take control post-consolidation, optimism in prevailing trend continues.",
+            "suitable_regime": "BULL_MARKET",
+            "risk_weight": 6,
+            "vision_failure_markers": [
+                "Break fails to hold above previous resistance",
+                "Entering new range without directional flow confirmation"
+            ]
+        },
+        "accumulation_formation": {
+            "structure": "Identify bottoming phase with support level that fails to break lower; observe for decisive break above resistance to confirm upward trend reversal.",
+            "psychology": "Informed buyers accumulating from pessimistic sellers amidst bad news, betting on future improvements.",
+            "suitable_regime": "BEAR_MARKET",
+            "risk_weight": 9,
+            "vision_failure_markers": [
+                "Protracted low volume during consolidation",
+                "Lack of bullish follow-through post-breakout"
+            ]
+        },
+        "distribution_formation": {
+            "structure": "Identify topping phase with resistance level repeatedly tested; look for break below support to confirm downward trend reversal.",
+            "psychology": "Informed sellers distributing to uninformed buyers amid good news, signaling market top.",
+            "suitable_regime": "BULL_MARKET",
+            "risk_weight": 6,
+            "vision_failure_markers": [
+                "Sustained buying interest at support levels",
+                "Resilient upward spikes on high volume"
+            ]
+        },
+        "always_in": {
+            "structure": "Spike in direction of the trend required for confidence",
+            "psychology": "High confidence in trend direction",
+            "suitable_regime": "CHOPPY_SIDEWAYS",
+            "risk_weight": 5,
+            "vision_failure_markers": [
+                "Lack of directional conviction",
+                "Contrary large moves"
+            ]
+        },
+        "barbwire": {
+            "structure": "Three or more overlapping bars with tails",
+            "psychology": "Indecision and confusion in the market",
+            "suitable_regime": "CHOPPY_SIDEWAYS",
+            "risk_weight": 5,
+            "vision_failure_markers": [
+                "Trend breakout",
+                "Sharp directional move"
+            ]
+        },
+        "breakout_bar": {
+            "structure": "Strong trend bar creating new highs/lows",
+            "psychology": "Market confidence in new price levels",
+            "suitable_regime": [
+                "BULL_MARKET",
+                "BEAR_MARKET"
+            ],
+            "risk_weight": 9,
+            "vision_failure_markers": [
+                "Immediate reversal",
+                "Weak follow-through"
+            ]
+        },
+        "breakout_pullback": {
+            "structure": "Pullback within a few bars after breakout",
+            "psychology": "Continuation expectation post breakout",
+            "suitable_regime": [
+                "BULL_MARKET",
+                "BEAR_MARKET"
+            ],
+            "risk_weight": 8,
+            "vision_failure_markers": [
+                "Extended consolidation",
+                "Breakout failure"
+            ]
+        },
+        "double_bottom": {
+            "structure": "Low of current bar matches earlier swing low",
+            "psychology": "Support confluence and bullish reversal anticipation",
+            "suitable_regime": "BULL_MARKET",
+            "risk_weight": 6,
+            "vision_failure_markers": [
+                "Failure to hold support",
+                "Strong downtrend override"
+            ],
+            "institutional_footprint": "Smart money accumulates at lower prices, evident in volume pattern"
+        },
+        "double_top": {
+            "structure": "High of current bar matches earlier swing high",
+            "psychology": "Resistance confluence and bearish reversal anticipation",
+            "suitable_regime": "BEAR_MARKET",
+            "risk_weight": 6,
+            "vision_failure_markers": [
+                "Failure to hold resistance",
+                "Strong uptrend override"
+            ]
+        },
+        "climax": {
+            "structure": "Rapid move followed by sharp reversal",
+            "psychology": "Exhaustion of trend followed by reversion",
+            "suitable_regime": "VOLATILE_CRASH",
+            "risk_weight": 9,
+            "vision_failure_markers": [
+                "Trend continuation",
+                "Consolidation instead of reversal"
+            ]
+        }
+    },
+    "disqualification_rules": {
+        "false_breakout": {
+            "warning_signs": [
+                "Low volume on breakout",
+                "Immediate return below resistance level"
+            ],
+            "rejection_logic": "Lack of true institutional buying, indicative of retail-driven price action"
+        },
+        "failed_head_and_shoulders": {
+            "warning_signs": [
+                "Reversal after penetration of neckline",
+                "Violating a previously valid trendline"
+            ],
+            "rejection_logic": "Indicates a market reversal or failure of the anticipated trend, resulting in a sharp move in the opposite direction"
+        },
+        "failed_double_bottom": {
+            "warning_signs": [
+                "Low volume on breakout",
+                "Retracement of 50% or more of the rally from the second low to the breakout point"
+            ],
+            "rejection_logic": "Lack of buying pressure and momentum to sustain upward movement, indicating vulnerability to reversal"
+        },
+        "shrinking_volume_breakout_in_a_triangle": {
+            "warning_signs": [
+                "Volume fails to expand on breakout",
+                "Price struggles to move beyond previous highs/lows"
+            ],
+            "rejection_logic": "Lack of commitment from big money players on the breakout, increasing risk of false signal"
+        },
+        "failed_symmetrical_triangle": {
+            "warning_signs": [
+                "Lack of volume expansion on breakout",
+                "Formation morphs into another pattern (e.g., head-and-shoulders)"
+            ],
+            "rejection_logic": "The absence of volume suggests no institutional support for the breakout."
+        },
+        "failed_right-angled_triangle": {
+            "warning_signs": [
+                "Weak volume on breakout",
+                "False break past horizontal line followed by vigorous move in opposite direction"
+            ],
+            "rejection_logic": "Reflects false continuation signal, often reversed by large position unwinding."
+        },
+        "exhaustion_gap": {
+            "warning_signs": [
+                "Gap occurs after a long price advance",
+                "Volume very high but price fails to advance further"
+            ],
+            "rejection_logic": "Gap is caused by retail traders, while institutions are likely selling into strength"
+        },
+        "island_reversal": {
+            "warning_signs": [
+                "Gap up followed by a gap down creating an isolated price range",
+                "Accompanied by high volume"
+            ],
+            "rejection_logic": "Island reversals reflect an abrupt change in sentiment, usually resolving in the opposite direction."
+        },
+        "pinocchio_bar": {
+            "warning_signs": [
+                "Price temporarily breaks a significant level but closes back below/above it",
+                "Long wick above/below"
+            ],
+            "rejection_logic": "Signals a false breakout, typically a sucker move to trap uninformed traders into taking the wrong position."
+        },
+        "contra-trend_breakout": {
+            "warning_signs": [
+                "Breakout against the primary trend",
+                "RSI near oversold/overbought"
+            ],
+            "rejection_logic": "High likelihood of being a whipsaw due to dominant primary trend resuming"
+        },
+        "divergence_and_breakout": {
+            "warning_signs": [
+                "Price breaks resistance but oscillator shows negative divergence",
+                "Lack of volume expansion"
+            ],
+            "rejection_logic": "Potential momentum loss implied by divergence, indicating false breakout"
+        },
+        "bull_trap": {
+            "warning_signs": [
+                "Breakout with no surge in volume",
+                "Overextended price from 200-day SMA"
+            ],
+            "rejection_logic": "Unsustainable breakout subject to quick reversal, institutions not supporting the move"
+        },
+        "overhead_supply_resistance": {
+            "warning_signs": [
+                "Heavy price rejection at previous support levels now resistance",
+                "Weakening RSI below 50"
+            ],
+            "rejection_logic": "Institutional sellers stymie upward momentum, high risk of reversion"
+        },
+        "climactic_top": {
+            "warning_signs": [
+                "Exponential price move followed by high volume sell-off",
+                "Relative Strength drops sharply"
+            ],
+            "rejection_logic": "Distribution phase not recognized promptly, indicating a shift to bearish control"
+        },
+        "head-fake": {
+            "warning_signs": [
+                "Initial breakout followed by bearish engulfing candle",
+                "RSI divergence"
+            ],
+            "rejection_logic": "Institutional selling or short positions drive the immediate pullback"
+        },
+        "failed_breakout": {
+            "warning_signs": [
+                "Price closes below breakout level next day",
+                "Volume decreases"
+            ],
+            "rejection_logic": "Institutions may lack confidence, leading to a quick reversal and potential for deep pullbacks."
+        },
+        "false_start": {
+            "warning_signs": [
+                "Rapid price retreat post initial breakout",
+                "Lack of follow-through volume"
+            ],
+            "rejection_logic": "Indicates lack of institutional support; breakout lacks underlying demand."
+        },
+        "bear_trap": {
+            "warning_signs": [
+                "Price breaks below support but quickly rebounds",
+                "Significant volume spike"
+            ],
+            "rejection_logic": "Traders are tricked into selling at a perceived breakdown, but institutions accumulate shares at discounted prices."
+        }
+    },
+    "vision_agent_directives": {
+        "skeptical_auditor_prompt": "Reject assets trading in the middle of a consolidation range. Only approve charts where the current daily candle has decisively broken structural resistance on visually expanding volume, or is emerging from a tightly coiled bull flag.",
+        "avwap_validation": "Ensure current price is respecting the AVWAP anchored to the most recent earnings gap or multi-month low.",
+        "false_breakout_checks": "Check if price falls back into the pattern violating a minor low (for longs) or minor high (for shorts). Verify if breakout lacks required volume expansion."
+    }
+}
