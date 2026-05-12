@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign/sovereign_scheduler.py", line 2, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'

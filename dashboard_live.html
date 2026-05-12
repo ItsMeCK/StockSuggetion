@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Sovereign: Live Executions Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b0e14;
+            --card-bg: rgba(23, 28, 38, 0.7);
+            --accent: #00f2ff;
+            --secondary: #bd00ff;
+            --text: #ffffff;
+            --text-dim: #94a3b8;
+            --green: #10b981;
+            --red: #ef4444;
+            --gold: #f59e0b;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: radial-gradient(circle at top right, #1a1b3a, var(--bg));
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .table-container {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(255,255,255,0.02);
+            padding: 1.2rem;
+            color: var(--text-dim);
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+        }
+
+        td {
+            padding: 1.2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+            font-size: 0.95rem;
+        }
+
+        tr:hover td {
+            background: rgba(0, 242, 255, 0.05);
+        }
+
+        .badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 0.5rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .symbol-tag {
+            background: rgba(255,255,255,0.05);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-family: monospace;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MIDNIGHT SOVEREIGN <span>LIVE SUGGESTIONS</span></h1>
+            <div style="color: var(--text-dim)">Latest 3 Executions | Generated: 2026-05-06 20:21</div>
+        </header>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Execution Time</th>
+                        <th>Symbol</th>
+                        <th>Macro Regime</th>
+                        <th>Entry Level</th>
+                        <th>Live Price</th>
+                        <th>Live PnL</th>
+                        <th>Target (2x)</th>
+                        <th>Stop Loss</th>
+                        <th>Conviction Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td>2026-05-05 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">MASPTOP50</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">BEARISH</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹77.97</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-05 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">WESTLIFE</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">BEARISH</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹494.45</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-05 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ABCAPITAL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">BEARISH</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹369.30</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-05 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">GOPAL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">BEARISH</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹321.00</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-05 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">AADHARHFC</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">BEARISH</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹500.10</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-05 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">LAURUSLABS</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">BEARISH</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹1177.60</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-05 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">LUPIN</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">BEARISH</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹2442.90</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-05 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">KRISHIVAL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">BEARISH</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹360.60</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-05 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ADSL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">BEARISH</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹132.61</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-05 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">MARICO</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">BEARISH</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹814.80</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-05 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">MOQUALITY</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">BEARISH</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹205.75</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">AJANTPHARM</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹3096.30</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">SUMICHEM</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹495.35</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">BELRISE</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹222.12</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">IDEA</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹11.30</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">QUESS</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹222.82</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">GOPAL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹321.00</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">LAURUSLABS</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹1177.60</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">GABRIEL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹1085.00</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ABFRL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹66.21</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">DTIL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹152.37</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ABCAPITAL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹369.30</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-04 12:00</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">PKTEA</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">NEUTRAL</span></td>
+                <td>₹0.00</td>
+                <td style="font-weight: 600;">₹900.10</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹0.00</td>
+                <td style="color: var(--red);">₹0.00</td>
+                <td style="color: var(--accent);">135.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">PIDILITIND</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹1423.00</td>
+                <td style="font-weight: 600;">₹1421.50</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.11%</span></td>
+                <td style="color: var(--green);">₹1565.30</td>
+                <td style="color: var(--red);">₹1351.85</td>
+                <td style="color: var(--accent);">84.5</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">LUPIN</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹2442.80</td>
+                <td style="font-weight: 600;">₹2442.90</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.00%</span></td>
+                <td style="color: var(--green);">₹2687.08</td>
+                <td style="color: var(--red);">₹2320.66</td>
+                <td style="color: var(--accent);">83.3</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">KEC</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹587.30</td>
+                <td style="font-weight: 600;">₹587.40</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.02%</span></td>
+                <td style="color: var(--green);">₹646.03</td>
+                <td style="color: var(--red);">₹557.93</td>
+                <td style="color: var(--accent);">73.2</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">COFORGE</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹1280.00</td>
+                <td style="font-weight: 600;">₹1280.40</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.03%</span></td>
+                <td style="color: var(--green);">₹1408.00</td>
+                <td style="color: var(--red);">₹1216.00</td>
+                <td style="color: var(--accent);">84.2</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">NH</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹1840.20</td>
+                <td style="font-weight: 600;">₹1840.40</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.01%</span></td>
+                <td style="color: var(--green);">₹2024.22</td>
+                <td style="color: var(--red);">₹1748.19</td>
+                <td style="color: var(--accent);">84.3</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">CHALET</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹794.00</td>
+                <td style="font-weight: 600;">₹788.15</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.74%</span></td>
+                <td style="color: var(--green);">₹873.40</td>
+                <td style="color: var(--red);">₹754.30</td>
+                <td style="color: var(--accent);">84.8</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">SRF</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹2725.00</td>
+                <td style="font-weight: 600;">₹2719.60</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.20%</span></td>
+                <td style="color: var(--green);">₹2997.50</td>
+                <td style="color: var(--red);">₹2588.75</td>
+                <td style="color: var(--accent);">83.6</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">CAPLIPOINT</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹1845.00</td>
+                <td style="font-weight: 600;">₹1841.30</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.20%</span></td>
+                <td style="color: var(--green);">₹2029.50</td>
+                <td style="color: var(--red);">₹1752.75</td>
+                <td style="color: var(--accent);">84.6</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">GOPAL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹314.40</td>
+                <td style="font-weight: 600;">₹321.00</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+2.10%</span></td>
+                <td style="color: var(--green);">₹345.84</td>
+                <td style="color: var(--red);">₹298.68</td>
+                <td style="color: var(--accent);">83.0</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">CARTRADE</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹1811.00</td>
+                <td style="font-weight: 600;">₹1807.30</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.20%</span></td>
+                <td style="color: var(--green);">₹1992.10</td>
+                <td style="color: var(--red);">₹1720.45</td>
+                <td style="color: var(--accent);">84.2</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ZYDUSLIFE</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹939.00</td>
+                <td style="font-weight: 600;">₹938.80</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.02%</span></td>
+                <td style="color: var(--green);">₹1032.90</td>
+                <td style="color: var(--red);">₹892.05</td>
+                <td style="color: var(--accent);">84.8</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">POONAWALLA</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹452.15</td>
+                <td style="font-weight: 600;">₹451.70</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.10%</span></td>
+                <td style="color: var(--green);">₹497.37</td>
+                <td style="color: var(--red);">₹429.54</td>
+                <td style="color: var(--accent);">83.3</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">ECLERX</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹1581.00</td>
+                <td style="font-weight: 600;">₹1581.50</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.03%</span></td>
+                <td style="color: var(--green);">₹1739.10</td>
+                <td style="color: var(--red);">₹1501.95</td>
+                <td style="color: var(--accent);">84.4</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">IFCI</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹61.28</td>
+                <td style="font-weight: 600;">₹61.09</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.31%</span></td>
+                <td style="color: var(--green);">₹67.41</td>
+                <td style="color: var(--red);">₹58.22</td>
+                <td style="color: var(--accent);">84.5</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">SBFC</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹95.29</td>
+                <td style="font-weight: 600;">₹94.99</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.31%</span></td>
+                <td style="color: var(--green);">₹104.82</td>
+                <td style="color: var(--red);">₹90.53</td>
+                <td style="color: var(--accent);">77.3</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">AEGISVOPAK</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹201.75</td>
+                <td style="font-weight: 600;">₹201.06</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.34%</span></td>
+                <td style="color: var(--green);">₹221.93</td>
+                <td style="color: var(--red);">₹191.66</td>
+                <td style="color: var(--accent);">84.6</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">FSL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹244.90</td>
+                <td style="font-weight: 600;">₹243.41</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.61%</span></td>
+                <td style="color: var(--green);">₹269.39</td>
+                <td style="color: var(--red);">₹232.66</td>
+                <td style="color: var(--accent);">80.8</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">AADHARHFC</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹501.55</td>
+                <td style="font-weight: 600;">₹500.10</td>
+                <td><span style='color: var(--red); font-weight: bold;'>-0.29%</span></td>
+                <td style="color: var(--green);">₹551.71</td>
+                <td style="color: var(--red);">₹476.47</td>
+                <td style="color: var(--accent);">76.5</td>
+            </tr>
+            
+            <tr>
+                <td>2026-05-06 17:38</td>
+                <td><span class="symbol-tag" style="font-weight: 600; font-size: 1rem;">KRISHIVAL</span></td>
+                <td><span class="badge" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1)">TUG_OF_WAR</span></td>
+                <td>₹360.00</td>
+                <td style="font-weight: 600;">₹360.60</td>
+                <td><span style='color: var(--green); font-weight: bold;'>+0.17%</span></td>
+                <td style="color: var(--green);">₹396.00</td>
+                <td style="color: var(--red);">₹342.00</td>
+                <td style="color: var(--accent);">82.6</td>
+            </tr>
+            
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

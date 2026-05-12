@@ -108,25 +108,42 @@ class ZerodhaIngestionEngine:
 def run_eod_ingestion():
     engine = ZerodhaIngestionEngine()
     
+    # Set dates for Live Sovereign Audit
+    target_date = datetime.now().strftime("%Y-%m-%d")
+    lookback_start = (datetime.now() - timedelta(days=400)).strftime("%Y-%m-%d")
+
+    # Load target symbols from daily_scan_list.csv if available
+    target_symbols = []
+    if os.path.exists("daily_scan_list.csv"):
+        import csv
+        with open("daily_scan_list.csv", "r") as f:
+            reader = csv.DictReader(f)
+            target_symbols = [row['symbol'] for row in reader]
+        logging.info(f"Loaded {len(target_symbols)} symbols from daily_scan_list.csv for targeted ingestion.")
+
     # Fetch ALL live instruments from Zerodha
     try:
-        logging.info("FETCHING FULL NSE INSTRUMENT LIST (NO SHORTCUTS)...")
+        logging.info("FETCHING FULL NSE INSTRUMENT LIST...")
         all_instruments = engine.kite.instruments("NSE")
-        # Filter for Equities (EQ) and skip those with 'RETAIL' or 'BOND' in symbols if necessary
-        full_market_list = [
-            {"symbol": inst['tradingsymbol'], "token": inst['instrument_token']} 
-            for inst in all_instruments 
-            if inst['instrument_type'] == 'EQ' 
-            and not any(x in inst['tradingsymbol'] for x in ['-RE', '-BE', '-BZ'])
-        ]
-        logging.info(f"Successfully loaded {len(full_market_list)} symbols for the Sovereign Master Ingestion.")
+        
+        if target_symbols:
+            full_market_list = [
+                {"symbol": inst['tradingsymbol'], "token": inst['instrument_token']} 
+                for inst in all_instruments 
+                if inst['tradingsymbol'] in target_symbols
+            ]
+        else:
+            # Fallback to EQ filter if no target list provided
+            full_market_list = [
+                {"symbol": inst['tradingsymbol'], "token": inst['instrument_token']} 
+                for inst in all_instruments 
+                if inst['instrument_type'] == 'EQ' 
+                and not any(x in inst['tradingsymbol'] for x in ['-RE', '-BE', '-BZ'])
+            ]
+        logging.info(f"Successfully loaded {len(full_market_list)} symbols for ingestion.")
     except Exception as e:
         logging.error(f"Failed to fetch instruments: {e}")
         full_market_list = []
-    
-    # Set dates for Monday Prep (Prep based on Thursday, April 30th)
-    target_date = "2026-04-30"
-    lookback_start = (datetime.strptime(target_date, "%Y-%m-%d") - timedelta(days=400)).strftime("%Y-%m-%d")
     
     try:
         engine.connect_db()

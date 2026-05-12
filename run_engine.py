@@ -81,44 +81,12 @@ def run_analysis_only():
     # 3. Phase 2: Polars Screener (REAL DATA)
     logging.info("--- PHASE 2: REAL DATA POLARS SCREENER ---")
     screener = SovereignScreener()
-    candidates, incubator, base_scores = screener.run_pipeline()
+    candidates, incubator, base_scores, macro_regime = screener.run_pipeline()
     initial_state["candidates"] = candidates
     initial_state["incubator"] = incubator
     initial_state["base_scores"] = base_scores
 
-    # Append SIGNALED status for all deterministic candidates
-    try:
-        conn = psycopg2.connect(
-            host=os.getenv("DB_HOST", "localhost"),
-            port=os.getenv("DB_PORT", "5432"),
-            user=os.getenv("POSTGRES_USER", "quant"),
-            password=os.getenv("POSTGRES_PASSWORD", "quantpassword"),
-            dbname=os.getenv("POSTGRES_DB", "market_data")
-        )
-        cur = conn.cursor()
-        for ticker in candidates:
-            # Check if the latest status for this ticker is already SIGNALED
-            cur.execute("""
-                SELECT status FROM trade_events 
-                WHERE ticker = %s 
-                ORDER BY system_time DESC LIMIT 1
-            """, (ticker,))
-            latest_status = cur.fetchone()
-            
-            if latest_status and latest_status[0] == 'SIGNALED':
-                continue
-                
-            trade_id = str(uuid.uuid4())
-            cur.execute("""
-                INSERT INTO trade_events (trade_id, ticker, status, notes)
-                VALUES (%s, %s, 'SIGNALED', 'Identified by EOD Polars stage 2 screener');
-            """, (trade_id, ticker))
-        conn.commit()
-        cur.close()
-        conn.close()
-        logging.info(f"Successfully ledgered {len(candidates)} SIGNALED events.")
-    except Exception as e:
-        logging.error(f"Ledger append error for signals: {e}")
+
 
     if not candidates and not incubator:
         logging.info("No candidates or incubator stocks passed the Deterministic Screener. Ending run.")
@@ -148,6 +116,69 @@ def run_analysis_only():
         "approved_allocations": final_state.get("approved_allocations"),
         "telemetry": final_state.get("execution_telemetry")
     }
+
+    # Append SIGNALED status for final approved allocations
+    try:
+        conn = psycopg2.connect(
+            host=os.getenv("DB_HOST", "localhost"),
+            port=os.getenv("DB_PORT", "5432"),
+            user=os.getenv("POSTGRES_USER", "quant"),
+            password=os.getenv("POSTGRES_PASSWORD", "quantpassword"),
+            dbname=os.getenv("POSTGRES_DB", "market_data")
+        )
+        cur = conn.cursor()
+        approved = final_state.get("approved_allocations", {})
+        entry_triggers = final_state.get("entry_trigger_results", {})
+        
+        # Pre-fetch turnover for all approved symbols
+        turnover_map = {}
+        if approved:
+            cur.execute("""
+                SELECT symbol, (volume * close) / 10000000.0 as turnover_cr
+                FROM daily_ohlcv
+                WHERE symbol IN %s
+                  AND time = (SELECT MAX(time) FROM daily_ohlcv)
+            """, (tuple(approved.keys()),))
+            turnover_map = {row[0]: float(row[1]) for row in cur.fetchall()}
+
+        for ticker, details in approved.items():
+            cur.execute("""
+                SELECT status FROM trade_events 
+                WHERE ticker = %s 
+                ORDER BY system_time DESC LIMIT 1
+            """, (ticker,))
+            latest_status = cur.fetchone()
+            
+            if latest_status and latest_status[0] in ['SIGNALED', 'ACTIVE']:
+                continue
+                
+            trade_id = str(uuid.uuid4())
+            price = details.get('entry', 0.0)
+            quantity = details.get('shares', 0)
+            
+            # Extract extra institutional data
+            trigger_info = entry_triggers.get(ticker, {})
+            notes_data = {
+                'target': details.get('target', 0.0),
+                'stop_loss': details.get('stop_loss', 0.0),
+                'ai_score': details.get('conviction_score', 0.0),
+                'mom_score': trigger_info.get('entry_score', 0.0),
+                'vol_z': trigger_info.get('vol_z_score', 0.0),
+                'turnover': turnover_map.get(ticker, 0.0),
+                'macro': final_state.get("macro_regime")
+            }
+            
+            cur.execute("""
+                INSERT INTO trade_events (trade_id, ticker, status, price, quantity, notes)
+                VALUES (%s, %s, 'SIGNALED', %s, %s, %s);
+            """, (trade_id, ticker, price, quantity, json.dumps(notes_data)))
+        conn.commit()
+        cur.close()
+        conn.close()
+        logging.info(f"Successfully ledgered {len(approved)} SIGNALED events.")
+    except Exception as e:
+        logging.error(f"Ledger append error for approved signals: {e}")
+
     history_path = f"run_history/run_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     with open(history_path, "w") as f:
         json.dump(run_record, f, indent=4)

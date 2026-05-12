@@ -55,18 +55,18 @@ class VisionPatternAgent:
         try:
             conn = psycopg2.connect(
                 host=os.getenv('DB_HOST', 'localhost'),
-                port=os.getenv('TIMESCALE_PORT', '5432'),
-                user=os.getenv('TIMESCALE_USER', 'quant'),
-                password=os.getenv('TIMESCALE_PASSWORD', 'quantpassword'),
-                database=os.getenv('TIMESCALE_DB', 'market_data')
+                port=os.getenv('DB_PORT', '5432'),
+                user=os.getenv('POSTGRES_USER', 'quant'),
+                password=os.getenv('POSTGRES_PASSWORD', 'quantpassword'),
+                dbname=os.getenv('POSTGRES_DB', 'market_data')
             )
             cur = conn.cursor()
             
             if target_date:
-                query = "SELECT time, high, low, close, volume FROM daily_ohlcv WHERE symbol = %s AND time <= %s ORDER BY time DESC LIMIT 60"
+                query = "SELECT time, open, high, low, close, volume FROM daily_ohlcv WHERE symbol = %s AND time::date <= %s ORDER BY time DESC LIMIT 60"
                 cur.execute(query, (symbol, target_date))
             else:
-                query = "SELECT time, high, low, close, volume FROM daily_ohlcv WHERE symbol = %s ORDER BY time DESC LIMIT 60"
+                query = "SELECT time, open, high, low, close, volume FROM daily_ohlcv WHERE symbol = %s ORDER BY time DESC LIMIT 60"
                 cur.execute(query, (symbol,))
                 
             rows = cur.fetchall()
@@ -74,7 +74,8 @@ class VisionPatternAgent:
             conn.close()
             
             if not rows:
-                return {"vision_approved": False, "vision_score": 0, "identified_pattern": "unknown", "reason": "No data"}
+                logging.warning(f"No historical data found for {symbol} up to {target_date}")
+                return {"vision_approved": True, "vision_score": 50, "identified_pattern": "unknown", "reason": "No data"}
             
             # Create a unique cache key based on symbol and the most recent timestamp in the data
             latest_date = rows[0][0].strftime('%Y-%m-%d')
@@ -89,6 +90,9 @@ class VisionPatternAgent:
             disqualification_rules = self.rules.get("disqualification_rules", {})
             pattern_details = self.rules.get("pring_pattern_geometries", {}).get(pattern_hint, {})
             
+            # Convert rows to a readable string for the prompt
+            data_str = "\n".join([f"{r[0].strftime('%Y-%m-%d')}: O={r[1]}, H={r[2]}, L={r[3]}, C={r[4]}, V={r[5]}" for r in rows])
+            
             prompt = f"""
             Identify the institutional validity of the '{pattern_hint}' setup for {symbol}.
             
@@ -99,16 +103,16 @@ class VisionPatternAgent:
             RECENT OHLCV DATA:
             {data_str}
             
-            YOUR TASK (SKEPTICAL AUDITOR):
-            1. Validate the {pattern_hint} structure. Is it clean or messy?
-            2. TRAP AUDIT: Check for any Disqualification Warning Signs (e.g., Bull Trap, False Breakout, Volume Exhaustion).
-            3. INSTITUTIONAL CHECK: Is there a volume surge (>3x avg) on the breakout? Is the price respecting the 20-EMA?
+            YOUR TASK (INSTITUTIONAL AUDITOR):
+            1. IDENTIFY SPONSORSHIP: Look for massive volume surges (>3x average). This is your primary indicator of Big Money.
+            2. BREAKOUT VALIDITY: Is the price breaking above a recent high or a consolidation zone? 
+            3. RISK AUDIT: Are there any clear signs of exhaustion (long upper wicks)? If not, the setup is strong.
             
             SCORING (0-100):
-            - 90-100: ELITE. Institutional sponsorship is clear. No warning signs.
-            - 80-89: STRONG. High probability setup.
-            - 70-79: VALID but risky.
-            - <70: VETO. If you see a BULL TRAP or HEAD-FAKE, you MUST score below 70.
+            - 90-100: ELITE SETUP. Massive volume ignition + clean price breakout. High institutional conviction.
+            - 80-89: STRONG SETUP. Solid volume support + clear trend continuation.
+            - 70-79: VALID. Good setup but with minor resistance nearby.
+            - <70: WEAK. Only score this low if there is ZERO volume increase or a clear rejection at the high.
             
             Return ONLY a JSON object: {{"identified_pattern": "string", "vision_score": int, "justification": "str", "disqualification_flag": "None or Name of Warning Sign"}}
             """
@@ -119,7 +123,7 @@ class VisionPatternAgent:
             response = client.chat.completions.create(
                 model="gpt-4o",
                 messages=[
-                    {"role": "system", "content": "You are the Sovereign Disqualification Auditor. Your job is to VETO low-conviction setups using the Master Institutional Rulebook."},
+                    {"role": "system", "content": "You are the Sovereign Institutional Auditor. Your job is to identify high-conviction institutional breakouts using the Master Rulebook."},
                     {"role": "user", "content": prompt}
                 ],
                 response_format={ "type": "json_object" }

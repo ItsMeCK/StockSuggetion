@@ -1,0 +1,2157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sovereign: Institutional Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #0b0e14; --card-bg: rgba(23, 28, 38, 0.7); --accent: #00f2ff; --secondary: #bd00ff; --text: #ffffff; --text-dim: #94a3b8; --green: #10b981; --red: #ef4444; --gold: #f59e0b; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; margin: 0; padding: 2rem; background: radial-gradient(circle at top right, #1a1b3a, var(--bg)); min-height: 100vh; }
+        .container { max-width: 1500px; margin: 0 auto; }
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; }
+        h1 { font-size: 1.8rem; margin: 0; background: linear-gradient(to right, var(--accent), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .filter-bar { background: var(--card-bg); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--accent); margin-bottom: 2rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+        .filter-group { display: flex; flex-direction: column; gap: 0.3rem; min-width: 150px; }
+        .filter-group label { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+        input[type=range] { width: 100%; accent-color: var(--accent); }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .stat-card { background: var(--card-bg); padding: 1.2rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.05); text-align: center; }
+        .stat-value { font-size: 1.8rem; font-weight: 600; margin-bottom: 0.3rem; }
+        .stat-label { color: var(--text-dim); text-transform: uppercase; font-size: 0.6rem; }
+        
+        .section-title { font-size: 1.1rem; margin: 2rem 0 1rem 0; color: var(--accent); border-left: 4px solid var(--secondary); padding-left: 10px; }
+        .table-container { background: var(--card-bg); border-radius: 1rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 2rem; }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th { background: rgba(255,255,255,0.02); padding: 1rem; color: var(--text-dim); font-size: 0.65rem; text-transform: uppercase; cursor: pointer; position: relative; transition: background 0.2s; }
+        th:hover { background: rgba(255,255,255,0.05); color: var(--accent); }
+        th::after { content: ' ↕'; opacity: 0.3; margin-left: 5px; }
+        th.asc::after { content: ' ▲'; opacity: 1; color: var(--accent); }
+        th.desc::after { content: ' ▼'; opacity: 1; color: var(--accent); }
+        td { padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.02); font-size: 0.85rem; }
+        .symbol-tag { background: rgba(255,255,255,0.05); padding: 4px 8px; border-radius: 6px; font-family: monospace; color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MIDNIGHT SOVEREIGN <span>INSTITUTIONAL HUB</span></h1>
+            <div style="color: var(--text-dim)">2026-05-12 21:21</div>
+        </header>
+
+        <div class="filter-bar">
+            <div style="font-weight: 600; color: var(--accent); border-right: 1px solid #333; padding-right: 1.5rem;">DYNAMIC FILTERS</div>
+            <div class="filter-group">
+                <label>Min AI Score: <span id="aiVal">0</span></label>
+                <input type="range" id="aiFilter" min="0" max="150" value="0" oninput="applyFilters()">
+            </div>
+            <div class="filter-group">
+                <label>Min Momentum: <span id="momVal">0</span></label>
+                <input type="range" id="momFilter" min="0" max="150" value="0" oninput="applyFilters()">
+            </div>
+            <div class="filter-group">
+                <label>Min Vol Thrust: <span id="volVal">0</span></label>
+                <input type="range" id="volFilter" min="0" max="10" step="0.1" value="0" oninput="applyFilters()">
+            </div>
+            <div class="filter-group">
+                <label>Min Liquidity (Cr): <span id="liqVal">0</span></label>
+                <input type="range" id="liqFilter" min="0" max="200" step="1" value="0" oninput="applyFilters()">
+            </div>
+            <div style="margin-left: auto; font-size: 0.8rem; color: var(--green);">Visible: <span id="visibleCount">-</span></div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card"><div class="stat-value" style="color: var(--accent)">44</div><div class="stat-label">Active</div></div>
+            <div class="stat-card"><div class="stat-value" style="color: var(--green)">+0.75%</div><div class="stat-label">Avg. P&L</div></div>
+            <div class="stat-card"><div class="stat-value" style="color: var(--gold)">0.0%</div><div class="stat-label">Success Rate</div></div>
+        </div>
+
+        <h2 class="section-title">Institutional Pipeline (Signals)</h2>
+        <div class="table-container">
+            <table id="signalTable">
+                <thead><tr>
+                    <th onclick="sortTable(0, 'signalTable')">Date</th>
+                    <th onclick="sortTable(1, 'signalTable')">Symbol</th>
+                    <th onclick="sortTable(2, 'signalTable')">Entry</th>
+                    <th onclick="sortTable(3, 'signalTable')">Live</th>
+                    <th onclick="sortTable(4, 'signalTable')">P&L</th>
+                    <th onclick="sortTable(5, 'signalTable')">AI Score</th>
+                    <th onclick="sortTable(6, 'signalTable')">Tightness</th>
+                    <th onclick="sortTable(7, 'signalTable')">Vol Surge</th>
+                    <th onclick="sortTable(8, 'signalTable')">Liquidity</th>
+                    <th onclick="sortTable(9, 'signalTable')">Regime</th>
+                </tr></thead>
+                <tbody id="signalBody">
+        <tr class="trade-row" data-ai="80" data-mom="100.0" data-vol="2.0" data-liq="80.877047436">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">GARUDA</span></td>
+            <td data-order="192.31">₹192.31</td>
+            <td data-order="172.68" style="font-weight: 600;">₹172.68</td>
+            <td data-order="-10.207477510269875"><span style='color: var(--red); font-weight: 600;'>-10.21%</span></td>
+            <td data-order="80" style="color: var(--accent);">80.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="80.877047436">₹80.9 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="95" data-mom="100.0" data-vol="2.0" data-liq="3.964968">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">MUNJALSHOW</span></td>
+            <td data-order="144.0">₹144.00</td>
+            <td data-order="134.13" style="font-weight: 600;">₹134.13</td>
+            <td data-order="-6.85416666666667"><span style='color: var(--red); font-weight: 600;'>-6.85%</span></td>
+            <td data-order="95" style="color: var(--accent);">95.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="3.964968">₹4.0 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="76.4880851713751" data-mom="95.0" data-vol="2.6743210300332865" data-liq="59.85718382">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">AADHARHFC</span></td>
+            <td data-order="501.55">₹501.55</td>
+            <td data-order="487.3" style="font-weight: 600;">₹487.30</td>
+            <td data-order="-2.84119230385804"><span style='color: var(--red); font-weight: 600;'>-2.84%</span></td>
+            <td data-order="76.4880851713751" style="color: var(--accent);">76.5</td>
+            <td data-order="95.0" style="color: var(--secondary);">95.0</td>
+            <td data-order="2.6743210300332865" style="color: var(--gold);">2.67</td>
+            <td data-order="59.85718382">₹59.9 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="72" data-mom="100.0" data-vol="2.0" data-liq="183.842774272">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">KANSAINER</span></td>
+            <td data-order="212.48">₹212.48</td>
+            <td data-order="213.83" style="font-weight: 600;">₹213.83</td>
+            <td data-order="0.6353539156626614"><span style='color: var(--green); font-weight: 600;'>+0.64%</span></td>
+            <td data-order="72" style="color: var(--accent);">72.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="183.842774272">₹183.8 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="80" data-mom="100.0" data-vol="2.0" data-liq="89.8446034">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">RICOAUTO</span></td>
+            <td data-order="124.4">₹124.40</td>
+            <td data-order="114.7" style="font-weight: 600;">₹114.70</td>
+            <td data-order="-7.797427652733122"><span style='color: var(--red); font-weight: 600;'>-7.80%</span></td>
+            <td data-order="80" style="color: var(--accent);">80.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="89.8446034">₹89.8 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.89453013925473" data-mom="115.0" data-vol="1.5567609110690794" data-liq="98.0370475">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">NUVAMA</span></td>
+            <td data-order="1435.0">₹1435.00</td>
+            <td data-order="1548.2" style="font-weight: 600;">₹1548.20</td>
+            <td data-order="7.888501742160282"><span style='color: var(--green); font-weight: 600;'>+7.89%</span></td>
+            <td data-order="84.89453013925473" style="color: var(--accent);">84.9</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="1.5567609110690794" style="color: var(--gold);">1.56</td>
+            <td data-order="98.0370475">₹98.0 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.21940512721282" data-mom="115.0" data-vol="3.978555808434182" data-liq="411.9726185">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">CARTRADE</span></td>
+            <td data-order="1811.0">₹1811.00</td>
+            <td data-order="1892.2" style="font-weight: 600;">₹1892.20</td>
+            <td data-order="4.48371065709553"><span style='color: var(--green); font-weight: 600;'>+4.48%</span></td>
+            <td data-order="84.21940512721282" style="color: var(--accent);">84.2</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="3.978555808434182" style="color: var(--gold);">3.98</td>
+            <td data-order="411.9726185">₹412.0 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="83.80703081088217" data-mom="115.0" data-vol="2.548600751036321" data-liq="0.0">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">RML</span></td>
+            <td data-order="862.0">₹862.00</td>
+            <td data-order="892.15" style="font-weight: 600;">₹892.15</td>
+            <td data-order="3.4976798143851484"><span style='color: var(--green); font-weight: 600;'>+3.50%</span></td>
+            <td data-order="83.80703081088217" style="color: var(--accent);">83.8</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="2.548600751036321" style="color: var(--gold);">2.55</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.51784969225349" data-mom="115.0" data-vol="2.2709515588666935" data-liq="323.7687865">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">PIDILITIND</span></td>
+            <td data-order="1423.0">₹1423.00</td>
+            <td data-order="1453" style="font-weight: 600;">₹1453.00</td>
+            <td data-order="2.1082220660576247"><span style='color: var(--green); font-weight: 600;'>+2.11%</span></td>
+            <td data-order="84.51784969225349" style="color: var(--accent);">84.5</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="2.2709515588666935" style="color: var(--gold);">2.27</td>
+            <td data-order="323.7687865">₹323.8 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="82.6407171832104" data-mom="115.0" data-vol="1.5978062417992542" data-liq="0.0">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">KRISHIVAL</span></td>
+            <td data-order="360.0">₹360.00</td>
+            <td data-order="368.6" style="font-weight: 600;">₹368.60</td>
+            <td data-order="2.388888888888895"><span style='color: var(--green); font-weight: 600;'>+2.39%</span></td>
+            <td data-order="82.6407171832104" style="color: var(--accent);">82.6</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="1.5978062417992542" style="color: var(--gold);">1.60</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="74.20673243688131" data-mom="89.60596984037483" data-vol="0.9802984920187415" data-liq="1363.769006755">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">KOTAKBANK</span></td>
+            <td data-order="377.15">₹377.15</td>
+            <td data-order="376" style="font-weight: 600;">₹376.00</td>
+            <td data-order="-0.30491846745326195"><span style='color: var(--red); font-weight: 600;'>-0.30%</span></td>
+            <td data-order="74.20673243688131" style="color: var(--accent);">74.2</td>
+            <td data-order="89.60596984037483" style="color: var(--secondary);">89.6</td>
+            <td data-order="0.9802984920187415" style="color: var(--gold);">0.98</td>
+            <td data-order="1363.769006755">₹1363.8 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="85" data-mom="100.0" data-vol="2.0" data-liq="1057.09296">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">CARTRADE</span></td>
+            <td data-order="1925.0">₹1925.00</td>
+            <td data-order="1892.2" style="font-weight: 600;">₹1892.20</td>
+            <td data-order="-1.7038961038961016"><span style='color: var(--red); font-weight: 600;'>-1.70%</span></td>
+            <td data-order="85" style="color: var(--accent);">85.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="1057.09296">₹1057.1 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="81.25491145602973" data-mom="107.02300112158716" data-vol="1.1011500560793577" data-liq="351.80588099999994">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">ANANTRAJ</span></td>
+            <td data-order="558.05">₹558.05</td>
+            <td data-order="502.45" style="font-weight: 600;">₹502.45</td>
+            <td data-order="-9.96326494041752"><span style='color: var(--red); font-weight: 600;'>-9.96%</span></td>
+            <td data-order="81.25491145602973" style="color: var(--accent);">81.3</td>
+            <td data-order="107.02300112158716" style="color: var(--secondary);">107.0</td>
+            <td data-order="1.1011500560793577" style="color: var(--gold);">1.10</td>
+            <td data-order="351.80588099999994">₹351.8 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.47557996738105" data-mom="115.0" data-vol="2.252151590111961" data-liq="284.928321408">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">IFCI</span></td>
+            <td data-order="61.28">₹61.28</td>
+            <td data-order="61.07" style="font-weight: 600;">₹61.07</td>
+            <td data-order="-0.34268929503916584"><span style='color: var(--red); font-weight: 600;'>-0.34%</span></td>
+            <td data-order="84.47557996738105" style="color: var(--accent);">84.5</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="2.252151590111961" style="color: var(--gold);">2.25</td>
+            <td data-order="284.928321408">₹284.9 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="95" data-mom="100.0" data-vol="2.0" data-liq="131.2334352">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">AEGISVOPAK</span></td>
+            <td data-order="216.0">₹216.00</td>
+            <td data-order="202.67" style="font-weight: 600;">₹202.67</td>
+            <td data-order="-6.171296296296302"><span style='color: var(--red); font-weight: 600;'>-6.17%</span></td>
+            <td data-order="95" style="color: var(--accent);">95.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="131.2334352">₹131.2 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="77.31780625184172" data-mom="96.73495232414918" data-vol="1.3367476162074587" data-liq="36.931183198">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">SBFC</span></td>
+            <td data-order="95.29">₹95.29</td>
+            <td data-order="92.76" style="font-weight: 600;">₹92.76</td>
+            <td data-order="-2.655052996117117"><span style='color: var(--red); font-weight: 600;'>-2.66%</span></td>
+            <td data-order="77.31780625184172" style="color: var(--accent);">77.3</td>
+            <td data-order="96.73495232414918" style="color: var(--secondary);">96.7</td>
+            <td data-order="1.3367476162074587" style="color: var(--gold);">1.34</td>
+            <td data-order="36.931183198">₹36.9 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.17004184427306" data-mom="115.0" data-vol="2.7913768185206758" data-liq="853.9464935899999">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">YESBANK</span></td>
+            <td data-order="22.06">₹22.06</td>
+            <td data-order="22.06" style="font-weight: 600;">₹22.06</td>
+            <td data-order="0.0"><span style='color: var(--green); font-weight: 600;'>+0.00%</span></td>
+            <td data-order="84.17004184427306" style="color: var(--accent);">84.2</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="2.7913768185206758" style="color: var(--gold);">2.79</td>
+            <td data-order="853.9464935899999">₹853.9 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="95" data-mom="100.0" data-vol="2.0" data-liq="3.964968">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">MUNJALSHOW</span></td>
+            <td data-order="144.0">₹144.00</td>
+            <td data-order="134.13" style="font-weight: 600;">₹134.13</td>
+            <td data-order="-6.85416666666667"><span style='color: var(--red); font-weight: 600;'>-6.85%</span></td>
+            <td data-order="95" style="color: var(--accent);">95.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="3.964968">₹4.0 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="72.1832992464411" data-mom="83.36422537353639" data-vol="0.6682112686768196" data-liq="132.409522">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">SHREECEM</span></td>
+            <td data-order="25060.0">₹25060.00</td>
+            <td data-order="24860" style="font-weight: 600;">₹24860.00</td>
+            <td data-order="-0.7980845969672785"><span style='color: var(--red); font-weight: 600;'>-0.80%</span></td>
+            <td data-order="72.1832992464411" style="color: var(--accent);">72.2</td>
+            <td data-order="83.36422537353639" style="color: var(--secondary);">83.4</td>
+            <td data-order="0.6682112686768196" style="color: var(--gold);">0.67</td>
+            <td data-order="132.409522">₹132.4 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="80" data-mom="100.0" data-vol="2.0" data-liq="89.8446034">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">RICOAUTO</span></td>
+            <td data-order="124.4">₹124.40</td>
+            <td data-order="114.7" style="font-weight: 600;">₹114.70</td>
+            <td data-order="-7.797427652733122"><span style='color: var(--red); font-weight: 600;'>-7.80%</span></td>
+            <td data-order="80" style="color: var(--accent);">80.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="89.8446034">₹89.8 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="90" data-mom="100.0" data-vol="2.0" data-liq="464.26451508">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">NIVABUPA</span></td>
+            <td data-order="83.7">₹83.70</td>
+            <td data-order="83.76" style="font-weight: 600;">₹83.76</td>
+            <td data-order="0.07168458781362279"><span style='color: var(--green); font-weight: 600;'>+0.07%</span></td>
+            <td data-order="90" style="color: var(--accent);">90.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="464.26451508">₹464.3 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="85" data-mom="100.0" data-vol="2.0" data-liq="101.46704942000001">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">MEDANTA</span></td>
+            <td data-order="1190.2">₹1190.20</td>
+            <td data-order="1193.1" style="font-weight: 600;">₹1193.10</td>
+            <td data-order="0.2436565283145575"><span style='color: var(--green); font-weight: 600;'>+0.24%</span></td>
+            <td data-order="85" style="color: var(--accent);">85.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="101.46704942000001">₹101.5 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="90" data-mom="100.0" data-vol="2.0" data-liq="159.69191168999998">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">NUVOCO</span></td>
+            <td data-order="337.9">₹337.90</td>
+            <td data-order="316.95" style="font-weight: 600;">₹316.95</td>
+            <td data-order="-6.200059189109201"><span style='color: var(--red); font-weight: 600;'>-6.20%</span></td>
+            <td data-order="90" style="color: var(--accent);">90.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="159.69191168999998">₹159.7 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="83.34148345156463" data-mom="115.0" data-vol="3.6580812251816868" data-liq="630.12464999">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">POONAWALLA</span></td>
+            <td data-order="452.15">₹452.15</td>
+            <td data-order="422.05" style="font-weight: 600;">₹422.05</td>
+            <td data-order="-6.657082826495625"><span style='color: var(--red); font-weight: 600;'>-6.66%</span></td>
+            <td data-order="83.34148345156463" style="color: var(--accent);">83.3</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="3.6580812251816868" style="color: var(--gold);">3.66</td>
+            <td data-order="630.12464999">₹630.1 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="80" data-mom="100.0" data-vol="2.0" data-liq="80.877047436">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">GARUDA</span></td>
+            <td data-order="192.31">₹192.31</td>
+            <td data-order="172.68" style="font-weight: 600;">₹172.68</td>
+            <td data-order="-10.207477510269875"><span style='color: var(--red); font-weight: 600;'>-10.21%</span></td>
+            <td data-order="80" style="color: var(--accent);">80.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="80.877047436">₹80.9 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="90" data-mom="100.0" data-vol="2.0" data-liq="37.051245">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">BASF</span></td>
+            <td data-order="3850.0">₹3850.00</td>
+            <td data-order="3755.9" style="font-weight: 600;">₹3755.90</td>
+            <td data-order="-2.4441558441558415"><span style='color: var(--red); font-weight: 600;'>-2.44%</span></td>
+            <td data-order="90" style="color: var(--accent);">90.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="37.051245">₹37.1 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="80.80484596264978" data-mom="107.10055361960596" data-vol="1.1050276809802981" data-liq="598.36987617">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">FSL</span></td>
+            <td data-order="244.9">₹244.90</td>
+            <td data-order="249.09" style="font-weight: 600;">₹249.09</td>
+            <td data-order="1.7109024091465894"><span style='color: var(--green); font-weight: 600;'>+1.71%</span></td>
+            <td data-order="80.80484596264978" style="color: var(--accent);">80.8</td>
+            <td data-order="107.10055361960596" style="color: var(--secondary);">107.1</td>
+            <td data-order="1.1050276809802981" style="color: var(--gold);">1.11</td>
+            <td data-order="598.36987617">₹598.4 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="72" data-mom="100.0" data-vol="2.0" data-liq="183.842774272">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">KANSAINER</span></td>
+            <td data-order="212.48">₹212.48</td>
+            <td data-order="213.83" style="font-weight: 600;">₹213.83</td>
+            <td data-order="0.6353539156626614"><span style='color: var(--green); font-weight: 600;'>+0.64%</span></td>
+            <td data-order="72" style="color: var(--accent);">72.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="183.842774272">₹183.8 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="81.47931701657572" data-mom="109.69503571235178" data-vol="1.234751785617589" data-liq="0.0">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">THEINVEST</span></td>
+            <td data-order="115.02">₹115.02</td>
+            <td data-order="113.84" style="font-weight: 600;">₹113.84</td>
+            <td data-order="-1.0259085376456205"><span style='color: var(--red); font-weight: 600;'>-1.03%</span></td>
+            <td data-order="81.47931701657572" style="color: var(--accent);">81.5</td>
+            <td data-order="109.69503571235178" style="color: var(--secondary);">109.7</td>
+            <td data-order="1.234751785617589" style="color: var(--gold);">1.23</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.8162713028165" data-mom="115.0" data-vol="1.8189613914633473" data-liq="141.4186584">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">ZYDUSLIFE</span></td>
+            <td data-order="939.0">₹939.00</td>
+            <td data-order="930.65" style="font-weight: 600;">₹930.65</td>
+            <td data-order="-0.8892438764643261"><span style='color: var(--red); font-weight: 600;'>-0.89%</span></td>
+            <td data-order="84.8162713028165" style="color: var(--accent);">84.8</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="1.8189613914633473" style="color: var(--gold);">1.82</td>
+            <td data-order="141.4186584">₹141.4 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="80" data-mom="100.0" data-vol="2.0" data-liq="57.58257647999999">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">HEMIPROP</span></td>
+            <td data-order="148.2">₹148.20</td>
+            <td data-order="149.09" style="font-weight: 600;">₹149.09</td>
+            <td data-order="0.6005398110661369"><span style='color: var(--green); font-weight: 600;'>+0.60%</span></td>
+            <td data-order="80" style="color: var(--accent);">80.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="57.58257647999999">₹57.6 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="78" data-mom="100.0" data-vol="2.0" data-liq="94.54966235">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">VIPIND</span></td>
+            <td data-order="324.5">₹324.50</td>
+            <td data-order="298.9" style="font-weight: 600;">₹298.90</td>
+            <td data-order="-7.88906009244993"><span style='color: var(--red); font-weight: 600;'>-7.89%</span></td>
+            <td data-order="78" style="color: var(--accent);">78.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="94.54966235">₹94.5 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="73.22192408798747" data-mom="86.50749265471003" data-vol="0.8253746327355018" data-liq="218.30064332999999">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">KEC</span></td>
+            <td data-order="587.3">₹587.30</td>
+            <td data-order="551.7" style="font-weight: 600;">₹551.70</td>
+            <td data-order="-6.0616380044270235"><span style='color: var(--red); font-weight: 600;'>-6.06%</span></td>
+            <td data-order="73.22192408798747" style="color: var(--accent);">73.2</td>
+            <td data-order="86.50749265471003" style="color: var(--secondary);">86.5</td>
+            <td data-order="0.8253746327355018" style="color: var(--gold);">0.83</td>
+            <td data-order="218.30064332999999">₹218.3 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="80" data-mom="100.0" data-vol="2.0" data-liq="89.8446034">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">RICOAUTO</span></td>
+            <td data-order="124.4">₹124.40</td>
+            <td data-order="114.7" style="font-weight: 600;">₹114.70</td>
+            <td data-order="-7.797427652733122"><span style='color: var(--red); font-weight: 600;'>-7.80%</span></td>
+            <td data-order="80" style="color: var(--accent);">80.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="89.8446034">₹89.8 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="90" data-mom="100.0" data-vol="2.0" data-liq="37.051245">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">BASF</span></td>
+            <td data-order="3850.0">₹3850.00</td>
+            <td data-order="3755.9" style="font-weight: 600;">₹3755.90</td>
+            <td data-order="-2.4441558441558415"><span style='color: var(--red); font-weight: 600;'>-2.44%</span></td>
+            <td data-order="90" style="color: var(--accent);">90.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="37.051245">₹37.1 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.24738650261658" data-mom="115.0" data-vol="4.102970685912045" data-liq="3377.662336">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">COFORGE</span></td>
+            <td data-order="1280.0">₹1280.00</td>
+            <td data-order="1320.4" style="font-weight: 600;">₹1320.40</td>
+            <td data-order="3.156250000000007"><span style='color: var(--green); font-weight: 600;'>+3.16%</span></td>
+            <td data-order="84.24738650261658" style="color: var(--accent);">84.2</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="4.102970685912045" style="color: var(--gold);">4.10</td>
+            <td data-order="3377.662336">₹3377.7 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="75" data-mom="100.0" data-vol="2.0" data-liq="3.97325075">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">BHARATGEAR</span></td>
+            <td data-order="117.5">₹117.50</td>
+            <td data-order="110.18" style="font-weight: 600;">₹110.18</td>
+            <td data-order="-6.229787234042548"><span style='color: var(--red); font-weight: 600;'>-6.23%</span></td>
+            <td data-order="75" style="color: var(--accent);">75.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="3.97325075">₹4.0 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="83.04991225201638" data-mom="115.0" data-vol="1.6140824045141307" data-liq="0.0">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">GOPAL</span></td>
+            <td data-order="314.4">₹314.40</td>
+            <td data-order="314.05" style="font-weight: 600;">₹314.05</td>
+            <td data-order="-0.11132315521627414"><span style='color: var(--red); font-weight: 600;'>-0.11%</span></td>
+            <td data-order="83.04991225201638" style="color: var(--accent);">83.0</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="1.6140824045141307" style="color: var(--gold);">1.61</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="78" data-mom="100.0" data-vol="2.0" data-liq="94.54966235">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">VIPIND</span></td>
+            <td data-order="324.5">₹324.50</td>
+            <td data-order="298.9" style="font-weight: 600;">₹298.90</td>
+            <td data-order="-7.88906009244993"><span style='color: var(--red); font-weight: 600;'>-7.89%</span></td>
+            <td data-order="78" style="color: var(--accent);">78.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="94.54966235">₹94.5 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.50847927016412" data-mom="115.0" data-vol="1.847783485438341" data-liq="0.0">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">DVL</span></td>
+            <td data-order="263.0">₹263.00</td>
+            <td data-order="245.16" style="font-weight: 600;">₹245.16</td>
+            <td data-order="-6.783269961977188"><span style='color: var(--red); font-weight: 600;'>-6.78%</span></td>
+            <td data-order="84.50847927016412" style="color: var(--accent);">84.5</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="1.847783485438341" style="color: var(--gold);">1.85</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="83.61993247811994" data-mom="115.0" data-vol="4.076112617911116" data-liq="1142.5895025">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">SRF</span></td>
+            <td data-order="2725.0">₹2725.00</td>
+            <td data-order="2721.2" style="font-weight: 600;">₹2721.20</td>
+            <td data-order="-0.13944954128441034"><span style='color: var(--red); font-weight: 600;'>-0.14%</span></td>
+            <td data-order="83.61993247811994" style="color: var(--accent);">83.6</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="4.076112617911116" style="color: var(--gold);">4.08</td>
+            <td data-order="1142.5895025">₹1142.6 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="95" data-mom="100.0" data-vol="2.0" data-liq="3.964968">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">MUNJALSHOW</span></td>
+            <td data-order="144.0">₹144.00</td>
+            <td data-order="134.13" style="font-weight: 600;">₹134.13</td>
+            <td data-order="-6.85416666666667"><span style='color: var(--red); font-weight: 600;'>-6.85%</span></td>
+            <td data-order="95" style="color: var(--accent);">95.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="3.964968">₹4.0 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="83.33559852973846" data-mom="115.0" data-vol="2.967691953469209" data-liq="703.89184288">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">LUPIN</span></td>
+            <td data-order="2442.8">₹2442.80</td>
+            <td data-order="2245.4" style="font-weight: 600;">₹2245.40</td>
+            <td data-order="-8.080890781070906"><span style='color: var(--red); font-weight: 600;'>-8.08%</span></td>
+            <td data-order="83.33559852973846" style="color: var(--accent);">83.3</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="2.967691953469209" style="color: var(--gold);">2.97</td>
+            <td data-order="703.89184288">₹703.9 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="78" data-mom="100.0" data-vol="2.0" data-liq="94.54966235">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">VIPIND</span></td>
+            <td data-order="324.5">₹324.50</td>
+            <td data-order="298.9" style="font-weight: 600;">₹298.90</td>
+            <td data-order="-7.88906009244993"><span style='color: var(--red); font-weight: 600;'>-7.89%</span></td>
+            <td data-order="78" style="color: var(--accent);">78.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="94.54966235">₹94.5 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.33358125589477" data-mom="115.0" data-vol="3.185958291768159" data-liq="137.65873728">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">NH</span></td>
+            <td data-order="1840.2">₹1840.20</td>
+            <td data-order="1846.6" style="font-weight: 600;">₹1846.60</td>
+            <td data-order="0.3477882838821793"><span style='color: var(--green); font-weight: 600;'>+0.35%</span></td>
+            <td data-order="84.33358125589477" style="color: var(--accent);">84.3</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="3.185958291768159" style="color: var(--gold);">3.19</td>
+            <td data-order="137.65873728">₹137.7 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="76.38497388040946" data-mom="92.78548646141489" data-vol="1.1392743230707447" data-liq="263.61609697999995">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">LTF</span></td>
+            <td data-order="300.2">₹300.20</td>
+            <td data-order="280.65" style="font-weight: 600;">₹280.65</td>
+            <td data-order="-6.512325116588944"><span style='color: var(--red); font-weight: 600;'>-6.51%</span></td>
+            <td data-order="76.38497388040946" style="color: var(--accent);">76.4</td>
+            <td data-order="92.78548646141489" style="color: var(--secondary);">92.8</td>
+            <td data-order="1.1392743230707447" style="color: var(--gold);">1.14</td>
+            <td data-order="263.61609697999995">₹263.6 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="80.88927664678296" data-mom="105.70947883098958" data-vol="1.035473941549479" data-liq="1199.10727608">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">INDIGO</span></td>
+            <td data-order="4524.1">₹4524.10</td>
+            <td data-order="4201.7" style="font-weight: 600;">₹4201.70</td>
+            <td data-order="-7.12627925996332"><span style='color: var(--red); font-weight: 600;'>-7.13%</span></td>
+            <td data-order="80.88927664678296" style="color: var(--accent);">80.9</td>
+            <td data-order="105.70947883098958" style="color: var(--secondary);">105.7</td>
+            <td data-order="1.035473941549479" style="color: var(--gold);">1.04</td>
+            <td data-order="1199.10727608">₹1199.1 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="75.69353848025625" data-mom="94.46973130749727" data-vol="1.2234865653748637" data-liq="187.38108111000003">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">ICICIGI</span></td>
+            <td data-order="1811.9">₹1811.90</td>
+            <td data-order="1782.8" style="font-weight: 600;">₹1782.80</td>
+            <td data-order="-1.6060488989458654"><span style='color: var(--red); font-weight: 600;'>-1.61%</span></td>
+            <td data-order="75.69353848025625" style="color: var(--accent);">75.7</td>
+            <td data-order="94.46973130749727" style="color: var(--secondary);">94.5</td>
+            <td data-order="1.2234865653748637" style="color: var(--gold);">1.22</td>
+            <td data-order="187.38108111000003">₹187.4 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="75" data-mom="100.0" data-vol="2.0" data-liq="3.97325075">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">BHARATGEAR</span></td>
+            <td data-order="117.5">₹117.50</td>
+            <td data-order="110.18" style="font-weight: 600;">₹110.18</td>
+            <td data-order="-6.229787234042548"><span style='color: var(--red); font-weight: 600;'>-6.23%</span></td>
+            <td data-order="75" style="color: var(--accent);">75.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="3.97325075">₹4.0 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.37089547442051" data-mom="115.0" data-vol="1.510351542848697" data-liq="114.1564212">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">ECLERX</span></td>
+            <td data-order="1581.0">₹1581.00</td>
+            <td data-order="1638.4" style="font-weight: 600;">₹1638.40</td>
+            <td data-order="3.630613535736881"><span style='color: var(--green); font-weight: 600;'>+3.63%</span></td>
+            <td data-order="84.37089547442051" style="color: var(--accent);">84.4</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="1.510351542848697" style="color: var(--gold);">1.51</td>
+            <td data-order="114.1564212">₹114.2 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="90" data-mom="100.0" data-vol="2.0" data-liq="1548.61750912">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">OIL</span></td>
+            <td data-order="489.8">₹489.80</td>
+            <td data-order="490.95" style="font-weight: 600;">₹490.95</td>
+            <td data-order="0.23478971008574465"><span style='color: var(--green); font-weight: 600;'>+0.23%</span></td>
+            <td data-order="90" style="color: var(--accent);">90.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="1548.61750912">₹1548.6 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="79" data-mom="100.0" data-vol="2.0" data-liq="2427.748383">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">TATACONSUM</span></td>
+            <td data-order="1270.0">₹1270.00</td>
+            <td data-order="1253" style="font-weight: 600;">₹1253.00</td>
+            <td data-order="-1.3385826771653544"><span style='color: var(--red); font-weight: 600;'>-1.34%</span></td>
+            <td data-order="79" style="color: var(--accent);">79.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="2427.748383">₹2427.7 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="85" data-mom="100.0" data-vol="2.0" data-liq="144.293336">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">ENDURANCE</span></td>
+            <td data-order="2540.0">₹2540.00</td>
+            <td data-order="2578.8" style="font-weight: 600;">₹2578.80</td>
+            <td data-order="1.5275590551181173"><span style='color: var(--green); font-weight: 600;'>+1.53%</span></td>
+            <td data-order="85" style="color: var(--accent);">85.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="144.293336">₹144.3 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.62752357142882" data-mom="115.0" data-vol="2.539932040379007" data-liq="37.0359738">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">AEGISVOPAK</span></td>
+            <td data-order="201.75">₹201.75</td>
+            <td data-order="202.67" style="font-weight: 600;">₹202.67</td>
+            <td data-order="0.45600991325897766"><span style='color: var(--green); font-weight: 600;'>+0.46%</span></td>
+            <td data-order="84.62752357142882" style="color: var(--accent);">84.6</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="2.539932040379007" style="color: var(--gold);">2.54</td>
+            <td data-order="37.0359738">₹37.0 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="82.13986774040805" data-mom="111.83702244825139" data-vol="1.3418511224125693" data-liq="358.8817347">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">AUROPHARMA</span></td>
+            <td data-order="1484.5">₹1484.50</td>
+            <td data-order="1488.2" style="font-weight: 600;">₹1488.20</td>
+            <td data-order="0.24924216908050156"><span style='color: var(--green); font-weight: 600;'>+0.25%</span></td>
+            <td data-order="82.13986774040805" style="color: var(--accent);">82.1</td>
+            <td data-order="111.83702244825139" style="color: var(--secondary);">111.8</td>
+            <td data-order="1.3418511224125693" style="color: var(--gold);">1.34</td>
+            <td data-order="358.8817347">₹358.9 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="80" data-mom="100.0" data-vol="2.0" data-liq="80.877047436">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">GARUDA</span></td>
+            <td data-order="192.31">₹192.31</td>
+            <td data-order="172.68" style="font-weight: 600;">₹172.68</td>
+            <td data-order="-10.207477510269875"><span style='color: var(--red); font-weight: 600;'>-10.21%</span></td>
+            <td data-order="80" style="color: var(--accent);">80.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="80.877047436">₹80.9 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.6140680293659" data-mom="115.0" data-vol="2.541269147304637" data-liq="46.7753625">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">CAPLIPOINT</span></td>
+            <td data-order="1845.0">₹1845.00</td>
+            <td data-order="1815" style="font-weight: 600;">₹1815.00</td>
+            <td data-order="-1.6260162601626018"><span style='color: var(--red); font-weight: 600;'>-1.63%</span></td>
+            <td data-order="84.6140680293659" style="color: var(--accent);">84.6</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="2.541269147304637" style="color: var(--gold);">2.54</td>
+            <td data-order="46.7753625">₹46.8 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.82864722326322" data-mom="115.0" data-vol="3.275976915597939" data-liq="36.5244764">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">CHALET</span></td>
+            <td data-order="794.0">₹794.00</td>
+            <td data-order="759.15" style="font-weight: 600;">₹759.15</td>
+            <td data-order="-4.389168765743076"><span style='color: var(--red); font-weight: 600;'>-4.39%</span></td>
+            <td data-order="84.82864722326322" style="color: var(--accent);">84.8</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="3.275976915597939" style="color: var(--gold);">3.28</td>
+            <td data-order="36.5244764">₹36.5 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="84.11716789656887" data-mom="115.0" data-vol="3.9587829891510573" data-liq="0.0">
+            <td data-order="1778088518.332255">2026-05-06</td>
+            <td><span class="symbol-tag">GARUDA</span></td>
+            <td data-order="192.31">₹192.31</td>
+            <td data-order="172.68" style="font-weight: 600;">₹172.68</td>
+            <td data-order="-10.207477510269875"><span style='color: var(--red); font-weight: 600;'>-10.21%</span></td>
+            <td data-order="84.11716789656887" style="color: var(--accent);">84.1</td>
+            <td data-order="115.0" style="color: var(--secondary);">115.0</td>
+            <td data-order="3.9587829891510573" style="color: var(--gold);">3.96</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>TUG_OF_WAR</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="72" data-mom="100.0" data-vol="2.0" data-liq="183.842774272">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">KANSAINER</span></td>
+            <td data-order="212.48">₹212.48</td>
+            <td data-order="213.83" style="font-weight: 600;">₹213.83</td>
+            <td data-order="0.6353539156626614"><span style='color: var(--green); font-weight: 600;'>+0.64%</span></td>
+            <td data-order="72" style="color: var(--accent);">72.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="183.842774272">₹183.8 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="75" data-mom="100.0" data-vol="2.0" data-liq="3.97325075">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">BHARATGEAR</span></td>
+            <td data-order="117.5">₹117.50</td>
+            <td data-order="110.18" style="font-weight: 600;">₹110.18</td>
+            <td data-order="-6.229787234042548"><span style='color: var(--red); font-weight: 600;'>-6.23%</span></td>
+            <td data-order="75" style="color: var(--accent);">75.0</td>
+            <td data-order="100.0" style="color: var(--secondary);">100.0</td>
+            <td data-order="2.0" style="color: var(--gold);">2.00</td>
+            <td data-order="3.97325075">₹4.0 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title" style="color: var(--gold); border-left-color: var(--gold);">Incubator Watchlist (Coiled Springs)</h2>
+        <div class="table-container" style="border-color: rgba(245, 158, 11, 0.2);">
+            <table id="incubatorTable">
+                <thead><tr>
+                    <th onclick="sortTable(0, 'incubatorTable')">Date</th>
+                    <th onclick="sortTable(1, 'incubatorTable')">Symbol</th>
+                    <th onclick="sortTable(2, 'incubatorTable')">Base Price</th>
+                    <th onclick="sortTable(3, 'incubatorTable')">Live</th>
+                    <th onclick="sortTable(4, 'incubatorTable')">Status</th>
+                    <th onclick="sortTable(5, 'incubatorTable')">AI Score</th>
+                    <th onclick="sortTable(6, 'incubatorTable')">Tightness</th>
+                    <th onclick="sortTable(7, 'incubatorTable')">Vol Dry-up</th>
+                    <th onclick="sortTable(8, 'incubatorTable')">Liquidity</th>
+                    <th onclick="sortTable(9, 'incubatorTable')">Regime</th>
+                </tr></thead>
+                <tbody id="incubatorBody">
+        <tr class="trade-row" data-ai="0.0" data-mom="0.8088521284955711" data-vol="0.7937818497436588" data-liq="246.917972">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">CDSL</span></td>
+            <td data-order="1270.0">₹1270.00</td>
+            <td data-order="1182.4" style="font-weight: 600;">₹1182.40</td>
+            <td data-order="-6.897637795275584"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.8088521284955711" style="color: var(--secondary);">0.8</td>
+            <td data-order="0.7937818497436588" style="color: var(--gold);">0.79</td>
+            <td data-order="246.917972">₹246.9 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="1.0072594340810088" data-vol="0.5087034913472144" data-liq="26.418399660000002">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">CHOICEIN</span></td>
+            <td data-order="682.2">₹682.20</td>
+            <td data-order="661.15" style="font-weight: 600;">₹661.15</td>
+            <td data-order="-3.085605394312528"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="1.0072594340810088" style="color: var(--secondary);">1.0</td>
+            <td data-order="0.5087034913472144" style="color: var(--gold);">0.51</td>
+            <td data-order="26.418399660000002">₹26.4 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.26683159154853925" data-vol="0.7122046703841935" data-liq="13.4392">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">CANFINHOME</span></td>
+            <td data-order="856.0">₹856.00</td>
+            <td data-order="831.85" style="font-weight: 600;">₹831.85</td>
+            <td data-order="-2.821261682242988"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.26683159154853925" style="color: var(--secondary);">0.3</td>
+            <td data-order="0.7122046703841935" style="color: var(--gold);">0.71</td>
+            <td data-order="13.4392">₹13.4 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.3932560355469474" data-vol="0.7835707868515132" data-liq="242.81852322000003">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">POWERGRID</span></td>
+            <td data-order="306.6">₹306.60</td>
+            <td data-order="306.3" style="font-weight: 600;">₹306.30</td>
+            <td data-order="-0.09784735812133442"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.3932560355469474" style="color: var(--secondary);">0.4</td>
+            <td data-order="0.7835707868515132" style="color: var(--gold);">0.78</td>
+            <td data-order="242.81852322000003">₹242.8 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.4066390561462653" data-vol="0.48983380417103833" data-liq="192.726265">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">DRREDDY</span></td>
+            <td data-order="1282.0">₹1282.00</td>
+            <td data-order="1270" style="font-weight: 600;">₹1270.00</td>
+            <td data-order="-0.93603744149766"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.4066390561462653" style="color: var(--secondary);">0.4</td>
+            <td data-order="0.48983380417103833" style="color: var(--gold);">0.49</td>
+            <td data-order="192.726265">₹192.7 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.891166177938401" data-vol="0.6603129770757454" data-liq="253.6138052">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">TRENT</span></td>
+            <td data-order="4298.0">₹4298.00</td>
+            <td data-order="4050.6" style="font-weight: 600;">₹4050.60</td>
+            <td data-order="-5.7561656584457905"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.891166177938401" style="color: var(--secondary);">0.9</td>
+            <td data-order="0.6603129770757454" style="color: var(--gold);">0.66</td>
+            <td data-order="253.6138052">₹253.6 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.23533513466398492" data-vol="0.38993629628142934" data-liq="27.0570321">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">IGL</span></td>
+            <td data-order="161.0">₹161.00</td>
+            <td data-order="156.81" style="font-weight: 600;">₹156.81</td>
+            <td data-order="-2.602484472049688"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.23533513466398492" style="color: var(--secondary);">0.2</td>
+            <td data-order="0.38993629628142934" style="color: var(--gold);">0.39</td>
+            <td data-order="27.0570321">₹27.1 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="1.1524019643257408" data-vol="0.3080074628250854" data-liq="14.950849">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">JKCEMENT</span></td>
+            <td data-order="5460.5">₹5460.50</td>
+            <td data-order="5377.5" style="font-weight: 600;">₹5377.50</td>
+            <td data-order="-1.5200073253365076"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="1.1524019643257408" style="color: var(--secondary);">1.2</td>
+            <td data-order="0.3080074628250854" style="color: var(--gold);">0.31</td>
+            <td data-order="14.950849">₹15.0 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.26878378552168897" data-vol="0.36345844148811957" data-liq="30.882144460000003">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">NEWGEN</span></td>
+            <td data-order="467.8">₹467.80</td>
+            <td data-order="464.95" style="font-weight: 600;">₹464.95</td>
+            <td data-order="-0.6092347156904708"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.26878378552168897" style="color: var(--secondary);">0.3</td>
+            <td data-order="0.36345844148811957" style="color: var(--gold);">0.36</td>
+            <td data-order="30.882144460000003">₹30.9 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.7339997226642075" data-vol="0.758550225390751" data-liq="144.60261096000002">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">GODREJPROP</span></td>
+            <td data-order="1714.4">₹1714.40</td>
+            <td data-order="1712.4" style="font-weight: 600;">₹1712.40</td>
+            <td data-order="-0.11665888940737283"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.7339997226642075" style="color: var(--secondary);">0.7</td>
+            <td data-order="0.758550225390751" style="color: var(--gold);">0.76</td>
+            <td data-order="144.60261096000002">₹144.6 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.9049277820930015" data-vol="0.5879484843261346" data-liq="3.5390201">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">JSWDULUX</span></td>
+            <td data-order="2964.5">₹2964.50</td>
+            <td data-order="2922.8" style="font-weight: 600;">₹2922.80</td>
+            <td data-order="-1.4066453027491927"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.9049277820930015" style="color: var(--secondary);">0.9</td>
+            <td data-order="0.5879484843261346" style="color: var(--gold);">0.59</td>
+            <td data-order="3.5390201">₹3.5 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.7028824498287406" data-vol="0.558111113312399" data-liq="20.40387198">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">BALKRISIND</span></td>
+            <td data-order="2263.4">₹2263.40</td>
+            <td data-order="2110.6" style="font-weight: 600;">₹2110.60</td>
+            <td data-order="-6.750905717062834"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.7028824498287406" style="color: var(--secondary);">0.7</td>
+            <td data-order="0.558111113312399" style="color: var(--gold);">0.56</td>
+            <td data-order="20.40387198">₹20.4 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.7338313663891488" data-vol="0.7929396650339915" data-liq="172.2998476">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">BAJAJFINSV</span></td>
+            <td data-order="1829.0">₹1829.00</td>
+            <td data-order="1744.8" style="font-weight: 600;">₹1744.80</td>
+            <td data-order="-4.603608529250959"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.7338313663891488" style="color: var(--secondary);">0.7</td>
+            <td data-order="0.7929396650339915" style="color: var(--gold);">0.79</td>
+            <td data-order="172.2998476">₹172.3 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.384569041690109" data-vol="0.4238447635436175" data-liq="22.493735160000004">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">MSUMI</span></td>
+            <td data-order="39.99">₹39.99</td>
+            <td data-order="39.8" style="font-weight: 600;">₹39.80</td>
+            <td data-order="-0.47511877969493577"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.384569041690109" style="color: var(--secondary);">0.4</td>
+            <td data-order="0.4238447635436175" style="color: var(--gold);">0.42</td>
+            <td data-order="22.493735160000004">₹22.5 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.7771959569702585" data-vol="0.5850460575995746" data-liq="15.0128645">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">ZFCVINDIA</span></td>
+            <td data-order="14515.0">₹14515.00</td>
+            <td data-order="14651" style="font-weight: 600;">₹14651.00</td>
+            <td data-order="0.9369617636927317"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.7771959569702585" style="color: var(--secondary);">0.8</td>
+            <td data-order="0.5850460575995746" style="color: var(--gold);">0.59</td>
+            <td data-order="15.0128645">₹15.0 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.15275131116847232" data-vol="0.5052399062507135" data-liq="23.986214">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">SCHAEFFLER</span></td>
+            <td data-order="4090.0">₹4090.00</td>
+            <td data-order="4082.3" style="font-weight: 600;">₹4082.30</td>
+            <td data-order="-0.18826405867970214"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.15275131116847232" style="color: var(--secondary);">0.2</td>
+            <td data-order="0.5052399062507135" style="color: var(--gold);">0.51</td>
+            <td data-order="23.986214">₹24.0 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="1.0902384936267304" data-vol="0.6885050877152052" data-liq="99.2541888">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">JUBLFOOD</span></td>
+            <td data-order="479.1">₹479.10</td>
+            <td data-order="442.15" style="font-weight: 600;">₹442.15</td>
+            <td data-order="-7.712377374243381"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="1.0902384936267304" style="color: var(--secondary);">1.1</td>
+            <td data-order="0.6885050877152052" style="color: var(--gold);">0.69</td>
+            <td data-order="99.2541888">₹99.3 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.620064764589899" data-vol="0.7548024679769073" data-liq="85.9429245">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">KARURVYSYA</span></td>
+            <td data-order="295.5">₹295.50</td>
+            <td data-order="283.9" style="font-weight: 600;">₹283.90</td>
+            <td data-order="-3.9255499153976388"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.620064764589899" style="color: var(--secondary);">0.6</td>
+            <td data-order="0.7548024679769073" style="color: var(--gold);">0.75</td>
+            <td data-order="85.9429245">₹85.9 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.051372428702919484" data-vol="0.41765142450086323" data-liq="192.49212996">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">ONGC</span></td>
+            <td data-order="280.45">₹280.45</td>
+            <td data-order="294.5" style="font-weight: 600;">₹294.50</td>
+            <td data-order="5.009805669459801"><span style='color: var(--green); font-weight: 800; animation: blink 1s infinite;'>🚀 IGNITION!</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.051372428702919484" style="color: var(--secondary);">0.1</td>
+            <td data-order="0.41765142450086323" style="color: var(--gold);">0.42</td>
+            <td data-order="192.49212996">₹192.5 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.5866601566970056" data-vol="0.6692899913918099" data-liq="11.210403852">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">UCOBANK</span></td>
+            <td data-order="26.37">₹26.37</td>
+            <td data-order="25.48" style="font-weight: 600;">₹25.48</td>
+            <td data-order="-3.3750474023511585"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.5866601566970056" style="color: var(--secondary);">0.6</td>
+            <td data-order="0.6692899913918099" style="color: var(--gold);">0.67</td>
+            <td data-order="11.210403852">₹11.2 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.2706692913385813" data-vol="0.5271501127148809" data-liq="38.0747462">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">TATACAP</span></td>
+            <td data-order="326.0">₹326.00</td>
+            <td data-order="309.45" style="font-weight: 600;">₹309.45</td>
+            <td data-order="-5.07668711656442"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.2706692913385813" style="color: var(--secondary);">0.3</td>
+            <td data-order="0.5271501127148809" style="color: var(--gold);">0.53</td>
+            <td data-order="38.0747462">₹38.1 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.7247681642207633" data-vol="0.4691986523513269" data-liq="17.324886425">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">ABFRL</span></td>
+            <td data-order="62.65">₹62.65</td>
+            <td data-order="62.4" style="font-weight: 600;">₹62.40</td>
+            <td data-order="-0.39904229848363926"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.7247681642207633" style="color: var(--secondary);">0.7</td>
+            <td data-order="0.4691986523513269" style="color: var(--gold);">0.47</td>
+            <td data-order="17.324886425">₹17.3 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="1.7339394249349989" data-vol="0.6845871137437806" data-liq="490.5135906">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">SHRIRAMFIN</span></td>
+            <td data-order="1014.5">₹1014.50</td>
+            <td data-order="930.45" style="font-weight: 600;">₹930.45</td>
+            <td data-order="-8.28486939379004"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="1.7339394249349989" style="color: var(--secondary);">1.7</td>
+            <td data-order="0.6845871137437806" style="color: var(--gold);">0.68</td>
+            <td data-order="490.5135906">₹490.5 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="1.0273060299941807" data-vol="0.6756897031007643" data-liq="105.65132964000001">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">IREDA</span></td>
+            <td data-order="125.15">₹125.15</td>
+            <td data-order="124.69" style="font-weight: 600;">₹124.69</td>
+            <td data-order="-0.3675589292848645"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="1.0273060299941807" style="color: var(--secondary);">1.0</td>
+            <td data-order="0.6756897031007643" style="color: var(--gold);">0.68</td>
+            <td data-order="105.65132964000001">₹105.7 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.12542185975775624" data-vol="0.3783237324730183" data-liq="27.3893282">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">AEGISLOG</span></td>
+            <td data-order="661.0">₹661.00</td>
+            <td data-order="658.8" style="font-weight: 600;">₹658.80</td>
+            <td data-order="-0.33282904689864534"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.12542185975775624" style="color: var(--secondary);">0.1</td>
+            <td data-order="0.3783237324730183" style="color: var(--gold);">0.38</td>
+            <td data-order="27.3893282">₹27.4 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="1.0507381842060555" data-vol="0.493762569066335" data-liq="41.75727596">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">JWL</span></td>
+            <td data-order="277.3">₹277.30</td>
+            <td data-order="275.05" style="font-weight: 600;">₹275.05</td>
+            <td data-order="-0.8113956004327443"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="1.0507381842060555" style="color: var(--secondary);">1.1</td>
+            <td data-order="0.493762569066335" style="color: var(--gold);">0.49</td>
+            <td data-order="41.75727596">₹41.8 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.025956932467400332" data-vol="0.3683356342817039" data-liq="3.1074701">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">CHALET</span></td>
+            <td data-order="763.0">₹763.00</td>
+            <td data-order="759.15" style="font-weight: 600;">₹759.15</td>
+            <td data-order="-0.5045871559633057"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.025956932467400332" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.3683356342817039" style="color: var(--gold);">0.37</td>
+            <td data-order="3.1074701">₹3.1 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.18354236769654075" data-vol="0.5758259905978197" data-liq="229.7696115">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">EICHERMOT</span></td>
+            <td data-order="7205.0">₹7205.00</td>
+            <td data-order="7126" style="font-weight: 600;">₹7126.00</td>
+            <td data-order="-1.0964607911172797"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.18354236769654075" style="color: var(--secondary);">0.2</td>
+            <td data-order="0.5758259905978197" style="color: var(--gold);">0.58</td>
+            <td data-order="229.7696115">₹229.8 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.35076212691871184" data-vol="0.4116567426479426" data-liq="7.716857980000001">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">GLAXO</span></td>
+            <td data-order="2435.8">₹2435.80</td>
+            <td data-order="2448.8" style="font-weight: 600;">₹2448.80</td>
+            <td data-order="0.5337055587486657"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.35076212691871184" style="color: var(--secondary);">0.4</td>
+            <td data-order="0.4116567426479426" style="color: var(--gold);">0.41</td>
+            <td data-order="7.716857980000001">₹7.7 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.4355818882240711" data-vol="0.45523419268300613" data-liq="8.326783106">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">IOB</span></td>
+            <td data-order="34.31">₹34.31</td>
+            <td data-order="33.65" style="font-weight: 600;">₹33.65</td>
+            <td data-order="-1.9236374234917042"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.4355818882240711" style="color: var(--secondary);">0.4</td>
+            <td data-order="0.45523419268300613" style="color: var(--gold);">0.46</td>
+            <td data-order="8.326783106">₹8.3 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.6807406769634036" data-vol="0.47023662086751267" data-liq="5.6156325">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">SPLPETRO</span></td>
+            <td data-order="725.0">₹725.00</td>
+            <td data-order="696.8" style="font-weight: 600;">₹696.80</td>
+            <td data-order="-3.8896551724137995"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.6807406769634036" style="color: var(--secondary);">0.7</td>
+            <td data-order="0.47023662086751267" style="color: var(--gold);">0.47</td>
+            <td data-order="5.6156325">₹5.6 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.3843263600723634" data-vol="0.6143452472632059" data-liq="77.03857020999999">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">ICICIGI</span></td>
+            <td data-order="1822.1">₹1822.10</td>
+            <td data-order="1782.8" style="font-weight: 600;">₹1782.80</td>
+            <td data-order="-2.156851983974532"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.3843263600723634" style="color: var(--secondary);">0.4</td>
+            <td data-order="0.6143452472632059" style="color: var(--gold);">0.61</td>
+            <td data-order="77.03857020999999">₹77.0 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.1104228153192717" data-vol="0.7224876751607074" data-liq="2097.5644627">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">RELIANCE</span></td>
+            <td data-order="1385.3">₹1385.30</td>
+            <td data-order="1364" style="font-weight: 600;">₹1364.00</td>
+            <td data-order="-1.5375730888616153"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.1104228153192717" style="color: var(--secondary);">0.1</td>
+            <td data-order="0.7224876751607074" style="color: var(--gold);">0.72</td>
+            <td data-order="2097.5644627">₹2097.6 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.20421074023934627" data-vol="0.7489152734876032" data-liq="456.13567310999997">
+            <td data-order="1778520109.420396">2026-05-11</td>
+            <td><span class="symbol-tag">ITC</span></td>
+            <td data-order="305.7">₹305.70</td>
+            <td data-order="300.7" style="font-weight: 600;">₹300.70</td>
+            <td data-order="-1.635590448151783"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.20421074023934627" style="color: var(--secondary);">0.2</td>
+            <td data-order="0.7489152734876032" style="color: var(--gold);">0.75</td>
+            <td data-order="456.13567310999997">₹456.1 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.20421074023934627" data-vol="0.7489152734876032" data-liq="456.13567310999997">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">ITC</span></td>
+            <td data-order="305.7">₹305.70</td>
+            <td data-order="300.7" style="font-weight: 600;">₹300.70</td>
+            <td data-order="-1.635590448151783"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.20421074023934627" style="color: var(--secondary);">0.2</td>
+            <td data-order="0.7489152734876032" style="color: var(--gold);">0.75</td>
+            <td data-order="456.13567310999997">₹456.1 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="1.8405864666295253" data-vol="0.5968057362092972" data-liq="2.8565095900000004">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">TRAVELFOOD</span></td>
+            <td data-order="1253.9">₹1253.90</td>
+            <td data-order="1139.9" style="font-weight: 600;">₹1139.90</td>
+            <td data-order="-9.091634101602999"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="1.8405864666295253" style="color: var(--secondary);">1.8</td>
+            <td data-order="0.5968057362092972" style="color: var(--gold);">0.60</td>
+            <td data-order="2.8565095900000004">₹2.9 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.5505542742355406" data-vol="0.7434177033967728" data-liq="105.43775904">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">LICI</span></td>
+            <td data-order="810.9">₹810.90</td>
+            <td data-order="780.75" style="font-weight: 600;">₹780.75</td>
+            <td data-order="-3.7180910099888984"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.5505542742355406" style="color: var(--secondary);">0.6</td>
+            <td data-order="0.7434177033967728" style="color: var(--gold);">0.74</td>
+            <td data-order="105.43775904">₹105.4 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.3017930055032788" data-vol="0.32334506138091507" data-liq="6.1299336">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">ERIS</span></td>
+            <td data-order="1356.0">₹1356.00</td>
+            <td data-order="1357.6" style="font-weight: 600;">₹1357.60</td>
+            <td data-order="0.11799410029497855"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.3017930055032788" style="color: var(--secondary);">0.3</td>
+            <td data-order="0.32334506138091507" style="color: var(--gold);">0.32</td>
+            <td data-order="6.1299336">₹6.1 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.7085018199991171" data-vol="0.637349711368208" data-liq="254.833723">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">PERSISTENT</span></td>
+            <td data-order="4989.5">₹4989.50</td>
+            <td data-order="4877.1" style="font-weight: 600;">₹4877.10</td>
+            <td data-order="-2.252730734542532"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.7085018199991171" style="color: var(--secondary);">0.7</td>
+            <td data-order="0.637349711368208" style="color: var(--gold);">0.64</td>
+            <td data-order="254.833723">₹254.8 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="1.8260801533955164" data-vol="0.738939700799257" data-liq="36.99012695">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">JSL</span></td>
+            <td data-order="767.9">₹767.90</td>
+            <td data-order="732.1" style="font-weight: 600;">₹732.10</td>
+            <td data-order="-4.66206537309545"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="1.8260801533955164" style="color: var(--secondary);">1.8</td>
+            <td data-order="0.738939700799257" style="color: var(--gold);">0.74</td>
+            <td data-order="36.99012695">₹37.0 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.19991141809989713" data-vol="0.6024703193995928" data-liq="49.76780809">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">PIIND</span></td>
+            <td data-order="2995.3">₹2995.30</td>
+            <td data-order="2997.6" style="font-weight: 600;">₹2997.60</td>
+            <td data-order="0.07678696624711139"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.19991141809989713" style="color: var(--secondary);">0.2</td>
+            <td data-order="0.6024703193995928" style="color: var(--gold);">0.60</td>
+            <td data-order="49.76780809">₹49.8 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="1.174993780109921" data-vol="0.6420639996780872" data-liq="33.2612977">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">CYIENT</span></td>
+            <td data-order="894.65">₹894.65</td>
+            <td data-order="903.45" style="font-weight: 600;">₹903.45</td>
+            <td data-order="0.9836248812384808"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="1.174993780109921" style="color: var(--secondary);">1.2</td>
+            <td data-order="0.6420639996780872" style="color: var(--gold);">0.64</td>
+            <td data-order="33.2612977">₹33.3 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.45092459033436344" data-vol="0.2929232851889609" data-liq="38.3368577">
+            <td data-order="1778176198.617899">2026-05-07</td>
+            <td><span class="symbol-tag">JYOTICNC</span></td>
+            <td data-order="773.0">₹773.00</td>
+            <td data-order="726" style="font-weight: 600;">₹726.00</td>
+            <td data-order="-6.0802069857697285"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.45092459033436344" style="color: var(--secondary);">0.5</td>
+            <td data-order="0.2929232851889609" style="color: var(--gold);">0.29</td>
+            <td data-order="38.3368577">₹38.3 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.647242824260773" data-vol="0.2840604742057999" data-liq="9.453876864">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">ABLBL</span></td>
+            <td data-order="102.32">₹102.32</td>
+            <td data-order="101.66" style="font-weight: 600;">₹101.66</td>
+            <td data-order="-0.6450351837372915"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.647242824260773" style="color: var(--secondary);">0.6</td>
+            <td data-order="0.2840604742057999" style="color: var(--gold);">0.28</td>
+            <td data-order="9.453876864">₹9.5 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.14658680213309028" data-vol="0.6604831104524808" data-liq="4.118464">
+            <td data-order="1778601101.507409">2026-05-12</td>
+            <td><span class="symbol-tag">EIHOTEL</span></td>
+            <td data-order="317.0">₹317.00</td>
+            <td data-order="317.9" style="font-weight: 600;">₹317.90</td>
+            <td data-order="0.28391167192428307"><span style='color: var(--gold);'>COILING</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.14658680213309028" style="color: var(--secondary);">0.1</td>
+            <td data-order="0.6604831104524808" style="color: var(--gold);">0.66</td>
+            <td data-order="4.118464">₹4.1 Cr</td>
+            <td>NEUTRAL</td>
+        </tr>
+        </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title" style="color: var(--secondary);">Active Portfolio</h2>
+        <div class="table-container">
+            <table id="activeTable">
+                <thead><tr>
+                    <th onclick="sortTable(0, 'activeTable')">Date</th>
+                    <th onclick="sortTable(1, 'activeTable')">Symbol</th>
+                    <th onclick="sortTable(2, 'activeTable')">Entry</th>
+                    <th onclick="sortTable(3, 'activeTable')">Live</th>
+                    <th onclick="sortTable(4, 'activeTable')">P&L</th>
+                    <th onclick="sortTable(5, 'activeTable')">AI Score</th>
+                    <th onclick="sortTable(6, 'activeTable')">Momentum</th>
+                    <th onclick="sortTable(7, 'activeTable')">Vol Z</th>
+                    <th onclick="sortTable(8, 'activeTable')">Liquidity</th>
+                    <th onclick="sortTable(9, 'activeTable')">Regime</th>
+                </tr></thead>
+                <tbody id="activeBody">
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">COFORGE</span></td>
+            <td data-order="1261.2">₹1261.20</td>
+            <td data-order="1320.4" style="font-weight: 600;">₹1320.40</td>
+            <td data-order="4.693942277196324"><span style='color: var(--green); font-weight: 600;'>+4.69%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777982400.0">2026-05-05</td>
+            <td><span class="symbol-tag">ABCAPITAL</span></td>
+            <td data-order="365.0">₹365.00</td>
+            <td data-order="341.2" style="font-weight: 600;">₹341.20</td>
+            <td data-order="-6.520547945205482"><span style='color: var(--red); font-weight: 600;'>-6.52%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">NH</span></td>
+            <td data-order="1772.6">₹1772.60</td>
+            <td data-order="1846.6" style="font-weight: 600;">₹1846.60</td>
+            <td data-order="4.174658693444658"><span style='color: var(--green); font-weight: 600;'>+4.17%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">AEGISVOPAK</span></td>
+            <td data-order="198.0">₹198.00</td>
+            <td data-order="202.67" style="font-weight: 600;">₹202.67</td>
+            <td data-order="2.3585858585858523"><span style='color: var(--green); font-weight: 600;'>+2.36%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">ABFRL</span></td>
+            <td data-order="65.05">₹65.05</td>
+            <td data-order="62.4" style="font-weight: 600;">₹62.40</td>
+            <td data-order="-4.073789392774787"><span style='color: var(--red); font-weight: 600;'>-4.07%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777982400.0">2026-05-05</td>
+            <td><span class="symbol-tag">WESTLIFE</span></td>
+            <td data-order="490.75">₹490.75</td>
+            <td data-order="506.85" style="font-weight: 600;">₹506.85</td>
+            <td data-order="3.280692817116663"><span style='color: var(--green); font-weight: 600;'>+3.28%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">GLAND</span></td>
+            <td data-order="1798.2">₹1798.20</td>
+            <td data-order="1872.1" style="font-weight: 600;">₹1872.10</td>
+            <td data-order="4.109665220776324"><span style='color: var(--green); font-weight: 600;'>+4.11%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">GOPAL</span></td>
+            <td data-order="310.45">₹310.45</td>
+            <td data-order="314.05" style="font-weight: 600;">₹314.05</td>
+            <td data-order="1.159607022064752"><span style='color: var(--green); font-weight: 600;'>+1.16%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">AADHARHFC</span></td>
+            <td data-order="520.0">₹520.00</td>
+            <td data-order="487.3" style="font-weight: 600;">₹487.30</td>
+            <td data-order="-6.288461538461536"><span style='color: var(--red); font-weight: 600;'>-6.29%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">FSL</span></td>
+            <td data-order="222.1">₹222.10</td>
+            <td data-order="249.09" style="font-weight: 600;">₹249.09</td>
+            <td data-order="12.152183701035574"><span style='color: var(--green); font-weight: 600;'>+12.15%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777982400.0">2026-05-05</td>
+            <td><span class="symbol-tag">LAURUSLABS</span></td>
+            <td data-order="1174.0">₹1174.00</td>
+            <td data-order="1268" style="font-weight: 600;">₹1268.00</td>
+            <td data-order="8.006814310051109"><span style='color: var(--green); font-weight: 600;'>+8.01%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">PKTEA</span></td>
+            <td data-order="945.0">₹945.00</td>
+            <td data-order="860" style="font-weight: 600;">₹860.00</td>
+            <td data-order="-8.994708994708994"><span style='color: var(--red); font-weight: 600;'>-8.99%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">CARTRADE</span></td>
+            <td data-order="1666.0">₹1666.00</td>
+            <td data-order="1892.2" style="font-weight: 600;">₹1892.20</td>
+            <td data-order="13.57743097238896"><span style='color: var(--green); font-weight: 600;'>+13.58%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777982400.0">2026-05-05</td>
+            <td><span class="symbol-tag">GOPAL</span></td>
+            <td data-order="314.05">₹314.05</td>
+            <td data-order="314.05" style="font-weight: 600;">₹314.05</td>
+            <td data-order="0.0"><span style='color: var(--green); font-weight: 600;'>+0.00%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">AJANTPHARM</span></td>
+            <td data-order="2910.0">₹2910.00</td>
+            <td data-order="3091.7" style="font-weight: 600;">₹3091.70</td>
+            <td data-order="6.2439862542955265"><span style='color: var(--green); font-weight: 600;'>+6.24%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">KEC</span></td>
+            <td data-order="597.0">₹597.00</td>
+            <td data-order="551.7" style="font-weight: 600;">₹551.70</td>
+            <td data-order="-7.5879396984924545"><span style='color: var(--red); font-weight: 600;'>-7.59%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">LAURUSLABS</span></td>
+            <td data-order="1172.5">₹1172.50</td>
+            <td data-order="1268" style="font-weight: 600;">₹1268.00</td>
+            <td data-order="8.14498933901919"><span style='color: var(--green); font-weight: 600;'>+8.14%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">IFCI</span></td>
+            <td data-order="59.87">₹59.87</td>
+            <td data-order="61.07" style="font-weight: 600;">₹61.07</td>
+            <td data-order="2.004342742608991"><span style='color: var(--green); font-weight: 600;'>+2.00%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">SUMICHEM</span></td>
+            <td data-order="449.0">₹449.00</td>
+            <td data-order="444.85" style="font-weight: 600;">₹444.85</td>
+            <td data-order="-0.9242761692650283"><span style='color: var(--red); font-weight: 600;'>-0.92%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">GABRIEL</span></td>
+            <td data-order="1025.0">₹1025.00</td>
+            <td data-order="1098.7" style="font-weight: 600;">₹1098.70</td>
+            <td data-order="7.190243902439029"><span style='color: var(--green); font-weight: 600;'>+7.19%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777982400.0">2026-05-05</td>
+            <td><span class="symbol-tag">MARICO</span></td>
+            <td data-order="826.2">₹826.20</td>
+            <td data-order="830" style="font-weight: 600;">₹830.00</td>
+            <td data-order="0.45993706124424527"><span style='color: var(--green); font-weight: 600;'>+0.46%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">KRISHIVAL</span></td>
+            <td data-order="362.5">₹362.50</td>
+            <td data-order="368.6" style="font-weight: 600;">₹368.60</td>
+            <td data-order="1.6827586206896612"><span style='color: var(--green); font-weight: 600;'>+1.68%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777982400.0">2026-05-05</td>
+            <td><span class="symbol-tag">MOQUALITY</span></td>
+            <td data-order="205.47">₹205.47</td>
+            <td data-order="197.52" style="font-weight: 600;">₹197.52</td>
+            <td data-order="-3.8691779821871752"><span style='color: var(--red); font-weight: 600;'>-3.87%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">CHALET</span></td>
+            <td data-order="758.2">₹758.20</td>
+            <td data-order="759.15" style="font-weight: 600;">₹759.15</td>
+            <td data-order="0.12529675547348085"><span style='color: var(--green); font-weight: 600;'>+0.13%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">ABCAPITAL</span></td>
+            <td data-order="347.2">₹347.20</td>
+            <td data-order="341.2" style="font-weight: 600;">₹341.20</td>
+            <td data-order="-1.7281105990783412"><span style='color: var(--red); font-weight: 600;'>-1.73%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777982400.0">2026-05-05</td>
+            <td><span class="symbol-tag">ADSL</span></td>
+            <td data-order="136.42">₹136.42</td>
+            <td data-order="123.87" style="font-weight: 600;">₹123.87</td>
+            <td data-order="-9.199530860577616"><span style='color: var(--red); font-weight: 600;'>-9.20%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">PIDILITIND</span></td>
+            <td data-order="1374.8">₹1374.80</td>
+            <td data-order="1453" style="font-weight: 600;">₹1453.00</td>
+            <td data-order="5.688100087285427"><span style='color: var(--green); font-weight: 600;'>+5.69%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777982400.0">2026-05-05</td>
+            <td><span class="symbol-tag">MASPTOP50</span></td>
+            <td data-order="77.97">₹77.97</td>
+            <td data-order="79.89" style="font-weight: 600;">₹79.89</td>
+            <td data-order="2.4624855713736076"><span style='color: var(--green); font-weight: 600;'>+2.46%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">SBFC</span></td>
+            <td data-order="94.1">₹94.10</td>
+            <td data-order="92.76" style="font-weight: 600;">₹92.76</td>
+            <td data-order="-1.4240170031880863"><span style='color: var(--red); font-weight: 600;'>-1.42%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">POONAWALLA</span></td>
+            <td data-order="459.0">₹459.00</td>
+            <td data-order="422.05" style="font-weight: 600;">₹422.05</td>
+            <td data-order="-8.050108932461871"><span style='color: var(--red); font-weight: 600;'>-8.05%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">GOPAL</span></td>
+            <td data-order="314.05">₹314.05</td>
+            <td data-order="314.05" style="font-weight: 600;">₹314.05</td>
+            <td data-order="0.0"><span style='color: var(--green); font-weight: 600;'>+0.00%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">RAINBOW</span></td>
+            <td data-order="1279.9">₹1279.90</td>
+            <td data-order="1263.2" style="font-weight: 600;">₹1263.20</td>
+            <td data-order="-1.3047894366747437"><span style='color: var(--red); font-weight: 600;'>-1.30%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">LUPIN</span></td>
+            <td data-order="2362.3">₹2362.30</td>
+            <td data-order="2245.4" style="font-weight: 600;">₹2245.40</td>
+            <td data-order="-4.948567074461334"><span style='color: var(--red); font-weight: 600;'>-4.95%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777982400.0">2026-05-05</td>
+            <td><span class="symbol-tag">AADHARHFC</span></td>
+            <td data-order="520.0">₹520.00</td>
+            <td data-order="487.3" style="font-weight: 600;">₹487.30</td>
+            <td data-order="-6.288461538461536"><span style='color: var(--red); font-weight: 600;'>-6.29%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">ECLERX</span></td>
+            <td data-order="1460.9">₹1460.90</td>
+            <td data-order="1638.4" style="font-weight: 600;">₹1638.40</td>
+            <td data-order="12.150044493120678"><span style='color: var(--green); font-weight: 600;'>+12.15%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">ZYDUSLIFE</span></td>
+            <td data-order="919.1">₹919.10</td>
+            <td data-order="930.65" style="font-weight: 600;">₹930.65</td>
+            <td data-order="1.2566641279512518"><span style='color: var(--green); font-weight: 600;'>+1.26%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777982400.0">2026-05-05</td>
+            <td><span class="symbol-tag">KRISHIVAL</span></td>
+            <td data-order="362.5">₹362.50</td>
+            <td data-order="368.6" style="font-weight: 600;">₹368.60</td>
+            <td data-order="1.6827586206896612"><span style='color: var(--green); font-weight: 600;'>+1.68%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777982400.0">2026-05-05</td>
+            <td><span class="symbol-tag">LUPIN</span></td>
+            <td data-order="2362.3">₹2362.30</td>
+            <td data-order="2245.4" style="font-weight: 600;">₹2245.40</td>
+            <td data-order="-4.948567074461334"><span style='color: var(--red); font-weight: 600;'>-4.95%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">SRF</span></td>
+            <td data-order="2605.0">₹2605.00</td>
+            <td data-order="2721.2" style="font-weight: 600;">₹2721.20</td>
+            <td data-order="4.460652591170819"><span style='color: var(--green); font-weight: 600;'>+4.46%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="0.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1778083731.149254">2026-05-06</td>
+            <td><span class="symbol-tag">CAPLIPOINT</span></td>
+            <td data-order="1753.0">₹1753.00</td>
+            <td data-order="1815" style="font-weight: 600;">₹1815.00</td>
+            <td data-order="3.5367940673131772"><span style='color: var(--green); font-weight: 600;'>+3.54%</span></td>
+            <td data-order="0.0" style="color: var(--accent);">0.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">DTIL</span></td>
+            <td data-order="147.0">₹147.00</td>
+            <td data-order="140.44" style="font-weight: 600;">₹140.44</td>
+            <td data-order="-4.462585034013607"><span style='color: var(--red); font-weight: 600;'>-4.46%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">BELRISE</span></td>
+            <td data-order="216.45">₹216.45</td>
+            <td data-order="205.3" style="font-weight: 600;">₹205.30</td>
+            <td data-order="-5.1513051513051415"><span style='color: var(--red); font-weight: 600;'>-5.15%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">IDEA</span></td>
+            <td data-order="10.52">₹10.52</td>
+            <td data-order="11.89" style="font-weight: 600;">₹11.89</td>
+            <td data-order="13.022813688212937"><span style='color: var(--green); font-weight: 600;'>+13.02%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr class="trade-row" data-ai="135.0" data-mom="0.0" data-vol="0.0" data-liq="0.0">
+            <td data-order="1777896000.0">2026-05-04</td>
+            <td><span class="symbol-tag">QUESS</span></td>
+            <td data-order="219.0">₹219.00</td>
+            <td data-order="208.61" style="font-weight: 600;">₹208.61</td>
+            <td data-order="-4.744292237442916"><span style='color: var(--red); font-weight: 600;'>-4.74%</span></td>
+            <td data-order="135.0" style="color: var(--accent);">135.0</td>
+            <td data-order="0.0" style="color: var(--secondary);">0.0</td>
+            <td data-order="0.0" style="color: var(--gold);">0.00</td>
+            <td data-order="0.0">₹0.0 Cr</td>
+            <td>N/A</td>
+        </tr>
+        </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+    function applyFilters() {
+        const ai = document.getElementById('aiFilter').value;
+        const mom = document.getElementById('momFilter').value;
+        const vol = document.getElementById('volFilter').value;
+        const liq = document.getElementById('liqFilter').value;
+        
+        document.getElementById('aiVal').innerText = ai;
+        document.getElementById('momVal').innerText = mom;
+        document.getElementById('volVal').innerText = vol;
+        document.getElementById('liqVal').innerText = liq;
+        
+        let visible = 0;
+        document.querySelectorAll('.trade-row').forEach(row => {
+            const rowAi = parseFloat(row.dataset.ai);
+            const rowMom = parseFloat(row.dataset.mom);
+            const rowVol = parseFloat(row.dataset.vol);
+            const rowLiq = parseFloat(row.dataset.liq);
+            
+            if (rowAi >= ai && rowMom >= mom && rowVol >= vol && rowLiq >= liq) {
+                row.style.display = "";
+                visible++;
+            } else {
+                row.style.display = "none";
+            }
+        });
+        document.getElementById('visibleCount').innerText = visible;
+    }
+
+    function sortTable(n, tableId) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById(tableId);
+        
+        // Remove classes from all headers in this table
+        let headers = table.getElementsByTagName("TH");
+        for (let h of headers) h.classList.remove("asc", "desc");
+        
+        switching = true;
+        dir = "asc";
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                
+                let xVal = x.getAttribute('data-order') || x.innerText.toLowerCase();
+                let yVal = y.getAttribute('data-order') || y.innerText.toLowerCase();
+                
+                if (!isNaN(xVal) && !isNaN(yVal)) {
+                    xVal = parseFloat(xVal);
+                    yVal = parseFloat(yVal);
+                }
+
+                if (dir == "asc") {
+                    if (xVal > yVal) { shouldSwitch = true; break; }
+                } else if (dir == "desc") {
+                    if (xVal < yVal) { shouldSwitch = true; break; }
+                }
+            }
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchcount++;
+            } else {
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+        // Add the correct class to the current header
+        headers[n].classList.add(dir);
+    }
+    window.onload = applyFilters;
+    </script>
+</body>
+</html>

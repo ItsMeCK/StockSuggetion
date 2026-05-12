@@ -199,11 +199,11 @@ class SovereignScreener:
         
         # If target_date is provided, slice data up to that date
         if target_date:
-            logging.info(f"Slicing historical data up to {target_date}")
-            # Ensure target_date is a datetime for comparison
-            from datetime import datetime, timezone
-            target_dt = datetime.strptime(target_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
-            df = df.filter(pl.col("time") <= target_dt)
+            logging.info(f"Slicing historical data up to end of {target_date}")
+            # Ensure target_date is a datetime for comparison, set to end of day to include EOD
+            from datetime import datetime, timezone, timedelta
+            target_dt = datetime.strptime(target_date, "%Y-%m-%d").replace(tzinfo=timezone.utc) + timedelta(days=1)
+            df = df.filter(pl.col("time") < target_dt)
         
         # 1. Drop non-equities first from main dataset (expanded regex)
         # Filters for alphanumeric NSE symbols, blocks noise, and enforces length
@@ -247,7 +247,8 @@ class SovereignScreener:
         logging.info(f"Diagnostic report saved to: {diag_path}")
         
         # Determine if we are in the relaxed window (Feb 15 - May 1) to capture leaders
-        relaxed_window = False
+        # Forced to TRUE to ensure we catch explosive momentum leaders as requested
+        relaxed_window = True 
         if target_date:
             try:
                 from datetime import datetime
