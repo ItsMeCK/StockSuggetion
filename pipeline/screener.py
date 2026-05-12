@@ -100,8 +100,15 @@ class SovereignScreener:
             pl.col("close").rolling_mean(window_size=10).over("symbol").alias("sma_10"),
             pl.col("close").rolling_mean(window_size=20).over("symbol").alias("sma_20"),
             pl.col("close").rolling_mean(window_size=50).over("symbol").alias("sma_50"),
+            # Dynamic SMA-200: Use 200 if possible, otherwise use 100 or 50
             pl.col("close").rolling_mean(window_size=200).over("symbol").alias("sma_200"),
+            pl.col("close").rolling_mean(window_size=100).over("symbol").alias("sma_100"),
             pl.col("volume").rolling_mean(window_size=20).over("symbol").alias("vol_avg_20")
+        ])
+        
+        # Fill null SMA-200 with SMA-100 for younger stocks
+        df = df.with_columns([
+            pl.col("sma_200").fill_null(pl.col("sma_100")).fill_null(pl.col("sma_50"))
         ])
         
         # Calculate 10-day momentum (slope) of the 50 SMA
@@ -112,6 +119,13 @@ class SovereignScreener:
         # Calculate extension from 50 SMA
         df = df.with_columns([
             (((pl.col("close") - pl.col("sma_50")) / pl.col("sma_50")) * 100).alias("extension_pct")
+        ])
+
+        # Pring Optimization: Rate of Change (ROC)
+        df = df.with_columns([
+            (((pl.col("close") - pl.col("close").shift(10).over("symbol")) / pl.col("close").shift(10).over("symbol")) * 100).alias("roc_10"),
+            (((pl.col("close") - pl.col("close").shift(20).over("symbol")) / pl.col("close").shift(20).over("symbol")) * 100).alias("roc_20"),
+            (((pl.col("volume") - pl.col("volume").rolling_mean(window_size=10).over("symbol")) / pl.col("volume").rolling_mean(window_size=10).over("symbol")) * 100).alias("vol_roc_10")
         ])
         
         # Calculate True Range & ATR
@@ -264,25 +278,39 @@ class SovereignScreener:
         ext_limit = 15.0 if relaxed_window else 12.0
         
         # 5a. Filter for established Stage 2 participation
+        # Pring Rule: Dynamic Extension + Institutional Dry-up Support
         stage_2_df = latest_df.filter(
             (pl.col("close") > pl.col("sma_50")) &
             (pl.col("sma_50") > pl.col("sma_200")) &
             (pl.col("sma_50_slope_10d") > 0) &
-            (pl.col("extension_pct") <= ext_limit) & 
+            (
+                (pl.col("extension_pct") <= 5.0) | 
+                ((pl.col("extension_pct") <= 12.0) & (pl.col("roc_10") > pl.col("roc_20")))
+            ) & 
             (pl.col("sma_10") > pl.col("sma_20")) &
-            (pl.col("volume") >= (vol_mult_stage2 * pl.col("vol_avg_20")))
+            (
+                (pl.col("volume") >= (vol_mult_stage2 * pl.col("vol_avg_20"))) | # Thrust
+                (pl.col("volume") <= (0.8 * pl.col("vol_avg_20"))) # Institutional Dry-up
+            )
         )
         # Apply ATR squeeze only if NOT in relaxed window
         if not relaxed_window:
             stage_2_df = stage_2_df.filter(pl.col("atr_3") <= pl.col("atr_20"))
 
-        # 5b. Filter for Shannon Stage Transition (Institutional Bottoming)
+        # 5b. Filter for Shannon Stage Transition / Incubator (The Coil)
+        # Pring Rule: Look for Volume Dry-up (< 0.8x) OR early Stage 2 thrust
         transition_df = latest_df.filter(
             (pl.col("close") > pl.col("sma_10")) &
             (pl.col("close") > pl.col("sma_20")) &
-            (pl.col("volume") >= (vol_mult_transition * pl.col("vol_avg_20"))) & 
             (pl.col("close") >= (pl.col("sma_50") * 0.98)) & 
-            (pl.col("extension_pct") <= ext_limit) 
+            (
+                (pl.col("extension_pct") <= 5.0) | 
+                ((pl.col("extension_pct") <= 12.0) & (pl.col("roc_10") > pl.col("roc_20")))
+            ) &
+            (
+                (pl.col("volume") <= (0.8 * pl.col("vol_avg_20"))) | # The Coil (Dry-up)
+                (pl.col("volume") >= (vol_mult_transition * pl.col("vol_avg_20"))) # The Launch (Thrust)
+            )
         )
 
         # Separate symbols
