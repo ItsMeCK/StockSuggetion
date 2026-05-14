@@ -37,7 +37,7 @@ class VisionPatternAgent:
     def _load_context_rules(self) -> Dict[str, Any]:
         """Loads the MASTER institutional rules (v2.3)."""
         core_dir = Path(__file__).parent.parent / "core"
-        rules_path = core_dir / "context_rules_2.json"
+        rules_path = core_dir / "context_rules_3.json"
         
         try:
             with open(rules_path, 'r', encoding='utf-8') as f:

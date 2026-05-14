@@ -123,9 +123,41 @@ class SovereignScreener:
 
         # Pring Optimization: Rate of Change (ROC)
         df = df.with_columns([
+            (((pl.col("close") - pl.col("close").shift(1).over("symbol")) / pl.col("close").shift(1).over("symbol")) * 100).alias("roc_1"),
             (((pl.col("close") - pl.col("close").shift(10).over("symbol")) / pl.col("close").shift(10).over("symbol")) * 100).alias("roc_10"),
             (((pl.col("close") - pl.col("close").shift(20).over("symbol")) / pl.col("close").shift(20).over("symbol")) * 100).alias("roc_20"),
             (((pl.col("volume") - pl.col("volume").rolling_mean(window_size=10).over("symbol")) / pl.col("volume").rolling_mean(window_size=10).over("symbol")) * 100).alias("vol_roc_10")
+        ])
+
+        # Pring Optimization: RSI & Money Flow Index (MFI)
+        # Simplified RSI (Relative Strength Index)
+        df = df.with_columns([
+            (pl.col("close") - pl.col("close").shift(1).over("symbol")).alias("diff")
+        ]).with_columns([
+            pl.when(pl.col("diff") > 0).then(pl.col("diff")).otherwise(0).alias("gain"),
+            pl.when(pl.col("diff") < 0).then(pl.col("diff").abs()).otherwise(0).alias("loss")
+        ]).with_columns([
+            pl.col("gain").rolling_mean(window_size=14).over("symbol").alias("avg_gain"),
+            pl.col("loss").rolling_mean(window_size=14).over("symbol").alias("avg_loss")
+        ]).with_columns([
+            (100 - (100 / (1 + (pl.col("avg_gain") / pl.col("avg_loss"))))).alias("rsi_14")
+        ])
+
+        # Money Flow Index (MFI)
+        df = df.with_columns([
+            ((pl.col("high") + pl.col("low") + pl.col("close")) / 3).alias("typical_price")
+        ]).with_columns([
+            (pl.col("typical_price") * pl.col("volume")).alias("money_flow")
+        ]).with_columns([
+            (pl.col("typical_price") > pl.col("typical_price").shift(1).over("symbol")).alias("is_pos_mf")
+        ]).with_columns([
+            pl.when(pl.col("is_pos_mf")).then(pl.col("money_flow")).otherwise(0).alias("pos_mf"),
+            pl.when(pl.col("is_pos_mf").not_()).then(pl.col("money_flow")).otherwise(0).alias("neg_mf")
+        ]).with_columns([
+            pl.col("pos_mf").rolling_sum(window_size=14).over("symbol").alias("pos_mf_14"),
+            pl.col("neg_mf").rolling_sum(window_size=14).over("symbol").alias("neg_mf_14")
+        ]).with_columns([
+            (100 - (100 / (1 + (pl.col("pos_mf_14") / pl.col("neg_mf_14"))))).alias("mfi_14")
         ])
         
         # Calculate True Range & ATR
@@ -281,11 +313,14 @@ class SovereignScreener:
         # Pring Rule: Dynamic Extension + Institutional Dry-up Support
         stage_2_df = latest_df.filter(
             (pl.col("close") > pl.col("sma_50")) &
-            (pl.col("sma_50") > pl.col("sma_200")) &
-            (pl.col("sma_50_slope_10d") > 0) &
+            (
+                (pl.col("sma_50") >= pl.col("sma_200")) | # Established Stage 2
+                (pl.col("volume") > 2.0 * pl.col("vol_avg_20")) # Institutional Rebirth (Stage 1 -> 2)
+            ) &
+            (pl.col("sma_50_slope_10d") > -50) & # Allow slight negative slope if recovering fast
             (
                 (pl.col("extension_pct") <= 5.0) | 
-                ((pl.col("extension_pct") <= 12.0) & (pl.col("roc_10") > pl.col("roc_20")))
+                ((pl.col("extension_pct") <= 20.0) & (pl.col("roc_10") > pl.col("roc_20")) & (pl.col("volume") > 1.5 * pl.col("vol_avg_20")))
             ) & 
             (pl.col("sma_10") > pl.col("sma_20")) &
             (
@@ -293,6 +328,7 @@ class SovereignScreener:
                 (pl.col("volume") <= (0.8 * pl.col("vol_avg_20"))) # Institutional Dry-up
             )
         )
+        
         # Apply ATR squeeze only if NOT in relaxed window
         if not relaxed_window:
             stage_2_df = stage_2_df.filter(pl.col("atr_3") <= pl.col("atr_20"))
@@ -316,6 +352,12 @@ class SovereignScreener:
         # Separate symbols
         stage_2_symbols = stage_2_df["symbol"].unique().to_list()
         transition_symbols = transition_df["symbol"].unique().to_list()
+        
+        # Tag the main dataframe for the Librarian
+        latest_df = latest_df.with_columns([
+            pl.col("symbol").is_in(stage_2_symbols).alias("is_stage_2"),
+            pl.col("symbol").is_in(transition_symbols).alias("is_incubator")
+        ])
 
         # Candidates are established Stage 2 stocks
         approved_symbols = stage_2_symbols

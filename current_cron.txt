@@ -1,0 +1,4 @@
+30 10 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. venv/bin/python3 main_orchestrator.py --mode regime
+00 12 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. venv/bin/python3 main_orchestrator.py --mode strike
+15 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. venv/bin/python3 main_orchestrator.py --mode incubator
+*/10 9-15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign/venv/bin/python3 execution/risk_monitor.py

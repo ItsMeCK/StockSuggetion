@@ -302,6 +302,28 @@
             "rising_wedge": "Converging rising lines. Extremely bearish in an uptrend (exhaustion).",
             "falling_wedge": "Converging falling lines. Extremely bullish in a downtrend (accumulation).",
             "rule": "Must see a volume dry-up into the apex."
+        },
+        "diamond_formation": {
+            "structure": "A broadening formation followed by a symmetrical triangle. Rare but highly potent.",
+            "psychology": "Extreme emotional expansion followed by sudden institutional clamping. Usually a major top.",
+            "action": "Wait for the break of the diamond support. Target is the height of the diamond."
+        },
+        "saucer_bottom": {
+            "structure": "A long, slow rounding accumulation. Price and volume both form a bowl shape.",
+            "psychology": "Gradual exhaustion of sellers followed by stealth institutional vacuuming.",
+            "action": "Buy on the break of the rim with a massive volume expansion."
+        },
+        "spike_reversal": {
+            "structure": "A sharp, parabolic move followed by an immediate reversal on climax volume.",
+            "rule": "Usually occurs after a long Stage 2 run. High risk of a Stage 4 collapse."
+        },
+        "inverse_saucer": {
+            "structure": "A rounding top. Slow, quiet distribution.",
+            "psychology": "Buying interest slowly evaporates. Smart money exits silently."
+        },
+        "coppock_curve": {
+            "logic": "Long-term momentum oscillator for identifying bull market starts.",
+            "signal": "When the curve turns up from below 0 after a major decline."
         }
     },
     "disqualification_rules": {
@@ -522,5 +544,74 @@
     "pring_intermarket_ratios": {
         "copper_gold_ratio": "Rising ratio indicates global growth (Bullish for Equities). Falling ratio indicates deflation (Bearish).",
         "transports_vs_industrials": "Dow Theory rule. Transports must confirm Industrials for a valid bull market."
+    },
+    "pring_momentum_waves": {
+        "one_two_three_reversal": "1. Trendline break, 2. Test of the high, 3. Break of the intervening low.",
+        "rule": "This is the most reliable way to identify a Stage 2 to Stage 3 transition."
+    },
+    "pring_ma_ribbons": {
+        "structure": "A cluster of 10+ EMAs (e.g., 3 to 100 periods).",
+        "fanning_out": "Indicates strong, healthy momentum in Stage 2.",
+        "converging": "Indicates trend exhaustion and risk of reversal."
+    },
+    "pring_point_and_figure": {
+        "horizontal_count": "Measuring the width of a consolidation to project the height of the move.",
+        "vertical_count": "Measuring the length of a breakout thrust to project the next resistance."
+    },
+    "pring_volume_advanced": {
+        "upside_breakout_confirmation": "Volume should increase by at least 50% relative to the 10-day average during the breakout bar.",
+        "downside_breakout_confirmation": "Volume does NOT need to increase for a valid downside break, but heavy volume increases the probability of a crash.",
+        "exhaustion_blowoff": "Price acceleration on 5x average volume signals a climax.",
+        "volume_at_the_top": "High volume without price progress (Churning) indicates distribution.",
+        "volume_at_the_bottom": "Volume typically hits a multi-month low before the saucer rim begins to rise."
+    },
+    "pring_sentiment_matrix": {
+        "mutual_fund_cash_ratio": "High cash levels (>10%) indicate institutional fear (Bullish). Low cash levels (<4%) indicate euphoria (Bearish).",
+        "odd_lot_short_sales": "Measures small-trader sentiment. High odd-lot shorting indicates a bottom is near.",
+        "member_short_ratio": "Measures NYSE specialists. If they are shorting heavily, the top is close."
+    },
+    "pring_cycle_indicators": {
+        "the_decennial_cycle": "The tendency for markets to bottom in years ending in 3 or 7.",
+        "the_election_cycle": "Year 3 (Pre-election) is historically the strongest year for equities.",
+        "the_presidential_cycle": "Year 1 and 2 are typically corrective or sideways."
+    },
+    "pring_trendline_rules": {
+        "the_fan_principle": "After three trendline violations, a major trend change is 95% certain.",
+        "the_acceleration_rule": "When a trendline gets steeper (e.g., 30 deg to 45 deg to 60 deg), the climax is approaching.",
+        "the_internal_trendline": "A line that cuts through the price data, connecting as many internal peaks/troughs as possible."
+    },
+    "pring_comprehensive_library": {
+        "ch_1_definition_of_trend": "A trend is a series of higher highs and higher lows (Bullish) or lower highs and lower lows (Bearish). Break of this sequence is the FIRST warning.",
+        "ch_3_support_and_resistance": {
+            "rule_1": "Support becomes resistance once broken (Polarity).",
+            "rule_2": "The more times a level is tested, the weaker it becomes (Institutional absorption).",
+            "rule_3": "Round numbers (100, 500, 1000) act as psychological anchors."
+        },
+        "ch_6_momentum_principles": {
+            "oscillator_rule_1": "Momentum always leads price at market turns.",
+            "oscillator_rule_2": "Divergence is more important than the absolute value of the indicator.",
+            "roc_math": "ROC(n) = (Price_now / Price_n_days_ago) * 100."
+        },
+        "ch_10_point_and_figure": {
+            "triple_top_buy": "A breakout above two previous peaks. Highly reliable.",
+            "catapult_formation": "A breakout followed by a pullback that holds above the breakout point."
+        },
+        "ch_14_interest_rates": "Rising rates are a headwind for growth stocks; falling rates are a tailwind for banks/real estate.",
+        "ch_24_breadth_thrusts": {
+            "zweig_thrust": "Occurs when the 10-day moving average of Advances / (Advances + Declines) moves from < 0.40 to > 0.615.",
+            "implication": "Signals a massive bull market start (High conviction)."
+        }
+    },
+    "pring_extended_patterns": {
+        "broadening_top": "Expanding range after a long advance. High emotional instability.",
+        "complex_head_and_shoulders": "Pattern with multiple heads or multiple shoulders. Stronger reversal potential.",
+        "triple_top": "Three distinct peaks at the same level. Institutional refusal to pay higher prices.",
+        "triple_bottom": "Three distinct troughs. Institutional refusal to sell lower.",
+        "bump_and_run": "Sharp angle increase followed by a crash back to the original trendline."
+    },
+    "pring_indicator_math": {
+        "kst_long_term": "(RC1 * 1) + (RC2 * 2) + (RC3 * 3) + (RC4 * 4) where RC are smoothed ROCs.",
+        "mfi_math": "Typical Price = (High + Low + Close) / 3. Raw Money Flow = Typical Price * Volume.",
+        "bollinger_bandwidth": "(Upper Band - Lower Band) / Middle Band."
     }
 }
