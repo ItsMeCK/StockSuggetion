@@ -2,7 +2,13 @@ venv/
 __pycache__/
 *.pyc
 .env
+.env.tmp
+*.tmp
 screening_diagnostics.csv
 run_history/
 *.log
 .DS_Store
+midnight_sovereign
+backup_untracked/
+vision_cache.json
+weekly_report_data_*.log

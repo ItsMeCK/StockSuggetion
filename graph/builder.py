@@ -4,6 +4,7 @@ from langgraph.checkpoint.postgres import PostgresSaver
 from core.state import SovereignState
 
 from agents.heuristic_dtw import run_heuristic_pre_processor as heuristic_pre_processor
+from agents.momentum_adaptation_agent import run_momentum_adaptation_node as momentum_adaptation
 from agents.meta_gate import run_meta_gate as meta_gate_experience_check
 from agents.pattern_agent import run_pattern_agent as pattern_agent_vision
 from agents.risk_agent import run_risk_agent as risk_and_position_sizing
@@ -25,6 +26,7 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow = StateGraph(SovereignState)
 
     # 1. Add all nodes
+    workflow.add_node("momentum_adaptation", momentum_adaptation)
     workflow.add_node("heuristic_pre_processor", heuristic_pre_processor)
     workflow.add_node("meta_gate_experience_check", meta_gate_experience_check)
     workflow.add_node("entry_trigger_agent", entry_trigger_agent)
@@ -38,8 +40,9 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.add_node("reflection_engine_post_mortem", reflection_engine_post_mortem)
 
     # 2. Define the flow
-    workflow.set_entry_point("heuristic_pre_processor")
+    workflow.set_entry_point("momentum_adaptation")
     
+    workflow.add_edge("momentum_adaptation", "heuristic_pre_processor")
     workflow.add_edge("heuristic_pre_processor", "meta_gate_experience_check")
     workflow.add_edge("meta_gate_experience_check", "entry_trigger_agent")
     workflow.add_edge("entry_trigger_agent", "watcher_agent")

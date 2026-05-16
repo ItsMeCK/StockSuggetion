@@ -1,0 +1,30 @@
+{
+    "critique_of_current_system": "The static pipeline failed due to its rigid criteria that did not adapt to dynamic market conditions. The screener's reliance on fixed thresholds for indicators like 'over_extended' and 'ATR Squeeze Fail' led to the exclusion of stocks that were actually poised for significant gains. The system did not account for the context of broader market trends or the potential for rapid reversals, which are often indicated by momentum shifts that static rules cannot capture.",
+    "architectural_decision": {
+        "requires_new_agent": true,
+        "requires_decision_node": true,
+        "requires_conditional_edge": true
+    },
+    "proposed_components": [
+        {
+            "name": "MomentumAdaptation Agent",
+            "type": "agent",
+            "responsibility": "Dynamically adjusts screening thresholds based on current market momentum and volatility conditions.",
+            "routing_parameters": ["macro_regime", "momentum_shift"]
+        },
+        {
+            "name": "DynamicThreshold Router",
+            "type": "router",
+            "responsibility": "Routes stocks through different screening paths based on dynamically adjusted thresholds.",
+            "routing_parameters": ["extension_pct", "atr_ratio"]
+        },
+        {
+            "name": "ConditionalMomentum Edge",
+            "type": "conditional_edge",
+            "responsibility": "Allows transitions between nodes based on real-time momentum indicators.",
+            "routing_parameters": ["momentum_indicator", "volume_spike"]
+        }
+    ],
+    "pring_integration_logic": "Incorporate Pring's principles of trend reversals and momentum shifts by using indicators like RSI and ROC to dynamically adjust thresholds. For instance, if a stock shows a high ROC but is flagged as 'over_extended', the system should consider the broader trend context and allow for potential inclusion if other momentum indicators align with a bullish reversal pattern.",
+    "langgraph_workflow_changes": "Update the graph edges to include a new decision node that evaluates momentum indicators before applying static screener criteria. Introduce conditional edges that allow stocks to bypass certain screener failures if momentum indicators suggest a strong potential for reversal or continuation. This will involve integrating the MomentumAdaptation Agent and DynamicThreshold Router into the existing workflow, ensuring that stocks are evaluated in the context of current market dynamics."
+}

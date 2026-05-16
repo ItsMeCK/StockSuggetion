@@ -42,6 +42,7 @@ class SovereignState(TypedDict):
     # Using add_lists in case we append candidates from multiple sector screeners.
     candidates: Annotated[List[str], add_lists]
     incubator: Annotated[List[str], add_lists]
+    flagged_momentum_candidates: Annotated[List[str], add_lists]
     breakouts: Annotated[List[str], add_lists]
     
     # Scoreboards (0-100 ranking)

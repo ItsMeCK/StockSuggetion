@@ -1,0 +1,2095 @@
+
+--- PAGE 1 ---
+Martin Pring 
+on Price 
+Patterns The Definitive Guide to 
+Price Pattern Analysis 
+and Interpretation 
+Martin J. Pring 
+McGraw-Hill 
+New York Chicago San Francisco 
+Lisbon London Madrid Mexico City Milan 
+New Delhi San Juan Seoul Singapore 
+Sydney Toronto 
+--- PAGE 2 ---
+The McGraw-Hill Companies 
+Copyright © 2005 by Martin J. Pring. All rights reserved. Printed in the United 
+States of America. Except as permitted under the United States Copyright Act 
+of 1976, no part of this publication may be reproduced or distributed in any form 
+or by any means, or stored in a data base or retrieval system, without the prior 
+written permission of the publisher. 
+4 5 6 7 8 9 0 DOC/DOC 0 9 8 
+P/N 144194-8 
+PART OF 
+ISBN 0-07-144038-0 
+McGraw-Hill books are available at special quantity discounts to use as pre­
+miums and sales promotions, or for use in corporate training programs. For 
+more information, please write to the Director of Special Sales, Professional 
+Publishing, McGraw-Hill, Two Penn Plaza, New York, NY 10121-2298. Or con­
+tact your local bookstore. 
+This publication is designed to provide accurate and authoritative information 
+in regard to the subject matter covered. It is sold with the understanding that 
+neither the author nor the publisher is engaged in rendering legal, accounting, 
+or other professional service. If legal advice or other expert assistance is 
+required, the services of a competent professional person should be sought. 
+—From a Declaration of principles jointly adopted by a Committee of the American Bar 
+Association and a Committee of Publishers. 
+Library of Congress Cataloging-in-Publication Data 
+Pring, Martin J. 
+Martin Pring on price patterns : the definitive guide to price pattern 
+analysis and interpretation / by Martin J. Pring. 
+p. cm. 
+ISBN 0-07-144038-0 (hardcover : alk. paper) 
+1. Stock price forecasting. 2. Investment analysis. I. Title: on price 
+patterns. II. Title. 
+HG4637.P75 2004 
+332.63'222—dc22 2004004831 
+Contents 
+Introduction у 
+Acknowledgments vii 
+Part I. Basic Building Blocks 1 
+1. Market Psychology and Prices: 
+Why Patterns Work 3 
+2. Three Introductory Concepts 9 
+3. Support and Resistance Zones: 
+How to Identify Them 22 
+4. Trendlines 35 
+5. Volume Principles as They Apply 
+to Price Patterns 54 
+Part II. Traditional Patterns 69 
+6. Using Rectangles, a Case Study 
+for All Patterns 71 
+7. Head and Shoulders 96 
+8. Double Tops, Double Bottoms, 
+and Triple Patterns 127 
+--- PAGE 3 ---
+iv Contents 
+9. Triangles 149 
+10. Broadening Formations 169 
+11. Miscellaneous Patterns 188 
+Part III. Short-Term Patterns 209 
+12. Smaller Patterns and Gaps 211 
+13. Outside Bars 241 
+14. Inside Bars 259 
+15. Key Reversal, Exhaustion, and Pinocchio Bars 269 
+16. Two- and Three-Bar Reversals 289 
+Part IV. Miscellaneous Issues 315 
+17. How to Assess Whether a Breakout 
+Will Be Valid or False 317 
+18. How Do Price Patterns Test? 335 
+Appendix Individual Patterns Summarized 347 
+Index 354 
+Introduction 
+In 2002, McGraw-Hill published eight of my books and book/CD-ROM tuto­
+rial combinations. As an author, I can tell you that that was a lot of work, 
+and one of my 2003 New Year's resolutions was that enough was enough and 
+I would not write another book for many years. So much for resolutions, 
+because 2003 has seen the birth of this book and the DVD presentation that 
+is enclosed in the back, and 2004 will see their publication. 
+I first got the idea of writing this book after bumping into Rick Escher of 
+Recognia. Recognia is an Ottawa-based software company that is dedicated 
+to offering scanning techniques for investors and traders. Its principal vehi­
+cle for this was originally chart pattern recognition, although this has been 
+and will be expanded to include other technical and possibly fundamental 
+indicators. Accurate scanning software for chart pattern recognition has 
+been one of the dreams of technicians for years, and the opportunity to work 
+with Recognia on this project and the ability to offer it on our Web site at 
+pring.com got me excited enough to come up with this book. 
+For those interested, the DVD enclosed at the back of the book offers a 
+one-hour presentation taken from my Live in London video series. The con­
+tents have been selected to reinforce many of the topics covered in the 
+book. 
+Several classic books on technical analysis have covered the subject of 
+price patterns in depth. In the 1930s, R. W. Shabacker wrote several books 
+on the stock market, of which Technical Analysis and Stock Market Profits is the 
+most relevant. H. M. Gartley included a large section on this subject in Profits 
+and the Stock Market. Perhaps the most notable has been Edwards and 
+Magee, Technical Analysis of Stock Trends, originally published in 1951 and 
+now, under the new editorship of Charles Basatti, expanded to include other 
+technical and portfolio management subjects. There is therefore a raft of 
+information available on this subject, so why offer more? The answer prob-
+--- PAGE 4 ---
+vi Introduction 
+ably lies in the statement, "There is more than one way to skin a cat." In the 
+old days, when charts were plotted by hand, time horizons were much 
+longer. Today, with the advent of intraday trading, more emphasis is being 
+placed on the short term. While a substantial number of the examples fea­
+tured here rely on daily and weekly charts, quite a few intraday situations 
+have also been included. 
+The more I study market action, the more I am impressed by the fact that 
+prices are determined by the attitudes of market participants toward the 
+emerging fundamentals. Consequently, I have tried to expand on the dis­
+cussions in other books concerning the psychological rationale for many of 
+the patterns. If it's possible to understand the logic behind these patterns, 
+there is a greater probability that they will be more accurately—and, hope­
+fully, more profitably—interpreted. 
+A whole section of the book has been devoted to what I call one- and two-
+bar price patterns. These formations typically indicate exhaustion and are 
+often followed by sharp and timely reversals in trend. They are especially 
+suited to the swing and day trader, who is forced by time constraints to act 
+quickly. Earlier books covered some of these patterns, but one of the objec­
+tives of this book is to expand on this coverage with some ideas of my own. 
+In addition, I have tried to include a few patterns that are not described 
+in the classic texts, along with a few personal variations. Also, there are some 
+patterns that are described in other books, but that you will not find here. 
+There are two reasons for this. First, it may be that they do not appear in 
+the charts very often. If I have to hunt through hundreds of years of daily 
+data and am hard-pressed to find an example of a specific pattern, that pat­
+tern is hardly of practical day-to-day use. Second, some patterns, such as 
+orthodox broadening tops and bottoms, trigger signals so far away from the 
+reversal point that much of the new trend's potential has already been 
+achieved. Discussion of such formations has been kept to a minimum or 
+eliminated altogether. So, too, have explanations of patterns where the 
+demarcation boundaries cannot easily and conveniently be drawn. 
+Diamonds and rounding formations come to mind. 
+No indicator used in technical analysis is perfect, including price patterns. 
+In this respect, Chapter 18 summarizes some of the research that Pring 
+Research and Recognia have undertaken through the identification of 
+5,000 patterns between 1982 and 2003. The results indicate that the two 
+types of formation tested, head-and-shoulders and double tops and bottoms, 
+generally work when the signals develop in the direction of the primary 
+trend. This demonstrates that correct interpretation and application, when 
+combined with other indicators, will put the odds in your favor. I say odds 
+because technical analysis deals only in probabilities, never in certainties. 
+Because of this, it is of paramount importance for all market participants 
+Introduction vii 
+to first ask the question "What is my risk?" before asking the obvious "What 
+is my reward?" This involves mentally rehearsing where the price would need 
+to go in order to indicate that a pattern had failed. Any good driver looks 
+through the rearview mirror prior to overtaking the car ahead. Traders and 
+investors should do the same by identifying risk before assessing any poten­
+tial reward 
+Acknowledgments 
+There are several people whom I would like to thank for their help and 
+encouragement in writing this book. The idea originally came to me after 
+I bumped into my new friends at Recognia, a Canadian software company 
+devoted to pattern recognition software. In particular, I would like to thank 
+the president of Recognia, Rick Escher, who has provided me with several 
+ideas and has made possible the launching of a pattern recognition sub­
+scription service at our Web site, pring.com. My thanks go also to Bob 
+Pelltier at csidata.com for kindly providing the historical data used for the 
+research in Chapter 18. 
+The DVD at the back of the book was shot as part of a Live in London video 
+series. Permission to include the excerpts featured in the DVD was gener­
+ously given by my friend and the sponsor of the conference, Vince 
+Stanzione, atwww.commodities-trader.com. United Kingdom-based traders 
+looking for some quality instruction may well want to look him up. 
+Finally, and as usual, exceptional thanks goes to my wife, Lisa, who stead­
+fastly applied herself to re-creating all the illustrations featured in the book 
+from my miserable original specimens despite a house move and personal 
+sadness caused by a close family bereavement. 
+--- PAGE 5 ---
+To Lisa, who never fails to surprise me on the upside 
+PART I 
+Basic Building 
+Blocks 
+--- PAGE 6 ---
+1 Market Psychology 
+and Prices: Why 
+Patterns Work 
+The more I work with markets, the more it becomes apparent that prices 
+are determined by one thing and one thing only, and that is people's chang­
+ing attitudes toward the emerging fundamentals. In other words, prices are 
+determined by psychology. The great technician of the 1940s, Garfield Drew, 
+once wrote, "Stocks don't sell for what they are worth, but for what people 
+think they are worth." If it were not for the fact that these changing atti­
+tudes move in trends and that trends tend to perpetuate, market prices 
+would be nothing more than a random event, which would mean that tech­
+nicians would be out of business. 
+Changing Attitudes and Changing 
+Prices 
+A classic example of changing attitudes that affected prices developed in 
+the 1970s and early 1980s. In 1973, a group of stocks known as the "Nifty 
+Fifty" peaked after a phenomenal rise during the 1960s. These were known 
+in the trade as "one-decision" stocks, because their earnings went up every 
+year, as did their prices. People came to the conclusion that there was only 
+one decision to make where these stocks were concerned: just buy! These 
+stocks included such growth names of the time as Kodak, Xerox, 
+McDonald's, and IBM. During 1973 and 1974, they declined substantially 
+in price, along with the rest of the market. Over the course of the next nine 
+3 
+--- PAGE 7 ---
+4 Part I: Basic Building Blocks 
+years or so, the earnings for the group as a whole continued to rise, but 
+the index did not make a new post-1973 high until nine years later. 
+Thus we arrive at a situation where prices bear no reality to the earnings 
+trend. Perhaps prices were too high in 1973 relative to the earnings; per­
+haps they were not, and they should have continued rising throughout the 
+1970s as earnings rose. Who knows? Who can tell? Technicians would say, 
+"Who cares?" Why? Because technical analysis assumes that the changing 
+attitudes toward these emerging fundamentals are reflected in price action 
+as displayed in charts. It's not dissimilar to a medical technician looking at 
+a patient's chart. He doesn't have to know that the patient is groaning with 
+pain to diagnose a problem. It's all there in the chart. The chart tells him 
+that the patient's vital signs are deteriorating to the point where danger lies 
+ahead and that remedial action should be taken. In a similar way, to the tech­
+nician, poor price action signifies a weak price trend and the probability of 
+trouble ahead in the form of a serious price decline. The technician does 
+not have to know the reason why; he merely observes the condition and 
+takes the necessary action. 
+Chart 1-1 shows the 1990s price action for Key Corp., a money-center 
+bank. The bank's earnings are shown in the lower panel. Note that there 
+are two periods when the price came down for a prolonged period, the first 
+in the 1980s and the second in the late 1990s. In both cases the earnings 
+rose, demonstrating once again that it is the attitude of market participants 
+toward the emerging fundamentals rather than the fundamentals them­
+selves that is important. This is not the same thing as saying that earnings 
+are not important; of course they are. If we had known that earnings were 
+Chart 1-1 Key Corp. 1990-2002 vs. earnings. (Source: Telescan.) 
+Market Psychology and Prices: Why Patterns Work 
+Chart 1-2 eBay 1998-2003 vs. earnings. (Source: Telescan.) 
+going to rise at the beginning of both these periods, it would have been rea­
+sonable for us to assume that the price would rally as well. Only a review of 
+the technical position could have helped us to conclude otherwise. 
+Chart 1-2 shows another example, featuring eBay. Once again we can see 
+that the earnings increased pretty dramatically throughout the period cov­
+ered by the chart. However, the price fell slightly, showing the futility of buy­
+ing and selling stocks based purely upon accurate earnings estimates. 
+History repeats, but never exactly, and as prices approach a turning point, 
+people react in roughly the same way. It is this similarity of behavior that 
+shows up in identifiable price patterns or formations, and that is the subject 
+of this book. Later on we will classify these various formations, establish their 
+reliability, and explain how they can be used as a basis for trading. 
+Technical Analysis Defined 
+At the outset, it is very important to understand that technical analysis is an 
+art form. Indeed I define it as "the art of identifying a trend reversal at a rel­
+atively early stage and riding on that trend until the weight of the evidence shows 
+or proves that the trend has reversed." You have probably noticed that I have 
+emphasized the words weight of the evidence. This is because price patterns should 
+be looked upon as one indicator in the weight-of-fhe-evidence approach. In 
+other words, we should not look at price patterns in isolation, but consider 
+--- PAGE 8 ---
+6 Part I: Basic Building Blocks 
+mem in conjunction with several other indicators. Over the years, technicians 
+have developed literally thousands of indicators, so it is obviously impossible 
+to follow them all. By "weight of the evidence" I mean four or five indicators 
+that the user feels comfortable with. The world's great religions are all primarily 
+concerned with finding the truth, but each has its own way of getting there. 
+So, too, with technical analysis; what one person sees as a great indicator 
+another may discard as useless. It's important for you as an individual to decide 
+which indicators to adopt in your trading by testing them over a period of time. 
+If you do not have confidence in your choices, I can assure you that you will 
+make wrong trading decisions once the trend goes against you. 
+By this point you may be asking, "What does he mean by indicators?" Well, 
+I mean oscillators such as the RSI, stochastic, KST, and so on. Other 
+approaches include Elliott, Gann, or the Wykoff method. Still others rely 
+on cycles, volume, or trend-following indicators, such as moving averages 
+and trendlines. Price patterns are therefore one indicator in this weight-of-
+the-evidence approach. I strongly believe that they should not be used in 
+isolation, but rather should be used in conjunction with several of these 
+other indicators with which you feel comfortable. Price patterns should not 
+be used blindly; they should be interpreted and applied with a full under­
+standing of the underlying psychology that gives rise to their development. 
+If you understand roughly how and why they work, you will be in a better 
+position to interpret them in difficult situations. 
+Price Patterns and Psychology 
+I have used the word trend several times, but what is a trend? In my view, a 
+trend is a period in which a price moves in an irregular but persistent direction. There 
+will be a lot said on the subject of trends in the next chapter, but for now all 
+we need to know is that there are various classes depending upon the time 
+frame under consideration. For example, a 60-minute bar chart will reflect 
+very short trends, and a monthly bar chart will reflect trends of much greater 
+duration, lasting for years. However, the principles of interpretation are iden­
+tical. The only difference is that reversals of trends on intraday charts have 
+nowhere near the significance of those on the monthly charts. It should be 
+assumed that the longer the time span, the more reliable the signal. It is 
+important to understand that this last statement is a generalization, since some 
+short-term signals can be very reliable and some long-term signals less reli­
+able. The reason why longer-term trends have a habit of being slightly more 
+reliable is that they are less subject to random noise and manipulation. 
+When a trend is underway, it means that either buyers or sellers are in con­
+trol. During an uptrend, it is the buyers, and during a downtrend, the sellers. 
+Market Psychology and Prices: Why Patterns Work 7 
+I have often heard people respond to the question, "Why is so and so going 
+up?" with the flippant answer, "Because there are more buyers than sellers!" 
+Well, strictly speaking, this is not true, because every transaction must be 
+equally balanced. If I sell 1,000 shares, there must be one or more buyers 
+who are willing to purchase that 1,000 shares. There can never be more, and 
+there can never be less. What moves prices is the enthusiasm of buyers rela­
+tive to that of sellers. If buyers are more motivated, they will bid prices higher. 
+On the other hand, if sellers are more motivated, then the savvy buyers will 
+wait for the sellers to come down to their bids, and prices will decline. 
+Technicians have noted over the years that prices do not usually reverse 
+on a dime. There is usually a transitional period between those times when 
+buyers have the upper hand and those when sellers are pressing prices lower. 
+During these transitional phases, prices experience trading ranges. This 
+ranging action often takes the form of clearly identifiable price patterns or 
+formations. If these transitional periods are classified as a horizontal trend, 
+it follows that there are three possible trends: up, down, and sideways. 
+Occasionally prices will resolve these horizontal price movements in favor 
+of the previous prevailing trend. In this case, the temporary battle between 
+buyers and sellers turns out, in retrospect, to be a period of consolidation. 
+Such formations would then be termed consolidation or continuation patterns, 
+since the prevailing trend would continue after their completion. By the 
+same token, if a pattern separates an uptrend from a downtrend or a down­
+trend from an uptrend, the formation would be called a reversal pattern. 
+It is a generally known fact that rising prices attract bullish sentiment and 
+vice versa. When prices begin their ascent, most people do not anticipate a 
+large sell-off. This is because the news background remains very positive and 
+people generally extrapolate the recent past. It is only after prices have been 
+falling for some time that bad news becomes believable. This means that 
+when we spot a bearish-looking pattern after a previously bullish trend, it is 
+unlikely that we will believe its bearish omen. In fact, we could say that the 
+less believable the pattern, the greater the odds that it is going to work. 
+Let's look at it another way. Say the gold market has been rallying for 
+months and there are widespread media reports telling us that gold and gold 
+shares have outperformed the stock market. In this kind of environment, 
+analysts and other market participants typically expect more of the same. 
+It's possible that there is also a scary geopolitical background; for example, 
+oil supplies may be threatened. However, the gold price forms a reversal 
+price pattern. At the time it would be inconceivable that this pattern could 
+"work," but that is precisely the time when it is most likely to do so. The tip-
+off 
+might come if the news becomes exceptionally bullish as a result of some 
+destabilizing geopolitical event, but the price does not make a new high. That 
+will give the bearish technical case substantial credibility, for if unexpected 
+--- PAGE 9 ---
+8 Part I: Basic Building Blocks 
+"good" news (for gold) cannot send the price higher, what will? Nothing, 
+because this news is already factored into the price. Such action tells us that the 
+underlying technical position is not as strong as it appears on the surface. 
+It's the market's way of saying, forget the media hype, bullish sentiment, and 
+what you hope will happen. Instead, focus on what the market is actually 
+telling you and act on that. The problem is that when everyone around you 
+is convinced that a specific trend is going to extend, it is very difficult to 
+take a different stance. Only after taking a series of losses because you 
+believed the crowd rather than the market action are you likely to learn the 
+lesson that the market speaks the truth and crowds speak with forked 
+tongues. 
+2 Three Introductory 
+Concepts 
+Introduction 
+Before we proceed to a discussion of price patterns themselves, it is impor­
+tant for us to lay the groundwork by describing a few introductory concepts. 
+By doing so, it is possible to obtain a firmer foundation and a better under­
+standing of how markets work, and we will then be in a better position to 
+interpret and apply price patterns for more profitable trading and invest­
+ing. This chapter will describe the importance and implications of time 
+frames and trends. It will conclude with a discussion of peak-and-trough 
+analysis and the pros and cons of logarithmic versus arithmetic scaling. 
+Incidentally, I will be using the word security extensively. This term is a 
+generic one and avoids the constant use of stocks, commodities, currencies, 
+bonds, etc. Just think of a security as any freely traded entity and you will 
+be on the right track. 
+Time Frames 
+We have already established the link between psychology and prices. It is also 
+a fact that human nature (psychology) is more or less constant. This means 
+that the principles of technical analysis can be applied to any time frame, 
+from one-minute bars to weekly and monthly charts. The interpretation is 
+identical. The only difference is that the battle between buyers and sellers is 
+much larger on the monthly charts than on the intraday ones. This means 
+9 
+--- PAGE 10 ---
+10 
+Part I: Basic Building Blocks 
+that any trend-reversal signals are far more significant on the longer charts. 
+As we proceed, it will be evident that this book contains a huge variety of 
+examples featuring many different time frames. For the purpose of interpreta­
+tion, the timeframe really doesn't matter; it's the character of the pattern that does. 
+For example, if you are a long-term trader and you see a particular example 
+featured on a 10-minute bar chart, the example is just as relevant as it would 
+be to an intraday trader. The long-term trader would never initiate a trade 
+based on a 10-minute chart, but that trader can and should take action when 
+that same pattern appears on a weekly or monthly one, and vice versa. 
+Trends 
+A trend is a period in which a price moves in an irregular but persistent direction 
+and is a time measurement of the direction in price levels. There are many 
+different classifications of trends in technical analysis. It is useful to exam­
+ine the more common ones, since an understanding of them will give us 
+perspective on the significance of specific price patterns. The three most 
+widely followed trends are primary, intermediate, and short-term trends. 
+Whenever we talk of any specific category of trend as lasting for such and 
+such a time period, please remember that the description is offered as a 
+rough guide, encompassing most, but not all, trends of that particular type. 
+Some trends will last longer, and others for less time. 
+Primary 
+The primary trend revolves around the business cycle, which extends for 
+approximately 3.6 years from trough to trough. Rising and falling primary 
+trends (bull and bear markets) last for 1 to 2 years. Since building takes longer 
+than tearing down, bull markets generally last longer than bear markets. 
+The primary trend is illustrated in Fig. 2-1 by the thickest line. In an 
+ideal situation, the magnitude and duration of the primary uptrend (bull 
+market) are identical to those of the primary downtrend (bear market), 
+but in reality, they are usually very different. Price patterns that offer rever­
+sal signals for primary trends usually take longer than three months to 
+complete. 
+Intermediate 
+It is unusual for prices to move in straight lines, so primary up- and down­
+trends are almost always interrupted by countercyclical corrections along the 
+Three Introductory Concepts 11 
+Figure 2-1 The market cycle model. (Source: pring.com adapted from Yelton Fiscal.) 
+way. These trends are called intermediate price movements, and they last any­
+where from six weeks to as long as nine months. Occasionally they last even 
+longer, and some writers classify some trends that take as little as three weeks 
+to complete as intermediate price movements. The intermediate trend is 
+represented in Fig. 2-1 by the thinner solid line. Price patterns that signal 
+reversals in intermediate trends do not take as long to form as those revers­
+ing primary price movements. As a rough guide, I would say three to six 
+weeks. A lot will depend on the magnitude and duration of the intermedi­
+ate trend leading into the formation. 
+Short-Term 
+As a rough guide, short-term trends (the dashed line in Fig. 2-1) typically 
+last three or four weeks, although they are sometimes shorter and often 
+longer. They interrupt the course of the intermediate trend, just as the inter­
+mediate trend interrupts primary price movements. Short-term trends are 
+usually influenced by random news events and are far more difficult to iden­
+tify than their intermediate or primary counterparts. Price patterns in this 
+case would take one to two weeks to develop. 
+The formation time varies a great deal, so the estimates provided here 
+should be used as approximate guides. Quite often almost the whole of 
+the trend is taken up by the formation of the pattern. We will show some 
+examples later on when some of these formations have actually been 
+defined. 
+--- PAGE 11 ---
+12 Part I: Basic Building Blocks 
+The Interaction of Trends 
+It is apparent by now that the price level of any security is influenced simul­
+taneously by several different trends. Indeed, there are many more types of 
+trend, some longer and some shorter than the three we have just been 
+describing. These too have an influence on price. Whenever we are con­
+sidering a specific price pattern, our first objective is to understand which 
+type of trend is being reversed. For example, if a reversal in a short-term 
+trend has just taken place, a much smaller price movement may be expected 
+than if the pattern was reversing a primary trend. 
+Short-term traders are principally concerned with smaller movements in 
+price, but they also need to know the direction of the intermediate and primary 
+trends. This is because these longer-term trends dominate near-term price 
+action. This means that any surprises will develop in the direction of the 
+primary trend. In a bull market, the surprises will be on the upside, and in 
+a bear market, they will be on the downside. Just think of it this way: Rising 
+short-term trends that develop in a bull market are likely to be much greater 
+in magnitude than short-term downtrends, and vice versa. Trading losses usu­
+ally happen when the trader is positioned in a countercyclical position against the 
+main trend. The implication for price patterns is that if a false signal is to be 
+given, it will almost always develop in a manner countercyclical to the trend 
+above it. For example, a security may be in a primary bear market. If it then 
+traces out a bullish intermediate price formation, chances are that this 
+breakout will turn out to be false because it is countercyclical in nature. We 
+cannot say that all bullish patterns that develop in bearish trends will fail. 
+What we can say, though, is that if a failure is going to take place, it is most 
+likely to happen following a countercyclical breakout. 
+Intraday Trends 
+What is true for longer-term trends is also true for intraday data. In this 
+case, the short-term trend in the daily charts becomes the long-term trend 
+in the intraday charts. Figure 2-2 represents three rough time approxima­
+tions for the short-term, intermediate, and long-term trends in intraday 
+charts. Patterns on these charts have two principal differences from those 
+appearing on the longer-term ones. First, their effect is of much shorter 
+duration. Second, extremely short-term price trends are much more influ­
+enced by instant reactions to news events than are longer-term ones. 
+Decisions, therefore, have a tendency to develop as emotional, knee-jerk 
+reactions. Also, intraday price action is more susceptible to manipulation. 
+As a consequence, price data used in very-short-term charts are much more 
+erratic and generally less reliable than those that appear in the longer-term 
+charts. 
+Three Introductory Concepts 13 
+Figure 2-2 The intraday market cycle model. 
+The Secular Trend 
+The primary trend consists of several intermediate cycles, but the secular 
+or very-long-term, trend is constructed from a number of primary trends' 
+This "super cycle," or long wave, extends over a substantially greater 
+period, usually lasting well over 10 years and often as long as 25 years A 
+diagram of the interrelationship between a secular and a primary trend is 
+shown in Fig. 2-3. It is certainly very helpful to understand the direction 
+Figure 2-3 The secular versus the cyclical trend. 
+--- PAGE 12 ---
+14 Part I: Basic Building Blocks 
+of the secular trend. Just as the primary trend influences the magnitude of 
+the intermediate-term rally relative to the countercyclical reaction, so the 
+secular trend influences the magnitude and duration of a primary-trend rally 
+or reaction. For example, in a rising secular trend, primary bull markets will 
+be of greater magnitude than primary bear markets. In a secular downtrend, 
+bear markets will be more powerful, and will take longer to unfold, than 
+bull markets. Price patterns that reverse secular trends are obviously much 
+larger than those that separate a primary bull and bear market, often form­
+ing over many years. By the same token, they are also much rarer. 
+Peak-and-Trough Progression 
+Widespread use of computers has led to the development of very sophisti­
+cated trend-identification techniques in market analysis. Some of these work 
+reasonably well, but most do not. In the rush to develop these more com­
+plicated approaches, the simplest and most basic techniques of technical 
+analysis are often overlooked. One of these is the peak-and-trough approach. 
+It is one piece of evidence in the weight-of-the-evidence approach described 
+earlier, but it is also the building block for several price patterns. 
+The concept is very simple. A rising trend typically consists of a series of ral­
+lies and reactions. Each high is higher than its predecessor, as is each low. When 
+the series of rising peaks and troughs is interrupted, a trend reversal is signaled. 
+In Fig. 2-4, the price has been advancing in a series of waves, with each 
+peak and each trough being higher than its predecessor. Then, for the first 
+time, a rally fails to move to a new high, and the subsequent reaction pushes 
+Three Introductory Concepts 15 
+Figure 2-5 Peak-and-trough reversal and test. 
+it below the previous trough. This occurs at point A and gives a signal that, as 
+far as the peak-and-trough indicator is concerned, the trend has reversed. 
+Point В in Fig. 2-4 shows a similar situation, but this time the trend reversal 
+is from a downtrend to an uptrend. 
+The significance of a peak-and-trough reversal is determined by the dura­
+tion and magnitude of the rallies and reactions in question. 
+For example, if it takes two to three weeks to complete each wave in a 
+series of rallies and reactions, the trend reversal will be an intermediate one, 
+since intermediate price movements consist of a series of short-term (two-
+to three-week) fluctuations. Similarly, the interruption of a series of falling 
+intermediate peaks and troughs by a rising one signals a reversal from a pri­
+mary bear to a primary bull market. 
+In Fig. 2-4 the price falls back to the level of the initial recovery high, but 
+in Fig. 2-5 it drops below it. This is still a bullish situation because the ris­
+ing peaks and troughs remain intact. 
+A Peak-and-Trough Dilemma 
+Occasionally, peak-and-trough progression becomes more complicated than 
+the examples shown in Figs. 2-4 and 2-5. In Fig. 2-6, the market has been 
+advancing in a series of rising peaks and troughs, but following the highest 
+peak, the price declines at point Xto a level that is below the previous low. 
+At this juncture, the series of rising troughs has been broken, but not the 
+series of rising peaks. In other words, at point X, only half a signal has been 
+generated. The complete signal of a reversal of both rising peaks and troughs 
+--- PAGE 13 ---
+16 Part I: Basic Building Blocks 
+Figure 2-6 Peak-and-trough half signal at a top. 
+arises at point Y, when the price slips below the level previously reached at 
+point X, having failed in its attempt to register a new high. 
+At point X, there is quite a dilemma because the trend should still be clas­
+sified as positive, and yet the very fact that the series of rising troughs has 
+been interrupted indicates underlying technical weakness. On the one 
+hand, we are presented with half a bearish signal, while on the other, wait­
+ing for point Y could mean giving up a substantial amount of the profits 
+earned during the bull market. The problem is that if we do not wait, the 
+price could well extend its uptrend, as in Fig. 2-7. 
+Figure 2-7 Peak-and-trough continuation. 
+Three Introductory Concepts 17 
+Figure 2-8 Peak-and-trough half signal at a bottom. 
+That's why the dilemma is probably best dealt with by referring to the 
+weight of the evidence from other technical indicators, such as moving 
+averages (MAs), volume, momentum, and so on. If these other techniques 
+overwhelmingly indicate a trend reversal, it is probably safe to anticipate a 
+change in trend, even though peak-and-trough progression has not com­
+pletely confirmed the reversal. It is still a wise policy, though, to view this sig­
+nal with some degree of skepticism until the reversal is confirmed by an 
+interruption in both the series of rising peaks and the series of rising 
+troughs. 
+Figure 2-8 shows this type of situation for a reversal from a bear to a bull 
+trend. The same principles of interpretation apply at point Xas in Fig. 2-6. 
+What Constitutes a Legitimate Peak and Trough? 
+Most of the time, the various rallies and reactions are self-evident, so it is easy 
+to determine that these turning points are legitimate peaks and troughs. It is 
+generally assumed that a reaction to the prevailing trend should retrace 
+between one-third and two-thirds of the previous trend. This means that if we 
+take the first rally from the trough low to the subsequent peak in Fig. 2-9 as 
+100 percent, the ensuing correction should be anywhere from one-third to 
+two-thirds of that move. In this case it appears to be just over one-half, or a 
+50 percent retracement of the previous move. Occasionally, the retracement 
+can reach 100 percent. Technical analysis is far from precise, but if a retrace­
+ment move is a good deal less than the minimum one-third, then the peak 
+or trough in question is held to be suspect. 
+--- PAGE 14 ---
+18 
+Part I: Basic Building Blocks 
+Figure 2-9 Peak-and-trough determination (magnitude). 
+There is one exception to this rule. Occasionally a correction takes the 
+form of a sideways trading range rather than an advance or decline. Since 
+the trading range is still an interruption of the dominant trend and there­
+fore reflect a psychological correction, we can still use the one,hird to two-
+thirds rule, but in this instance substituting time for magnitude. This idea 
+Is shown in Fig. 2-10, where the correction should last between one-third 
+and two-thirds of the time taken to complete the rally leading up to it. The 
+Figure 2-10 Peak-and-trough determination (time). 
+Three Introductory Concepts 19 
+same principles are applied to trading ranges and rallies that develop 
+within downtrends. 
+It is also important to categorize what kind of trend is being monitored. 
+Obviously a reversal derived from a series of rallies and reactions each last­
+ing, say, two to three weeks would be an intermediate reversal. This is 
+because the swings would be short-term in nature. On the other hand, peak-
+and-trough reversals that develop in intraday charts are likely to have sig­
+nificance over a much shorter period. How short would depend on whether 
+the swings were a reflection of hourly or, say, five-minute bars. 
+Arithmetic or Logarithmic 
+Scaling? 
+There are two axes on any market chart. The x axis, along the bottom, reg­
+isters the date (except in point-and-figure charting), and the у axis, the price. 
+There are two methods of plotting the у axis, arithmetic and logarithmic. 
+And which one is chosen can have very important implications. 
+Arithmetic charts allocate a specific point or dollar amount to a given ver­
+tical distance. Thus, in Chart 2-1, each arrow has the same vertical distance 
+and reflects approximately 200 points. That will be true at any price level. 
+Chart 2-1 S&P Composite, 1900-2003, arithmetic scale. 
+--- PAGE 15 ---
+20 
+Part I: Basic Building Blocks 
+Chart 2-2 S&P Composite, 1900-2003, logarithmic scale. 
+A logarithmic scale, on the other hand, allocates a given percentage price 
+move to a specific vertical distance. In Chart 2-2, each arrow represents a 
+move of approximately 100 percent, whether it is at lower prices or higher 
+prices. There is very little noticeable difference between the scaling meth­
+ods when charts are plotted over short periods of time, where price fluctu­
+ations are relatively subdued. However, with large price fluctuations, there 
+are considerable differences. 
+The arithmetic scale suppresses price fluctuations at low levels and exag­
+gerates them at high points. Thus the 85 percent 1929-1932 decline hardly 
+shows up at all in Chart 2-1, but the 40 percent late 1990s-early 2000s retreat 
+(no small decline) is greatly exaggerated. Chart 2-2 shows that the loga­
+rithmic scaling brings back 1929 and does not exaggerate the turn-of-the-
+century bear market. The media love to hype stories and news because that 
+is what sells. You will find that charts featuring financial markets or economic 
+numbers are almost always plotted on an arithmetic scale because this has 
+the effect of exaggerating the most recent changes. Another hyping tech­
+nique used by the media is to present the data for a short period using a 
+very limited scale. The reader is then left with the sense of a dramatic move. 
+This would not be the case if the data were displayed over a much longer 
+period using a wider price scale. 
+As you can appreciate, I am very much in favor of using a logarithmic scale 
+because it displays price trends in a proportionate way. Psychology tends to 
+Three Introductory Concepts 21 
+move proportionately as well, so it makes perfect rational sense to use loga­
+rithmic scaling. Having said that, when price fluctuations are relatively small, 
+say over a three-month period, there is very little difference between the two 
+scaling methods. As a purist, though, I still prefer the log scale at all times. 
+There is an even more important advantage of the logarithmic scale, 
+which we shall learn when the concept of pattern price objectives is dis­
+cussed later. 
+Summary 
+• The principles of technical analysis can be applied equally to any time 
+frame. 
+• The longer the time frame the greater the significance of any technical 
+signal. 
+• A number of different trends simultaneously influence the price level of 
+any market; primary, intermediate, and short term are the most impor­
+tant. 
+• Peak-and-trough progression is the most basic trend-identification tech­
+nique and is a central building block of price pattern analysis. 
+• In order to qualify as a new legitimate peak or trough a good rule of 
+thumb is that the price should retrace between one-third and two-thirds 
+of the previous move. 
+• Arithmetic scaling suppresses price fluctuations at lower price levels and 
+exaggerates them at higher levels. 
+--- PAGE 16 ---
+3 Support and 
+Resistance Zones: 
+How to Identify 
+Them 
+Support and resistance are two more building blocks of the technical arse­
+nal used in price pattern analysis. A discussion of these two concepts will 
+therefore help us greatly in our understanding of how price patterns work. 
+A lot of people use the term support when they really mean resistance and 
+use resistance when they really mean support. It's no wonder that there is a 
+lot of confusion. Basically, these are points on a chart where the probabili­
+ties favor at least a temporary halt in the prevailing trend. 
+Support and Resistance 
+In their classic book Technical Analysis of Stock Trends, Edwards and Magee 
+defined support as "buying (actual or potential) sufficient in volume to halt 
+a downtrend in prices for an appreciable period," and resistance as "selling 
+(actual or potential) sufficient in volume to satisfy all bids and hence stop 
+prices from going higher for a time." 
+A support zone represents a concentration of demand, and a resistance zone 
+represents a concentration of supply. The word concentration is emphasized 
+because supply and demand are always in balance, but it is the relative enthu­
+siasm of buyers as compared to sellers, or vice versa, that is important because 
+that is what determines trends. If buyers are more enthusiastic than sellers, 
+Support and Resistance Zones: How to Identify Them 23 
+Figure 3-1 Previous low is a good place to expect support. 
+they will continually increase their bids until their purchasing demands have 
+been satisfied. On the other hand, if sellers are the more anxious, then they 
+will be willing to liquidate at lower prices and the general price level will fall. 
+If in doubt, think of support as a temporary floor for prices and resistance 
+as a ceiling. 
+At the beginning of Fig. 3-1, the price is declining. It finds a bottom at A 
+and then moves up. The next time it falls to A, it again rallies, so A may now 
+be said to be a support area. This establishes our first principle of sup­
+port/resistance analysis: A previous high or low is a potential resistance/support 
+level. The third time the price slips to A, it goes through or, as we say, vio­
+lates support. One of the first principles of identifying a potential support 
+level, then, is to look for previous lows. In the case of potential resistance, 
+this would be in the area of a previous high. 
+Figure 3-2 shows a more extended example. This time the price found 
+temporary support at В. С also proves to be a support point, but note that 
+Figure 3-2 Support reverses its role to resistance on the way back up. 
+--- PAGE 17 ---
+24 Part I: Basic Building Blocks 
+Figure 3-3 Resistance reverses its role to support on the way down. 
+the rallies are reversed at support level B. Thus the second principle is that 
+support reverses its role to resistance on the way up. Just think of it this way: A 
+floor in a building acts as a support zone, but when you fall through it, the 
+floor now becomes resistance, called a ceiling. The reason why support and 
+resistance reverse their roles can be appreciated with an explanation of 
+some elementary psychology. No one likes to take a loss, and while some 
+people overcome this feeling by cutting their losses at an early stage, oth­
+ers hold on until the price comes back to where the security in question 
+was originally bought. At that point they are able to break even and sell, 
+thereby creating a quantity of supply sufficient to temporarily halt the 
+advance. 
+Finally, in Fig. 3-3 we see the price rally through resistance at В and A (the 
+former support level). The ensuing decline then finds support at A again. 
+Thus our third principle is that resistance reverses its role to support on the way 
+down. 
+Rules for Determining Potential 
+Support/Resistance Points 
+1. Previous Highs and Lows 
+We have already established that previous highs and lows are potential sup­
+port or resistance levels. Highs are important because many market partic­
+ipants may have bought close to or at the actual high for a move. When 
+prices decline, the normal human response is not to take a loss but to hold 
+on. That way, it is felt, there will not be the pain of actually realizing a loss. 
+Support and Resistance Zones: How to Identify Them 25 
+Consequently, when the price returns to the old high, those who bought at 
+that level have great motivation to sell in order to break even, so they begin 
+to liquidate. Also, those who bought at lower prices have a tendency to take 
+profits at the old high, since that is the top of familiar ground. By the same 
+token, any prices above the old high look expensive to potential buyers; con­
+sequently, there is less enthusiasm on their part, so they begin to pull away 
+from the market. 
+When a price rallies and then falls back to the previous low, these bar­
+gain basement prices appeal to potential buyers. After all, they missed the 
+opportunity the first time prices retreated to this level, and they are there­
+fore thankful to have another chance. For the same reason, sellers are reluc­
+tant to part with their securities as prices approach the previous low, since 
+they saw them bounce before and naturally wonder why the same process 
+should not be repeated. 
+Chart 3-1 shows the sugar price for a period spanning 2002-2003. Note 
+how previous highs and lows offer good support/resistance points for 
+future trading. Unfortunately, there is no way of knowing whether a par­
+ticular level will turn out to be support or resistance, or even whether it will 
+be a pivotal point at all. That's why these are merely intelligent places for 
+anticipating a temporary reversal. Resort to other indicators such as oscil­
+lators is therefore required. 
+Chart 3-1 Sugar, 2002-2003, daily. 
+--- PAGE 18 ---
+26 Part I: Basic Building Blocks 
+2. At Round Numbers 
+Support and resistance zones have a habit of forming at round numbers. 
+This is probably because numbers such as 10, 50, or 100 represent easy psy­
+chological points upon which traders and investors often base their deci­
+sions. In the 1970s, for example, the Dow Jones Industrials had a great deal 
+of difficulty surpassing the 1000 level. For gold in the 1980s and mid-1990s, 
+the magic number was $400, and so forth. The guide for potential turning 
+points, then, is to look for round numbers. 
+3. Trendlines and Moving Averages Represent Dynamic 
+Levels of Support and Resistance 
+A good trendline should reflect the underlying trend. One of the rules for 
+assessing the significance of a line relates to how many times it has been 
+touched or approached. The more the merrier in this case. If a price falls 
+back to a specific low on several occasions, this makes that particular price 
+level a strong support zone. The same is true of trendlines and moving aver­
+ages (MAs). Every time a price moves back to an up trendline or a rising 
+MA and bounces, it is reinforced as a dynamic level of support. The same 
+would be true in reverse for a declining trendline or moving average. It 
+therefore makes sense to buy as the price falls to an up trendline (or rising 
+MA) and to sell when it rises to a down trendline (or rising MA). A low-risk 
+stop may then be placed just beyond the line or MA in case the 
+support/ resistance zone is violated. 
+Chart 3-2, for Hewlett-Packard, shows a very good example of how a down 
+trendline acted as resistance. Note also that the interaction of a reliable MA, 
+such as the 200-day MA featured in this chart, acts as reinforcement of the 
+resistance zone. This works in the same way as if we were building a house 
+and doubled the thickness of the roof. The identical principle holds when 
+a moving average and a trendline are at the same level; they double the 
+strength of the resistance (or support in the case of an up trendline and 
+MA intersection). 
+4. Emotional Points on a Chart Represent Potential 
+Support/Resistance Levels 
+This concept will be covered in subsequent chapters when we consider gaps, 
+extreme points of Pinocchio bars, two-bar reversals, key reversals, and so 
+forth. For the moment, suffice it to say that most emotional points are those 
+at which prices following a strong and persistent trend experience a strong 
+extension of that trend. During the course of the bar's formation, they then 
+abruptly reverse their direction. 
+Support and Resistance Zones: How to Identify Them 27 
+Chart 3-2 Hewlett-Packard, 2001-2002, daily. 
+Gaps represent another example of emotional points. They are formed 
+when buyers or sellers respond so emotionally to news that a blank space, 
+or gap, is left on the chart. In Chart 3-3, probably because of unexpected 
+bad news, the sugar price experiences three downside gaps. Later on, when 
+emotions become more stable, the price rallies and tries to "close" each of 
+Chart 3-3 March, 2003, sugar. 
+--- PAGE 19 ---
+28 Part I: Basic Building Blocks 
+Chart 3-4 Boeing, 1998-2003, weekly. 
+the gaps. In the case of the gap on the left, resistance is found at the gap's 
+opening. In the other two examples, resistance forms at the lower part of 
+the gap. Gaps are one of the most reliable technical concepts from the point 
+of view of projecting potential support or resistance areas. 
+Chart 3-4, for Boeing, shows another emotional point. This time it's the 
+bottom of a very wide bar in early 2002. Note that this low developed at a 
+round number, $50. Normally this would have been a support level the next 
+time the price fell to $50, but in the fall of 2002 the price went right through 
+it. Even so, $50 did turn out to be a pivotal point the next time Boeing ral­
+lied. It goes to show that even if a support/resistance zone is violated once, 
+it can still turn out to be a pivotal point in subsequent price action. 
+5. Proportionate Moves, Retracements, and So On 
+The law of motion states that for every action, there is a reaction. Price 
+trends established in financial markets are really the measurement of crowd 
+psychology in motion and are also subject to this law. These swings in sen­
+timent often show up in proportionate price moves. 
+Perhaps the best-known principle of proportion is the 50 percent rule. For 
+instance, many bear markets, as measured by the DJIA, have cut prices by 
+half. As examples, the 1901-1903, 1907, 1919-1921, and 1937-1938 bear 
+markets recorded declines of 46, 49, 47, and 50 percent, respectively. The 
+Support and Resistance Zones: How to Identify Them 
+29 
+first leg of the 1929-1932 bear market ended in October 1929 at 195, just 
+over half the September high. The halfway mark in an advance sometimes 
+represents the point of balance, often giving a clue to the ultimate extent 
+of the move in question or, alternatively, indicating an important juncture 
+point for the return move. Thus, between 1970 and 1973, the market 
+advanced from 628 to 1067. The halfway point in that rise was 848, or 
+approximately the same level at which the first stage of the 1973-1974 bear 
+market ended. 
+By the same token, rising markets often find resistance after doubling from 
+a low; the first rally from 40 to 81 in the 1932-1937 bull market was a double. 
+In effect, the 50 percent mark falls in the middle of the one-third to two-
+thirds retracement described in Chapter 2 in the discussion of peak-and-
+trough progression. These one-third and two-thirds proportions can be 
+widely observed in all securities and also serve as support or resistance 
+zones. 
+Ratio-scale charts are helpful in determining such points, since moves of 
+identical proportion can easily be projected up and down. Moreover, these 
+swings occur with sufficient consistency to offer possible reversal points at both 
+peaks and troughs. Remember, technical analysis deals with probabilities, which 
+means that forecasts should not be made using this method in isolation. 
+In addition, when undertaking a projection based on the rules of pro­
+portion, it is always a good idea to see whether the price objective corre­
+sponds to a previous support or resistance point. If it does, the odds are 
+much higher that this zone will represent a reversal point, or at least a tem­
+porary barrier. When a security price is reaching new all-time high ground, 
+another possibility is to try to extend up trendlines. The point at which the 
+line intersects with the projection using the rules of proportion may well 
+represent the time and place of an important reversal. Experimentation will 
+show that each security has a character of its own, with some lending them­
+selves more readily to this approach and others not at all. 
+Chart 3-5, for Dollar General, shows an example using one-third, two-
+thirds, and 50 percent retracements. In this instance, the decline from A to 
+В is 100 percent of the move. If we want to establish possible resistance 
+points for subsequent rebounds, then the intelligent places to monitor are 
+these one-third, two-thirds, and 50 percent retracements. As you can see, 
+the rally ending at С represents a 50 percent retracement and that ending 
+at D a 66 percent or two-thirds retracement. 
+Many technicians use a sequence of numbers discovered by Leonardo 
+Fibonacci, a thirteenth-century Italian mathematician. The sequence has 
+many properties, but a key one is that each new number is the sum of the 
+two previous numbers in the series. Thus 5 and 8 = 13, 8 and 13 = 21, and 
+so on. The significance of this sequence for our purposes is that it offers 
+--- PAGE 20 ---
+30 
+Part I: Basic Building Blocks 
+Chart 3-5 Dollar General, 1999-2000, daily. 
+some guidelines for proportionate moves. For example, each number in the 
+sequence is 61.8 percent of the next number, 38.2 percent of the number 
+after that, and so forth. 
+In this respect, Charts 3-6 and 3-7, for Palladium, show some possibilities. 
+In the case of Chart 3-6, the huge 1997-1998 rally represents 100 percent of 
+Chart 3-6 Palladium, 1997-2000, daily. 
+Support and Resistance Zones: How to Identify Them 31 
+Chart 3-7 Palladium, 1996-2000, daily. 
+the move. ВС and BD, which turned out to be support levels, were really 61.8 
+percent and 50 percent retracements, respectively. Note how the 61.8 per­
+cent level became support for an extended period in 1998. Also, the 23.6 per­
+cent (one Fibonacci number divided by two later ones in the series) level was 
+pivotal in 1998 and 1999, as reflected by the thick black line beginning at E. 
+Finally, Chart 3-7 shows the same principle applied to upside projections. 
+Once again, AB represents 100 percent of the decline and lines are drawn 
+at upside Fibonacci proportions. In this case, the next higher number 
+divided by the current number is 1.61, then 2.61, and so on. It is self-evi­
+dent how the 161.8 percent and 261.8 percent proportions become key piv­
+otal points in future price action. Once again, these levels are not 
+guaranteed to become important pivotal points but are intelligent places 
+on the chart to anticipate that possibility. 
+Rules for Determining the 
+Probable Significance of a 
+Potential Support or Resistance 
+Zone 
+At this point you are probably asking, "How do I know how important each 
+support and resistance level is likely to be?" Unfortunately, there is no hard 
+and fast answer, but there are some general rules that can act as guidelines. 
+--- PAGE 21 ---
+32 
+Part I: Basic Building Blocks 
+1. The Amount of a Security That Changed Hands in a Specific 
+Area—the Greater the Activity, the More Significant the Zone 
+This is fairly self-evident, for whenever you have a large number of people 
+buying or selling at a particular price, they have a tendency to remember 
+their own experiences. Buyers, as we have already established, like to break 
+even. Sellers, on the other hand, may have bought lower down and recall 
+that prices previously stalled at the resistance level. Their motivation for 
+profit taking becomes that much greater. 
+2. The Greater the Speed and Extent of the Previous Move, the 
+More Significant a Support or Resistance Zone Is Likely to Be 
+The attempt to climb through the resistance level here can be compared to 
+the efforts of a person who tries to crash through a door. If he attacks the 
+door from, say, 10 or 12 feet away, he can propel himself with lots of momen­
+tum, and the door will probably give way. On the other hand, if he begins 
+his attempt from 100 feet away, he will arrive at the door with less velocity 
+and will probably fail in his attempt. In both cases the door represented the 
+exact same resistance, but it was the resistance relative to the velocity of the 
+person that was important. The same principle can be applied to the mar­
+ket, in that a long, steep climb in price is similar to the 100-foot run, and the 
+resistance level resembles the door. Consequently, the more overextended 
+the previous price swing, the less the resistance or support that is required 
+to halt it. 
+In this respect, Chart 3-8, for the Bank Commerciale Index (an Italian 
+stock average), falls to a low in August and then rallies. However, the sub­
+sequent decline is extremely steep, so by the time the index reaches the sup­
+port level at around 880, it is completely exhausted and sellers are unable 
+to push prices below this level. 
+Chart 3-9 features the gold price. Note how it makes a high in January 
+1986 and then falls away. The subsequent rally is quite steep, then the price 
+runs out of steam and declines again. Finally, in late July, it works its way 
+higher in a fairly methodical manner. This time the same level of resistance 
+is easily overcome because buyers are not as exhausted as they were in their 
+March attempt. 
+3. Examine the Amount of Time Elapsed 
+The third rule for establishing the potency of a support or resistance zone 
+is to examine the amount of time that has elapsed between the formation 
+Support and Resistance Zones: How to Identify Them 33 
+Chart 3-8 Bank Commerciale, daily. 
+--- PAGE 22 ---
+34 
+Part I: Basic Building Blocks 
+of the original congestion and the nature of general market developments 
+during that period. A supply that is 6 months old has greater potency than 
+one established 10 or 20 years previously. Even so, it is almost uncanny how 
+support and resistance levels remain effective time and time again, even 
+when separated by many years. 
+Summary 
+• Support and resistance represent a concentration of demand and supply 
+sufficient to halt a price move at least temporarily. 
+• They are not signals to buy or sell but rather are intelligent places for 
+anticipating a reversal. They should always be used in conjunction with 
+other indicators. 
+• Potential support/resistance zones develop at previous highs and lows, 
+round numbers, trendlines and MA's, emotional points on charts, and 
+retracement points such as Fibonacci proportions. 
+• The significance of a support or resistance zone depends upon the 
+amount of an asset that previously changed hands in that area, the speed 
+and extent of the previous price move, and the period of time that has 
+elapsed since the zone was last encountered. 
+4 Trendlines 
+Trendlines are perhaps the simplest of the tools in our technical arsenal and 
+are arguably one of the most effective. Since the construction of nearly all price 
+patterns requires the use of trendlines, this concept is a fundamental building block 
+of pattern identification and interpretation. In this chapter we will describe the 
+characteristics of trendlines and explain how the significance of individual 
+lines can be determined. 
+A trendline is a straight line connecting a series of ascending bottoms in 
+a rising market or the tops of a descending series of rally peaks. Those trend-
+lines joining the lows are called up trendlines and those connecting the tops 
+are referred to as down trendlines. Typically a down trendline is constructed 
+by joining the final peak with the top of the first rally, as in Fig. 4-1. When 
+the price breaks above the trendline, a trend change signal is given. The 
+opposite is true for an up trendline (see Fig. 4-4). 
+How Should Trendlines Be 
+Drawn? 
+In order to be a true trendline, a line must connect two or more peaks or 
+troughs. Otherwise it will be drawn in space and will have no significance. 
+You will often see people constructing lines that touch only one point, as 
+in Fig. 4-2, or even no points at all, as in Fig. 4-3. Such lines have no mean­
+ing whatsoever, and are really worse than drawing nothing at all. This is 
+because by simply appearing on the charts, such lines give the observer the 
+impression that they actually have some significance. This is a fundamen­
+tally important point because a true trendline is a graphic way of representing 
+the underlying trend. Consequently, if a line touches only one point, it can­
+not be a true trendline. 
+35 
+--- PAGE 23 ---
+36 
+Part I: Basic Building Blocks 
+Figure 4-1 Down trendline. 
+Ideally, an up trendline is constructed by connecting the final low with the 
+first bottom following the initial rally, as is done by line AD in Fig. 4-4. This 
+is called the primary trendline. In the case of a primary trend, this would be 
+the bear market low and the first intermediate bottom. The example shown 
+here offers a fairly shallow angle of ascent. Unfortunately, the price rallies 
+sharply, which means that the violation develops well after the final peak. 
+Figure 4-2 Trendline connected once. 
+Trendlines 37 
+Figure 4-3 Trendline not connected. 
+In such situations it is better to redraw the line as the price moves up. In 
+Fig. 4-4 this new line is line ВС, which is obviously a better reflection of the 
+underlying trend. This is called a secondary trendline. Down trendlines are 
+constructed using the same principles, but in reverse. 
+Since trends can be sideways, it follows that trendlines can also be drawn 
+horizontally. This is often the case when we construct price patterns such 
+Figure 4-4 Primary and secondary up trendlines. 
+--- PAGE 24 ---
+38 
+Part I: Basic Building Blocks 
+as the neckline of a horizontal head-and-shoulders (H&S) pattern or the 
+upper or lower boundaries of rectangles (described in later chapters). In 
+the case of price patterns, the penetration of these lines usually warns of a 
+change in trend, as does the violation of rising or falling trendlines. 
+It's important to understand at this point that drawing trendlines is more 
+a matter of common sense than of following a set of hard and fast rules. 
+Bar versus Line or Close-Only 
+Charts 
+Some charts are plotted with bars and others are line charts. The question 
+naturally arises, "Which form should be used for the purposes of trendline 
+analysis?" In most cases, bar charts offer more timely signals, whether the 
+signal is a peak-and-trough progression, price pattern completion, or trend-
+line violation. In technical analysis, timeliness comes at a price, and the price 
+in this case is more whipsaws. With traditional daily or weekly charts, the 
+closing price is very important because it sorts out the men (i.e., those who 
+are willing to take home a position overnight or over a weekend) from the 
+boys (i.e., those who are not). This has become a less important factor in 
+some markets, as they trade for 24 hours Sunday through Friday. (However, 
+since all markets are closed over the weekend, Friday closes continue to 
+maintain their importance.) Even so, closing prices are, for the most part, more 
+important chart points than highs or lows. Also, since there is much excitement 
+during the day as unexpected news breaks, highs and lows often represent 
+random points on the chart. For this reason, it is often a better idea to con­
+struct trendlines using closing data. I am not going to say that this is always 
+the case because some bar trendlines have greater significance than close-
+only ones, based on the rules for significance described later in this chap­
+ter. Thus, it is always crucial to apply common sense as much as strict 
+technical rules. The question you should be constantly asking is, "Which line 
+better reflects the underlying trend?" 
+Trendline Breaks Can Signal 
+Reversals or Consolidation 
+The completion of a price pattern can signify either (1) a reversal in the 
+previous trend, which is known as a reversal pattern, or (2) a resumption of 
+the previous trend, which is called a consolidation or continuation pattern. 
+Similarly, the penetration of a trendline will result in either a reversal of that 
+trend or its continuation. Figure 4-5 illustrates this from the perspective of 
+Trendlines 39 
+Figure 4-5 Reversal up trendline break. 
+a rising price trend. In this case, the trendline joining the series of troughs 
+is eventually penetrated on the downside. The fourth peak represented the 
+highest point in the bull trend, so the downward violation of the trendline 
+signals that a bear move is under way. 
+The upward price trend and trendline penetration in Fig. 4-6 are identi­
+cal to those in Fig. 4-5, but the action following this warning signal is entirely 
+Figure 4-6 Consolidation up trendline break. 
+--- PAGE 25 ---
+40 
+Part I: Basic Building Blocks 
+Figure 4-7 Consolidation turns into a reversal break. 
+different. This is because the trendline violation results in the advance con­
+tinuing, but at a greatly reduced pace. The third alternative is that the price 
+consolidates in a sideways trading range prior to reversing. This is shown in 
+Fig. 4-7. Thus, whenever a trendline is violated, the odds strongly favor a 
+change in trend. That change can be either an actual reversal or a (sideways) 
+trading range following an up- or downtrend. 
+In most instances, there is, unfortunately, no way of telling at the time of 
+the violation which possibility will prove to be the outcome. One clue may 
+be provided by the trendline's angle of ascent or descent. Since sharp-angled 
+trendlines are less sustainable, their penetration has a tendency to be fol­
+lowed by a consolidation rather than a reversal. 
+Valuable clues can be gleaned by evaluating the state of health of the mar­
+ket's overall technical structure. Also, a trendline penetration may occur at 
+the time of, or just before, the successful completion of a reversal price pat­
+tern. 
+If a series of ascending peaks and troughs is accompanied by progressively 
+lower volume, this is a sign that the advance is running out of steam (since 
+volume is no longer going with the trend). In this situation, a trendline vio­
+lation is likely to be of greater significance than if volume had continued 
+to expand with each successive rally. It is not necessary for a downside pen­
+etration to be accompanied by high volume, but a violation that occurs as 
+activity expands emphasizes the bearish undertone because of the obvious 
+switch in the demand/supply balance in favor of sellers. 
+Trendlines 41 
+Extended Trendlines 
+Most people observe the violation of a trendline, assume that the trend has 
+changed, and eventually forget about the line. This is a mistake, because an 
+extended line can become just as important as the violated line itself. 
+If an up trendline is violated, for instance, the price often returns to the 
+extended line. This is known as a throwback move. Figure 4-8 shows a trend-
+line reversing its previous role as support when the throwback move turns 
+it into an area of resistance. Figure 4-9 shows the same situation for a declin­
+ing market. 
+Chart 4-1, for instance, shows an up trendline break for the U.S. govern­
+ment 20-year bond yield. The penetration of this relatively steep line was 
+followed by a small decline. However, the cyclical rally peak in 1984 was 
+turned back by the extended line, which reversed its role and proved to be 
+strong resistance. Chart 4-2 shows the same idea, but for a down trendline 
+for the Eurodollar yield. In this instance it was violated in 1987. Later the 
+extended line proved to be support for the 1993 decline. 
+Logarithmic (Ratio) versus 
+Arithmetic Scales 
+The importance of plotting charts on a logarithmic as opposed to an arithmetic 
+scale was discussed in Chapter 2. The choice of scale is even more critical for 
+a timely and accurate use of trendline analysis. This is because prices tend to 
+F'Sure 4-8 Extended up trendline becomes resistance. 
+--- PAGE 26 ---
+42 Part 1: Basic Building Blocks 
+Figure 
+accelerate in the direction of the prevailing trend at the end of a major move­
+ment; i.e., they rise faster at the end of a rising trend and decline more sharply 
+at the termination of a bear market. In a bull market, prices rise slowly after 
+an initial burst, then advance at a steeper and steeper angle as they approach 
+Chart 4-1 U.S. government 20-year bond yield, 1975-1986, weekly. 
+Trendlines 43 
+Chart 4-2 Cash Eurodollars, 1980-1994, weekly. 
+the ultimate peak, looking rather like the left-hand cross section of a moun­
+tain. 
+Chart 4-3 shows an up trendline break for Intel based on a logarithmic scale. 
+Note that the downside penetration develops in mid-December. Chart 4-4 
+shows exactly the same period, but this time the scaling is arithmetic. The 
+Chart 4-3 Intel, 2001-2002, daily (logarithmic). 
+--- PAGE 27 ---
+44 
+Part I: Basic Building Blocks 
+Chart 4-4 Intel, 2001-2002, daily (arithmetic). 
+trendline break is entirely different, since it initially comes as a whipsaw in 
+late December, followed by a valid break in mid-January. The downward-
+pointing arrow on the left marked the logarithmic break. Thus it is appar­
+ent that up trendlines are violated more quickly on a logarithmic than on 
+an arithmetic scale. 
+Chart 4-5 IBM, 2001-2002, daily (arithmetic). 
+Trendlines 45 
+Chart 4-6 IBM, 2001-2002, daily (logarithmic). 
+Conversely, down trendlines are violated sooner on an arithmetic scale. 
+This can be seen from a comparison of Charts 4-5 and 4-6, for IBM. 
+Generally speaking, penetration of a logarithmically drawn trendline is 
+more accurate in reflecting trend reversals than is penetration of an arith­
+metically drawn trendline, although in both these examples the final pene­
+trations came at more advantageous prices for the arithmetically scaled chart. 
+Significance of Trendlines 
+It has been established that a break in trend caused by penetration of a 
+trendline results in either an actual trend reversal or a slowing in the pace 
+of the trend. Although it may not always be possible to determine which of 
+these alternatives will develop, it is still important to understand the signif­
+icance of a trendline penetration; the guidelines described next should help 
+m this evaluation. Essentially, this evaluation depends on three factors: the 
+length of the line, the number of times it has been touched, and the angle 
+of ascent or descent. Let's consider each of them in turn. 
+1. Length of the Line 
+A trendline measures a trend, so the longer the line, the longer the trend it 
+is monitoring and the more significant the trendline. If a series of ascending 
+--- PAGE 28 ---
+46 
+Part I: Basic Building Blocks 
+bottoms occurs over a three- to four-week span, the resulting trendline is only 
+of minor importance. If the trend extends over a period of one to three years, 
+however, its violation marks a significant juncture point. Just remember, big 
+trends result in big signals, small trends in small ones. 
+2. Number of Times the Trendline Has Been Touched 
+or Approached 
+A trendline derives its authority from the number of times it has been 
+touched or approached; i.e., the larger the number, the greater the trend-
+line's significance. This is because a trendline represents a dynamic area of 
+support or resistance. Each successive test of the line contributes to the 
+importance of this support or resistance role, and thus the authority of the 
+line is a true reflection of the underlying trend. Just remember that a move 
+close to the line (an approach) is almost as important as an actual touch­
+ing because it reflects the line's importance as a support or resistance area. 
+Also, if a line gains significance from the fact that it has been touched or 
+approached on numerous occasions, the extended line will become equally 
+as important, but from a reverse point of view. This is because extended lines 
+reverse their support/resistance role. For example, if a good up trendline 
+has been violated, the price is now below it. Any rally will therefore find resis­
+tance at this line, which had, of course, previously been support. 
+3. Angle of Ascent or Descent 
+A very sharp trend, as shown by the dashed line (AB) in Fig. 4-10, is diffi­
+cult to sustain and is liable to be broken rather easily, even by a short side­
+ways movement. It is then necessary to draw a line with a smaller angle of 
+ascent or descent (AC). 
+All trends are eventually violated, but the steeper ones are likely to be rup­
+tured more quickly. The violation of a particularly steep trend is not as signif­
+icant as the violation of a more gradual one. Penetration of a steep line usually 
+results in a short corrective movement, following which the trend resumes, but 
+at a greatly reduced and more sustainable pace. Usually, the penetration of a 
+steep trendline represents a continuation rather than a reversal break. 
+Measuring Implications 
+Trendlines have measuring implications when they are broken. The mea­
+surement is the maximum vertical distance between the price and the 
+Trendlines 
+Figure 4-10 Steep angles of ascent. 
+trendline. An example for a rising trend is shown in Fig. 4-11. This distance 
+is then projected in the direction of the new trend from the point of pen­
+etration. 
+The term price objective is perhaps misleading. Objectives are usually 
+reached when a trendline violation turns out to be a reversal, but because 
+they are more often exceeded (as we shall learn with price patterns), the 
+Figure 4-11 Down trendline violation measuring objective. 
+--- PAGE 29 ---
+48 
+Part I: Basic Building Blocks 
+Figure 4-12 Up trendline violation measuring objective. 
+objective becomes more of a minimum expectation. An objective for a down­
+side reversal is illustrated in Fig. 4-12. 
+Trend Channels 
+So far only the possibilities of drawing trendlines joining bottoms in rising 
+markets and top's in declining ones have been examined. It is also useful to 
+draw lines that are parallel to those basic trendlines, as shown m Fig. «3. In 
+Figure 4-13 Up trend channel. 
+Trendlines 49 
+Figure 4-14 Down trend channel. 
+a rising market, the parallel line known as a return trendline joins the tops of 
+rallies, and during declines the return line joins the series of bottoms (see 
+Fig. 4-14). The area between these trend extremities is known as a trend chan­
+nel. 
+The return line is useful from two points of view. First, it represents an 
+area of support or resistance, depending on the direction of the trend. 
+Second, and perhaps more important, penetration of the return trendline 
+represents a signal that either the trend will accelerate or a reversal in the 
+basic trend of at least a temporary proportion is about to take place. 
+In Fig. 4-15, the violation of the return line signifies that the price advance 
+has begun to accelerate. In effect, the channel in Fig. 4-15 represents a rising 
+trading range, and the trendline violation is a breakout from it. 
+Exhaustion 
+On the other hand, if the angle of the trend channel is much steeper, as in 
+Figs. 4-16 and 4-17, the violation of the return line represents an exhaus­
+tion move. The failure of the price to hold above (below) the return line 
+then signals an important reversal in trend. This is often the case if the break 
+through the return line is accompanied by high volume. 
+Consider a situation in which a person is sawing a thick piece of wood. 
+At first the sawing strokes are slow but deliberate, but gradually the person 
+realizes that this task is going to take some time, becomes frustrated, and 
+slowly increases the speed of the strokes. Finally the person bursts into a 
+--- PAGE 30 ---
+50 
+Part I: Basic Building Blocks 
+Figure 4-15 Up trend channel breakout. 
+frantic effort and is forced to give up the task at least temporarily because 
+of complete exhaustion. The same principles hold true in a declining mar­
+ke. In this case, the expanding volume at the low represents a selling cli­
+max As a general rule the steeper the channel, the more likely it is that 
+the breakout will turn out to be an exhaustion move. 
+Figure 4 Exhaustion break 
+16 Down trend channel exhaustion break. 
+Trendlines 
+Figure 4-17 Up trend channel exhaustion break. 
+Exhaustion also develops when a price rallies temporarily above a regu­
+lar down trendline (or below an up trendline), then breaks back below 
+(above) it. In the case of a down trendline, the situation is akin to someone 
+jumping up and temporarily pushing through the ceiling. He is able to pull 
+his head through to the next floor for a few moments, but he then falls 
+sharply back to the floor below. At this point he has used up all his spare 
+energy in the attempt to move to the next floor and is totally exhausted. 
+Before he can make another attempt he will need some time to gain some 
+new energy. The same is true of the price, which makes an effort to rally 
+above the trendline but is unable to maintain the breakout. 
+This temporary break often indicates that the prevailing trend has much 
+further to run. It also raises a dilemma concerning the way in which a trend-
+line should be constructed. In Fig. 4-18, for instance, we see a false break 
+above trendline AB. Should AB now be abandoned, or should the peak of 
+the exhaustion break be connected to the rally high to form a new (dashed 
+AC) trendline? Again, it's a matter of common sense. On the one hand, the 
+top of the whipsaw break is technically the correct place to draw the line, 
+but common sense suggests that the original line is a better reflection of 
+the underlying trend. After all, at the time of the whipsaw, it had been 
+touched three times. If a new line is then drawn to reflect the break, that 
+line will have been touched only twice, once at the outset and once at the 
+whipsaw peak. In a sense, the whipsaw is adding further credibility to the 
+initial line because the price was unable to hold above it. If we had come 
+upon this situation after the whipsaw break and tried to construct a line, it 
+--- PAGE 31 ---
+52 Part I: Basic Building Blocks 
+Figure 4-18 Down trendline construction. 
+would have been even more obvious that line AB was far superior to line 
+AC because it has been touched or approached on far more occasions. 
+The same principles are true in reverse for an up trendline. When you 
+think about it, a whipsaw break actually adds credibility to the trendline. This is 
+because the price is able to violate the line, but this line is so significant as 
+Chart 4-7 Microsoft, 1998-1999, daily. 
+Trendlines 
+53 
+a support/resistance area that the price is unable to hold the break. If it 
+were not such a significant barrier, the break would have held and the whip-
+saw would have been avoided. Consequently, when the price is able to expe­
+rience a valid break, the signal is that much stronger. 
+Chart 4-7 shows an example of a whipsaw downside break for Microsoft in 1998. 
+Summary 
+• Trendlines are an easy tool to understand, but they should be used with 
+a strong dose of common sense. Considerable experimentation and prac­
+tice are required before the art of interpreting them can be successfully 
+mastered. 
+• Trendline violations signal either a temporary interruption or a reversal 
+in the prevailing trend. It is necessary to refer to other pieces of techni­
+cal evidence to determine which is being signaled. 
+• The significance of trendlines is a function of their length, the number 
+of times they have been touched or approached, and the steepness of the 
+angle of ascent or descent. 
+• A good trendline reflects the underlying trend and represents an impor­
+tant support and resistance zone. 
+• Extended trendlines reverse the former support/resistance role and 
+should not be overlooked. 
+• Exhaustion breaks are usually followed by sharp moves in the opposite 
+direction to the break. Exhaustion breaks enhance the significance of a 
+trendline. 
+--- PAGE 32 ---
+5 Volume Principles 
+as They Apply to 
+Price Patterns 
+Almost everything that technicians use in plotting a specific security involves 
+either the price itself or a statistical variation on it. Volume can offer a new 
+dynamic in our interpretation of crowd psychology. Therefore, analyzing vol­
+ume trends gives us a better understanding of how and why price patterns 
+work. In effect, the study of the characteristics of volume gives greater depth 
+to the weight-of-the-evidence approach described earlier. Volume not only 
+measures the enthusiasm of buyers and sellers but is a variable that is totally 
+independent of price. In this chapter we will discuss some general princi­
+ples of volume interpretation. However, this is not the final word, because 
+I will have more to say on this subject as we expand the discussion to include 
+individual price patterns. 
+Benefits of Volume Studies 
+Volume studies offer three major benefits. 
+1. When price and volume patterns are compared, it is important to see 
+whether they are in agreement. If they are, the probabilities favor an 
+extension of the trend. 
+2. If price and volume disagree, this tells us that the underlying trend is not 
+as strong as it looks on the surface. If a breakout from a price pattern 
+develops with such a disagreement, a warning of a potentially invalid sig­
+nal is being given. 
+Volume Principles as They Apply to Price Patterns 55 
+3. Occasionally, price action offers mild signs of an impending trend rever­
+sal, but volume can throw up characteristics of its own that literally shout 
+this message. In such cases, a study that was limited to price action would 
+fail to uncover a really good and obvious warning or opportunity. 
+Principles of Volume 
+Interpretation 
+1. The first and most important principle is that volume typically goes with 
+the trend. It is normal for activity to expand in a rising market and to con­
+tract in a declining one (see Fig. 5-1). In this sense, volume is always 
+interpreted in relation to the recent past. Comparing twenty-first-cen­
+tury 1 billion-plus share days on the NYSE with early-twentieth-century 
+levels of 5 or 6 million is of little help. Such a comparison reflects insti­
+tutional, not psychological, changes. Volume is higher today because of 
+more companies being listed, the advent of derivatives, lower commis­
+sions, and so forth. On the other hand, a 3 billion share day this week 
+compared to a recent 1.5 billion share day last month is relevant, 
+because it shows a significant change in activity over a period in which 
+institutional changes will be nonexistent. 
+We know that when prices move in trends, this does not occur in a 
+straight line. Instead, the price works its way up and down in a zigzag 
+Figure 5-1 Volume goes with the trend. 
+--- PAGE 33 ---
+56 Part I: Basic Building Blocks 
+Figure 5-2 Volume moves in trends. 
+fashion. Volume trends are similar. On the left side of Fig. 5-2, for instance, 
+the arrows indicate an expanding volume trend. It is apparent that the 
+level of activity does not expand in every period. There are quiet periods 
+and active ones, but the general thrust is up. The right-hand part of the 
+figure features a down trend in volume. It too is irregular. When we talk 
+about volume rising or falling, we are usually referring to its trend. It is 
+normal for such trends to be interrupted by aberrations in volume levels. 
+Volume trends, like price trends, can be intraday, short, intermediate, or 
+long, depending on the nature of the chart. 
+2. The amount of money flowing into a security must always equal the 
+amount of money flowing out. This is true regardless of the level of 
+volume. 
+Consequently, it is the level of enthusiasm of buyers or sellers that deter­
+mines the course of prices. 
+If buyers are bullish, they will raise their bids until their demands are sat­
+isfied. If sellers react to bad news, they may panic, pushing prices down 
+sharply, but at all times the amount of a security being sold is equal to that 
+being purchased. 
+3. The combination of rising volume and rising price is normal. It indi­
+cates that things are in gear. Such a state of affairs has no forecasting 
+value, except to imply that it is likely that a negative divergence between 
+price and volume lies ahead. 
+4. Volume normally leads price during a bull move. A new high in price that 
+is not confirmed by volume should be regarded as a red flag, warning 
+Volume Principles as They Apply to Price Patterns 57 
+Figure 5-3 Volume leads price in uptrends. 
+that the prevailing trend may be about to reverse. In Fig. 5-3, the price 
+peaks at point C, yet the average volume reached its maximum around 
+point A. Such action is normal; the declining volume peaks warn of 
+underlying technical weakness. Unfortunately, there are no hard and 
+fast rules about how many divergences precede a peak. Generally speak­
+ing, though, the greater the number of negative divergences, the 
+weaker the underlying technical picture. Also, the lower the peaks rel­
+ative to each other, the less enthusiasm is being generated, and the more 
+vulnerable the technical position becomes, once buying dries up or sell­
+ing enthusiasm intensifies. A new high that is accompanied by virtually 
+no volume is just as bearish as a new price high with virtually no upside 
+momentum. 
+An example is shown in Chart 5-1, for the Mexico Fund, where you 
+can see that the volume clusters gradually become smaller as the price 
+rallies. Eventually this negative technical characteristic is confirmed as 
+the price violates the March/May up trendline. 
+Rising prices accompanied by a trend of falling volume (Fig. 5-4) is an 
+abnormal situation. It indicates a weak and suspect rally and is a bear 
+market characteristic. When it is recognized, it can and should be used 
+as a piece of evidence pointing to a primary bear market environment. 
+Volume measures the relative enthusiasm of buyers and sellers. When 
+volume shrinks as prices rise, the advance occurs because of a lack of 
+selling rather than because of sponsorship from buyers. Sooner or later 
+the trend will reach a point where sellers become more motivated. After 
+--- PAGE 34 ---
+58 Part I: Basic Building Blocks 
+Chart 5-1 Mexico Fund. 1995-1996, daily. 
+that, prices will start to pick up on the downside. One clue is provided 
+when volume increases noticeably as the price starts to decline. This is 
+shown in Fig. 5-5, where you can see that volume starts to pick up as the 
+price starts a sell-off. In such situations, it is not necessary for volume 
+to expand throughout the decline, as it does in this example. It could 
+Figure 5-4 Rising price and falling volume are bearish. 
+Volume Principles as They Apply to Price Patterns 59 
+Figure 5-5 Falling price and rising volume are bearish. 
+be that it picks up for two or three bars just after the peak. In fact, this 
+would be a more typical situation. 
+Figure 5-6 shows how the volume configurations change between a 
+bull market and a bear market. Chart 5-2, for Coors, shows the final rally 
+being accompanied by a trend of declining volume. When the lower 
+trendline is violated, volume picks up noticeably. In this instance, we 
+Figure 5-6 Volume characteristics change in bull and bear markets. 
+--- PAGE 35 ---
+60 Part I: Basic Building Blocks 
+Chart 5-2 Coors, 2000-2001, daily. 
+have one bearish volume configuration that is instantly followed by 
+another. Chart 5-3, for Radio Shack, shows several bear market rallies 
+in which the rising price trend is accompanied by declining volume. 
+6. Sometimes both price and volume expand slowly, gradually working into 
+an exponential rise with a final blow-offstage. Following this development, 
+Chart 5-3 Radio Shack, 2000-2001, daily. 
+Volume Principles as They Apply to Price Patterns 61 
+Figure 5-7 Volume and a parabolic blow-off. 
+both volume and price fall off equally sharply. This represents an exhaus­
+tion move and is characteristic of a trend reversal, especially when it is 
+supported by a one- or two-bar price pattern (discussed in subsequent 
+chapters). The significance of the reversal will depend upon the extent 
+of the previous advance and the degree of volume expansion. Obviously 
+an exhaustion move that takes four to six days to develop will be nowhere 
+near as significant as one that develops over a matter of weeks. This phe­
+nomenon is termed a parabolic blow-off and is featured in Fig. 5-7. 
+Unfortunately, exhaustion, or blow-off, moves such as this are not easy to 
+define in the sense that it is possible to construct clearly definable trend-
+lines or price patterns. For this reason, it is usually not possible to spot 
+the terminal phase until a period or so after volume and price have 
+reached their crescendos. 
+Newmont Mining, in Chart 5-4, offers a classic example of an expo­
+nential increase in both price and volume that ends in tears in the form 
+of an abrupt reversal in late September 1987. 
+A selling climax is the opposite of a parabolic blow-off. It occurs when 
+prices fall for a considerable time at an accelerating pace, accompanied 
+by expanding volume. Prices typically rise after a selling climax. The low 
+that is established at the time of the climax is unlikely to be violated for 
+a considerable time. A price rise from a selling climax is by definition 
+accompanied by declining volume. This is the only time when con­
+tracting volume and a rising price may be regarded as normal. Even so, 
+it is important to make sure that volume expands on subsequent rallies, 
+as indicated in Fig. 5-8. The termination of a bear trend is often, but 
+--- PAGE 36 ---
+62 Part I: Basic Building Blocks 
+Chart 5-4 Newmont Mining, 1986-1987, daily. 
+not always, accompanied by a selling climax. Having said that, it is 
+important to note that in many instances the selling climax, after a rally, 
+is followed by new lows. 
+In Chart 5-5, for Dresser Industries, we see a selling climax develop in 
+the late summer. This is then followed by a rally, but in this instance the 
+Figure 5-8 A selling climax. 
+Volume Principles as They Apply to Price Patterns 63 
+Chart 5-5 Dresser Industries, 1994-1995, daily. 
+climax is not the final bottom. At the peak of the rally, rising prices are 
+accompanied by declining volume, a typical bear market characteristic. 
+8. When prices advance following a long decline and then react to a level 
+at, slightly above, or marginally below the previous trough, this is a bull­
+ish sign if the volume on the second trough is significantly lower than 
+the volume on the first. There is an old saying on Wall Street, "Never 
+short a dull market." This saying applies very much to this type of situa­
+tion, in which a previous low is being tested with very low volume. Such 
+a situation indicates a complete lack of selling pressure (see Fig. 5-9). 
+9. A downside breakout from a price pattern, trendline, or moving average 
+(MA) that occurs on heavy volume is abnormal and is a bearish sign that 
+confirms the reversal in trend (Fig. 5-10). When prices decline, it is usu­
+ally because of a lack of bids, so volume contracts. This is normal activity 
+and does not give us much information. However, when volume expands 
+on the downside, it is because sellers are more motivated, so the decline, 
+other things being equal, is likely to be more severe. 
+10. When the price has been rising for many months, an anemic rally 
+(Fig. 5-11) accompanied by high volume indicates churning action and 
+is a bearish factor. 
+11. Following a decline, heavy volume with little price change is indicative 
+of accumulation and is normally a bullish factor (Fig. 5-12). 
+--- PAGE 37 ---
+64 Part I: Basic Building Blocks 
+Figure 5-9 Look for low volume when testing lows. 
+12. Record volume coming off a major low is usually a very reliable signal 
+that a significant bottom has been seen. This is because it indicates that 
+an underlying change in psychology has taken place. Such reversals in 
+sentiment are usually of a primary trend magnitude. Examples in the 
+U.S. stock market developed in March 1978, August 1982 and 1984, and 
+October 1998. A similar pattern also developed at the 1987 low in bonds 
+and eurodollars. This is not an infallible indicator, though, because 
+record volume was achieved in January 2001 for both the NYSE and 
+Nasdaq, yet this did not turn out to be the final low for the move. 
+Figure 5-10 Rising volume on a downside breakout is bearish. 
+Volume Principles as They Apply to Price Patterns 65 
+Figure 5-11 Churning is bearish. 
+13. When volume and price expand at a sharp pace, but short of a para­
+bolic blow-off, and then contract slightly, this usually indicates a change 
+in trend. Sometimes this is an actual reversal and at other times a con­
+solidation. This phenomenon is featured in Fig. 5-13 and represents a 
+temporary exhaustion of buying power. It is associated with several one-
+and two-bar price patterns discussed in later chapters. 
+14. When the price experiences a small rounding top and volume a round­
+ing bottom, this is a doubly abnormal situation, since price is rising and 
+Figure 5-12 Accumulation is bullish 
+--- PAGE 38 ---
+66 
+Part I: Basic Building Blocks 
+Figure 5-13 High volume after a rally indicates exhaustion. 
+volume falling as the peak is reached. After the peak, volume expands 
+as the price declines, which is also abnormal and bearish. An example 
+is shown in Fig. 5-14. An example featuring Microsoft is featured in 
+Chart 5-6. Note how the letter n characterizes the price action, whereas 
+the volume configuration is closer to a rounded letter V. 
+None of the indicators in the technical arsenal is guaranteed to work 
+every time. This is certainly true of volume characteristics. However, when 
+volume is used in combination with price characteristics in pattern 
+Figure 5-14 Watch volume on rallies and reactions. 
+Volume Principles as They Apply to Price Patterns 67 
+Chart 5-6 Microsoft, daily. 
+interpretation, it greatly enhances the probability that a specific forma­
+tion will work. As we discuss specific formations, the basic volume prin­
+ciples described here will be expanded to suit individual cases. 
+Summary 
+• Volume is a totally independent variable from price. 
+• It is normal for volume to go with the trend. When these characteristics 
+are present, they have little forecasting value. 
+• When volume trends are moving in a direction opposite to that of price, 
+this is abnormal and either warns of an impending trend reversal or 
+emphasizes the significance of any breakout. 
+• Volume trends experience exhaustion phenomena. These are called par­
+abolic blow-offs at tops and selling climaxes at lows. 
+--- PAGE 39 ---
+PART II 
+Traditional 
+Patterns 
+--- PAGE 40 ---
+6 Using Rectangles, 
+a Case Study for 
+All Patterns 
+This chapter will explain the basic principles of price pattern interpretation 
+that apply to most formations by using one formation as an example. It will 
+then be possible to expand the discussion to include other patterns in sub­
+sequent chapters. Our chosen vehicle is the rectangle, so let's take a closer 
+look at it. 
+Basic Concepts 
+Price trends do not usually reverse on a dime. Instead, the up- and down-
+or down- and uptrends are typically separated by a transitional period or 
+trading range, where buyers and sellers are equally matched. 
+The two possibilities are shown in Figs. 6-1 and 6-2. Figure 6-1 represents 
+a typical cycle consisting of three trends: up, sideways, and down. Then two 
+more trends develop as the price experiences another horizontal trading 
+range, followed by a renewed uptrend. Figure 6-2 shows a highly emotional 
+market that changes without warning. This is by far the exception, since 
+most trends are separated by some form of trading range. An oil tanker takes 
+a long time to slow down and then go into reverse. The same is normally 
+true of financial markets. Generally speaking, the longer the trend, the more 
+time spent in the reversal (turnaround) process. 
+This transitional or horizontal phase has great significance because it is 
+the demarcation between a rising and a falling trend (or vice versa). If 
+prices have been advancing, the enthusiasm of the buyers has outweighed 
+71 
+--- PAGE 41 ---
+72 Part.II: Traditional Patterns 
+Figure 6-1 Top and bottom reversals. 
+the pessimism of the sellers up to this point, and buyers have optimistically 
+bid prices higher. During the transition phase, the battle between optimism 
+and pessimism becomes more or less even, until finally, for one reason or 
+another, it is tipped in a new direction as the relative weight of selling 
+pushes the trend (of prices) down. It is the breaking to post-transitional 
+new low ground that alerts the trader to the fact that a reversal in trend 
+has taken place. In other words, when prices fall below the trading range, 
+a sell signal is given. At the termination of a bear trend, the reverse process 
+occurs. 
+Over the years, technicians have noted that such ranging action at both 
+tops and bottoms has taken the form of clearly definable price patterns or 
+price formations. 
+The Transitional Turning Point 
+Figure 6-3 shows the price action at the end of a long rising trend. As soon 
+as the price rises above line B, it is in the transitional area, although this is 
+apparent only after prices have begun to fluctuate sideways. 
+Figure 6-2 Reversal on a dime. 
+Using Rectangles, a Case Study for All Patterns 73 
+Figure 6-3 Trading range reversal. 
+Once the price is in this trading zone, it rises to line A, which is a resis­
+tance area. The resistance is not initially identifiable, but after the price has 
+backed off from the initial high, it is evident that the price level at A rep­
+resents a previous high. This makes it a potential candidate for a resistance 
+point. When the next rally also fails at A, it is possible to construct a hori­
+zontal trendline. The same thing can be done at B when the subsequent 
+reaction finds support at that level for a second time. The demand/supply 
+relationship comes into balance in favor of the sellers whenever the price 
+reaches A. This temporary reversal may occur because buyers refuse to pay 
+up for a security, because the higher price attracts more sellers, or for a com­
+bination of both reasons. 
+Just as the price level at A reverses the balance in favor of the sellers, so 
+does the support level B alter it once again. This time, the trend moves in 
+an upward direction, for at B, prices become relatively attractive to buyers 
+who missed the boat on the way up. Also, sellers who feel that the price will 
+again reach A hold off. For a while, there is a standoff between the two par­
+ties within the confines of the area bounded by lines A and B. Finally, the 
+price falls below B, and a new (downward) trend is signaled. 
+The contest between buyers and sellers is like a battle fought by two armies 
+engaged in trench warfare. In Fig. 6-4, example A, armies A and B are fac­
+ing off. Line AA represents army A's trench line of defense, and BB is army 
+B's. The arrows indicate the forays between the two lines as both armies fight 
+their way to the opposing trench, but are unable to penetrate the line of 
+defense. In example B, army B finally pushes through army A's line of 
+--- PAGE 42 ---
+74 
+Part II: Traditional Patterns 
+Figure 6-4 Trench warfare. 
+defense. Army A is then forced to retreat and make a stand at the second 
+trench (line A2). In the stock market, line Ax represents resistance, and once 
+it is overcome, this signifies a change in the balance between buyers and 
+sellers in favor of the buyers, so that prices will advance quickly until new 
+resistance is encountered. The second line of defense, line A2, then repre­
+sents resistance to a further advance. 
+On the other hand, army B might break through A2 quite easily, but the 
+farther it advances without time to consolidate its gains, the more likely it 
+is to become overextended, and the greater is the probability of its suffer­
+ing a serious setback from a counterattack when it reaches the next line of 
+defense. At some point, therefore, it makes more sense for this successful 
+force to wait and consolidate its gains. 
+If prices in financial markets extend too far without having time to digest 
+their gains, they too are more likely to face a sharp and seemingly unex­
+pected reversal. This is another application of the second rule for identify­
+ing the significance of a support or resistance level described in Chapter 3. 
+Introducing the Reversal 
+Rectangle and the Psychological 
+Conditions Contributing to Its 
+Formation 
+The trading range separating rising and falling price trends discussed here 
+is a pattern known as a rectangle. The rectangle in Fig. 6-5, which marks the 
+turning point between the bull and bear phases, is termed a reversal pattern. 
+Using Rectangles, a Case Study for All Patterns 75 
+Figure 6-5 Downside breakout signal. 
+The actual reversal signal is given when the price breaks decisively through 
+the lower horizontal trendline. Reversal patterns at market tops are known 
+as distribution because the security is said to be "distributed" from strong, 
+informed participants to weak, uninformed ones. The underlying psychol­
+ogy is that during the formation of the rectangle, the news is good, and unin­
+formed market participants, hearing it for the first time, are encouraged to 
+buy. Forecasts are also quite rosy at this time, so little risk is perceived from 
+the long side. Every transaction has to have two parties, a buyer and a seller. 
+For their part, the sellers, or distributors, have a different idea. They had 
+been carefully buying on the way up in anticipation of the good news. Now 
+that the news is materializing, it is time to sell, and who better to sell to than 
+those uninformed participants who are hearing the good news for the first 
+time? This kind of activity has given rise to the well-known expression "buy 
+on the rumor, sell on the fact." 
+Price patterns, including rectangles, that develop at market bottoms are 
+called accumulation formations (where the security passes from weak, unin­
+formed participants to strong, informed ones; see Fig. 6-6). In this situation, 
+the underlying psychology is reversed: The sellers, having seen the price of 
+their security move lower, decide to sell when the bad news and forecasts of 
+more to come start to filter through the investment community. By the same 
+token, potential buyers had previously held off because they wanted to get 
+the bad news out of the way. The emergence of discouraging reports is there­
+fore one of the signals that these so-called strong buyers had been waiting 
+for. Another might be a sign that things are going to improve down the road. 
+This process is called accumulation because informed buyers are said to be 
+accumulating the security in anticipation of better times ahead. These are 
+--- PAGE 43 ---
+76 
+Part II: Traditional Patterns 
+Figure 6-6 Upside breakout signal. 
+said to be strong buyers because they are not easily put off by discouraging 
+news. Their focus is on the future, and only when they see signs of poorer 
+than expected developments down the road are they likely to liquidate. 
+When you think of it in very simple terms, the top reversal rectangle is 
+nothing more than a sophisticated variation of a signal that a series of ris­
+ing peaks and troughs has been reversed. A bottom formation is simply the 
+opposite. 
+We can also appreciate that these patterns incorporate all the basic build­
+ing blocks that have already been covered: peak-and-trough analysis, sup­
+port and resistance, and trendline analysis. It is also important to understand 
+that a reversal pattern must have something to reverse. In other words, all 
+reversal patterns must be preceded by a prior trend in the opposite direc­
+tion from the reversal signal. Tops must be preceded by uptrends and bot­
+toms by downtrends. 
+Consolidation Rectangles 
+If the rectangle following an uptrend is completed with a victory for the buy­
+ers as the price pushes through the upper line AA (see Fig. 6-7), a reversal 
+does not develop because the breakout above AA reaffirms the underlying 
+trend. In this case, the corrective phase associated with the formation of the 
+rectangle temporarily interrupts the bull market and becomes a consolida­
+tion pattern. Such formations are also referred to as continuation patterns. 
+Using Rectangles, a Case Study for All Patterns 77 
+Figure 6-7 Upside continuation breakout signal. 
+Some price patterns show up only in a continuation mode; these are dis­
+cussed in Chapter 12. 
+During the period in which the pattern is being formed, there is no way 
+of knowing in advance which way the price will ultimately break. It should 
+always be assumed, then, that the prevailing trend is in existence until it is proved 
+to have been reversed. If we are faithfully applying the weight-of-the-evidence 
+approach, it may be possible to anticipate a possible reversal if the other indi­
+cators are pointing in that direction. However, the pattern itself can never be 
+categorized as a reversal type until the reversal is actually signaled. 
+A continuation or consolidation rectangle in a downtrend is shown in 
+Fig. 6-8. An example is featured in Chart 6-1, for the copper price. 
+What Constitutes a Rectangle? 
+In the example in Fig. 6-5, the upper and lower boundaries of the rectan­
+gle were each touched on at least three occasions by the two horizontal 
+trendlines. However, it was also possible to construct the rectangle using the 
+first two points. Would that have constituted a valid pattern? The answer is 
+yes. For the rationale for this, we need to examine the psychology underly­
+ing the formation of the pattern. Remember, the transition period is noth­
+ing less than a battle between buyers and sellers. If the battle is extended 
+by the two boundaries being touched or approached on more than two 
+occasions, this means that the conflict between the two parties is more 
+--- PAGE 44 ---
+78 Part II: Traditional Patterns 
+Figure 6-8 Downside continuation breakout signal. 
+significant. It also implies that the bearish implications of the rectangle will 
+be stronger. We can even go so far as to say that the more times the outer bound­
+aries of a rectangle have been touched or approached, the greater the significance of 
+the pattern. It goes back to the second rule described in Chapter 4 concern­
+ing the significance of a trendline. The same holds true for the horizontal 
+trendlines that form a rectangle. Let's return to our military analogy again. 
+Chart 6-1 Copper, daily. 
+Using Rectangles, a Case Study for All Patterns 79 
+The longer the battle between the two trenches, the more exhausted the 
+combatants will be. Thus the victory, when it comes, will be that much more 
+decisive. 
+You may have noticed that I have used the word approached as well as 
+touched. This is important, because in real life you will often find that the 
+construction of the upper and lower boundaries of a rectangle is not as pre­
+cise as that in Fig. 6-5. I regard a close approach to any trendline, includ­
+ing the outer boundaries of a rectangle, as being almost as valid as an actual 
+contact. After all, if the price comes close to a boundary and then reverses, 
+it definitely reinforces this level as a support or resistance zone. 
+The Significance of Any Given 
+Price Pattern 
+The principles of price pattern construction and interpretation can be 
+applied to any time frame, from one-minute bars all the way to monthly or 
+even annual charts. However, the significance of a price formation for a spe­
+cific time frame is a direct function of the formation's size and depth. 
+We have already established that a rectangle whose boundaries have been 
+touched many times is more significant than one whose boundaries have 
+been touched only twice. We can extend this idea by saying that the longer 
+a pattern takes to complete, the greater the number of fluctuations within it; and the 
+deeper its trading range, the more substantial the following move is likely to be. 
+Let's consider these three factors in turn. 
+1. Time Frames 
+The longer the time frame, the more significant the pattern. A pattern that 
+shows up on a monthly chart is likely to be far more significant than one 
+on an intraday chart, and so forth. In addition, the longer a pattern takes 
+to develop in a particular time frame, the greater its significance within that 
+time frame. Let's say we are looking at a daily chart and we spot two for­
+mations. The first takes ten days to complete and the second four weeks. 
+Clearly the four-week battle between buyers and sellers is much greater and 
+more involved than the ten-day encounter. Consequently, when the out­
+come is resolved, the ensuing price move is likely to be much greater. I use 
+the word likely because this is a generality. Most of the time the larger pat­
+tern will be more important, but not every time. In technical analysis, we are 
+dealing in probabilities, never certainties. This means that small patterns will 
+occasionally be followed by large moves, but normally it is the larger ones 
+that are. 
+--- PAGE 45 ---
+80 Part II: Traditional Patterns 
+Let's compare an accumulation pattern at a price low with the construc­
+tion of a building. It is just as important to build a strong base from which 
+prices can rise as it is to build a large, strong, deep foundation upon which 
+to construct a skyscraper. In the case of security prices, the foundation is an 
+accumulation pattern that represents an area of indecisive combat between 
+buyers and sellers. During an accumulation phase, more sophisticated 
+investors and professionals are positioning or accumulating the security in 
+anticipation of improved conditions six to nine months ahead. As men­
+tioned earlier, ownership is being transferred from weak, uninformed 
+traders or investors to strong and knowledgeable hands. Consequently, the 
+longer the pattern takes to complete and the greater the level of activity 
+within it, the more significant the accumulation process and therefore the 
+stronger the technical position. 
+The reverse is true at market tops, where a substantial amount of distri­
+bution inevitably results in a protracted period of price erosion. 
+2. The Significance of Pattern Fluctuations 
+The greater the number of fluctuations within a pattern, the greater the sig­
+nificance of that pattern. When the price action has been at a stalemate for 
+a long time and investors and traders have become used to buying at one 
+price and selling at the other, a move beyond either limit represents a fun­
+damental change and has great psychological significance. 
+In 1972 and 1973 the commodity markets experienced a huge run-up. 
+Chart 6-2 shows the CRB Composite. You can see that the rally was preceded 
+by a multiyear trading range. There was no way of knowing that the break­
+out from the range would be followed by such a spectacular advance. Even 
+so, the sheer size of the battle between buyers and sellers over many years 
+would have indicated that when a resolution finally did take place, it would 
+most likely signal an above-average price trend. 
+3. The Significance of Pattern Depth 
+The deeper a pattern, the greater its significance. The depth of a forma­
+tion also determines its significance. Consider the trench war analogy once 
+more. If the opposing trenches are very close together, say within 100 yards, 
+this means that the victorious assault, when it comes, will be less significant 
+than if they are separated by several miles. In that case, the battles will have 
+been much more intense and the victory that much greater. The same is 
+true in the financial markets. The breaching of a wide trading range gen­
+erally has far greater psychological significance than the breaching of a 
+Using Rectangles, a Case Study for All Patterns 81 
+Chart 6-2 CRB Composite, 1957-1982, daily. 
+narrow one. Psychology, as expressed in market prices, tends to move in pro­
+portion. The greater the (proportionate) swing within the pattern, the 
+greater the subsequent move is likely to be. If you get wide price swings dur­
+ing the formation of the pattern, you are also likely to get wide swings after 
+it has been completed. 
+Having said that, it is also important to note that whenever you see a very 
+tight and constrained trading range, this indicates that the battle between 
+buyers and sellers is very evenly balanced. This is especially true when the 
+level of activity shrinks to almost nothing. When that balance is tipped one 
+way or the other, you will often find that prices move quite quickly and to 
+a greater degree than is suggested by the measuring implication. We see 
+an example in Fig. 6-24, where a pretty sharp decline follows the relatively 
+narrow rectangle. Perhaps the guiding light in this is to see how many times 
+the upper and lower boundaries have been touched or approached. The 
+greater the number of times, the greater the significance of the line as a 
+support or resistance zone, and therefore the more decisive the victory. 
+Measuring Implications 
+Technical analysis is best at identifying trend changes at an early stage and 
+not so useful in forecasting how far a trend will extend. Price pattern 
+--- PAGE 46 ---
+82 Part II: Traditional Patterns 
+Figure 6-9 Rectangle top measuring objective. 
+interpretation is one exception, since the construction of these formations 
+offers some limited forecasting possibilities. 
+Nearly all price patterns obtain measuring objectives from their depth. 
+The rectangle is no exception. Figure 6-9 shows a rectangle that has formed 
+and completed a top (distribution). The measuring implication of this for­
+mation is the vertical distance between its outer boundaries, i.e., the distance 
+between lines AA and BB projected downward from line BB. 
+In many cases, the price trend will extend beyond the objective. In really 
+strong moves, it will achieve multiples of it. We can take the process a step 
+further by stating that the various multiples of the objective can become 
+important support and resistance areas in their own right. Time and again, 
+these price objective areas turn out to be important support or resistance 
+points. Unfortunately, there is no way to determine where the actual junc­
+ture point will be for any rally or reaction. This emphasizes the principle 
+that in technical analysis, there is no known way of consistently determin­
+ing the duration of a price movement. It is possible only to speculate on 
+the probability that a specific area will prove to be a support or resistance 
+zone. 
+Consequently, while this measuring formula offers a rough guide, it is usu­
+ally a minimum expectation. An example for a multiple-objective downside 
+break is shown in Fig. 6-10. Here we see the price sink by three times the 
+original objective. These multiples of the objective can be just as important 
+in forecasting a probable pivotal point on the way back up, as we can see in 
+the very right-hand part of the chart. 
+Using Rectangles, a Case Study for All Patterns 83 
+Figure 6-10 Rectangle top multiple measuring objective. 
+Arithmetic versus Logarithmic 
+Scaling 
+The choice of arithmetic or logarithmic scaling is really important when 
+measuring implications are being considered. This is because the method 
+used determines the actual level of the objective. To recap, in arithmeti­
+cally scaled charts, any given vertical space reflects the same dollar or point 
+amount. Thus, we'll say that one inch represents $2, both at the lower end 
+of the chart, in the $2 to $5 range, and at higher levels, such as the $100 
+to $110 range. All units of measure are plotted using the same vertical dis­
+tance. Prices plotted on a ratio or logarithmic scale show identical distances 
+for identical percentage moves. Thus, one inch could represent a 20 per­
+cent move anywhere on the chart. 
+Fortunately, almost all computer software gives the user the option of 
+choosing between arithmetic and logarithmic scales. 
+The importance of using logarithmic scales whenever possible is shown 
+in Fig. 6-1 la and b. In a, the price has traced out and broken down from a 
+rectangle. Projecting the vertical distance between 200 and 100 downward 
+gives an objective of 0, clearly a very unlikely possibility. On the other hand, 
+Fig. 6-116 gives the same projection based on a logarithmic scale. In this case, 
+a more realistic objective of 50 is obtained. 
+If a rectangle appears as a bottom reversal pattern, the measuring rules 
+remain consistent with those given for the distribution formation. The only 
+difference is that we project the objective and multiples of the objective in 
+an upward, not a downward, direction. The exact same principles also apply 
+--- PAGE 47 ---
+84 Part II: Traditional Patterns 
+Figure 6-11 Measuring implication, (a) Arithmetic, (b) Ratio. 
+to continuation rectangles. Figure 6-12 shows an upside breakout from a rec­
+tangle that forms during a bullish trend. Note that in this case, the price 
+does not reach its upside objective immediately, but does so after a small 
+rally and reaction. This is why the objective is described by the term ulti­
+mate Most people buy the breakout on the assumption that they will make 
+more or less instant profits as the price moves straight to the objective, but 
+that is not necessarily the case. 
+Rctracement Moves 
+A great deal of the time, when the price breaks out from a pattern, the ini­
+tial thrust is followed by a corrective move back to the upper or lower 
+reaches of the formation, depending on the direction of the breakout, this 
+Using Rectangles, a Case Study for All Patterns 85 
+Figure 6-12 Upside continuation rectangle measuring objective. 
+is known as a retracement move, and it offers an additional entry point, often 
+under substantially less emotional conditions. The retracement serves two 
+functions. First, it helps to correct the excessive emotion associated with the 
+breakout and bring people back to earth. From here, it is possible for the new 
+trend to extend on a more sound basis. Second, it acts as a test of the break­
+out. A downside retracement will find support at the breakout point, and an 
+upside one will find resistance at the lower boundary of the pattern as these 
+two zones reverse their former roles. 
+Retracements, then, represent normal price behavior, and although they 
+can be frustrating, they are nothing to get concerned about. Indeed, the 
+breakout itself is often a volatile, illiquid affair as one side or the other heads 
+for the entrance or exit, depending on the direction of the breakout. As a 
+result, orders are often executed with horrendous fills. Price activity during 
+the retracement process, on the other hand, is relatively quieter. This means 
+that buying or selling can be undertaken in a much more controlled envi­
+ronment. Figure 6-13 shows that it is often a good idea to wait for a retrace­
+ment in a rising trend and buy as the price signals that the retracement is over. 
+Cancellations 
+If the minimal objective proves to be the ultimate extension of the new trend, 
+a substantial amount of accumulation or distribution, whichever is appro­
+priate, will typically have to occur before prices can move in their previous 
+direction. Thus, a two-year rectangle might be completed and the upward 
+--- PAGE 48 ---
+86 Part II: Traditional Patterns 
+Figure 6-13 Buy on the retracement breakout. 
+price objective reached. Even though a further price rise does not take place, 
+it is still usually necessary for a top (distribution) of approximately the same 
+size as the previous accumulation (in this case, two years) to be formed before 
+a valid downtrend can take place. An example is shown in Fig. 6-14. 
+Confirmation of a Valid Breakout 
+So far, it has been assumed that any move out of the price pattern, how­
+ever small, constitutes a valid signal of a trend reversal (or resumption, if 
+the pattern is one of consolidation). Quite often, misleading moves known 
+as whipsaws occur, so it is helpful to establish certain criteria to minimize 
+the possibility of misinterpretation. Conventional wisdom holds that you 
+should wait for a 3 percent penetration of the boundaries before concluding 
+that the breakout is valid. A rule of this nature filters out a substantial num­
+ber of misleading moves, even though the resulting signals are less timely. 
+Figure 6-14 The cancellation effect. 
+Using Rectangles, a Case Study for All Patterns 87 
+The 3 percent rule was developed in the first part of the twentieth cen­
+tury, when market participants' holding periods were much longer and 
+weekly and monthly charts were more popular. Today, with the use of intra-
+day charts, 3 percent could represent the complete move and then some! 
+I have no basic objection to the 3 percent rule for longer-term price move­
+ments, where the fluctuations are much greater. However, the best approach 
+is a commonsense one based on experience and judgment in each partic­
+ular case. It would be very convenient to be able to say that anything over 
+a specific percentage amount represents a valid breakout, but unfortunately, 
+a lot depends on the time frame being considered and the volatility of the 
+specific security in question. 
+For example, electric utilities are very stable in their price action com­
+pared to mining stocks, where the volatility is far greater. Applying the same 
+percentage breakout rule to both obviously doesn't make sense. What con­
+stitutes a decisive breakout, with the chances of a whipsaw being consider­
+ably reduced, is thus very much a matter of personal judgment based on 
+experience, trial, and error. This judgment should take into consideration 
+such factors as the type of trend being monitored, the volatility of the secu­
+rity, volume, and momentum characteristics. 
+Ironically, a false breakout here and there actually adds validity to a spe­
+cific support or resistance zone. Say, for example, that after great effort I 
+am able to jump from the basement through the ceiling of the ground floor, 
+but the effort to do this leaves me with just my head above the floor and my 
+arms and hands also resting on the floor. Technically, I suppose I am on the 
+ground floor, but it's still taking an awful lot of effort to maintain this posi­
+tion. Unless I am able to drag my feet up and actually stand on the ground 
+floor, I am likely to slip back through the ceiling and end up where I started. 
+In this situation, my false "breakout" above resistance (the ceiling) has 
+emphasized the importance of that resistance. It also means that I have 
+expended a great deal of effort trying to get to the ground floor, and, as a 
+result, I now need an extended period in which to gain enough strength to 
+make another attempt. Figure 6-15 shows an example of a rectangle con­
+taining a whipsaw breakout. 
+Another factor that can help in deciding early on whether a breakout is 
+valid is that a valid breakout should hold for several periods. For example, 
+you may observe a decisive upside breakout from a rectangle on a daily 
+chart, but if the price cannot hold above the breakout level for more than 
+one day, the signal is highly suspect. Often the technical position is worse 
+after such breakouts because those that cannot hold indicate exhaustion, 
+and exhaustion moves are often followed by strong price trends in the direction oppo­
+site to that indicated by the (false) breakout. At the very least we would expect 
+an exhaustion breakout to be followed by an extended period of trading 
+within the body of the pattern until the technical structure can regroup. 
+--- PAGE 49 ---
+88 Part II: Traditional Patterns 
+Figure 6-15 Identifying a whipsaw breakout. 
+Once the price moves away from the pattern, the odds favor a valid break­
+out. But what happens if the price breaks back into the body of the pattern 
+again? Is the breakout still valid? If not, where is the point at which you pull 
+the plug on the whole thing? 
+Anticipating When Things Might 
+Go Wrong 
+One of the first things that should be done upon entering any business ven­
+ture is weighing the possible risk against the potential reward. The same is 
+true in the financial markets. Most people, upon seeing a price break out 
+from a pattern, focus on potential profits as they calculate the probable 
+upside objective. Experienced professionals, on the other hand, always con­
+sider the risk as an equal, if not a more important, part of the equation. If 
+the reward/risk ratio is not greater than 3:1, the trade or investment is prob­
+ably not worth initiating. 
+This means that whenever you are planning on opening a new position 
+based on a price pattern breakout, it is important that you decide ahead of time 
+what type of price action would cause you to conclude that the breakout was a whip-
+saw. In this exercise, we need to remember that when an upside breakout 
+develops, the probabilities favor higher prices. This continues to be the case 
+during the retracement move. However, as soon as the price moves back into 
+the body of the pattern, the odds of higher prices begin to narrow. The ques­
+tion is, "When do the odds move below the 50 percent point?" Unfortunately, 
+there are no hard and fast rules that can be said to work on all occasions. Each 
+situation has to be judged on its own merits, and it's better to do the exercise 
+before you enter the position than while you are holding it. Otherwise emo­
+tion will creep into what will probably turn out to be an ad hoc decision. 
+Using Rectangles, a Case Study for All Patterns 89 
+Figure 6-16 Identifying a whipsaw breakout. 
+The first step is to bear in mind that once the upper boundary of the 
+pattern has been breached following an upside breakout, this is similar to 
+saying that support has been violated. The same will be true, but in reverse, 
+for a downside breakout. This puts us on red alert until either the price 
+breaks back out of the pattern again or other support areas are violated. You 
+can see that in Fig. 6-15, the breaking of the upper boundary of the for­
+mation also signals a series of declining peaks and troughs. In my view, this 
+would be sufficient evidence to exit the position. Markets are no more and 
+no less than an expression of people in action. Since individuals can and do 
+change their minds, so can markets. You will be far better off paying attention 
+to the market's message than to your own personal hopes and fears. When 
+the situation is no longer flagging high probabilities of a price rise, it is better 
+to take a small loss than to let pride and stubbornness lead to a big one. 
+Let's say that the price fell straight back into the pattern without the ben­
+efit of a peak-and-trough reversal. What should we do then? It very much 
+depends on the chart. If there are no obvious support points, many traders 
+believe that a penetration of the 50 percent mark is the place to exit. In this 
+case, the 50 percent mark is the central point between the two horizontal 
+lines that make up the rectangle. An example is shown in Fig. 6-16. In this 
+case, the signal to sell would develop as the price crossed the 50 percent level. 
+Figure 6-17 shows another example in which the price breaks below a pre­
+vious minor low. In this instance, the break develops within the pattern. 
+Figure 6-17 Identifying a whipsaw breakout. 
+--- PAGE 50 ---
+90 Part II: Traditional Patterns 
+Remember, the minor low is a potential support point. If the price breaks 
+below both the upper boundary and the minor low, then two support points 
+have been violated. Such action is certainly not what was expected during 
+the original breakout. If you were considering a purchase, there would be 
+no grounds for buying at this point. Why, then, if you are long, should the 
+decision be any different? It shouldn't, of course, but it is often difficult to 
+take a loss. Invariably hope of a rally seeps into the psyche, and a rationale 
+for staying with the position develops. Unfortunately, markets are not as sen­
+timental as their participants and often show no mercy. That's why it is impor­
+tant to take quick action as soon as the probabilities of an advance decrease. 
+Another possibility is shown in Fig. 6-18, where it was possible to construct 
+a small up trendline and observe its violation. The penetration of that line 
+then serves as a support violation and a sell signal. 
+In all these examples, it would be important to place a stop below the var­
+ious support points: the 50 percent mark, the previous low, the up trend-
+line, and so on. As previously mentioned, these stop points should be set 
+ahead of time. By doing this, you will have calculated the loss that you are 
+willing to accept and the point at which the original premise for the trade— 
+i.e., the breakout—is no longer operative. Failure to take such action ahead 
+of time means that when things go wrong, the actual decision to sell is more 
+likely to be based on emotional stress caused by a reaction to a news event 
+or something similar rather than on a logical, preset plan. 
+The examples we have dealt with here relate to upside breakouts, since 
+that is the direction in which most market participants look. However, in 
+the case of short positions initiated through downside breakouts, the prin­
+ciples remain the same, except that the direction is reversed. In this situa­
+tion, resistance areas are substituted for support. An example is shown in 
+Fig. 6-19 where a stop would be placed above the last rally experienced by 
+the pattern prior to the downside breakout. A move above this point would 
+not necessarily invalidate the formation. However, it would certainly place 
+Figure 6-18 Identifying a whipsaw breakout. 
+Using Rectangles, a Case Study for All Patterns 91 
+Figure 6-19 Placing a stop after a downside breakout. 
+the odds of its succeeding below 50/50, whereas at the time of the down­
+side breakout they would have been well above 50/50. Consequently, if the 
+advance above the dashed trendline invalidates the reason for going short, 
+why continue to hold the trade? 
+Volume Considerations 
+So far we have considered only price in our analysis, but volume is an impor­
+tant independent variable that can help us obtain a more accurate reflec­
+tion of crowd psychology. To quickly recap, volume usually goes with the 
+trend, i.e., it expands with a rising trend of prices and contracts with a declin­
+ing one. This is a normal relationship, and anything that diverges from it 
+should be considered a warning sign that the prevailing price trend may be 
+in the process of reversing. Volume is always measured in relation to the 
+recent past. Thus, heavy volume is related to volume 20 to 30 bars or so ago, 
+not to volume, say, 10 years ago, as institutional changes may have perma­
+nently increased the level of activity. 
+In the case of the rectangle, and with most other patterns, it is normal 
+for the trend of volume to contract as the formation develops. Activity may 
+continue to fluctuate along with the price, but with the benefit of hindsight, 
+we would expect to see the various peaks and troughs of volume shrink as 
+the pattern develops, along the lines of Fig. 6-20. As the pattern nears com­
+pletion, disinterest prevails and volume often dries up. 
+The quality of an accumulation formation is certainly improved if volume 
+expands on the upside break. Sometimes it is even possible to draw a trend-
+line joining the lower-volume peaks, as shown in Fig. 6-20. It is the upward 
+surge in trading activity that confirms the validity of the breakout because 
+it signals the enthusiasm of buyers. A similar move on declining volume 

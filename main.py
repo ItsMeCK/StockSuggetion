@@ -34,6 +34,9 @@ def execute_daily_run():
     initial_state = SovereignState(
         macro_regime="",
         candidates=[],
+        incubator=[],
+        flagged_momentum_candidates=[],
+        breakouts=[],
         heuristic_flags={},
         experience_warnings={},
         vision_validations={},
@@ -55,9 +58,10 @@ def execute_daily_run():
 
     # Run the Polars Screener
     screener = SovereignScreener()
-    candidates, incubator, base_scores = screener.run_pipeline()
+    candidates, incubator, flagged_momentum, base_scores, macro_regime = screener.run_pipeline()
     initial_state["candidates"] = candidates
     initial_state["incubator"] = incubator
+    initial_state["flagged_momentum_candidates"] = flagged_momentum
     initial_state["base_scores"] = base_scores
 
     # 5. Phase 3 & 4: LangGraph Orchestration (Cognitive Engine + Execution + Reflection)

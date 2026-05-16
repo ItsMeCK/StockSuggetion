@@ -1,0 +1,41 @@
+Fetching and computing full market data features...
+
+Found 280 instances in the last 7 days where a stock jumped >5% the next day.
+
+=== WHY WE MISSED THE 5%+ BREAKOUTS (EOD Incubator Audit) ===
+129 times (46.1%): INTRADAY_FADE_RED_CANDLE
+ 17 times ( 6.1%): PRING_CH7_CLIMAX_EXHAUSTION
+ 11 times ( 3.9%): ANTI_CHASE_OVEREXTENDED_INTRADAY
+  1 times ( 0.4%): PASSED_BUT_SCORE_70
+
+=== TOP 5 MISSED MONSTER BREAKOUTS AND THEIR AUDIT ===
+
+PARACABLES on 2026-05-04
+   Next Day Jump: +46.6%
+   Our Score: 30 | Status: WATCHLIST
+   Failed: ['PRING_CH6_MOMENTUM_DECELERATION']
+   Metrics: ROC10=5.4, ROC20=25.0, Ext=15.0%
+
+SEMAC on 2026-05-04
+   Next Day Jump: +38.4%
+   Our Score: 0 | Status: VETOED
+   Veto: INTRADAY_FADE_RED_CANDLE
+   Metrics: ROC10=-1.7, ROC20=22.6, Ext=10.3%
+
+QUICKHEAL on 2026-05-04
+   Next Day Jump: +31.5%
+   Our Score: 40 | Status: WATCHLIST
+   Failed: ['PRING_CH6_MOMENTUM_DECELERATION']
+   Metrics: ROC10=-2.9, ROC20=16.8, Ext=3.9%
+
+SMARTLINK on 2026-05-04
+   Next Day Jump: +31.0%
+   Our Score: 30 | Status: WATCHLIST
+   Failed: ['PRING_CH6_MOMENTUM_DECELERATION']
+   Metrics: ROC10=-2.4, ROC20=17.6, Ext=9.9%
+
+SASKEN on 2026-05-04
+   Next Day Jump: +26.9%
+   Our Score: 30 | Status: WATCHLIST
+   Failed: ['PRING_CH6_MOMENTUM_DECELERATION']
+   Metrics: ROC10=1.6, ROC20=13.7, Ext=13.1%

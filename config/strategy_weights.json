@@ -1,0 +1,25 @@
+{
+    "weights": {
+        "PRING_CH6_MOMENTUM_ACCELERATION": 75,
+        "PRING_CH11_INSTITUTIONAL_DRY_UP": 20,
+        "PRING_CH11_VOLUME_THRUST": 15,
+        "PRING_CH7_SAFE_ZONE": 15,
+        "PRING_CH7_EXTENDED_ZONE": -5,
+        "PRING_CH12_MFI_STRENGTH": 15,
+        "AGENT_VISION_PATTERN_CONVICTION": 40,
+        "AGENT_SECTOR_MOMENTUM_CONFIRMATION": 25,
+        "AGENT_MACRO_SENTIMENT_GUARD": 15
+    },
+    "thresholds": {
+        "SIGNAL_PASS_SCORE": 50,
+        "ELITE_CONVICTION_SCORE": 80,
+        "MAX_EXTENSION_VETO": 20.0,
+        "ANTI_CHASE_GAP_LIMIT": 3.5
+    },
+    "flags": {
+        "ENABLE_BUY_THE_FLAG": true,
+        "FLAG_ROC20_MIN": 15.0,
+        "FLAG_ROC10_MAX": 2.0,
+        "FLAG_ROC10_MIN": -5.0
+    }
+}

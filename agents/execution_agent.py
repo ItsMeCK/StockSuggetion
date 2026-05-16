@@ -87,10 +87,24 @@ def run_execution_agent(state: SovereignState) -> Dict[str, Any]:
     execution_module = ZerodhaExecutionModule()
     execution_telemetry = {}
 
+    from midnight_sovereign.core.schemas import AllocationSchema
     for symbol, allocation in approved_allocations.items():
-        qty = allocation.get("shares", 0)
-        entry_limit = allocation.get("entry", 0.0)
-        stop_loss = allocation.get("stop_loss", 0.0)
+        try:
+            # Pydantic Quality Gate
+            valid_alloc = AllocationSchema(
+                shares=int(allocation.get("shares", 0)),
+                entry=float(allocation.get("entry", 0.0)),
+                stop_loss=float(allocation.get("stop_loss", 0.0)),
+                confidence=float(allocation.get("confidence", 0.0)),
+                sizing_pct=float(allocation.get("sizing_pct", 0.0))
+            )
+        except Exception as e:
+            logging.error(f"EXECUTION REJECTED: {symbol} failed quality check: {e}")
+            continue
+
+        qty = valid_alloc.shares
+        entry_limit = valid_alloc.entry
+        stop_loss = valid_alloc.stop_loss
 
         if qty > 0:
             # Check 65-minute distribution alignment

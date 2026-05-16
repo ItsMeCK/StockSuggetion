@@ -174,6 +174,11 @@ class SovereignScreener:
             pl.col("true_range").rolling_mean(window_size=20).over("symbol").alias("atr_20")
         ])
         
+        # Calculate Turnover (Money Flow) for Titan Bypass
+        df = df.with_columns([
+            (pl.col("close") * pl.col("volume")).alias("turnover")
+        ])
+        
         return df
 
     def calculate_market_regime(self, target_date: str = None) -> Dict[str, Any]:
@@ -349,9 +354,32 @@ class SovereignScreener:
             )
         )
 
+        # 5c. Filter for Dynamic Momentum (Flagged High-Octane Breakouts)
+        # These are stocks that fail the strict extension limit but show massive sponsorship
+        # TITAN BYPASS: If Turnover > 500 Crores, bypass extension and ROC limits
+        flagged_momentum_df = latest_df.filter(
+            (pl.col("close") > pl.col("sma_50")) &
+            (
+                # Normal Flagged Momentum (Strict)
+                (
+                    (pl.col("extension_pct") > ext_limit) &
+                    (pl.col("extension_pct") <= 25.0) &
+                    (pl.col("roc_10") > 5.0) &
+                    (pl.col("volume") >= (2.0 * pl.col("vol_avg_20")))
+                ) |
+                # Titan Bypass (Aggressive)
+                (
+                    (pl.col("turnover") >= 5_000_000_000) & # 500 Crores Turnover
+                    (pl.col("volume") >= (1.5 * pl.col("vol_avg_20"))) &
+                    (pl.col("roc_10") > 0.0)
+                )
+            )
+        )
+
         # Separate symbols
         stage_2_symbols = stage_2_df["symbol"].unique().to_list()
         transition_symbols = transition_df["symbol"].unique().to_list()
+        flagged_momentum_symbols = flagged_momentum_df["symbol"].unique().to_list()
         
         # Tag the main dataframe for the Librarian
         latest_df = latest_df.with_columns([
@@ -372,6 +400,7 @@ class SovereignScreener:
             if active_trades:
                 approved_symbols = [s for s in approved_symbols if s not in active_trades]
                 incubator_symbols = [s for s in incubator_symbols if s not in active_trades]
+                flagged_momentum_symbols = [s for s in flagged_momentum_symbols if s not in active_trades]
         
         base_scores = {}
         
@@ -403,6 +432,22 @@ class SovereignScreener:
                 red_vol = sym_15d.filter(pl.col("is_green") == False)["volume"].sum()
                 vol_ratio = (green_vol / red_vol) if red_vol > 0 else (green_vol if green_vol else 1.0)
                 
+                # Pydantic Quality Check
+                from midnight_sovereign.core.schemas import CandidateSchema
+                try:
+                    CandidateSchema(
+                        symbol=sym,
+                        price=close_latest,
+                        volume=latest_row["volume"],
+                        volume_ratio=vol_ratio,
+                        extension_pct=ext_pct,
+                        is_stage_2=latest_row.get("is_stage_2", False),
+                        last_updated=latest_row["time"]
+                    )
+                except Exception as e:
+                    logging.error(f"QUALITY VETO: {sym} failed Pydantic audit: {e}")
+                    continue
+
                 ranked_candidates.append({
                     "symbol": sym,
                     "ext_pct": ext_pct,
@@ -440,18 +485,21 @@ class SovereignScreener:
         # Market Regime Check
         macro_regime = self.calculate_market_regime(target_date)
         
-        logging.info(f"Screener Complete. Final Audit List: {all_audit_candidates}")
-        return all_audit_candidates, incubator_symbols, base_scores, macro_regime
+        logging.info(f"Screener Complete. Final Audit List: {all_audit_candidates} | Flagged Momentum: {flagged_momentum_symbols}")
+        return all_audit_candidates, incubator_symbols, flagged_momentum_symbols, base_scores, macro_regime
 
 def run_screener_node(state: dict) -> dict:
     """
     LangGraph Node integration.
     """
     screener = SovereignScreener()
-    candidates, incubator, base_scores, macro_regime = screener.run_pipeline()
+    # Extract target_date from state if running historical, otherwise None
+    target_date = state.get("target_date")
+    candidates, incubator, flagged_momentum, base_scores, macro_regime = screener.run_pipeline(target_date=target_date)
     return {
         "candidates": candidates, 
         "incubator": incubator, 
+        "flagged_momentum_candidates": flagged_momentum,
         "base_scores": base_scores,
         "macro_regime": macro_regime["regime"]
     }

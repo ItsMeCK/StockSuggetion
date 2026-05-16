@@ -1,0 +1,44 @@
+Loading Nifty 500 Universe...
+Fetching NSE Instruments mapping...
+Fetching 15-day intraday data for 498 stocks to run strict backtest...
+Processed 50/498
+Processed 100/498
+Processed 150/498
+Processed 200/498
+Processed 250/498
+Processed 300/498
+Processed 350/498
+Processed 400/498
+Processed 450/498
+
+
+============================================================
+     VOLATILITY VACUUM STRATEGY - 5 DAY STRICT BACKTEST
+============================================================
+Total Signals Fired (Over 5 Days): 347
+Win Rate: 41.2%
+Average Winner: +1.11%
+Average Loser: -1.03%
+EXPECTANCY (Avg Move per Trade): -0.15%
+EXPECTANCY w/ 5% Stop-Loss Guard: -0.15%
+
+--- TOP 10 EXPLOSIVE WINNERS CAUGHT AT 10:30 AM ---
+      date     symbol  morning_move  rel_vol  afternoon_move  sim_move
+2026-05-14 CAPLIPOINT          0.00     0.52           10.54     10.54
+2026-05-14        KEI         -0.08     0.26            5.23      5.23
+2026-05-11         NH         -0.31     0.44            4.00      4.00
+2026-05-14    RBLBANK          0.26     0.43            3.68      3.68
+2026-05-14      GLAND         -0.15     0.33            3.09      3.09
+2026-05-13  SIGNATURE          1.29     0.57            3.07      3.07
+2026-05-13    JAINREC          1.33     0.48            3.04      3.04
+2026-05-14  BANKINDIA         -0.39     0.30            2.89      2.89
+2026-05-14 NATCOPHARM          0.24     0.53            2.78      2.78
+2026-05-11       HEXT          0.80     0.51            2.78      2.78
+
+--- WORST 5 LOSERS ---
+      date    symbol  morning_move  rel_vol  afternoon_move  sim_move
+2026-05-13     SYRMA          0.48     0.29           -4.16     -4.16
+2026-05-12 FINCABLES         -0.41     0.28           -4.06     -4.06
+2026-05-12       SCI         -0.07     0.49           -3.95     -3.95
+2026-05-12  MAHABANK         -0.43     0.56           -3.61     -3.61
+2026-05-13 GODREJIND          0.82     0.14           -3.32     -3.32

@@ -112,9 +112,17 @@ def run_eod_ingestion():
     target_date = datetime.now().strftime("%Y-%m-%d")
     lookback_start = (datetime.now() - timedelta(days=400)).strftime("%Y-%m-%d")
 
-    # Load target symbols from daily_scan_list.csv if available
+    # Load target symbols from Master Universe or daily_scan_list
     target_symbols = []
-    if os.path.exists("daily_scan_list.csv"):
+    universe_path = "pipeline/master_universe.csv"
+    if os.path.exists(universe_path):
+        import csv
+        with open(universe_path, "r") as f:
+            reader = csv.reader(f)
+            # Master universe is Symbol,Name,Type,ISIN - we want Symbol (index 0)
+            target_symbols = [row[0] for row in reader if row and row[0] != 'Symbol']
+        logging.info(f"Loaded {len(target_symbols)} symbols from MASTER UNIVERSE for full audit.")
+    elif os.path.exists("daily_scan_list.csv"):
         import csv
         with open("daily_scan_list.csv", "r") as f:
             reader = csv.DictReader(f)

@@ -20,6 +20,9 @@ def run_historical_engine(target_date: str):
         target_date=target_date,
         macro_regime="",
         candidates=[],
+        incubator=[],
+        flagged_momentum_candidates=[],
+        breakouts=[],
         heuristic_flags={},
         entry_trigger_results={},
         approved_allocations={},
@@ -33,15 +36,16 @@ def run_historical_engine(target_date: str):
     # 3. Screener with Historical Slicing
     logging.info(f"--- PHASE 2: HISTORICAL POLARS SCREENER ({target_date}) ---")
     screener = SovereignScreener()
-    candidates, incubator, base_scores, macro_regime = screener.run_pipeline(target_date=target_date)
+    candidates, incubator, flagged_momentum, base_scores, macro_regime = screener.run_pipeline(target_date=target_date)
     
     # We process BOTH established Stage 2 and Shannon Incubator stocks through the Cognitive Gate
     initial_state["candidates"] = candidates + incubator
     initial_state["incubator"] = incubator
+    initial_state["flagged_momentum_candidates"] = flagged_momentum
     initial_state["base_scores"] = base_scores
     initial_state["macro_regime"] = macro_regime["regime"]
 
-    if not candidates and not incubator:
+    if not candidates and not incubator and not flagged_momentum:
         logging.info(f"No candidates or incubator stocks passed the screener on {target_date}.")
         return {
             "date": target_date,

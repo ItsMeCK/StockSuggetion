@@ -1,0 +1,45 @@
+Symbol,Weekly_Return_Pct,Screener_Status,Librarian_Status,Critic_Status,Vision_Status
+SAREGAMA,24.92,"FAILED: 50_below_200_SMA, over_extended, atr_squeeze_fail",N/A,N/A,N/A
+NLCINDIA,14.51,"FAILED: over_extended, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+ADANIENT,12.92,"FAILED: 50_below_200_SMA, over_extended, atr_squeeze_fail",N/A,N/A,N/A
+JPPOWER,11.53,"FAILED: 50_below_200_SMA, over_extended, velocity_cross_fail, atr_squeeze_fail",N/A,N/A,N/A
+KIRLOSENG,11.47,"FAILED: over_extended, atr_squeeze_fail",N/A,N/A,N/A
+SOLARINDS,11.09,"FAILED: over_extended, velocity_breach, atr_squeeze_fail",N/A,N/A,N/A
+CIPLA,10.82,"FAILED: 50_below_200_SMA, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+CAPLIPOINT,10.13,"FAILED: 50_below_200_SMA, over_extended, atr_squeeze_fail",N/A,N/A,N/A
+CARBORUNIV,9.29,"FAILED: over_extended, atr_squeeze_fail",N/A,N/A,N/A
+BERGEPAINT,9.29,"FAILED: 50_below_200_SMA, over_extended, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+SAIL,9.26,"FAILED: over_extended, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+TATACOMM,9.1,"FAILED: 50_below_200_SMA, negative_momentum, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+IDEA,8.92,"FAILED: over_extended, atr_squeeze_fail",N/A,N/A,N/A
+ZYDUSLIFE,8.71,"FAILED: 50_below_200_SMA, atr_squeeze_fail",N/A,PASSED,PASSED
+VEDL,8.52,"FAILED: below_50_SMA, negative_momentum, velocity_cross_fail, volume_thrust_fail",N/A,N/A,N/A
+BHARTIARTL,8.46,"FAILED: 50_below_200_SMA, negative_momentum, velocity_cross_fail, atr_squeeze_fail",N/A,PASSED,PASSED
+DIXON,8.3,"FAILED: 50_below_200_SMA, velocity_cross_fail, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+TRITURBINE,8.25,"FAILED: 50_below_200_SMA, over_extended, volume_thrust_fail",N/A,N/A,N/A
+GRAPHITE,8.01,"FAILED: over_extended, atr_squeeze_fail",N/A,N/A,N/A
+MCX,7.42,"FAILED: over_extended, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+HEG,7.34,"FAILED: velocity_cross_fail, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+INDUSTOWER,7.32,"FAILED: negative_momentum, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+CROMPTON,7.06,"FAILED: 50_below_200_SMA, over_extended, atr_squeeze_fail",N/A,N/A,N/A
+DEEPAKFERT,7.03,"FAILED: 50_below_200_SMA, over_extended, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+BIOCON,6.87,"FAILED: 50_below_200_SMA, over_extended, atr_squeeze_fail",N/A,N/A,N/A
+BHARTIHEXA,6.66,"FAILED: 50_below_200_SMA, negative_momentum, velocity_cross_fail, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+IPCALAB,6.35,FAILED: atr_squeeze_fail,N/A,N/A,N/A
+ADANIPORTS,6.33,"FAILED: over_extended, atr_squeeze_fail",N/A,N/A,N/A
+NAM-INDIA,6.02,FAILED: No Market Data,N/A,N/A,N/A
+UNITDSPR,5.87,"FAILED: 50_below_200_SMA, negative_momentum, velocity_cross_fail, atr_squeeze_fail",N/A,N/A,N/A
+TMPV,5.85,"FAILED: 50_below_200_SMA, negative_momentum, velocity_cross_fail, atr_squeeze_fail",N/A,PASSED,PASSED
+RAINBOW,5.78,"FAILED: 50_below_200_SMA, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+PWL,5.76,"FAILED: 50_below_200_SMA, over_extended, atr_squeeze_fail",N/A,N/A,N/A
+AIIL,5.68,"FAILED: 50_below_200_SMA, negative_momentum, volume_thrust_fail",N/A,N/A,N/A
+LGEINDIA,5.65,"FAILED: negative_momentum, velocity_cross_fail, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+ADANIPOWER,5.58,"FAILED: over_extended, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+OIL,5.57,"FAILED: velocity_cross_fail, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+NMDC,5.53,"FAILED: volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+ADANIGREEN,5.43,"FAILED: over_extended, atr_squeeze_fail",N/A,N/A,N/A
+KARURVYSYA,5.34,"FAILED: negative_momentum, volume_thrust_fail, atr_squeeze_fail",N/A,VETOED: Failed Hybrid Elite criteria. (Conf: 79.8),PASSED
+POLICYBZR,5.3,"FAILED: 50_below_200_SMA, volume_thrust_fail",N/A,N/A,N/A
+DRREDDY,5.25,"FAILED: velocity_cross_fail, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A
+MANKIND,5.22,"FAILED: 50_below_200_SMA, over_extended, atr_squeeze_fail",N/A,N/A,N/A
+REDINGTON,5.03,"FAILED: below_50_SMA, 50_below_200_SMA, negative_momentum, velocity_cross_fail, volume_thrust_fail, atr_squeeze_fail",N/A,N/A,N/A

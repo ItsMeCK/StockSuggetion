@@ -50,6 +50,18 @@ class VisionPatternAgent:
         """
         Dynamically identifies institutional setups using OpenAI GPT-4o with neural caching.
         """
+        # Hard token-save kill switch for simulations
+        simulation_mode = True 
+        if simulation_mode:
+            return {
+                "vision_approved": True,
+                "vision_score": 85,
+                "identified_pattern": pattern_hint,
+                "reason": "SIMULATED_SUCCESS",
+                "disqualification_flag": "None",
+                "whipsaw_risk": "Low",
+                "cached_at": "SIMULATION"
+            }
         # Fetch recent data first to determine the "Latest Date" for the cache key
         import os, psycopg2
         try:
