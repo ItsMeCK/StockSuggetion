@@ -473,19 +473,35 @@ class SovereignScreener:
                     item["vol_score"] = 20 * (1 - i / (n - 1)) if n > 1 else 20
                     
                 for item in ranked_candidates:
-                    base_scores[item["symbol"]] = item["prox_score"] + item["rs_score"] + item["vol_score"]
+                    # ELITE WEIGHTING: 40% RS + 40% Vol + 20% Prox
+                    # Max possible score: 20 (prox) + 40 (rs) + 40 (vol) = 100
+                    base_scores[item["symbol"]] = (item["prox_score"] * 1.0) + (item["rs_score"] * 2.0) + (item["vol_score"] * 2.0)
                     
                 # Sort by Base Score descending
                 ranked_candidates.sort(key=lambda x: base_scores[x["symbol"]], reverse=True)
-                approved_symbols = [x["symbol"] for x in ranked_candidates]
+                
+                # ELITE CAP: Only take the Top 5 Standard candidates to eliminate noise
+                elite_ranked = ranked_candidates[:5]
+                approved_symbols = [x["symbol"] for x in elite_ranked]
+                logging.info(f"Elite Cap Applied: Selected {len(approved_symbols)} standard candidates from {len(ranked_candidates)} passing screener.")
         
         # 7. Final Audit List: Merge established Stage 2 and Shannon Transitions
-        all_audit_candidates = list(set(approved_symbols + incubator_symbols))
+        # SOVEREIGN PURE: Combined Standard + Incubator pool is capped at Top 2 overall
+        # Use Base Score to pick the best from the combined pool
+        combined_pool = list(set(approved_symbols + incubator_symbols))
+        
+        # Sort combined pool by base_score (default to 0 if not ranked)
+        combined_pool.sort(key=lambda x: base_scores.get(x, 0), reverse=True)
+        
+        # Slice to Top 2
+        standard_elite_top_2 = combined_pool[:2]
+        
+        all_audit_candidates = standard_elite_top_2
         
         # Market Regime Check
         macro_regime = self.calculate_market_regime(target_date)
         
-        logging.info(f"Screener Complete. Final Audit List: {all_audit_candidates} | Flagged Momentum: {flagged_momentum_symbols}")
+        logging.info(f"Screener Complete. Elite Standard Top 2: {all_audit_candidates} | Flagged Momentum: {flagged_momentum_symbols}")
         return all_audit_candidates, incubator_symbols, flagged_momentum_symbols, base_scores, macro_regime
 
 def run_screener_node(state: dict) -> dict:

@@ -12,7 +12,8 @@ class SovereignConvictionGate:
     """
     def __init__(self, account_size: float = 1000000.0):
         self.account_size = account_size
-        self.fixed_allocation_pct = 0.10 # 10% of portfolio per trade
+        self.titan_allocation = 50000.0 # High Conviction Titan Sizing
+        self.standard_allocation = 5000.0 # Standard Base Sizing
 
     def evaluate_risk(self, symbol: str, entry: float, stop: float, conviction_score: float) -> Dict[str, Any]:
         """
@@ -60,16 +61,17 @@ def run_risk_agent(state: SovereignState) -> Dict[str, Any]:
                 logging.warning(f"Risk Error: No entry price found for {symbol}")
                 continue
                 
-            # --- DYNAMIC POSITION SIZING ---
-            if macro == "BEARISH":
-                # Capital Preservation Mode: 3% Base Sizing
-                # Boost to 6% if RS is Elite (> 1.5)
-                sizing_pct = 0.06 if rs_alpha > 1.5 else 0.03
-                logging.info(f"RISK PIVOT: {symbol} in BEARISH market. Applying {sizing_pct*100:.1f}% sizing.")
-            else:
-                sizing_pct = 0.10 # 10% standard Bullish sizing
+            # --- INSTITUTIONAL CONVICTION SIZING ---
+            is_mom = evaluation.get("is_momentum", False)
             
-            allocation_amount = risk_manager.account_size * sizing_pct
+            if is_mom:
+                allocation_amount = risk_manager.titan_allocation
+                # Reduce size slightly in Bearish markets to preserve capital
+                if macro == "BEARISH":
+                    allocation_amount *= 0.5
+            else:
+                allocation_amount = risk_manager.standard_allocation
+            
             shares = int(allocation_amount / entry_price)
             stop_loss = entry_price * 0.95 # 5% Stop
             
@@ -79,11 +81,12 @@ def run_risk_agent(state: SovereignState) -> Dict[str, Any]:
                 "capital_allocated": allocation_amount,
                 "entry": entry_price,
                 "stop_loss": stop_loss,
-                "target": entry_price * 1.10,
+                "target": entry_price * 1.50, # Open target for Titans (10% was too low)
                 "conviction_score": total_confidence,
-                "rs_alpha": rs_alpha
+                "rs_alpha": rs_alpha,
+                "is_momentum": is_mom
             }
-            logging.info(f"SOVEREIGN APPROVED: {symbol} | RS: {rs_alpha:.2f} | Sizing: {sizing_pct*100:.1f}%")
+            logging.info(f"SOVEREIGN APPROVED: {symbol} | Type: {'TITAN' if is_mom else 'STD'} | Sizing: ₹{allocation_amount:,.0f}")
         else:
             logging.info(f"CONVICTION REJECTION: {symbol} (Confidence: {total_confidence:.1f})")
 

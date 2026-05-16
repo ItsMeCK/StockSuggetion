@@ -86,7 +86,7 @@ def simulate_trade(symbol, signal_date):
     return {"entry_price": entry_price, "status": "⏳ TIME STOP (2 Days)", "pnl": round(pnl, 2)}
 
 def run():
-    log_file = "weekly_report_data_V4_Titan.log"
+    log_file = "weekly_report_data_Elite_Fixed.log"
     with open(log_file, "r") as f:
         log_content = f.readlines()
 

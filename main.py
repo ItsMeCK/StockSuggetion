@@ -1,6 +1,11 @@
 import logging
 from dotenv import load_dotenv
 import os
+import argparse
+import schedule
+import time
+import json
+from datetime import datetime
 
 # Load environment variables from .env file securely
 load_dotenv()
@@ -13,50 +18,51 @@ from pipeline.ingestion import run_eod_ingestion
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def execute_daily_run():
+def run_pulse(pulse_number: int):
     """
-    The orchestrator that runs the complete Midnight Sovereign EOD cycle.
-    Expected to be triggered via a local cron job post-market close.
+    Executes a specific intraday pulse.
     """
-    logging.info("==================================================")
-    logging.info("INITIATING MIDNIGHT SOVEREIGN V2.1 EOD BATCH RUN")
-    logging.info("==================================================")
+    logging.info(f"==================================================")
+    logging.info(f"INITIATING MIDNIGHT SOVEREIGN PULSE #{pulse_number}")
+    logging.info(f"==================================================")
 
-    # 1. Historical REST Ingestion (Fetch data and push to TimescaleDB)
+    # 1. Historical REST Ingestion (In pulse mode, this should ideally fetch minute/hour data)
     logging.info("--- PHASE 1: DATA INGESTION ---")
     run_eod_ingestion()
 
-    # 2. Compile the LangGraph engine (Requires PostgresSaver in production)
-    # We compile without the checkpointer for local simulation
+    # 2. Compile the LangGraph engine
     app = build_sovereign_graph({})
 
     # 3. Initialize the State Object
     initial_state = SovereignState(
+        target_date=datetime.now().strftime("%Y-%m-%d"),
         macro_regime="",
         candidates=[],
         incubator=[],
         flagged_momentum_candidates=[],
         breakouts=[],
+        base_scores={},
         heuristic_flags={},
         experience_warnings={},
         vision_validations={},
         approved_allocations={},
         execution_telemetry={},
-        error_log=[]
+        error_log=[],
+        debate_count=0
     )
 
     # 4. Phase 2: Deterministic Pipeline
     logging.info("--- PHASE 2: DETERMINISTIC PIPELINE ---")
     
-    # Run the Macro Regime Gate directly to check if we should even proceed
+    # Run the Macro Regime Gate
     macro_delta = run_macro_regime_gate(initial_state)
-    initial_state.update(macro_delta) # Manual delta merge for the initial router
+    initial_state.update(macro_delta)
 
     if initial_state.get("macro_regime") == "CAPITULATION":
-        logging.error("SYSTEM HALTED: Macro Regime is CAPITULATION. No trades will be processed.")
+        logging.error("SYSTEM HALTED: Macro Regime is CAPITULATION.")
         return
 
-    # Run the Polars Screener
+    # Run the Polars Screener (Now with Elite Top 2 + Titan Bypass)
     screener = SovereignScreener()
     candidates, incubator, flagged_momentum, base_scores, macro_regime = screener.run_pipeline()
     initial_state["candidates"] = candidates
@@ -64,21 +70,17 @@ def execute_daily_run():
     initial_state["flagged_momentum_candidates"] = flagged_momentum
     initial_state["base_scores"] = base_scores
 
-    # 5. Phase 3 & 4: LangGraph Orchestration (Cognitive Engine + Execution + Reflection)
-    if not candidates and not incubator:
-        logging.info("No candidates or incubator stocks passed the Deterministic Screener. Ending run.")
+    # 5. Phase 3 & 4: LangGraph Orchestration
+    if not candidates and not incubator and not flagged_momentum:
+        logging.info("No candidates passed the Deterministic Screener. Ending pulse.")
         return
 
     logging.info("--- PHASE 3 & 4: LANGGRAPH COGNITIVE ORCHESTRATION ---")
-    
-    # Invoke the compiled LangGraph workflow
     final_state = app.invoke(initial_state)
     
-    # --- PHASE 5: PERSISTENCE FOR REFLECTION LOOP ---
-    import json
-    from datetime import datetime
-    
+    # --- PHASE 5: PERSISTENCE ---
     run_record = {
+        "pulse": pulse_number,
         "timestamp": datetime.now().isoformat(),
         "macro_regime": final_state.get("macro_regime"),
         "candidates": final_state.get("candidates"),
@@ -86,16 +88,33 @@ def execute_daily_run():
         "telemetry": final_state.get("execution_telemetry")
     }
     
-    history_path = f"run_history/run_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    os.makedirs("run_history", exist_ok=True)
+    history_path = f"run_history/pulse_{pulse_number}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     with open(history_path, "w") as f:
         json.dump(run_record, f, indent=4)
     
-    logging.info(f"Full run state persisted for reflection at: {history_path}")
-    
-    logging.info("==================================================")
-    logging.info("EOD BATCH RUN COMPLETE.")
-    logging.info(f"Approved Allocations: {list(final_state.get('approved_allocations', {}).keys())}")
-    logging.info("==================================================")
+    logging.info(f"Pulse #{pulse_number} complete. Approved: {list(final_state.get('approved_allocations', {}).keys())}")
+
+def main():
+    parser = argparse.ArgumentParser(description="Midnight Sovereign Orchestrator")
+    parser.add_argument("--pulse", type=int, choices=[1, 2, 3], help="Execute a specific intraday pulse immediately.")
+    parser.add_argument("--daemon", action="store_true", help="Run in daemon mode with scheduled pulses.")
+    args = parser.parse_args()
+
+    if args.pulse:
+        run_pulse(args.pulse)
+    elif args.daemon:
+        logging.info("Sovereign Daemon Mode Active. Scheduling Pulses at 10:00, 13:00, 15:15 IST.")
+        schedule.every().day.at("10:00").do(run_pulse, 1)
+        schedule.every().day.at("13:00").do(run_pulse, 2)
+        schedule.every().day.at("15:15").do(run_pulse, 3)
+        
+        while True:
+            schedule.run_pending()
+            time.sleep(60)
+    else:
+        # Default EOD behavior
+        run_pulse(0)
 
 if __name__ == "__main__":
-    execute_daily_run()
+    main()
