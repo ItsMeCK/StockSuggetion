@@ -72,79 +72,173 @@ class SovereignExecutionEngine:
     def squash_all_positions(self):
         """
         The 3:15 PM End-of-Day Flattening.
-        Sells all open Positions (today's trades) and Holdings (yesterday's Incubator trades).
+        Sells only open Positions/Holdings that have been held for at least 2 trading days.
         """
-        logging.info("🚨 INITIATING END-OF-DAY PORTFOLIO SQUASH 🚨")
-        if not self.live:
-            logging.info("Dry-Run: Simulated squashing all positions.")
-            return
-
+        logging.info("🚨 INITIATING END-OF-DAY PORTFOLIO SQUASH (T+2 HOLD RULE) 🚨")
+        
+        # Initialize DB Connection
+        import psycopg2
+        import datetime
+        db_conn = None
         try:
-            # 1. Squash Holdings (T1/Delivery from yesterday)
-            holdings = self.kite.holdings()
-            for holding in holdings:
-                qty = holding['quantity'] + holding['t1_quantity']
-                symbol = holding['tradingsymbol']
-                
-                if qty > 0:
-                    logging.info(f"Squashing Holding: {qty} shares of {symbol}")
-                    try:
-                        # Use primary data account for quotes
-                        kite_data = KiteConnect(api_key=os.getenv("KITE_API_KEY"))
-                        kite_data.set_access_token(os.getenv("KITE_ACCESS_TOKEN").strip("'"))
-                        quote = kite_data.quote([f"NSE:{symbol}"])
-                        live_price = quote[f"NSE:{symbol}"]["last_price"]
-                        limit_price = round(round((live_price * 0.98) * 20) / 20, 2)
-                        
-                        self.kite.place_order(
-                            variety=self.kite.VARIETY_REGULAR,
-                            tradingsymbol=symbol,
-                            exchange=self.kite.EXCHANGE_NSE,
-                            transaction_type=self.kite.TRANSACTION_TYPE_SELL,
-                            quantity=qty,
-                            order_type=self.kite.ORDER_TYPE_LIMIT,
-                            price=limit_price,
-                            product=self.kite.PRODUCT_CNC,
-                            validity=self.kite.VALIDITY_DAY
-                        )
-                    except Exception as e:
-                        logging.error(f"❌ Failed to sell holding {symbol}: {e}")
-
-            # 2. Squash Positions (Intraday CNC bought today)
-            positions = self.kite.positions()
-            # Net positions include CNC orders placed today that haven't moved to holdings
-            for pos in positions.get('net', []):
-                qty = pos['quantity']
-                symbol = pos['tradingsymbol']
-                
-                # If quantity > 0, it means we have an open long position
-                if qty > 0 and pos['product'] == 'CNC':
-                    logging.info(f"Squashing Position: {qty} shares of {symbol}")
-                    try:
-                        kite_data = KiteConnect(api_key=os.getenv("KITE_API_KEY"))
-                        kite_data.set_access_token(os.getenv("KITE_ACCESS_TOKEN").strip("'"))
-                        quote = kite_data.quote([f"NSE:{symbol}"])
-                        live_price = quote[f"NSE:{symbol}"]["last_price"]
-                        limit_price = round(round((live_price * 0.98) * 20) / 20, 2)
-                        
-                        self.kite.place_order(
-                            variety=self.kite.VARIETY_REGULAR,
-                            tradingsymbol=symbol,
-                            exchange=self.kite.EXCHANGE_NSE,
-                            transaction_type=self.kite.TRANSACTION_TYPE_SELL,
-                            quantity=qty,
-                            order_type=self.kite.ORDER_TYPE_LIMIT,
-                            price=limit_price,
-                            product=self.kite.PRODUCT_CNC,
-                            validity=self.kite.VALIDITY_DAY
-                        )
-                    except Exception as e:
-                        logging.error(f"❌ Failed to sell position {symbol}: {e}")
-                        
-            logging.info("✅ Squash complete. All active capital returned to cash.")
-            
+            db_conn = psycopg2.connect(
+                host=os.getenv("DB_HOST", "localhost"),
+                port=os.getenv("DB_PORT", "5432"),
+                user=os.getenv("POSTGRES_USER", "quant"),
+                password=os.getenv("POSTGRES_PASSWORD", "quantpassword"),
+                dbname=os.getenv("POSTGRES_DB", "market_data")
+            )
         except Exception as e:
-            logging.error(f"❌ Critical error during portfolio squash: {e}")
+            logging.error(f"Squash DB connection failed: {e}. Squashing will proceed with calendar days fallback.")
+
+        # Helper: Get Trading Days Ago
+        def get_trading_days_ago(buy_date: datetime.date) -> int:
+            if not db_conn:
+                return (datetime.date.today() - buy_date).days
+            try:
+                cur = db_conn.cursor()
+                cur.execute("""
+                    SELECT DISTINCT time::date 
+                    FROM daily_ohlcv 
+                    WHERE symbol = 'NIFTY 50' 
+                    ORDER BY time::date DESC 
+                    LIMIT 20
+                """)
+                trading_dates = [row[0] for row in cur.fetchall()]
+                cur.close()
+                if buy_date in trading_dates:
+                    return trading_dates.index(buy_date)
+                else:
+                    closest_dates = [d for d in trading_dates if d >= buy_date]
+                    if closest_dates:
+                        return trading_dates.index(closest_dates[-1])
+                    return 999
+            except Exception as ex:
+                logging.error(f"Trading days index lookup error: {ex}")
+                return (datetime.date.today() - buy_date).days
+
+        # Helper: Get Ticker Buy Date
+        def get_ticker_buy_date(symbol: str) -> datetime.date:
+            if not db_conn:
+                return None
+            try:
+                cur = db_conn.cursor()
+                cur.execute("""
+                    SELECT system_time::date 
+                    FROM trade_events 
+                    WHERE ticker = %s AND status IN ('AMO_PLACED', 'FILLED')
+                    ORDER BY system_time ASC LIMIT 1
+                """, (symbol,))
+                row = cur.fetchone()
+                cur.close()
+                if row:
+                    return row[0]
+            except Exception as ex:
+                logging.error(f"Error fetching buy date for {symbol}: {ex}")
+            return None
+
+        # Helper: Mark ticker as SQUASHED in ledger
+        def mark_ticker_squashed(symbol: str, qty: int, price: float):
+            if not db_conn:
+                return
+            try:
+                import uuid
+                cur = db_conn.cursor()
+                trade_id = str(uuid.uuid4())
+                cur.execute("""
+                    INSERT INTO trade_events (trade_id, ticker, status, price, quantity, order_id, notes)
+                    VALUES (%s, %s, 'SQUASHED', %s, %s, 'SQUASH', 'T+2 Hold Period complete. Flattened at EOD.');
+                """, (trade_id, symbol, price, qty))
+                db_conn.commit()
+                cur.close()
+            except Exception as ex:
+                logging.error(f"Failed to append SQUASH to ledger: {ex}")
+
+        # 1. Evaluate open Holdings (T1/Delivery)
+        if self.live:
+            try:
+                holdings = self.kite.holdings()
+            except Exception as e:
+                logging.error(f"Failed to fetch holdings from Zerodha: {e}")
+                holdings = []
+        else:
+            # Mock holdings for dry-run
+            holdings = [
+                {"tradingsymbol": "GLAND", "quantity": 23, "t1_quantity": 0},
+                {"tradingsymbol": "SCI", "quantity": 145, "t1_quantity": 0},
+                {"tradingsymbol": "INDUSTOWER", "quantity": 115, "t1_quantity": 0}
+            ]
+
+        for holding in holdings:
+            symbol = holding['tradingsymbol']
+            qty = holding['quantity'] + holding['t1_quantity']
+            
+            if qty > 0:
+                buy_date = get_ticker_buy_date(symbol)
+                if not buy_date:
+                    logging.info(f"T+2 Rule: Holding {symbol} has no buy record in ledger. Skipping squash for safety.")
+                    continue
+                    
+                age_days = get_trading_days_ago(buy_date)
+                logging.info(f"T+2 Rule: Holding {symbol} | Bought: {buy_date} | Age: {age_days} trading days")
+                
+                if age_days >= 2:
+                    logging.info(f"🚨 SQUASHING HOLDING: {qty} shares of {symbol} (Held {age_days} trading days)")
+                    
+                    if self.live:
+                        try:
+                            # Fetch live price
+                            kite_data = KiteConnect(api_key=os.getenv("KITE_API_KEY"))
+                            kite_data.set_access_token(os.getenv("KITE_ACCESS_TOKEN").strip("'\""))
+                            quote = kite_data.quote([f"NSE:{symbol}"])
+                            live_price = quote[f"NSE:{symbol}"]["last_price"]
+                            limit_price = round(round((live_price * 0.98) * 20) / 20, 2)
+                            
+                            self.kite.place_order(
+                                variety=self.kite.VARIETY_REGULAR,
+                                tradingsymbol=symbol,
+                                exchange=self.kite.EXCHANGE_NSE,
+                                transaction_type=self.kite.TRANSACTION_TYPE_SELL,
+                                quantity=qty,
+                                order_type=self.kite.ORDER_TYPE_LIMIT,
+                                price=limit_price,
+                                product=self.kite.PRODUCT_CNC,
+                                validity=self.kite.VALIDITY_DAY
+                            )
+                            mark_ticker_squashed(symbol, qty, live_price)
+                            logging.info(f"✅ SQUASH SELL Placed for {symbol} @ ₹{limit_price}")
+                        except Exception as e:
+                            logging.error(f"❌ Failed to squash holding {symbol}: {e}")
+                    else:
+                        logging.info(f"Dry-Run: Simulated squash of holding {symbol}")
+                        mark_ticker_squashed(symbol, qty, 100.0)
+                else:
+                    logging.info(f"T+2 Rule: Holding {symbol} is younger than 2 trading days. Keeping position.")
+
+        # 2. Evaluate open Positions (Intraday CNC bought today)
+        if self.live:
+            try:
+                positions = self.kite.positions()
+                net_positions = positions.get('net', [])
+            except Exception as e:
+                logging.error(f"Failed to fetch positions from Zerodha: {e}")
+                net_positions = []
+        else:
+            net_positions = []
+
+        for pos in net_positions:
+            qty = pos['quantity']
+            symbol = pos['tradingsymbol']
+            
+            if qty > 0 and pos['product'] == 'CNC':
+                # CNC positions bought today have age = 0 trading days, so they are always held!
+                logging.info(f"T+2 Rule: Position {symbol} bought today. Keeping position.")
+
+        # Close DB Connection
+        if db_conn:
+            db_conn.close()
+            
+        logging.info("✅ Squash evaluation complete.")
 
 if __name__ == "__main__":
     # Test Dry-Run execution

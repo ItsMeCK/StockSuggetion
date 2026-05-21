@@ -1,0 +1,51 @@
+
+⚡ SIMULATING PULSE #1 AT THE EXACT TIME...
+   Deterministic Screener Candidates: ['JAINREC', 'PIRAMALFIN']
+   Flagged Momentum Candidates: ['INDUSTOWER', 'HDFCSILVER', 'CARBORUNIV', 'JINDRILL', 'SILVER1', 'GLAND', 'MSPL', 'VENKEYS', 'SCI', 'SILVERAG', 'MTARTECH', 'SOLARINDS', 'MEGASTAR', 'IDEA', 'INDIGOPNTS', 'PKTEA', 'SKYGOLD', 'JAYAGROGN', 'PATINTLOG', 'MENONBE', 'AXISILVER', 'SILVERBETA', 'SILVER', 'QUESS', 'GESHIP', 'HEMIPROP', 'MUNJALAU', 'BORORENEW', 'GODFRYPHLP', 'MOLDTKPAC', 'EXPLEOSOL', 'MIDHANI', 'HINDCOPPER']
+   --- FINAL RESOLUTION ---
+   ✅ APPROVED: INDUSTOWER | Shares: 115 | Entry: ₹431.95 | Stop-Loss: ₹410.35249999999996 | Score: 91.5
+   ✅ APPROVED: JINDRILL | Shares: 79 | Entry: ₹629.0 | Stop-Loss: ₹597.55 | Score: 97.0
+   ✅ APPROVED: MOLDTKPAC | Shares: 75 | Entry: ₹665.3 | Stop-Loss: ₹632.035 | Score: 97.2
+   ✅ APPROVED: GESHIP | Shares: 29 | Entry: ₹1682.0 | Stop-Loss: ₹1597.8999999999999 | Score: 97.5
+   ✅ APPROVED: HEMIPROP | Shares: 324 | Entry: ₹154.3 | Stop-Loss: ₹146.585 | Score: 97.4
+   ✅ APPROVED: IDEA | Shares: 3855 | Entry: ₹12.97 | Stop-Loss: ₹12.3215 | Score: 94.2
+   ✅ APPROVED: SOLARINDS | Shares: 2 | Entry: ₹18011.0 | Stop-Loss: ₹17110.45 | Score: 97.1
+   ✅ APPROVED: PKTEA | Shares: 53 | Entry: ₹938.0 | Stop-Loss: ₹891.0999999999999 | Score: 97.4
+   ✅ APPROVED: SCI | Shares: 145 | Entry: ₹344.0 | Stop-Loss: ₹326.8 | Score: 95.6
+   ✅ APPROVED: GLAND | Shares: 23 | Entry: ₹2155.0 | Stop-Loss: ₹2047.25 | Score: 97.0
+   ✅ APPROVED: MTARTECH | Shares: 7 | Entry: ₹6800.0 | Stop-Loss: ₹6460.0 | Score: 97.6
+   ✅ APPROVED: QUESS | Shares: 219 | Entry: ₹228.0 | Stop-Loss: ₹216.6 | Score: 97.8
+
+⚡ SIMULATING PULSE #2 AT THE EXACT TIME...
+   Deterministic Screener Candidates: ['JAINREC', 'PIRAMALFIN']
+   Flagged Momentum Candidates: ['CARBORUNIV', 'MIDHANI', 'INDIGOPNTS', 'JAYAGROGN', 'HINDCOPPER', 'MSPL', 'SOLARINDS', 'HDFCSILVER', 'MOLDTKPAC', 'MEGASTAR', 'MTARTECH', 'VENKEYS', 'PKTEA', 'MUNJALAU', 'SCI', 'SILVER1', 'QUESS', 'SILVER', 'INDUSTOWER', 'IDEA', 'GODFRYPHLP', 'SILVERAG', 'EXPLEOSOL', 'SILVERBETA', 'GESHIP', 'MENONBE', 'PATINTLOG', 'GLAND', 'AXISILVER', 'HEMIPROP', 'BORORENEW', 'JINDRILL', 'SKYGOLD']
+   --- FINAL RESOLUTION ---
+   ✅ APPROVED: INDUSTOWER | Shares: 115 | Entry: ₹431.95 | Stop-Loss: ₹410.35249999999996 | Score: 91.5
+   ✅ APPROVED: JINDRILL | Shares: 79 | Entry: ₹629.0 | Stop-Loss: ₹597.55 | Score: 97.0
+   ✅ APPROVED: MOLDTKPAC | Shares: 75 | Entry: ₹665.3 | Stop-Loss: ₹632.035 | Score: 97.2
+   ✅ APPROVED: GESHIP | Shares: 29 | Entry: ₹1682.0 | Stop-Loss: ₹1597.8999999999999 | Score: 97.5
+   ✅ APPROVED: HEMIPROP | Shares: 324 | Entry: ₹154.3 | Stop-Loss: ₹146.585 | Score: 97.4
+   ✅ APPROVED: GLAND | Shares: 23 | Entry: ₹2155.0 | Stop-Loss: ₹2047.25 | Score: 97.0
+   ✅ APPROVED: IDEA | Shares: 3855 | Entry: ₹12.97 | Stop-Loss: ₹12.3215 | Score: 94.2
+   ✅ APPROVED: PKTEA | Shares: 53 | Entry: ₹938.0 | Stop-Loss: ₹891.0999999999999 | Score: 97.4
+   ✅ APPROVED: SCI | Shares: 145 | Entry: ₹344.0 | Stop-Loss: ₹326.8 | Score: 95.6
+   ✅ APPROVED: SOLARINDS | Shares: 2 | Entry: ₹18011.0 | Stop-Loss: ₹17110.45 | Score: 97.1
+   ✅ APPROVED: MTARTECH | Shares: 7 | Entry: ₹6800.0 | Stop-Loss: ₹6460.0 | Score: 97.6
+   ✅ APPROVED: QUESS | Shares: 219 | Entry: ₹228.0 | Stop-Loss: ₹216.6 | Score: 97.8
+
+⚡ SIMULATING PULSE #3 AT THE EXACT TIME...
+   Deterministic Screener Candidates: ['JAINREC', 'PIRAMALFIN']
+   Flagged Momentum Candidates: ['MENONBE', 'SILVER', 'VENKEYS', 'CARBORUNIV', 'SOLARINDS', 'BORORENEW', 'SILVERBETA', 'PKTEA', 'SCI', 'PATINTLOG', 'IDEA', 'MOLDTKPAC', 'JAYAGROGN', 'INDIGOPNTS', 'AXISILVER', 'GLAND', 'EXPLEOSOL', 'SILVER1', 'QUESS', 'MIDHANI', 'MEGASTAR', 'MSPL', 'SKYGOLD', 'MTARTECH', 'INDUSTOWER', 'MUNJALAU', 'HDFCSILVER', 'GESHIP', 'HINDCOPPER', 'SILVERAG', 'GODFRYPHLP', 'JINDRILL', 'HEMIPROP']
+   --- FINAL RESOLUTION ---
+   ✅ APPROVED: INDUSTOWER | Shares: 115 | Entry: ₹431.95 | Stop-Loss: ₹410.35249999999996 | Score: 91.5
+   ✅ APPROVED: JINDRILL | Shares: 79 | Entry: ₹629.0 | Stop-Loss: ₹597.55 | Score: 97.0
+   ✅ APPROVED: MOLDTKPAC | Shares: 75 | Entry: ₹665.3 | Stop-Loss: ₹632.035 | Score: 97.2
+   ✅ APPROVED: GESHIP | Shares: 29 | Entry: ₹1682.0 | Stop-Loss: ₹1597.8999999999999 | Score: 97.5
+   ✅ APPROVED: HEMIPROP | Shares: 324 | Entry: ₹154.3 | Stop-Loss: ₹146.585 | Score: 97.4
+   ✅ APPROVED: IDEA | Shares: 3855 | Entry: ₹12.97 | Stop-Loss: ₹12.3215 | Score: 94.2
+   ✅ APPROVED: SOLARINDS | Shares: 2 | Entry: ₹18011.0 | Stop-Loss: ₹17110.45 | Score: 97.1
+   ✅ APPROVED: PKTEA | Shares: 53 | Entry: ₹938.0 | Stop-Loss: ₹891.0999999999999 | Score: 97.4
+   ✅ APPROVED: SCI | Shares: 145 | Entry: ₹344.0 | Stop-Loss: ₹326.8 | Score: 95.6
+   ✅ APPROVED: GLAND | Shares: 23 | Entry: ₹2155.0 | Stop-Loss: ₹2047.25 | Score: 97.0
+   ✅ APPROVED: MTARTECH | Shares: 7 | Entry: ₹6800.0 | Stop-Loss: ₹6460.0 | Score: 97.6
+   ✅ APPROVED: QUESS | Shares: 219 | Entry: ₹228.0 | Stop-Loss: ₹216.6 | Score: 97.8

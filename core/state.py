@@ -34,7 +34,9 @@ class SovereignState(TypedDict):
     
     # --- Phase 1: Macro & Deterministic Output ---
     target_date: str
+    pulse: int
     macro_regime: str 
+    total_screened: int
     fii_net: float
     dii_net: float
     india_vix: float
@@ -43,6 +45,7 @@ class SovereignState(TypedDict):
     candidates: Annotated[List[str], add_lists]
     incubator: Annotated[List[str], add_lists]
     flagged_momentum_candidates: Annotated[List[str], add_lists]
+    injected_catalysts: Annotated[List[str], add_lists]
     breakouts: Annotated[List[str], add_lists]
     
     # Scoreboards (0-100 ranking)
@@ -70,6 +73,9 @@ class SovereignState(TypedDict):
     
     # Maps ticker -> Critic Agent validations
     critic_results: Annotated[Dict[str, Dict[str, Any]], merge_dicts]
+    
+    # Maps ticker -> News Catalyst Agent results
+    news_catalysts: Annotated[Dict[str, Dict[str, Any]], merge_dicts]
     
     # Maps ticker -> Watcher Agent notes
     incubator_notes: Annotated[Dict[str, str], merge_dicts]

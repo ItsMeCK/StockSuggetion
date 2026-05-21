@@ -1,0 +1,539 @@
+2026-05-21 19:38:17,074 - INFO - ==================================================
+2026-05-21 19:38:17,074 - INFO - MIDNIGHT SOVEREIGN V2.1: ANALYSIS & EXECUTION RUN
+2026-05-21 19:38:17,074 - INFO - ==================================================
+2026-05-21 19:38:17,074 - INFO - --- PHASE 0: BITEMPORAL RECONCILIATION ---
+2026-05-21 19:38:17,074 - INFO - Reconciliation Node connected to Zerodha API.
+2026-05-21 19:38:17,074 - INFO - Initializing Phase 0: Bitemporal Reconciliation...
+2026-05-21 19:38:17,270 - INFO - Phase 0 Reconciliation Node finished.
+2026-05-21 19:38:17,289 - INFO - --- PHASE 2: MACRO REGIME GATE ---
+2026-05-21 19:38:17,289 - INFO - Executing Macro Regime Gate...
+2026-05-21 19:38:17,382 - INFO - Nifty Return: 0.00% | ADR: 0.00
+2026-05-21 19:38:17,382 - INFO - Identified Market Regime: TUG_OF_WAR
+2026-05-21 19:38:17,382 - INFO - --- PHASE 2: REAL DATA POLARS SCREENER ---
+2026-05-21 19:38:17,406 - INFO - Catalyst Screener: Finding quietly accumulating high-turnover stocks...
+2026-05-21 19:38:20,661 - INFO - Catalyst Screener: Found 20 quietly accumulating stocks. Top 5: ['HDFCBANK', 'RELIANCE', 'LENSKART', 'ICICIBANK', 'BSE']
+2026-05-21 19:38:20,662 - INFO - Catalyst Screener: Evaluating 20 stocks for imminent news catalysts...
+2026-05-21 19:38:20,699 - INFO - Fetching Google News for LENSKART using query: ("LENSKART" OR "Lenskart Solutions") stock news (ref: 2026-05-21)
+2026-05-21 19:38:20,700 - INFO - Pre-filter triggered for HDFCBANK: ROC=0.27%, VolRatio=0.92x. Skipping news catalyst search.
+2026-05-21 19:38:20,700 - INFO - Pre-filter triggered for RELIANCE: ROC=0.76%, VolRatio=0.8x. Skipping news catalyst search.
+2026-05-21 19:38:20,700 - INFO - Pre-filter triggered for ICICIBANK: ROC=0.35%, VolRatio=0.73x. Skipping news catalyst search.
+2026-05-21 19:38:20,701 - INFO - Pre-filter triggered for BSE: ROC=0.71%, VolRatio=0.77x. Skipping news catalyst search.
+2026-05-21 19:38:20,727 - INFO - Pre-filter triggered for IDEA: ROC=0.44%, VolRatio=0.78x. Skipping news catalyst search.
+2026-05-21 19:38:20,727 - INFO - Pre-filter triggered for SBIN: ROC=0.14%, VolRatio=0.58x. Skipping news catalyst search.
+2026-05-21 19:38:20,728 - INFO - Pre-filter triggered for BHARTIARTL: ROC=1.1%, VolRatio=0.6x. Skipping news catalyst search.
+2026-05-21 19:38:20,728 - INFO - Pre-filter triggered for INFY: ROC=1.04%, VolRatio=0.64x. Skipping news catalyst search.
+2026-05-21 19:38:20,751 - INFO - Pre-filter triggered for ADANIPOWER: ROC=0.38%, VolRatio=0.74x. Skipping news catalyst search.
+2026-05-21 19:38:20,751 - INFO - Pre-filter triggered for TCS: ROC=0.03%, VolRatio=0.7x. Skipping news catalyst search.
+2026-05-21 19:38:20,752 - INFO - Fetching Google News for DIXON using query: ("DIXON" OR "Dixon Technologies (India)") stock news (ref: 2026-05-21)
+2026-05-21 19:38:20,753 - INFO - Fetching Google News for BAJFINANCE using query: ("BAJFINANCE" OR "Bajaj Finance") stock news (ref: 2026-05-21)
+2026-05-21 19:38:20,771 - INFO - Fetching Google News for INDIGO using query: ("INDIGO" OR "InterGlobe Aviation") stock news (ref: 2026-05-21)
+2026-05-21 19:38:20,771 - INFO - Fetching Google News for HSCL using query: ("HSCL" OR "Himadri Speciality Chemical") stock news (ref: 2026-05-21)
+2026-05-21 19:38:23,392 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 19:38:23,406 - INFO - News catalyst evaluation for INDIGO: {'catalyst_detected': False, 'catalyst_type': 'NONE', 'summary': 'No recent high-impact corporate catalyst detected.', 'meets_expectations': 'UNKNOWN', 'priced_in_status': 'FRESH_REACTION', 'score_boost': 0.0, 'reasoning': "Recent news largely focuses on earnings momentum and fleet plans, with the latest news being less than 24 hours old. However, it lacks specificity on actual earnings results or any other pivotal corporate event. The 3.22% price increase today suggests a fresh reaction to general corporate developments rather than a specific catalyst. There is no indication of earnings results that would qualify as an EARNINGS_BEAT or other specified catalysts, and with no explicit expectations mentioned, it is difficult to ascertain if the market's expectations were met, exceeded, or missed. The observed price action appears aligned with the news flow, thus there's no divergent reaction nor is the news priced-in yet."}
+2026-05-21 19:38:23,420 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 19:38:23,427 - INFO - News catalyst evaluation for HSCL: {'catalyst_detected': True, 'catalyst_type': 'EARNINGS_BEAT', 'summary': 'Himadri Speciality Chemical shares rallied after a strong Q4 earnings report and the launch of a new facility.', 'meets_expectations': 'EXCEEDED', 'priced_in_status': 'PRICED_IN', 'score_boost': 0.0, 'reasoning': "The recent surge in Himadri Speciality Chemical's stock price was driven by an earnings beat, as indicated by several headlines mentioning strong Q4 results. However, since the news is over 655.1 hours old, it is likely that the positive effects are already priced in, given the muted market reaction today with only a 1.71% price change and lower trading volume."}
+2026-05-21 19:38:23,439 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 19:38:23,444 - INFO - News catalyst evaluation for LENSKART: {'catalyst_detected': True, 'catalyst_type': 'EARNINGS_BEAT', 'summary': 'Lenskart shares rose after a significant increase in revenue despite a decline in net profit, indicating a strong growth outlook.', 'meets_expectations': 'EXCEEDED', 'priced_in_status': 'FRESH_REACTION', 'score_boost': 15.0, 'reasoning': "Despite mixed signals about net profit, Lenskart's substantial revenue growth and the strong forward guidance have led to a significant stock price increase today, as evidenced by the increased trading volume and media coverage. The market reacted positively to the earnings beat regarding revenue, reflecting a fresh reaction rather than a priced-in scenario."}
+2026-05-21 19:38:23,444 - INFO - 🚀 CATALYST INCUBATOR FOUND: LENSKART | EARNINGS_BEAT | Lenskart shares rose after a significant increase in revenue despite a decline in net profit, indicating a strong growth outlook.
+2026-05-21 19:38:23,448 - INFO - Pre-filter triggered for NETWEB: ROC=0.66%, VolRatio=1.19x. Skipping news catalyst search.
+2026-05-21 19:38:23,462 - INFO - Pre-filter triggered for GROWW: ROC=0.03%, VolRatio=0.52x. Skipping news catalyst search.
+2026-05-21 19:38:23,477 - INFO - Pre-filter triggered for LT: ROC=0.49%, VolRatio=0.58x. Skipping news catalyst search.
+2026-05-21 19:38:23,477 - INFO - Pre-filter triggered for AXISBANK: ROC=0.2%, VolRatio=0.64x. Skipping news catalyst search.
+2026-05-21 19:38:23,485 - INFO - Fetching Google News for HFCL using query: ("HFCL" OR "HFCL") stock news (ref: 2026-05-21)
+2026-05-21 19:38:23,531 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 19:38:23,532 - INFO - News catalyst evaluation for DIXON: {'catalyst_detected': True, 'catalyst_type': 'CORPORATE_ACTION', 'summary': 'Dixon Technologies recently made a fresh allotment as indicated in a recent NSE filing.', 'meets_expectations': 'MET', 'priced_in_status': 'FRESH_REACTION', 'score_boost': 15.0, 'reasoning': "The recent headline about the fresh allotment of shares is a corporate action that was reported just 1.7 hours ago, which is very recent. The market reaction today shows a positive price change of 2.39%, suggesting a fresh reaction to this news as it aligns with the positive sentiment from the corporate action. Given the timing and today's market reaction, the catalyst appears to be fresh and aligns well with expectations."}
+2026-05-21 19:38:23,532 - INFO - 🚀 CATALYST INCUBATOR FOUND: DIXON | CORPORATE_ACTION | Dixon Technologies recently made a fresh allotment as indicated in a recent NSE filing.
+2026-05-21 19:38:25,028 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 19:38:25,060 - INFO - News catalyst evaluation for BAJFINANCE: {'catalyst_detected': False, 'catalyst_type': 'NONE', 'summary': 'No high-impact corporate catalyst detected for Bajaj Finance.', 'meets_expectations': 'UNKNOWN', 'priced_in_status': 'FRESH_REACTION', 'score_boost': 0.0, 'reasoning': "The news headlines primarily focus on the stock's recent performance and open interest changes without indicating any specific high-impact corporate catalysts like earnings release, dividend announcements, or major corporate actions. The stock's negative price change and relatively average volume suggest there was no significant new catalyst affecting expectations. The most notable event, the allotment of NCDs, is beyond 24 hours old and likely priced in with no exceptional market reaction. Additionally, the 'sell the news' reaction indicates that any positive sentiment was not supported by strong underlying news."}
+2026-05-21 19:38:26,939 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 19:38:26,944 - INFO - News catalyst evaluation for HFCL: {'catalyst_detected': True, 'catalyst_type': 'ORDER_WIN', 'summary': 'HFCL secured a significant export supply order worth ₹106 crore, indicating strong business prospects.', 'meets_expectations': 'MET', 'priced_in_status': 'PRICED_IN', 'score_boost': 5.0, 'reasoning': 'While the order win news is positive and boosts business visibility, it is over 82 hours old. The muted price reaction today coupled with below-average trading volume suggests that the news has largely been priced in, with no new immediate catalysts to drive further gains. The positive sentiment appears to have met market expectations, not exceeding them significantly, hence a modest score boost is applied.'}
+2026-05-21 19:38:26,959 - INFO - Fetching real OHLCV data from TimescaleDB into Polars...
+2026-05-21 19:38:30,532 - INFO - Successfully loaded 621741 rows from TimescaleDB.
+2026-05-21 19:38:30,595 - INFO - Calculating Stage 2 & Momentum metrics...
+2026-05-21 19:38:30,811 - INFO - Calculating AVWAP metrics...
+2026-05-21 19:38:30,817 - INFO - Querying ledger for active/pending trades to exclude...
+2026-05-21 19:38:30,843 - INFO - Excluding 172 symbols currently in active/pending trades: ['ABDL', 'ADANIENT', 'ADANIGREEN', 'AFSL', 'AIAENG', 'AIIL', 'AIROLAM', 'AKSHAR', 'ALBERTDAVD', 'ALPHA', 'ANANTRAJ', 'ANGELONE', 'ASIANPAINT', 'AUROPHARMA', 'AUTOAXLES', 'BAIDFIN', 'BBTC', 'BERGEPAINT', 'BHARTIARTL', 'BIRLANU', 'BSE', 'BTML', 'BUTTERFLY', 'CAPLIPOINT', 'CENTUM', 'CHALET', 'CHAMBLFERT', 'CIFL', 'CIGNITITEC', 'CIPLA', 'CNL', 'CONS', 'CROMPTON', 'CUBEXTUB', 'CYIENT', 'DBCORP', 'DELHIVERY', 'DRREDDY', 'EASEMYTRIP', 'EIFFL', 'ELM250', 'EMCURE', 'ENDURANCE', 'ENRIN', 'ERIS', 'ESTER', 'GANDHITUBE', 'GESHIP', 'GILT10BETA', 'GLAND', 'GLAXO', 'GMMPFAUDLR', 'GOKUL', 'GOLDADD', 'GOLDBETA', 'GOLDTECH', 'GRASIM', 'GROWWGOLD', 'GROWWLIQID', 'GROWWNXT50', 'HDFCLIFE', 'HEALTHCARE', 'HEMIPROP', 'HEXT', 'HONASA', 'HYUNDAI', 'IDEA', 'IFCI', 'IGIL', 'IIFL', 'INCREDIBLE', 'INDUSTOWER', 'IPCALAB', 'IRB', 'ITC', 'JBCHEPHARM', 'JINDRILL', 'JKLAKSHMI', 'JSWCEMENT', 'JSWSTEEL', 'KALAMANDIR', 'KARURVYSYA', 'KICL', 'KILITCH', 'KIRLOSENG', 'KOTAKBANK', 'KPITTECH', 'LATENTVIEW', 'LICMFGOLD', 'LIQUID', 'LIQUIDADD', 'LIQUIDPLUS', 'LIQUIDSBI', 'LIQUIDSHRI', 'MAHEPC', 'MAKEINDIA', 'MANBA', 'MANKIND', 'MANUGRAPH', 'MARKOLINES', 'MAXHEALTH', 'MAYURUNIQ', 'MCX', 'MEDIASSIST', 'MEDICO', 'MEDPLUS', 'MID150', 'MIDCAP', 'MIDCAPBETA', 'MINDACORP', 'MOHITIND', 'MOLDTKPAC', 'MOM100', 'MOPSE', 'MOTHERSON', 'MPHASIS', 'MTARTECH', 'MULTICAP', 'NAVA', 'NEXT30ADD', 'NIACL', 'NILASPACES', 'NIVABUPA', 'NKIND', 'NORTHARC', 'NUVOCO', 'NYKAA', 'OBCL', 'OIL', 'PFIZER', 'PIDILITIND', 'PIIND', 'PKTEA', 'POLICYBZR', 'PPAP', 'PTL', 'QUESS', 'RALLIS', 'RAYMONDLSL', 'RBLBANK', 'REDINGTON', 'RELIABLE', 'RELIANCE', 'RHIM', 'RHL', 'ROML', 'RUCHINFRA', 'SAREGAMA', 'SBILIFE', 'SCI', 'SENCO', 'SILLYMONKS', 'SKFINDIA', 'SOLARINDS', 'SONACOMS', 'STARTECK', 'SUKHJITS', 'SUNPHARMA', 'TATACOMM', 'TEXINFRA', 'TIMKEN', 'TMPV', 'TRITURBINE', 'V2RETAIL', 'VENTIVE', 'VGL', 'VGUARD', 'VIYASH', 'WESTLIFE', 'WORTHPERI', 'ZYDUSLIFE', 'ZYDUSWELL']
+2026-05-21 19:38:30,858 - INFO - Diagnostic report saved to: screening_diagnostics.csv
+2026-05-21 19:38:30,861 - INFO - Injecting Pre-Breakout Catalysts into LangGraph pool: ['LENSKART', 'DIXON']
+2026-05-21 19:38:30,861 - INFO - Querying ledger for active/pending trades to exclude...
+2026-05-21 19:38:30,874 - INFO - Excluding 172 symbols currently in active/pending trades: ['ABDL', 'ADANIENT', 'ADANIGREEN', 'AFSL', 'AIAENG', 'AIIL', 'AIROLAM', 'AKSHAR', 'ALBERTDAVD', 'ALPHA', 'ANANTRAJ', 'ANGELONE', 'ASIANPAINT', 'AUROPHARMA', 'AUTOAXLES', 'BAIDFIN', 'BBTC', 'BERGEPAINT', 'BHARTIARTL', 'BIRLANU', 'BSE', 'BTML', 'BUTTERFLY', 'CAPLIPOINT', 'CENTUM', 'CHALET', 'CHAMBLFERT', 'CIFL', 'CIGNITITEC', 'CIPLA', 'CNL', 'CONS', 'CROMPTON', 'CUBEXTUB', 'CYIENT', 'DBCORP', 'DELHIVERY', 'DRREDDY', 'EASEMYTRIP', 'EIFFL', 'ELM250', 'EMCURE', 'ENDURANCE', 'ENRIN', 'ERIS', 'ESTER', 'GANDHITUBE', 'GESHIP', 'GILT10BETA', 'GLAND', 'GLAXO', 'GMMPFAUDLR', 'GOKUL', 'GOLDADD', 'GOLDBETA', 'GOLDTECH', 'GRASIM', 'GROWWGOLD', 'GROWWLIQID', 'GROWWNXT50', 'HDFCLIFE', 'HEALTHCARE', 'HEMIPROP', 'HEXT', 'HONASA', 'HYUNDAI', 'IDEA', 'IFCI', 'IGIL', 'IIFL', 'INCREDIBLE', 'INDUSTOWER', 'IPCALAB', 'IRB', 'ITC', 'JBCHEPHARM', 'JINDRILL', 'JKLAKSHMI', 'JSWCEMENT', 'JSWSTEEL', 'KALAMANDIR', 'KARURVYSYA', 'KICL', 'KILITCH', 'KIRLOSENG', 'KOTAKBANK', 'KPITTECH', 'LATENTVIEW', 'LICMFGOLD', 'LIQUID', 'LIQUIDADD', 'LIQUIDPLUS', 'LIQUIDSBI', 'LIQUIDSHRI', 'MAHEPC', 'MAKEINDIA', 'MANBA', 'MANKIND', 'MANUGRAPH', 'MARKOLINES', 'MAXHEALTH', 'MAYURUNIQ', 'MCX', 'MEDIASSIST', 'MEDICO', 'MEDPLUS', 'MID150', 'MIDCAP', 'MIDCAPBETA', 'MINDACORP', 'MOHITIND', 'MOLDTKPAC', 'MOM100', 'MOPSE', 'MOTHERSON', 'MPHASIS', 'MTARTECH', 'MULTICAP', 'NAVA', 'NEXT30ADD', 'NIACL', 'NILASPACES', 'NIVABUPA', 'NKIND', 'NORTHARC', 'NUVOCO', 'NYKAA', 'OBCL', 'OIL', 'PFIZER', 'PIDILITIND', 'PIIND', 'PKTEA', 'POLICYBZR', 'PPAP', 'PTL', 'QUESS', 'RALLIS', 'RAYMONDLSL', 'RBLBANK', 'REDINGTON', 'RELIABLE', 'RELIANCE', 'RHIM', 'RHL', 'ROML', 'RUCHINFRA', 'SAREGAMA', 'SBILIFE', 'SCI', 'SENCO', 'SILLYMONKS', 'SKFINDIA', 'SOLARINDS', 'SONACOMS', 'STARTECK', 'SUKHJITS', 'SUNPHARMA', 'TATACOMM', 'TEXINFRA', 'TIMKEN', 'TMPV', 'TRITURBINE', 'V2RETAIL', 'VENTIVE', 'VGL', 'VGUARD', 'VIYASH', 'WESTLIFE', 'WORTHPERI', 'ZYDUSLIFE', 'ZYDUSWELL']
+2026-05-21 19:38:30,883 - ERROR - QUALITY VETO: DYNAMATECH failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,884 - ERROR - QUALITY VETO: DIVIDEND failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,884 - ERROR - QUALITY VETO: GLOBAL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,884 - ERROR - QUALITY VETO: GNA failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,885 - ERROR - QUALITY VETO: UNITEDTEA failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,885 - ERROR - QUALITY VETO: TRIVENI failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,885 - ERROR - QUALITY VETO: AHLEAST failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,886 - ERROR - QUALITY VETO: FIEMIND failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,886 - ERROR - QUALITY VETO: PRICOLLTD failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,886 - ERROR - QUALITY VETO: GILT5BETA failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,887 - ERROR - QUALITY VETO: DBSTOCKBRO failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,887 - ERROR - QUALITY VETO: ELIQUID failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,887 - ERROR - QUALITY VETO: TMB failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,888 - ERROR - QUALITY VETO: SANSERA failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,888 - ERROR - QUALITY VETO: EDELWEISS failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,888 - ERROR - QUALITY VETO: ALGOQUANT failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,889 - ERROR - QUALITY VETO: BLUESTONE failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,889 - ERROR - QUALITY VETO: NEXT50ADD failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,889 - ERROR - QUALITY VETO: AXISVALUE failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,890 - ERROR - QUALITY VETO: NIBL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,890 - ERROR - QUALITY VETO: LIQUIDCASE failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,890 - ERROR - QUALITY VETO: MOMGF failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,891 - ERROR - QUALITY VETO: MIDCAPADD failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,891 - ERROR - QUALITY VETO: VOLTAMP failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,891 - ERROR - QUALITY VETO: MAANALU failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,892 - ERROR - QUALITY VETO: AONELIQUID failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,892 - ERROR - QUALITY VETO: MUFIN failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,892 - ERROR - QUALITY VETO: HAPPYFORGE failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,893 - ERROR - QUALITY VETO: HDFCLIQUID failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,894 - ERROR - QUALITY VETO: MNC failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,894 - ERROR - QUALITY VETO: PIXTRANS failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,894 - ERROR - QUALITY VETO: ABSLPSE failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,895 - ERROR - QUALITY VETO: HEALTHADD failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,895 - ERROR - QUALITY VETO: PAR failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,895 - ERROR - QUALITY VETO: MOALPHA50 failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,896 - ERROR - QUALITY VETO: SHARDAMOTR failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,896 - ERROR - QUALITY VETO: REPRO failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,896 - ERROR - QUALITY VETO: EMAMIPAP failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,897 - ERROR - QUALITY VETO: GRINFRA failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,897 - ERROR - QUALITY VETO: ZEELEARN failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,898 - ERROR - QUALITY VETO: KRIDHANINF failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,898 - ERROR - QUALITY VETO: ABSLLIQUID failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,899 - ERROR - QUALITY VETO: MUFTI failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,899 - ERROR - QUALITY VETO: GKWLIMITED failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,899 - ERROR - QUALITY VETO: CENTENKA failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,899 - ERROR - QUALITY VETO: TERASOFT failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,900 - ERROR - QUALITY VETO: GROWWLOVOL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,900 - ERROR - QUALITY VETO: HEALTHX failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,900 - ERROR - QUALITY VETO: PILITA failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,901 - ERROR - QUALITY VETO: SALASAR failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,901 - ERROR - QUALITY VETO: HMVL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,901 - ERROR - QUALITY VETO: RELCHEMQ failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,901 - ERROR - QUALITY VETO: AONETOTAL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,902 - ERROR - QUALITY VETO: KHANDSE failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,902 - ERROR - QUALITY VETO: ECAPINSURE failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,902 - ERROR - QUALITY VETO: MBAPL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,902 - ERROR - QUALITY VETO: WILLAMAGOR failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,903 - ERROR - QUALITY VETO: DATAMATICS failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,903 - ERROR - QUALITY VETO: DWARKESH failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,904 - ERROR - QUALITY VETO: QUALITY30 failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,904 - ERROR - QUALITY VETO: GPPL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,905 - ERROR - QUALITY VETO: JTEKTINDIA failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,905 - ERROR - QUALITY VETO: RAMCOIND failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,905 - ERROR - QUALITY VETO: HEADSUP failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,905 - ERROR - QUALITY VETO: LICNMID100 failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,906 - ERROR - QUALITY VETO: MAXESTATES failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,906 - ERROR - QUALITY VETO: CHEMICAL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,906 - ERROR - QUALITY VETO: UCAL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,906 - ERROR - QUALITY VETO: TOTAL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,907 - ERROR - QUALITY VETO: IGCL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,907 - ERROR - QUALITY VETO: INDIANHUME failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,908 - ERROR - QUALITY VETO: INDBANK failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,908 - ERROR - QUALITY VETO: TCIEXP failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 403.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,908 - ERROR - QUALITY VETO: SILVERBETA failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,909 - ERROR - QUALITY VETO: MEGASTAR failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,909 - ERROR - QUALITY VETO: MENONBE failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,909 - ERROR - QUALITY VETO: MIDHANI failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 355.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,909 - ERROR - QUALITY VETO: SILVERAG failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,910 - ERROR - QUALITY VETO: MUNJALAU failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,910 - ERROR - QUALITY VETO: INDIGOPNTS failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,910 - ERROR - QUALITY VETO: EXPLEOSOL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,910 - ERROR - QUALITY VETO: HDFCSILVER failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,911 - ERROR - QUALITY VETO: MSPL failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,911 - ERROR - QUALITY VETO: PATINTLOG failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,911 - ERROR - QUALITY VETO: AXISILVER failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,911 - ERROR - QUALITY VETO: VENKEYS failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,912 - ERROR - QUALITY VETO: SKYGOLD failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,912 - ERROR - QUALITY VETO: SILVER1 failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,912 - ERROR - QUALITY VETO: SILVER failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,913 - ERROR - QUALITY VETO: JAYAGROGN failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,913 - ERROR - QUALITY VETO: BORORENEW failed Pydantic audit: 1 validation error for CandidateSchema
+last_updated
+  Value error, STALE_DATA_HALT: Latest data for this stock is 211.6 hours old. Ingestion is likely broken. [type=value_error, input_value=datetime.datetime(2026, 5...nfo.ZoneInfo(key='UTC')), input_type=datetime]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-05-21 19:38:30,921 - INFO - Elite Cap Applied: Selected 4 standard candidates from 4 passing screener.
+2026-05-21 19:38:30,922 - INFO - Calculating Market Regime via NIFTY 50...
+2026-05-21 19:38:30,951 - INFO - Market Regime: NEUTRAL (Nifty: 24176 | SMA-20: 24154)
+2026-05-21 19:38:30,951 - INFO - Screener Complete. Elite Standard Top 2: ['ONGC', 'HINDCOPPER'] | Flagged Momentum: ['APOLLOHOSP', 'SAMMAANCAP', 'HONAUT', 'LENSKART', 'DIXON']
+2026-05-21 19:38:30,951 - INFO - --- PHASE 3 & 4: LANGGRAPH COGNITIVE ORCHESTRATION ---
+2026-05-21 19:38:31,049 - INFO - ⚡ TITAN DETECTED: APOLLOHOSP (Turnover: ₹1114.7 Cr). Applying aggressive momentum bypass.
+2026-05-21 19:38:31,049 - INFO - 🚀 RESCUED: APOLLOHOSP (ROC: 5.9%, RSI: 79.1) overrode extension limits in TUG_OF_WAR regime.
+2026-05-21 19:38:31,049 - INFO - 🚀 CATALYST BYPASS: LENSKART automatically bypasses momentum validation.
+2026-05-21 19:38:31,071 - INFO - ⚡ TITAN DETECTED: SAMMAANCAP (Turnover: ₹1782.0 Cr). Applying aggressive momentum bypass.
+2026-05-21 19:38:31,071 - INFO - 🛑 REJECTED CHASE: SAMMAANCAP (ROC: 1.8%, RSI: 58.1) failed Pring momentum validation.
+2026-05-21 19:38:31,091 - INFO - ⚡ TITAN DETECTED: HONAUT (Turnover: ₹625.3 Cr). Applying aggressive momentum bypass.
+2026-05-21 19:38:31,091 - INFO - 🚀 RESCUED: HONAUT (ROC: 14.8%, RSI: 67.4) overrode extension limits in TUG_OF_WAR regime.
+2026-05-21 19:38:31,091 - INFO - 🚀 CATALYST BYPASS: DIXON automatically bypasses momentum validation.
+2026-05-21 19:38:31,111 - INFO - ⚡ TITAN DETECTED: INDIGO (Turnover: ₹691.1 Cr). Applying aggressive momentum bypass.
+2026-05-21 19:38:31,111 - INFO - 🛑 REJECTED CHASE: INDIGO (ROC: -2.3%, RSI: 56.8) failed Pring momentum validation.
+2026-05-21 19:38:31,112 - INFO - Applying DTW Heuristics to 6 candidates...
+2026-05-21 19:38:31,136 - INFO - DTW Match Evaluated: APOLLOHOSP -> ascending_triangle (Dist: 0.67) -> Score: 13.0/15
+2026-05-21 19:38:31,157 - INFO - DTW Match Evaluated: ONGC -> ascending_triangle (Dist: 0.64) -> Score: 13.1/15
+2026-05-21 19:38:31,174 - INFO - DTW Match Evaluated: LENSKART -> rectangle (Dist: 0.59) -> Score: 13.2/15
+2026-05-21 19:38:31,191 - INFO - DTW Match Evaluated: HONAUT -> ascending_triangle (Dist: 0.32) -> Score: 14.0/15
+2026-05-21 19:38:31,205 - INFO - DTW Match Evaluated: HINDCOPPER -> ascending_triangle (Dist: 0.65) -> Score: 13.1/15
+2026-05-21 19:38:31,220 - INFO - DTW Match Evaluated: DIXON -> bull_flag (Dist: 0.43) -> Score: 13.7/15
+2026-05-21 19:38:31,232 - INFO - CLEAR: ONGC passed the Experience Meta-Gate.
+2026-05-21 19:38:31,243 - INFO - CLEAR: HONAUT passed the Experience Meta-Gate.
+2026-05-21 19:38:31,254 - INFO - CLEAR: HINDCOPPER passed the Experience Meta-Gate.
+2026-05-21 19:38:31,264 - INFO - CLEAR: APOLLOHOSP passed the Experience Meta-Gate.
+2026-05-21 19:38:31,275 - INFO - CLEAR: LENSKART passed the Experience Meta-Gate.
+2026-05-21 19:38:31,286 - INFO - CLEAR: DIXON passed the Experience Meta-Gate.
+2026-05-21 19:38:31,287 - INFO - Gear 2 At-Bat: Checking momentum ignition rules for ['APOLLOHOSP', 'ONGC', 'LENSKART', 'HONAUT', 'HINDCOPPER', 'DIXON']...
+/Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign/agents/entry_trigger_agent.py:59: DataOrientationWarning: Row orientation inferred during DataFrame construction. Explicitly specify the orientation by passing `orient="row"` to silence this warning.
+  df = pl.DataFrame(rows, schema=["time", "symbol", "open", "high", "low", "close", "volume"])
+2026-05-21 19:38:31,314 - INFO - Gear 2 Cognitive Scoring for APOLLOHOSP: Score=115.0/100 | Vol:40.0 SMA:30.0 Mom:30.0 MTA:+10
+2026-05-21 19:38:31,314 - INFO - Gear 2 Cognitive Scoring for ONGC: Score=55.0/100 | Vol:0.0 SMA:30.0 Mom:15.0 MTA:+10
+2026-05-21 19:38:31,315 - INFO - Gear 2 Cognitive Scoring for LENSKART: Score=115.0/100 | Vol:40.0 SMA:30.0 Mom:30.0 MTA:+10
+2026-05-21 19:38:31,315 - INFO - Gear 2 Cognitive Scoring for HONAUT: Score=115.0/100 | Vol:40.0 SMA:30.0 Mom:30.0 MTA:+10
+2026-05-21 19:38:31,316 - INFO - Gear 2 Cognitive Scoring for HINDCOPPER: Score=10.0/100 | Vol:0.0 SMA:0.0 Mom:0.0 MTA:+10
+2026-05-21 19:38:31,316 - INFO - Gear 2 Cognitive Scoring for DIXON: Score=70.0/100 | Vol:0.0 SMA:30.0 Mom:30.0 MTA:+10
+2026-05-21 19:38:31,317 - INFO - Watcher Agent: Querying TimescaleDB metrics for PERSISTENT...
+2026-05-21 19:38:31,334 - INFO - Watcher Agent: Querying TimescaleDB metrics for CRISIL...
+2026-05-21 19:38:31,350 - INFO - Watcher Agent: Querying TimescaleDB metrics for PATANJALI...
+2026-05-21 19:38:31,365 - INFO - Watcher Agent: Querying TimescaleDB metrics for TATAELXSI...
+2026-05-21 19:38:31,383 - INFO - Watcher Agent: Querying TimescaleDB metrics for BALKRISIND...
+2026-05-21 19:38:31,416 - INFO - Watcher Agent: Querying TimescaleDB metrics for TIINDIA...
+2026-05-21 19:38:31,440 - INFO - Watcher Agent: Querying TimescaleDB metrics for PAGEIND...
+2026-05-21 19:38:31,466 - INFO - Watcher Agent: Querying TimescaleDB metrics for BALRAMCHIN...
+2026-05-21 19:38:31,491 - INFO - Watcher Agent: Querying TimescaleDB metrics for BHARTIHEXA...
+2026-05-21 19:38:31,518 - INFO - Watcher Agent: Querying TimescaleDB metrics for REDINGTON...
+2026-05-21 19:38:31,549 - INFO - Watcher Agent: Querying TimescaleDB metrics for INDHOTEL...
+2026-05-21 19:38:31,569 - INFO - Watcher Agent: Querying TimescaleDB metrics for ABBOTINDIA...
+2026-05-21 19:38:31,603 - INFO - FINAL VISION SCORE for APOLLOHOSP: 85.0
+2026-05-21 19:38:31,603 - INFO - VISION APPROVED: APOLLOHOSP is a valid ascending_triangle setup.
+2026-05-21 19:38:31,603 - INFO - FINAL VISION SCORE for ONGC: 85.0
+2026-05-21 19:38:31,603 - INFO - VISION APPROVED: ONGC is a valid ascending_triangle setup.
+2026-05-21 19:38:31,603 - INFO - FINAL VISION SCORE for LENSKART: 85.0
+2026-05-21 19:38:31,603 - INFO - VISION APPROVED: LENSKART is a valid rectangle setup.
+2026-05-21 19:38:31,603 - INFO - FINAL VISION SCORE for HONAUT: 85.0
+2026-05-21 19:38:31,603 - INFO - VISION APPROVED: HONAUT is a valid ascending_triangle setup.
+2026-05-21 19:38:31,603 - INFO - FINAL VISION SCORE for HINDCOPPER: 85.0
+2026-05-21 19:38:31,603 - INFO - VISION APPROVED: HINDCOPPER is a valid ascending_triangle setup.
+2026-05-21 19:38:31,603 - INFO - FINAL VISION SCORE for DIXON: 85.0
+2026-05-21 19:38:31,603 - INFO - VISION APPROVED: DIXON is a valid bull_flag setup.
+2026-05-21 19:38:31,603 - INFO - Sector Agent: Analyzing Relative Strength for ['APOLLOHOSP', 'ONGC', 'LENSKART', 'HONAUT', 'HINDCOPPER', 'DIXON']...
+2026-05-21 19:38:31,667 - INFO - Fetching Google News for APOLLOHOSP using query: ("APOLLOHOSP" OR "Apollo Hospitals") stock news (ref: 2026-05-21)
+2026-05-21 19:38:34,188 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 19:38:34,191 - INFO - News catalyst evaluation for APOLLOHOSP: {'catalyst_detected': True, 'catalyst_type': 'EARNINGS_BEAT', 'summary': 'Apollo Hospitals reported strong Q4 earnings with a 34% profit increase, leading to a stock price surge.', 'meets_expectations': 'EXCEEDED', 'priced_in_status': 'FRESH_REACTION', 'score_boost': 18.0, 'reasoning': 'The recent coverage indicates that Apollo Hospitals announced strong Q4 earnings with a notable profit increase and dividend news, driving the stock to a 52-week high. This suggests the results exceeded market expectations. The immediate positive reaction in both price and high volume implies the news is not yet fully priced in, and the sentiment aligns with the strong price movement today.'}
+2026-05-21 19:38:34,247 - INFO - Pre-filter triggered for ONGC: ROC=0.77%, VolRatio=0.7x. Skipping news catalyst search.
+2026-05-21 19:38:34,278 - INFO - Fetching Google News for LENSKART using query: ("LENSKART" OR "Lenskart Solutions") stock news (ref: 2026-05-21)
+2026-05-21 19:38:37,463 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 19:38:37,466 - INFO - News catalyst evaluation for LENSKART: {'catalyst_detected': True, 'catalyst_type': 'EARNINGS_BEAT', 'summary': "Lenskart's Q4 earnings exceeded market expectations with a significant increase in revenue and profit, leading to a positive stock reaction.", 'meets_expectations': 'EXCEEDED', 'priced_in_status': 'FRESH_REACTION', 'score_boost': 15.0, 'reasoning': "Despite the divergence in profit reports and some mentions of declines, the overall sentiment from multiple sources indicates a positive outlook on revenue and a strong growth projection. The stock showed a significant volume increase (4.57x), suggesting the market's fresh response to the earnings beat. The stock price increased 2.19% today, aligning positively with the dominant sentiment of revenue growth."}
+2026-05-21 19:38:37,518 - INFO - Fetching Google News for HONAUT using query: ("HONAUT" OR "Honeywell Automation India") stock news (ref: 2026-05-21)
+2026-05-21 19:38:39,647 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 19:38:39,651 - INFO - News catalyst evaluation for HONAUT: {'catalyst_detected': True, 'catalyst_type': 'EARNINGS_BEAT', 'summary': "Honeywell Automation India's stock surged on a significant Q4 earnings beat and dividend announcement.", 'meets_expectations': 'EXCEEDED', 'priced_in_status': 'FRESH_REACTION', 'score_boost': 18.0, 'reasoning': 'The recent headlines clearly indicate a strong Q4 earnings report exceeding market expectations, accompanied by a dividend declaration, both of which contributed to a significant 16.42% price surge today. The recency of the news (less than 24 hours) suggests that the positive market reaction is a fresh response, not influenced by prior anticipation.'}
+2026-05-21 19:38:39,710 - INFO - Pre-filter triggered for HINDCOPPER: ROC=0.44%, VolRatio=0.43x. Skipping news catalyst search.
+2026-05-21 19:38:39,743 - INFO - Fetching Google News for DIXON using query: ("DIXON" OR "Dixon Technologies (India)") stock news (ref: 2026-05-21)
+2026-05-21 19:38:43,609 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 19:38:43,612 - INFO - News catalyst evaluation for DIXON: {'catalyst_detected': False, 'catalyst_type': 'NONE', 'summary': 'No high-impact corporate catalyst detected in recent news for Dixon Technologies.', 'meets_expectations': 'MISSED', 'priced_in_status': 'PRICED_IN', 'score_boost': 0.0, 'reasoning': "Recent headlines indicate a weak Q4 performance despite an initial positive stock movement attributed to optimism about a JV. This suggests the news related to the quarter's earnings has already been priced in. With other headlines showing no mention of new contracts, mergers, regulatory approvals, or board meetings, and today's price action being modest and having a volume below average, there is no evidence of a high-impact catalyst. Additionally, the reaction based on a 2.39% increase and an 0.84 close range suggests previously anticipated positive sentiment may already be built into the price, thus not exceeding market expectations."}
+2026-05-21 19:38:43,620 - INFO - CATALYST BOOST: APOLLOHOSP received +18.0 confidence boost from news catalyst: Apollo Hospitals reported strong Q4 earnings with a 34% profit increase, leading to a stock price surge.
+2026-05-21 19:38:43,620 - INFO - Critic Agent: Performing Master Audit for APOLLOHOSP...
+2026-05-21 19:38:43,665 - INFO - HYBRID ELITE APPROVED: APOLLOHOSP (Elite: True, Mom: True, Acc: True)
+2026-05-21 19:38:43,665 - INFO - Critic Agent: Performing Master Audit for ONGC...
+2026-05-21 19:38:43,696 - WARNING - CRITIC VETO: ONGC - Failed Hybrid Elite criteria. (Conf: 73.4)
+2026-05-21 19:38:43,696 - INFO - CATALYST BOOST: LENSKART received +15.0 confidence boost from news catalyst: Lenskart's Q4 earnings exceeded market expectations with a significant increase in revenue and profit, leading to a positive stock reaction.
+2026-05-21 19:38:43,696 - INFO - Critic Agent: Performing Master Audit for LENSKART...
+2026-05-21 19:38:43,720 - INFO - HYBRID ELITE APPROVED: LENSKART (Elite: True, Mom: True, Acc: True)
+2026-05-21 19:38:43,720 - INFO - CATALYST BOOST: HONAUT received +18.0 confidence boost from news catalyst: Honeywell Automation India's stock surged on a significant Q4 earnings beat and dividend announcement.
+2026-05-21 19:38:43,720 - INFO - Critic Agent: Performing Master Audit for HONAUT...
+2026-05-21 19:38:43,739 - INFO - HYBRID ELITE APPROVED: HONAUT (Elite: True, Mom: True, Acc: True)
+2026-05-21 19:38:43,739 - INFO - Critic Agent: Performing Master Audit for HINDCOPPER...
+2026-05-21 19:38:43,759 - WARNING - CRITIC VETO: HINDCOPPER - Failed Hybrid Elite criteria. (Conf: 55.4)
+2026-05-21 19:38:43,759 - INFO - Critic Agent: Performing Master Audit for DIXON...
+2026-05-21 19:38:43,777 - INFO - HYBRID ELITE APPROVED: DIXON (Elite: True, Mom: False, Acc: True)
+2026-05-21 19:38:43,780 - INFO - CONVICTION REJECTION: ONGC (Confidence: 73.4)
+2026-05-21 19:38:43,780 - INFO - SOVEREIGN APPROVED: HONAUT | Type: TITAN | Sizing: ₹5,000
+2026-05-21 19:38:43,780 - INFO - CONVICTION REJECTION: HINDCOPPER (Confidence: 55.4)
+2026-05-21 19:38:43,780 - INFO - SOVEREIGN APPROVED: APOLLOHOSP | Type: TITAN | Sizing: ₹5,000
+2026-05-21 19:38:43,780 - INFO - SOVEREIGN APPROVED: LENSKART | Type: TITAN | Sizing: ₹5,000
+2026-05-21 19:38:43,780 - INFO - SOVEREIGN APPROVED: DIXON | Type: STD | Sizing: ₹5,000
+2026-05-21 19:38:43,782 - INFO - Zerodha API: Live execution account connected. Orders are ON!
+2026-05-21 19:38:43,782 - WARNING - Execution Error: Zero quantity calculated for HONAUT.
+2026-05-21 19:38:43,782 - WARNING - Execution Error: Zero quantity calculated for APOLLOHOSP.
+2026-05-21 19:38:43,782 - INFO - Zerodha API: Evaluating 65-minute intraday distribution metrics for LENSKART...
+2026-05-21 19:38:43,783 - INFO - Zerodha API: Placing AMO Limit Buy for 10 shares of LENSKART at ₹497.5
+2026-05-21 19:38:43,841 - ERROR - ❌ Live AMO Order Placement failed: IP (123.201.213.142) is not allowed to place orders for this app. Update allowed IPs on the Kite developer console. Learn more - https://support.zerodha.com/category/trading-and-markets/general-kite/kite-api/articles/static-ip
+2026-05-21 19:38:43,841 - INFO - Dry-Run: Generated mock order ID: AMO_ORD_E4B07B
+2026-05-21 19:38:43,862 - INFO - Zerodha API: Placing GTT Stop-Loss Sell for 10 shares of LENSKART at ₹472.625
+2026-05-21 19:38:43,975 - INFO - ✅ Live GTT Stop-Loss Placed: {'trigger_id': 320214624}
+2026-05-21 19:38:43,976 - WARNING - Execution Error: Zero quantity calculated for DIXON.
+2026-05-21 19:38:43,980 - INFO - Initializing Post-Mortem Reflection Engine...
+2026-05-21 19:38:43,981 - INFO - Scanning Ledger for hit GTT Stop-Losses...
+2026-05-21 19:38:44,051 - INFO - Successfully ledgered 4 SIGNALED events.
+2026-05-21 19:38:44,052 - INFO - Run results saved to run_history/run_20260521_193844.json
+2026-05-21 19:38:44,052 - INFO - ==================================================
+2026-05-21 19:38:44,052 - INFO - RUN COMPLETE.
+2026-05-21 19:38:44,052 - INFO - Final Candidates: ['ONGC', 'HINDCOPPER']
+2026-05-21 19:38:44,052 - INFO - Approved Allocations: ['HONAUT', 'APOLLOHOSP', 'LENSKART', 'DIXON']
+2026-05-21 19:38:44,052 - INFO - ==================================================

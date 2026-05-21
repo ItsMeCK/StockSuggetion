@@ -4,26 +4,27 @@ from kiteconnect import KiteConnect
 
 load_dotenv()
 
-api_key = os.getenv("KITE_API_KEY")
-api_secret = os.getenv("KITE_API_SECRET")
-request_token = "757s70hPZsQGv4GIIpfdFsRlbCvWFFxy"
+api_key = os.getenv("EXEC_KITE_API_KEY").strip("'\"")
+api_secret = os.getenv("EXEC_KITE_API_SECRET").strip("'\"")
+request_token = "e17sV4GsRl70WprjnIwqbwxuStnQfJ1K"
 
 try:
+    print(f"Generating session for Execution Account... API Key: {api_key}")
     kite = KiteConnect(api_key=api_key)
     data = kite.generate_session(request_token, api_secret=api_secret)
     access_token = data["access_token"]
     
-    # Read .env and replace KITE_ACCESS_TOKEN
+    # Read .env and replace EXEC_KITE_ACCESS_TOKEN
     with open(".env", "r") as f:
         lines = f.readlines()
         
     with open(".env", "w") as f:
         for line in lines:
-            if line.startswith("KITE_ACCESS_TOKEN="):
-                f.write(f"KITE_ACCESS_TOKEN='{access_token}'\n")
+            if line.startswith("EXEC_KITE_ACCESS_TOKEN="):
+                f.write(f"EXEC_KITE_ACCESS_TOKEN='{access_token}'\n")
             else:
                 f.write(line)
                 
-    print(f"Success! Access Token generated and saved to .env")
+    print(f"Success! EXEC Access Token generated and saved to .env")
 except Exception as e:
     print(f"Error: {e}")

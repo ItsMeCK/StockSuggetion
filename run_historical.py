@@ -25,6 +25,7 @@ def run_historical_engine(target_date: str):
         breakouts=[],
         heuristic_flags={},
         entry_trigger_results={},
+        news_catalysts={},
         approved_allocations={},
         execution_telemetry={},
         error_log=[]

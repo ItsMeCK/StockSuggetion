@@ -12,8 +12,8 @@ class SovereignConvictionGate:
     """
     def __init__(self, account_size: float = 1000000.0):
         self.account_size = account_size
-        self.titan_allocation = 50000.0 # High Conviction Titan Sizing
-        self.standard_allocation = 5000.0 # Standard Base Sizing
+        self.titan_allocation = 5000.0 # High Conviction Titan Sizing strictly capped at 5k
+        self.standard_allocation = 5000.0 # Standard Base Sizing strictly capped at 5k
 
     def evaluate_risk(self, symbol: str, entry: float, stop: float, conviction_score: float) -> Dict[str, Any]:
         """

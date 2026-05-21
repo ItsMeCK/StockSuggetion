@@ -72,6 +72,8 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
     active_regime = regime_map.get(macro, "CHOPPY_SIDEWAYS")
     all_rules = critic.rules.get("pring_pattern_geometries", {})
     
+    news_catalysts = state.get("news_catalysts", {})
+    
     for symbol in candidates:
         scores = agent_scores.get(symbol, {})
         vision_res = vision_validations.get(symbol, {})
@@ -101,7 +103,16 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
         if suitable_regimes and active_regime not in suitable_regimes:
             regime_penalty = 20.0
             
-        final_score = base_score + priority_boost - risk_penalty - regime_penalty
+        # D. News Catalyst Boost
+        catalyst_boost = 0.0
+        has_catalyst = False
+        news_data = news_catalysts.get(symbol, {})
+        if news_data.get("catalyst_detected", False):
+            catalyst_boost = news_data.get("score_boost", 0.0)
+            has_catalyst = True
+            logging.info(f"CATALYST BOOST: {symbol} received +{catalyst_boost} confidence boost from news catalyst: {news_data.get('summary')}")
+            
+        final_score = base_score + priority_boost - risk_penalty - regime_penalty + catalyst_boost
         
         # 4. THE MASTER VETO (Hard Rejections)
         veto_reason = "None"
@@ -113,8 +124,12 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
         target_date = state.get("target_date")
         evaluation = critic.evaluate_thesis(symbol, "thesis", macro, target_date)
         if evaluation["veto"]:
-            final_score -= 25.0
-            veto_reason = evaluation["critique"]
+            if has_catalyst:
+                logging.info(f"OVERRIDE VETO: {symbol} has high-impact news catalyst, bypassing Hidden Distribution veto.")
+                evaluation["veto"] = False
+            else:
+                final_score -= 25.0
+                veto_reason = evaluation["critique"]
             
         # FINAL SOVEREIGN CRITERIA (Production Grade: 75% Hard Hurdle)
         is_elite = final_score >= 80
@@ -123,15 +138,15 @@ def run_critic_agent(state: SovereignState) -> Dict[str, Any]:
         
         final_approval = (is_elite or is_momentum or is_accumulator) and (final_score >= 65)
         
-        evaluation["total_confidence"] = float(final_score)
+        evaluation["total_confidence"] = min(100.0, float(final_score))
         evaluation["is_elite"] = is_elite
         evaluation["is_momentum"] = is_momentum
         evaluation["is_accumulator"] = is_accumulator
         evaluation["approved"] = final_approval
         evaluation["veto_reason"] = veto_reason
         
+        critic_results[symbol] = evaluation
         if final_approval:
-            critic_results[symbol] = evaluation
             logging.info(f"HYBRID ELITE APPROVED: {symbol} (Elite: {is_elite}, Mom: {is_momentum}, Acc: {is_accumulator})")
         else:
             logging.warning(f"CRITIC VETO: {symbol} - Failed Hybrid Elite criteria. (Conf: {final_score:.1f})")

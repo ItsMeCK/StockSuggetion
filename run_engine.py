@@ -18,9 +18,9 @@ from langgraph.checkpoint.postgres import PostgresSaver
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def run_analysis_only():
+def run_analysis_only(pulse: int = 0):
     logging.info("==================================================")
-    logging.info("MIDNIGHT SOVEREIGN V2.1: ANALYSIS & EXECUTION RUN")
+    logging.info(f"MIDNIGHT SOVEREIGN V2.1: ANALYSIS & EXECUTION RUN (PULSE {pulse})")
     logging.info("==================================================")
 
     # 0. Phase 0: Reconciliation
@@ -54,6 +54,7 @@ def run_analysis_only():
 
     # 1. Initialize State
     initial_state = SovereignState(
+        pulse=pulse,
         macro_regime="",
         fii_net=0.0,
         dii_net=0.0,
@@ -64,46 +65,59 @@ def run_analysis_only():
         entry_trigger_results={},
         experience_warnings={},
         vision_validations={},
+        news_catalysts={},
         approved_allocations={},
         execution_telemetry={},
         error_log=[]
     )
 
-    # 2. Phase 2: Macro Regime Gate
-    logging.info("--- PHASE 2: MACRO REGIME GATE ---")
-    macro_delta = run_macro_regime_gate(initial_state)
-    initial_state.update(macro_delta)
-
-    if initial_state.get("macro_regime") == "CAPITULATION":
-        logging.error("SYSTEM HALTED: Macro Regime is CAPITULATION.")
-        return
-
-    # 3. Phase 2: Polars Screener (REAL DATA)
-    logging.info("--- PHASE 2: REAL DATA POLARS SCREENER ---")
-    screener = SovereignScreener()
-    candidates, incubator, base_scores, macro_regime = screener.run_pipeline()
-    initial_state["candidates"] = candidates
-    initial_state["incubator"] = incubator
-    initial_state["base_scores"] = base_scores
-
-
-
-    if not candidates and not incubator:
-        logging.info("No candidates or incubator stocks passed the Deterministic Screener. Ending run.")
-        return
-
-    # 4. Phase 3 & 4: LangGraph Orchestration
-    logging.info("--- PHASE 3 & 4: LANGGRAPH COGNITIVE ORCHESTRATION ---")
-    db_uri = f"postgresql://agent:agentpassword@{os.getenv('DB_HOST', 'localhost')}:5433/sovereign_state"
+    final_state = initial_state
     
-    with PostgresSaver.from_conn_string(db_uri) as checkpointer:
-        checkpointer.setup()
-        app = build_sovereign_graph_with_checkpointer(checkpointer)
-        # Use a date-specific thread_id to avoid state leakage between days
-        run_date = datetime.datetime.now().strftime("%Y%m%d")
-        config = {"configurable": {"thread_id": f"sovereign_run_{run_date}"}}
-        final_state = app.invoke(initial_state, config=config)
+    # We only run Catalyst Screener, Polars Screener, and LangGraph Entry Logic at 3 PM (Pulse 3) or EOD (Pulse 0)
+    if pulse in [3, 0]:
+        # 2. Phase 2: Macro Regime Gate
+        logging.info("--- PHASE 2: MACRO REGIME GATE ---")
+        macro_delta = run_macro_regime_gate(initial_state)
+        initial_state.update(macro_delta)
     
+        if initial_state.get("macro_regime") == "CAPITULATION":
+            logging.error("SYSTEM HALTED: Macro Regime is CAPITULATION.")
+            return
+    
+        # 3. Phase 2: Polars Screener (REAL DATA)
+        logging.info("--- PHASE 2: REAL DATA POLARS SCREENER ---")
+        
+        from pipeline.catalyst_screener import EventCatalystScreener
+        catalyst_screener = EventCatalystScreener()
+        injected_catalysts = catalyst_screener.run()
+        
+        screener = SovereignScreener()
+        candidates, incubator, flagged_momentum, base_scores, macro_regime = screener.run_pipeline(injected_catalysts=injected_catalysts)
+        initial_state["candidates"] = candidates
+        initial_state["incubator"] = incubator
+        initial_state["flagged_momentum_candidates"] = flagged_momentum
+        initial_state["base_scores"] = base_scores
+        initial_state["injected_catalysts"] = injected_catalysts
+    
+        if not candidates and not incubator and not flagged_momentum:
+            logging.info("No candidates, incubator stocks or flagged momentum passed the Deterministic Screener. Ending run.")
+            return
+    
+        # 4. Phase 3 & 4: LangGraph Orchestration
+        logging.info("--- PHASE 3 & 4: LANGGRAPH COGNITIVE ORCHESTRATION ---")
+        db_uri = f"postgresql://agent:agentpassword@{os.getenv('DB_HOST', 'localhost')}:5433/sovereign_state"
+        
+        with PostgresSaver.from_conn_string(db_uri) as checkpointer:
+            checkpointer.setup()
+            app = build_sovereign_graph_with_checkpointer(checkpointer)
+            # Use a date-specific thread_id to avoid state leakage between days
+            run_date = datetime.datetime.now().strftime("%Y%m%d")
+            config = {"configurable": {"thread_id": f"sovereign_run_{run_date}_pulse{pulse}"}}
+            final_state = app.invoke(initial_state, config=config)
+    else:
+        logging.info(f"--- SKIPPING PHASE 2, 3 & 4 (Intraday Pulse {pulse}) ---")
+        candidates = []
+        
     # 5. Persistence for UI
     os.makedirs("run_history", exist_ok=True)
     run_record = {
@@ -192,4 +206,9 @@ def run_analysis_only():
     logging.info("==================================================")
 
 if __name__ == "__main__":
-    run_analysis_only()
+    import argparse
+    parser = argparse.ArgumentParser(description="Midnight Sovereign Runner")
+    parser.add_argument("--pulse", type=int, choices=[0, 1, 2, 3], default=0, help="Run a specific pulse (1=10AM, 2=1PM, 3=3PM). Default 0 is EOD.")
+    args = parser.parse_args()
+    
+    run_analysis_only(pulse=args.pulse)

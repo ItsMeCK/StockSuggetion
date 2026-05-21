@@ -14,6 +14,26 @@ class SovereignScreener:
         # In production, we connect to TimescaleDB and read directly into Polars using ConnectorX
         pass
 
+    def validate_freshness(self, symbol: str, latest_time) -> bool:
+        """
+        Validates the data freshness of a symbol using the CandidateSchema check.
+        """
+        from midnight_sovereign.core.schemas import CandidateSchema
+        try:
+            CandidateSchema(
+                symbol=symbol,
+                price=1.0,
+                volume=1.0,
+                volume_ratio=1.0,
+                extension_pct=0.0,
+                is_stage_2=True,
+                last_updated=latest_time
+            )
+            return True
+        except Exception as e:
+            logging.error(f"QUALITY VETO: {symbol} failed Pydantic audit: {e}")
+            return False
+
     def fetch_active_trades(self) -> List[str]:
         """
         Queries the trade_events ledger for symbols that are currently ACTIVE or AMO_PLACED.
@@ -174,9 +194,12 @@ class SovereignScreener:
             pl.col("true_range").rolling_mean(window_size=20).over("symbol").alias("atr_20")
         ])
         
-        # Calculate Turnover (Money Flow) for Titan Bypass
+        # Calculate Turnover (Money Flow) for Titan Bypass and close_range_pct
         df = df.with_columns([
-            (pl.col("close") * pl.col("volume")).alias("turnover")
+            (pl.col("close") * pl.col("volume")).alias("turnover"),
+            pl.when(pl.col("high") > pl.col("low"))
+            .then((pl.col("close") - pl.col("low")) / (pl.col("high") - pl.col("low")))
+            .otherwise(1.0).alias("close_range_pct")
         ])
         
         return df
@@ -245,15 +268,19 @@ class SovereignScreener:
         ])
         return df
 
-    def run_pipeline(self, target_date: str = None) -> List[str]:
+    def run_pipeline(self, target_date: str = None, pulse: int = None, injected_catalysts: List[str] = None) -> List[str]:
+        if injected_catalysts is None:
+            injected_catalysts = []
         df = self.fetch_market_data()
+        self.total_screened = df["symbol"].n_unique()
         
-        # If target_date is provided, slice data up to that date
         if target_date:
             logging.info(f"Slicing historical data up to end of {target_date}")
-            # Ensure target_date is a datetime for comparison, set to end of day to include EOD
-            from datetime import datetime, timezone, timedelta
-            target_dt = datetime.strptime(target_date, "%Y-%m-%d").replace(tzinfo=timezone.utc) + timedelta(days=1)
+            from datetime import datetime, timezone
+            # target_date is e.g. '2026-05-20'. 
+            # In DB, May 20th data is stored as '2026-05-19 18:30:00+00'
+            # We want to include everything before '2026-05-20 00:00:00+00'
+            target_dt = datetime.strptime(target_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
             df = df.filter(pl.col("time") < target_dt)
         
         # 1. Drop non-equities first from main dataset (expanded regex)
@@ -263,6 +290,18 @@ class SovereignScreener:
             (pl.col("symbol").str.len_chars() < 15) &
             (~pl.col("symbol").str.contains("VIX|BOND|GS|INDEX|ETF|BEES|NIFTY"))
         )
+        
+        # Determine volume scaling factor based on intraday pulse number
+        volume_scale = 1.0
+        if pulse == 1:
+            volume_scale = 0.15
+        elif pulse == 2:
+            volume_scale = 0.60
+        elif pulse == 3:
+            volume_scale = 1.0
+            
+        if volume_scale != 1.0:
+            logging.info(f"Applying time-based volume scaling factor of {volume_scale}x for Pulse #{pulse}")
         
         # 2. Calculate metrics
         df = self.apply_stage_2_filter(df)
@@ -281,13 +320,13 @@ class SovereignScreener:
             (pl.col("extension_pct") > 12.0).alias("REJECT_reason_over_extended"),
             (pl.col("sma_50_slope_10d") > 150.0).alias("REJECT_reason_velocity_breach"),
             (pl.col("sma_10") <= pl.col("sma_20")).alias("REJECT_reason_velocity_cross_fail"),
-            (pl.col("volume") < (1.5 * pl.col("vol_avg_20"))).alias("REJECT_reason_volume_thrust_fail"),
+            (pl.col("volume") < (1.5 * volume_scale * pl.col("vol_avg_20"))).alias("REJECT_reason_volume_thrust_fail"),
             (pl.col("atr_3") > pl.col("atr_20")).alias("REJECT_reason_atr_squeeze_fail"),
             (pl.col("symbol").is_in(active_trades)).alias("EXCLUDED_active_trade"),
             # Shannon Stage 1 -> 2 Transition Marker
             ((pl.col("close") > pl.col("sma_10")) & 
              (pl.col("close") > pl.col("sma_20")) & 
-             (pl.col("volume") >= (2.0 * pl.col("vol_avg_20"))) &
+             (pl.col("volume") >= (2.0 * volume_scale * pl.col("vol_avg_20"))) &
              (pl.col("close") >= (pl.col("sma_50") * 0.98)) &
              (pl.col("extension_pct") <= 12.0)).alias("IS_stage_transition")
         ])
@@ -320,17 +359,17 @@ class SovereignScreener:
             (pl.col("close") > pl.col("sma_50")) &
             (
                 (pl.col("sma_50") >= pl.col("sma_200")) | # Established Stage 2
-                (pl.col("volume") > 2.0 * pl.col("vol_avg_20")) # Institutional Rebirth (Stage 1 -> 2)
+                (pl.col("volume") > 2.0 * volume_scale * pl.col("vol_avg_20")) # Institutional Rebirth (Stage 1 -> 2)
             ) &
             (pl.col("sma_50_slope_10d") > -50) & # Allow slight negative slope if recovering fast
             (
                 (pl.col("extension_pct") <= 5.0) | 
-                ((pl.col("extension_pct") <= 20.0) & (pl.col("roc_10") > pl.col("roc_20")) & (pl.col("volume") > 1.5 * pl.col("vol_avg_20")))
+                ((pl.col("extension_pct") <= 20.0) & (pl.col("roc_10") > pl.col("roc_20")) & (pl.col("volume") > 1.5 * volume_scale * pl.col("vol_avg_20")))
             ) & 
             (pl.col("sma_10") > pl.col("sma_20")) &
             (
-                (pl.col("volume") >= (vol_mult_stage2 * pl.col("vol_avg_20"))) | # Thrust
-                (pl.col("volume") <= (0.8 * pl.col("vol_avg_20"))) # Institutional Dry-up
+                (pl.col("volume") >= (vol_mult_stage2 * volume_scale * pl.col("vol_avg_20"))) | # Thrust
+                (pl.col("volume") <= (0.8 * volume_scale * pl.col("vol_avg_20"))) # Institutional Dry-up
             )
         )
         
@@ -349,8 +388,8 @@ class SovereignScreener:
                 ((pl.col("extension_pct") <= 12.0) & (pl.col("roc_10") > pl.col("roc_20")))
             ) &
             (
-                (pl.col("volume") <= (0.8 * pl.col("vol_avg_20"))) | # The Coil (Dry-up)
-                (pl.col("volume") >= (vol_mult_transition * pl.col("vol_avg_20"))) # The Launch (Thrust)
+                (pl.col("volume") <= (0.8 * volume_scale * pl.col("vol_avg_20"))) | # The Coil (Dry-up)
+                (pl.col("volume") >= (vol_mult_transition * volume_scale * pl.col("vol_avg_20"))) # The Launch (Thrust)
             )
         )
 
@@ -365,13 +404,21 @@ class SovereignScreener:
                     (pl.col("extension_pct") > ext_limit) &
                     (pl.col("extension_pct") <= 25.0) &
                     (pl.col("roc_10") > 5.0) &
-                    (pl.col("volume") >= (2.0 * pl.col("vol_avg_20")))
+                    (pl.col("volume") >= (2.0 * volume_scale * pl.col("vol_avg_20")))
                 ) |
                 # Titan Bypass (Aggressive)
                 (
-                    (pl.col("turnover") >= 5_000_000_000) & # 500 Crores Turnover
-                    (pl.col("volume") >= (1.5 * pl.col("vol_avg_20"))) &
+                    (pl.col("turnover") >= (5_000_000_000 * volume_scale)) & # 500 Crores Turnover scaled
+                    (pl.col("volume") >= (1.5 * volume_scale * pl.col("vol_avg_20"))) &
                     (pl.col("roc_10") > 0.0)
+                ) |
+                # Stealth Accumulation (Smart 3 PM Run)
+                (
+                    (pl.col("volume") >= (1.5 * volume_scale * pl.col("vol_avg_20"))) &
+                    (pl.col("roc_10") >= 1.5) &
+                    (pl.col("roc_10") <= 5.0) &
+                    (pl.col("atr_3") <= pl.col("atr_20")) &
+                    (pl.col("close_range_pct") >= 0.75)
                 )
             )
         )
@@ -380,6 +427,13 @@ class SovereignScreener:
         stage_2_symbols = stage_2_df["symbol"].unique().to_list()
         transition_symbols = transition_df["symbol"].unique().to_list()
         flagged_momentum_symbols = flagged_momentum_df["symbol"].unique().to_list()
+        
+        # Inject our pre-breakout catalyst stocks directly into the momentum flags
+        if injected_catalysts:
+            logging.info(f"Injecting Pre-Breakout Catalysts into LangGraph pool: {injected_catalysts}")
+            for sym in injected_catalysts:
+                if sym not in flagged_momentum_symbols:
+                    flagged_momentum_symbols.append(sym)
         
         # Tag the main dataframe for the Librarian
         latest_df = latest_df.with_columns([
@@ -401,6 +455,34 @@ class SovereignScreener:
                 approved_symbols = [s for s in approved_symbols if s not in active_trades]
                 incubator_symbols = [s for s in incubator_symbols if s not in active_trades]
                 flagged_momentum_symbols = [s for s in flagged_momentum_symbols if s not in active_trades]
+                
+        # 6.5 Quality Gate: Validate data freshness for all candidate types
+        valid_approved = []
+        for sym in approved_symbols:
+            sym_row = latest_df.filter(pl.col("symbol") == sym)
+            if not sym_row.is_empty():
+                latest_time = sym_row.to_dicts()[0]["time"]
+                if self.validate_freshness(sym, latest_time):
+                    valid_approved.append(sym)
+        approved_symbols = valid_approved
+
+        valid_incubator = []
+        for sym in incubator_symbols:
+            sym_row = latest_df.filter(pl.col("symbol") == sym)
+            if not sym_row.is_empty():
+                latest_time = sym_row.to_dicts()[0]["time"]
+                if self.validate_freshness(sym, latest_time):
+                    valid_incubator.append(sym)
+        incubator_symbols = valid_incubator
+
+        valid_flagged = []
+        for sym in flagged_momentum_symbols:
+            sym_row = latest_df.filter(pl.col("symbol") == sym)
+            if not sym_row.is_empty():
+                latest_time = sym_row.to_dicts()[0]["time"]
+                if self.validate_freshness(sym, latest_time):
+                    valid_flagged.append(sym)
+        flagged_momentum_symbols = valid_flagged
         
         base_scores = {}
         
@@ -511,7 +593,8 @@ def run_screener_node(state: dict) -> dict:
     screener = SovereignScreener()
     # Extract target_date from state if running historical, otherwise None
     target_date = state.get("target_date")
-    candidates, incubator, flagged_momentum, base_scores, macro_regime = screener.run_pipeline(target_date=target_date)
+    injected_catalysts = state.get("injected_catalysts", [])
+    candidates, incubator, flagged_momentum, base_scores, macro_regime = screener.run_pipeline(target_date=target_date, injected_catalysts=injected_catalysts)
     return {
         "candidates": candidates, 
         "incubator": incubator, 

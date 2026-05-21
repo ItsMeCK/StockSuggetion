@@ -15,6 +15,7 @@ from agents.critic_agent import run_critic_agent as critic_agent
 from agents.fundamental_audit import run_fundamental_audit_node as fundamental_audit
 from agents.watcher_agent import run_watcher_agent as watcher_agent
 from agents.sector_agent import run_sector_agent as sector_agent
+from agents.news_catalyst_agent import run_news_catalyst_node as news_catalyst_agent
 
 def should_execute(state: SovereignState) -> str:
     """Conditional edge router: proceed to execution if we have approved allocations, else END."""
@@ -32,6 +33,7 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.add_node("entry_trigger_agent", entry_trigger_agent)
     workflow.add_node("pattern_agent_vision", pattern_agent_vision)
     workflow.add_node("sector_agent", sector_agent)
+    workflow.add_node("news_catalyst_agent", news_catalyst_agent)
     workflow.add_node("watcher_agent", watcher_agent)
     workflow.add_node("critic_agent", critic_agent)
     workflow.add_node("fundamental_audit", fundamental_audit)
@@ -48,7 +50,8 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.add_edge("entry_trigger_agent", "watcher_agent")
     workflow.add_edge("watcher_agent", "pattern_agent_vision")
     workflow.add_edge("pattern_agent_vision", "sector_agent")
-    workflow.add_edge("sector_agent", "critic_agent")
+    workflow.add_edge("sector_agent", "news_catalyst_agent")
+    workflow.add_edge("news_catalyst_agent", "critic_agent")
     
     def critic_debate_router(state: SovereignState) -> str:
         count = state.get("debate_count", 0)

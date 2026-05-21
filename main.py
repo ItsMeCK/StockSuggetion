@@ -36,6 +36,7 @@ def run_pulse(pulse_number: int):
     # 3. Initialize the State Object
     initial_state = SovereignState(
         target_date=datetime.now().strftime("%Y-%m-%d"),
+        pulse=pulse_number,
         macro_regime="",
         candidates=[],
         incubator=[],
@@ -45,6 +46,7 @@ def run_pulse(pulse_number: int):
         heuristic_flags={},
         experience_warnings={},
         vision_validations={},
+        news_catalysts={},
         approved_allocations={},
         execution_telemetry={},
         error_log=[],
@@ -64,7 +66,8 @@ def run_pulse(pulse_number: int):
 
     # Run the Polars Screener (Now with Elite Top 2 + Titan Bypass)
     screener = SovereignScreener()
-    candidates, incubator, flagged_momentum, base_scores, macro_regime = screener.run_pipeline()
+    candidates, incubator, flagged_momentum, base_scores, macro_regime = screener.run_pipeline(pulse=pulse_number)
+    initial_state["total_screened"] = getattr(screener, "total_screened", 0)
     initial_state["candidates"] = candidates
     initial_state["incubator"] = incubator
     initial_state["flagged_momentum_candidates"] = flagged_momentum
@@ -73,6 +76,19 @@ def run_pulse(pulse_number: int):
     # 5. Phase 3 & 4: LangGraph Orchestration
     if not candidates and not incubator and not flagged_momentum:
         logging.info("No candidates passed the Deterministic Screener. Ending pulse.")
+        try:
+            from alerts.email_notifier import SovereignEmailer
+            emailer = SovereignEmailer()
+            emailer.send_pulse_report(
+                pulse_number=pulse_number,
+                macro_regime=initial_state.get("macro_regime", "UNKNOWN"),
+                initial_candidates=[],
+                approved_allocations={},
+                critic_results={},
+                total_screened=initial_state.get("total_screened", 0)
+            )
+        except Exception as email_err:
+            logging.error(f"Failed to send empty pulse report email: {email_err}")
         return
 
     logging.info("--- PHASE 3 & 4: LANGGRAPH COGNITIVE ORCHESTRATION ---")
@@ -94,6 +110,21 @@ def run_pulse(pulse_number: int):
         json.dump(run_record, f, indent=4)
     
     logging.info(f"Pulse #{pulse_number} complete. Approved: {list(final_state.get('approved_allocations', {}).keys())}")
+
+    # Send unified HTML pulse report email
+    try:
+        from alerts.email_notifier import SovereignEmailer
+        emailer = SovereignEmailer()
+        emailer.send_pulse_report(
+            pulse_number=pulse_number,
+            macro_regime=final_state.get("macro_regime", "UNKNOWN"),
+            initial_candidates=final_state.get("candidates", []),
+            approved_allocations=final_state.get("approved_allocations", {}),
+            critic_results=final_state.get("critic_results", {}),
+            total_screened=final_state.get("total_screened", 0)
+        )
+    except Exception as email_err:
+        logging.error(f"Failed to generate and send pulse report email: {email_err}")
 
 def main():
     parser = argparse.ArgumentParser(description="Midnight Sovereign Orchestrator")
