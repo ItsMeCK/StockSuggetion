@@ -26,6 +26,11 @@ def run_analysis_only(pulse: int = 0):
     # 0. Phase 0: Reconciliation
     logging.info("--- PHASE 0: BITEMPORAL RECONCILIATION ---")
     run_phase_0_reconciliation({})
+    
+    # 0.5 Phase 1: Data Ingestion
+    logging.info("--- PHASE 1: DATA INGESTION ---")
+    from pipeline.ingestion import run_eod_ingestion
+    run_eod_ingestion()
 
     # 0.1 Data Freshness Check
     try:
@@ -204,6 +209,21 @@ def run_analysis_only(pulse: int = 0):
     logging.info(f"Final Candidates: {candidates}")
     logging.info(f"Approved Allocations: {list(final_state.get('approved_allocations', {}).keys())}")
     logging.info("==================================================")
+
+    # Send unified HTML pulse report email
+    try:
+        from alerts.email_notifier import SovereignEmailer
+        emailer = SovereignEmailer()
+        emailer.send_pulse_report(
+            pulse_number=pulse,
+            macro_regime=final_state.get("macro_regime", "UNKNOWN"),
+            initial_candidates=candidates,
+            approved_allocations=final_state.get("approved_allocations", {}),
+            critic_results=final_state.get("vision_validations", {}),
+            total_screened=0
+        )
+    except Exception as email_err:
+        logging.error(f"Failed to generate and send pulse report email: {email_err}")
 
 if __name__ == "__main__":
     import argparse
