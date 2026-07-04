@@ -17,6 +17,8 @@ class SovereignExecutionEngine:
         self.access_token = os.getenv("EXEC_KITE_ACCESS_TOKEN")
         self.capital_per_trade = 5000.0  # Fixed 5k INR allocation per suggestion
         
+        self.live_buy = os.getenv("LIVE_BUY", "FALSE").upper() == "TRUE"
+        
         if not self.api_key or not self.access_token:
             logging.warning("EXEC account credentials missing. Operating in Dry-Run mode.")
             self.live = False
@@ -51,7 +53,7 @@ class SovereignExecutionEngine:
                 
             logging.info(f"EXECUTING BUY: {qty} shares of {symbol} @ ~{price} (Total: ₹{qty*price:.2f})")
             
-            if self.live:
+            if self.live and self.live_buy:
                 try:
                     limit_price = round(round((price * 1.02) * 20) / 20, 2)
                     order_id = self.kite.place_order(

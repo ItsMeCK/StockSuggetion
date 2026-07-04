@@ -31,7 +31,13 @@ class SovereignScreener:
             )
             return True
         except Exception as e:
-            logging.error(f"QUALITY VETO: {symbol} failed Pydantic audit: {e}")
+            msg = str(e).replace('\n', ' ').strip()
+            if "STALE_DATA_HALT" in msg:
+                import re
+                match = re.search(r"(STALE_DATA_HALT: [^\]\n]+)", msg)
+                if match:
+                    msg = match.group(1)
+            logging.info(f"QUALITY VETO: {symbol} skipped - {msg}")
             return False
 
     def fetch_active_trades(self) -> List[str]:
@@ -95,7 +101,7 @@ class SovereignScreener:
         query = """
             SELECT time, symbol, open, high, low, close, volume 
             FROM daily_ohlcv 
-            WHERE symbol ~ '^[A-Z0-9]+$' 
+            WHERE symbol ~ '^[A-Z0-9&_-]+$' 
               AND LENGTH(symbol) <= 10
               AND symbol NOT ILIKE '%%NIFTY%%'
               AND symbol NOT ILIKE '%%INDEX%%'
@@ -282,11 +288,20 @@ class SovereignScreener:
             # We want to include everything before '2026-05-20 00:00:00+00'
             target_dt = datetime.strptime(target_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
             df = df.filter(pl.col("time") < target_dt)
+            
+        # Enforce data freshness at the dataframe level to filter out dead/illiquid stocks
+        from datetime import timedelta
+        max_time = df["time"].max()
+        if max_time:
+            five_days_ago = max_time - timedelta(days=5)
+            logging.info(f"Filtering out inactive stocks (no trades since {five_days_ago.strftime('%Y-%m-%d')})")
+            active_symbols = df.filter(pl.col("time") >= five_days_ago)["symbol"].unique()
+            df = df.filter(pl.col("symbol").is_in(active_symbols))
         
         # 1. Drop non-equities first from main dataset (expanded regex)
         # Filters for alphanumeric NSE symbols, blocks noise, and enforces length
         df = df.filter(
-            (pl.col("symbol").str.contains("^[A-Z0-9]+$")) & 
+            (pl.col("symbol").str.contains("^[A-Z0-9&_-]+$")) & 
             (pl.col("symbol").str.len_chars() < 15) &
             (~pl.col("symbol").str.contains("VIX|BOND|GS|INDEX|ETF|BEES|NIFTY"))
         )
@@ -527,7 +542,13 @@ class SovereignScreener:
                         last_updated=latest_row["time"]
                     )
                 except Exception as e:
-                    logging.error(f"QUALITY VETO: {sym} failed Pydantic audit: {e}")
+                    msg = str(e).replace('\n', ' ').strip()
+                    if "STALE_DATA_HALT" in msg:
+                        import re
+                        match = re.search(r"(STALE_DATA_HALT: [^\]\n]+)", msg)
+                        if match:
+                            msg = match.group(1)
+                    logging.info(f"QUALITY VETO: {sym} skipped - {msg}")
                     continue
 
                 ranked_candidates.append({
@@ -562,23 +583,17 @@ class SovereignScreener:
                 # Sort by Base Score descending
                 ranked_candidates.sort(key=lambda x: base_scores[x["symbol"]], reverse=True)
                 
-                # ELITE CAP: Only take the Top 5 Standard candidates to eliminate noise
-                elite_ranked = ranked_candidates[:5]
-                approved_symbols = [x["symbol"] for x in elite_ranked]
-                logging.info(f"Elite Cap Applied: Selected {len(approved_symbols)} standard candidates from {len(ranked_candidates)} passing screener.")
+                approved_symbols = [x["symbol"] for x in ranked_candidates]
+                logging.info(f"Selected {len(approved_symbols)} standard candidates passing screener.")
         
         # 7. Final Audit List: Merge established Stage 2 and Shannon Transitions
-        # SOVEREIGN PURE: Combined Standard + Incubator pool is capped at Top 2 overall
         # Use Base Score to pick the best from the combined pool
         combined_pool = list(set(approved_symbols + incubator_symbols))
         
         # Sort combined pool by base_score (default to 0 if not ranked)
         combined_pool.sort(key=lambda x: base_scores.get(x, 0), reverse=True)
         
-        # Slice to Top 2
-        standard_elite_top_2 = combined_pool[:2]
-        
-        all_audit_candidates = standard_elite_top_2
+        all_audit_candidates = combined_pool
         
         # Market Regime Check
         macro_regime = self.calculate_market_regime(target_date)

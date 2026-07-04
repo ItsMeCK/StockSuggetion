@@ -25,9 +25,15 @@ class CandidateSchema(BaseModel):
             return v
 
         is_live = os.getenv("TRADING_MODE") == "LIVE"
-        threshold = 900 if is_live else 86400 # 15 mins or 24 hours
         
-        diff = datetime.now(v.tzinfo) - v
+        # Relax freshness check on weekends/Monday morning (Saturday, Sunday, Monday)
+        now = datetime.now(v.tzinfo)
+        if now.weekday() in (5, 6, 0):
+            threshold = 345600 # 96 hours (4 days) to allow weekend/Monday runs
+        else:
+            threshold = 900 if is_live else 86400 # 15 mins or 24 hours
+        
+        diff = now - v
         if diff.total_seconds() > threshold:
             raise ValueError(f"STALE_DATA_HALT: Latest data for this stock is {diff.total_seconds()/3600:.1f} hours old. Ingestion is likely broken.")
         return v

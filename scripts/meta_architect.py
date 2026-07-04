@@ -13,7 +13,8 @@ class MetaArchitect:
     architectural changes (new agents, conditional edges, decision nodes).
     """
     def __init__(self):
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        from langsmith import wrappers
+        self.client = wrappers.wrap_openai(OpenAI(api_key=os.getenv("OPENAI_API_KEY")))
         self.base_dir = Path(__file__).parent.parent
 
     def load_context(self) -> dict:

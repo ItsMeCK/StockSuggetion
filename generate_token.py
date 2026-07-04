@@ -6,7 +6,7 @@ load_dotenv()
 
 api_key = os.getenv("KITE_API_KEY")
 api_secret = os.getenv("KITE_API_SECRET")
-request_token = "757s70hPZsQGv4GIIpfdFsRlbCvWFFxy"
+request_token = "wNjNyQDh1lh6p6nKwBUH7YxyjY7pF5WR"
 
 try:
     kite = KiteConnect(api_key=api_key)

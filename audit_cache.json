@@ -1,0 +1,3311 @@
+{
+    "AIAENG_2026-06-05": {
+        "narrative": "AIA Engineering is facing an immediate technical and governance risk with a potential 'trap' setup and resignation of an executive director.",
+        "red_flags": [
+            "Technical: Distance to Resistance is 0.0%, indicating a 'Trap'.",
+            "Fundamental: Executive Director B. F. Shah resigns, raising governance concerns."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "MOLDTKPAC_2026-06-05": {
+        "narrative": "Mold-Tek Packaging shows strong momentum with adequate distance from resistance, but some news hints at potential financial challenges.",
+        "red_flags": [
+            "Is Mold-Tek Packaging (NSE:MOLDTKPAC) A Risky Investment?",
+            "CEO will likely not see a huge raise this year indicating potential managerial or financial constraints"
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "DEPLOY"
+    },
+    "ADANIGREEN_2026-06-05": {
+        "narrative": "Adani Green Energy faces significant technical resistance and potential governance issues impacting investor confidence.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% - Overhead Wall",
+            "Fraud/Audit Concerns: Involvement in fraud charges and removal from Norway's Sovereign Wealth Fund portfolio for corruption and financial crime allegations",
+            "US SEC Investigation involving company promoters"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ACMESOLAR_2026-06-05": {
+        "narrative": "ACME Solar Holdings Limited is currently trapped at resistance with solid financial growth, but facing a significant GST demand issue.",
+        "red_flags": [
+            "Distance to Resistance is 0.0%, indicating a 'Trap'.",
+            "Alleged short payment of GST leading to a Rs 149.73 Crore demand."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "MTARTECH_2026-06-05": {
+        "narrative": "MTAR Technologies is facing immediate resistance with inconsistent financials, questioning its upward momentum sustainability.",
+        "red_flags": [
+            "Technical: Distance to Overhead Resistance is 0.0%, indicating an immediate overhead wall.",
+            "Fundamental: Concerns regarding capital allocation and financial inconsistencies as mentioned in news reports."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "OLAELEC_2026-06-05": {
+        "narrative": "Ola Electric Mobility exhibits a volatile stock performance amidst a mix of positive momentum and subtle warning signals in its technical and fundamental indicators.",
+        "red_flags": [
+            "Recent decline of 61% indicates volatile sentiment and profit-taking activities.",
+            "Promoter stake reduction suggests potential lack of confidence.",
+            "Significant losses reported with inconsistencies in quarterly financials."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "HSCL_2026-06-05": {
+        "narrative": "HSCL exhibits strong technical momentum but faces potential resistance challenges and mixed fundamental signals.",
+        "red_flags": [
+            "Overhead Resistance: 0.0% indicates a 'Trap' as per criteria.",
+            "Mixed fundamental indicators with possible underlying issues.",
+            "No immediate fraud or audit red flags, but cautious due to mixed fundamental signals."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "CANBK_2026-06-05": {
+        "narrative": "Canara Bank faces multiple regulatory penalties and potential exposure to fraud, while navigating a promising technical setup.",
+        "red_flags": [
+            "RBI penalties for KYC and account handling violations",
+            "Insolvency petition against Rajesh Exports amid SEBI fraud probe",
+            "CBI investigation for a significant fraud case"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "QUESS_2026-06-05": {
+        "narrative": "While Quess Corp shows positive price momentum and some fundamental improvements, significant red flags in audit and resignation issues present serious risks.",
+        "red_flags": [
+            "Quess Corp is rated as 'Sell' by Markets Mojo.",
+            "Resignation of key executive (Guruprasad Srinivasan as ED).",
+            "Quess Corp fined \u20b950L for tax matter and GST penalty of Rs. 39.36 Lakhs.",
+            "\u20b9180 Crore tax demand for non-filing of IT Returns, although quashed by Madras High Court."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "KIMS_2026-06-05": {
+        "narrative": "KIMS holds strong recent achievements but is constrained by immediate technical obstacles that warrant caution.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 0.1%, indicating a near-term technical trap."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ZEEL_2026-06-05": {
+        "narrative": "Despite securing FIFA broadcasting rights, ZEEL faces significant governance issues and financial losses, overshadowing any technical momentum.",
+        "red_flags": [
+            "SEBI show cause notice and alleged fund diversion",
+            "Significant Q4 loss and revenue decline",
+            "Retail and institutional investor disappointment due to market cap drop",
+            "SEBI fine on promoter entity for disclosure lapses"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "PROV-SM_2026-06-05": {
+        "narrative": "PROV-SM faces immediate resistance and potential price traps with no supporting fundamental or audit actions.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating a 'Trap'.",
+            "Lack of fundamental news suggests potential information asymmetry."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "HEMIPROP_2026-06-05": {
+        "narrative": "Despite technical momentum, Hemisphere Properties' widened losses amidst revenue growth and mixed fundamentals highlight potential weaknesses.",
+        "red_flags": [
+            "Widened loss despite revenue growth",
+            "Different signal between technicals suggesting gains and fundamentals suggesting weaknesses"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ADANIENT_2026-06-05": {
+        "narrative": "Adani Enterprises faces significant resistance with ongoing regulatory challenges and allegations of fraud.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating a potential trap.",
+            "Negative news involving fraud allegations and regulatory scrutiny from U.S. SEC and Sebi.",
+            "Mixed fundamental performance with news of share price volatility and earnings concerns."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "PKTEA_2026-06-05": {
+        "narrative": "Despite strong momentum, PKTEA is too close to resistance, posing a high risk of a trap.",
+        "red_flags": [
+            "Distance to Resistance is less than 5%, indicating a potential trap."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ZENTEC_2026-06-07": {
+        "narrative": "Zen Technologies shows strong gains with promising technological advances but is tied with fluctuating analyst estimates and a 'Sell' rating.",
+        "red_flags": [
+            "Consensus Cut Estimates for 2027",
+            "Rated Sell by Markets Mojo"
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "ADANIGREEN_2026-06-07": {
+        "narrative": "Adani Green Energy faces significant resistance issues and fraud allegations, making it a risky investment.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% indicates imminent resistance",
+            "SEC investigation and fraud charges against the founder",
+            "Norway\u2019s Sovereign Wealth Fund dropping Adani Green over corruption allegations"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ADANIENT_2026-06-07": {
+        "narrative": "ADANIENT faces immediate resistance and deep-rooted regulatory and fraud challenges, raising significant caution for any potential investment.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0%",
+            "Adani group stocks under scrutiny by U.S. SEC for fraud",
+            "Ongoing SEBI investigations into Adani",
+            "OFAC request for information following allegations",
+            "High negative media coverage involving fraud and regulatory issues"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "KIMS_2026-06-07": {
+        "narrative": "KIMS stock presents significant risks due to close proximity to resistance and lack of strong technical breakout signals.",
+        "red_flags": [
+            "TECHNICAL: Distance to Overhead Resistance is only 0.1%, indicating a potential Trap.",
+            "TECHNICAL: Momentum Velocity is high, but with such resistance proximity, it's considered risky.",
+            "NOIMMEDIATE FRAUD/AUDIT issues noted, but vigilance required for any future signs."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "HSCL_2026-06-07": {
+        "narrative": "Himadri Speciality Chemical Ltd reveals technical vulnerability with potential resistance trapping despite strong financial performance claims.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% indicates a 'Trap'.",
+            "Himadri's profits may not reveal underlying issues according to simplywall.st."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "CANBK_2026-06-07": {
+        "narrative": "Canara Bank faces significant regulatory scrutiny and potential financial instability due to KYC violations and ongoing fraud investigations.",
+        "red_flags": [
+            "RBI penalties for KYC and account handling violations",
+            "Rajesh Exports facing insolvency amid fraud probe",
+            "Fraud cases involving significant monetary amounts"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "COALINDIA_2026-06-07": {
+        "narrative": "Coal India faces significant regulatory and compliance issues that overshadow its operational news and technical setup.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 2.0%, indicating a trap.",
+            "Fined by NSE and BSE for non-compliance.",
+            "Decline in coal production reported.",
+            "Non-compliance with SEBI norms."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ETERNAL_2026-06-07": {
+        "narrative": "Eternal shows promise with momentum and growth, but faces concerns over recent CEO transition and penalties.",
+        "red_flags": [
+            "Recent CEO resignation",
+            "GST penalty notice for short payment of output tax",
+            "Profitability concerns despite revenue growth"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ZEEL_2026-06-07": {
+        "narrative": "While ZEEL has secured significant FIFA media rights boosting potential growth, the ongoing financial irregularities and regulatory issues overshadow its prospects.",
+        "red_flags": [
+            "SEBI fines and show cause notices indicate potential governance issues.",
+            "Market cap decline suggests potential discontent among investors.",
+            "Significant financial loss reported in Q4 FY26."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AXISBANK_2026-06-07": {
+        "narrative": "Axis Bank shows technical strength in an ascending triangle, but underlying governance and management issues raise concerns.",
+        "red_flags": [
+            "Issues with SEBI compliance",
+            "Involvement in past note refusal leading to a financial penalty",
+            "Concerns about corporate governance highlighted by India's banking sector crisis",
+            "Previous layoff of employees amidst technological shifts"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "OLAELEC_2026-06-07": {
+        "narrative": "Ola Electric exhibits strong momentum and capital raising but suffers from significant stock volatility and recent substantial losses.",
+        "red_flags": [
+            "Promoters reducing stakes",
+            "SoftBank selling stake",
+            "Significant recent stock price fall",
+            "Clarification on auditor's inventory control observation",
+            "Repeated losses despite QIP-induced rallies"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AIAENG_2026-06-07": {
+        "narrative": "AIA Engineering shows promising growth but faces imminent technical resistance and potential governance issues.",
+        "red_flags": [
+            "Technical: Distance to Overhead Resistance is 0.0%, indicating immediate resistance.",
+            "Fundamental: Earnings questioned for quality and Executive Director resignation may indicate governance issues."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ACMESOLAR_2026-06-07": {
+        "narrative": "Despite recent highs and strong momentum, ACMESOLAR faces critical challenges with immediate overhead resistance and potential fiscal concerns.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating an immediate technical trap.",
+            "Alleged short payment of GST hitting the company with Rs 149.73 Crore demand."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "CGPOWER_2026-06-07": {
+        "narrative": "CG Power appears to have strong growth and strategic initiatives but is constrained by imminent resistance and a history of fraud issues.",
+        "red_flags": [
+            "Technical Rigor: Distance to Overhead Resistance is 0.0%, indicating a 'Trap'.",
+            "Fraud/Audit: History of massive fraud reports and governance issues.",
+            "FRAUD/AUDIT: Concerns related to previous corporate governance issues within the company."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "GROWW_2026-06-07": {
+        "narrative": "Groww's strategic acquisitions and market approvals appear strong, but insider selling and potential static phases warrant caution.",
+        "red_flags": [
+            "Friale Fund offloading significant shares signals potential lack of confidence.",
+            "Groww Mutual Fund's change in fund managers may indicate instability or new strategic direction."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "ADANIENSOL_2026-06-07": {
+        "narrative": "Despite strong growth prospects, Adani Energy Solutions is currently in a critical technical position with no buffer to overhead resistance.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% - classified as a 'Trap'."
+        ],
+        "grade": "D",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "SCI_2026-06-07": {
+        "narrative": "SCI shows promise with a bullish technical phase and substantial distance to resistance, but concerns around demerger objections and possible privatisation cancellation raise caution.",
+        "red_flags": [
+            "Multiple objections filed on SCI demerger scheme",
+            "Government considering calling off privatisation of Shipping Corp"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "HSCL_2026-06-08": {
+        "narrative": "The HSCL stock is currently in a precarious technical position with potential fundamental concerns but displays strong recent performance.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% - Trap",
+            "Himadri Speciality Chemical's profits may not reveal underlying issues"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ACMESOLAR_2026-06-08": {
+        "narrative": "ACME Solar Holdings is experiencing a potentially risky phase with zero distance to resistance, despite recent financial positives.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating an imminent barrier preventing upward movement.",
+            "GST demand issue: Rs 149.73 Crore demand for alleged short payment."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ZEEL_2026-06-08": {
+        "narrative": "Despite ZEEL's involvement in the FIFA media rights acquisition, the stock faces significant regulatory scrutiny and market skepticism due to ongoing SEBI notices for alleged irregularities.",
+        "red_flags": [
+            "Multiple SEBI show-cause notices for alleged fund diversion.",
+            "Declining earnings and significant market cap reduction.",
+            "Departure of key executives Vikas Somani and Laxmi Shetty.",
+            "Unfavorable investor sentiment reflected in a 6.4% stock dip."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ADANIENSOL_2026-06-08": {
+        "narrative": "Adani Energy Solutions currently rides a momentum wave but is dangerously close to potential resistance, paired with complex audit signals; cautiously optimistic outlook impeded by immediate overhead resistance.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% indicates an imminent resistance 'Trap'."
+        ],
+        "grade": "D",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "OLAELEC_2026-06-08": {
+        "narrative": "Ola Electric Mobility shows signs of technical strength with an ascending triangle pattern and substantial distance to resistance, but fundamental concerns such as significant share price volatility and reduced revenue forecast raise caution.",
+        "red_flags": [
+            "Significant share price volatility with a recent decline despite previous gains.",
+            "Reduced revenue forecast for FY26 and narrowed fiscal loss claims.",
+            "Promoters reducing stakes during the December quarter.",
+            "Auditor's inventory control observation and subsequent share price fall."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ADANIENT_2026-06-08": {
+        "narrative": "Adani Enterprises is facing significant resistance with ongoing regulatory and fraud investigations, posing substantial risks to investors.",
+        "red_flags": [
+            "Technical: Distance to Overhead Resistance is 0.0%, indicating a 'Trap'.",
+            "Fraud/Audit: U.S. SEC questioning over fraud charges.",
+            "Regulatory challenges with ongoing SEBI probes."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "CANBK_2026-06-08": {
+        "narrative": "Despite technical resilience in an ascending triangle phase, Canara Bank faces significant fundamental red flags due to regulatory penalties and ongoing fraud investigations.",
+        "red_flags": [
+            "RBI penalties for KYC and reporting violations",
+            "SEBI investigation into Rajesh Exports linked to Canara Bank",
+            "CBI fraud investigation concerning Canara Bank"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AIAENG_2026-06-08": {
+        "narrative": "AIA Engineering is exhibiting strong financial performance with a significant rise in net profit and positive momentum, yet technical signals indicate potential vulnerability at resistance levels.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% - indicating a 'Trap'.",
+            "Executive Director B. F. Shah's resignation - raises governance concerns."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "CGPOWER_2026-06-08": {
+        "narrative": "CG Power and Industrial Solutions displays signs of momentum but is overshadowed by the immediate presence of resistance and historical fraud concerns.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% indicating an immediate trap",
+            "Historical fraud as reported by BusinessLine",
+            "Struggles in capital allocation noted by simplywall.st"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AXISBANK_2026-06-08": {
+        "narrative": "Axis Bank shows strong technical momentum but faces potential governance challenges and mixed fundamental signals.",
+        "red_flags": [
+            "Axis Bank ordered to pay \u20b93.19 crore for refusing demonetised notes in 2016.",
+            "Potential governance issues reported in broader Indian banking sector.",
+            "Axis Bank's layoff announcement amid productivity gains."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "KIMS_2026-06-08": {
+        "narrative": "KIMS is advancing with strong technical momentum and fundamental milestones, but faces an imminent resistance challenge.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.1%"
+        ],
+        "grade": "D",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ADANIGREEN_2026-06-08": {
+        "narrative": "Adani Green Energy shows strong growth potential but faces serious regulatory and resistance hurdles.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating a potential 'Trap'.",
+            "US SEC investigation into Adani Group for fraud charges.",
+            "Norway's Sovereign Wealth Fund divested due to corruption allegations."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AXISBANK_2026-06-09": {
+        "narrative": "Axis Bank shows technical strength but faces fundamental concerns, especially regarding corporate governance and regulatory penalties.",
+        "red_flags": [
+            "Regulatory penalty by IRDAI for commission norms violations",
+            "Order to pay \u20b93.19 crore for refusing demonetised notes",
+            "Concerns over corporate governance in the Indian banking sector"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "DATAPATTNS_2026-06-09": {
+        "narrative": "Data Patterns (India)'s stock is poised for caution due to critical proximity to overhead resistance amidst positive momentum signs.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% - This signifies an immediate 'Trap' possibility as it meets the criteria for VETO.",
+            "Price Pressure noted on 15 May 2026 amid sharp correction - MarketsMojo"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "CARTRADE_2026-06-09": {
+        "narrative": "CarTrade Tech shows potential growth momentum but is overshadowed by mixed analyst recommendations and recent corporate developments.",
+        "red_flags": [
+            "MarketsMOJO rates CarTrade Tech as Sell",
+            "Early acquisition talks with CarDekho indicating potential strategic instability",
+            "JM Group entities settling regulatory lapses case with SEBI"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "OLAELEC_2026-06-09": {
+        "narrative": "Ola Electric Mobility's recent surge in share price is overshadowed by significant post-Q4 losses and fundamental weaknesses, despite the company's strategic equity movements and market momentum.",
+        "red_flags": [
+            "Fundamental weakness as indicated by a Q4 net loss of 5 billion rupees",
+            "Analysts cutting price targets significantly",
+            "Promoters reducing stakes in other stocks",
+            "Substantial recent stake sale by SoftBank",
+            "Company's clarification on auditor's inventory control observation"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "TITAGARH_2026-06-09": {
+        "narrative": "Titagarh Rail shows potential in indigenous aluminium coach manufacturing but faces revenue challenges and intense competition.",
+        "red_flags": [
+            "12.94% decline in net sales year-over-year",
+            "Revenue dip of 13% despite achieving profit"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "BELRISE_2026-06-09": {
+        "narrative": "Belrise Industries is showing upward momentum and significant growth potential, but faces immediate overhead resistance challenges.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating a 'Trap' setup."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "HSCL_2026-06-10": {
+        "narrative": "Himadri Speciality Chemical is at immediate overhead resistance with strong momentum but lacks any fundamental red flags, suggesting a watchful approach.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% (Trap)"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AXISBANK_2026-06-10": {
+        "narrative": "Axis Bank shows strong technical momentum but is marred by regulatory penalties and headcount reductions.",
+        "red_flags": [
+            "RBI imposes Rs 5 crore penalty on Axis Bank",
+            "IRDAI imposes Rs.2 crore penalty on Axis Bank for violating commission norms",
+            "Axis Bank reveals headcount reduction of around 3,100",
+            "India\u2019s bank crisis: Poor corporate governance is hurting both public and private institutions"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "CCL_2026-06-10": {
+        "narrative": "The CCL stock demonstrates technical and fundamental strengths, but faces significant resistance and potential governance issues.",
+        "red_flags": [
+            "Technical: Distance to Overhead Resistance is only 1.4%, indicating a 'Trap'.",
+            "Fraud/Audit: Concerns about Carnival Crime Reporting and Governance."
+        ],
+        "grade": "D",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "OLAELEC_2026-06-10": {
+        "narrative": "Despite recent stock surges, Ola Electric Mobility faces significant operational and market challenges, marked by financial losses and stakeholder concerns.",
+        "red_flags": [
+            "Analyst sales forecasts trimmed",
+            "Substantial net loss reported for Q4",
+            "Promoter stake reduction",
+            "CFO resignation",
+            "Softbank stake sell-off",
+            "Recent share price declines post-rally"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ABSLAMC_2026-06-10": {
+        "narrative": "Aditya Birla Sun Life AMC is fraught with technical traps and fundamental concerns, despite some bullish sentiment.",
+        "red_flags": [
+            "Overhead Resistance at 0.0% signifies a Trap.",
+            "Earnings not being well received by investors.",
+            "SEBI allegations against Bank of America for confidential details shared in ABSLAMC stake sale."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "DATAPATTNS_2026-06-10": {
+        "narrative": "Data Patterns (India) shows a bullish setup yet is hampered by close resistance and concerns in fundamental signals.",
+        "red_flags": [
+            "Distance to Overhead Resistance is less than 5%, indicating potential price trap."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "CARTRADE_2026-06-10": {
+        "narrative": "CarTrade Tech shows positive momentum with recent profit surges and institutional investor confidence, but regulatory issues warrant caution.",
+        "red_flags": [
+            "SEBI fine involved with JM Group",
+            "Acquisition talks with CarDekho - potential integration risks"
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "ADANIGREEN_2026-06-10": {
+        "narrative": "Adani Green Energy is under scrutiny due to potential fraud allegations and proximity to resistance, which raises caution for investors.",
+        "red_flags": [
+            "Technical: Distance to Overhead Resistance is less than 5%, indicating a potential 'Trap'.",
+            "Fundamental: Reports of promoter stake sales show movement within insider ownership.",
+            "Fraud/Audit: Allegations of fraud and investigation by the US SEC, and removal from Norway's Sovereign Wealth Fund due to corruption concerns."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "TEJASNET_2026-06-10": {
+        "narrative": "Tejas Networks shows strong upward momentum but lacks concrete fundamental backing amidst market volatility and speculative interest.",
+        "red_flags": [],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "JSWINFRA_2026-06-10": {
+        "narrative": "JSW Infrastructure shows strong momentum and growth prospects with recent project wins, but faces potential challenges from tax penalties.",
+        "red_flags": [
+            "JSW Infrastructure Faces \u20b9965.8 Million Tax Penalty Following GST Notice"
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "AEGISVOPAK_2026-06-10": {
+        "narrative": "Aegis Vopak Terminals shows strong momentum and moderate resilience, but faces shareholder divestment concerns and lacks compelling buying signals.",
+        "red_flags": [
+            "FIIs cut stakes in largecap and midcap stocks over two quarters; shares fall up to 40%-50%",
+            "Rated as 'Sell' by MarketsMojo",
+            "High volume spikes without clear upward breakout signal"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "BHARATFORG_2026-06-10": {
+        "narrative": "Bharat Forge is actively expanding into high-growth industries like semiconductors and defense, but technical indicators suggest potential hurdles ahead.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 1.8%, indicating potential technical resistance.",
+            "Current Phase is 'rectangle', suggesting a period of consolidation rather than growth."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "INDGN_2026-06-10": {
+        "narrative": "Indegene shows potential momentum but faces fundamental challenges and financial scrutiny.",
+        "red_flags": [
+            "Negative Breakout below 200 DMAs",
+            "Earnings Miss and revised forecasts",
+            "INR 49.68 cr demand from the IT department",
+            "Q3FY26 Profit falls despite revenue increase",
+            "Share allotment under scrutiny"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "FACT_2026-06-10": {
+        "narrative": "FACT shows positive technical momentum and favorable news sentiment, but faces potential governance concerns.",
+        "red_flags": [
+            "Independent director resignation",
+            "Potential governance weaknesses highlighted in external reports"
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "JSWDULUX_2026-06-10": {
+        "narrative": "JSW Dulux shows strong financial growth amid a favorable market phase but faces minor uncertainties in fundamental metrics.",
+        "red_flags": [
+            "JSW Dulux Consolidated March 2026 Net Sales down 7.24% Y-o-Y",
+            "JSW Dulux recommends \u20b950 final dividend for FY26 amid profit rise",
+            "Rebranding and GST demand adjustments indicate strategic and financial restructuring"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "PHOENIXLTD_2026-06-10": {
+        "narrative": "Phoenix Mills shows potential for growth with rising profits but presents certain strategic risks due to significant real estate exposure.",
+        "red_flags": [
+            "Real estate is a risk as highlighted in the fundamental/news data.",
+            "Volatility due to the sharp open interest surge amid mixed market signals."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "IDBI_2026-06-10": {
+        "narrative": "IDBI Bank faces significant challenges with its divestment plan amid fluctuating stock performance and underlying uncertainties.",
+        "red_flags": [
+            "Overhead resistance is significant at 54.7%, indicating potential barriers to price growth.",
+            "Shares have crashed over 16% recently, reflecting volatility and lack of investor confidence.",
+            "Government plans to scrap bids for majority stake due to bids falling below reserve price."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AFCONS_2026-06-10": {
+        "narrative": "Afcons Infrastructure is poised for growth with significant project wins but has potential governance concerns.",
+        "red_flags": [
+            "Axis Trustee encumbering 25.03% Afcons shares indicating potential concerns over financial stability or credit agreements."
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "INTELLECT_2026-06-10": {
+        "narrative": "The stock INTELLECT shows potential growth due to strategic business moves, but faces operational challenges including a significant GST demand.",
+        "red_flags": [
+            "Significant GST demand of \u20b920 cr",
+            "Recent 26% price drop suggesting volatility"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "CUB_2026-06-10": {
+        "narrative": "City Union Bank (CUB) demonstrates strong technical momentum but faces moderate regulatory challenges impacting its stock allure.",
+        "red_flags": [
+            "Recent RBI penalty on City Union Bank",
+            "Involvement in regulatory fines and corporate governance issues"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "MRPL_2026-06-10": {
+        "narrative": "MRPL displays potential operational improvements but faces significant compliance and market risks.",
+        "red_flags": [
+            "Weak Q4 performance and an 8% stock slide.",
+            "Board composition non-compliance leading to fines.",
+            "GST tax demand and penalty.",
+            "Momentum Velocity not negative, but fined for non-compliance."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "UCOBANK_2026-06-10": {
+        "narrative": "UCO Bank is currently in an ascending triangle phase with positive momentum but faces challenges with recent regulatory fines and ongoing fraud investigations.",
+        "red_flags": [
+            "RBI penalty of \u20b938.60 lakh",
+            "Ongoing fraud investigations",
+            "CBI chargesheet related to former bank chairman",
+            "SEBI extension sought for fund-raise indicating potential financial strain"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "JSWSTEEL_2026-06-10": {
+        "narrative": "JSW Steel shows strong production growth but faces immediate resistance and legal challenges.",
+        "red_flags": [
+            "Distance to Overhead Resistance is less than 5%.",
+            "Involvement in antitrust law breach.",
+            "Human rights complaint filed against associated banks.",
+            "\u20b964 crore GST demand order."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "TBOTEK_2026-06-10": {
+        "narrative": "TBO Tek shows promising growth metrics but is hampered by a rejected RBI approval and a sell rating.",
+        "red_flags": [
+            "RBI Rejects TBO Tek's \u20b9712.25 Million Post-Facto Approval Request",
+            "TBO Tek Ltd is Rated Sell by MarketsMOJO"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "IKS_2026-06-10": {
+        "narrative": "Inventurus Knowledge Solutions exhibits strong technicals and growth fundamentals amidst active strategic expansions.",
+        "red_flags": [],
+        "grade": "A",
+        "sentiment": "POSITIVE",
+        "action": "DEPLOY"
+    },
+    "EMCURE_2026-06-10": {
+        "narrative": "Emcure Pharmaceuticals presents significant short-term technical risks and potential fundamental issues, warranting caution.",
+        "red_flags": [
+            "Technical Rigorous Overhead Resistance: Distance to Resistance is only 3.6%, indicating a potential Trap.",
+            "Fraud/Audit Concerns: Audible red flags include a Company Secretary resignation and SEBI-related fine."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ICICIBANK_2026-06-10": {
+        "narrative": "While ICICI Bank shows promising technical momentum and positioning within the market, significant concerns arise from recent financial irregularities and regulatory infractions, compromising its investment integrity.",
+        "red_flags": [
+            "SEBI warning on FPI rule violation",
+            "ICICI Bank fined in fraud case",
+            "Concerns over ICICI Securities merger"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "OLECTRA_2026-06-10": {
+        "narrative": "Olectra showcases strong growth and promising potential but is marred by delays and penalties that bear scrutiny.",
+        "red_flags": [
+            "Olectra faces a \u20b92.58 crore penalty from TGIIC for project delays.",
+            "Negative breakout noted with price dropping below 200 DMAs.",
+            "Auditor red flags with arbitration losses and financial penalties."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "GMRAIRPORT_2026-06-10": {
+        "narrative": "GMR Airports shows potential with recent profitability and operational stability, though minor technical caution is advised.",
+        "red_flags": [
+            "Paris airport operator selling 7.3% stake",
+            "Appointment of new cost auditor and resignation of an alternate director"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "AUROPHARMA_2026-06-14": {
+        "narrative": "Aurobindo Pharma faces operational challenges due to USFDA actions but shows resilience with a strong net profit increase.",
+        "red_flags": [
+            "Overhead Resistance proximity at exactly 5%",
+            "USFDA classified Eugia\u2019s formulation plant as OAI",
+            "GST demand and penalty issue"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "CEATLTD_2026-06-14": {
+        "narrative": "CEATLTD demonstrates strong global brand recognition and growth potential but faces immediate margin pressures and compliance issues.",
+        "red_flags": [
+            "Near-term margin pressure flagged",
+            "Indigo and Spicejet turbulence affecting tyre stocks",
+            "EPCG compliance lapse penalty"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "AEGISVOPAK_2026-06-14": {
+        "narrative": "Despite strong fundamental indicators, recent analyst downgrades and foreign investment reductions cast doubt on Aegis Vopak's stability.",
+        "red_flags": [
+            "Analysts downgraded forecasts for Aegis Vopak.",
+            "FIIs cut stakes in the company, indicating potential loss of confidence.",
+            "Shares have fallen up to 50% in some contexts, showing significant volatility."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "CHOICEIN_2026-06-14": {
+        "narrative": "Choice International shows strong financial performance and momentum, though insider stake reduction raises some caution.",
+        "red_flags": [
+            "Promoters reduce stakes in 12 stocks during December quarter"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "JINDALSAW_2026-06-14": {
+        "narrative": "Jindal Saw is a stock with significant momentum and potential growth prospects, but recent declining profits and antitrust investigations raise concerns.",
+        "red_flags": [
+            "Decline of 52.13% in net profit in March 2026 quarter",
+            "Antitrust investigations for Jindal Saw",
+            "Downgraded to Strong Sell due to weak financials and bearish technicals"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "SBIN_2026-06-14": {
+        "narrative": "State Bank of India is facing mixed signals with ascending technical patterns overshadowed by financial and fraud concerns.",
+        "red_flags": [
+            "Underperformance compared to competitors.",
+            "Controversial fraud allegations involving high-profile individuals.",
+            "Potential impact due to the confirmed strike threat by SBI staff."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "LICHSGFIN_2026-06-14": {
+        "narrative": "LIC Housing Finance shows potential with positive technical indicators, but recent share price declines and news of operational issues highlight underlying vulnerabilities.",
+        "red_flags": [
+            "Share price fell despite profit increases",
+            "Operational issue: loss of borrower's property papers",
+            "Shares fell over 4% despite positive earnings and NII growth"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "GODFRYPHLP_2026-06-14": {
+        "narrative": "Despite a strong balance sheet and recent profitability, Godfrey Phillips India faces mixed market sentiment and operational challenges.",
+        "red_flags": [
+            "Market Cool On Earnings Pushing Shares 28% Lower",
+            "General Counsel Resignation"
+        ],
+        "grade": "D",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "COROMANDEL_2026-06-14": {
+        "narrative": "Coromandel International shows potential growth opportunities amidst strong sector momentum, but faces scrutiny due to corporate governance concerns.",
+        "red_flags": [
+            "Coromandel Engineering seeks approval for \u20b9310 crore related party transactions",
+            "Cobrapost investigation raises questions about corporate governance",
+            "Promoters cut stakes in midcap stocks in March 2026"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "BANKBARODA_2026-06-14": {
+        "narrative": "Bank of Baroda shows momentum but is marred by significant allegations of fraud, overshadowing its technical setup.",
+        "red_flags": [
+            "RCom and Anil Ambani loan accounts declared as fraud by Bank of Baroda",
+            "CBI reopens saga alleging Rs 2,220-crore Bank of Baroda fraud",
+            "RBI currency chest fraud with \u20b98.7 crore missing",
+            "Phase not specified as 'Ignition' which raises concern on accumulation"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "KIMS_2026-06-14": {
+        "narrative": "KIMS is facing a technical trap with proximity to overhead resistance while planning significant fundraising activities.",
+        "red_flags": [
+            {
+                "type": "Technical",
+                "issue": "Overhead Wall",
+                "description": "Distance to Resistance is only 2.1%, which is below the 5% threshold."
+            }
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "LT_2026-06-14": {
+        "narrative": "The stock shows a solid technical setup with a fair distance to resistance, strong momentum, and potential fundamental boosts but lacks clarity in the fraud/audit dimension.",
+        "red_flags": [],
+        "grade": "A",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "BOSCHLTD_2026-06-14": {
+        "narrative": "Despite positive momentum and recent upgrades, Bosch faces significant legal and financial challenges that could hinder its potential growth.",
+        "red_flags": [
+            "Customs fine of Rs 96 crore over misclassified auto parts",
+            "Tax demand of \u20b977.74 crore over GST classification",
+            "Online job scam complaint",
+            "Combined legal and financial issues despite positive market sentiment"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AXISBANK_2026-06-14": {
+        "narrative": "Axis Bank shows signs of strength in market positioning but faces immediate resistance and governance concerns.",
+        "red_flags": [
+            "Distance to Overhead Resistance is less than 5% - classified as a 'Trap'.",
+            "Reports of governance issues and a curious share transfer case involving Axis Bank.",
+            "Significant employee headcount reduction recent disclosure."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "PAGEIND_2026-06-14": {
+        "narrative": "Page Industries shows bullish momentum with some fundamental red flags and ongoing investigations that may pose risks.",
+        "red_flags": [
+            "Insiders might be disappointed with the recent 4.2% stock drop.",
+            "Emkay Global Financial recommends reducing position, signaling possible overvaluation concerns.",
+            "US watchdog probe into rights abuse allegations poses potential reputational and financial risk."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "LTF_2026-06-14": {
+        "narrative": "L&T Finance shows promise with strategic initiatives and growth, but technicals suggest caution due to its current phase and market uncertainty.",
+        "red_flags": [
+            "The current phase of 'rectangle' suggests static accumulation rather than ignition potential."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "ASTERDM_2026-06-14": {
+        "narrative": "Aster DM Healthcare is facing significant resistance at current levels, despite strong momentum and positive news, with potential audit concerns and financial turbulence due to legal and tax challenges.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating a 'Trap'.",
+            "Reports of a significant revenue loss due to a nurse strike.",
+            "Tax issues with an order imposing a tax and penalty totaling 7.3 million rupees.",
+            "GST order demanding Rs 72.91 Lakh from Kochi Commissionerate."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "RKFORGE_2026-06-14": {
+        "narrative": "Despite technical indicators suggesting potential growth, significant financial and governance challenges make Ramkrishna Forgings a high-risk investment.",
+        "red_flags": [
+            "Profit slumped over 70% in Q4",
+            "Net profit declines 72.01% in March 2026 quarter",
+            "Errors in financial books leading to a significant financial hit",
+            "Directors cessation signaling potential governance issues",
+            "Recent sharp decline in share price to its 52-week low"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "KARURVYSYA_2026-06-14": {
+        "narrative": "Despite positive growth indicators, potential concerns in regulatory scrutiny and a static market phase necessitate caution.",
+        "red_flags": [
+            "Current Phase is 'rectangle', indicating static accumulation",
+            "Historical involvement in financial fraud (Rs637 Crore Bank Loan Scam)",
+            "Distance to Overhead Resistance is acceptable but not excellent (16.6%)"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "INDIGO_2026-06-14": {
+        "narrative": "IndiGo is currently facing serious governance challenges and negative public perception despite technical strengths.",
+        "red_flags": [
+            "Significant governance concerns flagged by multiple sources including ICSI and proxy advisory firms.",
+            "Recurrent smuggling incidents involving gold, creating negative publicity.",
+            "Heavy rain disruptions and flight delays causing passenger dissatisfaction."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "SRF_2026-06-14": {
+        "narrative": "SRF is showing strong technical momentum with a promising market phase but faces significant tax demands and potential perception issues due to legal errors.",
+        "red_flags": [
+            "SRF Faces Rs 327.44 Crore Income Tax Demand Due to Technical Error",
+            "Potential perception issues from associations in news with non-corporate entities"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "KPIL_2026-06-14": {
+        "narrative": "KPIL shows strong business momentum with new orders but faces technical resistance and minor tax audits.",
+        "red_flags": [
+            {
+                "type": "technical",
+                "issue": "OVERHEAD WALL",
+                "description": "Distance to Resistance is 1.0%, which is classified as a 'Trap' according to criteria."
+            }
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "APTUS_2026-06-14": {
+        "narrative": "Aptus demonstrates strong profit growth, but lacks full market enthusiasm and carries notable investor uncertainties.",
+        "red_flags": [
+            "Not Many Are Piling Into Aptus Value Housing Finance India Limited (NSE:APTUS) Just Yet",
+            "SMALLCAP World Fund reduces stake in Aptus Value Housing Finance India Ltd to 3.45%"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "DIXON_2026-06-14": {
+        "narrative": "Dixon Technologies is seeing bullish momentum and strategic partnerships, but past stock performance and margin pressures suggest caution.",
+        "red_flags": [
+            "Past 35% drop in share price over the year",
+            "Near-term margin pressure flagged by MOFSL",
+            "Promoters cutting stakes in March 2026 quarter"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "ABSLAMC_2026-06-14": {
+        "narrative": "Despite strong momentum and an ascending triangle formation, ABSLAMC faces critical resistance levels and fundamental challenges that cast doubt on its performance.",
+        "red_flags": [
+            "Technical Rigor: Distance to Overhead Resistance is only 0.8%, which is below the 5% threshold.",
+            "Fundamental Challenge: Q4 PAT fell 18% indicates declining short-term profitability.",
+            "Fraud/Audit: SEBI allegations regarding insider information suggest potential regulatory risks."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "TARIL_2026-06-14": {
+        "narrative": "While TARIL shows significant order wins and strategic leadership changes, its share price volatility and recent declines raise concerns.",
+        "red_flags": [
+            "11% reduction in holdings value by top shareholder",
+            "Shares slipped 11% after Q4 results",
+            "Price tanks 12% after Q4 results",
+            "Shares hit 20% lower circuit on poor Q2 results"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AEGISLOG_2026-06-14": {
+        "narrative": "Aegis Logistics is experiencing strong upward momentum, but immediate proximity to resistance suggests potential caution.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% - Potential Technical Trap"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "CHOLAFIN_2026-06-14": {
+        "narrative": "CHOLAFIN showcases potential growth momentum despite recent governance disputes, warranting a cautious but optimistic outlook.",
+        "red_flags": [
+            "Corporate governance allegations and scrutiny highlighted by multiple outlets.",
+            "Ongoing legal action potential regarding governance issues."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "ZYDUSWELL_2026-06-14": {
+        "narrative": "Zydus Wellness shows potential short-term gains but faces significant regulatory and resistance challenges.",
+        "red_flags": [
+            "Distance to Resistance is less than 5%, indicating a potential trap.",
+            "GST Penalty over ITC irregularities.",
+            "Significant GST demand and VAT penalty issues."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "JBMA_2026-06-14": {
+        "narrative": "JBMA has strong fundamental support with a leading market position in electric buses, although requires monitoring for potential headwinds in technical momentum.",
+        "red_flags": [],
+        "grade": "A",
+        "sentiment": "POSITIVE",
+        "action": "DEPLOY"
+    },
+    "IFCI_2026-06-14": {
+        "narrative": "IFCI's stock presents substantial growth due to the upcoming NSE IPO, but is severely marred by a daunting resistance trap and serious fraud investigations.",
+        "red_flags": [
+            "Overhead Wall: Resistance at 0.0% indicating a 'Trap'",
+            "Fraud Investigation: Extensive SFIO probe into loan fraud involving \u20b96,855 crore"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "HINDPETRO_2026-06-14": {
+        "narrative": "Hindustan Petroleum Corporation Limited (HINDPETRO) shows technical strength with a bull flag pattern and positive momentum, but management changes and external dependencies highlight caution.",
+        "red_flags": [
+            "Leadership changes with new CFO and CMD appointments",
+            "Cessation of an independent director",
+            "Physical share transfer requests following SEBI circular"
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "DATAPATTNS_2026-06-14": {
+        "narrative": "Data Patterns (India) Ltd appears poised with positive momentum but faces immediate technical resistance, raising caution for potential investors.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 0.3%, indicating a 'Trap'.",
+            "Heavy value trading amid sharp price correction suggests potential volatility risks."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ITCHOTELS_2026-06-14": {
+        "narrative": "ITC Hotels shows potential for growth with current expansion strategies but faces risks from reduced investor interest and falling shares.",
+        "red_flags": [
+            "FIIs reducing stakes indicates potential investor uncertainty.",
+            "Shares have fallen up to 40% due to FII stake reduction."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "AAVAS_2026-06-14": {
+        "narrative": "Aavas Financiers is navigating a leadership transition amidst steady technical indicators, but potential corporate governance issues and muted growth pose concerns.",
+        "red_flags": [
+            "Leadership change as CEO Bhinder resigns and is replaced by former Kotak executive.",
+            "Clarification on market speculation under SEBI Regulation 30, indicating potential corporate governance concerns.",
+            "Q3 earnings show muted growth despite improved asset quality."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "JWL_2026-06-14": {
+        "narrative": "Jupiter Wagons is experiencing a significant growth phase, but recent profit declines and governance concerns demand cautious optimism.",
+        "red_flags": [
+            "Q4 net profit declines 72% YoY to \u20b929 crore",
+            "FY26 profit falls 56.4% to \u20b9166 crore",
+            "Jupiter Wagons' JV debarred by Railway Board for faking localisation"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "SHRIRAMFIN_2026-06-14": {
+        "narrative": "Shriram Finance demonstrates solid momentum and growth prospects but carries risks from a recent GST penalty that must be monitored.",
+        "red_flags": [
+            "GST penalty order from tax department",
+            "Recent 5% price drop related to penalty news"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "DALBHARAT_2026-06-14": {
+        "narrative": "Dalmia Bharat is on solid footing with strategic acquisitions despite some noise from unrelated sugar business challenges and past litigation issues.",
+        "red_flags": [
+            "Minor market noise regarding Dalmia Bharat Sugar affecting sentiment.",
+            "Complainant allegations suggest marginal legal risk but no auditor resignation or substantial SEBI fines present."
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "EICHERMOT_2026-06-14": {
+        "narrative": "Eicher Motors showcases strong financial performance and an ascending technical pattern, but caution is needed due to the lack of imminent technical resistance threats.",
+        "red_flags": [],
+        "grade": "A",
+        "sentiment": "POSITIVE",
+        "action": "DEPLOY"
+    },
+    "INDIANB_2026-06-14": {
+        "narrative": "Despite positive momentum and strategic initiatives, potential bearish news and market risks raise concerns for Indian Bank stock.",
+        "red_flags": [
+            "Top losers on June 10",
+            "Potential $95 billion rout may deepen",
+            "Meeting with hedge fund raises speculative concerns"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ACE_2026-06-14": {
+        "narrative": "The stock ACE exhibits strong technical support with significant distance to resistance, but faces potential reputation risks due to ongoing legal and audit issues.",
+        "red_flags": [
+            "Mobix Labs, Inc. Files Complaint Against ACE Equity Partners for Alleged Fraud and Breach of Contract",
+            "USA Cricket terminates ACE deal amid governance dispute"
+        ],
+        "grade": "C",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "EXIDEIND_2026-06-14": {
+        "narrative": "Exide Industries shows potential for growth but faces challenges including a recent income tax survey and a drop in Q2 net profit.",
+        "red_flags": [
+            "Income Tax department conducts survey at Exide Industries",
+            "Exide Industries shares open in green despite 25% drop in Q2 net profit",
+            "Exide Industries share price in focus as net profit down 26% to \u20b9172 crore, revenue falls 2%"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ADANIGREEN_2026-06-14": {
+        "narrative": "Despite Adani Green's strategic initiatives in renewable energy, significant governance concerns and allegations of fraud overshadow potential growth.",
+        "red_flags": [
+            "Distance to Resistance is 3.3%, which is less than the 5% threshold, indicating a 'Trap'.",
+            "Norway\u2019s $2-Trillion Sovereign Wealth Fund dropped Adani Green Energy over corruption and financial crime allegations.",
+            "U.S. SEC's interest in questioning the founder over fraud charges."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "PCBL_2026-06-14": {
+        "narrative": "PCBL shows strong technical momentum and no immediate resistance barriers, but fundamental and audit insights reveal potential concerns.",
+        "red_flags": [
+            "Earnings missed analyst estimates.",
+            "ICICI Securities recommends reducing stake with a target of Rs 270.",
+            "Potential concerns due to changes in board and upcoming earnings report in 2026."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "ERIS_2026-06-14": {
+        "narrative": "Despite strong financial performance and expansion efforts, minor governance issues and pending GST notices suggest caution is warranted for Eris Lifesciences.",
+        "red_flags": [
+            "Minor fine for board composition lapse",
+            "GST notice over \u20b916.8 crore IGST",
+            "GST notice over Novartis Zomelis deal"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "EMCURE_2026-06-14": {
+        "narrative": "Despite positive revenue growth, Emcure faces significant technical resistance and fraud allegations that undermine investor confidence.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 3.3%, which is a 'Trap'.",
+            "Company Secretary resignation suggests potential internal issues.",
+            "Involvement in a \u20b974 Crore Pharma Fraud Case raises serious concerns."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "NMDC_2026-06-14": {
+        "narrative": "NMDC shows mixed potential with recent financial gains but faces environmental and reputational challenges.",
+        "red_flags": [
+            "Environmental violations at Ballari mine.",
+            "More 'sell' recommendations than 'buy' post-Q4 results.",
+            "Auditor flags retrospective levy in Karnataka."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "VTL_2026-06-14": {
+        "narrative": "Vardhman Textiles exhibits technical weakness and fundamental challenges, signaling caution for investors.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 1.3%, indicating a potential trap.",
+            "Q4 results show a 22.2% decline in net profit.",
+            "Reports of PAT decline to \u20b9740.02 Cr in FY26.",
+            "Fundamental prospects need a boost to lift shares."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "HOMEFIRST_2026-06-14": {
+        "narrative": "Home First Finance Company India shows promising earnings growth but is challenged by recent stock pullback and moderate market sentiment.",
+        "red_flags": [
+            "Earnings growth rate lags shareholder returns",
+            "Recent 7.8% pullback",
+            "Institutional owners may take drastic measures",
+            "Rated Hold by some analysts"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "AUBANK_2026-06-14": {
+        "narrative": "AU Small Finance Bank faces challenges both technically with resistance and fundamentally due to legal and fraud issues.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 4.9%, which is a 'Trap'.",
+            "Legal action against the Haryana government.",
+            "De-empanelment from the Haryana government panel due to fraud disclosure.",
+            "Involvement in IDFC First Bank fraud case causing stock price impact."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "NYKAA_2026-06-14": {
+        "narrative": "Nykaa demonstrates significant growth and profitability, but faces potential risks with scandalous consumer practices and fierce competition clouding its outlook.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 2.6%, indicating it's a 'Trap'.",
+            "Current Phase is 'rectangle', not an 'Ignition', suggesting possible static accumulation.",
+            "Nykaa identified as one of the worst offenders in consumer losses due to dark patterns."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ABDL_2026-06-14": {
+        "narrative": "ABDL is experiencing growth with notable momentum and global recognition, although it has some recent insider disappointment and minor controversy over account freeze reports.",
+        "red_flags": [
+            {
+                "type": "FUNDAMENTAL",
+                "issue": "Disappointment from insiders due to a recent 4.1% stock drop."
+            },
+            {
+                "type": "FRAUD/AUDIT",
+                "issue": "Reports of alleged bank account freeze denied, which may indicate uncertainty."
+            }
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "PRESTIGE_2026-06-14": {
+        "narrative": "Prestige's bullish technical setup is overshadowed by potential compliance issues and ongoing investigations.",
+        "red_flags": [
+            "Prestige Estates Projects Receives NSE Cautionary Email Over Secretarial Compliance Issues",
+            "PBH Investors Have Opportunity to Join Prestige Consumer Healthcare Inc. Fraud Investigation"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "RECLTD_2026-06-14": {
+        "narrative": "The stock of RECLTD appears fundamentally and technically sound with a positive news backdrop but carries some concerns due to the recent market reaction to the merger news.",
+        "red_flags": [
+            "Negative market reaction to merger news with PFC as shares drop.",
+            "Merger associated potential volatility and uncertainty."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "BALRAMCHIN_2026-06-14": {
+        "narrative": "Balrampur Chini Mills shows promise with its strategic investments and bioplastics initiative, but caution is warranted due to declining quarterly profits.",
+        "red_flags": [
+            "Consolidated net profit declined 30.36% in the March 2026 quarter"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "CANFINHOME_2026-06-14": {
+        "narrative": "Despite strong profit growth, Can Fin Homes faces potential bearish trends and significant fraud allegations, casting doubt on its future prospects.",
+        "red_flags": [
+            "Death Cross formation signaling potential bearish trend",
+            "Momentum Velocity is mismatched with technical indicators hinting at possible divergence",
+            "Phase identified as 'rectangle', indicating static accumulation",
+            "Recruitment scam under CVC probe and financial fraud of \u20b938.53 crore reported",
+            "Whistleblower punishment suggests internal governance issues"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "INDIAMART_2026-06-14": {
+        "narrative": "IndiaMART shows strong technical and fundamental performance, but potential governance issues call for caution.",
+        "red_flags": [
+            "Delay in Appointment of Company Secretary Costs Company and Directors Rs 8.8 lakh Penalty",
+            "Institutional ownership drops across 10 stocks in Q4"
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "SAIL_2026-06-14": {
+        "narrative": "The Indian stock SAIL is facing significant governance issues amidst a backdrop of potential economic opportunities in the steel sector.",
+        "red_flags": [
+            "Resignation of SAIL CMD Amarendu Prakash",
+            "Potential loss of Maharatna status for SAIL",
+            "CBI investigation into a SAIL scam involving Avon Steel",
+            "Price collusion findings in the steel sector implicating SAIL"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "MARUTI_2026-06-14": {
+        "narrative": "Maruti Suzuki shows strong technical momentum with a bullish ascending triangle phase and favorable fundamental developments, yet potential market resistance looms.",
+        "red_flags": [],
+        "grade": "A",
+        "sentiment": "POSITIVE",
+        "action": "DEPLOY"
+    },
+    "RKFORGE_2026-06-17": {
+        "narrative": "Ramkrishna Forgings is plagued by significant governance issues and financial underperformance, casting a shadow over its technical strengths.",
+        "red_flags": [
+            "Significant drop in net profit by over 70%",
+            "Distress signals and governance concerns",
+            "Resignation of the statutory auditor",
+            "Errors in financial books leading to a substantial financial hit",
+            "Share price consistently hitting 52-week lows"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AUBANK_2026-06-17": {
+        "narrative": "AU Small Finance Bank is at risk due to recent de-empanelment related to a fraud case and its proximity to overhead resistance, despite positive momentum velocity.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 4.9%, which is less than the 5% threshold, indicating a 'Trap'.",
+            "Recent de-empanelment by Haryana government amid fraud disclosures."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ACE_2026-06-17": {
+        "narrative": "The Indian stock ACE shows a promising technical setup with significant resistance distance and strong momentum but faces challenges due to potential legal and governance issues.",
+        "red_flags": [
+            "Mobix Labs, Inc. files complaint against ACE Equity Partners for alleged fraud and breach of contract",
+            "USA Cricket terminates ACE deal amid governance dispute"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "EMCURE_2026-06-17": {
+        "narrative": "Emcure Pharmaceuticals shows promise with strong revenue growth and strategic developments, but faces potential resistance and legal challenges impacting its stability.",
+        "red_flags": [
+            "Technical: Distance to Overhead Resistance is only 3.3%, indicating a potential trap.",
+            "Fundamental: Legal issues and fraud allegations could impact investor confidence."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ABSLAMC_2026-06-17": {
+        "narrative": "Aditya Birla Sun Life AMC struggles with close overhead resistance and a declining perception of earnings amid potential regulatory concerns.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.8%, qualifying as a 'Trap'. VETO.",
+            "SEBI alleges insider trading violation involving BofA in 2024 AB Sun Life AMC deal.",
+            "Auditor resignation of Mahesh Patil, CIO, after two decades."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ZYDUSWELL_2026-06-17": {
+        "narrative": "Zydus Wellness shows bullish momentum but faces regulatory fines and an overhead resistance trap.",
+        "red_flags": [
+            "Distance to Overhead Resistance is less than 5%, risk of being a 'Trap'.",
+            "Financial penalties: GST penalty of Rs 6.3 Million and a VAT penalty in Spain.",
+            "Q4 Net profit fell 6% YoY despite EBITDA increase."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "NYKAA_2026-06-17": {
+        "narrative": "Nykaa's stock momentum is hindered by technical resistance and past governance issues despite promising OpenAI partnership news.",
+        "red_flags": [
+            "Distance to Resistance is 2.6%, indicating a potential 'Trap'.",
+            "Past negative headlines about governance issues and share price volatility."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AAVAS_2026-06-17": {
+        "narrative": "Aavas Financiers is experiencing some fundamental challenges but maintains technical strength and resilience.",
+        "red_flags": [
+            "Stock hits 52-week low, down 7% post Q3 results",
+            "Muted growth reported in Q3 despite improved asset quality",
+            "Divergent views spark internal differences on NHB's observation",
+            "Leadership change following CEO resignation"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "VTL_2026-06-17": {
+        "narrative": "Vardhman Textiles is navigating a complex landscape marked by technical traps and mixed news signals.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 1.3%, indicating a potential 'Trap'.",
+            "Vardhman Textiles listed as part of a Negative Breakout below their 200 DMAs.",
+            "Recent news suggests concerns over static growth and declining prospects."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "IFCI_2026-06-17": {
+        "narrative": "IFCI's recent surge amidst the NSE IPO excitement is overshadowed by significant underlying fraud investigations and technical vulnerabilities.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating an Overhead Wall Trap.",
+            "SFIO probe into systemic lending lapses and a \u20b96,855 crore loan fraud.",
+            "SFIO investigating past CMDs and numerous entities, which raises serious concerns."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "TARIL_2026-06-17": {
+        "narrative": "TARIL faces mixed signals with impressive momentum velocity and a major order win but is plagued by share price volatility following disappointing Q4 results.",
+        "red_flags": [
+            "Analysts Have Lowered Expectations For Transformers and Rectifiers (India) Limited (NSE:TARIL) After Its Latest Results",
+            "TARIL share price: Why shares of this power infrastructure company slipped 11% after Q4 results",
+            "TARIL share price tanks 12% after Q4 results 2026"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "NMDC_2026-06-17": {
+        "narrative": "NMDC shows promising financial growth and strategic revenue diversification but faces skepticism due to higher sell recommendations and a recent attempted cyber fraud.",
+        "red_flags": [
+            "More 'sell' recommendations than 'buy' post-Q4 results",
+            "Recent cyber fraud attempt, though successfully foiled"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "BOSCHLTD_2026-06-17": {
+        "narrative": "Bosch Ltd shows strong momentum and positive news, but faces legal and compliance challenges that raise caution.",
+        "red_flags": [
+            "Bosch India hit with Rs 96 crore customs fine",
+            "Bosch Limited faces \u20b977.74 cr tax demand over GST classification"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "KARURVYSYA_2026-06-17": {
+        "narrative": "Karur Vysya Bank exhibits stable fundamentals with promising growth potential but requires cautious optimism due to its corporate governance and current technical phase.",
+        "red_flags": [
+            "Current Phase: rectangle suggests potential lack of upward momentum",
+            "Historical news of a Rs637 Crore Bank Loan Scam raises concern"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "INDIANB_2026-06-17": {
+        "narrative": "Indian Bank shows potential growth with minimal technical barriers but faces reputational risks due to recent legal issues.",
+        "red_flags": [
+            "Court Orders Case Against 69 Indian Bank Staff in Rs 5 Crore Embezzlement",
+            "FIR against 69 Indian Bank cooperative staff in \u20b93.6 crore embezzlement case"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "PARADEEP_2026-06-17": {
+        "narrative": "Paradeep exhibits strong technical and fundamental momentum, but caution is warranted due to potential overestimation of earnings strength.",
+        "red_flags": [
+            "Impressive Earnings May Not Tell The Whole Story For Paradeep Phosphates (NSE:PARADEEP) - simplywall.st"
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "SRF_2026-06-17": {
+        "narrative": "While SRF shows strong technical support and positive fundamental news, a significant income tax demand presents a potential risk.",
+        "red_flags": [
+            "Income tax demand of Rs 327.44 Crore due to technical error"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "INDIGO_2026-06-17": {
+        "narrative": "Despite positive technical momentum, IndiGo is plagued by corporate governance issues that heavily overshadow its potential market dominance.",
+        "red_flags": [
+            "Multiple reports of governance lapses",
+            "IndiGo fined \u20b922.2-crore highlighting regulatory scrutiny",
+            "Criticism over corporate governance from various sources"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "SBIN_2026-06-17": {
+        "narrative": "State Bank of India exhibits strong technical momentum but is overshadowed by significant fraud concerns, impacting its fundamental strength.",
+        "red_flags": [
+            "SBI to approach CBI after tagging Anil Ambani and RCom as 'fraud'",
+            "CBI Books Anil Ambani and His RCOM for Rs.2,000-cr Bank Fraud",
+            "After SBI, Bank of India tags RCom, Anil Ambani as fraud",
+            "SBI to label RCom loan account as 'fraud', names Anil Ambani in RBI report"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "HDFCBANK_2026-06-17": {
+        "narrative": "HDFC Bank shows technical strength with significant distance to resistance and positive momentum, but governance concerns remain a risk.",
+        "red_flags": [
+            "Governance concerns raised by media and analysts",
+            "HDFC Bank Chairman resignation spotlighting corporate governance"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "DATAPATTNS_2026-06-17": {
+        "narrative": "Data Patterns (India) Limited (NSE:DATAPATTNS) shows potential performance but faces significant resistance and market concerns.",
+        "red_flags": [
+            "Technical: Distance to Overhead Resistance is only 0.3%, indicating potential resistance encounter.",
+            "Technical: Momentum Velocity is positive, avoiding divergence, but requires monitoring.",
+            "Fundamental: Concerns about performance noted by SimplyWall.st."
+        ],
+        "grade": "D",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AUROPHARMA_2026-06-17": {
+        "narrative": "The stock of Aurobindo Pharma exhibits significant weaknesses due to regulatory challenges with the USFDA and potential tax issues.",
+        "red_flags": [
+            "The USFDA has classified Eugia Unit III as OAI, highlighting regulatory issues.",
+            "A GST demand and penalty of Rs 77.6 Crore indicate unresolved tax liabilities.",
+            "Distance to Overhead Resistance is exactly at the 5% threshold, posing a risk of encountering a 'Trap'."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AEGISVOPAK_2026-06-17": {
+        "narrative": "Aegis Vopak Terminals shows positive momentum and earnings growth, though analysts have lowered forecasts amidst mixed financial sentiments.",
+        "red_flags": [
+            "Analysts Just Shaved Their Aegis Vopak Terminals Limited Forecasts Dramatically",
+            "FIIs cut stakes in 16 largecap stocks over two quarters; shares fall up to 40%"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "GODFRYPHLP_2026-06-17": {
+        "narrative": "Godfrey Phillips India Limited is showing strong technical momentum but faces some fundamental challenges and governance concerns.",
+        "red_flags": [
+            "Market sentiment is generally negative following a significant earnings miss.",
+            "The resignation of the general counsel poses potential governance risks.",
+            "Downward pressure observed with shares declining post-earnings."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AEGISLOG_2026-06-17": {
+        "narrative": "Aegis Logistics shows strong momentum but faces immediate resistance, indicating potential overvaluation and risks.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating a 'Trap'."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "KIMS_2026-06-17": {
+        "narrative": "Krishna Institute of Medical Sciences exhibits a potentially problematic technical setup with proximity to overhead resistance and recent aggressive QIP activities indicating financial maneuvering.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 2.1% which is < 5%, qualifying it as a 'Trap'."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "RELIANCE_2026-06-17": {
+        "narrative": "Despite strong technical momentum and transformative fundamental developments, significant fraud issues and regulatory penalties overshadow Reliance leading to a negative outlook.",
+        "red_flags": [
+            "CBI arrests two Reliance Communications executives in significant fraud case",
+            "SEBI orders forensic audit of Reliance Power",
+            "IRDAI penalty on Reliance General Insurance",
+            "Auditor resignation at Reliance Infrastructure",
+            "Ongoing fraud investigations involving Reliance Communications"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "COROMANDEL_2026-06-17": {
+        "narrative": "Coromandel shows potential but is marred by negative profit performance and concerns over promoter stake reductions.",
+        "red_flags": [
+            "Coromandel International Q4 Result: Net profit falls 75% YoY",
+            "Promoters cut stakes in 13 midcap stocks",
+            "Cobrapost investigation questions corporate governance"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "CANFINHOME_2026-06-17": {
+        "narrative": "Can Fin Homes exhibits promising financial performance metrics but is marred by potential fraud and negative technical indicators, warranting caution.",
+        "red_flags": [
+            "Current Phase is rectangle, indicating static accumulation.",
+            "Reports of financial fraud of \u20b938.53 crore by employees.",
+            "Telangana High Court orders CVC probe into recruitment scam.",
+            "Formation of Death Cross, indicating potential bearish trend."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "JWL_2026-06-17": {
+        "narrative": "Despite some recent gains and expansion plans, Jupiter Wagons faces significant fundamental and audit-related challenges that overshadow its technical growth potential.",
+        "red_flags": [
+            "Profit declines in Q4 and FY26 indicate weak fundamental performance.",
+            "Trading volume surges prompting BSE inquiry, though no undisclosed information was found.",
+            "JV debarred by Railway Board for faking localisation suggests serious credibility concerns."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "KPIL_2026-06-17": {
+        "narrative": "KPIL shows promising growth with significant order wins but is currently facing potential tax liabilities and technical resistance challenges.",
+        "red_flags": [
+            "Technical: Distance to Overhead Resistance is only 1.0%, indicating an upcoming resistance trap.",
+            "Fundamental: Tax demand notices for FY24 for both the Kenya and Eswatini branches."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "BANKBARODA_2026-06-17": {
+        "narrative": "Bank of Baroda exhibits technical strength with an ascending triangle phase and positive momentum, but serious allegations of fraud raise significant concerns.",
+        "red_flags": [
+            "RBI currency chest fraud: \u20b98.7 crore missing",
+            "CBI reopens RCom, Anil Ambani loan saga involving Bank of Baroda fraud",
+            "Anil Ambani, RCom's Loan Accounts Declared 'Fraud' by Bank Of Baroda"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "PRESTIGE_2026-06-17": {
+        "narrative": "Prestige Estates shows strong fundamental backing with extensive project plans and positive technical momentum.",
+        "red_flags": [],
+        "grade": "A",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "JINDALSAW_2026-06-17": {
+        "narrative": "Jindal Saw shows strong price momentum but faces potential regulatory risks with antitrust investigations.",
+        "red_flags": [
+            "Consolidated net profit declines 52.13% in March 2026 quarter",
+            "India raids Jindal Saw for antitrust investigation",
+            "CCI raids steel makers including Jindal Saw in antitrust case"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AUBANK_2026-06-22": {
+        "narrative": "AU Small Finance Bank faces significant challenges due to a combination of technical resistance, ongoing fraud investigations, and a recent de-empanelment by the Haryana government.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 4.9%, indicating a potential 'Trap'.",
+            "Involvement in a \u20b947 crore funds transfer issue leading to de-empanelment by Haryana government.",
+            "Shares slipped by 7% following the fraud disclosure and de-empanelment."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AEGISLOG_2026-06-22": {
+        "narrative": "Aegis Logistics is facing a potential resistance trap despite strong momentum and positive earnings outlook.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating a potential 'Trap'."
+        ],
+        "grade": "D",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "COROMANDEL_2026-06-22": {
+        "narrative": "Despite technical robustness and recent partnerships, the financial integrity of Coromandel is questionable due to governance issues and promoter stake reductions.",
+        "red_flags": [
+            "Promoters cut stakes in 13 midcap stocks in March 2026 quarter",
+            "Questions about corporate governance raised by Cobrapost investigation"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AEGISVOPAK_2026-06-22": {
+        "narrative": "Aegis Vopak Terminals demonstrates strong fundamentals but faces minor fundamental uncertainties amid positive technical indicators.",
+        "red_flags": [
+            "Fundamental uncertainty due to FIIs reducing stakes and potential impact on market perception.",
+            "Stake sale to Itochu might indicate insider strategy adjustments."
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "AAVAS_2026-06-22": {
+        "narrative": "Aavas Financiers is facing considerable challenges with ongoing regulatory scrutiny and leadership changes despite maintaining a bullish technical setup.",
+        "red_flags": [
+            "Regulatory scrutiny by NHB over loan classification lapses",
+            "CFO and CRO resignations indicating potential instability",
+            "Shares underperforming with recent declines",
+            "Discrepancies over significant loan classifications"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "BANKBARODA_2026-06-22": {
+        "narrative": "Bank of Baroda faces fundamental legal challenges and significant fraud allegations that overshadow its technical strength.",
+        "red_flags": [
+            "RBI currency chest fraud: \u20b98.7 crore missing",
+            "CBI reopens RCom, Anil Ambani loan saga alleging Rs 2,220-crore fraud",
+            "ED chargesheet in \u20b928.54 Crore fraud case",
+            "Classification of Anil Ambani's loan account as 'fraud'"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "SYNGENE_2026-06-22": {
+        "narrative": "Despite recent leadership changes and profit drops, Syngene shows strong technical momentum with substantial resistance distance.",
+        "red_flags": [
+            "Q4 net profit dropped 19% YoY"
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "ZYDUSWELL_2026-06-22": {
+        "narrative": "Zydus Wellness shows concerning technical setup with immediate financial penalties and high momentum.",
+        "red_flags": [
+            "Distance to Overhead Resistance is below 5%, indicating a 'Trap'.",
+            "The company faces both a GST and VAT penalty, signaling financial liabilities."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "VTL_2026-06-22": {
+        "narrative": "Vardhman Textiles is currently facing critical technical and fundamental challenges, overshadowing positive news of expansion and tariff changes.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 1.3%, indicating a 'Trap' condition.",
+            "Phase is 'ascending_triangle', not indicative of immediate breakout or ignition.",
+            "Recent significant decline in consolidated net profit and Q4 standalone PAT.",
+            "Listed among stocks with a negative breakout below their 200 DMAs."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "WELSPUNLIV_2026-06-22": {
+        "narrative": "Welspun Living is experiencing mixed fortunes with recent positive stock movements but underlying fundamental weaknesses from declining profits and investor concerns.",
+        "red_flags": [
+            "Net profit dips 21% YoY",
+            "Five-year decline in earnings",
+            "Stock falls 6.7% over the past week",
+            "Income fall amid weak demand in Q3 FY26"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "JWL_2026-06-22": {
+        "narrative": "Jupiter Wagons shows potential with strong technical momentum but faces fundamental challenges including significant profit declines and authenticity concerns in joint ventures.",
+        "red_flags": [
+            "Significant profit decline: FY26 profit falls 56.4% to \u20b9166 crore",
+            "Jupiter Wagons' JV debarred by Railway Board for faking localisation",
+            "Q4 Results show a 72% tumble in PAT and 25% revenue decline YoY"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ABSLAMC_2026-06-22": {
+        "narrative": "Aditya Birla Sun Life AMC displays technical weaknesses and multiple fund management changes, raising concerns over its short-term performance stability.",
+        "red_flags": [
+            "Distance to Resistance is only 0.8%, indicating a technical trap.",
+            "Significant management changes including auditor resignation.",
+            "SEBI alleged breach by a related entity.",
+            "Negative sentiment around recent earnings despite proposed dividend."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "IFCI_2026-06-22": {
+        "narrative": "The IFCI stock is surrounded by imminent resistance, and a potential loan fraud probe casts a significant shadow over its prospects.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% indicating a 'Trap'",
+            "Involvement in a \u20b96,855 crore loan fraud investigation by SFIO",
+            "Loss of investor confidence due to consistent 10% drop post profit booking"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "DATAPATTNS_2026-06-22": {
+        "narrative": "Data Patterns (India) is facing a significant technical resistance challenge despite showing promising growth indicators.",
+        "red_flags": [
+            "Distance to Resistance is only 0.3%, indicating a potential trap."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "INDIGO_2026-06-22": {
+        "narrative": "IndiGo faces significant challenges due to recent operational crises and regulatory scrutiny, despite technical strengths.",
+        "red_flags": [
+            "IndiGo CEO exit and corporate governance concerns",
+            "DGCA penalties and regulatory oversight",
+            "Recent lightning strike incidents affecting flights"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "TARIL_2026-06-22": {
+        "narrative": "TARIL shows a mix of growth potential but is burdened by fundamental and market-related uncertainties.",
+        "red_flags": [
+            "Analysts have lowered expectations for TARIL.",
+            "Faces World Bank order restriction.",
+            "Recent significant share price volatility.",
+            "Latest results led to share price drop.",
+            "55% correction is noted as a warning."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "NYKAA_2026-06-22": {
+        "narrative": "Nykaa faces significant technical resistance and looming corporate governance concerns, casting doubt on its growth narrative.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 2.6%, indicating a potential technical 'Trap'.",
+            "Reports of corporate governance issues related to a bonus issue create trust concerns.",
+            "Phase is identified as 'rectangle', not 'Ignition', suggesting potential static accumulation."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AXISBANK_2026-06-22": {
+        "narrative": "Axis Bank exhibits fundamental partnerships and initiatives but faces technical resistance and governance red flags.",
+        "red_flags": [
+            "Distance to Resistance is less than 5%, indicating a potential 'Trap'.",
+            "Concerns about governance issues as flagged by S&P and in general banking sector challenges.",
+            "ICICI and Axis Bank troubles highlighting governance issues."
+        ],
+        "grade": "C",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ASTERDM_2026-06-22": {
+        "narrative": "Aster DM Healthcare faces immediate technical resistance and a GST demand, raising concerns despite its strategic expansions.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating a 'Trap'.",
+            "GST Order demanding Rs 72.91 Lakh could indicate financial stress."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "GODFRYPHLP_2026-06-22": {
+        "narrative": "Godfrey Phillips India shows mixed signals with strong recent gains but underlying concerns in earnings and management changes.",
+        "red_flags": [
+            "Recent resignation of general counsel Jaishree Tolani.",
+            "Earnings pushing shares 28% lower, as reported by simplywall.st.",
+            "Share price fall post Q4 results announcement.",
+            "Dip in Q2FY26 revenue."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "KIMS_2026-06-22": {
+        "narrative": "KIMS is facing technical traps and ongoing audit concerns despite strong growth narratives.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 2.1%, indicating a trap.",
+            "Lokayukta raids on KIMS admin locations suggest audit concerns."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "RKFORGE_2026-06-22": {
+        "narrative": "Ramkrishna Forgings shows potential with expansion efforts, but financial inconsistencies and significant profit decline signal caution.",
+        "red_flags": [
+            "Profit slumps over 70% in Q4",
+            "Consolidated net profit declines 72.01% in March 2026 quarter",
+            "Errors in financial books leading to a Rs 202.6 crore loss",
+            "Inventory discrepancies reported",
+            "Share price recently hit a 52-week low"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "BSE_2026-06-22": {
+        "narrative": "BSE shares show promising trends but are marred by governance compliance issues and market fluctuations.",
+        "red_flags": [
+            "SEBI fines for governance lapses and regulatory non-compliance",
+            "BSE shares tumbled up to 4% in anticipation of NSE IPO"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "TVSMOTOR_2026-06-22": {
+        "narrative": "TVS Motor appears to be a robust investment opportunity with significant growth and strategic initiatives, with no immediate red flags.",
+        "red_flags": [],
+        "grade": "A",
+        "sentiment": "POSITIVE",
+        "action": "DEPLOY"
+    },
+    "BOSCHLTD_2026-06-22": {
+        "narrative": "Despite an ascending triangle formation, Bosch Ltd faces significant legal and financial challenges, casting uncertainty over its prospects.",
+        "red_flags": [
+            "Bosch to pay $36 million penalty for illicit sales to Huawei",
+            "Bosch India Hit with Rs 96 crore Customs Fine"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "NMDC_2026-06-22": {
+        "narrative": "NMDC is showing strength with significant contract acquisitions and positive momentum, but vigilance is advised due to past cyber fraud attempts.",
+        "red_flags": [
+            "Significant contracts might inflate short-term expectations.",
+            "Presence of cyber fraud attempts signals a need for improved security."
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "ACE_2026-06-22": {
+        "narrative": "ACE is experiencing technical momentum with a favorable ascending_triangle phase; however, several potential financial and reputational risks loom.",
+        "red_flags": [
+            "ACE is not involved in direct financial fraud but is associated with entities involved in alleged financial improprieties.",
+            "A potential association with numerous media reports discussing financial irregularities, although no direct infractions with SEBI are noted."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "EMCURE_2026-06-22": {
+        "narrative": "Emcure Pharmaceuticals exhibits technical potential with some fundamental concerns and ongoing legal issues, necessitating caution.",
+        "red_flags": [
+            "Distance to Resistance at 3.3% indicates a potential overhead trap.",
+            "Fire at Emcure's Pune Plant temporarily halted operations.",
+            "Ongoing legal issues with a \u20b974 crore pharma fraud case.",
+            "Shares slide post-Q4 results due to profit booking."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "INDIANB_2026-06-22": {
+        "narrative": "Indian Bank shows positive technical indicators but faces some fundamental challenges and potential governance concerns.",
+        "red_flags": [
+            "FIR against staff for embezzlement",
+            "Potential governance issues with board and executive changes"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "JINDALSAW_2026-06-22": {
+        "narrative": "Jindal Saw shows technical strength with growing momentum and ascending formation, but faces potential legal risks due to antitrust investigations.",
+        "red_flags": [
+            "Involvement in antitrust investigation by CCI",
+            "Past revenue dip of 17% YoY"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "KARURVYSYA_2026-06-22": {
+        "narrative": "Karur Vysya Bank shows promise with positive business growth and management stability but faces scrutiny due to a long-standing penalty and a recent high-profile bank loan scam investigation.",
+        "red_flags": [
+            "ATM error penalty since 2017",
+            "Rs637 Crore Bank Loan Scam investigation"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "SRF_2026-06-22": {
+        "narrative": "SRF demonstrates strong potential with robust Q4 results, yet caution is warranted due to recent promoter stake sale.",
+        "red_flags": [
+            "Promoter Kama Holdings set to sell 3% stake in open market"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "SBIN_2026-06-22": {
+        "narrative": "State Bank of India shows strong technical momentum with potential fundamental concerns due to recent fraud recognition in its accounts.",
+        "red_flags": [
+            "Recent fraud cases involving Anil Ambani and RCom.",
+            "A previous fraud case leading to jail sentences for retired officials."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "AUROPHARMA_2026-06-22": {
+        "narrative": "Aurobindo Pharma shows growth potential with upcoming acquisitions, but faces financial scrutiny and performance hesitancy.",
+        "red_flags": [
+            "Shares trade lower after US FTC approves acquisition",
+            "Slapped with Rs 77.6 Crore GST Demand",
+            "Decline of 4.6% after denying Zentiva buyout",
+            "\u20b9170 crore GST demand over past refunds"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "KPIL_2026-06-22": {
+        "narrative": "Kalpataru Projects International (NSE:KPIL) exhibits solid fundamentals but faces significant technical resistance and audit-related red flags.",
+        "red_flags": [
+            "Technical resistance less than 5% away",
+            "Recent tax demand notices",
+            "GST and VAT penalties",
+            "Mutual fund trimming stake"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AAVAS_2026-06-25": {
+        "narrative": "Aavas Financiers faces significant instability with executive turnover and financial scrutiny impacting its stock performance.",
+        "red_flags": [
+            "High-level executive departures: CFO and CRO resignation",
+            "NHB investigation related to loan classification discrepancies",
+            "Stock experiencing declines due to financial irregularities concerns"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ZYDUSWELL_2026-06-25": {
+        "narrative": "Despite Zydus Wellness expanding globally and experiencing a stock price surge, technical analysis reveals potential resistance issues and recent tax penalties highlight financial challenges.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 3.6%, indicating a potential trap.",
+            "Zydus Wellness Arm Faces Rs 6.3 Million GST Penalty Over ITC Irregularities.",
+            "Zydus Wellness Arm Faces EUR 19,472 VAT Penalty in Spain."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "SYNGENE_2026-06-25": {
+        "narrative": "Syngene shows strong technical momentum with significant positive news sentiment, although underlying concerns remain about profit volatility and pricing targets.",
+        "red_flags": [
+            "Syngene shares zoom despite firm's Q4 net profit drop by 19% YoY",
+            "Macquarie cut Syngene's price target"
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "VTL_2026-06-25": {
+        "narrative": "Vardhman Textiles shows immediate technical weakness with a proximity to resistance, despite some recent strategic investments.",
+        "red_flags": [
+            "Overhead resistance is very close at 1.3%, indicating a potential price trap."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "SRF_2026-06-25": {
+        "narrative": "SRF shows strong technical momentum and positive fundamental sentiment due to strong growth in Chemicals and Films, with no immediate red flags undermining its potential.",
+        "red_flags": [],
+        "grade": "A",
+        "sentiment": "POSITIVE",
+        "action": "DEPLOY"
+    },
+    "SBIN_2026-06-25": {
+        "narrative": "The State Bank of India shows positive technical momentum but faces potential headwinds due to recent profit underperformance and fraud allegations.",
+        "red_flags": [
+            "Underperformance in Q4 profit due to treasury income slump",
+            "Fraud allegations involving tagging Anil Ambani and RCom as 'fraud'",
+            "CBI court sentencing in a previous bank fraud case"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "BANKBARODA_2026-06-25": {
+        "narrative": "Bank of Baroda is under scrutiny due to significant fraud allegations and potential operational risks despite positive technical indicators.",
+        "red_flags": [
+            "Involvement in multiple fraud cases, including the Anil Ambani loan saga.",
+            "Concerns over cybersecurity as evidenced by the missing funds in the currency chest fraud.",
+            "Public protests over alleged loan scams."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AEGISLOG_2026-06-25": {
+        "narrative": "Aegis Logistics faces immediate resistance with a mixed fundamental outlook and potential execution challenges.",
+        "red_flags": [
+            "Overhead Wall: Distance to Resistance is 0.0%, indicating a Trap."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "PRESTIGE_2026-06-25": {
+        "narrative": "Despite Prestige's ambitious project plans, compliance issues and a lack of clear strength pose significant risks.",
+        "red_flags": [
+            "Prestige Estates Projects Receives NSE Cautionary Email Over Secretarial Compliance Issues",
+            "Prestige Consumer Healthcare, Inc. (PBH) Securities Fraud Investigation"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "KPIL_2026-06-25": {
+        "narrative": "KPIL is showing strong momentum and order acquisition but faces potential resistance and tax issues.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 1.0%",
+            "Kalpataru Projects' Kenya arm receives tax demand notice",
+            "Kalpataru Projects receives Eswatini tax order"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ASTERDM_2026-06-25": {
+        "narrative": "Aster DM Healthcare shows strong momentum and growth potential but faces immediate technical resistance and underlying operational challenges.",
+        "red_flags": [
+            "Technical: Distance to Overhead Resistance is 0.0%, indicating a 'Trap'.",
+            "Fundamental: Reports of revenue loss due to nurse strike.",
+            "Audit: Receipt of a GST order demanding Rs 72.91 Lakh, suggesting potential financial scrutiny."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "NYKAA_2026-06-25": {
+        "narrative": "Nykaa enjoys significant growth prospects but is confronted with notable technical and governance challenges.",
+        "red_flags": [
+            "Overhead Resistance is only 2.6%, indicating potential price resistance.",
+            "Current phase is 'rectangle', suggesting possible static accumulation.",
+            "Historical governance issues highlighted by Nykaa's bonus issue and associated concerns."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ACE_2026-06-25": {
+        "narrative": "ACE demonstrates technical strength and positive fundamental signals but is overshadowed by possible allegations of fraud.",
+        "red_flags": [
+            "Mobix Labs, Inc. Files Complaint Against ACE Equity Partners for Alleged Fraud and Breach of Contract",
+            "CBI books ace dancer over financial fraud"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "CANFINHOME_2026-06-25": {
+        "narrative": "Can Fin Homes shows signs of growth potential but encounters significant red flags from recent fraud allegations and regulatory penalties.",
+        "red_flags": [
+            "Rectangle phase indicating static accumulation rather than ignition.",
+            "Recent \u20b92.70 lakh penalty by RBI for code breach.",
+            "High-profile recruitment scam with a CVC probe ordered.",
+            "Alleged financial fraud by employees amounting to \u20b938.53 crore."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AUROPHARMA_2026-06-25": {
+        "narrative": "Aurobindo Pharma is facing potential challenges from regulatory hurdles and share price volatility despite expansion efforts and strategic acquisitions.",
+        "red_flags": [
+            "Aurobindo Pharma shares trade lower after US FTC approves acquisition",
+            "Aurobindo Pharma hit with \u20b9170 crore GST demand over past refunds"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "AEGISVOPAK_2026-06-25": {
+        "narrative": "Aegis Vopak Terminals shows strong momentum and rising profits, but concerns over analyst forecast cuts and FII stake reductions cast shadows on its prospects.",
+        "red_flags": [
+            "Analysts have significantly lowered forecasts.",
+            "FIIs have reduced their stakes in largecap stocks, including Aegis Vopak, contributing to recent share price declines."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "JINDALSAW_2026-06-25": {
+        "narrative": "Jindal Saw shows promising technical signals with a solid market position, but repeated and oddly timed investor meets could indicate potential obfuscation strategies.",
+        "red_flags": [
+            "Repeated virtual investor meets over short time spans suggest potential manipulation or obfuscation.",
+            "Duplicate news entries raise concerns about transparency and communication."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "RKFORGE_2026-06-25": {
+        "narrative": "Ramkrishna Forgings faces significant challenges with recent profit declines and inventory discrepancies impacting potential growth.",
+        "red_flags": [
+            "Consolidated net profit declines 72.01% in March 2026 quarter.",
+            "Inventory discrepancies reported.",
+            "Share price recently tumbled 12% to a 52-week low."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "INDIGO_2026-06-25": {
+        "narrative": "While IndiGo shows strong technical momentum and gains from lower crude prices, significant governance issues and regulatory penalties overshadow its market performance.",
+        "red_flags": [
+            "Governance lapses flagged by multiple sources",
+            "Compliance risk and criticisms by proxy firms",
+            "Penalty order from CGST",
+            "Board accountability issues"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "WELSPUNLIV_2026-06-25": {
+        "narrative": "Welspun Living shows promising momentum and anticipation for growth, but potential risks require careful consideration.",
+        "red_flags": [
+            "Welspun Living pays \u20b92.22 lakh fine to BSE in abeyance"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "IFCI_2026-06-25": {
+        "narrative": "IFCI shows technical weakness with immediate overhead resistance and volatile fundamental news driven by the NSE IPO filing.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 0.0%, indicating a trap.",
+            "High volatility with recent profit booking after substantial gains."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ABSLAMC_2026-06-25": {
+        "narrative": "Aditya Birla Sun Life AMC exhibits concerning technical indicators and leadership instability, warranting caution.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 0.8%, indicating a 'Trap'.",
+            "Leadership changes including the resignation of CIO Mahesh Patil.",
+            "SEBI investigation involving a BofA unit in a deal with Aditya Birla Sun Life AMC."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "INDIANB_2026-06-25": {
+        "narrative": "Indian Bank shows a strong upward technical setup in the ascending triangle phase but faces fundamental challenges due to legal issues and competition in deposit rates.",
+        "red_flags": [
+            "Legal issues with auction quashed and compensation ordered",
+            "Increasing competition for deposit rates from other banks",
+            "Reports of procedural violations"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "KARURVYSYA_2026-06-25": {
+        "narrative": "Karur Vysya Bank demonstrates growth potential but faces critical governance changes and unresolved ATM penalties.",
+        "red_flags": [
+            "R Ramkumar demits office at Karur Vysya Bank",
+            "Rs 10,000 ATM error penalty since 2017"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "M&M_2026-06-25": {
+        "narrative": "While M&M shows technical strength with a bull trend and significant market momentum, substantial concerns exist due to financial penalties and potential governance issues.",
+        "red_flags": [
+            "RBI monetary penalties on Mahindra & Mahindra Financial Services",
+            "Allegations of financial impropriety involving SEBI chairperson's husband and M&M",
+            "E-way bill penalty facing M&M"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AXISBANK_2026-06-25": {
+        "narrative": "Axis Bank faces resistance and regulatory challenges amid strong growth initiatives.",
+        "red_flags": [
+            "Distance to Overhead Resistance is less than 5%, indicating a 'Trap'.",
+            "Fined by RBI for foreign exchange violations."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "NMDC_2026-06-25": {
+        "narrative": "NMDC is on an upward trajectory with strong momentum and promising news but vigilance against potential traps is advised.",
+        "red_flags": [],
+        "grade": "A",
+        "sentiment": "POSITIVE",
+        "action": "DEPLOY"
+    },
+    "JWL_2026-06-25": {
+        "narrative": "Jupiter Wagons faces significant financial struggles and management issues despite a technical setup that is not immediately concerning.",
+        "red_flags": [
+            "Significant drop in Q4 net profit and revenue.",
+            "Fundamentals marked by a 56% YoY decline in FY26 net profit.",
+            "Major stock price drop following poor financial performance.",
+            "JV debarred by Railway Board for faking localization."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "BOSCHLTD_2026-06-25": {
+        "narrative": "Bosch Ltd demonstrates technical resilience and gains positive momentum despite minor audit concerns, signaling strong market confidence.",
+        "red_flags": [
+            "Bosch ordered to pay $2m in Brazil over bribery scheme in labour proceedings",
+            "Bosch to pay $36 million penalty for illicit sales to Huawei"
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "COROMANDEL_2026-06-25": {
+        "narrative": "Despite showing bullish technical indicators and strong revenue growth, Coromandel faces significant governance concerns and potential financial risks.",
+        "red_flags": [
+            "Coromandel International Earnings Missed Analyst Estimates",
+            "Promoters cut stakes in 13 midcap stocks",
+            "Cobrapost investigation questions corporate governance",
+            "Coromandel faces \u20b97.3 Crore IGST demand",
+            "Coromandel's related party transactions approval sought"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "DATAPATTNS_2026-06-25": {
+        "narrative": "Data Patterns (India) stock shows technical weakness with potential fundamental growth, yet its immediate proximity to resistance suggests caution.",
+        "red_flags": [
+            "Distance to Overhead Resistance is below 5% threshold, indicating a technical trap."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "KIMS_2026-06-25": {
+        "narrative": "KIMS stock shows potential growth with new Institute expansions but faces technical resistance challenges.",
+        "red_flags": [
+            "Technical: Distance to Resistance is 2.1%, indicating a potential technical 'Trap'.",
+            "Audit: Lokayukta raids on KIMS admin linked locations raise concerns about possible asset-related fraud."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "TARIL_2026-06-25": {
+        "narrative": "TARIL is currently in an ascending_triangle phase with strong momentum but faces significant volatility and recent negative investor sentiment following quarterly results.",
+        "red_flags": [
+            "Shares crashed 11% after Q4 results and dividend announcement",
+            "Analysts have lowered expectations for TARIL",
+            "Shares have hit lower circuit on poor results"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AUBANK_2026-06-25": {
+        "narrative": "AU Small Finance Bank's potential growth is overshadowed by proximity to resistance and recent fraud concerns.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 4.9% - potential 'Trap'.",
+            "Involvement in fraud case resulting in de-empanelment by Haryana government.",
+            "Shares decreased significantly post-fraud disclosure."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "GODFRYPHLP_2026-06-25": {
+        "narrative": "Godfrey Phillips India's stock displays potential with strong momentum but is overshadowed by legal and market performance issues.",
+        "red_flags": [
+            "Resignation of general counsel",
+            "Mixed financial performance post-results",
+            "Clarification on trading volume surges indicating uncertainty"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "PARADEEP_2026-06-26": {
+        "narrative": "Paradeep Phosphates exhibits strong technical momentum and promising expansion news, but lacks transparency in financial audits and faces legal setbacks.",
+        "red_flags": [
+            "NCLAT upholds NCLT order rejecting Entry Tax exemption plea",
+            "No mention of auditor resignation or SEBI fines"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "ADANIPOWER_2026-06-26": {
+        "narrative": "Adani Power shows potential with plans for expansion but faces operational volatility and governance changes.",
+        "red_flags": [
+            "Volatile trading patterns.",
+            "Recent declines in stock due to management changes."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "INDIGO_2026-06-26": {
+        "narrative": "Despite technical strength, IndiGo faces significant governance issues that overshadow its market performance.",
+        "red_flags": [
+            "Significant governance lapses and criticism from multiple financial news outlets",
+            "Fine of \u20b9117.5 crore from CGST",
+            "Corporate governance concerns highlighted by ICSI"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "NYKAA_2026-06-26": {
+        "narrative": "Nykaa shows potential growth opportunities despite recent concerns about corporate governance and underlying technical weaknesses, making it a speculative investment.",
+        "red_flags": [
+            "Distance to Resistance is less than 5%, indicating a technical 'Trap'.",
+            "Current Phase is 'rectangle', implying potential Static Accumulation.",
+            "Corporate governance concerns highlighted by bonus issue fiasco."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "COROMANDEL_2026-06-26": {
+        "narrative": "Coromandel showcases signs of both technical strength and potential operational concerns, warranting cautious observation.",
+        "red_flags": [
+            {
+                "type": "FUNDAMENTAL",
+                "issue": "Earnings missed analyst estimates."
+            },
+            {
+                "type": "FRAUD/AUDIT",
+                "issues": [
+                    "Promoters cut stakes in midcap stocks",
+                    "Related party transactions needing  approval",
+                    "\u20b95,900 fine for delayed disclosure",
+                    "\u20b97.3 Crore IGST demand"
+                ]
+            }
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "INDIANB_2026-06-26": {
+        "narrative": "Indian Bank (NSE:INDIANB) is demonstrating positive momentum but faces competitive pressures and concerns regarding South Indian Bank management changes.",
+        "red_flags": [
+            "News of CEO exit announcement and voluntary retirement in South Indian Bank could raise management stability concerns.",
+            "General competitive environment indicated by multiple banks raising FCNR deposit rates."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "PRESTIGE_2026-06-26": {
+        "narrative": "Prestige is undergoing bullish momentum with promising project launches and expansion plans, but faces potential risks from secretarial compliance issues.",
+        "red_flags": [
+            "Prestige Estates Projects Receives NSE Cautionary Email Over Secretarial Compliance Issues"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "HFCL_2026-06-26": {
+        "narrative": "HFCL is experiencing notable momentum with a surge in share price and strategic investments, but promoter stake reductions and shifts in business structure require caution.",
+        "red_flags": [
+            "Promoters reduce stakes in 12 stocks",
+            "Completion deadline extension for Nivetti Systems stake sale",
+            "Prominent involvement of promoter stake changes"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "ADANIGREEN_2026-06-26": {
+        "narrative": "Adani Green Energy's stock faces significant skepticism due to governance issues and proximity to resistance levels, despite promising operational growth and expansion milestones.",
+        "red_flags": [
+            "Distance to Resistance is less than 5%, indicating a potential trap.",
+            "Norway\u2019s Sovereign Wealth Fund divested due to corruption allegations.",
+            "U.S. SEC investigations into fraud charges against the Adani Group."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ASTERDM_2026-06-26": {
+        "narrative": "Aster DM Healthcare's stock is susceptible to falling due to immediate resistance despite recent positive financial news.",
+        "red_flags": [
+            "Technical: Distance to Overhead Resistance is 0.0%, indicating a 'Trap'.",
+            "Fundamental: Recent revenue loss reported due to a nurse strike."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "BOSCHLTD_2026-06-26": {
+        "narrative": "Bosch Limited demonstrates robust potential with a bullish technical setup but faces minor fundamental red flags due to recent legal penalties.",
+        "red_flags": [
+            "Bosch to pay $36 million penalty for $72 million in \u2018illicit\u2019 sales to Huawei.",
+            "Bosch ordered to pay $2m in Brazil over bribery scheme."
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "AEGISVOPAK_2026-06-26": {
+        "narrative": "Aegis Vopak Terminals shows potential in its financial performance but faces significant fundamental concerns due to recent analyst downgrades.",
+        "red_flags": [
+            "Analysts downgraded forecasts for Aegis Vopak dramatically.",
+            "Foreign Institutional Investors (FIIs) have reduced stakes, indicating possible lack of confidence.",
+            "Despite strong net profit growth, the market sentiment may remain cautious."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "AXISBANK_2026-06-26": {
+        "narrative": "Axis Bank faces technical resistance and governance challenges despite strong fundamentals.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 3.4%, which is a 'Trap'.",
+            "RBI imposes Rs 5 crore penalty on Axis Bank.",
+            "Governance issues reported in Indian banks, including Axis."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ACE_2026-06-26": {
+        "narrative": "ACE displays technical strength with an ascending triangle pattern, but recent news and potential fraud issues raise concerns.",
+        "red_flags": [
+            "Mobix Labs, Inc. Files Complaint Against ACE Equity Partners for Alleged Fraud and Breach of Contract"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "KIMS_2026-06-26": {
+        "narrative": "KIMS shows growth through new healthcare initiatives, yet faces technical resistance challenges.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 2.1%, indicating a 'Trap' condition."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ZYDUSWELL_2026-06-26": {
+        "narrative": "Zydus Wellness is on an upward trajectory but is facing minor regulatory hurdles and technical resistance.",
+        "red_flags": [
+            "Distance to Resistance is less than 5%, indicating a potential trap.",
+            "The company faces a Rs 6.3 million GST penalty over ITC irregularities.",
+            "EUR 19,472 VAT penalty in Spain with plans to appeal."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "WELSPUNLIV_2026-06-26": {
+        "narrative": "Welspun Living shows strong growth prospects with significant upside potential, but there are concerns regarding stock price movements and past financial performance declines.",
+        "red_flags": [
+            "Q2 profit declined by 93.5%",
+            "Paid fine to BSE",
+            "Share buyback despite Q2 profit decline"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "IFCI_2026-06-26": {
+        "narrative": "IFCI is experiencing significant volatility with a strong tendency to surge on IPO news, but technical and fraud concerns necessitate caution.",
+        "red_flags": [
+            "Technical: Distance to Overhead Resistance is 0.0%, indicating a 'Trap'.",
+            "Fraud: SFIO investigation into a \u20b96,855 crore loan fraud involving IFCI and systemic lending lapses."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "JWL_2026-06-26": {
+        "narrative": "Jupiter Wagons is experiencing strong order growth but faces challenges with profit decline and potential audit concerns.",
+        "red_flags": [
+            "Net profit declines 72% YoY to \u20b929 crore",
+            "EBITDA margin contracts",
+            "JV debarred by Railway Board for faking localisation",
+            "Current Phase: ascending_triangle - Ensure robustness of technical pattern"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "GODFRYPHLP_2026-06-26": {
+        "narrative": "Despite solid earnings, the resignation of Godfrey Phillips India's general counsel and certain financial discrepancies signal potential concerns for investors.",
+        "red_flags": [
+            "General counsel resignation",
+            "Volatile share price post earnings",
+            "Clarification on trading volume surge"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "DATAPATTNS_2026-06-26": {
+        "narrative": "Data Patterns (India) Ltd. presents a growth opportunity, but technical barriers suggest imminent resistance, and scrutiny is advised due to potential structural frailties.",
+        "red_flags": [
+            "Technical Rigor: Distance to Overhead Resistance is 0.3%, which is a 'Trap'.",
+            "Fundamental: Concerns about performance as highlighted by simplywall.st.",
+            "FRAUD/AUDIT: No immediate red flags, but key order revisions suggest caution."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "KPIL_2026-06-26": {
+        "narrative": "The stock of Kalpataru Projects International Limited exhibits technical weakness due to its proximity to overhead resistance, amidst strong recent order gains and international tax issues.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 1.0%, indicating a technical 'Trap'.",
+            "Kalpataru Projects' Kenya arm receives a significant tax demand notice.",
+            "ICICI Prudential Mutual Fund has trimmed its stake, which could indicate a lack of confidence."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AAVAS_2026-06-26": {
+        "narrative": "Aavas Financiers faces significant scrutiny over loan classification issues amidst executive resignations.",
+        "red_flags": [
+            "NHB scrutiny over loan classification lapses",
+            "Resignation of CFO and CRO",
+            "Stock declines following media scrutiny",
+            "Interim appointments in key financial positions"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "SBIN_2026-06-26": {
+        "narrative": "State Bank of India shows potential growth with positive technical indicators but is overshadowed by significant fraud concerns and operational risks.",
+        "red_flags": [
+            "The involvement of Anil Ambani and classification of accounts as 'fraud' could indicate potential risk exposure.",
+            "Historic fraud cases involving retired SBI officials may impact investor confidence."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AUROPHARMA_2026-06-26": {
+        "narrative": "Aurobindo Pharma is showing signs of potential growth but faces scrutiny due to a looming GST penalty and stock price pressures following the Lannett acquisition approval.",
+        "red_flags": [
+            "Distance to Overhead Resistance is exactly 5%, which is the minimum threshold and potentially a trap.",
+            "The company is dealing with a significant Rs 77.6 Crore GST demand and penalty, raising financial concerns."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "CANFINHOME_2026-06-26": {
+        "narrative": "Can Fin Homes faces severe credibility and technical challenges due to ongoing fraud investigations and unresolved financial compliance issues.",
+        "red_flags": [
+            "Fraud allegations and recruitment scam investigation by CVC.",
+            "Penalized \u20b92.70 lakh by RBI for code breach.",
+            "Allegations of employee financial fraud amounting to \u20b938.53 crore.",
+            "Rectangle phase indicates potential for static accumulation."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "RKFORGE_2026-06-26": {
+        "narrative": "Ramkrishna Forgings faces significant financial and operational challenges despite positive technical indicators.",
+        "red_flags": [
+            "Profit slumps over 70% in Q4",
+            "72.01% decline in net profit for March 2026",
+            "Inventory discrepancies reported",
+            "Errors in books leading to Rs 202.6 crore hit"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ABSLAMC_2026-06-26": {
+        "narrative": "Aditya Birla Sun Life AMC is facing technical resistance and personnel changes amidst potential regulatory issues.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 0.8%, indicating a potential trap.",
+            "The resignation of Mahesh Patil, a key executive, as CIO raises concerns.",
+            "SEBI's allegations against a BofA unit in dealings involving the AMC hint at possible regulatory scrutiny."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "JINDALSAW_2026-06-26": {
+        "narrative": "Jindal Saw displays promising momentum with a recent rebound in fundamental standings, but poses risks due to potential static accumulation concerns.",
+        "red_flags": [
+            "Repeated mention of hosting virtual investor meets. Could imply uncertainty in communication or planning.",
+            "Mentions of debt risk could signal underlying financial vulnerabilities."
+        ],
+        "grade": "B",
+        "sentiment": "POSITIVE",
+        "action": "ACCUMULATE"
+    },
+    "KARURVYSYA_2026-06-26": {
+        "narrative": "While Karur Vysya Bank shows strong profit growth and a promising momentum, the history of financial mishaps and heightened scrutiny raises serious concerns.",
+        "red_flags": [
+            "ATM error penalties since 2017",
+            "Recent resignation of R Ramkumar",
+            "Rs637 Crore Bank Loan Scam investigation"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "TARIL_2026-06-26": {
+        "narrative": "TARIL is experiencing mixed performance with recent stock volatility, despite strong order wins.",
+        "red_flags": [
+            "Recent 11% and 12% share price crashes after Q4 results.",
+            "Frequent changes in the Chief Financial Officer position indicating potential instability in leadership.",
+            "Share price hit a 20% lower circuit on poor Q2 results.",
+            "Analysts have lowered expectations after latest results."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "BANKBARODA_2026-06-26": {
+        "narrative": "Bank of Baroda is currently in a positive technical setup with an ascending triangle pattern, but the numerous fraud-related headlines raise significant concerns about its stability and reputation.",
+        "red_flags": [
+            "Multiple high-profile fraud cases reported including a Rs 2,220-crore fraud linked to RCom and Anil Ambani.",
+            "RBI currency chest fraud with Rs 8.7 crore missing from a branch.",
+            "Significant outflow from FIIs indicating potential lack of investor confidence."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "NMDC_2026-06-26": {
+        "narrative": "NMDC is demonstrating growth potential with strategic expansions and digitalization initiatives but exhibits underlying risks concerning its earnings stability and recent security issues.",
+        "red_flags": [
+            "Solid Earnings May Rest On Weak Foundations - simplywall.st",
+            "NMDC Steel Limited Averts \u20b9120 Crore Cyber Fraud Attempt - The420.in",
+            "End of Independent Director Sanjay Tandon's Board Tenure - scanx.trade"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AEGISLOG_2026-06-26": {
+        "narrative": "Aegis Logistics is technically vulnerable at resistance with a positive fundamental outlook but minor red flags observed.",
+        "red_flags": [
+            "OVERHEAD WALL: Distance to Resistance is 0.0%, indicating a 'Trap'.",
+            "FUNDAMENTAL: Mismatch in upbeat sentiment with some shares sold (HALPG stake sale)."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AUBANK_2026-06-26": {
+        "narrative": "AU Small Finance Bank faces potential hurdles with less than ideal technical strength and fundamental concerns related to fraud allegations and government actions.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 4.9% - close to the 'Trap' threshold.",
+            "Involvement in a Rs 661 crore fraud case as reported by multiple sources.",
+            "De-empanelment by Haryana government leading to a significant stock slide."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "PRESTIGE_2026-06-30": {
+        "narrative": "Prestige's strong momentum and substantial unrecognized revenue are overshadowed by recent compliance issues and auditor concerns.",
+        "red_flags": [
+            "Prestige Estates Projects Receives NSE Cautionary Email Over Secretarial Compliance Issues",
+            "PBH Investors Have Opportunity to Join Prestige Consumer Healthcare Inc. Fraud Investigation with the Schall Law Firm"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "DATAPATTNS_2026-06-30": {
+        "narrative": "Data Patterns (India) Ltd exhibits technical weakness with proximity to resistance and an ascending triangle phase, raising potential concerns.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 0.3% - potential 'Trap'",
+            "Momentum Velocity is high, but if there is price elevation without supporting data, it may hide underlying issues"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ABSLAMC_2026-06-30": {
+        "narrative": "Aditya Birla Sun Life AMC is precariously close to resistance and faces scrutiny from potential insider trading violations.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 0.8%, indicating a technical trap.",
+            "SEBI alleges insider trading violations by BofA in a 2024 ABSL AMC share sale, raising significant concerns."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "PARADEEP_2026-06-30": {
+        "narrative": "Paradeep Phosphates shows robust technical positioning in a bullflag pattern, but recent shareholder value losses raise fundamental concerns.",
+        "red_flags": [
+            "Shareholder value has declined by 6.7%",
+            "NCLAT upholds order rejecting tax exemption plea"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "AUBANK_2026-06-30": {
+        "narrative": "AU Small Finance Bank faces both technical weakness and significant fundamental risks due to legal and fraud-related challenges.",
+        "red_flags": [
+            "Distance to Resistance is less than 5%, indicating a potential technical trap.",
+            "Involvement in fraud and legal issues with the Haryana government and IDFC First Bank.",
+            "Recent market cap drop of \u20b944b.",
+            "De-empanelment by the Haryana government due to fraud disclosure."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "ADANIGREEN_2026-06-30": {
+        "narrative": "Adani Green Energy is under scrutiny amidst stock pressure and potential fraudulent concerns despite operational advancements.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 3.3%, indicating a 'Trap'.",
+            "Adani group stocks are under pressure and there are ongoing fraud-related concerns.",
+            "Norway\u2019s Sovereign Wealth Fund dropping Adani Green from the portfolio over corruption and financial crime allegations."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "SBIN_2026-06-30": {
+        "narrative": "The State Bank of India shows some technical strength, but its connections to recent fraudulent activities and market underperformance raise concerns.",
+        "red_flags": [
+            "Classification of Ambani account as 'fraud' upheld",
+            "After SBI, Bank of India tags RCom, Anil Ambani as fraud",
+            "SBI to approach CBI after tagging Anil Ambani and RCom as 'fraud'",
+            "CBI Court Sentences 2 Retd. SBI Officials to 3-Year Jail Term in \u20b95.7 Crore Bank Fraud Case from 2010"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "TARIL_2026-06-30": {
+        "narrative": "TARIL's recent surge is overshadowed by recent management changes and mixed market performance, raising caution in sustainable growth prospects.",
+        "red_flags": [
+            "Significant share price volatility with recent 10% surge followed by an 11% drop.",
+            "Analysts have lowered expectations after the latest results.",
+            "Appointment of a new CFO could indicate internal instability or restructuring.",
+            "Shares hit a 20% lower circuit on poor Q2 results."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "AXISBANK_2026-06-30": {
+        "narrative": "Axis Bank faces significant challenges with executive turnover and regulatory issues, alongside technical barriers to growth.",
+        "red_flags": [
+            "Distance to Overhead Resistance is less than 5%, indicating a potential 'Trap'.",
+            "Axis Bank CFO Puneet Sharma's resignation implies leadership instability.",
+            "RBI penalties and governance issues signal regulatory and management concerns."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "BEML_2026-06-30": {
+        "narrative": "BEML shows strong international expansion and growth potential, but faces potential internal instability due to executive shifts.",
+        "red_flags": [
+            "BEML Land Assets revises auditor report",
+            "Cessation of multiple independent directors"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "INDIGO_2026-06-30": {
+        "narrative": "IndiGo shows signs of technical growth but is plagued by significant corporate governance issues, meriting caution in investment strategy.",
+        "red_flags": [
+            "Significant corporate governance lapses highlighted by ICSI and widespread criticism.",
+            "Technical glitch incident causing passenger distress.",
+            "GST penalty indicating financial oversight issues."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "GODFRYPHLP_2026-06-30": {
+        "narrative": "Godfrey Phillips India demonstrates strong technical momentum and earnings growth, but recent management instability and legal challenges pose significant risks.",
+        "red_flags": [
+            "Management instability due to general counsel resignation.",
+            "Arrest of director Samir Modi.",
+            "Price volatility from recent trading volume surge and revenue drop."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "NMDC_2026-06-30": {
+        "narrative": "While NMDC shows strong technical momentum and recent profit growth, underlying risks in environmental compliance and fundamental concerns suggest caution.",
+        "red_flags": [
+            "Environmental violations cited by activists",
+            "Concerns about earnings foundations per simplywall.st",
+            "Cancel clearance urged for NMDC-KIOM indicating potential regulatory issues"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "KPIL_2026-06-30": {
+        "narrative": "KPIL shows promising new order gains but is shadowed by close resistance and tax notices, demanding caution.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 1.0%, indicating a potential technical 'Trap'.",
+            "Receives tax demand notice and GST penalty, posing legal and financial risks."
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AAVAS_2026-06-30": {
+        "narrative": "Aavas Financiers is facing significant scrutiny and instability due to internal audit issues and executive turnover.",
+        "red_flags": [
+            "NHB inspection revealed loan classification lapses.",
+            "Top-level management churn with CFO and CRO departures.",
+            "Interim CEO appointment indicating leadership instability.",
+            "SEBI regulation clarification implying ongoing scrutiny.",
+            "Momentum Velocity does not indicate negative divergence but is overshadowed by fundamental concerns.",
+            "Negative media coverage surrounding whistleblower activity."
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "JINDALSAW_2026-06-30": {
+        "narrative": "Jindal Saw exhibits strong momentum and potential growth, but faces significant regulatory scrutiny and associated risks.",
+        "red_flags": [
+            "India raids Jindal Saw in an antitrust investigation",
+            "SEBI compliance and regulatory concerns"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "NYKAA_2026-06-30": {
+        "narrative": "Nykaa's stock faces substantial technical resistance despite strong growth prospects and governance structure, warranting cautious evaluation.",
+        "red_flags": [
+            "Distance to Overhead Resistance is only 2.6%, which is a 'Trap' condition",
+            "Current Phase is 'rectangle', indicative of a 'Static Accumulation' rather than 'Ignition'",
+            "Multiple large trades causing a 5% share slide appear suspicious"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "RKFORGE_2026-06-30": {
+        "narrative": "Ramkrishna Forgings shows signs of fundamental weakness with a significant profit slump and potential governance issues, despite technical strength.",
+        "red_flags": [
+            "Significant decline in net profit by 72.01%",
+            "Inventory discrepancies and errors in books leading to a financial hit",
+            "Concerns over governance with a distress cry and CEO pay rise challenges",
+            "Stock price tumble to a fresh 52-week low",
+            "Negative sentiment from shareholder actions and governance distress",
+            "Presence of errors in financial books and missing inventory"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "INDIANB_2026-06-30": {
+        "narrative": "Indian Bank shows strong technical momentum but is overshadowed by concerns about fundamental stability and external audits.",
+        "red_flags": [
+            "Negative Breakout: 8 stocks below 200 DMA, including Indian Bank",
+            "Dividend payouts suggest profit distribution but may indicate lack of reinvestment",
+            "External audit and court action against entities linked to Indian Bank"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "BOSCHLTD_2026-06-30": {
+        "narrative": "While Bosch Ltd shows a promising technical setup, fundamental issues linked to strategic partnerships and leadership changes raise significant concerns.",
+        "red_flags": [
+            "VW reportedly ends automated driving partnership with Bosch",
+            "Bosch CEO unexpectedly leaves",
+            "Bosch to pay $36 million penalty for illicit sales to Huawei",
+            "Bosch ordered to pay $2m in Brazil over bribery scheme"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "JWL_2026-06-30": {
+        "narrative": "Jupiter Wagons shows potential growth through major orders but is marred by severe profitability declines and auditor concerns.",
+        "red_flags": [
+            "Significant drop in quarterly profit by 73% YoY",
+            "Jupiter Wagons' JV debarred by Railway Board for Faking Localisation",
+            "Profit plummet by 60% in Q4 as revenue drops 35%"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "BANKBARODA_2026-06-30": {
+        "narrative": "Bank of Baroda is experiencing an ascending technical phase with reasonable distance from resistance, but is overshadowed by significant news of fraud and controversy.",
+        "red_flags": [
+            "Protestors seek return of pledged gold in loan scam",
+            "CBI reopens RCom, Anil Ambani loan saga regarding alleged fraud",
+            "RBI currency chest fraud in Ahmedabad branch",
+            "Bank classifies Anil Ambani loan accounts as fraud"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "SYNGENE_2026-06-30": {
+        "narrative": "Syngene demonstrates potential with a bull flag setup and improved momentum, though faces headwinds from past profit slumps and leadership transitions.",
+        "red_flags": [
+            "Past earnings were lackluster as indicated in multiple reports.",
+            "Stock recently hit over 2-year low due to a significant Q3 net profit decline."
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "AEGISVOPAK_2026-06-30": {
+        "narrative": "Aegis Vopak Terminals shows potential in revenue growth but has concerning analyst downgrades and significant stock volatility.",
+        "red_flags": [
+            "Analysts have dramatically shaved forecasts.",
+            "Shares have fallen up to 40% over recent quarters.",
+            "Listing hit an upper circuit after listing at a discount."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "KIMS_2026-06-30": {
+        "narrative": "KIMS Hospitals shows strong strategic growth with recent accreditations and QIP success, but faces immediate technical resistance challenges.",
+        "red_flags": [
+            "Distance to overhead resistance is only 2.1%, presenting a potential 'Trap'."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "ACE_2026-06-30": {
+        "narrative": "ACE shows strong technical promise with a clear ascending triangle pattern, but potential legal issues and industry competition could impact its stability.",
+        "red_flags": [
+            "Liftech opens lower in ACE Market debut",
+            "Mobix Labs, Inc. Files Complaint Against ACE Equity Partners"
+        ],
+        "grade": "D",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "COROMANDEL_2026-06-30": {
+        "narrative": "Coromandel International presents a relatively robust technical setup but is overshadowed by significant corporate governance concerns.",
+        "red_flags": [
+            "Promoters cut stakes in the March 2026 quarter.",
+            "Coromandel International Earnings Missed Analyst Estimates.",
+            "Coromandel Engineering fined for delayed related party transactions disclosure.",
+            "Coromandel faces \u20b97.3 Crore IGST demand.",
+            "Questions about corporate governance highlighted in Cobrapost investigation."
+        ],
+        "grade": "C",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "AEGISLOG_2026-06-30": {
+        "narrative": "Aegis Logistics appears strong fundamentally but faces immediate technical resistance, posing a risk for investors.",
+        "red_flags": [
+            "Distance to Overhead Resistance: 0.0% - indicates imminent resistance level 'Trap'"
+        ],
+        "grade": "B",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "ZYDUSWELL_2026-06-30": {
+        "narrative": "Zydus Wellness shows potential for growth but faces significant resistance ahead and has been penalized for tax irregularities.",
+        "red_flags": [
+            "Distance to Overhead Resistance is 3.6%, which is below the 5% threshold indicating a potential 'Trap'.",
+            "GST and VAT penalties incurred by Zydus Wellness's arm in India and Spain respectively indicate compliance issues."
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    },
+    "CANFINHOME_2026-06-30": {
+        "narrative": "While Can Fin Homes shows strong earnings growth, multiple fraud allegations, penalties, and high-level resignations severely tarnish its outlook.",
+        "red_flags": [
+            "Phase: Rectangle indicating static accumulation",
+            "Penalty of \u20b92.70 lakh by RBI for code breach",
+            "CVC probe into recruitment scam",
+            "Allegation of \u20b938.53 crore financial fraud",
+            "Deputy MD resignation"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "IFCI_2026-06-30": {
+        "narrative": "IFCI is currently at a critical point with technical and fundamental pressures, alongside significant fraud investigations that heavily weigh on its reliability.",
+        "red_flags": [
+            "Overhead Wall detected as Distance to Resistance is 0.0%",
+            "Fraud/Audit concerns due to a 6,855 Crore IFCI Loan Fraud investigation involving former CMDs and numerous companies"
+        ],
+        "grade": "F",
+        "sentiment": "NEGATIVE",
+        "action": "AVOID"
+    },
+    "KARURVYSYA_2026-06-30": {
+        "narrative": "Karur Vysya Bank shows strong growth potential, though its static phase and historical penalty issues pose concerns.",
+        "red_flags": [
+            "Current Phase: rectangle (Static)",
+            "Rs 10,000 ATM error resulting in ongoing penalty since 2017",
+            "Rs637 Crore Bank Loan Scam linked to another company"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "ACCUMULATE"
+    },
+    "AUROPHARMA_2026-06-30": {
+        "narrative": "Aurobindo Pharma shows strong acquisition momentum but faces regulatory and GST challenges.",
+        "red_flags": [
+            "Two US FDA observations during inspection",
+            "Rs 77.6 Crore GST demand and penalty",
+            "Rs 170 crore GST demand over past refunds"
+        ],
+        "grade": "C",
+        "sentiment": "NEUTRAL",
+        "action": "AVOID"
+    }
+}

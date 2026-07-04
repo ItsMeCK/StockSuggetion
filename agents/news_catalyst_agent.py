@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from typing import Dict, Any, List
 from openai import OpenAI
 from core.state import SovereignState
-
+from langsmith import wrappers
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class NewsCatalystAgent:
@@ -21,7 +21,7 @@ class NewsCatalystAgent:
     to filter out old/consumed news or negative consensus shocks.
     """
     def __init__(self, master_universe_path: str = "pipeline/master_universe.csv"):
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.client = wrappers.wrap_openai(OpenAI(api_key=os.getenv("OPENAI_API_KEY")))
         self.model = os.getenv("OPENAI_MODEL", "gpt-4o")
         self.company_map = self._load_company_map(master_universe_path)
 
@@ -158,13 +158,13 @@ class NewsCatalystAgent:
             logging.error(f"Error fetching tech context for news agent on {symbol}: {e}")
             return {}
 
-    def evaluate_news_catalysts(self, symbol: str, target_date: str = None) -> Dict[str, Any]:
+    def evaluate_news_catalysts(self, symbol: str, target_date: str = None, bypass_prefilter: bool = False) -> Dict[str, Any]:
         """
         Downloads headlines, fetches technical metrics context, and evaluates
         priced-in / expectation risks using OpenAI.
         """
         tech_ctx = self.fetch_technical_context(symbol, target_date)
-        if tech_ctx:
+        if tech_ctx and not bypass_prefilter:
             price_change = abs(tech_ctx.get("price_change_pct", 0.0))
             vol_ratio = tech_ctx.get("volume_ratio", 1.0)
             if price_change < 1.5 and vol_ratio < 1.2:
@@ -230,19 +230,15 @@ class NewsCatalystAgent:
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"}
+                response_format={"type": "json_object"},
+                timeout=30.0
             )
             result = json.loads(response.choices[0].message.content)
             logging.info(f"News catalyst evaluation for {symbol}: {result}")
             return result
         except Exception as e:
             logging.error(f"OpenAI error during news catalyst analysis for {symbol}: {e}")
-            return {
-                "catalyst_detected": False,
-                "catalyst_type": "NONE",
-                "summary": f"Failed to analyze news due to error: {e}",
-                "score_boost": 0.0
-            }
+            raise RuntimeError(f"OpenAI News Catalyst failed: {e}") from e
 
 def run_news_catalyst_node(state: SovereignState) -> Dict[str, Any]:
     """

@@ -77,6 +77,9 @@ class SovereignState(TypedDict):
     # Maps ticker -> News Catalyst Agent results
     news_catalysts: Annotated[Dict[str, Dict[str, Any]], merge_dicts]
     
+    # Maps ticker -> Fundamental Audit Agent reports
+    fundamental_reports: Annotated[Dict[str, Dict[str, Any]], merge_dicts]
+    
     # Maps ticker -> Watcher Agent notes
     incubator_notes: Annotated[Dict[str, str], merge_dicts]
     

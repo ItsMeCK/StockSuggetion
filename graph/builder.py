@@ -16,11 +16,12 @@ from agents.fundamental_audit import run_fundamental_audit_node as fundamental_a
 from agents.watcher_agent import run_watcher_agent as watcher_agent
 from agents.sector_agent import run_sector_agent as sector_agent
 from agents.news_catalyst_agent import run_news_catalyst_node as news_catalyst_agent
+from agents.derivatives_routing_agent import run_derivatives_routing_agent as derivatives_routing_agent
 
 def should_execute(state: SovereignState) -> str:
     """Conditional edge router: proceed to execution if we have approved allocations, else END."""
     if state.get("approved_allocations"):
-        return "execution_agent"
+        return "derivatives_routing_agent"
     return END
 
 def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
@@ -38,6 +39,7 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.add_node("critic_agent", critic_agent)
     workflow.add_node("fundamental_audit", fundamental_audit)
     workflow.add_node("risk_and_position_sizing", risk_and_position_sizing)
+    workflow.add_node("derivatives_routing_agent", derivatives_routing_agent)
     workflow.add_node("execution_agent", execution_agent)
     workflow.add_node("reflection_engine_post_mortem", reflection_engine_post_mortem)
 
@@ -46,12 +48,12 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     
     workflow.add_edge("momentum_adaptation", "heuristic_pre_processor")
     workflow.add_edge("heuristic_pre_processor", "meta_gate_experience_check")
-    workflow.add_edge("meta_gate_experience_check", "entry_trigger_agent")
+    workflow.add_edge("meta_gate_experience_check", "news_catalyst_agent")
+    workflow.add_edge("news_catalyst_agent", "entry_trigger_agent")
     workflow.add_edge("entry_trigger_agent", "watcher_agent")
     workflow.add_edge("watcher_agent", "pattern_agent_vision")
     workflow.add_edge("pattern_agent_vision", "sector_agent")
-    workflow.add_edge("sector_agent", "news_catalyst_agent")
-    workflow.add_edge("news_catalyst_agent", "critic_agent")
+    workflow.add_edge("sector_agent", "critic_agent")
     
     def critic_debate_router(state: SovereignState) -> str:
         count = state.get("debate_count", 0)
@@ -77,11 +79,12 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
         "risk_and_position_sizing",
         should_execute,
         {
-            "execution_agent": "execution_agent",
+            "derivatives_routing_agent": "derivatives_routing_agent",
             END: END
         }
     )
 
+    workflow.add_edge("derivatives_routing_agent", "execution_agent")
     workflow.add_edge("execution_agent", "reflection_engine_post_mortem")
     workflow.add_edge("reflection_engine_post_mortem", END)
 

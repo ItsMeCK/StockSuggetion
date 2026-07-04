@@ -15,7 +15,8 @@ class InstitutionalKnowledgeIngestor:
     Parses PDF books and uses OpenAI to extract structured trading rules.
     """
     def __init__(self):
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        from langsmith import wrappers
+        self.client = wrappers.wrap_openai(OpenAI(api_key=os.getenv("OPENAI_API_KEY")))
         self.downloads_path = Path.home() / "Downloads"
         self.rules_path = Path(__file__).parent.parent / "core" / "context_rules.json"
 

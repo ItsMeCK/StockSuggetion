@@ -20,9 +20,11 @@ class EntryTriggerAgent:
         self.db_password = os.getenv("POSTGRES_PASSWORD", "quantpassword")
         self.db_name = os.getenv("POSTGRES_DB", "market_data")
 
-    def check_momentum_triggers(self, tickers: list) -> Dict[str, Any]:
+    def check_momentum_triggers(self, tickers: list, news_catalysts: Dict[str, Any] = None) -> Dict[str, Any]:
         logging.info(f"Gear 2 At-Bat: Checking momentum ignition rules for {tickers}...")
         results = {}
+        if news_catalysts is None:
+            news_catalysts = {}
         
         if not tickers:
             return results
@@ -71,9 +73,11 @@ class EntryTriggerAgent:
                 ((pl.col("high") - pl.col("low")) / pl.col("close") * 100).alias("spread_pct")
             ])
             
-            # Calculate average spread for VSA
+            # Calculate average spread for VSA and ATR for Stealth check
             df = df.with_columns([
-                pl.col("spread_pct").rolling_mean(window_size=20).over("symbol").alias("avg_spread_20")
+                pl.col("spread_pct").rolling_mean(window_size=20).over("symbol").alias("avg_spread_20"),
+                pl.col("price_spread").rolling_mean(window_size=3).over("symbol").alias("atr_3"),
+                pl.col("price_spread").rolling_mean(window_size=20).over("symbol").alias("atr_20")
             ])
             
             latest_df = df.group_by("symbol").tail(1)
@@ -93,22 +97,49 @@ class EntryTriggerAgent:
                 spread_pct = row["spread_pct"]
                 avg_spread_20 = row["avg_spread_20"] if row["avg_spread_20"] else 1.0
                 
+                atr_3 = row["atr_3"] if row["atr_3"] else 1.0
+                atr_20 = row["atr_20"] if row["atr_20"] else 1.0
+                
                 # 1. Volume Z-Score Trigger (> 1.5)
                 vol_thrust = vol_z_score > 1.5
                 
                 # 2. 10-SMA Floor
                 sma_floor = close >= sma_10
                 
-                # 3. VSA (Volume Spread Analysis)
+                # 3. VSA (Volume Spread Analysis) - HARD VETO
                 # Effort vs Result: High volume must produce Wide Spread
                 # If Volume is high but spread is narrow (< avg_spread), it is 'Churn' (Distribution)
                 is_churn = vol_z_score > 1.5 and spread_pct < (avg_spread_20 * 0.8)
-                vsa_score_mod = -20.0 if is_churn else (15.0 if (vol_z_score > 1.0 and spread_pct > avg_spread_20) else 0.0)
                 
-                # 3. Momentum Ignition: Is price breaking the high of the last 2 days?
+                if is_churn:
+                    results[ticker] = {
+                        "approved": False,
+                        "entry_score": 0.0,
+                        "entry_price": float(close),
+                        "rejection_reason": "HARD VETO: VSA Fakeout/Churn (High Vol, Narrow Spread)"
+                    }
+                    logging.warning(f"Gear 2 VETO for {ticker}: VSA Churn detected. Rejecting fakeout.")
+                    continue
+                
+                vsa_score_mod = 15.0 if (vol_z_score > 1.0 and spread_pct > avg_spread_20) else 0.0
+                
+                # 4. Momentum Ignition: Is price breaking the high of the last 2 days?
                 cur_idx = df.filter(pl.col("symbol") == ticker).height - 1
                 prev_highs = df.filter(pl.col("symbol") == ticker).slice(cur_idx-2, 2)["close"].max()
                 momentum_ignition = close >= prev_highs
+                
+                # 5. Stealth Accumulation Check (Early Entry Technical)
+                close_range_pct = (close - row["low"]) / row["price_spread"] if row["price_spread"] > 0 else 1.0
+                is_stealth = (
+                    (volume >= 1.5 * vol_avg_20) and
+                    (atr_3 <= atr_20) and
+                    (close_range_pct >= 0.75)
+                )
+
+                # 6. Fundamental Catalyst Ignition (Early Entry Fundamental)
+                catalyst_data = news_catalysts.get(ticker, {})
+                has_catalyst = catalyst_data.get("catalyst_detected", False)
+                catalyst_boost = catalyst_data.get("score_boost", 0.0)
                 
                 # --- FUZZY SCORING LOGIC (The 80% Rule) ---
                 score = 0.0
@@ -141,8 +172,18 @@ class EntryTriggerAgent:
                 if mta_aligned:
                     score = min(100.0, score + 10.0)
                 
-                # 5. VSA Modifier (Max 15 pts or -20 pts)
+                # 5. VSA Modifier (Max 15 pts)
                 score += vsa_score_mod
+                
+                # 6. Stealth Accumulation Boost
+                if is_stealth:
+                    score += 30.0
+                    logging.info(f"Stealth Accumulation detected for {ticker}: Adding +30 to Entry Score.")
+                
+                # 7. Fundamental Catalyst Boost
+                if has_catalyst and catalyst_boost > 0:
+                    score += catalyst_boost * 2.0 # Massively boost momentum ignition
+                    logging.info(f"Fundamental Ignition for {ticker}: Adding +{catalyst_boost*2.0} to Entry Score.")
 
                 results[ticker] = {
                     "approved": True if score >= 80 else False, # New threshold hint
@@ -167,8 +208,9 @@ class EntryTriggerAgent:
 
 def run_entry_trigger_agent(state: SovereignState) -> Dict[str, Any]:
     candidates = state.get("candidates", [])
+    news_catalysts = state.get("news_catalysts", {})
     agent = EntryTriggerAgent()
-    results = agent.check_momentum_triggers(candidates)
+    results = agent.check_momentum_triggers(candidates, news_catalysts)
     
     # Update global agent_scores in state
     agent_scores = state.get("agent_scores", {})

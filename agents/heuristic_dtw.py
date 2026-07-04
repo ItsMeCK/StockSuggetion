@@ -20,7 +20,7 @@ class HeuristicDTWProcessor:
             "rectangle": np.array([2, 4, 2, 4, 2, 4, 2, 4])
         }
 
-    def fetch_recent_price_action(self, symbol: str) -> np.ndarray:
+    def fetch_recent_price_action(self, symbol: str, target_date: str = None) -> np.ndarray:
         """
         Fetches the last 20 days of normalized price action from TimescaleDB.
         """
@@ -34,7 +34,10 @@ class HeuristicDTWProcessor:
                 dbname=os.getenv('POSTGRES_DB', 'market_data')
             )
             cur = conn.cursor()
-            cur.execute("SELECT close FROM daily_ohlcv WHERE symbol = %s ORDER BY time DESC LIMIT 20", (symbol,))
+            if target_date:
+                cur.execute("SELECT close FROM daily_ohlcv WHERE symbol = %s AND time::date <= %s ORDER BY time DESC LIMIT 20", (symbol, target_date))
+            else:
+                cur.execute("SELECT close FROM daily_ohlcv WHERE symbol = %s ORDER BY time DESC LIMIT 20", (symbol,))
             rows = cur.fetchall()
             cur.close()
             conn.close()
@@ -61,7 +64,7 @@ class HeuristicDTWProcessor:
         n = min(len(series1), len(series2))
         return np.sqrt(np.sum((series1[:n] - series2[:n])**2)) / n
 
-    def evaluate_candidates(self, candidates: List[str]) -> Dict[str, Dict[str, Any]]:
+    def evaluate_candidates(self, candidates: List[str], target_date: str = None) -> Dict[str, Dict[str, Any]]:
         """
         Evaluates the candidates against the geometric templates.
         """
@@ -69,7 +72,7 @@ class HeuristicDTWProcessor:
         flagged_setups = {}
 
         for symbol in candidates:
-            price_action = self.fetch_recent_price_action(symbol)
+            price_action = self.fetch_recent_price_action(symbol, target_date)
             best_match = None
             lowest_distance = float('inf')
 
@@ -98,12 +101,13 @@ def run_heuristic_pre_processor(state: SovereignState) -> Dict[str, Any]:
     LangGraph Node integration for DTW preprocessing.
     """
     candidates = state.get("candidates", [])
+    target_date = state.get("target_date")
     if not candidates:
         logging.warning("No candidates received from Screener. Skipping DTW.")
         return {"heuristic_flags": {}}
 
     dtw_processor = HeuristicDTWProcessor()
-    flagged_setups = dtw_processor.evaluate_candidates(candidates)
+    flagged_setups = dtw_processor.evaluate_candidates(candidates, target_date)
 
     # Update global agent_scores in state
     agent_scores = state.get("agent_scores", {})

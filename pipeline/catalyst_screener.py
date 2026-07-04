@@ -39,7 +39,7 @@ class EventCatalystScreener:
                 SELECT time, symbol, open, high, low, close, volume 
                 FROM daily_ohlcv 
                 WHERE {date_filter}
-                symbol ~ '^[A-Z0-9]+$' 
+                symbol ~ '^[A-Z0-9&_-]+$' 
                 AND LENGTH(symbol) <= 10
                 AND symbol NOT ILIKE '%%NIFTY%%'
                 AND symbol NOT ILIKE '%%INDEX%%'
@@ -106,7 +106,7 @@ class EventCatalystScreener:
         logging.info(f"Catalyst Screener: Evaluating {len(symbols)} stocks for imminent news catalysts...")
         
         def _check_stock(symbol):
-            res = self.news_agent.evaluate_news_catalysts(symbol, target_date)
+            res = self.news_agent.evaluate_news_catalysts(symbol, target_date, bypass_prefilter=True)
             return symbol, res
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
@@ -130,11 +130,27 @@ class EventCatalystScreener:
 
     def run(self, target_date: str = None) -> List[str]:
         candidates = self.get_quiet_accumulation_stocks(target_date)
-        if not candidates:
-            return []
-        
-        injected_symbols = self.evaluate_catalysts(candidates, target_date)
-        return injected_symbols
+        injected_symbols = []
+        if candidates:
+            injected_symbols = self.evaluate_catalysts(candidates, target_date)
+            
+        # Run Sector/Macro Link Agent to find macro-driven plays
+        try:
+            from agents.sector_macro_agent import SectorMacroAgent
+            macro_agent = SectorMacroAgent()
+            macro_injections = macro_agent.identify_macro_catalysts(target_date)
+            if macro_injections:
+                logging.info(f"SectorMacroAgent injected: {macro_injections}")
+                injected_symbols.extend(macro_injections)
+                
+            calendar_injections = macro_agent.identify_upcoming_board_meetings(target_date)
+            if calendar_injections:
+                logging.info(f"Corporate Calendar injected: {calendar_injections}")
+                injected_symbols.extend(calendar_injections)
+        except Exception as e:
+            logging.error(f"Failed running SectorMacroAgent / Corporate Calendar Agent: {e}")
+            
+        return list(set(injected_symbols))
 
 if __name__ == "__main__":
     screener = EventCatalystScreener()

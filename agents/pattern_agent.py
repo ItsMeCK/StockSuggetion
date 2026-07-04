@@ -51,7 +51,7 @@ class VisionPatternAgent:
         Dynamically identifies institutional setups using OpenAI GPT-4o with neural caching.
         """
         # Hard token-save kill switch for simulations
-        simulation_mode = True 
+        simulation_mode = False 
         if simulation_mode:
             return {
                 "vision_approved": True,
@@ -130,7 +130,8 @@ class VisionPatternAgent:
             """
             
             from openai import OpenAI
-            client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            from langsmith import wrappers
+            client = wrappers.wrap_openai(OpenAI(api_key=os.getenv("OPENAI_API_KEY")))
             
             response = client.chat.completions.create(
                 model="gpt-4o",
@@ -138,7 +139,8 @@ class VisionPatternAgent:
                     {"role": "system", "content": "You are the Sovereign Institutional Auditor. Your job is to identify high-conviction institutional breakouts using the Master Rulebook."},
                     {"role": "user", "content": prompt}
                 ],
-                response_format={ "type": "json_object" }
+                response_format={ "type": "json_object" },
+                timeout=30.0
             )
             
             result = json.loads(response.choices[0].message.content)
@@ -168,7 +170,7 @@ class VisionPatternAgent:
             
         except Exception as e:
             logging.error(f"GPT-4o Vision Analysis failed: {e}")
-            return {"vision_approved": True, "vision_score": 50, "identified_pattern": "unknown", "reason": "Error"}
+            raise RuntimeError(f"OpenAI GPT-4o Vision failed: {e}") from e
 
 def run_pattern_agent(state: SovereignState) -> Dict[str, Any]:
     """

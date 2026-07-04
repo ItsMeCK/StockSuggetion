@@ -39,8 +39,8 @@ def run_historical_engine(target_date: str):
     screener = SovereignScreener()
     candidates, incubator, flagged_momentum, base_scores, macro_regime = screener.run_pipeline(target_date=target_date)
     
-    # We process BOTH established Stage 2 and Shannon Incubator stocks through the Cognitive Gate
-    initial_state["candidates"] = candidates + incubator
+    # We process established Stage 2 stocks through the Cognitive Gate
+    initial_state["candidates"] = candidates
     initial_state["incubator"] = incubator
     initial_state["flagged_momentum_candidates"] = flagged_momentum
     initial_state["base_scores"] = base_scores

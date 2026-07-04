@@ -30,7 +30,7 @@ class SectorContextAgent:
             "APOLLO": "NIFTY_AUTO"
         }
 
-    def analyze_sector_strength(self, tickers: list) -> Dict[str, float]:
+    def analyze_sector_strength(self, tickers: list, target_date: str = None) -> Dict[str, float]:
         logging.info(f"Sector Agent: Analyzing Relative Strength for {tickers}...")
         sector_scores = {}
         
@@ -43,9 +43,13 @@ class SectorContextAgent:
                 index_symbol = self.sector_map.get(ticker, "NIFTY_50") # Default to Nifty 50
                 
                 # Fetch last 10 days of index data
-                query = "SELECT time, close FROM daily_ohlcv WHERE symbol = %s ORDER BY time DESC LIMIT 10"
                 cur = conn.cursor()
-                cur.execute(query, (index_symbol,))
+                if target_date:
+                    query = "SELECT time, close FROM daily_ohlcv WHERE symbol = %s AND time::date <= %s ORDER BY time DESC LIMIT 10"
+                    cur.execute(query, (index_symbol, target_date))
+                else:
+                    query = "SELECT time, close FROM daily_ohlcv WHERE symbol = %s ORDER BY time DESC LIMIT 10"
+                    cur.execute(query, (index_symbol,))
                 rows = cur.fetchall()
                 cur.close()
                 
@@ -75,11 +79,12 @@ class SectorContextAgent:
 
 def run_sector_agent(state: SovereignState) -> Dict[str, Any]:
     candidates = state.get("candidates", [])
+    target_date = state.get("target_date")
     if not candidates:
         return {"sector_scores": {}}
         
     agent = SectorContextAgent()
-    sector_scores = agent.analyze_sector_strength(candidates)
+    sector_scores = agent.analyze_sector_strength(candidates, target_date)
     
     # Update global agent_scores
     agent_scores = state.get("agent_scores", {})

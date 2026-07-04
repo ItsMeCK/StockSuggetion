@@ -1,4 +1,4 @@
 00 10 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python3 run_engine.py --pulse 1 >> logs/pulse_1.log 2>&1
 00 13 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python3 run_engine.py --pulse 2 >> logs/pulse_2.log 2>&1
-#15 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python3 run_engine.py --pulse 3 >> logs/pulse_3.log 2>&1
+00 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python3 run_engine.py --pulse 3 >> logs/pulse_3.log 2>&1
 */10 9-15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign/venv/bin/python3 execution/risk_monitor.py >> logs/risk_monitor.log 2>&1

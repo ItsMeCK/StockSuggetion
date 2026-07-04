@@ -71,6 +71,7 @@ def run_analysis_only(pulse: int = 0):
         experience_warnings={},
         vision_validations={},
         news_catalysts={},
+        fundamental_reports={},
         approved_allocations={},
         execution_telemetry={},
         error_log=[]
@@ -138,6 +139,10 @@ def run_analysis_only(pulse: int = 0):
 
     # Append SIGNALED status for final approved allocations
     try:
+        if os.getenv("TRADING_MODE") == "HISTORICAL":
+            logging.info("Skipping database ledger append for approved signals (TRADING_MODE=HISTORICAL)")
+            return
+            
         conn = psycopg2.connect(
             host=os.getenv("DB_HOST", "localhost"),
             port=os.getenv("DB_PORT", "5432"),
@@ -168,7 +173,7 @@ def run_analysis_only(pulse: int = 0):
             """, (ticker,))
             latest_status = cur.fetchone()
             
-            if latest_status and latest_status[0] in ['SIGNALED', 'ACTIVE']:
+            if latest_status and latest_status[0] in ['SIGNALED', 'AMO_PLACED', 'ACTIVE']:
                 continue
                 
             trade_id = str(uuid.uuid4())
