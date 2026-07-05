@@ -105,9 +105,15 @@ class ZerodhaIngestionEngine:
             self.conn.rollback()
             logging.error(f"Bulk insert failed for {symbol}: {e}")
 
+# Index symbols (segment=INDICES, not tradeable equities) that never appear in
+# master_universe.csv but are read by macro_gate/screener.calculate_market_regime -
+# must be ingested explicitly or their data silently goes stale with no error.
+INDEX_SYMBOLS = ["NIFTY 50"]
+
+
 def run_eod_ingestion():
     engine = ZerodhaIngestionEngine()
-    
+
     # Set dates for Live Sovereign Audit
     target_date = datetime.now().strftime("%Y-%m-%d")
     lookback_start = (datetime.now() - timedelta(days=400)).strftime("%Y-%m-%d")
@@ -135,11 +141,15 @@ def run_eod_ingestion():
         all_instruments = engine.kite.instruments("NSE")
         
         if target_symbols:
-            full_market_list = [
-                {"symbol": inst['tradingsymbol'], "token": inst['instrument_token']} 
-                for inst in all_instruments 
-                if inst['tradingsymbol'] in target_symbols
-            ]
+            # instrument_type=='EQ' guard prevents a non-equity instrument sharing
+            # the same tradingsymbol from silently duplicating rows under one key.
+            seen_symbols = set()
+            full_market_list = []
+            for inst in all_instruments:
+                sym = inst['tradingsymbol']
+                if sym in target_symbols and inst['instrument_type'] == 'EQ' and sym not in seen_symbols:
+                    full_market_list.append({"symbol": sym, "token": inst['instrument_token']})
+                    seen_symbols.add(sym)
         else:
             # Fallback to EQ filter if no target list provided
             full_market_list = [
@@ -148,7 +158,14 @@ def run_eod_ingestion():
                 if inst['instrument_type'] == 'EQ' 
                 and not any(x in inst['tradingsymbol'] for x in ['-RE', '-BE', '-BZ'])
             ]
-        logging.info(f"Successfully loaded {len(full_market_list)} symbols for ingestion.")
+        index_tokens = {i["tradingsymbol"]: i["instrument_token"] for i in all_instruments
+                        if i["tradingsymbol"] in INDEX_SYMBOLS}
+        for sym in INDEX_SYMBOLS:
+            if sym in index_tokens:
+                full_market_list.append({"symbol": sym, "token": index_tokens[sym]})
+            else:
+                logging.warning(f"Index symbol {sym} not found in NSE instrument list - regime data will go stale.")
+        logging.info(f"Successfully loaded {len(full_market_list)} symbols for ingestion (incl. {len(INDEX_SYMBOLS)} index symbols).")
     except Exception as e:
         logging.error(f"Failed to fetch instruments: {e}")
         full_market_list = []

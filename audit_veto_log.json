@@ -1,0 +1,1202 @@
+[
+  {
+    "date": "2026-06-05",
+    "symbol": "ADANIENT",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-05",
+    "symbol": "KIMS",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-05",
+    "symbol": "HSCL",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-08",
+    "symbol": "CARTRADE",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-08",
+    "symbol": "KPIL",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-08",
+    "symbol": "GROWW",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-08",
+    "symbol": "PTCIL",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-08",
+    "symbol": "NAUKRI",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-09",
+    "symbol": "BELRISE",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-09",
+    "symbol": "CARTRADE",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-09",
+    "symbol": "IOB",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-09",
+    "symbol": "ANANTRAJ",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-09",
+    "symbol": "OLAELEC",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-09",
+    "symbol": "NUVAMA",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-09",
+    "symbol": "CUB",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-10",
+    "symbol": "CANFINHOME",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-10",
+    "symbol": "TBOTEK",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-11",
+    "symbol": "INDIGO",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-11",
+    "symbol": "GROWW",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-11",
+    "symbol": "ANGELONE",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-11",
+    "symbol": "POLYMED",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-11",
+    "symbol": "BOSCHLTD",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-11",
+    "symbol": "AEGISLOG",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-11",
+    "symbol": "APARINDS",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-11",
+    "symbol": "AEGISVOPAK",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-11",
+    "symbol": "ABDL",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-15",
+    "symbol": "AFFLE",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-15",
+    "symbol": "CYIENT",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-15",
+    "symbol": "CUB",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-15",
+    "symbol": "OBEROIRLTY",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-15",
+    "symbol": "PARADEEP",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-15",
+    "symbol": "FACT",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-15",
+    "symbol": "GODREJPROP",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-16",
+    "symbol": "LICI",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-16",
+    "symbol": "DOMS",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-16",
+    "symbol": "CYIENT",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-16",
+    "symbol": "IOB",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-16",
+    "symbol": "PHOENIXLTD",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-16",
+    "symbol": "KAJARIACER",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-16",
+    "symbol": "3MINDIA",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-16",
+    "symbol": "AWL",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-16",
+    "symbol": "FIVESTAR",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-16",
+    "symbol": "FORTIS",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-16",
+    "symbol": "DIXON",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "LICI",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "TRENT",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "POLYMED",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "UNITDSPR",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "SBIN",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "ASTERDM",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "CAMS",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "YESBANK",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "3MINDIA",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "INFY",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "GRAVITA",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "ACE",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "AWL",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "TRIDENT",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "FIVESTAR",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "LICI",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "NYKAA",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "TRENT",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "BATAINDIA",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "SONACOMS",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "LINDEINDIA",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "AADHARHFC",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "ASTERDM",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "OLECTRA",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "CDSL",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "NIACL",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "UNOMINDA",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "AWL",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-18",
+    "symbol": "TRIDENT",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "KPIL",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "MANKIND",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "HAL",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "AAVAS",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "DELHIVERY",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "MAXHEALTH",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "BHARATFORG",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "NEWGEN",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "KAJARIACER",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "MRF",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "ANGELONE",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "UNIONBANK",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "IPCALAB",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "BEL",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "BDL",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "AUROPHARMA",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-22",
+    "symbol": "ITCHOTELS",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "COHANCE",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "AADHARHFC",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "HAL",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "DELHIVERY",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "UTIAMC",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "LODHA",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "CUB",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "UNOMINDA",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "ADANIPORTS",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "DRREDDY",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "BIOCON",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "TRIDENT",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-23",
+    "symbol": "SHRIRAMFIN",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "MANAPPURAM",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "UNITDSPR",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "RAMCOCEM",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "AADHARHFC",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "INDIGO",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "M&MFIN",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "OBEROIRLTY",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "TMCV",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "ANGELONE",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "HDBFS",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "MOTILALOFS",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-25",
+    "symbol": "INDIGO",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "ITC",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "MARICO",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "BAJFINANCE",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "GRANULES",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "ASTERDM",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "VIJAYA",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "M&MFIN",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "ZYDUSWELL",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "LODHA",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "INDUSINDBK",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "ASIANPAINT",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "BHARATFORG",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "3MINDIA",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "GRASIM",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "ADANIPORTS",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "TITAN",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "BHEL",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "ATHERENERG",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "LUPIN",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "CIPLA",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "ABCAPITAL",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "AUROPHARMA",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-29",
+    "symbol": "ITCHOTELS",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "MARUTI",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "NESTLEIND",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "3MINDIA",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "SCHNEIDER",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "CANFINHOME",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "TITAN",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "M&MFIN",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "ANGELONE",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "RECLTD",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "HDFCAMC",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "AUROPHARMA",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "URBANCO",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "IKS",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "LENSKART",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-06-30",
+    "symbol": "BIOCON",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "MANAPPURAM",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "SONACOMS",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "BEML",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "ADANIENSOL",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "BAJAJFINSV",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "GODREJCP",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "EXIDEIND",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "CONCOR",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "TITAN",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "IKS",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "BIOCON",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "BDL",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "MANAPPURAM",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "ABFRL",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "ZYDUSLIFE",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "AMBUJACEM",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "MAPMYINDIA",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "UTIAMC",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "INDUSINDBK",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "UNIONBANK",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "IKS",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "GRAVITA",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "BIOCON",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "IPCALAB",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "BDL",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "AUROPHARMA",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "MARICO",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "ZENSARTECH",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "ABFRL",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "MAPMYINDIA",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "CANFINHOME",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "ANANTRAJ",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "FORCEMOT",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "ACC",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "UTIAMC",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "LODHA",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "PNBHOUSING",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "CONCOR",
+    "grade": "B",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "IKS",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "GRAVITA",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "BIOCON",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "IPCALAB",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "AWL",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "BHARTIARTL",
+    "grade": "D",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "HCLTECH",
+    "grade": "C",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "BDL",
+    "grade": "F",
+    "action": "AVOID"
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "ALKEM",
+    "grade": "F",
+    "action": "AVOID"
+  }
+]

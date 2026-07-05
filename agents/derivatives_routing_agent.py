@@ -22,7 +22,64 @@ def run_derivatives_routing_agent(state: SovereignState) -> dict:
 
     api_key = os.getenv("KITE_API_KEY", "").strip("'\"")
     access_token = os.getenv("KITE_ACCESS_TOKEN", "").strip("'\"")
-    
+
+    # --- Conviction Router integration ---
+    # When the Conviction Router has tagged routes, respect them:
+    #  - dropped / NO_EDGE entries stay dropped
+    #  - EQUITY_CONTINUATION stays equity (no NFO lookup)
+    #  - OPTIONS_IGNITION requires an NFO contract; if unavailable the trade is
+    #    DROPPED, not downgraded (ignition setups on a 2-day equity hold showed
+    #    a 45% win rate in forensics - worse than not trading).
+    router_tagged = any("route" in a for a in approved.values())
+    if router_tagged:
+        needs_nfo = {t: a for t, a in approved.items()
+                     if a.get("route") == "OPTIONS_IGNITION" and not a.get("dropped")}
+        needs_nfo_pe = {t: a for t, a in approved.items()
+                        if a.get("route") == "PE_BEARISH_DIVERGENCE" and not a.get("dropped")}
+        if not needs_nfo and not needs_nfo_pe:
+            return {"approved_allocations": approved}
+        instruments = None
+        if api_key and access_token:
+            try:
+                kite = KiteConnect(api_key=api_key)
+                kite.set_access_token(access_token)
+                instruments = kite.instruments(exchange="NFO")
+            except Exception as e:
+                logging.error(f"NFO instrument fetch failed: {e}")
+
+        def _resolve(ticker, details, opt_type):
+            if instruments is None:
+                logging.warning(f"Derivatives Router: no NFO data; DROPPING setup {ticker} (no equity fallback).")
+                approved[ticker]["dropped"] = True
+                approved[ticker]["suggested_instrument"] = "NONE"
+                return
+            fno = [i for i in instruments
+                   if i['name'] == ticker and i['instrument_type'] == opt_type and i['expiry'] is not None]
+            if not fno:
+                logging.info(f"Derivatives Router: {ticker} setup has no {opt_type} NFO options -> DROPPED.")
+                approved[ticker]["dropped"] = True
+                approved[ticker]["suggested_instrument"] = "NONE"
+                return
+            nearest = sorted(set(i['expiry'] for i in fno))[0]
+            opts = [i for i in fno if i['expiry'] == nearest]
+            entry_price = details.get("entry", 0.0)
+            opts.sort(key=lambda x: abs(float(x['strike']) - entry_price))
+            sel = opts[0]
+            approved[ticker].update({
+                "suggested_instrument": "NFO_OPTION",
+                "lot_size": sel['lot_size'],
+                "nearest_expiry": nearest.strftime("%Y-%m-%d"),
+                "option_symbol": sel['tradingsymbol'],
+                "strike": float(sel['strike']),
+            })
+            logging.info(f"Derivatives Router: {ticker} -> {sel['tradingsymbol']} (lot {sel['lot_size']}, expiry {nearest})")
+
+        for ticker, details in needs_nfo.items():
+            _resolve(ticker, details, 'CE')
+        for ticker, details in needs_nfo_pe.items():
+            _resolve(ticker, details, 'PE')
+        return {"approved_allocations": approved}
+
     if not api_key or not access_token:
         logging.warning("Zerodha API credentials missing. Defaulting all routes to EQUITY.")
         for ticker in approved:

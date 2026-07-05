@@ -1,0 +1,635 @@
+{
+  "approved_by_date": {
+    "2026-06-04": [
+      "AEGISLOG",
+      "INTELLECT"
+    ],
+    "2026-06-07": [],
+    "2026-06-08": [
+      "BANKINDIA"
+    ],
+    "2026-06-09": [
+      "JSWDULUX",
+      "NAVINFLUOR"
+    ],
+    "2026-06-10": [
+      "CUB"
+    ],
+    "2026-06-11": [
+      "JBMA",
+      "JSWINFRA"
+    ],
+    "2026-06-14": [
+      "LTF",
+      "INTELLECT",
+      "INDIAMART",
+      "PCBL",
+      "CHOICEIN",
+      "CEATLTD",
+      "CHOLAFIN"
+    ],
+    "2026-06-15": [
+      "AMBER",
+      "CHAMBLFERT",
+      "HUDCO",
+      "JIOFIN",
+      "BAJAJFINSV"
+    ],
+    "2026-06-16": [],
+    "2026-06-17": [
+      "KFINTECH",
+      "SCHNEIDER",
+      "TATAINVEST"
+    ],
+    "2026-06-18": [
+      "CHALET",
+      "POONAWALLA",
+      "CHOICEIN"
+    ],
+    "2026-06-21": [
+      "CEATLTD"
+    ],
+    "2026-06-22": [
+      "JSWINFRA"
+    ],
+    "2026-06-23": [
+      "NHPC"
+    ],
+    "2026-06-24": [
+      "CHOICEIN"
+    ],
+    "2026-06-28": [
+      "NHPC",
+      "CHOICEIN"
+    ],
+    "2026-06-29": [
+      "MARUTI"
+    ],
+    "2026-06-30": [
+      "ABREL",
+      "CEATLTD"
+    ],
+    "2026-07-01": [
+      "HINDUNILVR"
+    ],
+    "2026-07-02": [
+      "HYUNDAI"
+    ]
+  },
+  "trades": [
+    {
+      "signal_date": "2026-06-04",
+      "symbol": "AEGISLOG",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-07",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 782.65,
+        "pnl_pct": 3.115942028985504,
+        "days_held": 2,
+        "exit_date": "2026-06-08",
+        "entry_price": 759.0
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-04",
+      "symbol": "INTELLECT",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-07",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 751.9,
+        "pnl_pct": 1.6081081081081048,
+        "days_held": 2,
+        "exit_date": "2026-06-08",
+        "entry_price": 740.0
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-09",
+      "symbol": "JSWDULUX",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-10",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 3168.4,
+        "pnl_pct": 0.10742496050553209,
+        "days_held": 2,
+        "exit_date": "2026-06-11",
+        "entry_price": 3165.0
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-10",
+      "symbol": "CUB",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-11",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 199.35,
+        "pnl_pct": 0.987841945288748,
+        "days_held": 2,
+        "exit_date": "2026-06-14",
+        "entry_price": 197.4
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-11",
+      "symbol": "JBMA",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-14",
+      "equity": null,
+      "options": {
+        "strike": 690,
+        "sigma": 0.522,
+        "entry_premium": 43.74,
+        "underlying_entry": 691.25,
+        "status": "TRAIL_STOP_10PCT",
+        "exit_premium": 54.39,
+        "pnl_pct": 24.36,
+        "days_held": 6,
+        "exit_date": "2026-06-22"
+      }
+    },
+    {
+      "signal_date": "2026-06-11",
+      "symbol": "JSWINFRA",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-14",
+      "equity": null,
+      "options": {
+        "strike": 300,
+        "sigma": 0.42,
+        "entry_premium": 14.53,
+        "underlying_entry": 298.7,
+        "status": "TARGET_2X",
+        "exit_premium": 41.66,
+        "pnl_pct": 186.64,
+        "days_held": 7,
+        "exit_date": "2026-06-23"
+      }
+    },
+    {
+      "signal_date": "2026-06-14",
+      "symbol": "LTF",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-15",
+      "equity": null,
+      "options": {
+        "strike": 290,
+        "sigma": 0.521,
+        "entry_premium": 20.83,
+        "underlying_entry": 294.9,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 40.32,
+        "pnl_pct": 93.59,
+        "days_held": 12,
+        "exit_date": "2026-07-02"
+      }
+    },
+    {
+      "signal_date": "2026-06-14",
+      "symbol": "INTELLECT",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-15",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 764.9,
+        "pnl_pct": 0.5256932579839664,
+        "days_held": 2,
+        "exit_date": "2026-06-16",
+        "entry_price": 760.9
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-14",
+      "symbol": "INDIAMART",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-15",
+      "equity": null,
+      "options": {
+        "strike": 2060,
+        "sigma": 0.25,
+        "entry_premium": 64.82,
+        "underlying_entry": 2060.0,
+        "status": "TRAIL_STOP_10PCT",
+        "exit_premium": 78.4,
+        "pnl_pct": 20.95,
+        "days_held": 3,
+        "exit_date": "2026-06-18"
+      }
+    },
+    {
+      "signal_date": "2026-06-14",
+      "symbol": "PCBL",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-15",
+      "equity": null,
+      "options": {
+        "strike": 300,
+        "sigma": 0.454,
+        "entry_premium": 19.11,
+        "underlying_entry": 304.8,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 26.25,
+        "pnl_pct": 37.36,
+        "days_held": 12,
+        "exit_date": "2026-07-02"
+      }
+    },
+    {
+      "signal_date": "2026-06-14",
+      "symbol": "CHOICEIN",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-15",
+      "equity": null,
+      "options": {
+        "strike": 710,
+        "sigma": 0.318,
+        "entry_premium": 27.68,
+        "underlying_entry": 709.8,
+        "status": "TRAIL_STOP_10PCT",
+        "exit_premium": 24.31,
+        "pnl_pct": -12.2,
+        "days_held": 5,
+        "exit_date": "2026-06-22"
+      }
+    },
+    {
+      "signal_date": "2026-06-14",
+      "symbol": "CEATLTD",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-15",
+      "equity": null,
+      "options": {
+        "strike": 3450,
+        "sigma": 0.358,
+        "entry_premium": 162.13,
+        "underlying_entry": 3470.0,
+        "status": "TARGET_2X",
+        "exit_premium": 383.45,
+        "pnl_pct": 136.51,
+        "days_held": 11,
+        "exit_date": "2026-07-01"
+      }
+    },
+    {
+      "signal_date": "2026-06-15",
+      "symbol": "AMBER",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-16",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 7965.5,
+        "pnl_pct": 2.056374119154388,
+        "days_held": 2,
+        "exit_date": "2026-06-17",
+        "entry_price": 7805.0
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-15",
+      "symbol": "CHAMBLFERT",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-16",
+      "equity": null,
+      "options": {
+        "strike": 490,
+        "sigma": 0.4,
+        "entry_premium": 26.01,
+        "underlying_entry": 494.0,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 11.63,
+        "pnl_pct": -55.29,
+        "days_held": 6,
+        "exit_date": "2026-06-24"
+      }
+    },
+    {
+      "signal_date": "2026-06-15",
+      "symbol": "HUDCO",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-16",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 211.55,
+        "pnl_pct": -1.1448598130841068,
+        "days_held": 2,
+        "exit_date": "2026-06-17",
+        "entry_price": 214.0
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-15",
+      "symbol": "JIOFIN",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-16",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 244.1,
+        "pnl_pct": 0.7844756399669719,
+        "days_held": 2,
+        "exit_date": "2026-06-17",
+        "entry_price": 242.2
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-15",
+      "symbol": "BAJAJFINSV",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-16",
+      "equity": null,
+      "options": {
+        "strike": 1800,
+        "sigma": 0.292,
+        "entry_premium": 60.98,
+        "underlying_entry": 1792.0,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 114.93,
+        "pnl_pct": 88.48,
+        "days_held": 11,
+        "exit_date": "2026-07-02"
+      }
+    },
+    {
+      "signal_date": "2026-06-17",
+      "symbol": "SCHNEIDER",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-18",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 1395.5,
+        "pnl_pct": 7.354411877836749,
+        "days_held": 2,
+        "exit_date": "2026-06-21",
+        "entry_price": 1299.9
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-17",
+      "symbol": "TATAINVEST",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-18",
+      "equity": null,
+      "options": {
+        "strike": 690,
+        "sigma": 0.359,
+        "entry_premium": 32.59,
+        "underlying_entry": 694.15,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 16.13,
+        "pnl_pct": -50.51,
+        "days_held": 6,
+        "exit_date": "2026-06-29"
+      }
+    },
+    {
+      "signal_date": "2026-06-18",
+      "symbol": "CHALET",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-21",
+      "equity": null,
+      "options": {
+        "strike": 810,
+        "sigma": 0.329,
+        "entry_premium": 32.73,
+        "underlying_entry": 810.0,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 42.15,
+        "pnl_pct": 28.79,
+        "days_held": 8,
+        "exit_date": "2026-07-02"
+      }
+    },
+    {
+      "signal_date": "2026-06-18",
+      "symbol": "POONAWALLA",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-21",
+      "equity": null,
+      "options": {
+        "strike": 430,
+        "sigma": 0.394,
+        "entry_premium": 20.02,
+        "underlying_entry": 429.0,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 37.91,
+        "pnl_pct": 89.38,
+        "days_held": 8,
+        "exit_date": "2026-07-02"
+      }
+    },
+    {
+      "signal_date": "2026-06-18",
+      "symbol": "CHOICEIN",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-21",
+      "equity": null,
+      "options": {
+        "strike": 730,
+        "sigma": 0.33,
+        "entry_premium": 31.79,
+        "underlying_entry": 733.95,
+        "status": "TARGET_2X",
+        "exit_premium": 76.7,
+        "pnl_pct": 141.32,
+        "days_held": 8,
+        "exit_date": "2026-07-02"
+      }
+    },
+    {
+      "signal_date": "2026-06-21",
+      "symbol": "CEATLTD",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-22",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 3450.8,
+        "pnl_pct": -1.9993184141769749,
+        "days_held": 2,
+        "exit_date": "2026-06-23",
+        "entry_price": 3521.2
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-22",
+      "symbol": "JSWINFRA",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-23",
+      "equity": null,
+      "options": {
+        "strike": 320,
+        "sigma": 0.412,
+        "entry_premium": 14.63,
+        "underlying_entry": 317.5,
+        "status": "TRAIL_STOP_10PCT",
+        "exit_premium": 15.99,
+        "pnl_pct": 9.28,
+        "days_held": 2,
+        "exit_date": "2026-06-28"
+      }
+    },
+    {
+      "signal_date": "2026-06-23",
+      "symbol": "NHPC",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-24",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 81.57,
+        "pnl_pct": 2.603773584905652,
+        "days_held": 2,
+        "exit_date": "2026-06-28",
+        "entry_price": 79.5
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-24",
+      "symbol": "CHOICEIN",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-06-28",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 753.2,
+        "pnl_pct": 3.1427593289969256,
+        "days_held": 2,
+        "exit_date": "2026-06-29",
+        "entry_price": 730.25
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-06-28",
+      "symbol": "CHOICEIN",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-29",
+      "equity": null,
+      "options": {
+        "strike": 750,
+        "sigma": 0.351,
+        "entry_premium": 33.9,
+        "underlying_entry": 753.05,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 63.39,
+        "pnl_pct": 87.01,
+        "days_held": 3,
+        "exit_date": "2026-07-02"
+      }
+    },
+    {
+      "signal_date": "2026-06-29",
+      "symbol": "MARUTI",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-30",
+      "equity": null,
+      "options": {
+        "strike": 14200,
+        "sigma": 0.339,
+        "entry_premium": 564.57,
+        "underlying_entry": 14151.0,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 652.51,
+        "pnl_pct": 15.58,
+        "days_held": 2,
+        "exit_date": "2026-07-02"
+      }
+    },
+    {
+      "signal_date": "2026-06-30",
+      "symbol": "ABREL",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-07-01",
+      "equity": null,
+      "options": {
+        "strike": 1420,
+        "sigma": 0.457,
+        "entry_premium": 73.95,
+        "underlying_entry": 1412.4,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 67.68,
+        "pnl_pct": -8.48,
+        "days_held": 1,
+        "exit_date": "2026-07-02"
+      }
+    },
+    {
+      "signal_date": "2026-06-30",
+      "symbol": "CEATLTD",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-07-01",
+      "equity": null,
+      "options": {
+        "strike": 3650,
+        "sigma": 0.405,
+        "entry_premium": 189.16,
+        "underlying_entry": 3668.0,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 264.16,
+        "pnl_pct": 39.64,
+        "days_held": 1,
+        "exit_date": "2026-07-02"
+      }
+    },
+    {
+      "signal_date": "2026-07-01",
+      "symbol": "HINDUNILVR",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-07-02",
+      "equity": null,
+      "options": {
+        "strike": 2220,
+        "sigma": 0.25,
+        "entry_premium": 72.56,
+        "underlying_entry": 2224.9,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 58.77,
+        "pnl_pct": -19.0,
+        "days_held": 0,
+        "exit_date": "2026-07-02"
+      }
+    }
+  ],
+  "skipped_by_condition": [
+    {
+      "signal_date": "2026-06-08",
+      "symbol": "BANKINDIA",
+      "open": 147.32,
+      "min_open": 147.72
+    },
+    {
+      "signal_date": "2026-06-09",
+      "symbol": "NAVINFLUOR",
+      "open": 7020.0,
+      "min_open": 7046.5
+    },
+    {
+      "signal_date": "2026-06-14",
+      "symbol": "CHOLAFIN",
+      "open": 1649.9,
+      "min_open": 1653.6
+    },
+    {
+      "signal_date": "2026-06-17",
+      "symbol": "KFINTECH",
+      "open": 904.55,
+      "min_open": 906.85
+    },
+    {
+      "signal_date": "2026-06-28",
+      "symbol": "NHPC",
+      "open": 81.0,
+      "min_open": 81.57
+    }
+  ]
+}

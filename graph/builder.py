@@ -17,11 +17,20 @@ from agents.watcher_agent import run_watcher_agent as watcher_agent
 from agents.sector_agent import run_sector_agent as sector_agent
 from agents.news_catalyst_agent import run_news_catalyst_node as news_catalyst_agent
 from agents.derivatives_routing_agent import run_derivatives_routing_agent as derivatives_routing_agent
+from agents.conviction_router_agent import run_conviction_router as conviction_router
+from agents.breadth_thrust_agent import run_breadth_thrust_agent as breadth_thrust_agent
+from agents.pring_divergence_agent import run_pring_divergence_agent as pring_divergence_agent
+# NOTE: agents/equity_continuation_scanner.py exists but is intentionally NOT
+# wired in. It bypasses the critic/entry-trigger/fundamental-audit gauntlet to
+# get more calm-continuation candidates - validated against the REAL screener
+# this made results WORSE (105 raw candidates -> 52.4% WR) than letting the
+# gauntlet filter first (19 gauntlet-survived candidates -> 73.7% WR). The
+# gauntlet is doing real quality-filtering work; don't bypass it.
 
 def should_execute(state: SovereignState) -> str:
-    """Conditional edge router: proceed to execution if we have approved allocations, else END."""
+    """Conditional edge router: proceed to routing/execution if we have approved allocations, else END."""
     if state.get("approved_allocations"):
-        return "derivatives_routing_agent"
+        return "conviction_router"
     return END
 
 def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
@@ -30,6 +39,8 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     # 1. Add all nodes
     workflow.add_node("momentum_adaptation", momentum_adaptation)
     workflow.add_node("heuristic_pre_processor", heuristic_pre_processor)
+    workflow.add_node("breadth_thrust_agent", breadth_thrust_agent)
+    workflow.add_node("pring_divergence_agent", pring_divergence_agent)
     workflow.add_node("meta_gate_experience_check", meta_gate_experience_check)
     workflow.add_node("entry_trigger_agent", entry_trigger_agent)
     workflow.add_node("pattern_agent_vision", pattern_agent_vision)
@@ -39,6 +50,7 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.add_node("critic_agent", critic_agent)
     workflow.add_node("fundamental_audit", fundamental_audit)
     workflow.add_node("risk_and_position_sizing", risk_and_position_sizing)
+    workflow.add_node("conviction_router", conviction_router)
     workflow.add_node("derivatives_routing_agent", derivatives_routing_agent)
     workflow.add_node("execution_agent", execution_agent)
     workflow.add_node("reflection_engine_post_mortem", reflection_engine_post_mortem)
@@ -47,7 +59,18 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
     workflow.set_entry_point("momentum_adaptation")
     
     workflow.add_edge("momentum_adaptation", "heuristic_pre_processor")
-    workflow.add_edge("heuristic_pre_processor", "meta_gate_experience_check")
+    # Breadth Thrust widens state["candidates"] BEFORE the gauntlet (news,
+    # entry-trigger, critic, fundamental audit) - it never buys directly,
+    # every widened candidate still needs its own same-day ignition
+    # confirmation downstream, same as any other candidate.
+    workflow.add_edge("heuristic_pre_processor", "breadth_thrust_agent")
+    # Pring bearish-divergence PE agent runs standalone (validated separately
+    # from the bullish gauntlet - see agents/pring_divergence_agent.py). It
+    # writes directly to approved_allocations (pre-tagged route), bypassing
+    # news_catalyst/critic/pattern/fundamental_audit entirely; conviction_router
+    # and derivatives_routing_agent both special-case this pre-tagged route.
+    workflow.add_edge("breadth_thrust_agent", "pring_divergence_agent")
+    workflow.add_edge("pring_divergence_agent", "meta_gate_experience_check")
     workflow.add_edge("meta_gate_experience_check", "news_catalyst_agent")
     workflow.add_edge("news_catalyst_agent", "entry_trigger_agent")
     workflow.add_edge("entry_trigger_agent", "watcher_agent")
@@ -79,11 +102,12 @@ def build_sovereign_graph_with_checkpointer(checkpointer) -> StateGraph:
         "risk_and_position_sizing",
         should_execute,
         {
-            "derivatives_routing_agent": "derivatives_routing_agent",
+            "conviction_router": "conviction_router",
             END: END
         }
     )
 
+    workflow.add_edge("conviction_router", "derivatives_routing_agent")
     workflow.add_edge("derivatives_routing_agent", "execution_agent")
     workflow.add_edge("execution_agent", "reflection_engine_post_mortem")
     workflow.add_edge("reflection_engine_post_mortem", END)

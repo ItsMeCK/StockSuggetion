@@ -1,0 +1,1141 @@
+{
+  "approved_by_date": {
+    "2026-05-03": [
+      "HCG",
+      "ADANIPORTS",
+      "ASKAUTOLTD",
+      "HFCL",
+      "CALSOFT",
+      "MOHEALTH",
+      "CEMPRO",
+      "SUPREMEINF",
+      "10UCL26-ND",
+      "VISHWAS-SM",
+      "GRWRHITECH",
+      "LAURUSLABS",
+      "ABFRL",
+      "SAAKSHI-SM",
+      "KSL",
+      "CHOLAFIN"
+    ],
+    "2026-05-04": [
+      "ABCAPITAL",
+      "HEMIPROP",
+      "GRCL-SM",
+      "MARICO",
+      "WESTLIFE",
+      "VARDHACRLC",
+      "PKTEA"
+    ],
+    "2026-05-05": [
+      "BIOCON",
+      "GRCL-SM",
+      "INDHOTEL",
+      "MUTHOOTFIN",
+      "RANEHOLDIN",
+      "PKTEA",
+      "HFCL",
+      "NH",
+      "LUPIN",
+      "PTCIL",
+      "DLF",
+      "CHEMCON",
+      "WESTLIFE"
+    ],
+    "2026-05-06": [
+      "GRCL-SM",
+      "GLAND",
+      "RICHA-SM",
+      "AEGISVOPAK",
+      "PKTEA",
+      "HFCL",
+      "WESTLIFE"
+    ],
+    "2026-05-07": [
+      "KESORAMIND",
+      "GRCL-SM",
+      "NUVAMA",
+      "WESTLIFE",
+      "JAINREC",
+      "PKTEA"
+    ],
+    "2026-05-10": [
+      "KESORAMIND",
+      "BIOCON",
+      "GRCL-SM",
+      "KIMS",
+      "PKTEA",
+      "MAPMYINDIA",
+      "ABBOTINDIA",
+      "WESTLIFE"
+    ],
+    "2026-05-11": [
+      "KESORAMIND"
+    ],
+    "2026-05-12": [
+      "HINDCOPPER",
+      "OIL",
+      "KESORAMIND",
+      "GOLDADD"
+    ],
+    "2026-05-13": [
+      "PROV-SM",
+      "ALPHA",
+      "CIPLA",
+      "ROML",
+      "AFSL",
+      "MOLDTKPAC",
+      "GOKUL",
+      "JKLAKSHMI",
+      "AJANTPHARM",
+      "BTML",
+      "RHL",
+      "MTARTECH",
+      "INDUSINDBK"
+    ],
+    "2026-05-14": [
+      "PROV-SM",
+      "ALPHA",
+      "AFSL",
+      "MOLDTKPAC",
+      "GOKUL",
+      "ZYDUSLIFE",
+      "JKLAKSHMI",
+      "BTML",
+      "RHL",
+      "SOLARINDS",
+      "MTARTECH"
+    ],
+    "2026-05-17": [
+      "PROV-SM",
+      "ALPHA",
+      "AFSL",
+      "MOLDTKPAC",
+      "GOKUL",
+      "JKLAKSHMI",
+      "BTML",
+      "RHL",
+      "SOLARINDS",
+      "MTARTECH"
+    ],
+    "2026-05-18": [
+      "PROV-SM",
+      "ALPHA",
+      "AFSL",
+      "GLAND",
+      "MOLDTKPAC",
+      "GOKUL",
+      "JKLAKSHMI",
+      "BTML",
+      "RHL",
+      "MTARTECH",
+      "HEXT"
+    ],
+    "2026-05-19": [],
+    "2026-05-20": [
+      "IGIL"
+    ],
+    "2026-05-21": [
+      "MINDACORP",
+      "JSWCEMENT",
+      "SAMMAANCAP"
+    ],
+    "2026-05-24": [
+      "CHOICEIN",
+      "SAMMAANCAP"
+    ],
+    "2026-05-25": [
+      "AMBUJACEM"
+    ],
+    "2026-05-26": [
+      "ETERNAL",
+      "POWERINDIA",
+      "MINDACORP",
+      "ADANIENSOL",
+      "EXIDEIND"
+    ],
+    "2026-05-28": [
+      "POWERINDIA"
+    ],
+    "2026-05-31": [
+      "TECHM",
+      "PERSISTENT"
+    ]
+  },
+  "trades": [
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "HCG",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-04",
+      "equity": null,
+      "options": {
+        "strike": 610,
+        "sigma": 0.342,
+        "entry_premium": 24.74,
+        "underlying_entry": 608.5,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 22.85,
+        "pnl_pct": -7.64,
+        "days_held": 1,
+        "exit_date": "2026-05-12"
+      }
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "ADANIPORTS",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-04",
+      "equity": null,
+      "options": {
+        "strike": 1740,
+        "sigma": 0.32,
+        "entry_premium": 73.96,
+        "underlying_entry": 1749.8,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 36.7,
+        "pnl_pct": -50.38,
+        "days_held": 6,
+        "exit_date": "2026-05-11"
+      }
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "ASKAUTOLTD",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-04",
+      "equity": null,
+      "options": {
+        "strike": 460,
+        "sigma": 0.304,
+        "entry_premium": 20.08,
+        "underlying_entry": 464.9,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 17.45,
+        "pnl_pct": -13.09,
+        "days_held": 0,
+        "exit_date": "2026-05-04"
+      }
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "CALSOFT",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-04",
+      "equity": null,
+      "options": {
+        "strike": 20.0,
+        "sigma": 0.75,
+        "entry_premium": 1.23,
+        "underlying_entry": 18.94,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 1.2,
+        "pnl_pct": -2.31,
+        "days_held": 0,
+        "exit_date": "2026-05-04"
+      }
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "SUPREMEINF",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-04",
+      "equity": null,
+      "options": {
+        "strike": 82.5,
+        "sigma": 0.537,
+        "entry_premium": 4.71,
+        "underlying_entry": 81.4,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 5.56,
+        "pnl_pct": 17.96,
+        "days_held": 1,
+        "exit_date": "2026-05-12"
+      }
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "GRWRHITECH",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-04",
+      "equity": null,
+      "options": {
+        "strike": 4300,
+        "sigma": 0.558,
+        "entry_premium": 287.26,
+        "underlying_entry": 4303.0,
+        "status": "TARGET_2X",
+        "exit_premium": 1071.89,
+        "pnl_pct": 273.15,
+        "days_held": 1,
+        "exit_date": "2026-05-12"
+      }
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "LAURUSLABS",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-04",
+      "equity": null,
+      "options": {
+        "strike": 1180,
+        "sigma": 0.358,
+        "entry_premium": 47.7,
+        "underlying_entry": 1172.5,
+        "status": "TARGET_2X",
+        "exit_premium": 106.01,
+        "pnl_pct": 122.22,
+        "days_held": 5,
+        "exit_date": "2026-05-10"
+      }
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "SAAKSHI-SM",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-04",
+      "equity": null,
+      "options": {
+        "strike": 250,
+        "sigma": 0.574,
+        "entry_premium": 18.2,
+        "underlying_entry": 252.0,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 14.18,
+        "pnl_pct": -22.07,
+        "days_held": 0,
+        "exit_date": "2026-05-04"
+      }
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "CHOLAFIN",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-04",
+      "equity": null,
+      "options": {
+        "strike": 1640,
+        "sigma": 0.528,
+        "entry_premium": 105.69,
+        "underlying_entry": 1644.0,
+        "status": "TRAIL_STOP_10PCT",
+        "exit_premium": 128.56,
+        "pnl_pct": 21.64,
+        "days_held": 2,
+        "exit_date": "2026-05-06"
+      }
+    },
+    {
+      "signal_date": "2026-05-04",
+      "symbol": "ABCAPITAL",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-05",
+      "equity": null,
+      "options": {
+        "strike": 360,
+        "sigma": 0.477,
+        "entry_premium": 23.42,
+        "underlying_entry": 365.0,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 10.17,
+        "pnl_pct": -56.59,
+        "days_held": 5,
+        "exit_date": "2026-05-11"
+      }
+    },
+    {
+      "signal_date": "2026-05-04",
+      "symbol": "HEMIPROP",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-05",
+      "equity": null,
+      "options": {
+        "strike": 145,
+        "sigma": 0.458,
+        "entry_premium": 7.35,
+        "underlying_entry": 143.8,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 13.49,
+        "pnl_pct": 83.53,
+        "days_held": 2,
+        "exit_date": "2026-05-12"
+      }
+    },
+    {
+      "signal_date": "2026-05-04",
+      "symbol": "GRCL-SM",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-12",
+      "equity": null,
+      "options": {
+        "strike": 560,
+        "sigma": 0.66,
+        "entry_premium": 43.73,
+        "underlying_entry": 560.0,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 59.39,
+        "pnl_pct": 35.83,
+        "days_held": 0,
+        "exit_date": "2026-05-12"
+      }
+    },
+    {
+      "signal_date": "2026-05-04",
+      "symbol": "MARICO",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-05",
+      "equity": null,
+      "options": {
+        "strike": 830,
+        "sigma": 0.25,
+        "entry_premium": 24.09,
+        "underlying_entry": 826.2,
+        "status": "TRAIL_STOP_10PCT",
+        "exit_premium": 23.65,
+        "pnl_pct": -1.81,
+        "days_held": 5,
+        "exit_date": "2026-05-11"
+      }
+    },
+    {
+      "signal_date": "2026-05-04",
+      "symbol": "WESTLIFE",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-12",
+      "equity": null,
+      "options": {
+        "strike": 510,
+        "sigma": 0.361,
+        "entry_premium": 20.83,
+        "underlying_entry": 506.85,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 11.68,
+        "pnl_pct": -43.91,
+        "days_held": 0,
+        "exit_date": "2026-05-12"
+      }
+    },
+    {
+      "signal_date": "2026-05-05",
+      "symbol": "BIOCON",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-06",
+      "equity": null,
+      "options": {
+        "strike": 380,
+        "sigma": 0.283,
+        "entry_premium": 15.66,
+        "underlying_entry": 384.0,
+        "status": "TARGET_2X",
+        "exit_premium": 40.65,
+        "pnl_pct": 159.56,
+        "days_held": 5,
+        "exit_date": "2026-05-12"
+      }
+    },
+    {
+      "signal_date": "2026-05-05",
+      "symbol": "INDHOTEL",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-05-06",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 669.1,
+        "pnl_pct": 0.16467065868263814,
+        "days_held": 2,
+        "exit_date": "2026-05-07",
+        "entry_price": 668.0
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-05-05",
+      "symbol": "MUTHOOTFIN",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-05-06",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 3528.9,
+        "pnl_pct": -0.2543881963876876,
+        "days_held": 2,
+        "exit_date": "2026-05-07",
+        "entry_price": 3537.9
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-05-05",
+      "symbol": "RANEHOLDIN",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-05-06",
+      "equity": {
+        "status": "STOP_5PCT",
+        "exit_price": 1125.75,
+        "pnl_pct": -5.0,
+        "days_held": 2,
+        "exit_date": "2026-05-12",
+        "entry_price": 1185.0
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-05-05",
+      "symbol": "HFCL",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-06",
+      "equity": null,
+      "options": {
+        "strike": 145,
+        "sigma": 0.592,
+        "entry_premium": 9.63,
+        "underlying_entry": 143.95,
+        "status": "TRAIL_STOP_10PCT",
+        "exit_premium": 10.53,
+        "pnl_pct": 9.35,
+        "days_held": 7,
+        "exit_date": "2026-05-14"
+      }
+    },
+    {
+      "signal_date": "2026-05-05",
+      "symbol": "NH",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-06",
+      "equity": null,
+      "options": {
+        "strike": 1860,
+        "sigma": 0.282,
+        "entry_premium": 61.0,
+        "underlying_entry": 1852.0,
+        "status": "TRAIL_STOP_10PCT",
+        "exit_premium": 47.32,
+        "pnl_pct": -22.42,
+        "days_held": 12,
+        "exit_date": "2026-05-21"
+      }
+    },
+    {
+      "signal_date": "2026-05-05",
+      "symbol": "LUPIN",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-06",
+      "equity": null,
+      "options": {
+        "strike": 2460,
+        "sigma": 0.25,
+        "entry_premium": 74.65,
+        "underlying_entry": 2454.9,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 9.0,
+        "pnl_pct": -87.94,
+        "days_held": 3,
+        "exit_date": "2026-05-10"
+      }
+    },
+    {
+      "signal_date": "2026-05-05",
+      "symbol": "DLF",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-05-06",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 608.25,
+        "pnl_pct": -1.097560975609756,
+        "days_held": 2,
+        "exit_date": "2026-05-07",
+        "entry_price": 615.0
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-05-06",
+      "symbol": "GLAND",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-07",
+      "equity": null,
+      "options": {
+        "strike": 1880,
+        "sigma": 0.392,
+        "entry_premium": 84.71,
+        "underlying_entry": 1870.9,
+        "status": "TARGET_2X",
+        "exit_premium": 291.53,
+        "pnl_pct": 244.16,
+        "days_held": 7,
+        "exit_date": "2026-05-17"
+      }
+    },
+    {
+      "signal_date": "2026-05-10",
+      "symbol": "BIOCON",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-11",
+      "equity": null,
+      "options": {
+        "strike": 390,
+        "sigma": 0.266,
+        "entry_premium": 14.62,
+        "underlying_entry": 392.9,
+        "status": "TARGET_2X",
+        "exit_premium": 32.34,
+        "pnl_pct": 121.26,
+        "days_held": 1,
+        "exit_date": "2026-05-12"
+      }
+    },
+    {
+      "signal_date": "2026-05-10",
+      "symbol": "KIMS",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-11",
+      "equity": null,
+      "options": {
+        "strike": 780,
+        "sigma": 0.445,
+        "entry_premium": 41.22,
+        "underlying_entry": 778.9,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 13.31,
+        "pnl_pct": -67.71,
+        "days_held": 4,
+        "exit_date": "2026-05-17"
+      }
+    },
+    {
+      "signal_date": "2026-05-10",
+      "symbol": "ABBOTINDIA",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-11",
+      "equity": null,
+      "options": {
+        "strike": 28000,
+        "sigma": 0.25,
+        "entry_premium": 881.03,
+        "underlying_entry": 28000.0,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 220.84,
+        "pnl_pct": -74.93,
+        "days_held": 12,
+        "exit_date": "2026-05-28"
+      }
+    },
+    {
+      "signal_date": "2026-05-12",
+      "symbol": "HINDCOPPER",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-13",
+      "equity": null,
+      "options": {
+        "strike": 600,
+        "sigma": 0.398,
+        "entry_premium": 29.51,
+        "underlying_entry": 601.0,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 13.8,
+        "pnl_pct": -53.24,
+        "days_held": 3,
+        "exit_date": "2026-05-18"
+      }
+    },
+    {
+      "signal_date": "2026-05-12",
+      "symbol": "OIL",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-13",
+      "equity": null,
+      "options": {
+        "strike": 530,
+        "sigma": 0.479,
+        "entry_premium": 28.02,
+        "underlying_entry": 525.4,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 13.64,
+        "pnl_pct": -51.32,
+        "days_held": 6,
+        "exit_date": "2026-05-21"
+      }
+    },
+    {
+      "signal_date": "2026-05-12",
+      "symbol": "GOLDADD",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-13",
+      "equity": null,
+      "options": {
+        "strike": 160,
+        "sigma": 0.268,
+        "entry_premium": 4.63,
+        "underlying_entry": 158.61,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 1.99,
+        "pnl_pct": -57.03,
+        "days_held": 1,
+        "exit_date": "2026-05-14"
+      }
+    },
+    {
+      "signal_date": "2026-05-13",
+      "symbol": "CIPLA",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-14",
+      "equity": null,
+      "options": {
+        "strike": 1440,
+        "sigma": 0.451,
+        "entry_premium": 76.4,
+        "underlying_entry": 1436.7,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 34.16,
+        "pnl_pct": -55.29,
+        "days_held": 11,
+        "exit_date": "2026-06-01"
+      }
+    },
+    {
+      "signal_date": "2026-05-13",
+      "symbol": "ROML",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-14",
+      "equity": null,
+      "options": {
+        "strike": 47.5,
+        "sigma": 0.387,
+        "entry_premium": 2.69,
+        "underlying_entry": 48.3,
+        "status": "DATA_END_OPEN",
+        "exit_premium": 1.78,
+        "pnl_pct": -33.85,
+        "days_held": 0,
+        "exit_date": "2026-05-14"
+      }
+    },
+    {
+      "signal_date": "2026-05-13",
+      "symbol": "AJANTPHARM",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-14",
+      "equity": null,
+      "options": {
+        "strike": 3300,
+        "sigma": 0.355,
+        "entry_premium": 137.77,
+        "underlying_entry": 3289.9,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 65.93,
+        "pnl_pct": -52.15,
+        "days_held": 4,
+        "exit_date": "2026-05-20"
+      }
+    },
+    {
+      "signal_date": "2026-05-13",
+      "symbol": "INDUSINDBK",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-05-14",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 892.15,
+        "pnl_pct": -1.961538461538464,
+        "days_held": 2,
+        "exit_date": "2026-05-17",
+        "entry_price": 910.0
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-05-14",
+      "symbol": "SOLARINDS",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-17",
+      "equity": null,
+      "options": {
+        "strike": 17500,
+        "sigma": 0.429,
+        "entry_premium": 911.65,
+        "underlying_entry": 17509.0,
+        "status": "TRAIL_STOP_10PCT",
+        "exit_premium": 1220.95,
+        "pnl_pct": 33.93,
+        "days_held": 4,
+        "exit_date": "2026-05-21"
+      }
+    },
+    {
+      "signal_date": "2026-05-17",
+      "symbol": "SOLARINDS",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-18",
+      "equity": null,
+      "options": {
+        "strike": 18100,
+        "sigma": 0.448,
+        "entry_premium": 976.07,
+        "underlying_entry": 18100.0,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 486.27,
+        "pnl_pct": -50.18,
+        "days_held": 15,
+        "exit_date": "2026-06-09"
+      }
+    },
+    {
+      "signal_date": "2026-05-18",
+      "symbol": "HEXT",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-19",
+      "equity": null,
+      "options": {
+        "strike": 510,
+        "sigma": 0.571,
+        "entry_premium": 35.0,
+        "underlying_entry": 510.6,
+        "status": "TRAIL_STOP_10PCT",
+        "exit_premium": 45.72,
+        "pnl_pct": 30.62,
+        "days_held": 9,
+        "exit_date": "2026-06-02"
+      }
+    },
+    {
+      "signal_date": "2026-05-20",
+      "symbol": "IGIL",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-21",
+      "equity": null,
+      "options": {
+        "strike": 380,
+        "sigma": 0.557,
+        "entry_premium": 23.06,
+        "underlying_entry": 375.95,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 10.44,
+        "pnl_pct": -54.71,
+        "days_held": 12,
+        "exit_date": "2026-06-09"
+      }
+    },
+    {
+      "signal_date": "2026-05-21",
+      "symbol": "MINDACORP",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-24",
+      "equity": null,
+      "options": {
+        "strike": 580,
+        "sigma": 0.401,
+        "entry_premium": 31.0,
+        "underlying_entry": 585.0,
+        "status": "TARGET_2X",
+        "exit_premium": 72.04,
+        "pnl_pct": 132.36,
+        "days_held": 7,
+        "exit_date": "2026-06-03"
+      }
+    },
+    {
+      "signal_date": "2026-05-21",
+      "symbol": "JSWCEMENT",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-24",
+      "equity": null,
+      "options": {
+        "strike": 140,
+        "sigma": 0.427,
+        "entry_premium": 6.19,
+        "underlying_entry": 138.0,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 2.99,
+        "pnl_pct": -51.61,
+        "days_held": 2,
+        "exit_date": "2026-05-26"
+      }
+    },
+    {
+      "signal_date": "2026-05-21",
+      "symbol": "SAMMAANCAP",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-24",
+      "equity": null,
+      "options": {
+        "strike": 165,
+        "sigma": 0.525,
+        "entry_premium": 9.6,
+        "underlying_entry": 163.6,
+        "status": "TARGET_2X",
+        "exit_premium": 21.47,
+        "pnl_pct": 123.74,
+        "days_held": 7,
+        "exit_date": "2026-06-03"
+      }
+    },
+    {
+      "signal_date": "2026-05-24",
+      "symbol": "CHOICEIN",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-05-25",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 685.75,
+        "pnl_pct": -1.117519826964672,
+        "days_held": 2,
+        "exit_date": "2026-05-26",
+        "entry_price": 693.5
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-05-25",
+      "symbol": "AMBUJACEM",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-05-26",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 447.85,
+        "pnl_pct": -0.4777777777777727,
+        "days_held": 2,
+        "exit_date": "2026-05-28",
+        "entry_price": 450.0
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-05-26",
+      "symbol": "ETERNAL",
+      "route": "EQUITY_CONTINUATION",
+      "entry_date": "2026-05-28",
+      "equity": {
+        "status": "TIME_STOP_2D",
+        "exit_price": 248.1,
+        "pnl_pct": -3.3690360272638777,
+        "days_held": 2,
+        "exit_date": "2026-05-31",
+        "entry_price": 256.75
+      },
+      "options": null
+    },
+    {
+      "signal_date": "2026-05-26",
+      "symbol": "POWERINDIA",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-28",
+      "equity": null,
+      "options": {
+        "strike": 37800,
+        "sigma": 0.465,
+        "entry_premium": 2085.43,
+        "underlying_entry": 37750.0,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 877.63,
+        "pnl_pct": -57.92,
+        "days_held": 2,
+        "exit_date": "2026-06-01"
+      }
+    },
+    {
+      "signal_date": "2026-05-26",
+      "symbol": "MINDACORP",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-28",
+      "equity": null,
+      "options": {
+        "strike": 630,
+        "sigma": 0.428,
+        "entry_premium": 30.97,
+        "underlying_entry": 626.95,
+        "status": "TRAIL_STOP_10PCT",
+        "exit_premium": 32.35,
+        "pnl_pct": 4.43,
+        "days_held": 13,
+        "exit_date": "2026-06-16"
+      }
+    },
+    {
+      "signal_date": "2026-05-26",
+      "symbol": "ADANIENSOL",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-28",
+      "equity": null,
+      "options": {
+        "strike": 1560,
+        "sigma": 0.422,
+        "entry_premium": 78.11,
+        "underlying_entry": 1557.1,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 27.12,
+        "pnl_pct": -65.28,
+        "days_held": 9,
+        "exit_date": "2026-06-10"
+      }
+    },
+    {
+      "signal_date": "2026-05-26",
+      "symbol": "EXIDEIND",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-28",
+      "equity": null,
+      "options": {
+        "strike": 400,
+        "sigma": 0.464,
+        "entry_premium": 20.2,
+        "underlying_entry": 396.0,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 9.22,
+        "pnl_pct": -54.37,
+        "days_held": 14,
+        "exit_date": "2026-06-17"
+      }
+    },
+    {
+      "signal_date": "2026-05-28",
+      "symbol": "POWERINDIA",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-05-31",
+      "equity": null,
+      "options": {
+        "strike": 38700,
+        "sigma": 0.47,
+        "entry_premium": 2186.99,
+        "underlying_entry": 38700.0,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 702.99,
+        "pnl_pct": -67.86,
+        "days_held": 1,
+        "exit_date": "2026-06-01"
+      }
+    },
+    {
+      "signal_date": "2026-05-31",
+      "symbol": "TECHM",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-01",
+      "equity": null,
+      "options": {
+        "strike": 1520,
+        "sigma": 0.402,
+        "entry_premium": 75.89,
+        "underlying_entry": 1523.3,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 35.14,
+        "pnl_pct": -53.69,
+        "days_held": 1,
+        "exit_date": "2026-06-02"
+      }
+    },
+    {
+      "signal_date": "2026-05-31",
+      "symbol": "PERSISTENT",
+      "route": "OPTIONS_IGNITION",
+      "entry_date": "2026-06-01",
+      "equity": null,
+      "options": {
+        "strike": 5400,
+        "sigma": 0.473,
+        "entry_premium": 329.42,
+        "underlying_entry": 5440.5,
+        "status": "HARD_STOP_50PCT",
+        "exit_premium": 162.94,
+        "pnl_pct": -50.54,
+        "days_held": 1,
+        "exit_date": "2026-06-02"
+      }
+    }
+  ],
+  "skipped_by_condition": [
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "HFCL",
+      "open": 126.0,
+      "min_open": 126.04
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "MOHEALTH",
+      "open": 44.35,
+      "min_open": 45.72
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "CEMPRO",
+      "open": 930.65,
+      "min_open": 956.45
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "ABFRL",
+      "open": 65.05,
+      "min_open": 65.93
+    },
+    {
+      "signal_date": "2026-05-03",
+      "symbol": "KSL",
+      "open": 885.0,
+      "min_open": 885.85
+    },
+    {
+      "signal_date": "2026-05-04",
+      "symbol": "VARDHACRLC",
+      "open": 43.3,
+      "min_open": 44.79
+    },
+    {
+      "signal_date": "2026-05-05",
+      "symbol": "PTCIL",
+      "open": 17199.0,
+      "min_open": 17221.0
+    },
+    {
+      "signal_date": "2026-05-05",
+      "symbol": "CHEMCON",
+      "open": 168.3,
+      "min_open": 169.65
+    },
+    {
+      "signal_date": "2026-05-06",
+      "symbol": "AEGISVOPAK",
+      "open": 204.9,
+      "min_open": 216.12
+    },
+    {
+      "signal_date": "2026-05-06",
+      "symbol": "HFCL",
+      "open": 143.95,
+      "min_open": 146.24
+    },
+    {
+      "signal_date": "2026-05-07",
+      "symbol": "NUVAMA",
+      "open": 1420.0,
+      "min_open": 1631.5
+    },
+    {
+      "signal_date": "2026-05-07",
+      "symbol": "JAINREC",
+      "open": 463.0,
+      "min_open": 571.5
+    },
+    {
+      "signal_date": "2026-05-10",
+      "symbol": "MAPMYINDIA",
+      "open": 1041.05,
+      "min_open": 1077.0
+    },
+    {
+      "signal_date": "2026-05-14",
+      "symbol": "ZYDUSLIFE",
+      "open": 1010.0,
+      "min_open": 1011.7
+    },
+    {
+      "signal_date": "2026-05-18",
+      "symbol": "GLAND",
+      "open": 2232.9,
+      "min_open": 2251.1
+    },
+    {
+      "signal_date": "2026-05-24",
+      "symbol": "SAMMAANCAP",
+      "open": 167.0,
+      "min_open": 168.56
+    }
+  ]
+}

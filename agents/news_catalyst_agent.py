@@ -7,6 +7,7 @@ import json
 import csv
 import email.utils
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Dict, Any, List
 from openai import OpenAI
 from core.state import SovereignState
@@ -22,8 +23,27 @@ class NewsCatalystAgent:
     """
     def __init__(self, master_universe_path: str = "pipeline/master_universe.csv"):
         self.client = wrappers.wrap_openai(OpenAI(api_key=os.getenv("OPENAI_API_KEY")))
-        self.model = os.getenv("OPENAI_MODEL", "gpt-4o")
+        default_model = "gpt-4o-mini" if os.getenv("TRADING_MODE") == "HISTORICAL" else "gpt-4o"
+        self.model = os.getenv("OPENAI_MODEL", default_model)
         self.company_map = self._load_company_map(master_universe_path)
+        self.cache_path = Path(__file__).parent.parent / "news_catalyst_cache.json"
+        self.cache = self._load_cache()
+
+    def _load_cache(self) -> Dict[str, Any]:
+        if self.cache_path.exists():
+            try:
+                with open(self.cache_path, 'r') as f:
+                    return json.load(f)
+            except Exception:
+                return {}
+        return {}
+
+    def _save_cache(self):
+        try:
+            with open(self.cache_path, 'w') as f:
+                json.dump(self.cache, f, indent=4)
+        except Exception as e:
+            logging.error(f"Failed to save news catalyst cache: {e}")
 
     def _load_company_map(self, path: str) -> Dict[str, str]:
         company_map = {}
@@ -163,27 +183,39 @@ class NewsCatalystAgent:
         Downloads headlines, fetches technical metrics context, and evaluates
         priced-in / expectation risks using OpenAI.
         """
+        date_str = target_date if target_date else datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        cache_key = f"{symbol}_{date_str}"
+        if cache_key in self.cache:
+            logging.info(f"NEWS CACHE HIT: Retrieving catalyst evaluation for {symbol} on {date_str}")
+            return self.cache[cache_key]
+
         tech_ctx = self.fetch_technical_context(symbol, target_date)
         if tech_ctx and not bypass_prefilter:
             price_change = abs(tech_ctx.get("price_change_pct", 0.0))
             vol_ratio = tech_ctx.get("volume_ratio", 1.0)
             if price_change < 1.5 and vol_ratio < 1.2:
                 logging.info(f"Pre-filter triggered for {symbol}: ROC={price_change}%, VolRatio={vol_ratio}x. Skipping news catalyst search.")
-                return {
+                result = {
                     "catalyst_detected": False,
                     "catalyst_type": "NONE",
                     "summary": "Skipped news search (no significant daily price/volume breakout).",
                     "score_boost": 0.0
                 }
+                self.cache[cache_key] = result
+                self._save_cache()
+                return result
 
         headlines = self.fetch_recent_headlines(symbol, target_date)
         if not headlines:
-            return {
+            result = {
                 "catalyst_detected": False,
                 "catalyst_type": "NONE",
                 "summary": "No recent headlines found.",
                 "score_boost": 0.0
             }
+            self.cache[cache_key] = result
+            self._save_cache()
+            return result
 
         tech_text = ""
         if tech_ctx:
@@ -235,6 +267,8 @@ class NewsCatalystAgent:
             )
             result = json.loads(response.choices[0].message.content)
             logging.info(f"News catalyst evaluation for {symbol}: {result}")
+            self.cache[cache_key] = result
+            self._save_cache()
             return result
         except Exception as e:
             logging.error(f"OpenAI error during news catalyst analysis for {symbol}: {e}")
@@ -242,16 +276,34 @@ class NewsCatalystAgent:
 
 def run_news_catalyst_node(state: SovereignState) -> Dict[str, Any]:
     """
-    LangGraph Node. Executes News Catalyst analysis for all candidates.
+    LangGraph Node. Executes News Catalyst analysis for candidates.
+
+    Note: this runs *before* critic_agent in the graph (critic_agent reads
+    news_catalysts to compute its own catalyst_boost score), so we can't gate
+    on critic approval here without breaking that dependency. Instead we gate
+    on the same meta-gate veto list pattern_agent already uses, plus the DTW
+    heuristic's requires_vision_validation flag - both already computed
+    upstream at zero extra cost - to shrink the set of symbols that reach the
+    paid OpenAI call.
     """
     candidates = state.get("candidates", [])
+    experience_warnings = state.get("experience_warnings", {})
+    heuristic_flags = state.get("heuristic_flags", {})
     target_date = state.get("target_date")
     news_catalysts = {}
-    
+
     agent = NewsCatalystAgent()
     for symbol in candidates:
+        if symbol in experience_warnings and len(experience_warnings[symbol]) > 0:
+            logging.info(f"Skipping News Catalyst analysis for {symbol} due to Meta-Gate VETO.")
+            continue
+
+        if not heuristic_flags.get(symbol, {}).get("requires_vision_validation", False):
+            logging.info(f"Skipping News Catalyst analysis for {symbol}: DTW heuristic found no qualifying pattern.")
+            continue
+
         result = agent.evaluate_news_catalysts(symbol, target_date)
         if result.get("catalyst_detected", False):
             news_catalysts[symbol] = result
-            
+
     return {"news_catalysts": news_catalysts}

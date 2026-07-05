@@ -1,0 +1,1594 @@
+[
+  {
+    "symbol": "HCLTECH",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": -0.45,
+    "vol_ratio": 1.04,
+    "close_10am": 1114.3
+  },
+  {
+    "symbol": "ABREL",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -3.57,
+    "vol_ratio": 0.59,
+    "close_10am": 1494.3
+  },
+  {
+    "symbol": "SIGNATURE",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 0.46,
+    "vol_ratio": 1.27,
+    "close_10am": 809.85
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -0.11,
+    "vol_ratio": 1.08,
+    "close_10am": 2595.8
+  },
+  {
+    "symbol": "LTFOODS",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.64,
+    "vol_ratio": 3.02,
+    "close_10am": 433.55
+  },
+  {
+    "symbol": "TORNTPHARM",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 1.93,
+    "vol_ratio": 1.89,
+    "close_10am": 4495.7
+  },
+  {
+    "symbol": "CENTRALBK",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.28,
+    "vol_ratio": 5.95,
+    "close_10am": 35.68
+  },
+  {
+    "symbol": "APOLLOTYRE",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": 1.89,
+    "vol_ratio": 0.88,
+    "close_10am": 392.6
+  },
+  {
+    "symbol": "HINDCOPPER",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -0.91,
+    "vol_ratio": 2.23,
+    "close_10am": 545.5
+  },
+  {
+    "symbol": "COHANCE",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": 0.52,
+    "vol_ratio": 7.75,
+    "close_10am": 483.75
+  },
+  {
+    "symbol": "KEI",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": 0.72,
+    "vol_ratio": 0.78,
+    "close_10am": 5211
+  },
+  {
+    "symbol": "AFFLE",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 2.01,
+    "vol_ratio": 1.03,
+    "close_10am": 1491.5
+  },
+  {
+    "symbol": "BAJAJHLDNG",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 1.07,
+    "vol_ratio": 0.98,
+    "close_10am": 10132
+  },
+  {
+    "symbol": "MAXHEALTH",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": -0.8,
+    "vol_ratio": 0.55,
+    "close_10am": 1020.65
+  },
+  {
+    "symbol": "LTTS",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 1.5,
+    "vol_ratio": 1.48,
+    "close_10am": 3377.8
+  },
+  {
+    "symbol": "HDBFS",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.65,
+    "vol_ratio": 0.48,
+    "close_10am": 669.65
+  },
+  {
+    "symbol": "ZENTEC",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 1.1,
+    "vol_ratio": 1.22,
+    "close_10am": 1601.6
+  },
+  {
+    "symbol": "ABLBL",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 1.64,
+    "vol_ratio": 1.39,
+    "close_10am": 99.1
+  },
+  {
+    "symbol": "TBOTEK",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": -1.12,
+    "vol_ratio": 1.94,
+    "close_10am": 1178
+  },
+  {
+    "symbol": "BELRISE",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 0.5,
+    "vol_ratio": 1.12,
+    "close_10am": 216.79
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 0.51,
+    "vol_ratio": 1.86,
+    "close_10am": 10196
+  },
+  {
+    "symbol": "EMAMILTD",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": -0.48,
+    "vol_ratio": 2.84,
+    "close_10am": 383.15
+  },
+  {
+    "symbol": "SHYAMMETL",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": 1.34,
+    "vol_ratio": 0.5,
+    "close_10am": 982.8
+  },
+  {
+    "symbol": "BRIGADE",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -0.92,
+    "vol_ratio": 1.07,
+    "close_10am": 601.1
+  },
+  {
+    "symbol": "LICHSGFIN",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 1.24,
+    "vol_ratio": 0.56,
+    "close_10am": 547.7
+  },
+  {
+    "symbol": "MOTILALOFS",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 0.66,
+    "vol_ratio": 0.91,
+    "close_10am": 849.5
+  },
+  {
+    "symbol": "GODREJIND",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -1.8,
+    "vol_ratio": 0.66,
+    "close_10am": 1004
+  },
+  {
+    "symbol": "JYOTICNC",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": 0.12,
+    "vol_ratio": 0.66,
+    "close_10am": 731.35
+  },
+  {
+    "symbol": "ALKEM",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 2.05,
+    "vol_ratio": 0.79,
+    "close_10am": 5408
+  },
+  {
+    "symbol": "NAM-INDIA",
+    "date": "2026-06-08",
+    "fired": true,
+    "ret_pct": 2.58,
+    "vol_ratio": 2.03,
+    "close_10am": 1082.4
+  },
+  {
+    "symbol": "INDIACEM",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": -0.24,
+    "vol_ratio": 1.09,
+    "close_10am": 375
+  },
+  {
+    "symbol": "TIINDIA",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -0.13,
+    "vol_ratio": 0.78,
+    "close_10am": 3066.3
+  },
+  {
+    "symbol": "MEDANTA",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -0.86,
+    "vol_ratio": 2.11,
+    "close_10am": 1228.6
+  },
+  {
+    "symbol": "CONCOR",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": 0.5,
+    "vol_ratio": 2.73,
+    "close_10am": 532.65
+  },
+  {
+    "symbol": "PAYTM",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 3.75,
+    "vol_ratio": 1.2,
+    "close_10am": 1163.9
+  },
+  {
+    "symbol": "ANURAS",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 0.33,
+    "vol_ratio": 0.97,
+    "close_10am": 1276.5
+  },
+  {
+    "symbol": "EIHOTEL",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 0.89,
+    "vol_ratio": 1.44,
+    "close_10am": 288.1
+  },
+  {
+    "symbol": "INOXWIND",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -1.02,
+    "vol_ratio": 1.04,
+    "close_10am": 94.3
+  },
+  {
+    "symbol": "PHOENIXLTD",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -1.95,
+    "vol_ratio": 1.99,
+    "close_10am": 1677.1
+  },
+  {
+    "symbol": "ZYDUSLIFE",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -1.47,
+    "vol_ratio": 1.44,
+    "close_10am": 925
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 0.28,
+    "vol_ratio": 0.54,
+    "close_10am": 10260
+  },
+  {
+    "symbol": "HINDCOPPER",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": -0.75,
+    "vol_ratio": 3.52,
+    "close_10am": 568.6
+  },
+  {
+    "symbol": "RRKABEL",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -0.66,
+    "vol_ratio": 1.22,
+    "close_10am": 1949.5
+  },
+  {
+    "symbol": "BHARATFORG",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -0.98,
+    "vol_ratio": 0.62,
+    "close_10am": 1917.6
+  },
+  {
+    "symbol": "HINDPETRO",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.6,
+    "vol_ratio": 1.83,
+    "close_10am": 376.1
+  },
+  {
+    "symbol": "WELSPUNLIV",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": -2.18,
+    "vol_ratio": 2.04,
+    "close_10am": 141.77
+  },
+  {
+    "symbol": "ANGELONE",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 1.46,
+    "vol_ratio": 1.25,
+    "close_10am": 330.45
+  },
+  {
+    "symbol": "KIMS",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": 0.15,
+    "vol_ratio": 1.65,
+    "close_10am": 756.95
+  },
+  {
+    "symbol": "GAIL",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": -0.9,
+    "vol_ratio": 0.44,
+    "close_10am": 175.7
+  },
+  {
+    "symbol": "GRSE",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 1.32,
+    "vol_ratio": 1.68,
+    "close_10am": 2638.5
+  },
+  {
+    "symbol": "INTELLECT",
+    "date": "2026-06-10",
+    "fired": true,
+    "ret_pct": 2.87,
+    "vol_ratio": 3.66,
+    "close_10am": 767.9
+  },
+  {
+    "symbol": "MOTHERSON",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -0.67,
+    "vol_ratio": 0.98,
+    "close_10am": 144.63
+  },
+  {
+    "symbol": "AMBER",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -4.78,
+    "vol_ratio": 1.16,
+    "close_10am": 8247.5
+  },
+  {
+    "symbol": "VTL",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -0.47,
+    "vol_ratio": 0.69,
+    "close_10am": 592.95
+  },
+  {
+    "symbol": "INDHOTEL",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": -0.53,
+    "vol_ratio": 2.61,
+    "close_10am": 729.15
+  },
+  {
+    "symbol": "NH",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -3.37,
+    "vol_ratio": 4.13,
+    "close_10am": 1778.3
+  },
+  {
+    "symbol": "AJANTPHARM",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": -2.78,
+    "vol_ratio": 1.15,
+    "close_10am": 3101.1
+  },
+  {
+    "symbol": "OFSS",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -3.52,
+    "vol_ratio": 0.76,
+    "close_10am": 9077.5
+  },
+  {
+    "symbol": "NAM-INDIA",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -1.05,
+    "vol_ratio": 1.07,
+    "close_10am": 1066.5
+  },
+  {
+    "symbol": "DIXON",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": 0.0,
+    "vol_ratio": 3.52,
+    "close_10am": 12336
+  },
+  {
+    "symbol": "FLUOROCHEM",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": -0.92,
+    "vol_ratio": 0.83,
+    "close_10am": 3651.2
+  },
+  {
+    "symbol": "GABRIEL",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.56,
+    "vol_ratio": 12.99,
+    "close_10am": 1034.5
+  },
+  {
+    "symbol": "URBANCO",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -1.1,
+    "vol_ratio": 1.0,
+    "close_10am": 122.2
+  },
+  {
+    "symbol": "GILLETTE",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": 1.1,
+    "vol_ratio": 2.38,
+    "close_10am": 8039
+  },
+  {
+    "symbol": "MRF",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -0.64,
+    "vol_ratio": 1.81,
+    "close_10am": 129500
+  },
+  {
+    "symbol": "INFY",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.85,
+    "vol_ratio": 1.0,
+    "close_10am": 1153.4
+  },
+  {
+    "symbol": "CHALET",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -3.18,
+    "vol_ratio": 1.56,
+    "close_10am": 764.7
+  },
+  {
+    "symbol": "BALRAMCHIN",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": 0.47,
+    "vol_ratio": 1.5,
+    "close_10am": 539.1
+  },
+  {
+    "symbol": "CONCORDBIO",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": -3.15,
+    "vol_ratio": 3.18,
+    "close_10am": 1027.9
+  },
+  {
+    "symbol": "HEG",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -0.91,
+    "vol_ratio": 2.65,
+    "close_10am": 548
+  },
+  {
+    "symbol": "ANURAS",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": -0.18,
+    "vol_ratio": 2.93,
+    "close_10am": 1358.6
+  },
+  {
+    "symbol": "IDFCFIRSTB",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": -0.62,
+    "vol_ratio": 1.26,
+    "close_10am": 70.81
+  },
+  {
+    "symbol": "KPRMILL",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -0.02,
+    "vol_ratio": 1.53,
+    "close_10am": 911.7
+  },
+  {
+    "symbol": "TATATECH",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": -0.67,
+    "vol_ratio": 1.44,
+    "close_10am": 626.75
+  },
+  {
+    "symbol": "SIEMENS",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": -0.41,
+    "vol_ratio": 2.44,
+    "close_10am": 3696
+  },
+  {
+    "symbol": "TATACHEM",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 1.77,
+    "vol_ratio": 3.58,
+    "close_10am": 730.7
+  },
+  {
+    "symbol": "HINDALCO",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -0.64,
+    "vol_ratio": 6.48,
+    "close_10am": 1078.6
+  },
+  {
+    "symbol": "NIVABUPA",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": -0.77,
+    "vol_ratio": 0.28,
+    "close_10am": 83.85
+  },
+  {
+    "symbol": "WAAREEENER",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 0.42,
+    "vol_ratio": 1.56,
+    "close_10am": 3098.3
+  },
+  {
+    "symbol": "BHARATFORG",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": 1.45,
+    "vol_ratio": 1.19,
+    "close_10am": 1901
+  },
+  {
+    "symbol": "BOSCHLTD",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": 0.4,
+    "vol_ratio": 1.34,
+    "close_10am": 37465
+  },
+  {
+    "symbol": "CLEAN",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 1.16,
+    "vol_ratio": 0.98,
+    "close_10am": 829.1
+  },
+  {
+    "symbol": "IGL",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": -0.08,
+    "vol_ratio": 0.75,
+    "close_10am": 162.04
+  },
+  {
+    "symbol": "BRITANNIA",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -0.82,
+    "vol_ratio": 0.88,
+    "close_10am": 5336.5
+  },
+  {
+    "symbol": "DIVISLAB",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": -0.53,
+    "vol_ratio": 2.57,
+    "close_10am": 6584.5
+  },
+  {
+    "symbol": "BERGEPAINT",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": 0.0,
+    "vol_ratio": 1.08,
+    "close_10am": 512.9
+  },
+  {
+    "symbol": "JSL",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -0.39,
+    "vol_ratio": 1.0,
+    "close_10am": 734.05
+  },
+  {
+    "symbol": "MRF",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 0.26,
+    "vol_ratio": 1.26,
+    "close_10am": 122910
+  },
+  {
+    "symbol": "ESCORTS",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": 0.88,
+    "vol_ratio": 5.15,
+    "close_10am": 2992.8
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 0.08,
+    "vol_ratio": 1.12,
+    "close_10am": 264.85
+  },
+  {
+    "symbol": "VIJAYA",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 1.65,
+    "vol_ratio": 0.45,
+    "close_10am": 1290.7
+  },
+  {
+    "symbol": "NLCINDIA",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": 0.5,
+    "vol_ratio": 4.05,
+    "close_10am": 319.5
+  },
+  {
+    "symbol": "PPLPHARMA",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.25,
+    "vol_ratio": 0.87,
+    "close_10am": 160.7
+  },
+  {
+    "symbol": "IRCON",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": 1.05,
+    "vol_ratio": 4.82,
+    "close_10am": 139.18
+  },
+  {
+    "symbol": "MOTHERSON",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 1.93,
+    "vol_ratio": 0.79,
+    "close_10am": 141.69
+  },
+  {
+    "symbol": "HEG",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": -1.32,
+    "vol_ratio": 1.98,
+    "close_10am": 553.15
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": 0.61,
+    "vol_ratio": 2.08,
+    "close_10am": 1449.2
+  },
+  {
+    "symbol": "MEESHO",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": -1.16,
+    "vol_ratio": 0.8,
+    "close_10am": 177.98
+  },
+  {
+    "symbol": "AJANTPHARM",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": -0.1,
+    "vol_ratio": 4.44,
+    "close_10am": 3120
+  },
+  {
+    "symbol": "ARE&M",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 0.26,
+    "vol_ratio": 0.36,
+    "close_10am": 841.8
+  },
+  {
+    "symbol": "ICICIGI",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": 0.02,
+    "vol_ratio": 1.83,
+    "close_10am": 1829
+  },
+  {
+    "symbol": "AXISBANK",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -0.94,
+    "vol_ratio": 0.67,
+    "close_10am": 1238
+  },
+  {
+    "symbol": "LINDEINDIA",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.7,
+    "vol_ratio": 8.47,
+    "close_10am": 7495
+  },
+  {
+    "symbol": "ATUL",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.22,
+    "vol_ratio": 2.03,
+    "close_10am": 6964.5
+  },
+  {
+    "symbol": "KFINTECH",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": 1.18,
+    "vol_ratio": 0.99,
+    "close_10am": 901.3
+  },
+  {
+    "symbol": "JINDALSTEL",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -0.2,
+    "vol_ratio": 1.25,
+    "close_10am": 1261.8
+  },
+  {
+    "symbol": "VEDL",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": 0.21,
+    "vol_ratio": 1.4,
+    "close_10am": 334.45
+  },
+  {
+    "symbol": "M&MFIN",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 4.66,
+    "vol_ratio": 1.14,
+    "close_10am": 317.95
+  },
+  {
+    "symbol": "AMBUJACEM",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": -2.02,
+    "vol_ratio": 2.0,
+    "close_10am": 429.55
+  },
+  {
+    "symbol": "M&MFIN",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": 2.66,
+    "vol_ratio": 0.9,
+    "close_10am": 302.95
+  },
+  {
+    "symbol": "BEL",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": -0.33,
+    "vol_ratio": 1.64,
+    "close_10am": 408.2
+  },
+  {
+    "symbol": "CRAFTSMAN",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -0.85,
+    "vol_ratio": 0.17,
+    "close_10am": 8502.5
+  },
+  {
+    "symbol": "LLOYDSME",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -0.41,
+    "vol_ratio": 0.89,
+    "close_10am": 1648.1
+  },
+  {
+    "symbol": "INDHOTEL",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -0.51,
+    "vol_ratio": 2.19,
+    "close_10am": 662.75
+  },
+  {
+    "symbol": "BSE",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -1.95,
+    "vol_ratio": 2.05,
+    "close_10am": 3888.9
+  },
+  {
+    "symbol": "ZENSARTECH",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -1.56,
+    "vol_ratio": 2.26,
+    "close_10am": 501.8
+  },
+  {
+    "symbol": "IRCTC",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": 0.61,
+    "vol_ratio": 1.4,
+    "close_10am": 513.9
+  },
+  {
+    "symbol": "EMMVEE",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -0.46,
+    "vol_ratio": 1.26,
+    "close_10am": 259.45
+  },
+  {
+    "symbol": "BELRISE",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -0.39,
+    "vol_ratio": 4.95,
+    "close_10am": 221.25
+  },
+  {
+    "symbol": "POWERGRID",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -1.0,
+    "vol_ratio": 0.89,
+    "close_10am": 296.9
+  },
+  {
+    "symbol": "POLYMED",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -0.54,
+    "vol_ratio": 1.17,
+    "close_10am": 1444.3
+  },
+  {
+    "symbol": "IRCTC",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": 0.05,
+    "vol_ratio": 1.34,
+    "close_10am": 522
+  },
+  {
+    "symbol": "BIKAJI",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": -1.64,
+    "vol_ratio": 0.66,
+    "close_10am": 642.95
+  },
+  {
+    "symbol": "AAVAS",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": -3.47,
+    "vol_ratio": 0.97,
+    "close_10am": 1356.4
+  },
+  {
+    "symbol": "MEDANTA",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": -3.41,
+    "vol_ratio": 0.96,
+    "close_10am": 1196.9
+  },
+  {
+    "symbol": "TRAVELFOOD",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 1.15,
+    "vol_ratio": 1.76,
+    "close_10am": 1314.9
+  },
+  {
+    "symbol": "RBLBANK",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 0.65,
+    "vol_ratio": 2.13,
+    "close_10am": 347.2
+  },
+  {
+    "symbol": "EIDPARRY",
+    "date": "2026-06-15",
+    "fired": true,
+    "ret_pct": 2.24,
+    "vol_ratio": 2.89,
+    "close_10am": 741.9
+  },
+  {
+    "symbol": "TATACHEM",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": 0.96,
+    "vol_ratio": 2.45,
+    "close_10am": 823.8
+  },
+  {
+    "symbol": "OLECTRA",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -1.37,
+    "vol_ratio": 2.03,
+    "close_10am": 1188.2
+  },
+  {
+    "symbol": "JSWDULUX",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -0.28,
+    "vol_ratio": 0.39,
+    "close_10am": 2919.9
+  },
+  {
+    "symbol": "TORNTPHARM",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": -1.32,
+    "vol_ratio": 2.05,
+    "close_10am": 4457.6
+  },
+  {
+    "symbol": "GLAND",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": -0.37,
+    "vol_ratio": 1.42,
+    "close_10am": 1837.4
+  },
+  {
+    "symbol": "JINDALSAW",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 3.35,
+    "vol_ratio": 1.94,
+    "close_10am": 244.01
+  },
+  {
+    "symbol": "RELIANCE",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 1.27,
+    "vol_ratio": 1.35,
+    "close_10am": 1279.3
+  },
+  {
+    "symbol": "FACT",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": 0.36,
+    "vol_ratio": 0.74,
+    "close_10am": 909.35
+  },
+  {
+    "symbol": "CHOICEIN",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 1.51,
+    "vol_ratio": 1.6,
+    "close_10am": 650.45
+  },
+  {
+    "symbol": "SHREECEM",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": -0.42,
+    "vol_ratio": 0.56,
+    "close_10am": 24890
+  },
+  {
+    "symbol": "SCHAEFFLER",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": -0.82,
+    "vol_ratio": 0.73,
+    "close_10am": 4076.5
+  },
+  {
+    "symbol": "ENRIN",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": 1.46,
+    "vol_ratio": 2.09,
+    "close_10am": 3771.5
+  },
+  {
+    "symbol": "PPLPHARMA",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 0.84,
+    "vol_ratio": 0.84,
+    "close_10am": 178.88
+  },
+  {
+    "symbol": "CAPLIPOINT",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": -1.88,
+    "vol_ratio": 1.43,
+    "close_10am": 2071.3
+  },
+  {
+    "symbol": "INFY",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": 0.18,
+    "vol_ratio": 2.21,
+    "close_10am": 1170.5
+  },
+  {
+    "symbol": "ACUTAAS",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -1.95,
+    "vol_ratio": 1.44,
+    "close_10am": 2744.6
+  },
+  {
+    "symbol": "IEX",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -1.11,
+    "vol_ratio": 1.46,
+    "close_10am": 122.13
+  },
+  {
+    "symbol": "CANFINHOME",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": -0.88,
+    "vol_ratio": 0.73,
+    "close_10am": 884.55
+  },
+  {
+    "symbol": "LODHA",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -2.39,
+    "vol_ratio": 4.73,
+    "close_10am": 859
+  },
+  {
+    "symbol": "IDBI",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": -4.4,
+    "vol_ratio": 1.6,
+    "close_10am": 83.79
+  },
+  {
+    "symbol": "GALLANTT",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -0.93,
+    "vol_ratio": 0.85,
+    "close_10am": 663.65
+  },
+  {
+    "symbol": "ANURAS",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 0.73,
+    "vol_ratio": 7.44,
+    "close_10am": 1385
+  },
+  {
+    "symbol": "ATUL",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 0.64,
+    "vol_ratio": 1.75,
+    "close_10am": 7033
+  },
+  {
+    "symbol": "INDIANB",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": -0.4,
+    "vol_ratio": 2.21,
+    "close_10am": 793.75
+  },
+  {
+    "symbol": "FORCEMOT",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 0.46,
+    "vol_ratio": 1.4,
+    "close_10am": 19998
+  },
+  {
+    "symbol": "IREDA",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 0.86,
+    "vol_ratio": 1.33,
+    "close_10am": 121.62
+  },
+  {
+    "symbol": "RAMCOCEM",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": -0.63,
+    "vol_ratio": 1.49,
+    "close_10am": 846.05
+  },
+  {
+    "symbol": "SUNTV",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": -3.37,
+    "vol_ratio": 13.05,
+    "close_10am": 556.45
+  },
+  {
+    "symbol": "IRCTC",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": 1.24,
+    "vol_ratio": 2.83,
+    "close_10am": 524.35
+  },
+  {
+    "symbol": "GMRAIRPORT",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": -0.3,
+    "vol_ratio": 2.62,
+    "close_10am": 106.34
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": -0.41,
+    "vol_ratio": 1.91,
+    "close_10am": 8433.5
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": 1.17,
+    "vol_ratio": 1.14,
+    "close_10am": 899.45
+  },
+  {
+    "symbol": "SBFC",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": 0.79,
+    "vol_ratio": 2.23,
+    "close_10am": 94
+  },
+  {
+    "symbol": "PREMIERENE",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": -0.56,
+    "vol_ratio": 1.69,
+    "close_10am": 962
+  },
+  {
+    "symbol": "IOB",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": 0.2,
+    "vol_ratio": 1.47,
+    "close_10am": 34.36
+  },
+  {
+    "symbol": "HUDCO",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": 1.17,
+    "vol_ratio": 5.45,
+    "close_10am": 212
+  },
+  {
+    "symbol": "SARDAEN",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": -0.47,
+    "vol_ratio": 0.86,
+    "close_10am": 527.6
+  },
+  {
+    "symbol": "HCLTECH",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": 1.48,
+    "vol_ratio": 4.05,
+    "close_10am": 1196.5
+  },
+  {
+    "symbol": "HDFCBANK",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": -0.18,
+    "vol_ratio": 1.28,
+    "close_10am": 784.95
+  },
+  {
+    "symbol": "VBL",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -0.57,
+    "vol_ratio": 0.85,
+    "close_10am": 506.05
+  },
+  {
+    "symbol": "PETRONET",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": 0.92,
+    "vol_ratio": 1.39,
+    "close_10am": 278.3
+  },
+  {
+    "symbol": "LAURUSLABS",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -0.9,
+    "vol_ratio": 1.16,
+    "close_10am": 1381.8
+  },
+  {
+    "symbol": "SCHAEFFLER",
+    "date": "2026-06-15",
+    "fired": false,
+    "ret_pct": 0.46,
+    "vol_ratio": 0.72,
+    "close_10am": 4059.6
+  },
+  {
+    "symbol": "BERGEPAINT",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": -0.79,
+    "vol_ratio": 1.24,
+    "close_10am": 512.6
+  },
+  {
+    "symbol": "SONACOMS",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 0.87,
+    "vol_ratio": 1.19,
+    "close_10am": 594.35
+  },
+  {
+    "symbol": "ZYDUSLIFE",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -1.09,
+    "vol_ratio": 1.03,
+    "close_10am": 1064.9
+  },
+  {
+    "symbol": "NMDC",
+    "date": "2026-05-20",
+    "fired": false,
+    "ret_pct": -1.64,
+    "vol_ratio": 2.11,
+    "close_10am": 87.03
+  },
+  {
+    "symbol": "BPCL",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 1.67,
+    "vol_ratio": 1.06,
+    "close_10am": 289.9
+  },
+  {
+    "symbol": "JYOTICNC",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": 0.04,
+    "vol_ratio": 0.57,
+    "close_10am": 746.85
+  },
+  {
+    "symbol": "AARTIIND",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.48,
+    "vol_ratio": 4.55,
+    "close_10am": 515.55
+  },
+  {
+    "symbol": "SAPPHIRE",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": -0.14,
+    "vol_ratio": 1.22,
+    "close_10am": 191.7
+  },
+  {
+    "symbol": "NBCC",
+    "date": "2026-05-06",
+    "fired": false,
+    "ret_pct": -0.55,
+    "vol_ratio": 1.98,
+    "close_10am": 94.42
+  },
+  {
+    "symbol": "JAINREC",
+    "date": "2026-06-22",
+    "fired": false,
+    "ret_pct": -1.55,
+    "vol_ratio": 0.66,
+    "close_10am": 374.3
+  },
+  {
+    "symbol": "UNIONBANK",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": 0.14,
+    "vol_ratio": 0.96,
+    "close_10am": 159.33
+  },
+  {
+    "symbol": "HUDCO",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 1.44,
+    "vol_ratio": 1.2,
+    "close_10am": 222.65
+  },
+  {
+    "symbol": "SOLARINDS",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 0.48,
+    "vol_ratio": 2.03,
+    "close_10am": 15862
+  },
+  {
+    "symbol": "CEMPRO",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -1.35,
+    "vol_ratio": 0.54,
+    "close_10am": 867.15
+  },
+  {
+    "symbol": "IGIL",
+    "date": "2026-05-13",
+    "fired": false,
+    "ret_pct": 0.79,
+    "vol_ratio": 1.98,
+    "close_10am": 329.7
+  },
+  {
+    "symbol": "RITES",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": -0.04,
+    "vol_ratio": 0.99,
+    "close_10am": 202.7
+  },
+  {
+    "symbol": "NYKAA",
+    "date": "2026-05-18",
+    "fired": false,
+    "ret_pct": -2.29,
+    "vol_ratio": 1.03,
+    "close_10am": 266.45
+  },
+  {
+    "symbol": "JUBLPHARMA",
+    "date": "2026-06-01",
+    "fired": false,
+    "ret_pct": -1.4,
+    "vol_ratio": 1.2,
+    "close_10am": 973.75
+  },
+  {
+    "symbol": "SAIL",
+    "date": "2026-05-11",
+    "fired": false,
+    "ret_pct": 0.57,
+    "vol_ratio": 1.81,
+    "close_10am": 181.75
+  },
+  {
+    "symbol": "GILLETTE",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -0.24,
+    "vol_ratio": 0.76,
+    "close_10am": 7700.5
+  },
+  {
+    "symbol": "NTPC",
+    "date": "2026-06-10",
+    "fired": false,
+    "ret_pct": 1.27,
+    "vol_ratio": 2.17,
+    "close_10am": 356.1
+  },
+  {
+    "symbol": "SHYAMMETL",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 0.83,
+    "vol_ratio": 0.95,
+    "close_10am": 983.95
+  },
+  {
+    "symbol": "HINDPETRO",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 1.64,
+    "vol_ratio": 0.91,
+    "close_10am": 378.85
+  },
+  {
+    "symbol": "BALRAMCHIN",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": -0.98,
+    "vol_ratio": 3.2,
+    "close_10am": 545
+  },
+  {
+    "symbol": "BHARATFORG",
+    "date": "2026-06-08",
+    "fired": false,
+    "ret_pct": 1.24,
+    "vol_ratio": 0.7,
+    "close_10am": 1916.6
+  },
+  {
+    "symbol": "JBMA",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.69,
+    "vol_ratio": 0.67,
+    "close_10am": 633.05
+  },
+  {
+    "symbol": "TATAELXSI",
+    "date": "2026-06-03",
+    "fired": false,
+    "ret_pct": -0.09,
+    "vol_ratio": 5.88,
+    "close_10am": 4343
+  },
+  {
+    "symbol": "MMTC",
+    "date": "2026-05-04",
+    "fired": false,
+    "ret_pct": 0.63,
+    "vol_ratio": 0.43,
+    "close_10am": 65.63
+  }
+]

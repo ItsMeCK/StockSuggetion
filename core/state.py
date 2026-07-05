@@ -47,6 +47,11 @@ class SovereignState(TypedDict):
     flagged_momentum_candidates: Annotated[List[str], add_lists]
     injected_catalysts: Annotated[List[str], add_lists]
     breakouts: Annotated[List[str], add_lists]
+    # Pring bearish momentum-divergence PE candidates - kept separate from
+    # `candidates` (bullish pool) since this signal is validated standalone
+    # and must NOT pass through the bullish-tuned gauntlet (critic/pattern/
+    # fundamental_audit) - see agents/pring_divergence_agent.py docstring.
+    bearish_divergence_candidates: Annotated[List[str], add_lists]
     
     # Scoreboards (0-100 ranking)
     base_scores: Annotated[Dict[str, float], merge_dicts]

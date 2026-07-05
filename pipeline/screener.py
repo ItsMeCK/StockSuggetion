@@ -18,7 +18,7 @@ class SovereignScreener:
         """
         Validates the data freshness of a symbol using the CandidateSchema check.
         """
-        from midnight_sovereign.core.schemas import CandidateSchema
+        from core.schemas import CandidateSchema
         try:
             CandidateSchema(
                 symbol=symbol,
@@ -530,7 +530,7 @@ class SovereignScreener:
                 vol_ratio = (green_vol / red_vol) if red_vol > 0 else (green_vol if green_vol else 1.0)
                 
                 # Pydantic Quality Check
-                from midnight_sovereign.core.schemas import CandidateSchema
+                from core.schemas import CandidateSchema
                 try:
                     CandidateSchema(
                         symbol=sym,

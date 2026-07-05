@@ -3,15 +3,22 @@ import logging
 from typing import Dict, Any
 from pathlib import Path
 
+import polars as pl
+
 from core.state import SovereignState
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class VisionPatternAgent:
     """
-    Claude 3.5 Sonnet Vision API implementation.
-    The "Skeptical Auditor" checking for Pinocchio Bars and volume dry-up.
-    Validates setups against the offline compiled JSON rulebook of Shannon/Pring.
+    Deterministic institutional auditor for candidate setups.
+
+    This used to be an LLM call (GPT-4o) named "Vision" - but it never actually
+    read a chart image. It pasted a text table of OHLCV numbers into a prompt
+    and asked a text-completion model to eyeball volume surges, breakouts, and
+    wick exhaustion. Since the input was already pure numbers, those same
+    checks are now exact arithmetic: free, deterministic, and reproducible
+    across backtest reruns (no LLM run-to-run variance).
     """
     def __init__(self):
         self.rules = self._load_context_rules()
@@ -38,7 +45,7 @@ class VisionPatternAgent:
         """Loads the MASTER institutional rules (v2.3)."""
         core_dir = Path(__file__).parent.parent / "core"
         rules_path = core_dir / "context_rules_3.json"
-        
+
         try:
             with open(rules_path, 'r', encoding='utf-8') as f:
                 return json.load(f)
@@ -46,23 +53,108 @@ class VisionPatternAgent:
             logging.error(f"Rulebook not found at {rules_path}. Ensure context_rules_2.json exists.")
             return {}
 
+    def _score_setup(self, rows) -> Dict[str, Any]:
+        """
+        Replicates the original prompt's three institutional-auditor checks
+        with exact arithmetic on the same OHLCV rows that used to get pasted
+        into a text prompt:
+          1. SPONSORSHIP: volume surge vs 20-day average (primary driver)
+          2. BREAKOUT VALIDITY: close vs prior 20-day high, confirmed by ATR expansion
+          3. RISK AUDIT: upper-wick rejection ("Pinocchio Bar" exhaustion)
+        """
+        # rows arrive DESC (newest first) from the DB query; reverse to chronological order
+        chrono = list(reversed(rows))
+        df = pl.DataFrame(
+            [(r[0], float(r[1]), float(r[2]), float(r[3]), float(r[4]), float(r[5])) for r in chrono],
+            schema=["time", "open", "high", "low", "close", "volume"],
+            orient="row"
+        )
+
+        df = df.with_columns([
+            pl.col("volume").rolling_mean(window_size=20).alias("vol_avg_20"),
+            pl.col("high").shift(1).rolling_max(window_size=20).alias("high_20_prior"),
+            pl.max_horizontal([
+                (pl.col("high") - pl.col("low")),
+                (pl.col("high") - pl.col("close").shift(1)).abs(),
+                (pl.col("low") - pl.col("close").shift(1)).abs()
+            ]).alias("true_range")
+        ])
+        df = df.with_columns([
+            pl.col("true_range").rolling_mean(window_size=3).alias("atr_3"),
+            pl.col("true_range").rolling_mean(window_size=20).alias("atr_20")
+        ])
+
+        latest = df.tail(1).to_dicts()[0]
+        close = latest["close"]
+        high = latest["high"]
+        low = latest["low"]
+        volume = latest["volume"]
+
+        vol_avg_20 = latest["vol_avg_20"] or volume or 1.0
+        high_20_prior = latest["high_20_prior"] if latest["high_20_prior"] is not None else high
+        atr_3 = latest["atr_3"] if latest["atr_3"] is not None else 0.0
+        atr_20 = latest["atr_20"] if latest["atr_20"] is not None else atr_3
+
+        volume_ratio = volume / vol_avg_20 if vol_avg_20 else 1.0
+        breakout = close > high_20_prior
+        atr_expansion = atr_3 > atr_20
+        upper_wick_pct = (high - close) / (high - low) if high > low else 0.0
+
+        # 1. Sponsorship component - primary driver, same emphasis as the original rubric
+        if volume_ratio >= 3.0:
+            vol_component = 100.0
+        elif volume_ratio >= 1.5:
+            vol_component = 80.0
+        elif volume_ratio >= 1.0:
+            vol_component = 65.0
+        else:
+            vol_component = 40.0
+
+        # 2. Breakout validity component
+        if breakout and atr_expansion:
+            breakout_component = 15.0
+        elif breakout:
+            breakout_component = 5.0
+        else:
+            breakout_component = -10.0
+
+        # 3. Exhaustion / false-breakout penalty (Pinocchio Bar check)
+        dq_flag = "None"
+        if upper_wick_pct >= 0.5:
+            exhaustion_penalty = 30.0
+            if breakout:
+                dq_flag = "pinocchio_bar"
+        elif upper_wick_pct >= 0.35:
+            exhaustion_penalty = 15.0
+        else:
+            exhaustion_penalty = 0.0
+
+        if dq_flag == "None" and breakout and volume_ratio < 1.2:
+            dq_flag = "false_breakout"
+
+        vision_score = max(0.0, min(100.0, vol_component + breakout_component - exhaustion_penalty))
+
+        # HARD VETO if a disqualification flag is raised (same cap the LLM path used)
+        if dq_flag != "None":
+            vision_score = min(vision_score, 65.0)
+
+        reason = (
+            f"Deterministic audit: Volume {volume_ratio:.2f}x 20d avg, "
+            f"Breakout={'Yes' if breakout else 'No'} (ATR expansion={'Yes' if atr_expansion else 'No'}), "
+            f"Upper wick={upper_wick_pct:.0%} of range."
+        )
+
+        return {
+            "vision_score": int(round(vision_score)),
+            "reason": reason,
+            "disqualification_flag": dq_flag
+        }
+
     def analyze_chart(self, symbol: str, pattern_hint: str, target_date: str = None) -> Dict[str, Any]:
         """
-        Dynamically identifies institutional setups using OpenAI GPT-4o with neural caching.
+        Deterministically audits the institutional validity of a setup using
+        exact arithmetic on OHLCV data, with symbol_date caching.
         """
-        # Hard token-save kill switch for simulations
-        simulation_mode = False 
-        if simulation_mode:
-            return {
-                "vision_approved": True,
-                "vision_score": 85,
-                "identified_pattern": pattern_hint,
-                "reason": "SIMULATED_SUCCESS",
-                "disqualification_flag": "None",
-                "whipsaw_risk": "Low",
-                "cached_at": "SIMULATION"
-            }
-        # Fetch recent data first to determine the "Latest Date" for the cache key
         import os, psycopg2
         try:
             conn = psycopg2.connect(
@@ -73,104 +165,67 @@ class VisionPatternAgent:
                 dbname=os.getenv('POSTGRES_DB', 'market_data')
             )
             cur = conn.cursor()
-            
+
             if target_date:
                 query = "SELECT time, open, high, low, close, volume FROM daily_ohlcv WHERE symbol = %s AND time::date <= %s ORDER BY time DESC LIMIT 60"
                 cur.execute(query, (symbol, target_date))
             else:
                 query = "SELECT time, open, high, low, close, volume FROM daily_ohlcv WHERE symbol = %s ORDER BY time DESC LIMIT 60"
                 cur.execute(query, (symbol,))
-                
+
             rows = cur.fetchall()
             cur.close()
             conn.close()
-            
+
             if not rows:
                 logging.warning(f"No historical data found for {symbol} up to {target_date}")
                 return {"vision_approved": True, "vision_score": 50, "identified_pattern": "unknown", "reason": "No data"}
-            
+
             # Create a unique cache key based on symbol and the most recent timestamp in the data
             latest_date = rows[0][0].strftime('%Y-%m-%d')
             cache_key = f"{symbol}_{latest_date}"
-            
+
             if cache_key in self.cache:
-                logging.info(f"CACHE HIT: Retrieving neural audit for {symbol} on {latest_date}")
+                logging.info(f"CACHE HIT: Retrieving audit for {symbol} on {latest_date}")
                 return self.cache[cache_key]
-                
-            logging.info(f"Analyzing {symbol} via GPT-4o (No Cache found for {latest_date})...")
-            
-            disqualification_rules = self.rules.get("disqualification_rules", {})
-            pattern_details = self.rules.get("pring_pattern_geometries", {}).get(pattern_hint, {})
-            
-            # Convert rows to a readable string for the prompt
-            data_str = "\n".join([f"{r[0].strftime('%Y-%m-%d')}: O={r[1]}, H={r[2]}, L={r[3]}, C={r[4]}, V={r[5]}" for r in rows])
-            
-            prompt = f"""
-            Identify the institutional validity of the '{pattern_hint}' setup for {symbol}.
-            
-            MASTER RULEBOOK (v2.3) CONTEXT:
-            - Institutional Footprint for this pattern: {pattern_details.get('institutional_footprint', 'N/A')}
-            - Disqualification Warning Signs to look for: {list(disqualification_rules.keys())}
-            
-            RECENT OHLCV DATA:
-            {data_str}
-            
-            YOUR TASK (INSTITUTIONAL AUDITOR):
-            1. IDENTIFY SPONSORSHIP: Look for massive volume surges (>3x average). This is your primary indicator of Big Money.
-            2. BREAKOUT VALIDITY: Is the price breaking above a recent high or a consolidation zone? 
-            3. RISK AUDIT: Are there any clear signs of exhaustion (long upper wicks)? If not, the setup is strong.
-            
-            SCORING (0-100):
-            - 90-100: ELITE SETUP. Massive volume ignition + clean price breakout. High institutional conviction.
-            - 80-89: STRONG SETUP. Solid volume support + clear trend continuation.
-            - 70-79: VALID. Good setup but with minor resistance nearby.
-            - <70: WEAK. Only score this low if there is ZERO volume increase or a clear rejection at the high.
-            
-            Return ONLY a JSON object: {{"identified_pattern": "string", "vision_score": int, "justification": "str", "disqualification_flag": "None or Name of Warning Sign"}}
-            """
-            
-            from openai import OpenAI
-            from langsmith import wrappers
-            client = wrappers.wrap_openai(OpenAI(api_key=os.getenv("OPENAI_API_KEY")))
-            
-            response = client.chat.completions.create(
-                model="gpt-4o",
-                messages=[
-                    {"role": "system", "content": "You are the Sovereign Institutional Auditor. Your job is to identify high-conviction institutional breakouts using the Master Rulebook."},
-                    {"role": "user", "content": prompt}
-                ],
-                response_format={ "type": "json_object" },
-                timeout=30.0
-            )
-            
-            result = json.loads(response.choices[0].message.content)
-            vision_score = int(result.get("vision_score", 50))
-            identified = result.get("identified_pattern", "unknown")
-            dq_flag = result.get("disqualification_flag", "None")
-            
-            # HARD VETO if a disqualification flag is raised
-            if dq_flag != "None":
-                vision_score = min(vision_score, 65)
-            
+
+            if len(rows) < 21:
+                vision_result = {
+                    "vision_approved": True,
+                    "vision_score": 50,
+                    "identified_pattern": pattern_hint,
+                    "reason": f"Insufficient history ({len(rows)} bars) for deterministic audit; neutral score assigned.",
+                    "disqualification_flag": "None",
+                    "whipsaw_risk": "High",
+                    "cached_at": latest_date
+                }
+                self.cache[cache_key] = vision_result
+                self._save_cache()
+                return vision_result
+
+            logging.info(f"Running deterministic institutional audit for {symbol} (no cache found for {latest_date})...")
+            scored = self._score_setup(rows)
+            vision_score = scored["vision_score"]
+
             vision_result = {
                 "vision_approved": vision_score >= 70,
                 "vision_score": vision_score,
-                "identified_pattern": identified,
-                "reason": result.get("justification", "None"),
-                "disqualification_flag": dq_flag,
+                "identified_pattern": pattern_hint,
+                "reason": scored["reason"],
+                "disqualification_flag": scored["disqualification_flag"],
                 "whipsaw_risk": "Low" if vision_score > 75 else "High",
                 "cached_at": latest_date
             }
-            
+
             # Save to cache
             self.cache[cache_key] = vision_result
             self._save_cache()
-            
+
             return vision_result
-            
+
         except Exception as e:
-            logging.error(f"GPT-4o Vision Analysis failed: {e}")
-            raise RuntimeError(f"OpenAI GPT-4o Vision failed: {e}") from e
+            logging.error(f"Deterministic Vision Analysis failed for {symbol}: {e}")
+            raise RuntimeError(f"Deterministic Vision Analysis failed: {e}") from e
 
 def run_pattern_agent(state: SovereignState) -> Dict[str, Any]:
     """

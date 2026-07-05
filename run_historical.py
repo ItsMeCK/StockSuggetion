@@ -73,15 +73,19 @@ def run_historical_engine(target_date: str):
     logging.info("==================================================")
     logging.info(f"HISTORICAL RUN COMPLETE FOR {target_date}")
     logging.info(f"Candidates Found: {candidates}")
-    approved = list(final_state.get('approved_allocations', {}).keys())
+    allocations = final_state.get('approved_allocations', {})
+    # Exclude entries dropped by the Conviction Router (the merge_dicts reducer
+    # keeps them in state, flagged with dropped=True)
+    approved = [s for s, a in allocations.items() if not a.get("dropped")]
     logging.info(f"Approved Allocations: {approved}")
     logging.info("==================================================")
-    
+
     return {
         "date": target_date,
         "candidates": candidates,
         "incubator": incubator,
         "approved": approved,
+        "approved_allocations": {s: a for s, a in allocations.items() if not a.get("dropped")},
         "macro_regime": final_state.get("macro_regime", "UNKNOWN"),
         "agent_scores": final_state.get("agent_scores", {})
     }

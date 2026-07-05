@@ -351,7 +351,7 @@ def run_execution_agent(state: SovereignState) -> Dict[str, Any]:
 
         if suggested_instrument == "EQUITY":
             # Cash equity branch
-            from midnight_sovereign.core.schemas import AllocationSchema
+            from core.schemas import AllocationSchema
             try:
                 valid_alloc = AllocationSchema(
                     shares=int(allocation.get("shares", 0)),

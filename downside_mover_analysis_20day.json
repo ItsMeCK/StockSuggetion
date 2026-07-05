@@ -1,0 +1,2025 @@
+[
+  {
+    "symbol": "KPITTECH",
+    "start_date": "2026-06-23",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -24.92
+  },
+  {
+    "symbol": "NATCOPHARM",
+    "start_date": "2026-05-24",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": -21.31
+  },
+  {
+    "symbol": "JAINREC",
+    "start_date": "2026-05-25",
+    "end_date": "2026-06-11",
+    "days": 2,
+    "move_pct": -17.21
+  },
+  {
+    "symbol": "NETWEB",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -13.57
+  },
+  {
+    "symbol": "NATIONALUM",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": -13.44
+  },
+  {
+    "symbol": "ASTRAL",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -13.09
+  },
+  {
+    "symbol": "NIACL",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -12.96
+  },
+  {
+    "symbol": "PERSISTENT",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": -12.78
+  },
+  {
+    "symbol": "OIL",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-11",
+    "days": 3,
+    "move_pct": -12.22
+  },
+  {
+    "symbol": "NETWEB",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": -12.2
+  },
+  {
+    "symbol": "NATIONALUM",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -12.12
+  },
+  {
+    "symbol": "FACT",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": -11.32
+  },
+  {
+    "symbol": "SUPREMEIND",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -11.31
+  },
+  {
+    "symbol": "LATENTVIEW",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -11.3
+  },
+  {
+    "symbol": "POWERINDIA",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -11.11
+  },
+  {
+    "symbol": "WIPRO",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -11.09
+  },
+  {
+    "symbol": "GVT&D",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -10.97
+  },
+  {
+    "symbol": "TATAELXSI",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": -10.94
+  },
+  {
+    "symbol": "ENRIN",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -10.91
+  },
+  {
+    "symbol": "HFCL",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -10.8
+  },
+  {
+    "symbol": "THERMAX",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -10.7
+  },
+  {
+    "symbol": "VEDL",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -10.59
+  },
+  {
+    "symbol": "TATATECH",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -10.44
+  },
+  {
+    "symbol": "JMFINANCIL",
+    "start_date": "2026-05-25",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -10.38
+  },
+  {
+    "symbol": "ZEEL",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -10.37
+  },
+  {
+    "symbol": "TEJASNET",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": -10.2
+  },
+  {
+    "symbol": "JINDALSAW",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -10.14
+  },
+  {
+    "symbol": "TCS",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -10.14
+  },
+  {
+    "symbol": "IFCI",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -9.98
+  },
+  {
+    "symbol": "GMDCLTD",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -9.93
+  },
+  {
+    "symbol": "SAIL",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": -9.85
+  },
+  {
+    "symbol": "POWERINDIA",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -9.78
+  },
+  {
+    "symbol": "ZENTEC",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -9.73
+  },
+  {
+    "symbol": "APARINDS",
+    "start_date": "2026-06-23",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -9.69
+  },
+  {
+    "symbol": "GRAPHITE",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -9.68
+  },
+  {
+    "symbol": "HINDZINC",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -9.62
+  },
+  {
+    "symbol": "ZFCVINDIA",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -9.41
+  },
+  {
+    "symbol": "HINDZINC",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": -9.33
+  },
+  {
+    "symbol": "CEMPRO",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-11",
+    "days": 2,
+    "move_pct": -9.27
+  },
+  {
+    "symbol": "TRITURBINE",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -9.22
+  },
+  {
+    "symbol": "INFY",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-22",
+    "days": 2,
+    "move_pct": -9.18
+  },
+  {
+    "symbol": "IRFC",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -9.05
+  },
+  {
+    "symbol": "ECLERX",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -9.04
+  },
+  {
+    "symbol": "MMTC",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -8.95
+  },
+  {
+    "symbol": "TMPV",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-18",
+    "days": 2,
+    "move_pct": -8.94
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": -8.94
+  },
+  {
+    "symbol": "KALYANKJIL",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -8.91
+  },
+  {
+    "symbol": "ANANTRAJ",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -8.89
+  },
+  {
+    "symbol": "DMART",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -8.82
+  },
+  {
+    "symbol": "GICRE",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-17",
+    "days": 2,
+    "move_pct": -8.74
+  },
+  {
+    "symbol": "GVT&D",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -8.69
+  },
+  {
+    "symbol": "CGPOWER",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": -8.6
+  },
+  {
+    "symbol": "LTTS",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -8.43
+  },
+  {
+    "symbol": "IIFL",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -8.33
+  },
+  {
+    "symbol": "ZEEL",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -8.32
+  },
+  {
+    "symbol": "BSOFT",
+    "start_date": "2026-06-17",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": -8.31
+  },
+  {
+    "symbol": "LTTS",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -8.27
+  },
+  {
+    "symbol": "COFORGE",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -8.19
+  },
+  {
+    "symbol": "MEESHO",
+    "start_date": "2026-05-21",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -8.18
+  },
+  {
+    "symbol": "IDBI",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-18",
+    "days": 2,
+    "move_pct": -8.17
+  },
+  {
+    "symbol": "IFCI",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -8.14
+  },
+  {
+    "symbol": "JAINREC",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -8.11
+  },
+  {
+    "symbol": "POLICYBZR",
+    "start_date": "2026-05-25",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -8.08
+  },
+  {
+    "symbol": "MUTHOOTFIN",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -8.07
+  },
+  {
+    "symbol": "NLCINDIA",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -8.02
+  },
+  {
+    "symbol": "SAREGAMA",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -8.01
+  },
+  {
+    "symbol": "TATACHEM",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": -7.99
+  },
+  {
+    "symbol": "IGL",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -7.96
+  },
+  {
+    "symbol": "POWERINDIA",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -7.94
+  },
+  {
+    "symbol": "TTML",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -7.93
+  },
+  {
+    "symbol": "TRAVELFOOD",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": -7.92
+  },
+  {
+    "symbol": "PERSISTENT",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -7.9
+  },
+  {
+    "symbol": "BRIGADE",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -7.89
+  },
+  {
+    "symbol": "NSLNISP",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -7.89
+  },
+  {
+    "symbol": "KIRLOSENG",
+    "start_date": "2026-06-23",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -7.79
+  },
+  {
+    "symbol": "DATAPATTNS",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -7.75
+  },
+  {
+    "symbol": "SONATSOFTW",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -7.71
+  },
+  {
+    "symbol": "NEWGEN",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -7.7
+  },
+  {
+    "symbol": "RHIM",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -7.7
+  },
+  {
+    "symbol": "TIINDIA",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -7.68
+  },
+  {
+    "symbol": "SCHNEIDER",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -7.62
+  },
+  {
+    "symbol": "CHENNPETRO",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": -7.53
+  },
+  {
+    "symbol": "PIIND",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -7.49
+  },
+  {
+    "symbol": "VIJAYA",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -7.48
+  },
+  {
+    "symbol": "BATAINDIA",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": -7.46
+  },
+  {
+    "symbol": "OLAELEC",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -7.45
+  },
+  {
+    "symbol": "DATAPATTNS",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -7.43
+  },
+  {
+    "symbol": "BANKBARODA",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -7.42
+  },
+  {
+    "symbol": "RPOWER",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -7.42
+  },
+  {
+    "symbol": "SCHNEIDER",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": -7.41
+  },
+  {
+    "symbol": "HSCL",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": -7.4
+  },
+  {
+    "symbol": "ZENSARTECH",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -7.39
+  },
+  {
+    "symbol": "BHEL",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -7.37
+  },
+  {
+    "symbol": "TIMKEN",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -7.33
+  },
+  {
+    "symbol": "VEDL",
+    "start_date": "2026-05-26",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -7.3
+  },
+  {
+    "symbol": "IIFL",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-07",
+    "days": 2,
+    "move_pct": -7.25
+  },
+  {
+    "symbol": "LTM",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -7.24
+  },
+  {
+    "symbol": "BALKRISIND",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-11",
+    "days": 2,
+    "move_pct": -7.23
+  },
+  {
+    "symbol": "CHENNPETRO",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-11",
+    "days": 3,
+    "move_pct": -7.23
+  },
+  {
+    "symbol": "HINDCOPPER",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -7.2
+  },
+  {
+    "symbol": "IDEA",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -7.16
+  },
+  {
+    "symbol": "GABRIEL",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -7.14
+  },
+  {
+    "symbol": "HCLTECH",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -7.14
+  },
+  {
+    "symbol": "KPRMILL",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": -7.14
+  },
+  {
+    "symbol": "SAIL",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": -7.13
+  },
+  {
+    "symbol": "ADANIENSOL",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-11",
+    "days": 2,
+    "move_pct": -7.12
+  },
+  {
+    "symbol": "REDINGTON",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 2,
+    "move_pct": -7.09
+  },
+  {
+    "symbol": "GALLANTT",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -7.05
+  },
+  {
+    "symbol": "FORCEMOT",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-08",
+    "days": 2,
+    "move_pct": -7.02
+  },
+  {
+    "symbol": "SAMMAANCAP",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -7.02
+  },
+  {
+    "symbol": "LTM",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -6.99
+  },
+  {
+    "symbol": "KEI",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -6.93
+  },
+  {
+    "symbol": "EICHERMOT",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": -6.9
+  },
+  {
+    "symbol": "PATANJALI",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -6.89
+  },
+  {
+    "symbol": "MRPL",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": -6.85
+  },
+  {
+    "symbol": "OLAELEC",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": -6.76
+  },
+  {
+    "symbol": "SONATSOFTW",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": -6.76
+  },
+  {
+    "symbol": "INDIAMART",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-23",
+    "days": 3,
+    "move_pct": -6.75
+  },
+  {
+    "symbol": "AARTIIND",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -6.74
+  },
+  {
+    "symbol": "GVT&D",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-07",
+    "days": 2,
+    "move_pct": -6.73
+  },
+  {
+    "symbol": "HINDALCO",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -6.72
+  },
+  {
+    "symbol": "NMDC",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -6.72
+  },
+  {
+    "symbol": "GESHIP",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-01",
+    "days": 2,
+    "move_pct": -6.71
+  },
+  {
+    "symbol": "ONESOURCE",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-11",
+    "days": 3,
+    "move_pct": -6.67
+  },
+  {
+    "symbol": "KPRMILL",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": -6.66
+  },
+  {
+    "symbol": "PTCIL",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": -6.63
+  },
+  {
+    "symbol": "FSL",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -6.62
+  },
+  {
+    "symbol": "RPOWER",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -6.62
+  },
+  {
+    "symbol": "NEWGEN",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -6.59
+  },
+  {
+    "symbol": "AWL",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": -6.57
+  },
+  {
+    "symbol": "GESHIP",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -6.57
+  },
+  {
+    "symbol": "NAM-INDIA",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-07",
+    "days": 2,
+    "move_pct": -6.55
+  },
+  {
+    "symbol": "BHEL",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -6.53
+  },
+  {
+    "symbol": "TCS",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": -6.52
+  },
+  {
+    "symbol": "ETERNAL",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -6.51
+  },
+  {
+    "symbol": "KPIL",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -6.49
+  },
+  {
+    "symbol": "WELSPUNLIV",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -6.48
+  },
+  {
+    "symbol": "MANAPPURAM",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -6.47
+  },
+  {
+    "symbol": "SOBHA",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -6.46
+  },
+  {
+    "symbol": "ENGINERSIN",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -6.44
+  },
+  {
+    "symbol": "RITES",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": -6.44
+  },
+  {
+    "symbol": "AIAENG",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -6.43
+  },
+  {
+    "symbol": "JINDALSTEL",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -6.4
+  },
+  {
+    "symbol": "MGL",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -6.39
+  },
+  {
+    "symbol": "CARBORUNIV",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -6.38
+  },
+  {
+    "symbol": "FSL",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -6.37
+  },
+  {
+    "symbol": "JKTYRE",
+    "start_date": "2026-05-26",
+    "end_date": "2026-06-07",
+    "days": 2,
+    "move_pct": -6.36
+  },
+  {
+    "symbol": "USHAMART",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -6.32
+  },
+  {
+    "symbol": "BANDHANBNK",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -6.3
+  },
+  {
+    "symbol": "CPPLUS",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": -6.29
+  },
+  {
+    "symbol": "FINCABLES",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -6.22
+  },
+  {
+    "symbol": "HCLTECH",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": -6.19
+  },
+  {
+    "symbol": "TARIL",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": -6.18
+  },
+  {
+    "symbol": "TATATECH",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -6.18
+  },
+  {
+    "symbol": "TEGA",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -6.18
+  },
+  {
+    "symbol": "MAPMYINDIA",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -6.17
+  },
+  {
+    "symbol": "LATENTVIEW",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -6.16
+  },
+  {
+    "symbol": "SOLARINDS",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-11",
+    "days": 2,
+    "move_pct": -6.16
+  },
+  {
+    "symbol": "ZENSARTECH",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -6.16
+  },
+  {
+    "symbol": "OLECTRA",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -6.15
+  },
+  {
+    "symbol": "COHANCE",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": -6.14
+  },
+  {
+    "symbol": "ENRIN",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -6.12
+  },
+  {
+    "symbol": "BELRISE",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -6.11
+  },
+  {
+    "symbol": "ENGINERSIN",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -6.06
+  },
+  {
+    "symbol": "MPHASIS",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -6.04
+  },
+  {
+    "symbol": "SAPPHIRE",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -6.04
+  },
+  {
+    "symbol": "ANURAS",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": -6.01
+  },
+  {
+    "symbol": "ASTERDM",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": -6.01
+  },
+  {
+    "symbol": "DEEPAKNTR",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -6.01
+  },
+  {
+    "symbol": "HINDALCO",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -6.01
+  },
+  {
+    "symbol": "SBFC",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-22",
+    "days": 2,
+    "move_pct": -6.0
+  },
+  {
+    "symbol": "CANHLIFE",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.96
+  },
+  {
+    "symbol": "FINCABLES",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.96
+  },
+  {
+    "symbol": "TARIL",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.95
+  },
+  {
+    "symbol": "AEGISVOPAK",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": -5.94
+  },
+  {
+    "symbol": "AMBER",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -5.94
+  },
+  {
+    "symbol": "JWL",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.94
+  },
+  {
+    "symbol": "NCC",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -5.94
+  },
+  {
+    "symbol": "FINCABLES",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -5.93
+  },
+  {
+    "symbol": "MUTHOOTFIN",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.92
+  },
+  {
+    "symbol": "SUMICHEM",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 2,
+    "move_pct": -5.86
+  },
+  {
+    "symbol": "INOXWIND",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.85
+  },
+  {
+    "symbol": "SAPPHIRE",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -5.85
+  },
+  {
+    "symbol": "SWANCORP",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -5.85
+  },
+  {
+    "symbol": "CESC",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.83
+  },
+  {
+    "symbol": "TATAELXSI",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.83
+  },
+  {
+    "symbol": "NSLNISP",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.82
+  },
+  {
+    "symbol": "AIIL",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.81
+  },
+  {
+    "symbol": "JBMA",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-07",
+    "days": 2,
+    "move_pct": -5.81
+  },
+  {
+    "symbol": "KAYNES",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -5.81
+  },
+  {
+    "symbol": "DIXON",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": -5.8
+  },
+  {
+    "symbol": "GRAVITA",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-07",
+    "days": 2,
+    "move_pct": -5.8
+  },
+  {
+    "symbol": "BHEL",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -5.79
+  },
+  {
+    "symbol": "CROMPTON",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -5.78
+  },
+  {
+    "symbol": "INFY",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -5.77
+  },
+  {
+    "symbol": "KPITTECH",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.77
+  },
+  {
+    "symbol": "ABFRL",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -5.75
+  },
+  {
+    "symbol": "LTM",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": -5.74
+  },
+  {
+    "symbol": "NUVOCO",
+    "start_date": "2026-05-28",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -5.74
+  },
+  {
+    "symbol": "VBL",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": -5.72
+  },
+  {
+    "symbol": "KFINTECH",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.71
+  },
+  {
+    "symbol": "MMTC",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.7
+  },
+  {
+    "symbol": "ATHERENERG",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": -5.68
+  },
+  {
+    "symbol": "ACUTAAS",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -5.67
+  },
+  {
+    "symbol": "ECLERX",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": -5.67
+  },
+  {
+    "symbol": "JSWENERGY",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -5.65
+  },
+  {
+    "symbol": "SWANCORP",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -5.65
+  },
+  {
+    "symbol": "HINDPETRO",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": -5.64
+  },
+  {
+    "symbol": "BEL",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.63
+  },
+  {
+    "symbol": "CANFINHOME",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -5.61
+  },
+  {
+    "symbol": "TECHM",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -5.6
+  },
+  {
+    "symbol": "BRIGADE",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": -5.59
+  },
+  {
+    "symbol": "RAILTEL",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.59
+  },
+  {
+    "symbol": "MRF",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -5.56
+  },
+  {
+    "symbol": "ACMESOLAR",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -5.54
+  },
+  {
+    "symbol": "GLAND",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": -5.54
+  },
+  {
+    "symbol": "COFORGE",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -5.53
+  },
+  {
+    "symbol": "ECLERX",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.53
+  },
+  {
+    "symbol": "ENRIN",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -5.53
+  },
+  {
+    "symbol": "POLICYBZR",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": -5.52
+  },
+  {
+    "symbol": "ANGELONE",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.51
+  },
+  {
+    "symbol": "SCI",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -5.51
+  },
+  {
+    "symbol": "UPL",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.51
+  },
+  {
+    "symbol": "TCS",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": -5.5
+  },
+  {
+    "symbol": "AMBER",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": -5.49
+  },
+  {
+    "symbol": "SARDAEN",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -5.49
+  },
+  {
+    "symbol": "SOLARINDS",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.49
+  },
+  {
+    "symbol": "SIEMENS",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-23",
+    "days": 2,
+    "move_pct": -5.48
+  },
+  {
+    "symbol": "SUMICHEM",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": -5.47
+  },
+  {
+    "symbol": "SWIGGY",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.46
+  },
+  {
+    "symbol": "LATENTVIEW",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": -5.43
+  },
+  {
+    "symbol": "SPLPETRO",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -5.43
+  },
+  {
+    "symbol": "WELCORP",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": -5.43
+  },
+  {
+    "symbol": "ASAHIINDIA",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-29",
+    "days": 2,
+    "move_pct": -5.42
+  },
+  {
+    "symbol": "JPPOWER",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.41
+  },
+  {
+    "symbol": "RPOWER",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": -5.41
+  },
+  {
+    "symbol": "SCHAEFFLER",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.41
+  },
+  {
+    "symbol": "ASTERDM",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-22",
+    "days": 2,
+    "move_pct": -5.38
+  },
+  {
+    "symbol": "CARBORUNIV",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -5.38
+  },
+  {
+    "symbol": "CCL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": -5.37
+  },
+  {
+    "symbol": "INFY",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -5.37
+  },
+  {
+    "symbol": "TORNTPOWER",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -5.37
+  },
+  {
+    "symbol": "CYIENT",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": -5.35
+  },
+  {
+    "symbol": "BERGEPAINT",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-29",
+    "days": 2,
+    "move_pct": -5.3
+  },
+  {
+    "symbol": "LINDEINDIA",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.3
+  },
+  {
+    "symbol": "CUMMINSIND",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-23",
+    "days": 3,
+    "move_pct": -5.28
+  },
+  {
+    "symbol": "SIGNATURE",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -5.28
+  },
+  {
+    "symbol": "LTFOODS",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -5.24
+  },
+  {
+    "symbol": "CYIENT",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": -5.23
+  },
+  {
+    "symbol": "URBANCO",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.22
+  },
+  {
+    "symbol": "ADANIGREEN",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.21
+  },
+  {
+    "symbol": "TECHM",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -5.21
+  },
+  {
+    "symbol": "BLUEJET",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-07",
+    "days": 2,
+    "move_pct": -5.2
+  },
+  {
+    "symbol": "BLS",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": -5.19
+  },
+  {
+    "symbol": "TATAELXSI",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 2,
+    "move_pct": -5.19
+  },
+  {
+    "symbol": "JWL",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.18
+  },
+  {
+    "symbol": "ADANIPOWER",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.17
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": -5.17
+  },
+  {
+    "symbol": "CARTRADE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": -5.16
+  },
+  {
+    "symbol": "HBLENGINE",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.16
+  },
+  {
+    "symbol": "MFSL",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": -5.16
+  },
+  {
+    "symbol": "TATASTEEL",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.16
+  },
+  {
+    "symbol": "UPL",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": -5.15
+  },
+  {
+    "symbol": "IDEA",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.13
+  },
+  {
+    "symbol": "CLEAN",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.12
+  },
+  {
+    "symbol": "HINDALCO",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-11",
+    "days": 3,
+    "move_pct": -5.12
+  },
+  {
+    "symbol": "TITAN",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.12
+  },
+  {
+    "symbol": "ABB",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.11
+  },
+  {
+    "symbol": "GRSE",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.11
+  },
+  {
+    "symbol": "JSWINFRA",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": -5.11
+  },
+  {
+    "symbol": "SPLPETRO",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -5.11
+  },
+  {
+    "symbol": "ZYDUSWELL",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-09",
+    "days": 2,
+    "move_pct": -5.11
+  },
+  {
+    "symbol": "JINDALSTEL",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.1
+  },
+  {
+    "symbol": "VIJAYA",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-22",
+    "days": 2,
+    "move_pct": -5.1
+  },
+  {
+    "symbol": "EMMVEE",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": -5.08
+  },
+  {
+    "symbol": "SBICARD",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-29",
+    "days": 2,
+    "move_pct": -5.07
+  },
+  {
+    "symbol": "TRITURBINE",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.07
+  },
+  {
+    "symbol": "KIRLOSENG",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": -5.06
+  },
+  {
+    "symbol": "PFC",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.06
+  },
+  {
+    "symbol": "GRAPHITE",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.05
+  },
+  {
+    "symbol": "ONESOURCE",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": -5.05
+  },
+  {
+    "symbol": "INTELLECT",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": -5.04
+  },
+  {
+    "symbol": "OFSS",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": -5.03
+  },
+  {
+    "symbol": "ONGC",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": -5.03
+  },
+  {
+    "symbol": "NBCC",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.02
+  },
+  {
+    "symbol": "COALINDIA",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-11",
+    "days": 3,
+    "move_pct": -5.01
+  },
+  {
+    "symbol": "SCI",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": -5.01
+  },
+  {
+    "symbol": "SHREECEM",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": -5.01
+  },
+  {
+    "symbol": "RVNL",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": -5.0
+  }
+]

@@ -1,0 +1,570 @@
+[
+  {
+    "symbol": "IIFL",
+    "date": "2026-06-22",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 50,
+    "fwd_ret_3d": -8.327868852459014
+  },
+  {
+    "symbol": "IIFL",
+    "date": "2026-05-25",
+    "news_type": "analyst_action",
+    "sentiment": "positive",
+    "confidence": 80,
+    "fwd_ret_3d": -1.5054216233287667
+  },
+  {
+    "symbol": "MAXHEALTH",
+    "date": "2026-05-20",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 70,
+    "fwd_ret_3d": -8.903858491430656
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "date": "2026-06-22",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 60,
+    "fwd_ret_3d": -0.16158124154515735
+  },
+  {
+    "symbol": "ELECON",
+    "date": "2026-05-18",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 50,
+    "fwd_ret_3d": 9.914459445532314
+  },
+  {
+    "symbol": "ASAHIINDIA",
+    "date": "2026-05-06",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 50,
+    "fwd_ret_3d": -3.832278668164893
+  },
+  {
+    "symbol": "LEMONTREE",
+    "date": "2026-06-15",
+    "news_type": "order_win",
+    "sentiment": "positive",
+    "confidence": 80,
+    "fwd_ret_3d": 2.7729793617601706
+  },
+  {
+    "symbol": "WHIRLPOOL",
+    "date": "2026-06-22",
+    "news_type": "analyst_action",
+    "sentiment": "negative",
+    "confidence": 75,
+    "fwd_ret_3d": -0.6393941275063741
+  },
+  {
+    "symbol": "NHPC",
+    "date": "2026-05-20",
+    "news_type": "earnings",
+    "sentiment": "positive",
+    "confidence": 85,
+    "fwd_ret_3d": -0.7088607594936738
+  },
+  {
+    "symbol": "MARICO",
+    "date": "2026-05-04",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 50,
+    "fwd_ret_3d": 2.9856293359762023
+  },
+  {
+    "symbol": "STARHEALTH",
+    "date": "2026-05-11",
+    "news_type": "analyst_action",
+    "sentiment": "neutral",
+    "confidence": 60,
+    "fwd_ret_3d": -1.8583724569640063
+  },
+  {
+    "symbol": "AFFLE",
+    "date": "2026-05-06",
+    "news_type": "management_change",
+    "sentiment": "positive",
+    "confidence": 70,
+    "fwd_ret_3d": 6.488882917982126
+  },
+  {
+    "symbol": "CGPOWER",
+    "date": "2026-05-27",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 70,
+    "fwd_ret_3d": -1.1771758678947155
+  },
+  {
+    "symbol": "LINDEINDIA",
+    "date": "2026-05-04",
+    "news_type": "analyst_action",
+    "sentiment": "positive",
+    "confidence": 75,
+    "fwd_ret_3d": 4.189739142037494
+  },
+  {
+    "symbol": "RELIANCE",
+    "date": "2026-06-22",
+    "news_type": "ipo",
+    "sentiment": "positive",
+    "confidence": 85,
+    "fwd_ret_3d": -0.6491027109583811
+  },
+  {
+    "symbol": "FEDERALBNK",
+    "date": "2026-06-22",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 70,
+    "fwd_ret_3d": 1.29728040012505
+  },
+  {
+    "symbol": "LAURUSLABS",
+    "date": "2026-05-25",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 75,
+    "fwd_ret_3d": 1.0553897663585414
+  },
+  {
+    "symbol": "JSWDULUX",
+    "date": "2026-05-27",
+    "news_type": "order_win",
+    "sentiment": "positive",
+    "confidence": 75,
+    "fwd_ret_3d": -1.0216384288343257
+  },
+  {
+    "symbol": "MOTILALOFS",
+    "date": "2026-06-03",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 70,
+    "fwd_ret_3d": 0.3599628425452751
+  },
+  {
+    "symbol": "INDIGO",
+    "date": "2026-05-04",
+    "news_type": "analyst_action",
+    "sentiment": "negative",
+    "confidence": 85,
+    "fwd_ret_3d": 6.707719894299741
+  },
+  {
+    "symbol": "NTPC",
+    "date": "2026-05-11",
+    "news_type": "order_win",
+    "sentiment": "positive",
+    "confidence": 80,
+    "fwd_ret_3d": 0.6493506493506522
+  },
+  {
+    "symbol": "ITCHOTELS",
+    "date": "2026-06-01",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 70,
+    "fwd_ret_3d": 0.3603485553298902
+  },
+  {
+    "symbol": "PGEL",
+    "date": "2026-06-01",
+    "news_type": "earnings",
+    "sentiment": "negative",
+    "confidence": 75,
+    "fwd_ret_3d": 1.0303913405495515
+  },
+  {
+    "symbol": "ENGINERSIN",
+    "date": "2026-05-27",
+    "news_type": "earnings",
+    "sentiment": "negative",
+    "confidence": 75,
+    "fwd_ret_3d": -1.5882606819162617
+  },
+  {
+    "symbol": "JKTYRE",
+    "date": "2026-06-03",
+    "news_type": "earnings",
+    "sentiment": "negative",
+    "confidence": 70,
+    "fwd_ret_3d": -3.8257035403968356
+  },
+  {
+    "symbol": "ADANIENSOL",
+    "date": "2026-05-11",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 70,
+    "fwd_ret_3d": 1.5027641516779533
+  },
+  {
+    "symbol": "KAYNES",
+    "date": "2026-05-13",
+    "news_type": "earnings",
+    "sentiment": "negative",
+    "confidence": 85,
+    "fwd_ret_3d": -7.340026974374347
+  },
+  {
+    "symbol": "HDFCBANK",
+    "date": "2026-05-13",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 80,
+    "fwd_ret_3d": -0.9226171138977206
+  },
+  {
+    "symbol": "SPLPETRO",
+    "date": "2026-06-03",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 60,
+    "fwd_ret_3d": -3.809523809523803
+  },
+  {
+    "symbol": "WAAREEENER",
+    "date": "2026-05-04",
+    "news_type": "earnings",
+    "sentiment": "negative",
+    "confidence": 85,
+    "fwd_ret_3d": 1.521199358833331
+  },
+  {
+    "symbol": "SPLPETRO",
+    "date": "2026-05-04",
+    "news_type": "earnings",
+    "sentiment": "positive",
+    "confidence": 85,
+    "fwd_ret_3d": 1.1759879666347632
+  },
+  {
+    "symbol": "CENTRALBK",
+    "date": "2026-05-25",
+    "news_type": "other",
+    "sentiment": "negative",
+    "confidence": 75,
+    "fwd_ret_3d": -2.288845905867185
+  },
+  {
+    "symbol": "UNOMINDA",
+    "date": "2026-05-06",
+    "news_type": "management_change",
+    "sentiment": "positive",
+    "confidence": 75,
+    "fwd_ret_3d": -0.3316749585406262
+  },
+  {
+    "symbol": "INDIANB",
+    "date": "2026-06-15",
+    "news_type": "other",
+    "sentiment": "negative",
+    "confidence": 70,
+    "fwd_ret_3d": 1.9688269073010745
+  },
+  {
+    "symbol": "ZYDUSLIFE",
+    "date": "2026-06-15",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 50,
+    "fwd_ret_3d": -0.7323630295726421
+  },
+  {
+    "symbol": "HINDCOPPER",
+    "date": "2026-05-11",
+    "news_type": "earnings",
+    "sentiment": "neutral",
+    "confidence": 70,
+    "fwd_ret_3d": 1.0723147819921932
+  },
+  {
+    "symbol": "KEC",
+    "date": "2026-05-25",
+    "news_type": "earnings",
+    "sentiment": "negative",
+    "confidence": 85,
+    "fwd_ret_3d": -0.22039671408535816
+  },
+  {
+    "symbol": "RELIANCE",
+    "date": "2026-06-01",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 60,
+    "fwd_ret_3d": -1.7952228814848554
+  },
+  {
+    "symbol": "FORCEMOT",
+    "date": "2026-05-11",
+    "news_type": "earnings",
+    "sentiment": "positive",
+    "confidence": 75,
+    "fwd_ret_3d": 2.4923216353657924
+  },
+  {
+    "symbol": "EMMVEE",
+    "date": "2026-06-08",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 70,
+    "fwd_ret_3d": 2.4910501193317494
+  },
+  {
+    "symbol": "AUBANK",
+    "date": "2026-06-17",
+    "news_type": "management_change",
+    "sentiment": "positive",
+    "confidence": 75,
+    "fwd_ret_3d": 0.0975276734773492
+  },
+  {
+    "symbol": "RBLBANK",
+    "date": "2026-05-13",
+    "news_type": "analyst_action",
+    "sentiment": "positive",
+    "confidence": 75,
+    "fwd_ret_3d": -4.0183867141162555
+  },
+  {
+    "symbol": "BANKBARODA",
+    "date": "2026-05-27",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 50,
+    "fwd_ret_3d": 0.13456362937330485
+  },
+  {
+    "symbol": "PCBL",
+    "date": "2026-05-13",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 50,
+    "fwd_ret_3d": -3.645649876717142
+  },
+  {
+    "symbol": "INDIACEM",
+    "date": "2026-06-24",
+    "news_type": "management_change",
+    "sentiment": "negative",
+    "confidence": 70,
+    "fwd_ret_3d": -2.3837436498632365
+  },
+  {
+    "symbol": "BOSCHLTD",
+    "date": "2026-05-25",
+    "news_type": "earnings",
+    "sentiment": "positive",
+    "confidence": 85,
+    "fwd_ret_3d": 2.4277940560904145
+  },
+  {
+    "symbol": "IDFCFIRSTB",
+    "date": "2026-05-25",
+    "news_type": "earnings",
+    "sentiment": "negative",
+    "confidence": 70,
+    "fwd_ret_3d": 1.4668185702079195
+  },
+  {
+    "symbol": "PWL",
+    "date": "2026-05-18",
+    "news_type": "other",
+    "sentiment": "negative",
+    "confidence": 75,
+    "fwd_ret_3d": -3.2821598729486494
+  },
+  {
+    "symbol": "HINDCOPPER",
+    "date": "2026-06-15",
+    "news_type": "management_change",
+    "sentiment": "positive",
+    "confidence": 75,
+    "fwd_ret_3d": -0.11724474841231514
+  },
+  {
+    "symbol": "BSE",
+    "date": "2026-06-15",
+    "news_type": "macro_policy",
+    "sentiment": "negative",
+    "confidence": 70,
+    "fwd_ret_3d": -3.4162982894483913
+  },
+  {
+    "symbol": "HINDPETRO",
+    "date": "2026-05-25",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 85,
+    "fwd_ret_3d": -2.361809045226125
+  },
+  {
+    "symbol": "360ONE",
+    "date": "2026-06-01",
+    "news_type": "earnings",
+    "sentiment": "positive",
+    "confidence": 75,
+    "fwd_ret_3d": -1.4047006977598193
+  },
+  {
+    "symbol": "TATACHEM",
+    "date": "2026-06-03",
+    "news_type": "other",
+    "sentiment": "negative",
+    "confidence": 75,
+    "fwd_ret_3d": 0.825815405968084
+  },
+  {
+    "symbol": "TTML",
+    "date": "2026-05-04",
+    "news_type": "earnings",
+    "sentiment": "negative",
+    "confidence": 70,
+    "fwd_ret_3d": 3.109656301145659
+  },
+  {
+    "symbol": "HBLENGINE",
+    "date": "2026-05-13",
+    "news_type": "analyst_action",
+    "sentiment": "positive",
+    "confidence": 80,
+    "fwd_ret_3d": -4.105048444671078
+  },
+  {
+    "symbol": "ABCAPITAL",
+    "date": "2026-05-18",
+    "news_type": "litigation_penalty",
+    "sentiment": "negative",
+    "confidence": 75,
+    "fwd_ret_3d": 1.7369020501139019
+  },
+  {
+    "symbol": "CENTRALBK",
+    "date": "2026-06-22",
+    "news_type": "management_change",
+    "sentiment": "positive",
+    "confidence": 70,
+    "fwd_ret_3d": 3.4461538461538384
+  },
+  {
+    "symbol": "CUMMINSIND",
+    "date": "2026-05-04",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 50,
+    "fwd_ret_3d": 2.6806083650190113
+  },
+  {
+    "symbol": "RAINBOW",
+    "date": "2026-06-08",
+    "news_type": "earnings",
+    "sentiment": "positive",
+    "confidence": 75,
+    "fwd_ret_3d": 2.886862139142229
+  },
+  {
+    "symbol": "ANANTRAJ",
+    "date": "2026-05-11",
+    "news_type": "earnings",
+    "sentiment": "positive",
+    "confidence": 85,
+    "fwd_ret_3d": -2.836103094835307
+  },
+  {
+    "symbol": "CASTROLIND",
+    "date": "2026-05-27",
+    "news_type": "management_change",
+    "sentiment": "neutral",
+    "confidence": 70,
+    "fwd_ret_3d": 0.11461630826329439
+  },
+  {
+    "symbol": "AUBANK",
+    "date": "2026-06-10",
+    "news_type": "litigation_penalty",
+    "sentiment": "negative",
+    "confidence": 75,
+    "fwd_ret_3d": 6.2078272604588465
+  },
+  {
+    "symbol": "GODREJIND",
+    "date": "2026-06-22",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 70,
+    "fwd_ret_3d": 1.9803730881442925
+  },
+  {
+    "symbol": "BALKRISIND",
+    "date": "2026-06-24",
+    "news_type": "management_change",
+    "sentiment": "neutral",
+    "confidence": 70,
+    "fwd_ret_3d": -2.8787607449856614
+  },
+  {
+    "symbol": "SBIN",
+    "date": "2026-05-18",
+    "news_type": "earnings",
+    "sentiment": "negative",
+    "confidence": 85,
+    "fwd_ret_3d": 0.04215851602024567
+  },
+  {
+    "symbol": "TATACOMM",
+    "date": "2026-06-15",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 70,
+    "fwd_ret_3d": 3.9297658862876275
+  },
+  {
+    "symbol": "BRITANNIA",
+    "date": "2026-05-18",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 60,
+    "fwd_ret_3d": -1.5692790547401458
+  },
+  {
+    "symbol": "EMMVEE",
+    "date": "2026-05-27",
+    "news_type": "other",
+    "sentiment": "positive",
+    "confidence": 75,
+    "fwd_ret_3d": 0.7377805102981793
+  },
+  {
+    "symbol": "ENRIN",
+    "date": "2026-05-27",
+    "news_type": "earnings",
+    "sentiment": "positive",
+    "confidence": 85,
+    "fwd_ret_3d": -4.790682058831126
+  },
+  {
+    "symbol": "PETRONET",
+    "date": "2026-05-25",
+    "news_type": "other",
+    "sentiment": "neutral",
+    "confidence": 50,
+    "fwd_ret_3d": -3.4796573875803
+  },
+  {
+    "symbol": "TATASTEEL",
+    "date": "2026-06-24",
+    "news_type": "other",
+    "sentiment": "negative",
+    "confidence": 70,
+    "fwd_ret_3d": -1.8758942292406446
+  }
+]

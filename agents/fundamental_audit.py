@@ -13,7 +13,8 @@ class FundamentalAuditAgent:
     def __init__(self):
         from pathlib import Path
         self.client = wrappers.wrap_openai(OpenAI(api_key=os.getenv("OPENAI_API_KEY")))
-        self.model = os.getenv("OPENAI_MODEL", "gpt-4o")
+        default_model = "gpt-4o-mini" if os.getenv("TRADING_MODE") == "HISTORICAL" else "gpt-4o"
+        self.model = os.getenv("OPENAI_MODEL", default_model)
         self.cache_path = Path(__file__).parent.parent / "audit_cache.json"
         self.cache = self._load_cache()
 

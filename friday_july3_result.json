@@ -1,0 +1,854 @@
+{
+  "date": "2026-07-03",
+  "candidates": [
+    "CONCOR",
+    "IKS",
+    "CANFINHOME",
+    "LALPATHLAB",
+    "MEESHO",
+    "PNBHOUSING",
+    "SOBHA",
+    "PPLPHARMA",
+    "CCL",
+    "SPLPETRO",
+    "IPCALAB",
+    "AARTIIND",
+    "GRAVITA",
+    "TENNIND",
+    "URBANCO",
+    "ALKEM",
+    "MMTC",
+    "HUDCO",
+    "FINCABLES",
+    "AUBANK",
+    "BELRISE",
+    "UTIAMC",
+    "TITAN",
+    "SUZLON",
+    "WELCORP",
+    "RKFORGE",
+    "GAIL",
+    "HAL",
+    "GROWW",
+    "AXISBANK",
+    "SCHAEFFLER",
+    "LICHSGFIN",
+    "NIVABUPA",
+    "KEI",
+    "ZENTEC",
+    "NETWEB",
+    "POLYCAB",
+    "EICHERMOT",
+    "MARICO",
+    "ICICIAMC",
+    "BIOCON",
+    "TRITURBINE",
+    "NH",
+    "CRAFTSMAN",
+    "APARINDS",
+    "CGPOWER",
+    "OLAELEC",
+    "BDL",
+    "ABFRL",
+    "BPCL",
+    "RITES",
+    "M&M",
+    "BRITANNIA",
+    "ESCORTS",
+    "COHANCE",
+    "SOLARINDS",
+    "HDFCBANK",
+    "RAMCOCEM",
+    "SBILIFE",
+    "ANANTRAJ",
+    "UBL",
+    "HINDPETRO",
+    "SUMICHEM",
+    "ECLERX",
+    "CENTRALBK",
+    "SAMMAANCAP",
+    "USHAMART",
+    "TVSMOTOR",
+    "VIJAYA",
+    "ACC",
+    "ULTRACEMCO",
+    "FORCEMOT",
+    "MAPMYINDIA",
+    "BIKAJI",
+    "BHARTIARTL",
+    "CYIENT",
+    "NAVA",
+    "HCLTECH",
+    "UNOMINDA",
+    "MSUMI",
+    "ASAHIINDIA",
+    "MPHASIS",
+    "IIFL",
+    "FORTIS",
+    "NHPC",
+    "AMBUJACEM",
+    "IREDA",
+    "LEMONTREE",
+    "DOMS",
+    "ASHOKLEY",
+    "GLAXO",
+    "ASIANPAINT",
+    "CHAMBLFERT",
+    "BALKRISIND",
+    "COLPAL",
+    "AWL",
+    "CHOLAHLDNG",
+    "SAPPHIRE",
+    "HAVELLS",
+    "SUNDARMFIN",
+    "BALRAMCHIN",
+    "CIPLA",
+    "KALYANKJIL",
+    "GODREJCP",
+    "NEWGEN",
+    "ZENSARTECH"
+  ],
+  "incubator": [
+    "SBILIFE",
+    "SUNDARMFIN",
+    "BIKAJI",
+    "BALRAMCHIN",
+    "SUMICHEM",
+    "SAMMAANCAP",
+    "MSUMI",
+    "HCLTECH",
+    "CYIENT",
+    "FORCEMOT",
+    "CHAMBLFERT",
+    "BPCL",
+    "CIPLA",
+    "ULTRACEMCO",
+    "ANANTRAJ",
+    "UBL",
+    "USHAMART",
+    "DOMS",
+    "HAVELLS",
+    "RAMCOCEM",
+    "BHARTIARTL",
+    "ABFRL",
+    "VIJAYA",
+    "MAPMYINDIA",
+    "HDFCBANK",
+    "GLAXO",
+    "COLPAL",
+    "UNOMINDA",
+    "CHOLAHLDNG",
+    "LEMONTREE",
+    "CENTRALBK",
+    "HINDPETRO",
+    "ASAHIINDIA",
+    "AWL",
+    "ASHOKLEY",
+    "BDL",
+    "TVSMOTOR",
+    "OLAELEC",
+    "NHPC",
+    "IIFL",
+    "ECLERX",
+    "MPHASIS",
+    "SAPPHIRE",
+    "NEWGEN",
+    "ACC",
+    "BALKRISIND",
+    "NAVA",
+    "ESCORTS",
+    "KALYANKJIL",
+    "RITES",
+    "FORTIS",
+    "BRITANNIA",
+    "SOLARINDS",
+    "ASIANPAINT",
+    "COHANCE",
+    "AMBUJACEM",
+    "GODREJCP",
+    "M&M",
+    "ZENSARTECH",
+    "IREDA"
+  ],
+  "approved": [
+    "AMBUJACEM"
+  ],
+  "approved_allocations": {
+    "AMBUJACEM": {
+      "approved": true,
+      "shares": 11,
+      "capital_allocated": 5000.0,
+      "entry": 443.4,
+      "stop_loss": 427.8375,
+      "target": 665.0999999999999,
+      "conviction_score": 100.0,
+      "rs_alpha": 1.0,
+      "is_momentum": true,
+      "route": "OPTIONS_IGNITION",
+      "signal_features": {
+        "sig_day_ret": 3.3686909896258275,
+        "vol_ratio": 1.8881211516213088,
+        "close_range": 0.9436619718309851,
+        "broke_2d_high": true,
+        "green": true
+      },
+      "market_context": {
+        "breadth_pct": 66.2,
+        "rs_pct": 66.4
+      },
+      "suggested_instrument": "NFO_OPTION",
+      "entry_condition": {
+        "type": "SAME_DAY_CLOSE_ENTRY"
+      },
+      "lot_size": 1200,
+      "nearest_expiry": "2026-07-28",
+      "option_symbol": "AMBUJACEM26JUL445CE",
+      "strike": 445.0
+    }
+  },
+  "macro_regime": "BULLISH",
+  "agent_scores": {
+    "NH": {
+      "dtw": 87.23356563994633,
+      "entry": 145.0,
+      "vision": 55.0,
+      "sector": 50.0
+    },
+    "OLAELEC": {
+      "dtw": 88.71877658485995,
+      "entry": 64.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "BDL": {
+      "dtw": 86.28746518739709,
+      "entry": 137.5327261944984,
+      "vision": 40.0,
+      "sector": 50.0
+    },
+    "ABFRL": {
+      "dtw": 89.94574231401344,
+      "entry": 110.28324201479822,
+      "vision": 55.0,
+      "sector": 50.0
+    },
+    "BPCL": {
+      "dtw": 87.32793404005388,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "MARICO": {
+      "dtw": 86.3658598375251,
+      "entry": 123.85129919901732,
+      "vision": 40.0,
+      "sector": 50.0
+    },
+    "FINCABLES": {
+      "dtw": 86.68362985287462,
+      "entry": 10.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "RITES": {
+      "dtw": 86.00870161027514,
+      "entry": 60.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "M&M": {
+      "dtw": 87.72013018839122,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "KEI": {
+      "dtw": 87.73408201957804,
+      "entry": 37.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "SPLPETRO": {
+      "dtw": 86.4099416196565,
+      "entry": 37.0,
+      "vision": 30.0,
+      "sector": 50.0
+    },
+    "BRITANNIA": {
+      "dtw": 88.61523945957045,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "SOBHA": {
+      "dtw": 88.11078017469093,
+      "entry": 0.0,
+      "vision": 40.0,
+      "sector": 50.0
+    },
+    "AXISBANK": {
+      "dtw": 89.98265539755286,
+      "entry": 25.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "ESCORTS": {
+      "dtw": 87.99301862981547,
+      "entry": 70.0,
+      "vision": 30.0,
+      "sector": 50.0
+    },
+    "COHANCE": {
+      "dtw": 93.23394196460308,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "ICICIAMC": {
+      "dtw": 85.68896121213265,
+      "entry": 25.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "SOLARINDS": {
+      "dtw": 85.07866999222433,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "HAL": {
+      "dtw": 86.7217013722674,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "HDFCBANK": {
+      "dtw": 88.00216336191986,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "RAMCOCEM": {
+      "dtw": 86.02569045788712,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "ALKEM": {
+      "dtw": 88.66061672349687,
+      "entry": 145.0,
+      "vision": 60.0,
+      "sector": 50.0
+    },
+    "SBILIFE": {
+      "dtw": 87.50507655475738,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "ANANTRAJ": {
+      "dtw": 86.01196115071082,
+      "entry": 139.0,
+      "vision": 70.0,
+      "sector": 50.0
+    },
+    "HUDCO": {
+      "dtw": 88.04030631823933,
+      "entry": 151.0,
+      "vision": 70.0,
+      "sector": 50.0
+    },
+    "UBL": {
+      "dtw": 89.35360723003582,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "TRITURBINE": {
+      "dtw": 87.3373207419857,
+      "entry": 10.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "HINDPETRO": {
+      "dtw": 89.1564375419291,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "SUMICHEM": {
+      "dtw": 93.38868300048772,
+      "entry": 151.0,
+      "vision": 100.0,
+      "sector": 50.0
+    },
+    "ECLERX": {
+      "dtw": 91.46485690878197,
+      "entry": 145.0,
+      "vision": 100.0,
+      "sector": 50.0
+    },
+    "CENTRALBK": {
+      "dtw": 87.98902908978671,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "SAMMAANCAP": {
+      "dtw": 86.44714236555559,
+      "entry": 67.0,
+      "vision": 15.0,
+      "sector": 50.0
+    },
+    "WELCORP": {
+      "dtw": 87.13770368214381,
+      "entry": 56.05311589079005,
+      "vision": 40.0,
+      "sector": 50.0
+    },
+    "USHAMART": {
+      "dtw": 88.64114100302979,
+      "entry": 113.89133426277527,
+      "vision": 70.0,
+      "sector": 50.0
+    },
+    "TVSMOTOR": {
+      "dtw": 87.0514225708209,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "TENNIND": {
+      "dtw": 87.71991814982144,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "AARTIIND": {
+      "dtw": 85.1224384333426,
+      "entry": 70.0,
+      "vision": 30.0,
+      "sector": 50.0
+    },
+    "CRAFTSMAN": {
+      "dtw": 88.57379950492816,
+      "entry": 40.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "GROWW": {
+      "dtw": 87.55866989897078,
+      "entry": 70.0,
+      "vision": 15.0,
+      "sector": 50.0
+    },
+    "MEESHO": {
+      "dtw": 84.57204926682446,
+      "entry": 40.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "VIJAYA": {
+      "dtw": 84.21444839311972,
+      "entry": 40.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "ACC": {
+      "dtw": 89.23012090465899,
+      "entry": 115.0,
+      "vision": 95.0,
+      "sector": 50.0
+    },
+    "ULTRACEMCO": {
+      "dtw": 87.36800673210344,
+      "entry": 70.0,
+      "vision": 45.0,
+      "sector": 50.0
+    },
+    "SUZLON": {
+      "dtw": 88.70955441831029,
+      "entry": 10.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "FORCEMOT": {
+      "dtw": 87.9185634442737,
+      "entry": 86.01933866865643,
+      "vision": 40.0,
+      "sector": 50.0
+    },
+    "MAPMYINDIA": {
+      "dtw": 92.00987960932144,
+      "entry": 79.45335593206899,
+      "vision": 95.0,
+      "sector": 50.0
+    },
+    "CANFINHOME": {
+      "dtw": 92.88252308416087,
+      "entry": 98.35043024142875,
+      "vision": 80.0,
+      "sector": 50.0
+    },
+    "LALPATHLAB": {
+      "dtw": 90.61513148724264,
+      "entry": 52.0,
+      "vision": 30.0,
+      "sector": 50.0
+    },
+    "CCL": {
+      "dtw": 92.2690485958116,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "GAIL": {
+      "dtw": 88.44400881856147,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "BIKAJI": {
+      "dtw": 93.9537062611314,
+      "entry": 70.0,
+      "vision": 30.0,
+      "sector": 50.0
+    },
+    "BHARTIARTL": {
+      "dtw": 88.77504840832053,
+      "entry": 100.0,
+      "vision": 30.0,
+      "sector": 50.0
+    },
+    "AUBANK": {
+      "dtw": 87.44281994347722,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "LODHA": {
+      "dtw": 86.09294317785728,
+      "entry": 145.0,
+      "vision": 100.0,
+      "sector": 50.0
+    },
+    "NIVABUPA": {
+      "dtw": 90.920971470631,
+      "entry": 70.0,
+      "vision": 15.0,
+      "sector": 50.0
+    },
+    "RKFORGE": {
+      "dtw": 89.58003332307761,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "CYIENT": {
+      "dtw": 87.33303842084948,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "NAVA": {
+      "dtw": 88.41528503133011,
+      "entry": 70.0,
+      "vision": 30.0,
+      "sector": 50.0
+    },
+    "GRAVITA": {
+      "dtw": 88.46360318136146,
+      "entry": 115.0,
+      "vision": 55.0,
+      "sector": 50.0
+    },
+    "IKS": {
+      "dtw": 85.67352231136476,
+      "entry": 109.04891419017505,
+      "vision": 80.0,
+      "sector": 50.0
+    },
+    "HCLTECH": {
+      "dtw": 90.07984105010755,
+      "entry": 151.0,
+      "vision": 75.0,
+      "sector": 50.0
+    },
+    "UNOMINDA": {
+      "dtw": 87.31765745135365,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "MSUMI": {
+      "dtw": 87.00613532356492,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "ASAHIINDIA": {
+      "dtw": 89.09250598731012,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "MPHASIS": {
+      "dtw": 87.778245698833,
+      "entry": 130.0,
+      "vision": 40.0,
+      "sector": 50.0
+    },
+    "IIFL": {
+      "dtw": 88.05730171611434,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "MMTC": {
+      "dtw": 88.21406537132513,
+      "entry": 25.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "FORTIS": {
+      "dtw": 87.55925876809331,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "CONCOR": {
+      "dtw": 87.8341603850399,
+      "entry": 145.0,
+      "vision": 100.0,
+      "sector": 50.0
+    },
+    "CGPOWER": {
+      "dtw": 88.71656750263651,
+      "entry": 65.0,
+      "vision": 60.0,
+      "sector": 50.0
+    },
+    "NHPC": {
+      "dtw": 86.48606600719799,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "AMBUJACEM": {
+      "dtw": 89.68816367993897,
+      "entry": 175.0,
+      "vision": 95.0,
+      "sector": 50.0
+    },
+    "IREDA": {
+      "dtw": 89.05630967602714,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "LEMONTREE": {
+      "dtw": 88.7044107941532,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "DOMS": {
+      "dtw": 88.03309713041541,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "BELRISE": {
+      "dtw": 89.61258419439751,
+      "entry": 55.66670516302195,
+      "vision": 40.0,
+      "sector": 50.0
+    },
+    "ASHOKLEY": {
+      "dtw": 88.49333050682885,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "GLAXO": {
+      "dtw": 86.08160349394258,
+      "entry": 40.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "ASIANPAINT": {
+      "dtw": 92.79788369733689,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "CHAMBLFERT": {
+      "dtw": 89.68437444933953,
+      "entry": 70.0,
+      "vision": 30.0,
+      "sector": 50.0
+    },
+    "LICHSGFIN": {
+      "dtw": 88.89205662837446,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "BALKRISIND": {
+      "dtw": 88.42302220000225,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "URBANCO": {
+      "dtw": 88.84041459840425,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "COLPAL": {
+      "dtw": 92.59780563294579,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "POLYCAB": {
+      "dtw": 87.83686780421652,
+      "entry": 25.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "AWL": {
+      "dtw": 91.14905251669892,
+      "entry": 145.0,
+      "vision": 75.0,
+      "sector": 50.0
+    },
+    "CHOLAHLDNG": {
+      "dtw": 87.86819568602462,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "APARINDS": {
+      "dtw": 89.39565027969729,
+      "entry": 75.62883649161083,
+      "vision": 25.0,
+      "sector": 50.0
+    },
+    "SAPPHIRE": {
+      "dtw": 89.11521570176942,
+      "entry": 70.0,
+      "vision": 30.0,
+      "sector": 50.0
+    },
+    "HAVELLS": {
+      "dtw": 90.45815787503597,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "SCHAEFFLER": {
+      "dtw": 91.0402195761699,
+      "entry": 55.0,
+      "vision": 30.0,
+      "sector": 50.0
+    },
+    "BIOCON": {
+      "dtw": 90.90371877390439,
+      "entry": 144.77955158437604,
+      "vision": 70.0,
+      "sector": 50.0
+    },
+    "EICHERMOT": {
+      "dtw": 88.47334296480385,
+      "entry": 40.0,
+      "vision": 15.0,
+      "sector": 50.0
+    },
+    "SUNDARMFIN": {
+      "dtw": 87.77331262781821,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "BALRAMCHIN": {
+      "dtw": 93.33309411854894,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "CIPLA": {
+      "dtw": 89.77484825930347,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "UTIAMC": {
+      "dtw": 87.64058955807995,
+      "entry": 139.04576413248398,
+      "vision": 95.0,
+      "sector": 50.0
+    },
+    "IPCALAB": {
+      "dtw": 88.83470153552733,
+      "entry": 139.8161834247653,
+      "vision": 95.0,
+      "sector": 50.0
+    },
+    "ZENTEC": {
+      "dtw": 88.09196928983378,
+      "entry": 25.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "KALYANKJIL": {
+      "dtw": 87.05624395602042,
+      "entry": 55.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "GODREJCP": {
+      "dtw": 89.92952748216436,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "NETWEB": {
+      "dtw": 87.87593122430569,
+      "entry": 25.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "PPLPHARMA": {
+      "dtw": 90.87533814651866,
+      "entry": 126.30698043085091,
+      "vision": 100.0,
+      "sector": 50.0
+    },
+    "TITAN": {
+      "dtw": 88.52773427737279,
+      "entry": 67.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "NEWGEN": {
+      "dtw": 86.02632945745454,
+      "entry": 70.0,
+      "vision": 0.0,
+      "sector": 50.0
+    },
+    "PNBHOUSING": {
+      "dtw": 88.8502315214823,
+      "entry": 117.96414691928757,
+      "vision": 25.0,
+      "sector": 50.0
+    },
+    "ZENSARTECH": {
+      "dtw": 90.62312158988524,
+      "entry": 115.0,
+      "vision": 100.0,
+      "sector": 50.0
+    }
+  }
+}

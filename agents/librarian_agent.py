@@ -3,7 +3,7 @@ import json
 import logging
 import os
 from typing import Dict, List, Any
-from midnight_sovereign.core.schemas import LibrarianAuditSchema
+from core.schemas import LibrarianAuditSchema
 
 class SovereignLibrarian:
     """

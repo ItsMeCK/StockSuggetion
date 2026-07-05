@@ -1,0 +1,5417 @@
+[
+  {
+    "symbol": "KIRLOSENG",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-23",
+    "days": 3,
+    "move_pct": 28.73,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "NIACL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 28.19,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IFCI",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-16",
+    "days": 2,
+    "move_pct": 27.13,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CARTRADE",
+    "start_date": "2026-05-28",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 25.17,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AEGISLOG",
+    "start_date": "2026-06-07",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 22.88,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SONATSOFTW",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 2,
+    "move_pct": 22.52,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IFCI",
+    "start_date": "2026-05-20",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 21.96,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "JAINREC",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 21.87,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CPPLUS",
+    "start_date": "2026-05-19",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 21.75,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AIIL",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 21.47,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ZENSARTECH",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 21.35,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "MMTC",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 20.09,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IDBI",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 19.86,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "OLECTRA",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 19.67,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SUMICHEM",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 19.35,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ZEEL",
+    "start_date": "2026-05-21",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": 19.03,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AEGISVOPAK",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 18.91,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TBOTEK",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 18.22,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CARBORUNIV",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 16.54,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "NETWEB",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 16.53,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AARTIIND",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 2,
+    "move_pct": 16.43,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RHIM",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-04",
+    "days": 2,
+    "move_pct": 16.39,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BATAINDIA",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-21",
+    "days": 2,
+    "move_pct": 16.36,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MAPMYINDIA",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 15.88,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "KALYANKJIL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 2,
+    "move_pct": 15.78,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CHOLAFIN",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 15.5,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HFCL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 15.46,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ATHERENERG",
+    "start_date": "2026-06-22",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 15.2,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "REDINGTON",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 15.08,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PGEL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 14.91,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PRESTIGE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 14.77,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PWL",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": 14.66,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SCHNEIDER",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 14.55,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LTF",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 14.54,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TEJASNET",
+    "start_date": "2026-05-17",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 14.42,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ASHOKLEY",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 14.37,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CEMPRO",
+    "start_date": "2026-06-23",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 14.26,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "COHANCE",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": 14.09,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HDBFS",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 13.86,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HSCL",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-08",
+    "days": 2,
+    "move_pct": 13.79,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "GABRIEL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-22",
+    "days": 2,
+    "move_pct": 13.63,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CAPLIPOINT",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-11",
+    "days": 3,
+    "move_pct": 13.59,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "GVT&D",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 13.57,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MOTILALOFS",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 13.55,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "APARINDS",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 13.5,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TMCV",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 13.49,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SHRIRAMFIN",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 13.48,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IIFL",
+    "start_date": "2026-05-28",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 13.36,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RITES",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 13.14,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CEMPRO",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-10",
+    "days": 2,
+    "move_pct": 13.04,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "JKCEMENT",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 13.04,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PWL",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 13.01,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BALKRISIND",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 13.0,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "M&MFIN",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": 12.81,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "OFSS",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": 12.77,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ABDL",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 12.73,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "OLAELEC",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 12.7,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "OLAELEC",
+    "start_date": "2026-05-20",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": 12.68,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "THELEELA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-22",
+    "days": 2,
+    "move_pct": 12.68,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TRENT",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 12.61,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ACMESOLAR",
+    "start_date": "2026-05-19",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": 12.58,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RPOWER",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-01",
+    "days": 2,
+    "move_pct": 12.55,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "KPRMILL",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": 12.5,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "WELSPUNLIV",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-23",
+    "days": 3,
+    "move_pct": 12.47,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ECLERX",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 12.37,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "KPRMILL",
+    "start_date": "2026-05-26",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 12.34,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CONCORDBIO",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-11",
+    "days": 3,
+    "move_pct": 12.25,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "FACT",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 12.21,
+    "captured": true,
+    "ledger_matches": [
+      {
+        "status": "AMO_PLACED",
+        "date": "2026-06-10"
+      }
+    ],
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CEATLTD",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 12.12,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "INOXWIND",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 11.95,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AAVAS",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 11.84,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "FIVESTAR",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 11.84,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ITCHOTELS",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 11.84,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ZENTEC",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 11.8,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BANDHANBNK",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 11.78,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "DLF",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 11.78,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MGL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 11.74,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HONASA",
+    "start_date": "2026-06-22",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 11.68,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "FIVESTAR",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 11.63,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "JUBLINGREA",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 11.63,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HEXT",
+    "start_date": "2026-06-22",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 11.48,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ABREL",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 11.42,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HDFCAMC",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 11.25,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "STARHEALTH",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 11.21,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BRIGADE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 11.18,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "DIXON",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 11.15,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CREDITACC",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 11.14,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "JKTYRE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 11.08,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "NYKAA",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 11.08,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ZYDUSWELL",
+    "start_date": "2026-06-16",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 11.06,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ABCAPITAL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 11.05,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BDL",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 11.05,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "FINCABLES",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 10.97,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CHOLAHLDNG",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 10.95,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "JINDALSAW",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 10.93,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "GODREJPROP",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 10.91,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CEATLTD",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 10.83,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IKS",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 10.83,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TEJASNET",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 10.79,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "JYOTICNC",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": 10.75,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SYRMA",
+    "start_date": "2026-05-26",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 10.72,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LODHA",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 10.65,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CCL",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": 10.59,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TARIL",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 10.58,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BLUEJET",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 10.56,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PETRONET",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 10.45,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PARADEEP",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 10.44,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "COROMANDEL",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 10.4,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HOMEFIRST",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 10.32,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 10.23,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "JSWINFRA",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": 10.21,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "MANAPPURAM",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 10.2,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PCBL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 10.15,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HCLTECH",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 10.13,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "BLUEJET",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 10.05,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "NUVAMA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 2,
+    "move_pct": 9.98,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "DELHIVERY",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 9.87,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HINDPETRO",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 9.87,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RRKABEL",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 9.86,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "INDIGO",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": 9.85,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "KAYNES",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 9.84,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "INTELLECT",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 9.72,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TIINDIA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 9.71,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AEGISVOPAK",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 9.69,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "NAM-INDIA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 9.68,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RHIM",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 2,
+    "move_pct": 9.64,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CAMS",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 9.62,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ETERNAL",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 9.62,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TRAVELFOOD",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 9.62,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PAYTM",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 9.61,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CHOICEIN",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 9.59,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "DOMS",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 9.58,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MUTHOOTFIN",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 9.58,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ACUTAAS",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": 9.57,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "VIJAYA",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 9.55,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SOBHA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 9.54,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "APOLLOTYRE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 9.51,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LEMONTREE",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-23",
+    "days": 3,
+    "move_pct": 9.49,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GALLANTT",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 9.44,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ACMESOLAR",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": 9.41,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "MEESHO",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": 9.41,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "SBICARD",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 9.4,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ZEEL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 9.39,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TRITURBINE",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-22",
+    "days": 2,
+    "move_pct": 9.37,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "OBEROIRLTY",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 9.34,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CGCL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 9.33,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RKFORGE",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 9.3,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RAILTEL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 9.27,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TTML",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 9.27,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BEML",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 9.23,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "DATAPATTNS",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": 9.18,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ACUTAAS",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": 9.17,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CENTRALBK",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 9.12,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MSUMI",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-29",
+    "days": 2,
+    "move_pct": 9.12,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "YESBANK",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 9.08,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ATHERENERG",
+    "start_date": "2026-05-28",
+    "end_date": "2026-06-04",
+    "days": 2,
+    "move_pct": 9.03,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "KPIL",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 9.03,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "DLF",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 9.01,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "EMMVEE",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 9.0,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "BPCL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 8.99,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ENGINERSIN",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-21",
+    "days": 2,
+    "move_pct": 8.99,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SCHNEIDER",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 8.93,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "BERGEPAINT",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-22",
+    "days": 2,
+    "move_pct": 8.91,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "IPCALAB",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": 8.9,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TECHNOE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 8.89,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SAPPHIRE",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 8.84,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ANGELONE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 8.82,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TATACAP",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-21",
+    "days": 2,
+    "move_pct": 8.81,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PPLPHARMA",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": 8.79,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TEJASNET",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 8.76,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "PRESTIGE",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 8.75,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TITAGARH",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 8.72,
+    "captured": true,
+    "ledger_matches": [
+      {
+        "status": "AMO_PLACED",
+        "date": "2026-06-09"
+      }
+    ],
+    "during_known_outage": false
+  },
+  {
+    "symbol": "POLYMED",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-23",
+    "days": 3,
+    "move_pct": 8.7,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "SUZLON",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 8.69,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BELRISE",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-09",
+    "days": 2,
+    "move_pct": 8.68,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "KFINTECH",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 8.68,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "NAVA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 8.68,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CAPLIPOINT",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 8.67,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CPPLUS",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-21",
+    "days": 2,
+    "move_pct": 8.65,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CUB",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 8.65,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "FORCEMOT",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 8.65,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "SPLPETRO",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 8.65,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 8.64,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "KIMS",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": 8.64,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SUNDARMFIN",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 8.64,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "NBCC",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 8.58,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "APOLLOTYRE",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 8.55,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "RVNL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 8.53,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TATACOMM",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 8.52,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "DATAPATTNS",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 8.51,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MRPL",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 8.51,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "UCOBANK",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 8.5,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "EXIDEIND",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 8.49,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "FORCEMOT",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 8.46,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TEGA",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 8.45,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "THERMAX",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": 8.45,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CDSL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 8.41,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "EMMVEE",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 8.41,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "INDIGO",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 8.4,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LT",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 8.4,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ACUTAAS",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 8.33,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "POONAWALLA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 8.31,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ABREL",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 8.3,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "SCI",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 8.26,
+    "captured": true,
+    "ledger_matches": [
+      {
+        "status": "AMO_PLACED",
+        "date": "2026-06-07"
+      }
+    ],
+    "during_known_outage": false
+  },
+  {
+    "symbol": "WELCORP",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": 8.24,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "PERSISTENT",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 8.23,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "APTUS",
+    "start_date": "2026-06-23",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 8.22,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GROWW",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 8.22,
+    "captured": true,
+    "ledger_matches": [
+      {
+        "status": "AMO_PLACED",
+        "date": "2026-06-07"
+      }
+    ],
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LAURUSLABS",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 8.2,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ZENTEC",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 8.14,
+    "captured": true,
+    "ledger_matches": [
+      {
+        "status": "AMO_PLACED",
+        "date": "2026-06-07"
+      }
+    ],
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BELRISE",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 8.11,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "POLYMED",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 8.11,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IOC",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 8.1,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "KEC",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 8.1,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SWIGGY",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 8.1,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LODHA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 8.05,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "M&MFIN",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 8.03,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "APTUS",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 7.98,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MPHASIS",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 7.98,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "MRPL",
+    "start_date": "2026-05-28",
+    "end_date": "2026-06-09",
+    "days": 2,
+    "move_pct": 7.96,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TMCV",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": 7.96,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "JMFINANCIL",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.95,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PAGEIND",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-01",
+    "days": 2,
+    "move_pct": 7.93,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "AADHARHFC",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-18",
+    "days": 2,
+    "move_pct": 7.92,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TARIL",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-01",
+    "days": 2,
+    "move_pct": 7.86,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "BHEL",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 7.85,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SCHAEFFLER",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.84,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ETERNAL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 7.82,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ADANIGREEN",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": 7.81,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ASTERDM",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": 7.81,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PHOENIXLTD",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 7.81,
+    "captured": true,
+    "ledger_matches": [
+      {
+        "status": "AMO_PLACED",
+        "date": "2026-06-10"
+      }
+    ],
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SYRMA",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-24",
+    "days": 3,
+    "move_pct": 7.81,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "PWL",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 7.8,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "AIAENG",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 7.79,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CREDITACC",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 7.79,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GLAND",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": 7.78,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TITAN",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.77,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AADHARHFC",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 7.76,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "AUBANK",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.76,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "DEEPAKFERT",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 7.76,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "PARADEEP",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 7.76,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GODIGIT",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 7.74,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CEMPRO",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 7.73,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IDEA",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 7.71,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "OBEROIRLTY",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.71,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CROMPTON",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 7.69,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AJANTPHARM",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": 7.62,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "BALRAMCHIN",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 7.61,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "SAMMAANCAP",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 7.61,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "WELSPUNLIV",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 7.61,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ABFRL",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 7.6,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ABDL",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": 7.59,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ICICIPRULI",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 7.58,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "GODREJPROP",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 7.57,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "PIRAMALFIN",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 7.56,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ABSLAMC",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-21",
+    "days": 2,
+    "move_pct": 7.53,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "IIFL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.53,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "360ONE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.49,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "UPL",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 7.49,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "POLYMED",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 7.45,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ECLERX",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.42,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "GLAXO",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 7.42,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "GMRAIRPORT",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 7.4,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IDFCFIRSTB",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 7.37,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MANKIND",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 7.37,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "DMART",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 7.36,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HYUNDAI",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 7.36,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MARUTI",
+    "start_date": "2026-06-23",
+    "end_date": "2026-07-01",
+    "days": 2,
+    "move_pct": 7.33,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ANANDRATHI",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 7.31,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ANANTRAJ",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 7.31,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "SOLARINDS",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": 7.28,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "MAHABANK",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 7.27,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ADANIENT",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 7.26,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ABSLAMC",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 7.25,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 7.24,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "DEVYANI",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.22,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "COFORGE",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 7.2,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CYIENT",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.2,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HBLENGINE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.19,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "JAINREC",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-08",
+    "days": 2,
+    "move_pct": 7.18,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "JKTYRE",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 7.18,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ELECON",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.15,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AMBER",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 7.14,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "DELHIVERY",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 7.14,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "PINELABS",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": 7.11,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "3MINDIA",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 7.1,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "PAYTM",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 7.09,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "LICI",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 7.08,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RAMCOCEM",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 7.08,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BLUESTARCO",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 7.06,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BSE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 7.05,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IDEA",
+    "start_date": "2026-05-28",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 7.03,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TTML",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 6.98,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "GVT&D",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 6.97,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "NAVINFLUOR",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-11",
+    "days": 3,
+    "move_pct": 6.95,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "DEEPAKFERT",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": 6.9,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "JSWINFRA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 6.9,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MAXHEALTH",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 6.9,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "EIHOTEL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-18",
+    "days": 2,
+    "move_pct": 6.89,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CHALET",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 6.88,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SONACOMS",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 6.84,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "JMFINANCIL",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 6.83,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "SOLARINDS",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 6.82,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CLEAN",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 6.81,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "COFORGE",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 6.81,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "KAJARIACER",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 6.8,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "KAYNES",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 6.79,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "DALBHARAT",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 6.78,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "KARURVYSYA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.78,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MAHABANK",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": 6.78,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "J&KBANK",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 6.76,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TBOTEK",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 6.76,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TATATECH",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 6.74,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "LINDEINDIA",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 6.71,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "PNBHOUSING",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.71,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LEMONTREE",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 6.7,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PINELABS",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": 6.68,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "USHAMART",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": 6.68,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CREDITACC",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": 6.67,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CUB",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.67,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MAXHEALTH",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": 6.66,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GODREJCP",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 6.65,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "IRCON",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.65,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IREDA",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.64,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "POONAWALLA",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 6.64,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TATATECH",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 3,
+    "move_pct": 6.64,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IOB",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 6.62,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ENRIN",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-18",
+    "days": 2,
+    "move_pct": 6.6,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "VIJAYA",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 6.6,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 6.59,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LATENTVIEW",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.59,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BHARATFORG",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 6.55,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ANGELONE",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 6.53,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CRAFTSMAN",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 6.52,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RRKABEL",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": 6.49,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 6.48,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "MRF",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 6.46,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CHAMBLFERT",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-09",
+    "days": 2,
+    "move_pct": 6.45,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AARTIIND",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 6.42,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "COCHINSHIP",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 6.42,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GRANULES",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": 6.42,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GRSE",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 6.41,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "J&KBANK",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-08",
+    "days": 2,
+    "move_pct": 6.41,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HAL",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 6.4,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AWL",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.39,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LTTS",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 2,
+    "move_pct": 6.38,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CIPLA",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-23",
+    "days": 3,
+    "move_pct": 6.37,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "NUVOCO",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 6.37,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ABSLAMC",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 2,
+    "move_pct": 6.33,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "FORTIS",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": 6.33,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "GODREJIND",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 6.28,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HFCL",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": 6.28,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "INFY",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 6.28,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "LATENTVIEW",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 6.28,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "COCHINSHIP",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 2,
+    "move_pct": 6.26,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ABDL",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 6.24,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LLOYDSME",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-29",
+    "days": 3,
+    "move_pct": 6.23,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ATGL",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-04",
+    "days": 2,
+    "move_pct": 6.22,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CHOICEIN",
+    "start_date": "2026-06-22",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 6.22,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "JBMA",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 6.22,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LTM",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 6.21,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TECHM",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 6.21,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "EICHERMOT",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 6.2,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "UNITDSPR",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 6.2,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CHENNPETRO",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 6.18,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RAINBOW",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 6.18,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "M&M",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 6.16,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "POLICYBZR",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.16,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "POWERINDIA",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 6.16,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GRANULES",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-18",
+    "days": 2,
+    "move_pct": 6.14,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "SYRMA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.14,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TATAINVEST",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 6.13,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ZFCVINDIA",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 6.13,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "FINCABLES",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 2,
+    "move_pct": 6.11,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "JIOFIN",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.11,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RAMCOCEM",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": 6.11,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ASHOKLEY",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": 6.09,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "BAJAJHLDNG",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.09,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HSCL",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": 6.08,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ACE",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-21",
+    "days": 2,
+    "move_pct": 6.07,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ADANIPOWER",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 6.07,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "SAILIFE",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": 6.07,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ICICIGI",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 6.05,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ONESOURCE",
+    "start_date": "2026-06-23",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 6.05,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HEG",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 6.04,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-16",
+    "days": 2,
+    "move_pct": 6.04,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 6.03,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GAIL",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 6.02,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "GODREJIND",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 6.01,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "IIFL",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 6.01,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "RPOWER",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 6.01,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "M&MFIN",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 6.0,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "SHREECEM",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 6.0,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HOMEFIRST",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": 5.99,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "PHOENIXLTD",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.98,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ASAHIINDIA",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 5.97,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GRAVITA",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 5.97,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "JSL",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 5.93,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "GRAVITA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.92,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "INDHOTEL",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.9,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MAZDOCK",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 5.9,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SAREGAMA",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": 5.9,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "INDIAMART",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.89,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AJANTPHARM",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": 5.88,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CHOLAFIN",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-23",
+    "days": 3,
+    "move_pct": 5.88,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "DABUR",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 5.87,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HDFCAMC",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.87,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "PIIND",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": 5.87,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 5.87,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AMBUJACEM",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 5.86,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GRAPHITE",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 5.85,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RECLTD",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.85,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "J&KBANK",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.83,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CARTRADE",
+    "start_date": "2026-06-28",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": 5.82,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "MINDACORP",
+    "start_date": "2026-06-24",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 5.82,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ABB",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 5.81,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SUMICHEM",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 5.81,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RECLTD",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": 5.8,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SCHNEIDER",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-28",
+    "days": 2,
+    "move_pct": 5.8,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "NAUKRI",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.79,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "PINELABS",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 5.79,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RADICO",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 5.78,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HOMEFIRST",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.77,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ABCAPITAL",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-23",
+    "days": 2,
+    "move_pct": 5.76,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ADANIENSOL",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-07",
+    "days": 2,
+    "move_pct": 5.75,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BANKINDIA",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": 5.75,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ADANIGREEN",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 5.74,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ICICIAMC",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-21",
+    "days": 2,
+    "move_pct": 5.74,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TRIDENT",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 5.73,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-11",
+    "days": 2,
+    "move_pct": 5.73,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "AFCONS",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-09",
+    "days": 2,
+    "move_pct": 5.72,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "DRREDDY",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-28",
+    "days": 3,
+    "move_pct": 5.72,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "RHIM",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.7,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "KEI",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 5.69,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ASTERDM",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-18",
+    "days": 2,
+    "move_pct": 5.67,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-11",
+    "days": 3,
+    "move_pct": 5.66,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "VIJAYA",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": 5.65,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "MAPMYINDIA",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 5.64,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MOTHERSON",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-24",
+    "days": 2,
+    "move_pct": 5.64,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "AAVAS",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 5.63,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "AMBUJACEM",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 5.62,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LLOYDSME",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 5.6,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MARUTI",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 5.6,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SAREGAMA",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 5.6,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ABLBL",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.59,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TCS",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 5.59,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GMDCLTD",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 2,
+    "move_pct": 5.58,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "INDUSINDBK",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 5.57,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "NUVAMA",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 5.56,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "IEX",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.55,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "NCC",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.55,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MCX",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 5.53,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TATATECH",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 5.53,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MAPMYINDIA",
+    "start_date": "2026-06-03",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": 5.5,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ENDURANCE",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 2,
+    "move_pct": 5.49,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IGL",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 5.49,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "UNOMINDA",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 5.47,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "PGEL",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.46,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CLEAN",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 5.45,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TMPV",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 5.45,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "HDBFS",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 5.44,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HSCL",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 5.44,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HONAUT",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 5.43,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "INDUSINDBK",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.43,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "NIACL",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-01",
+    "days": 2,
+    "move_pct": 5.43,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "LTF",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.42,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HDFCBANK",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.41,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TIMKEN",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 5.41,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "BERGEPAINT",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-09",
+    "days": 3,
+    "move_pct": 5.4,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CANFINHOME",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 5.4,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CGPOWER",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 5.39,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IRB",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.39,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "FLUOROCHEM",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-10",
+    "days": 3,
+    "move_pct": 5.38,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "GABRIEL",
+    "start_date": "2026-06-04",
+    "end_date": "2026-06-08",
+    "days": 2,
+    "move_pct": 5.37,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RITES",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-04",
+    "days": 2,
+    "move_pct": 5.36,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ANANTRAJ",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.35,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ICICIBANK",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-11",
+    "days": 3,
+    "move_pct": 5.34,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "KALYANKJIL",
+    "start_date": "2026-05-31",
+    "end_date": "2026-06-04",
+    "days": 2,
+    "move_pct": 5.34,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "NLCINDIA",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 5.34,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "TENNIND",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 5.34,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "APARINDS",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 5.33,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "BRITANNIA",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 5.33,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "URBANCO",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 5.33,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "BLS",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.32,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "CHAMBLFERT",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.31,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ELECON",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": 5.31,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "KPRMILL",
+    "start_date": "2026-06-28",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": 5.31,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HINDPETRO",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-23",
+    "days": 3,
+    "move_pct": 5.3,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ARE&M",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.29,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "JUBLINGREA",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.29,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "IPCALAB",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 5.27,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ELECON",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-08",
+    "days": 3,
+    "move_pct": 5.26,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SAREGAMA",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 5.26,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ZEEL",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 5.26,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CONCOR",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.25,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "VOLTAS",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 5.25,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "MOTHERSON",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 5.24,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "TVSMOTOR",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 5.24,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ERIS",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 5.22,
+    "captured": true,
+    "ledger_matches": [
+      {
+        "status": "AMO_PLACED",
+        "date": "2026-06-14"
+      }
+    ],
+    "during_known_outage": true
+  },
+  {
+    "symbol": "LTTS",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.22,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SONATSOFTW",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 5.22,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "AIAENG",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-29",
+    "days": 2,
+    "move_pct": 5.21,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CANBK",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 5.21,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "DELHIVERY",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-14",
+    "days": 3,
+    "move_pct": 5.21,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "RELIANCE",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.21,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "FSL",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.2,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GMDCLTD",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-15",
+    "days": 3,
+    "move_pct": 5.2,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LTTS",
+    "start_date": "2026-06-30",
+    "end_date": "2026-07-02",
+    "days": 2,
+    "move_pct": 5.2,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "ADANIENSOL",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.19,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "KEC",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 5.19,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CRISIL",
+    "start_date": "2026-06-07",
+    "end_date": "2026-06-09",
+    "days": 2,
+    "move_pct": 5.18,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BEL",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-17",
+    "days": 2,
+    "move_pct": 5.17,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HCLTECH",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 5.16,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SAMMAANCAP",
+    "start_date": "2026-06-28",
+    "end_date": "2026-06-30",
+    "days": 2,
+    "move_pct": 5.16,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CGCL",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 5.14,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "FIRSTCRY",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-23",
+    "days": 3,
+    "move_pct": 5.14,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "HUDCO",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.14,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "NSLNISP",
+    "start_date": "2026-06-10",
+    "end_date": "2026-06-14",
+    "days": 2,
+    "move_pct": 5.14,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "LGEINDIA",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 5.13,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "NEWGEN",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 5.13,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SBILIFE",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 5.13,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "VOLTAS",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-04",
+    "days": 2,
+    "move_pct": 5.13,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "NEULANDLAB",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 5.12,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "NHPC",
+    "start_date": "2026-06-16",
+    "end_date": "2026-06-21",
+    "days": 3,
+    "move_pct": 5.12,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "POLYCAB",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 5.12,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "IPCALAB",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-29",
+    "days": 2,
+    "move_pct": 5.11,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "CRISIL",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-16",
+    "days": 3,
+    "move_pct": 5.07,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ESCORTS",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-22",
+    "days": 3,
+    "move_pct": 5.06,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "GODREJIND",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 5.05,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "SARDAEN",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 5.05,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "SRF",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-01",
+    "days": 3,
+    "move_pct": 5.05,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "VIJAYA",
+    "start_date": "2026-06-15",
+    "end_date": "2026-06-18",
+    "days": 3,
+    "move_pct": 5.05,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "DEEPAKFERT",
+    "start_date": "2026-06-17",
+    "end_date": "2026-06-21",
+    "days": 2,
+    "move_pct": 5.04,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "NAM-INDIA",
+    "start_date": "2026-06-24",
+    "end_date": "2026-06-30",
+    "days": 3,
+    "move_pct": 5.04,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "POWERINDIA",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-04",
+    "days": 3,
+    "move_pct": 5.03,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "ACC",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.02,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  },
+  {
+    "symbol": "3MINDIA",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-17",
+    "days": 3,
+    "move_pct": 5.01,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": false
+  },
+  {
+    "symbol": "BOSCHLTD",
+    "start_date": "2026-06-29",
+    "end_date": "2026-07-02",
+    "days": 3,
+    "move_pct": 5.0,
+    "captured": false,
+    "ledger_matches": null,
+    "during_known_outage": true
+  }
+]
