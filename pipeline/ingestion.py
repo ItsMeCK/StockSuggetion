@@ -25,8 +25,8 @@ class ZerodhaIngestionEngine:
     and performs bulk inserts into the TimescaleDB hypertable.
     """
     def __init__(self):
-        self.api_key = os.getenv("KITE_API_KEY", "MOCK_KEY")
-        self.access_token = os.getenv("KITE_ACCESS_TOKEN", "MOCK_TOKEN")
+        self.api_key = os.getenv("KITE_API_KEY", "MOCK_KEY").strip("'\"")
+        self.access_token = os.getenv("KITE_ACCESS_TOKEN", "MOCK_TOKEN").strip("'\"")
         self.kite = KiteConnect(api_key=self.api_key)
         self.kite.set_access_token(self.access_token)
         
@@ -51,18 +51,38 @@ class ZerodhaIngestionEngine:
             self.conn.close()
             logging.info("TimescaleDB connection closed.")
 
-    def fetch_historical_data(self, instrument_token: int, from_date: str, to_date: str, interval: str = "day"):
+    def fetch_historical_data(self, instrument_token: int, from_date: str, to_date: str, interval: str = "day", symbol: str = None):
         """
-        Fetches historical OHLCV data from Zerodha API.
-        This is currently mocked to prevent API rate limits and execution failure without valid keys.
+        Fetches historical OHLCV data from Zerodha API, falling back to quote LTP/OHLC if permission is denied.
         """
-        logging.info(f"Fetching {interval} data for instrument {instrument_token} from {from_date} to {to_date}")
+        logging.info(f"Fetching {interval} data for {symbol or instrument_token} from {from_date} to {to_date}")
         
         # Live API Data Fetch
         try:
             return self.kite.historical_data(instrument_token, from_date, to_date, interval)
         except Exception as e:
-            logging.error(f"Failed to fetch historical data for {instrument_token}: {e}")
+            logging.warning(f"Failed to fetch historical data for {symbol or instrument_token}: {e}. Retrying with quote fallback.")
+            if symbol:
+                try:
+                    qkey = f"NSE:{symbol}"
+                    q = self.kite.quote(qkey).get(qkey, {})
+                    ohlc = q.get('ohlc', {})
+                    if ohlc:
+                        trade_time = q.get('last_trade_time', datetime.now())
+                        if isinstance(trade_time, str):
+                            trade_date = datetime.strptime(trade_time[:10], "%Y-%m-%d")
+                        else:
+                            trade_date = trade_time
+                        return [{
+                            'date': trade_date,
+                            'open': float(ohlc.get('open', 0.0)),
+                            'high': float(ohlc.get('high', 0.0)),
+                            'low': float(ohlc.get('low', 0.0)),
+                            'close': float(q.get('last_price', ohlc.get('close', 0.0))),
+                            'volume': int(q.get('volume', 0))
+                        }]
+                except Exception as quote_err:
+                    logging.error(f"Quote fallback failed for {symbol}: {quote_err}")
             return []
 
     def bulk_insert_ohlcv(self, symbol: str, data: list):
@@ -110,7 +130,7 @@ def run_eod_ingestion():
     
     # Set dates for Live Sovereign Audit
     target_date = datetime.now().strftime("%Y-%m-%d")
-    lookback_start = (datetime.now() - timedelta(days=400)).strftime("%Y-%m-%d")
+    lookback_start = (datetime.now() - timedelta(days=10)).strftime("%Y-%m-%d")
 
     # Load target symbols from Master Universe or daily_scan_list
     target_symbols = []
@@ -161,7 +181,7 @@ def run_eod_ingestion():
             if i % 50 == 0:
                 logging.info(f"PROGRESS: Ingested {i}/{len(full_market_list)} symbols...")
                 
-            data = engine.fetch_historical_data(asset['token'], lookback_start, target_date)
+            data = engine.fetch_historical_data(asset['token'], lookback_start, target_date, symbol=asset['symbol'])
             
             if data:
                 engine.bulk_insert_ohlcv(asset['symbol'], data)

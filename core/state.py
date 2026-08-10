@@ -95,4 +95,16 @@ class SovereignState(TypedDict):
     
     # Debate counter for Proposer-Critic cyclic edge logic
     debate_count: Annotated[int, operator.add]
-
+    
+    # --- Phase 4: Intraday 1-Hour Lifecycle Tracking ---
+    # Tracks candidates coiling within 1.5% of AVWAP
+    approaching_candidates: Annotated[List[str], add_lists]
+    
+    # Tracks candidates that triggered the Tri-Agent Debate Council
+    setup_reached_candidates: Annotated[List[str], add_lists]
+    
+    # Stores the raw JSON outputs and transcripts of the debate council
+    debate_transcripts: Annotated[Dict[str, Any], merge_dicts]
+    
+    # Maps ticker -> current pipeline stage (e.g., 'ENTRY_TRIGGERED', 'IN_TRADE_MANAGEMENT')
+    stage_lifecycle: Annotated[Dict[str, str], merge_dicts]
