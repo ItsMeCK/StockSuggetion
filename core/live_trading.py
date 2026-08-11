@@ -79,7 +79,9 @@ def execute_trade(symbol, score, catalyst, entry_time):
     try:
         opt_quote = kite_data.quote([f"NFO:{option_symbol}"])
         entry_premium = opt_quote[f"NFO:{option_symbol}"]["last_price"]
-        print(f"Option Premium: {entry_premium}")
+        initial_oi = opt_quote[f"NFO:{option_symbol}"].get("oi", 0)
+        initial_volume = opt_quote[f"NFO:{option_symbol}"].get("volume", 0)
+        print(f"Option Premium: {entry_premium} | OI: {initial_oi} | Vol: {initial_volume}")
     except Exception as e:
         print(f"Error fetching option premium via Data account: {e}")
         return
@@ -109,8 +111,14 @@ def execute_trade(symbol, score, catalyst, entry_time):
                 price=limit_price
             )
             print(f"✅ BUY Order Placed! ID: {order_id}")
-            
-            # Place SL-Limit Order immediately
+            status = "LIVE_TRADED"
+        except Exception as e:
+            print(f"❌ Failed to place LIVE BUY order via Exec account: {e}")
+            status = "FAILED"
+            return
+
+        # Attempt to place SL-Limit Order immediately (might fail if Buy order hasn't filled and margin is low)
+        try:
             sl_limit_price = round(initial_sl_price * 0.95, 1)
             print(f"Placing SL Order at Trigger {initial_sl_price}, Limit {sl_limit_price}")
             sl_order_id = kite_exec.place_order(
@@ -125,12 +133,10 @@ def execute_trade(symbol, score, catalyst, entry_time):
                 price=sl_limit_price
             )
             print(f"✅ SL-M Order Placed! ID: {sl_order_id}")
-            status = "LIVE_TRADED"
-            
         except Exception as e:
-            print(f"❌ Failed to place LIVE order via Exec account: {e}")
-            status = "FAILED"
-            return
+            print(f"⚠️ Failed to place SL order via Exec account (usually margin limits): {e}")
+            print(f"⚠️ Warning: Position is unprotected. Please add SL manually when Buy order fills.")
+            sl_order_id = "FAILED"
     else:
         print(f"LIVE_BUY is False. Simulating paper order: {order_id}")
         
@@ -150,7 +156,10 @@ def execute_trade(symbol, score, catalyst, entry_time):
         "catalyst": catalyst,
         "current_sl": initial_sl_price,
         "highest_high": entry_premium,
-        "trailing_active": False
+        "trailing_active": False,
+        "initial_oi": initial_oi,
+        "highest_oi": initial_oi,
+        "initial_volume": initial_volume
     }
     
     from core.db_manager import save_active_position
