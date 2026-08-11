@@ -8,6 +8,7 @@ from kiteconnect import KiteConnect
 
 from agents.llm_ranking_agent import LLMRankingAgent
 from core.live_trading import execute_trade, get_kite_data_client, get_kite_exec_client
+from core.sector_mapping import get_sector_for_symbol
 
 def run_hourly_evaluation():
     load_dotenv()
@@ -182,8 +183,43 @@ def run_hourly_evaluation():
             else:
                 threshold = 85
                 
-            if score < threshold:
-                print(f"⚠️ {symbol} Score ({score}) is below the required threshold ({threshold}) for hour {now.hour}. Skipping.")
+            # Fetch VWAP and Sector for multipliers
+            vwap_multiplier = 1.0
+            sector_multiplier = 1.0
+            
+            try:
+                sector_index = get_sector_for_symbol(symbol)
+                quote_keys = [f"NSE:{symbol}"]
+                if sector_index != "NIFTY 50":
+                    quote_keys.append(f"NSE:{sector_index}")
+                    
+                quotes = kite_data.quote(quote_keys)
+                
+                # VWAP Check
+                if f"NSE:{symbol}" in quotes:
+                    vwap = quotes[f"NSE:{symbol}"].get("average_price", 0)
+                    ltp = quotes[f"NSE:{symbol}"].get("last_price", 0)
+                    
+                    if vwap > 0 and ltp < vwap:
+                        vwap_multiplier = 0.8
+                        print(f"⚠️ {symbol} has bled below VWAP (LTP: {ltp} < VWAP: {vwap}). Applying 0.8x penalty for potential block-deal trap.")
+                
+                # Sector Check
+                if sector_index != "NIFTY 50" and f"NSE:{sector_index}" in quotes:
+                    sec_ltp = quotes[f"NSE:{sector_index}"].get("last_price", 0)
+                    sec_close = quotes[f"NSE:{sector_index}"].get("ohlc", {}).get("close", 0)
+                    
+                    if sec_close > 0 and sec_ltp > sec_close:
+                        sector_multiplier = 1.05
+                        print(f"✅ Sector Tailwind: {sector_index} is positive. Applying 1.05x boost to {symbol}.")
+                        
+            except Exception as e:
+                print(f"Warning: Could not fetch quotes for multipliers for {symbol}: {e}")
+                
+            final_score = score * vwap_multiplier * sector_multiplier
+            
+            if final_score < threshold:
+                print(f"⚠️ {symbol} Final Score ({final_score}) is below the required threshold ({threshold}) for hour {now.hour}. Skipping.")
                 continue
                 
             # Execute LIVE
