@@ -173,11 +173,23 @@ def run_hourly_evaluation():
         
         for i, trade in enumerate(top_trades, 1):
             symbol = trade['symbol']
-            print(f"Rank {i}: {symbol} | Score: {trade['conviction_score']}")
+            score = trade['conviction_score']
+            print(f"Rank {i}: {symbol} | Score: {score}")
+            
+            # Dynamic Conviction Threshold
+            if now.hour in [10, 11, 12]:
+                threshold = 70
+            else:
+                threshold = 85
+                
+            if score < threshold:
+                print(f"⚠️ {symbol} Score ({score}) is below the required threshold ({threshold}) for hour {now.hour}. Skipping.")
+                continue
+                
             # Execute LIVE
             execute_trade(
                 symbol=symbol, 
-                score=trade['conviction_score'], 
+                score=score, 
                 catalyst=trade['catalyst_summary'],
                 entry_time=now
             )

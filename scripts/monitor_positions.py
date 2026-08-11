@@ -103,13 +103,17 @@ def monitor_positions():
                 continue
                 
         # 2. Fetch live quote to check for trailing SL
+        base_symbol = pos["symbol"]
         try:
-            quote = kite_data.quote([f"NFO:{opt_symbol}"])
+            quote = kite_data.quote([f"NFO:{opt_symbol}", f"NSE:{base_symbol}"])
             if f"NFO:{opt_symbol}" not in quote:
                 continue
             ltp = quote[f"NFO:{opt_symbol}"]["last_price"]
             live_oi = quote[f"NFO:{opt_symbol}"].get("oi", 0)
             live_volume = quote[f"NFO:{opt_symbol}"].get("volume", 0)
+            
+            spot_ltp = quote.get(f"NSE:{base_symbol}", {}).get("last_price", 0)
+            spot_vwap = quote.get(f"NSE:{base_symbol}", {}).get("average_price", 0)
         except Exception as e:
             print(f"Error fetching quote for {opt_symbol} via Data account: {e}")
             continue
@@ -127,25 +131,47 @@ def monitor_positions():
         momentum_broken = False
         break_reason = ""
         
-        if price_drop_pct > 8 and oi_drop_pct > 3:
+        try:
+            entry_dt = pos["entry_time"]
+            if isinstance(entry_dt, str):
+                entry_dt = datetime.fromisoformat(entry_dt)
+            entry_dt = entry_dt.replace(tzinfo=None)
+            time_in_trade_mins = (datetime.now() - entry_dt).total_seconds() / 60
+        except Exception as e:
+            print(f"Error parsing date for {opt_symbol}: {e}")
+            time_in_trade_mins = 60 # Default to normal mode on error
+            
+        # Shakeout Window vs Normal Limits
+        if time_in_trade_mins < 30:
+            p_drop_limit = 15
+            oi_drop_limit = 6
+            vol_spike_limit = 2.5
+        else:
+            p_drop_limit = 8
+            oi_drop_limit = 5
+            vol_spike_limit = 1.5
+            
+        vwap_broken = spot_ltp < spot_vwap if spot_vwap > 0 else False
+        
+        # VWAP Support Override
+        if not vwap_broken and time_in_trade_mins < 30:
+            # If institutions defend VWAP during shakeout, give massive room to breathe
+            p_drop_limit = 20
+            
+        if price_drop_pct > p_drop_limit and oi_drop_pct > oi_drop_limit:
             momentum_broken = True
             break_reason = "Momentum Break: Long Unwinding"
-        elif price_drop_pct > 8 and live_volume > (initial_volume * 1.5) and initial_volume > 0:
+        elif price_drop_pct > p_drop_limit and live_volume > (initial_volume * vol_spike_limit) and initial_volume > 0:
             momentum_broken = True
             break_reason = "Momentum Break: Selling Pressure"
+        elif vwap_broken and price_drop_pct > 10:
+            momentum_broken = True
+            break_reason = "Momentum Break: VWAP Dump"
         else:
-            try:
-                entry_dt = pos["entry_time"]
-                if isinstance(entry_dt, str):
-                    entry_dt = datetime.fromisoformat(entry_dt)
-                entry_dt = entry_dt.replace(tzinfo=None)
-                
-                if (datetime.now() - entry_dt).total_seconds() > 45 * 60:
-                    if ltp < p_entry * 1.20 and oi_drop_pct >= 0:
-                        momentum_broken = True
-                        break_reason = "Momentum Break: Stagnation"
-            except Exception as e:
-                print(f"Error parsing date for {opt_symbol}: {e}")
+            if time_in_trade_mins > 45:
+                if ltp < p_entry * 1.20 and oi_drop_pct >= 0:
+                    momentum_broken = True
+                    break_reason = "Momentum Break: Stagnation"
                 
         if momentum_broken:
             print(f"[{datetime.now()}] 🚨 {break_reason} for {opt_symbol}! Executing SMART EXIT.")
@@ -203,7 +229,11 @@ def monitor_positions():
         
         # Trailing SL Logic
         if highest_high >= target_activation:
-            new_sl = round(highest_high - (highest_high * 0.10), 1)
+            if "ZYDUS" in opt_symbol:
+                new_sl = round(highest_high - (highest_high * 0.05), 1)
+            else:
+                new_sl = round(highest_high - (highest_high * 0.10), 1)
+                
             if new_sl > current_sl:
                 if not trailing_active:
                     emailer.send_live_alert(
