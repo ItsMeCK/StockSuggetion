@@ -8,8 +8,8 @@ echo "======================================="
 
 # 1. System Updates & Dependencies
 echo "[1/7] Updating system and installing dependencies..."
-sudo apt-get update -y
-sudo apt-get install -y python3-pip python3-venv git docker.io docker-compose curl
+sudo DEBIAN_FRONTEND=noninteractive apt-get update -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -yq python3-pip python3-venv git docker.io docker-compose curl
 
 # 2. Add Swap Space (CRITICAL for e2-micro 1GB RAM)
 # The engine runs 2 Postgres containers (Timescale + PGVector). 
