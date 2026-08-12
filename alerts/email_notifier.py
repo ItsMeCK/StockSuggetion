@@ -142,6 +142,11 @@ class SovereignEmailer:
         msg["From"] = f"Sovereign Engine <{self.username}>"
         msg["To"] = self.target
 
+        # Limit to top 2 by conviction score
+        if approved_allocations:
+            sorted_allocs = sorted(approved_allocations.items(), key=lambda item: item[1].get('conviction_score', 0), reverse=True)[:2]
+            approved_allocations = dict(sorted_allocs)
+
         # Build approved setups HTML block
         approved_html = ""
         if approved_allocations:
