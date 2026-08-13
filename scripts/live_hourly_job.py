@@ -103,7 +103,16 @@ def run_hourly_evaluation():
         print(f"Error fetching FNO symbols via Data account: {e}")
         return
         
-    # 3. Load Parquet Data (Assuming external ingestion updates this file)
+    # 3. Fetch Fresh Intraday Data
+    print("📥 Fetching fresh intraday hourly candles...")
+    try:
+        from pipeline.intraday_ingestion import IntradayIngestionEngine
+        engine = IntradayIngestionEngine()
+        engine.fetch_data()
+    except Exception as e:
+        print(f"❌ Error fetching fresh intraday data: {e}")
+        return
+        
     parquet_path = "data/intraday_ohlcv.parquet"
     if not os.path.exists(parquet_path):
         print("No live parquet data found!")
