@@ -18,6 +18,10 @@ class SovereignEmailer:
         self.username = os.getenv("MAIL_USERNAME")
         self.password = os.getenv("MAIL_PASSWORD").replace(" ", "")
         self.target = os.getenv("TARGET_EMAIL")
+        
+        import socket
+        hostname = socket.gethostname()
+        self.env_prefix = "[GCP]" if "sovereign-engine" in hostname else "[LOCAL]"
 
     def send_scorecard(self, subject: str, signals: list):
         """
@@ -33,7 +37,7 @@ class SovereignEmailer:
         logging.info(f"📤 SENDING EMAIL: {subject} | TICKERS: {[s['ticker'] for s in signals]}")
 
         msg = MIMEMultipart("alternative")
-        msg["Subject"] = f"🏛️ SOVEREIGN: {subject}"
+        msg["Subject"] = f"{self.env_prefix} 🏛️ SOVEREIGN: {subject}"
         msg["From"] = f"Sovereign Engine <{self.username}>"
         msg["To"] = self.target
 
@@ -138,7 +142,7 @@ class SovereignEmailer:
             summary_badge = "🛡️ SCREENING COMPLETE (RESTING)"
             summary_text = "The cognitive validation pipeline completed successfully. No candidates cleared the strict Elite hybrid conviction gates today."
 
-        msg["Subject"] = f"🏛️ SOVEREIGN: {subject}"
+        msg["Subject"] = f"{self.env_prefix} 🏛️ SOVEREIGN: {subject}"
         msg["From"] = f"Sovereign Engine <{self.username}>"
         msg["To"] = self.target
 
@@ -332,7 +336,7 @@ class SovereignEmailer:
         Sends an immediate live execution alert (e.g. SL Hit, Smart Exit, Margin Failure)
         """
         msg = MIMEMultipart("alternative")
-        msg["Subject"] = f"🏛️ SOVEREIGN ALERT: {subject}"
+        msg["Subject"] = f"{self.env_prefix} 🏛️ SOVEREIGN ALERT: {subject}"
         msg["From"] = f"Sovereign Engine <{self.username}>"
         msg["To"] = self.target
 
