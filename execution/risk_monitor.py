@@ -24,6 +24,10 @@ def enforce_risk_limits():
     TAKE_PROFIT = 0.05
     STOP_LOSS = -0.05
     
+    from core.db_manager import get_all_active_positions
+    active_db_positions = get_all_active_positions()
+    active_symbols = set([pos['symbol'] for pos in active_db_positions])
+    
     def evaluate_and_exit(items, item_type="position"):
         for item in items:
             qty = item['quantity']
@@ -33,6 +37,11 @@ def enforce_risk_limits():
             # Only monitor active long positions
             if qty > 0:
                 symbol = item['tradingsymbol']
+                
+                # CRITICAL: Only monitor symbols that the AI actually bought (present in DB ledger)
+                if symbol not in active_symbols:
+                    continue
+                    
                 avg_price = item['average_price']
                 
                 if avg_price == 0:
