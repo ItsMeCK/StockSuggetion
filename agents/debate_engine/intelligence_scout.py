@@ -76,3 +76,12 @@ class IntelligenceScout:
 if __name__ == "__main__":
     scout = IntelligenceScout()
     symbols = scout.scout_market_catalysts()
+    
+    if symbols:
+        os.makedirs("data", exist_ok=True)
+        out_path = "data/daily_scout_candidates.json"
+        with open(out_path, "w") as f:
+            json.dump(symbols, f)
+        print(f"[{datetime.now()}] 💾 Saved {len(symbols)} candidates to {out_path} for the Debate Engine.")
+    else:
+        print(f"[{datetime.now()}] ⚠️ No candidates found. Saved nothing.")

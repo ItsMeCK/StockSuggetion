@@ -118,10 +118,18 @@ class DebateOrchestrator:
             return None
 
 def run_daily_debate():
+    import json
     init_db() # Ensure table exists
     
-    scout = IntelligenceScout()
-    symbols = scout.scout_market_catalysts()
+    in_path = "data/daily_scout_candidates.json"
+    if not os.path.exists(in_path):
+        print(f"[{datetime.now()}] ⚠️ No candidate file found at {in_path}. Did the Intelligence Scout run?")
+        return
+        
+    with open(in_path, "r") as f:
+        symbols = json.load(f)
+        
+    print(f"[{datetime.now()}] 📥 Loaded {len(symbols)} candidates from {in_path} for debate.")
     
     if not symbols:
         print("No candidates found by Intelligence Scout.")

@@ -1,6 +1,6 @@
-00 10 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python3 run_engine.py --pulse 1 >> logs/pulse_1.log 2>&1
-00 13 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python3 run_engine.py --pulse 2 >> logs/pulse_2.log 2>&1
-00 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python3 run_engine.py --pulse 3 >> logs/pulse_3.log 2>&1
+# --- DAILY DEBATE ENGINE ---
+30 14 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 agents/debate_engine/intelligence_scout.py >> logs/intelligence_scout.log 2>&1
+00 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 agents/debate_engine/debate_orchestrator.py >> logs/debate_orchestrator.log 2>&1
 */10 9-15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign/venv/bin/python3 execution/risk_monitor.py >> logs/risk_monitor.log 2>&1
 
 # --- NEW LIVE EXECUTION ENGINE CRONS ---
@@ -8,4 +8,3 @@
 * * * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 scripts/monitor_positions.py >> logs/live_monitor.log 2>&1
 */5 * * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 scripts/health_check.py >> logs/health_check.log 2>&1
 15 10-15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 scripts/live_hourly_job.py >> logs/live_hourly.log 2>&1
-
