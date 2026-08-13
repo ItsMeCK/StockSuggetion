@@ -1,4 +1,14 @@
-30 10 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. venv/bin/python3 main_orchestrator.py --mode regime
-00 12 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. venv/bin/python3 main_orchestrator.py --mode strike
-15 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. venv/bin/python3 main_orchestrator.py --mode incubator
-*/10 9-15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign/venv/bin/python3 execution/risk_monitor.py
+00 10 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python3 run_engine.py --pulse 1 >> logs/pulse_1.log 2>&1
+00 13 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python3 run_engine.py --pulse 2 >> logs/pulse_2.log 2>&1
+00 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python3 run_engine.py --pulse 3 >> logs/pulse_3.log 2>&1
+*/10 9-15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign/venv/bin/python3 execution/risk_monitor.py >> logs/risk_monitor.log 2>&1
+
+# --- NEW LIVE EXECUTION ENGINE CRONS ---
+10 09 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. /opt/homebrew/bin/python3 scripts/sync_env.py >> logs/sync_env.log 2>&1
+* * * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 scripts/monitor_positions.py >> logs/live_monitor.log 2>&1
+*/5 * * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 scripts/health_check.py >> logs/health_check.log 2>&1
+15 10-15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 scripts/live_hourly_job.py >> logs/live_hourly.log 2>&1
+
+# --- INTRADAY DATA INGESTION ---
+# Fetch fresh intraday data at the top of every hour
+00 10-15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 pipeline/intraday_ingestion.py >> logs/intraday_ingestion.log 2>&1

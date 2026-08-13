@@ -152,6 +152,11 @@ def run_hourly_evaluation():
     latest_time = df.select(pl.col("time").max())[0, 0]
     print(f"Latest Candle in DB: {latest_time}")
     
+    if latest_time != target_utc:
+        print(f"🛑 STALE DATA DETECTED! Expected {target_utc}, but DB only has {latest_time}.")
+        print("Aborting run to prevent trading on old signals. Make sure intraday_ingestion.py is running.")
+        return
+    
     current_hour_df = df.filter(pl.col("time") == latest_time)
     
     # 4. Math Engine
@@ -171,6 +176,8 @@ def run_hourly_evaluation():
         agent = LLMRankingAgent()
         top_trades = agent.rank_trades(valid_symbols, max_picks=2)
         print("\n🚀 FINAL LLM EXECUTION SIGNALS 🚀")
+        
+        final_approved_trades = []
         
         for i, trade in enumerate(top_trades, 1):
             symbol = trade['symbol']
@@ -222,6 +229,13 @@ def run_hourly_evaluation():
                 print(f"⚠️ {symbol} Final Score ({final_score}) is below the required threshold ({threshold}) for hour {now.hour}. Skipping.")
                 continue
                 
+            # Collect for Email
+            final_approved_trades.append({
+                "ticker": symbol,
+                "score": round(final_score, 1),
+                "passed": [trade.get('catalyst_summary', "Quantitative Breakout")]
+            })
+                
             # Execute LIVE
             execute_trade(
                 symbol=symbol, 
@@ -229,6 +243,16 @@ def run_hourly_evaluation():
                 catalyst=trade['catalyst_summary'],
                 entry_time=now
             )
+            
+        # Send Email Alert
+        if final_approved_trades:
+            try:
+                from alerts.email_notifier import SovereignEmailer
+                emailer = SovereignEmailer()
+                emailer.send_scorecard(f"Live Hourly Execution ({now.strftime('%H:%M')})", final_approved_trades)
+                print(f"📧 Sent Live Hourly Execution email with {len(final_approved_trades)} approved trades!")
+            except Exception as e:
+                print(f"❌ Failed to send email alert: {e}")
 
 def squash_old_positions():
     """Squares off all positions except those taken exactly around 15:00."""
