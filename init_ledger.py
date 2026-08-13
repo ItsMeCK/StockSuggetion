@@ -48,8 +48,36 @@ def init_ledger_schema():
             notes TEXT
         );
         """)
-        conn.commit()
         logging.info("Successfully initialized trade_events ledger.")
+
+        # Create watchlist_status ENUM
+        cur.execute("SELECT 1 FROM pg_type WHERE typname = 'watchlist_status';")
+        if not cur.fetchone():
+            cur.execute("""
+            CREATE TYPE watchlist_status AS ENUM (
+                'WATCHING', 
+                'EXECUTED', 
+                'EXPIRED', 
+                'REJECTED'
+            );
+            """)
+            logging.info("Created watchlist_status ENUM.")
+
+        # Create supreme_watchlist table
+        cur.execute("""
+        CREATE TABLE IF NOT EXISTS supreme_watchlist (
+            id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+            symbol VARCHAR(20) NOT NULL,
+            added_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+            catalyst_summary TEXT,
+            conviction_score INT,
+            status watchlist_status NOT NULL DEFAULT 'WATCHING',
+            last_evaluated TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+        );
+        """)
+        logging.info("Successfully initialized supreme_watchlist table.")
+
+        conn.commit()
         cur.close()
         conn.close()
     except Exception as e:

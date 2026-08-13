@@ -1,0 +1,54 @@
+import os
+import psycopg2
+import polars as pl
+from dotenv import load_dotenv
+
+def get_tomorrows_trades():
+    load_dotenv()
+    conn = psycopg2.connect(
+        host=os.getenv('DB_HOST', 'localhost'),
+        port=os.getenv('DB_PORT', '5432'),
+        user=os.getenv('POSTGRES_USER', 'quant'),
+        password=os.getenv('POSTGRES_PASSWORD', 'quantpassword'),
+        dbname=os.getenv('POSTGRES_DB', 'market_data')
+    )
+    
+    query = """
+        SELECT time, symbol, close, volume 
+        FROM daily_ohlcv 
+        WHERE time >= '2026-06-01' AND time <= '2026-07-29'
+        ORDER BY symbol, time
+    """
+    df = pl.read_database(query, conn)
+    df = df.filter(~pl.col("symbol").str.contains(r"\d")).sort(["symbol", "time"])
+    
+    # Base Indicators
+    df = df.with_columns([
+        pl.col("close").rolling_mean(window_size=20).over("symbol").alias("sma_20"),
+        pl.col("close").rolling_std(window_size=20).over("symbol").alias("std_20"),
+        pl.col("volume").rolling_mean(window_size=20).over("symbol").alias("vol_avg_20"),
+    ])
+    
+    # Core Strategy Metrics
+    df = df.with_columns([
+        ((pl.col("std_20") * 4) / pl.col("sma_20")).alias("bbw"),
+        (pl.col("volume") / pl.col("vol_avg_20")).alias("vol_surge"),
+    ])
+
+    # Find the ultra-tight setups triggered TODAY (July 29, 2026)
+    setups = df.filter(
+        (pl.col("bbw") < 0.15) & 
+        (pl.col("vol_surge") > 4.0) & 
+        (pl.col("close") > pl.col("sma_20")) &
+        (pl.col("time").cast(pl.String).str.contains("2026-07-29"))
+    )
+    
+    print("=== LIVE TRADES TO EXECUTE TOMORROW MORNING (JULY 30) ===")
+    if len(setups) == 0:
+        print("No setups met the ultra-tight criteria today. No trades for tomorrow.")
+    else:
+        for row in setups.iter_rows(named=True):
+            print(f"SYMBOL: {row['symbol']:<12} | Close: ₹{row['close']:<8.2f} | BBW: {row['bbw']:.3f} | Vol Surge: {row['vol_surge']:.2f}x")
+
+if __name__ == "__main__":
+    get_tomorrows_trades()

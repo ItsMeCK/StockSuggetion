@@ -1,0 +1,233 @@
+[
+    {
+        "date": "2026-08-04",
+        "time": "2026-08-04 03:45:00+00:00",
+        "symbol": "HINDZINC",
+        "score": 95,
+        "entry_price": 556.7,
+        "eod_price": 563.0,
+        "spot_pct": 1.1316687623495516,
+        "option_pct": 11.316687623495515,
+        "catalyst": "Reported a blockbuster Q1 FY27 net profit surge of 145% YoY to \u20b95,469 crore and revenue growth of 77% YoY, driven by a massive silver price boom and strong zinc demand."
+    },
+    {
+        "date": "2026-08-04",
+        "time": "2026-08-04 03:45:00+00:00",
+        "symbol": "HINDALCO",
+        "score": 92,
+        "entry_price": 1006.0,
+        "eod_price": 1017.45,
+        "spot_pct": 1.138170974155074,
+        "option_pct": 11.38170974155074,
+        "catalyst": "Delivered an exceptional Q1 FY27 performance with consolidated net profit surging 75% YoY to \u20b97,013 crore and revenue up 32% YoY, driven by robust performance in Novelis and its aluminium business."
+    },
+    {
+        "date": "2026-08-04",
+        "time": "2026-08-04 04:45:00+00:00",
+        "symbol": "KEI",
+        "score": 92,
+        "entry_price": 5367.0,
+        "eod_price": 5500.0,
+        "spot_pct": 2.4781069498788897,
+        "option_pct": 24.781069498788895,
+        "catalyst": "KEI Industries delivered a blockbuster Q1 FY27 earnings beat with PAT surging 40% YoY to \u20b9274 crore and revenue up 23% YoY, backed by robust domestic demand, margin expansion, and strong management guidance of 25%+ revenue growth for FY27."
+    },
+    {
+        "date": "2026-08-04",
+        "time": "2026-08-04 05:45:00+00:00",
+        "symbol": "KEI",
+        "score": 95,
+        "entry_price": 5391.9,
+        "eod_price": 5500.0,
+        "spot_pct": 2.0048591405627025,
+        "option_pct": 20.04859140562703,
+        "catalyst": "KEI Industries delivered a blockbuster Q1 FY27 earnings beat with PAT surging 40% YoY to \u20b9274 crore and EBITDA margins expanding by 155 bps to 13.04%, backed by robust domestic demand and strong volume growth in its core wires and cables segment."
+    },
+    {
+        "date": "2026-08-04",
+        "time": "2026-08-04 05:45:00+00:00",
+        "symbol": "UNOMINDA",
+        "score": 85,
+        "entry_price": 1232.0,
+        "eod_price": 1223.7,
+        "spot_pct": -0.673701298701295,
+        "option_pct": -6.73701298701295,
+        "catalyst": "Uno Minda reported record Q1 FY27 revenue of \u20b95,557 crore (up 24% YoY) fueled by a massive 130% surge in EV systems sales, alongside board approval for the strategic merger of Minda Onkyo India to consolidate its acoustics business."
+    },
+    {
+        "date": "2026-08-04",
+        "time": "2026-08-04 08:45:00+00:00",
+        "symbol": "TITAN",
+        "score": 95,
+        "entry_price": 4891.5,
+        "eod_price": 4891.5,
+        "spot_pct": 0.0,
+        "option_pct": 0.0,
+        "catalyst": "Titan delivered a blockbuster Q1 FY27 earnings beat with consolidated net profit surging 63% YoY to \u20b91,777 crore and revenue jumping 40% YoY, driven by a 43% surge in its core jewellery business and a \u20b9407 crore custom duty gain."
+    },
+    {
+        "date": "2026-08-04",
+        "time": "2026-08-04 08:45:00+00:00",
+        "symbol": "KEI",
+        "score": 92,
+        "entry_price": 5500.0,
+        "eod_price": 5500.0,
+        "spot_pct": 0.0,
+        "option_pct": 0.0,
+        "catalyst": "KEI Industries posted a stellar Q1 FY27 earnings beat with a 40% YoY PAT surge to \u20b9274 crore, prompting management to upgrade its full-year revenue growth guidance to 25%+ and raise EBITDA margin guidance to 11-12% as the Sanand plant ramps up."
+    },
+    {
+        "date": "2026-08-05",
+        "time": "2026-08-05 04:45:00+00:00",
+        "symbol": "NAM-INDIA",
+        "score": 92,
+        "entry_price": 1208.5,
+        "eod_price": 1211.5,
+        "spot_pct": 0.24824162184526274,
+        "option_pct": 2.482416218452627,
+        "catalyst": "Delivered a blockbuster Q1 FY27 earnings beat with consolidated net profit surging 27% YoY to \u20b9504 crore (beating street estimates by ~13%) driven by record systematic flows and industry-leading market share gains."
+    },
+    {
+        "date": "2026-08-05",
+        "time": "2026-08-05 04:45:00+00:00",
+        "symbol": "MPHASIS",
+        "score": 85,
+        "entry_price": 2476.0,
+        "eod_price": 2432.0,
+        "spot_pct": -1.7770597738287561,
+        "option_pct": -17.77059773828756,
+        "catalyst": "Reported robust Q1 FY27 revenue growth of 17.5% YoY and $461 million in TCV wins (63% AI-led), backed by highly bullish management guidance projecting the strongest Q2 sequential growth in three years."
+    },
+    {
+        "date": "2026-08-05",
+        "time": "2026-08-05 05:45:00+00:00",
+        "symbol": "NYKAA",
+        "score": 94,
+        "entry_price": 336.65,
+        "eod_price": 333.45,
+        "spot_pct": -0.9505421060448503,
+        "option_pct": -9.505421060448503,
+        "catalyst": "Delivered a blockbuster Q1 FY27 earnings beat with net profit surging 226% YoY to \u20b980 crore, EBITDA margins expanding to a 12-quarter high of 8.5%, and announced the acquisition of a 51% stake in premium skincare brand Aminu Wellness."
+    },
+    {
+        "date": "2026-08-05",
+        "time": "2026-08-05 05:45:00+00:00",
+        "symbol": "BOSCHLTD",
+        "score": 86,
+        "entry_price": 43410.0,
+        "eod_price": 42800.0,
+        "spot_pct": -1.4052061736926975,
+        "option_pct": -14.052061736926975,
+        "catalyst": "Surged to all-time highs on massive volume ahead of its Q1 FY27 earnings, supported by the strategic integration of Bosch Chassis Systems India (effective July 1, 2026) to consolidate its high-margin automotive safety and braking portfolio."
+    },
+    {
+        "date": "2026-08-05",
+        "time": "2026-08-05 08:45:00+00:00",
+        "symbol": "VEDL",
+        "score": 98,
+        "entry_price": 276.05,
+        "eod_price": 276.05,
+        "spot_pct": 0.0,
+        "option_pct": 0.0,
+        "catalyst": "Vedanta delivered a blockbuster Q1 FY27 earnings beat with net profit surging 72% YoY to \u20b95,473 crore and record EBITDA up 98% YoY [2.1.4], while simultaneously announcing a value-unlocking demerger of its surplus real estate assets into a new listed entity, Vedanta Property Platforms, on a 1:20 share ratio."
+    },
+    {
+        "date": "2026-08-05",
+        "time": "2026-08-05 08:45:00+00:00",
+        "symbol": "HINDZINC",
+        "score": 95,
+        "entry_price": 596.05,
+        "eod_price": 596.05,
+        "spot_pct": 0.0,
+        "option_pct": 0.0,
+        "catalyst": "Hindustan Zinc reported a record-breaking Q1 FY27 performance with net profit skyrocketing 145% YoY to \u20b95,469 crore and revenue up 77% YoY, driven by a 169% YoY explosion in its silver business and achieving its lowest-ever zinc cost of production since transitioning to underground mining."
+    },
+    {
+        "date": "2026-08-06",
+        "time": "2026-08-06 03:45:00+00:00",
+        "symbol": "TITAN",
+        "score": 95,
+        "entry_price": 4979.0,
+        "eod_price": 4992.0,
+        "spot_pct": 0.26109660574412535,
+        "option_pct": 2.610966057441253,
+        "catalyst": "Titan delivered a blockbuster Q1 FY27 earnings beat with net profit surging 63% YoY to \u20b91,777 crore, significantly outperforming the consensus estimate of \u20b91,267 crore, driven by a robust 43% growth in its core jewellery business."
+    },
+    {
+        "date": "2026-08-06",
+        "time": "2026-08-06 03:45:00+00:00",
+        "symbol": "SWIGGY",
+        "score": 90,
+        "entry_price": 294.85,
+        "eod_price": 287.0,
+        "spot_pct": -2.6623706969645657,
+        "option_pct": -26.623706969645657,
+        "catalyst": "Swiggy unveiled an explosive long-term growth roadmap during its Capital Markets Day, targeting \u20b910,000 crore in Adjusted EBITDA by FY31 and a 30%+ CAGR in consolidated Gross Order Value (GOV) to \u20b92.5 lakh crore."
+    },
+    {
+        "date": "2026-08-06",
+        "time": "2026-08-06 04:45:00+00:00",
+        "symbol": "SWIGGY",
+        "score": 92,
+        "entry_price": 299.0,
+        "eod_price": 287.0,
+        "spot_pct": -4.013377926421405,
+        "option_pct": -40.13377926421404,
+        "catalyst": "Unveiled an ambitious FY31 roadmap targeting \u20b910,000 crore in adjusted EBITDA and tripling GOV to \u20b92.5 lakh crore, supported by narrowing Q1 losses and a Jefferies price target upgrade to \u20b9435."
+    },
+    {
+        "date": "2026-08-06",
+        "time": "2026-08-06 04:45:00+00:00",
+        "symbol": "AUBANK",
+        "score": 88,
+        "entry_price": 1080.4,
+        "eod_price": 1082.6,
+        "spot_pct": 0.2036282858200498,
+        "option_pct": 2.0362828582004977,
+        "catalyst": "Reported a blockbuster Q1 earnings beat with net profit surging 37% YoY to \u20b9796 crore, driven by a 32% rise in net interest income and a significant reduction in provisions."
+    },
+    {
+        "date": "2026-08-06",
+        "time": "2026-08-06 05:45:00+00:00",
+        "symbol": "CHOLAFIN",
+        "score": 95,
+        "entry_price": 1940.2,
+        "eod_price": 1940.0,
+        "spot_pct": -0.010308215647873696,
+        "option_pct": -0.10308215647873697,
+        "catalyst": "Reported a blockbuster Q1 FY27 with consolidated PAT surging 45.6% YoY to \u20b91,656 crore, driven by a 23% YoY growth in AUM to \u20b92.54 lakh crore and board approval for a \u20b955,000 crore NCD fundraise."
+    },
+    {
+        "date": "2026-08-06",
+        "time": "2026-08-06 05:45:00+00:00",
+        "symbol": "MAZDOCK",
+        "score": 90,
+        "entry_price": 2460.1,
+        "eod_price": 2531.0,
+        "spot_pct": 2.8819966668021664,
+        "option_pct": 28.819966668021664,
+        "catalyst": "Delivered a strong Q1 FY27 earnings beat with consolidated PAT rising 21.5% YoY to \u20b9549.41 crore and EBITDA surging 48% YoY to \u20b9446.58 crore, driven by a 369 bps expansion in operating margins."
+    },
+    {
+        "date": "2026-08-07",
+        "time": "2026-08-07 08:45:00+00:00",
+        "symbol": "HINDALCO",
+        "score": 95,
+        "entry_price": 1053.5,
+        "eod_price": 1053.5,
+        "spot_pct": 0.0,
+        "option_pct": 0.0,
+        "catalyst": "Reported a blockbuster Q1 FY27 earnings beat with PAT surging 75% YoY to \u20b97,013 crore and revenue up 32% to \u20b984,825 crore, driven by robust performance in Novelis and its core aluminium business."
+    },
+    {
+        "date": "2026-08-07",
+        "time": "2026-08-07 08:45:00+00:00",
+        "symbol": "PREMIERENE",
+        "score": 92,
+        "entry_price": 1048.0,
+        "eod_price": 1048.0,
+        "spot_pct": 0.0,
+        "option_pct": 0.0,
+        "catalyst": "Delivered a stellar Q1 FY27 performance with net profit jumping 50% YoY to \u20b9463 crore alongside a board-approved \u20b95,000 crore fundraising plan and a target price upgrade to \u20b91,205 by Jefferies."
+    }
+]

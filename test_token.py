@@ -3,10 +3,9 @@ from dotenv import load_dotenv
 from kiteconnect import KiteConnect
 
 load_dotenv()
-
 api_key = os.getenv("KITE_API_KEY", "").strip("'\"")
 api_secret = os.getenv("KITE_API_SECRET", "").strip("'\"")
-request_token = "mVqMfGGrt5a8qsLECURRdGqBqpCV4bCp"
+request_token = "sTFK1IrLMNk3S2odJRWGixJcl5uqSZWN"
 
 try:
     kite = KiteConnect(api_key=api_key)
@@ -14,7 +13,6 @@ try:
     access_token = data["access_token"]
     print(f"Generated Token: {access_token}")
     
-    # Read .env and replace KITE_ACCESS_TOKEN
     with open(".env", "r") as f:
         lines = f.readlines()
         
@@ -24,7 +22,6 @@ try:
                 f.write(f"KITE_ACCESS_TOKEN='{access_token}'\n")
             else:
                 f.write(line)
-                
-    print(f"Success! Access Token generated and saved to .env")
+    print("SUCCESS")
 except Exception as e:
     print(f"Error: {e}")
