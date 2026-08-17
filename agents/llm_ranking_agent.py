@@ -85,7 +85,6 @@ class LLMRankingAgent:
             
             parsed_result = response.parsed
             if parsed_result is None:
-                import json
                 text = response.text.strip()
                 if text.startswith('```json'):
                     text = text[7:-3]
