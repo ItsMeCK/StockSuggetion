@@ -12,7 +12,7 @@ if not api_key or not api_secret:
     sys.exit(1)
 
 kite = KiteConnect(api_key=api_key)
-request_token = "eBSxzAcCq98tr1tOp37s2D6Vg1u2Y7qG"
+request_token = "cusS1Al8wOvtPfMFlqh92WUIUzhaXl6s"
 
 try:
     data = kite.generate_session(request_token, api_secret=api_secret)
