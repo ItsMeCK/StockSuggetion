@@ -126,11 +126,23 @@ def run_hourly_evaluation():
         pl.col("close").rolling_mean(window_size=20).over("symbol").alias("sma_20"),
         pl.col("close").rolling_std(window_size=20).over("symbol").alias("std_20"),
         pl.col("volume").rolling_mean(window_size=20).over("symbol").alias("vol_avg_20"),
+        pl.col("volume").rolling_sum(window_size=3).over("symbol").alias("vol_sum_3"),
+        pl.col("time").dt.date().alias("date"),
+        (pl.col("close") * pl.col("volume")).alias("pv")
+    ])
+    
+    df = df.with_columns([
+        pl.col("volume").cum_sum().over(["symbol", "date"]).alias("cum_vol"),
+        pl.col("pv").cum_sum().over(["symbol", "date"]).alias("cum_pv")
     ])
     
     df = df.with_columns([
         ((pl.col("std_20") * 4) / pl.col("sma_20")).alias("bbw"),
         (pl.col("volume") / pl.col("vol_avg_20")).alias("vol_surge"),
+        (pl.col("vol_sum_3") / (3 * pl.col("vol_avg_20"))).alias("vol_surge_3h"),
+        (pl.col("cum_pv") / pl.col("cum_vol")).alias("vwap"),
+        ((pl.col("close") - pl.col("sma_20")) / pl.col("sma_20") * 100).alias("dist_sma20"),
+        ((pl.col("high") - pl.max_horizontal(pl.col("open"), pl.col("close"))) / (pl.col("high") - pl.col("low") + 0.0001) * 100).alias("upper_wick_pct")
     ])
     
     # Get the latest completed candle
@@ -168,22 +180,96 @@ def run_hourly_evaluation():
     
     current_hour_df = df.filter(pl.col("time") == latest_time)
     
-    # 4. Math Engine
+    # 4. Math Engine (Dual-Track Volume + Dual-Tier Gap & Go)
+    base_filter = (pl.col("bbw") < 0.22) & (pl.col("close") > pl.col("sma_20")) & (pl.col("close") > pl.col("open"))
+    
+    track_a = (pl.col("vol_surge") > 2.5)
+    track_b = (pl.col("vol_surge_3h") > 1.5) & (pl.col("vol_surge") > 1.1) & (pl.col("close") > pl.col("vwap"))
+    volume_filter = (track_a | track_b)
+    
+    tier_1 = (pl.col("dist_sma20") <= 3.0) & (pl.col("upper_wick_pct") < 25.0)
+    tier_2 = (pl.col("dist_sma20") > 3.0) & (pl.col("dist_sma20") <= 7.5) & (pl.col("upper_wick_pct") < 12.0) & (pl.col("vol_surge") > 3.5)
+    tier_filter = (tier_1 | tier_2)
+    
     breakouts = current_hour_df.filter(
-        (pl.col("bbw") < 0.22) & 
-        (pl.col("vol_surge") > 2.5) & 
-        (pl.col("close") > pl.col("sma_20")) &
-        (pl.col("close") < (pl.col("sma_20") * 1.03)) & # Prevent buying overextended spikes
-        (pl.col("close") > pl.col("open"))
+        base_filter & volume_filter & tier_filter
     ).sort("vol_surge", descending=True).head(4)
     
     valid_symbols = [row['symbol'] for row in breakouts.iter_rows(named=True)]
     print(f"🎯 Math Engine found {len(valid_symbols)} top-tier Breakouts: {valid_symbols}")
     
+    # 4.5 Macro Sector Veto Gate
+    approved_symbols = []
+    if len(valid_symbols) > 0:
+        print("\n🌍 Running Macro Sector Veto Gate...")
+        sector_tokens = {
+            "NIFTY BANK": 260105,
+            "NIFTY PSU BANK": 273673,
+            "NIFTY IT": 259337,
+            "NIFTY PHARMA": 260361,
+            "NIFTY REALTY": 261385,
+            "NIFTY METAL": 260617,
+            "NIFTY FMCG": 258825,
+            "NIFTY AUTO": 259849,
+            "NIFTY CONSUMPTION": 264201,
+            "NIFTY ENERGY": 264969,
+            "NIFTY INFRA": 263689,
+            "NIFTY FIN SERVICE": 257801,
+        }
+        
+        today_str = now_ist.strftime('%Y-%m-%d')
+        
+        for symbol in valid_symbols:
+            sector_name = get_sector_for_symbol(symbol)
+            if not sector_name or sector_name not in sector_tokens:
+                # If no mapping, we default to pass
+                approved_symbols.append(symbol)
+                continue
+                
+            token = sector_tokens[sector_name]
+            try:
+                hist = kite_data.historical_data(
+                    instrument_token=token,
+                    from_date=f"{today_str} 09:15:00",
+                    to_date=f"{today_str} 15:30:00",
+                    interval="day"
+                )
+                if hist and len(hist) > 0:
+                    open_price = hist[0]['open']
+                    close_price = hist[-1]['close'] # latest price for today
+                    intraday_return = ((close_price - open_price) / open_price) * 100
+                    
+                    if intraday_return < 0.0:
+                        print(f"🛑 REJECTED: {symbol} (Sector {sector_name} is bleeding: {intraday_return:.2f}%)")
+                    else:
+                        print(f"✅ APPROVED: {symbol} (Sector {sector_name} is green: +{intraday_return:.2f}%)")
+                        approved_symbols.append(symbol)
+                else:
+                    approved_symbols.append(symbol)
+            except Exception as e:
+                print(f"Warning: Failed to fetch sector data for {sector_name}: {e}")
+                approved_symbols.append(symbol)
+                
+        valid_symbols = approved_symbols
     # 5. LLM Ranking & Execution
     if len(valid_symbols) > 0:
         agent = LLMRankingAgent()
-        top_trades = agent.rank_trades(valid_symbols, max_picks=2)
+        
+        # Build structured candidates for LLM
+        llm_candidates = []
+        for symbol in valid_symbols:
+            row = breakouts.filter(pl.col("symbol") == symbol).row(0, named=True)
+            candle_color = "GREEN" if row['close'] > row['open'] else "RED"
+            vwap_status = "ABOVE_VWAP" if row['close'] > row['vwap'] else "BELOW_VWAP"
+            llm_candidates.append({
+                "symbol": symbol,
+                "candle_color": candle_color,
+                "upper_wick_pct": round(row['upper_wick_pct'], 2),
+                "vwap_status": vwap_status,
+                "vol_surge": round(row['vol_surge'], 2)
+            })
+            
+        top_trades = agent.rank_trades(llm_candidates, max_picks=2)
         print("\n🚀 FINAL LLM EXECUTION SIGNALS 🚀")
         
         final_approved_trades = []

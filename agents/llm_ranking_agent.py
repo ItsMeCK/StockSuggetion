@@ -35,8 +35,10 @@ class LLMRankingAgent:
         else:
             raise ValueError("GEMINI_API_KEY not found in .env")
 
-    def rank_trades(self, symbols: List[str], max_picks: int = 2) -> List[Dict[str, Any]]:
+    def rank_trades(self, symbols: List[Dict[str, Any]], max_picks: int = 2) -> List[Dict[str, Any]]:
         logging.info(f"🔍 Initiating LLM Fundamental Analysis on {len(symbols)} candidate symbols...")
+        
+        candidates_str = "\n".join([json.dumps(s) for s in symbols])
         
         prompt = f"""
         You are an elite Institutional Fundamental Equity Analyst specializing in the Indian Stock Market (NSE). 
@@ -44,8 +46,8 @@ class LLMRankingAgent:
         
         The mathematical filter is passive. Your job is active. I need you to find the REAL WORLD CATALYST causing these volume spikes.
         
-        The candidate stocks are:
-        {', '.join(symbols)}
+        The candidate stocks and their live intraday technical structures are:
+        {candidates_str}
         
         Your Instructions:
         1. Use Google Search to investigate recent news, earnings reports (Q1 FY25), management commentary, or corporate announcements for each of these companies within the last 7-14 days.
@@ -54,6 +56,14 @@ class LLMRankingAgent:
            - Tier 2: Major Government Contract Wins / M&A Activity
            - Tier 3: Generic Sector Tailwinds
            - Tier 4: No clear news (Reject these)
+           
+        CRITICAL HARD PENALTY RULES (Mandatory Score Reductions):
+        1. REJECTION WICK PENALTY: If upper_wick_pct > 35.0, CAP MAXIMUM SCORE at 60. A long upper shadow indicates institutional dumping/exhaustion, regardless of how good the news is.
+        2. CANDLE COLOR / MOMENTUM: If candle_color is "RED" or vwap_status is "BELOW_VWAP", DEDUCT 30 POINTS immediately.
+        3. PRICED-IN NEWS: If the earnings/news catalyst is older than 24 hours and the stock has already rallied >3% today, DO NOT reward it as a fresh breakout (Cap score at 65).
+        4. TICKER DISAMBIGUATION: Ensure news strictly refers to Indian NSE companies (e.g. Prestige Estates Projects Ltd, NOT US Prestige Consumer Healthcare PBH).
+        5. BLOCK DEAL WARNING: If massive volume occurs on narrow candle spread (<0.5% body), flag as BLOCK DEAL TRAP and assign score < 50.
+        
         3. Select ONLY the TOP {max_picks} stocks with the absolute strongest, most explosive fundamental catalysts.
         4. Assign a conviction score (0-100) and provide a concise 1-sentence catalyst summary for each of the top picks.
         """
