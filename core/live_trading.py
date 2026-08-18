@@ -98,8 +98,11 @@ def execute_trade(symbol, score, catalyst, entry_time):
     
     if live_buy_flag.lower() == "true":
         try:
+            # Institutional High-Watermark Entry (Anti-Chasing)
+            # We don't buy the exact close. We wait for it to break 1% higher to confirm momentum continuation.
+            trigger_price = round(entry_premium * 1.01, 1)
             limit_price = round(entry_premium * 1.03, 1)
-            print(f"Placing LIVE BUY Limit order for 1 lot ({lot_size} qty) of {option_symbol} at {limit_price}")
+            print(f"Placing ANTI-CHASING SL-Limit BUY order for {option_symbol}. Trigger: {trigger_price}, Limit: {limit_price}")
             order_id = kite_exec.place_order(
                 variety=kite_exec.VARIETY_REGULAR,
                 exchange=kite_exec.EXCHANGE_NFO,
@@ -107,7 +110,8 @@ def execute_trade(symbol, score, catalyst, entry_time):
                 transaction_type=kite_exec.TRANSACTION_TYPE_BUY,
                 quantity=lot_size,
                 product=kite_exec.PRODUCT_NRML,
-                order_type=kite_exec.ORDER_TYPE_LIMIT,
+                order_type=kite_exec.ORDER_TYPE_SL,
+                trigger_price=trigger_price,
                 price=limit_price
             )
             print(f"✅ BUY Order Placed! ID: {order_id}")

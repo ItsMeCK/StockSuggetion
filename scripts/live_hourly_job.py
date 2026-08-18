@@ -251,25 +251,81 @@ def run_hourly_evaluation():
                 approved_symbols.append(symbol)
                 
         valid_symbols = approved_symbols
-    # 5. LLM Ranking & Execution
-    if len(valid_symbols) > 0:
-        agent = LLMRankingAgent()
         
-        # Build structured candidates for LLM
-        llm_candidates = []
+    # 4.75 15m Micro-Structure Veto Gate
+    mtf_approved_symbols = []
+    if len(valid_symbols) > 0:
+        print("\n🔬 Running 15m Micro-Structure Veto Gate...")
+        from core.mtf_helper import fetch_15m_structure
+        
+        for symbol in valid_symbols:
+            mtf_data = fetch_15m_structure(kite_data, symbol, target_utc)
+            if not mtf_data:
+                print(f"⚠️ Skipping MTF check for {symbol} (No data)")
+                mtf_approved_symbols.append(symbol)
+                continue
+                
+            hourly_vol = mtf_data['hourly_vol']
+            final_15m_vol = mtf_data['final_15m_vol']
+            
+            # Veto 1: Exhaustion (Volume Decay)
+            if final_15m_vol < (hourly_vol * 0.15):
+                print(f"🛑 VETO: {symbol} (Exhaustion: Final 15m vol is only {(final_15m_vol/hourly_vol)*100:.1f}%)")
+                continue
+                
+            # Veto 2: Terminal Rejection
+            candle_range = mtf_data['final_15m_high'] - mtf_data['final_15m_low']
+            upper_wick = mtf_data['final_15m_high'] - max(mtf_data['final_15m_close'], mtf_data['final_15m_open'])
+            upper_wick_pct = (upper_wick / candle_range) * 100 if candle_range > 0 else 0
+            if upper_wick_pct > 35.0:
+                print(f"🛑 VETO: {symbol} (Terminal Rejection: Final 15m upper wick is {upper_wick_pct:.1f}%)")
+                continue
+                
+            # Veto 3: Distribution Dump
+            is_red = mtf_data['final_15m_close'] < mtf_data['final_15m_open']
+            if is_red and final_15m_vol > (hourly_vol * 0.35):
+                print(f"🛑 VETO: {symbol} (Distribution Dump: Final 15m is red and holds {(final_15m_vol/hourly_vol)*100:.1f}% of hourly vol)")
+                continue
+                
+            print(f"✅ APPROVED MTF: {symbol}")
+            mtf_approved_symbols.append(symbol)
+            
+        valid_symbols = mtf_approved_symbols
+
+    # 5. Intraday Multi-Agent Debate & Execution
+    if len(valid_symbols) > 0:
+        from agents.intraday_debate.intraday_orchestrator import IntradayDebateOrchestrator
+        orchestrator = IntradayDebateOrchestrator()
+        
+        # Build structured candidates for Debate
+        debate_candidates = []
         for symbol in valid_symbols:
             row = breakouts.filter(pl.col("symbol") == symbol).row(0, named=True)
             candle_color = "GREEN" if row['close'] > row['open'] else "RED"
             vwap_status = "ABOVE_VWAP" if row['close'] > row['vwap'] else "BELOW_VWAP"
-            llm_candidates.append({
+            context = f"Candle: {candle_color}, Wick: {round(row['upper_wick_pct'], 2)}%, VWAP: {vwap_status}, Vol Surge: {round(row['vol_surge'], 2)}x"
+            debate_candidates.append({
                 "symbol": symbol,
-                "candle_color": candle_color,
-                "upper_wick_pct": round(row['upper_wick_pct'], 2),
-                "vwap_status": vwap_status,
-                "vol_surge": round(row['vol_surge'], 2)
+                "context": context
             })
             
-        top_trades = agent.rank_trades(llm_candidates, max_picks=2)
+        print(f"\n🧠 Spinning up Multi-Agent Debate for {len(debate_candidates)} symbols...")
+        results = orchestrator.evaluate_all_sync(debate_candidates)
+        
+        # Format results into top_trades equivalent
+        top_trades = []
+        for cand, res in zip(debate_candidates, results):
+            top_trades.append({
+                "symbol": cand['symbol'],
+                "conviction_score": res.conviction_score,
+                "catalyst_summary": res.primary_catalyst,
+                "bull_thesis": res.bull_thesis,
+                "bear_thesis": res.bear_thesis,
+                "arbiter_verdict": res.arbiter_verdict
+            })
+        
+        # Sort by score descending and take top 2
+        top_trades = sorted(top_trades, key=lambda x: x['conviction_score'], reverse=True)[:2]
         print("\n🚀 FINAL LLM EXECUTION SIGNALS 🚀")
         
         final_approved_trades = []
