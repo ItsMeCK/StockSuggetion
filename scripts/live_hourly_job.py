@@ -235,8 +235,8 @@ def run_hourly_evaluation():
     dynamic_coil = (pl.col("bbw") < pl.col("bbw_threshold_10th")) | (pl.col("bbw") < 0.22)
     base_filter = dynamic_coil & (pl.col("close") > pl.col("sma_20")) & (pl.col("close") > pl.col("open"))
     
-    # Moving Average Awareness: Ascending VWAP (> 0.1% slope) + Flat/Stable 20 SMA (< 0.2% slope absolute)
-    ma_awareness = (pl.col("vwap_slope_pct") > 0.1) & (pl.col("sma20_slope_pct").abs() < 0.2)
+    # Moving Average Awareness: Ascending VWAP (> 0.1% slope) + Flat-to-Neutral SMA20
+    ma_awareness = (pl.col("vwap_slope_pct") > 0.1) & (pl.col("sma20_slope_pct") > -0.05)
     
     # Track A: Breakout Thrust (Momentum Climax)
     track_a = (pl.col("vol_surge") > 2.5) & (pl.col("upper_wick_pct") < 25.0)
@@ -271,16 +271,16 @@ def run_hourly_evaluation():
         sector_tokens = {
             "NIFTY 50": 256265,
             "NIFTY BANK": 260105,
-            "NIFTY PSU BANK": 273673,
-            "NIFTY IT": 259337,
-            "NIFTY PHARMA": 260361,
-            "NIFTY REALTY": 261385,
-            "NIFTY METAL": 260617,
-            "NIFTY FMCG": 258825,
-            "NIFTY AUTO": 259849,
-            "NIFTY CONSUMPTION": 264201,
-            "NIFTY ENERGY": 264969,
-            "NIFTY INFRA": 263689,
+            "NIFTY PSU BANK": 262921,
+            "NIFTY IT": 259849,
+            "NIFTY PHARMA": 262409,
+            "NIFTY REALTY": 261129,
+            "NIFTY METAL": 263689,
+            "NIFTY FMCG": 261897,
+            "NIFTY AUTO": 263433,
+            "NIFTY CONSUMPTION": 257545,
+            "NIFTY ENERGY": 261641,
+            "NIFTY INFRA": 261385,
             "NIFTY FIN SERVICE": 257801,
         }
         
@@ -306,7 +306,7 @@ def run_hourly_evaluation():
                     close_price = hist[-1]['close'] # latest price for today
                     intraday_return = ((close_price - open_price) / open_price) * 100
                     
-                    if intraday_return < 0.0:
+                    if intraday_return < -0.50:
                         print(f"🛑 REJECTED: {symbol} (Sector {sector_name} is bleeding: {intraday_return:.2f}%)")
                     else:
                         print(f"✅ APPROVED: {symbol} (Sector {sector_name} is green: +{intraday_return:.2f}%)")
@@ -414,7 +414,7 @@ def run_hourly_evaluation():
             if now.hour in [10, 11, 12]:
                 threshold = 70
             else:
-                threshold = 85
+                threshold = 75
                 
             # Fetch VWAP and Sector for multipliers
             vwap_multiplier = 1.0

@@ -85,8 +85,8 @@ class IntradayDebateOrchestrator:
         {math_context}
         
         Decide the final Conviction Score (0-100).
-        CRITICAL VETO RULE: If the Bear found a highly credible "sell the news" event, block deal, or overhead supply trap that neutralizes the Bull's catalyst, you MUST cap the score at 60 (Hard Veto).
-        Only award scores > 80 if the Bull's catalyst overwhelmingly defeats the Bear's concerns.
+        Balance the Bear and Bull objectively. Do not hard-cap the score.
+        If the Math Context is overwhelmingly bullish and the Bear's concerns are purely speculative, rely on the Math and award scores > 75.
         """
         response = await asyncio.to_thread(
             self.client.models.generate_content,

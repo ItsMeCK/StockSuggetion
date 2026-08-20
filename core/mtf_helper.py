@@ -26,11 +26,11 @@ def fetch_15m_structure(kite, symbol, target_utc):
             logging.error(f"Could not find token for {symbol}")
             return None
             
-        # Target UTC is the end of the hour. We want the 15m candles from target_utc - 1 hour to target_utc
+        # Target UTC is the start of the completed 60m candle. We want the 15m candles from start_ist to start_ist + 1 hour.
         # Convert UTC back to IST for Kite API
         ist_tz = pytz.timezone('Asia/Kolkata')
-        target_ist = target_utc.astimezone(ist_tz)
-        start_ist = target_ist - timedelta(hours=1)
+        start_ist = target_utc.astimezone(ist_tz)
+        target_ist = start_ist + timedelta(hours=1)
         
         # Kite interval "15minute"
         hist = kite.historical_data(
@@ -58,6 +58,7 @@ def fetch_15m_structure(kite, symbol, target_utc):
                 
         has_consecutive_higher_highs = higher_high_count >= 2
         is_vol_climax = volumes[-1] == max(volumes) if len(volumes) > 0 else False
+        hourly_vol = sum(volumes)
         
         return {
             "final_15m_vol": final_candle['volume'],
