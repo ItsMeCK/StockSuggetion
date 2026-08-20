@@ -137,10 +137,53 @@ def run_hourly_evaluation():
     ])
     
     df = df.with_columns([
-        ((pl.col("std_20") * 4) / pl.col("sma_20")).alias("bbw"),
+        (pl.col("cum_pv") / pl.col("cum_vol")).alias("vwap"),
+        (pl.col("close") * pl.col("volume")).rolling_mean(window_size=20*6).over("symbol").alias("atv") # 20-day Average Traded Value proxy
+    ])
+
+    # Dynamic BBW Percentile Calculation
+    df = df.with_columns([
+        ((pl.col("sma_20") + 2 * pl.col("std_20") - (pl.col("sma_20") - 2 * pl.col("std_20"))) / pl.col("sma_20")).alias("bbw")
+    ])
+    df = df.with_columns([
+        pl.col("bbw").rolling_quantile(quantile=0.10, window_size=100).over("symbol").alias("bbw_threshold_10th")
+    ])
+
+    # IAF (Institutional Accumulation Footprint) Metrics
+    df = df.with_columns([
+        pl.max_horizontal(
+            (pl.col("high") - pl.col("low")),
+            (pl.col("high") - pl.col("close").shift(1).over("symbol")).abs(),
+            (pl.col("low") - pl.col("close").shift(1).over("symbol")).abs()
+        ).alias("true_range")
+    ])
+    df = df.with_columns([
+        pl.col("low").shift(1).over("symbol").alias("low_1"),
+        pl.col("low").shift(2).over("symbol").alias("low_2"),
+        pl.col("true_range").shift(1).over("symbol").alias("tr_1"),
+        pl.col("true_range").shift(2).over("symbol").alias("tr_2"),
+        ((pl.col("close") - pl.col("low")) / (pl.col("high") - pl.col("low") + 0.0001) * 100).alias("close_range_pct"),
+        pl.col("volume").shift(1).over("symbol").alias("vol_1")
+    ])
+
+    # Dynamic Slope/Velocity Metrics
+    df = df.with_columns([
+        pl.col("vwap").shift(3).over(["symbol", "date"]).alias("vwap_prev3"),
+        pl.col("sma_20").shift(3).over("symbol").alias("sma_20_prev3"),
+    ])
+    df = df.with_columns([
+        (((pl.col("vwap") - pl.col("vwap_prev3")) / pl.col("vwap_prev3")) * 100).alias("vwap_slope_pct"),
+        (((pl.col("sma_20") - pl.col("sma_20_prev3")) / pl.col("sma_20_prev3")) * 100).alias("sma20_slope_pct"),
+    ])
+    
+    # 3-Hour Return for RS Divergence
+    df = df.with_columns([
+        (((pl.col("close") - pl.col("close").shift(3).over("symbol")) / pl.col("close").shift(3).over("symbol")) * 100).alias("ret_3h")
+    ])
+
+    df = df.with_columns([
         (pl.col("volume") / pl.col("vol_avg_20")).alias("vol_surge"),
         (pl.col("vol_sum_3") / (3 * pl.col("vol_avg_20"))).alias("vol_surge_3h"),
-        (pl.col("cum_pv") / pl.col("cum_vol")).alias("vwap"),
         ((pl.col("close") - pl.col("sma_20")) / pl.col("sma_20") * 100).alias("dist_sma20"),
         ((pl.col("high") - pl.max_horizontal(pl.col("open"), pl.col("close"))) / (pl.col("high") - pl.col("low") + 0.0001) * 100).alias("upper_wick_pct")
     ])
@@ -180,29 +223,53 @@ def run_hourly_evaluation():
     
     current_hour_df = df.filter(pl.col("time") == latest_time)
     
-    # 4. Math Engine (Dual-Track Volume + Dual-Tier Gap & Go)
-    base_filter = (pl.col("bbw") < 0.22) & (pl.col("close") > pl.col("sma_20")) & (pl.col("close") > pl.col("open"))
+    # Pre-calculate Nifty 50 RS Divergence Benchmark
+    nifty_df = current_hour_df.filter(pl.col("symbol") == "NIFTY 50")
+    nifty_ret_3h = 0.0
+    if not nifty_df.is_empty():
+        nifty_ret_3h = nifty_df.select(pl.col("ret_3h"))[0, 0]
+        if nifty_ret_3h is None: nifty_ret_3h = 0.0
     
-    track_a = (pl.col("vol_surge") > 2.5)
-    track_b = (pl.col("vol_surge_3h") > 1.5) & (pl.col("vol_surge") > 1.1) & (pl.col("close") > pl.col("vwap"))
-    volume_filter = (track_a | track_b)
+    # 4. PIM Math Engine (Predictive Institutional Model)
+    # Dynamic Coil (BBW in lowest 10% historically OR extremely tight absolute < 0.22 as fallback)
+    dynamic_coil = (pl.col("bbw") < pl.col("bbw_threshold_10th")) | (pl.col("bbw") < 0.22)
+    base_filter = dynamic_coil & (pl.col("close") > pl.col("sma_20")) & (pl.col("close") > pl.col("open"))
     
-    tier_1 = (pl.col("dist_sma20") <= 3.0) & (pl.col("upper_wick_pct") < 25.0)
-    tier_2 = (pl.col("dist_sma20") > 3.0) & (pl.col("dist_sma20") <= 7.5) & (pl.col("upper_wick_pct") < 12.0) & (pl.col("vol_surge") > 3.5)
-    tier_filter = (tier_1 | tier_2)
+    # Moving Average Awareness: Ascending VWAP (> 0.1% slope) + Flat/Stable 20 SMA (< 0.2% slope absolute)
+    ma_awareness = (pl.col("vwap_slope_pct") > 0.1) & (pl.col("sma20_slope_pct").abs() < 0.2)
+    
+    # Track A: Breakout Thrust (Momentum Climax)
+    track_a = (pl.col("vol_surge") > 2.5) & (pl.col("upper_wick_pct") < 25.0)
+    
+    # Track B: Stealth Accumulation (Multi-Candle IAF + Dynamic ATV Tiers)
+    mega_cap_stealth = (pl.col("atv") >= 500_000_000) & (pl.col("vol_surge_3h") >= 1.60) & (pl.col("close") <= (pl.col("vwap") * 1.015))
+    mid_cap_stealth = (pl.col("atv") < 500_000_000) & (pl.col("atv") >= 100_000_000) & (pl.col("vol_surge_3h") >= 1.83) & (pl.col("close") <= (pl.col("vwap") * 1.010))
+    
+    multi_candle_iaf = (
+        (pl.col("low") >= pl.col("low_1")) & (pl.col("low_1") >= pl.col("low_2")) & # Higher Lows
+        (pl.col("true_range") <= pl.col("tr_1")) & (pl.col("tr_1") <= pl.col("tr_2")) & # Range Contraction
+        (pl.col("volume") >= pl.col("vol_1")) & # Churn/Absorption
+        (pl.col("close_range_pct") <= 85.0) # Avoid top 15% closes (hiding from screeners)
+    )
+    
+    track_b = (mega_cap_stealth | mid_cap_stealth) & multi_candle_iaf & ma_awareness
+    
+    # Relative Strength (RS) Divergence: Must outperform Nifty by at least 0.5% over 3 hours
+    rs_divergence = (pl.col("ret_3h") > (nifty_ret_3h + 0.5))
     
     breakouts = current_hour_df.filter(
-        base_filter & volume_filter & tier_filter
+        base_filter & (track_a | track_b) & rs_divergence
     ).sort("vol_surge", descending=True).head(4)
     
-    valid_symbols = [row['symbol'] for row in breakouts.iter_rows(named=True)]
-    print(f"🎯 Math Engine found {len(valid_symbols)} top-tier Breakouts: {valid_symbols}")
+    valid_symbols = [row['symbol'] for row in breakouts.iter_rows(named=True) if row['symbol'] != "NIFTY 50"]
+    print(f"🎯 PIM Engine found {len(valid_symbols)} Predictive Breakouts: {valid_symbols}")
     
     # 4.5 Macro Sector Veto Gate
     approved_symbols = []
     if len(valid_symbols) > 0:
         print("\n🌍 Running Macro Sector Veto Gate...")
         sector_tokens = {
+            "NIFTY 50": 256265,
             "NIFTY BANK": 260105,
             "NIFTY PSU BANK": 273673,
             "NIFTY IT": 259337,
@@ -267,6 +334,14 @@ def run_hourly_evaluation():
                 
             hourly_vol = mtf_data['hourly_vol']
             final_15m_vol = mtf_data['final_15m_vol']
+            has_consecutive_higher_highs = mtf_data['has_consecutive_higher_highs']
+            is_vol_climax = mtf_data['is_vol_climax']
+            
+            # PIM MTF Synergy Veto: The "Pump and Churn" Trap
+            # If the hour lacks 15m structural higher highs AND the hour didn't end with a volume climax, it's a trap.
+            if not has_consecutive_higher_highs and not is_vol_climax:
+                print(f"🛑 VETO: {symbol} (Pump & Churn: 1H accumulation lacks 15m structural synergy - No HHs and No Vol Climax)")
+                continue
             
             # Veto 1: Exhaustion (Volume Decay)
             if final_15m_vol < (hourly_vol * 0.15):

@@ -46,8 +46,18 @@ def fetch_15m_structure(kite, symbol, target_utc):
             
         # The last candle in this 1-hour block is the final 15m candle
         final_candle = hist[-1]
+        # Analyze the internal structure of the 4 candles
+        highs = [c['high'] for c in hist]
+        volumes = [c['volume'] for c in hist]
         
-        hourly_vol = sum([c['volume'] for c in hist])
+        # Count higher highs (consecutive increases in high price)
+        higher_high_count = 0
+        for i in range(1, len(highs)):
+            if highs[i] > highs[i-1]:
+                higher_high_count += 1
+                
+        has_consecutive_higher_highs = higher_high_count >= 2
+        is_vol_climax = volumes[-1] == max(volumes) if len(volumes) > 0 else False
         
         return {
             "final_15m_vol": final_candle['volume'],
@@ -55,7 +65,9 @@ def fetch_15m_structure(kite, symbol, target_utc):
             "final_15m_close": final_candle['close'],
             "final_15m_open": final_candle['open'],
             "final_15m_high": final_candle['high'],
-            "final_15m_low": final_candle['low']
+            "final_15m_low": final_candle['low'],
+            "has_consecutive_higher_highs": has_consecutive_higher_highs,
+            "is_vol_climax": is_vol_climax
         }
         
     except Exception as e:
