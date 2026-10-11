@@ -53,3 +53,33 @@ def test_taxonomy_eod_cut_type_a():
     decision = engine.evaluate_position(pos, ltp=105.0, now=now)
     assert decision.action == "TAXONOMY_CUT"
     assert "Type A Intraday Scalp 15:00 IST" in decision.reason
+
+def test_profit_lock_single_lot():
+    engine = DynamicOptionExitEngine()
+    pos = {
+        "entry_premium": 100.0,
+        "current_sl": 101.50,
+        "trailing_active": True,
+        "qty": 1,
+        "lot_size": 1,
+        "profit_locked": False
+    }
+    decision = engine.evaluate_position(pos, ltp=122.0)
+    assert decision.action == "PROFIT_LOCK"
+    # Single lot must NOT attempt fractional lot booking
+    assert decision.book_lot_pct == 0.0
+    assert decision.new_sl == 115.0
+
+def test_profit_lock_already_fired_guard():
+    engine = DynamicOptionExitEngine()
+    pos = {
+        "entry_premium": 100.0,
+        "current_sl": 115.0,
+        "highest_high": 122.0,
+        "trailing_active": True,
+        "profit_locked": True # Already fired!
+    }
+    # On next tick at 122.0, should not re-trigger PROFIT_LOCK
+    decision = engine.evaluate_position(pos, ltp=122.0)
+    assert decision.action != "PROFIT_LOCK"
+    assert decision.action in ("HOLD", "UPDATE_TRAILING_SL")

@@ -37,6 +37,8 @@ def init_db():
             current_sl FLOAT NOT NULL,
             highest_high FLOAT NOT NULL,
             trailing_active BOOLEAN DEFAULT FALSE,
+            profit_locked BOOLEAN DEFAULT FALSE,
+            holding_type VARCHAR(30) DEFAULT 'TYPE_A_SCALP',
             exit_time TIMESTAMP,
             exit_price FLOAT,
             pnl_pct FLOAT,
@@ -45,6 +47,10 @@ def init_db():
             initial_volume INTEGER DEFAULT 0
         )
     """)
+    # Migration safety for existing tables
+    cur.execute("ALTER TABLE trades ADD COLUMN IF NOT EXISTS holding_type VARCHAR(30) DEFAULT 'TYPE_A_SCALP';")
+    cur.execute("ALTER TABLE trades ADD COLUMN IF NOT EXISTS profit_locked BOOLEAN DEFAULT FALSE;")
+
     # New Anticipatory Watchlist table
     cur.execute("""
         CREATE TABLE IF NOT EXISTS anticipatory_watchlist (
@@ -63,17 +69,22 @@ def init_db():
 def save_active_position(position_dict):
     conn = get_db_connection()
     cur = conn.cursor()
+    pos_data = position_dict.copy()
+    pos_data.setdefault("holding_type", "TYPE_A_SCALP")
+    pos_data.setdefault("profit_locked", False)
     cur.execute("""
         INSERT INTO trades (
             order_id, sl_order_id, status, entry_time, symbol, option_symbol, option_token,
             spot_entry, entry_premium, qty, score, catalyst, current_sl, highest_high, trailing_active,
+            profit_locked, holding_type,
             initial_oi, highest_oi, initial_volume
         ) VALUES (
             %(order_id)s, %(sl_order_id)s, %(status)s, %(entry_time)s, %(symbol)s, %(option_symbol)s, %(option_token)s,
             %(spot_entry)s, %(entry_premium)s, %(qty)s, %(score)s, %(catalyst)s, %(current_sl)s, %(highest_high)s, %(trailing_active)s,
+            %(profit_locked)s, %(holding_type)s,
             %(initial_oi)s, %(highest_oi)s, %(initial_volume)s
         )
-    """, position_dict)
+    """, pos_data)
     conn.commit()
     cur.close()
     conn.close()
@@ -98,6 +109,18 @@ def update_position_sl(order_id, new_sl, highest_high, trailing_active):
         SET current_sl = %s, highest_high = %s, trailing_active = %s
         WHERE order_id = %s
     """, (new_sl, highest_high, trailing_active, order_id))
+    conn.commit()
+    cur.close()
+    conn.close()
+
+def update_position_profit_locked(order_id, profit_locked=True):
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        UPDATE trades
+        SET profit_locked = %s
+        WHERE order_id = %s
+    """, (profit_locked, order_id))
     conn.commit()
     cur.close()
     conn.close()

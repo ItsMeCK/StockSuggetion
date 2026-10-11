@@ -24,9 +24,9 @@ def get_kite_exec_client():
     kite.set_access_token(access_token)
     return kite
 
-def execute_trade(symbol, score, catalyst, entry_time):
+def execute_trade(symbol, score, catalyst, entry_time, holding_type="TYPE_A_SCALP"):
     """
-    Executes a trade by finding an OTM Call option (approx 1% above spot)
+    Executes a trade by finding an option contract
     using the Data account, and places a market BUY order using the Exec account.
     """
     kite_data = get_kite_data_client()
@@ -161,6 +161,8 @@ def execute_trade(symbol, score, catalyst, entry_time):
         "current_sl": initial_sl_price,
         "highest_high": entry_premium,
         "trailing_active": False,
+        "profit_locked": False,
+        "holding_type": holding_type,
         "initial_oi": initial_oi,
         "highest_oi": initial_oi,
         "initial_volume": initial_volume

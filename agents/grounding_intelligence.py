@@ -103,18 +103,14 @@ You MUST respond ONLY with valid JSON in this exact structure, with no markdown 
                 "toxic_catalyst": {"evidence": [], "detected": False, "summary": "None"}
             }
 
-        # 1. Deterministic Toxic Event Check
-        toxic_evidence = str(parsed.get("toxic_catalyst", {})).lower()
-        toxic_flag = parsed.get("toxic_catalyst", {}).get("detected", False)
-        for kw in DETERMINISTIC_TOXIC_KEYWORDS:
-            if kw in toxic_evidence:
-                toxic_flag = True
-                break
+        # 1. Deterministic Toxic Event Check with Negation Handling
+        toxic_cat = parsed.get("toxic_catalyst", {})
+        toxic_flag = self._is_toxic_confirmed(toxic_cat)
 
         if toxic_flag:
             final_score = 0.0
             verdict = False
-            rationale = f"ABSOLUTE_VETO: Toxic regulatory/fraud catalyst detected: {parsed.get('toxic_catalyst', {}).get('summary', 'Unknown')}"
+            rationale = f"ABSOLUTE_VETO: Toxic regulatory/fraud catalyst detected: {toxic_cat.get('summary', 'Unknown')}"
             self._log_audit(symbol, now_str, raw_response, parsed, final_score, verdict, rationale)
             return verdict, final_score, rationale, parsed
 
@@ -159,6 +155,58 @@ Respond with exactly one paragraph. If you find credible evidence of a trap or o
             return resp.text.strip()
         except Exception as e:
             return f"CLEAN_ACCUMULATION: (Adversarial check error: {e})"
+
+    def _is_toxic_confirmed(self, toxic_data: Dict[str, Any]) -> bool:
+        """
+        Determines if a toxic catalyst is confirmed, accounting for negations.
+        E.g. 'No SEBI order found' or 'Company confirmed no SEBI order or ED raid'
+        should NOT trigger toxic veto.
+        """
+        if not toxic_data or not isinstance(toxic_data, dict):
+            return False
+
+        if toxic_data.get("detected") is True:
+            return True
+
+        summary = str(toxic_data.get("summary", "")).lower()
+        evidence_items = [
+            str(item.get("fact", "")).lower()
+            for item in toxic_data.get("evidence", [])
+            if isinstance(item, dict)
+        ]
+        candidate_texts = [summary] + evidence_items
+
+        negation_words = {
+            "no", "not", "none", "neither", "denied", "denies",
+            "cleared", "dismissed", "zero", "without", "unfounded", "clean"
+        }
+
+        clause_separators = [" but ", " however ", " yet ", ";", "."]
+
+        for text in candidate_texts:
+            clean_text = text.strip()
+            if not clean_text or clean_text in ("none", "n/a", "nil", "false"):
+                continue
+
+            for kw in DETERMINISTIC_TOXIC_KEYWORDS:
+                if kw in clean_text:
+                    # Break text into clauses around adversative conjunctions
+                    clauses = [clean_text]
+                    for sep in clause_separators:
+                        new_clauses = []
+                        for cl in clauses:
+                            new_clauses.extend(cl.split(sep))
+                        clauses = new_clauses
+
+                    # Find which clause contains kw
+                    for clause in clauses:
+                        if kw in clause:
+                            words = clause.replace(",", " ").replace("'", " ").split()
+                            has_negation = any(neg in words for neg in negation_words)
+                            if not has_negation:
+                                return True
+
+        return False
 
     def _log_audit(self, symbol: str, timestamp: str, raw_response: str, parsed: Dict[str, Any], score: float, approved: bool, rationale: str, rebuttal: Optional[str] = None):
         """Persists every audit entry for zero-drift reproducibility."""

@@ -36,9 +36,8 @@ def select_optimal_strike(fno_insts: list, entry_price: float, today_dt: date = 
     
     valid_expiries = [exp for exp in expiries if (exp - today_dt).days >= 4]
     if not valid_expiries:
-        valid_expiries = expiries
-
-    if not valid_expiries:
+        # Invariant: Never trade options with DTE < 4 days (extreme theta decay trap).
+        # Fall back to Cash Equity route.
         return None, None, "EQUITY"
 
     target_expiry = valid_expiries[0]

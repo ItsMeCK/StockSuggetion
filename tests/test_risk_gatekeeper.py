@@ -41,6 +41,20 @@ def test_engine_1_paper_only_zero_live_capital():
     assert capital == 0.0
     assert "PAPER_TRADE_ONLY" in reason
 
+def test_fail_closed_unknown_or_typo_engine_type():
+    gatekeeper = CapitalRiskGatekeeper()
+    # Any unknown engine type or typo must fail-closed to paper simulation
+    approved, capital, reason = gatekeeper.evaluate_entry(
+        engine_type="UNKNOWN_TYPO_ENGINE",
+        free_cash=20000.0,
+        total_equity=27216.0,
+        active_positions=[]
+    )
+    assert approved is True
+    assert capital == 0.0
+    assert "PAPER_TRADE_ONLY" in reason
+    assert "not authorized for live capital" in reason
+
 def test_concurrency_cap_max_2_trades():
     gatekeeper = CapitalRiskGatekeeper(max_concurrency=2)
     # Already holding 2 active trades

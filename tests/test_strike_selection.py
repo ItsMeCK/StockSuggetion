@@ -73,3 +73,19 @@ def test_select_optimal_strike_rolls_expiry_if_dte_low():
     assert contract is not None
     assert contract["expiry"] == exp_next
     assert "NOV" in contract["tradingsymbol"]
+
+def test_select_optimal_strike_fallback_to_equity_when_all_dte_under_4():
+    today = date(2026, 10, 27)
+    exp_near = today + timedelta(days=2) # Only 2 DTE, no further expiries available
+    
+    fno_insts = [
+        {"name": "INFY", "instrument_type": "CE", "strike": "1800", "lot_size": 400, "expiry": exp_near, "tradingsymbol": "INFY26OCT1800CE"},
+    ]
+    
+    entry_price = 1900.0
+    contract, exp_str, route = select_optimal_strike(fno_insts, entry_price, today_dt=today)
+    
+    # Invariant: Never buy 0-3 DTE decaying options -> Fallback to Cash EQUITY
+    assert route == "EQUITY"
+    assert contract is None
+    assert exp_str is None

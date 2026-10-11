@@ -109,3 +109,39 @@ def test_grounding_deterministic_toxic_veto():
     assert score == 0.0
     assert "ABSOLUTE_VETO" in rationale
     assert "toxic" in rationale.lower()
+
+def test_grounding_toxic_veto_negation_not_triggered():
+    mock_client = MagicMock()
+    mock_resp = MagicMock()
+
+    # The AI explicitly reports "no SEBI order found" and detected: False
+    mock_json = {
+        "public_catalyst": {
+            "evidence": [{"source": "Moneycontrol", "date": "2026-10-11", "fact": "Company reported robust Q2 numbers"}],
+            "confidence": 0.85,
+            "summary": "Strong Q2 growth"
+        },
+        "stealth_accumulation": {
+            "evidence": [{"source": "NSE", "date": "2026-10-11", "fact": "Delivery volume 65%"}],
+            "confidence": 0.60,
+            "summary": "High delivery buying"
+        },
+        "toxic_catalyst": {
+            "evidence": [{"source": "NSE", "date": "2026-10-11", "fact": "Company confirmed no sebi order or ed raid received"}],
+            "detected": False,
+            "summary": "No SEBI order or regulatory action found"
+        }
+    }
+    mock_resp.text = json.dumps(mock_json)
+
+    rebuttal_resp = MagicMock()
+    rebuttal_resp.text = "CLEAN_ACCUMULATION: Clean volume and delivery expansion."
+    mock_client.models.generate_content.side_effect = [mock_resp, rebuttal_resp]
+
+    agent = HardenedGroundingAgent(client=mock_client)
+    approved, score, rationale, audit_data = agent.evaluate_symbol("CLEAN_CORP")
+
+    # Negation must NOT trigger toxic veto!
+    assert approved is True
+    assert score >= APPROVAL_THRESHOLD
+    assert "ABSOLUTE_VETO" not in rationale

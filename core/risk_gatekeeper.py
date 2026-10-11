@@ -48,10 +48,10 @@ class CapitalRiskGatekeeper:
             return False, 0.0, f"CONCURRENCY_CAP_REACHED: System holds {active_count} active positions (Max allowed: {self.max_concurrency})"
 
         # 3. Capital Allocation by Confidence Tier
-        if engine_type == "ENGINE_1_HOURLY":
-            # Per Claude 300-day study & Master Plan: Tracks A/B/Sweep lack standalone significance.
-            # Paper-trade only until prospective forward confirmation.
-            return True, 0.0, "PAPER_TRADE_ONLY: Engine 1 unverified standalone. Routed to paper simulation (₹0 live capital)."
+        # Fail-closed invariant: ONLY "ENGINE_2_BTST" is authorized for live capital.
+        # Any other engine (ENGINE_1_HOURLY, unknown string, typo, None) routes to paper simulation (₹0 live capital).
+        if engine_type != "ENGINE_2_BTST":
+            return True, 0.0, f"PAPER_TRADE_ONLY: Engine '{engine_type}' is not authorized for live capital. Routed to paper simulation (₹0 live capital)."
 
         # 4. Zero-Cash Hard Veto for Live Trading
         if free_cash < self.min_cash_threshold:

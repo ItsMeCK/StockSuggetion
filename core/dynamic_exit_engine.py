@@ -66,18 +66,43 @@ class DynamicOptionExitEngine:
                     reason="Type B Day Trend 15:15 IST EOD Hard Cutoff"
                 )
 
+        # Check single lot vs multi lot
+        is_single_lot = False
+        qty = pos.get("qty")
+        lot_size = pos.get("lot_size")
+        lots = pos.get("lots")
+        if lots == 1:
+            is_single_lot = True
+        elif qty is not None and lot_size is not None and qty <= lot_size:
+            is_single_lot = True
+        elif qty == 1:
+            is_single_lot = True
+
+        profit_locked = bool(pos.get("profit_locked", False))
+
         # 3. Tier 1: Profit Lock (+20% to +25% Option Gain)
-        if pnl_pct >= self.profit_lock_threshold:
+        if pnl_pct >= self.profit_lock_threshold and not profit_locked:
             locked_sl = round(entry_premium * 1.15, 2)
+            book_pct = 0.0 if is_single_lot else 0.50
             return ExitDecision(
                 action="PROFIT_LOCK",
-                reason=f"Tier 1 Profit Lock: PnL {pnl_pct:.2f}% >= {self.profit_lock_threshold:.1f}%",
+                reason=f"Tier 1 Profit Lock ({'Single Lot SL Ratchet' if is_single_lot else 'Book 50% Lot'}): PnL {pnl_pct:.2f}% >= {self.profit_lock_threshold:.1f}%",
                 new_sl=max(current_sl, locked_sl),
-                book_lot_pct=0.50
+                book_lot_pct=book_pct
             )
 
+        # Dynamic Trailing for Profit-Locked Positions
+        if profit_locked:
+            trail_sl = round(highest_high * 0.90, 2)
+            if trail_sl > current_sl:
+                return ExitDecision(
+                    action="UPDATE_TRAILING_SL",
+                    reason=f"Trailing Stop Ratchet: New High ₹{highest_high:.2f}",
+                    new_sl=trail_sl
+                )
+
         # 4. Tier 2: Breakeven Trailing Stop (+15% Option Gain)
-        if pnl_pct >= self.breakeven_threshold and not trailing_active:
+        if pnl_pct >= self.breakeven_threshold and not trailing_active and not profit_locked:
             be_sl = round(entry_premium * 1.015, 2) # Cost + 1.5% for fees/taxes
             return ExitDecision(
                 action="MOVE_TO_BREAKEVEN",
