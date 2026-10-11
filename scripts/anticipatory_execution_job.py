@@ -78,7 +78,7 @@ def run_anticipatory_execution():
         (pl.col("close") > pl.col("sma_20")) &
         (pl.col("close") > pl.col("prev_close")) &
         (pl.col("low") > pl.col("prev_low"))
-    ).sort("vol_surge", descending=True).head(10)
+    ).sort("vol_surge", descending=True).head(5)
     
     candidates = insider_breakouts.select("symbol").to_series().to_list()
     print(f"🎯 Math Engine found {len(candidates)} Insider Accumulation footprints: {candidates}")
