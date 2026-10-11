@@ -2,9 +2,85 @@ import os
 import logging
 from dotenv import load_dotenv
 from kiteconnect import KiteConnect
+import math
+from datetime import date, datetime
+from scipy.stats import norm
 from core.state import SovereignState
 
 load_dotenv()
+
+def calculate_bs_call_delta(spot: float, strike: float, dte_days: float, r: float = 0.07, iv: float = 0.30) -> float:
+    """Calculates Black-Scholes call option delta."""
+    if dte_days <= 0 or spot <= 0 or strike <= 0 or iv <= 0:
+        return 0.50 if spot >= strike else 0.0
+    t = dte_days / 365.0
+    d1 = (math.log(spot / strike) + (r + 0.5 * iv ** 2) * t) / (iv * math.sqrt(t))
+    return float(norm.cdf(d1))
+
+def select_optimal_strike(fno_insts: list, entry_price: float, today_dt: date = None):
+    """
+    High-Delta Strike Selection Algorithm (v3.3.0-PROD)
+    1. Filter expiries: require DTE >= 4 calendar days (roll to next monthly if DTE < 4).
+    2. Compute Black-Scholes delta for each CE contract.
+    3. Target ITM Call with Delta in [0.60, 0.70] (ideal target Delta* = 0.65).
+    4. Fallback hierarchy: ITM -> ATM (0.50-0.59) -> None (fallback to Cash EQUITY).
+    5. ABSOLUTE INVARIANT: Never buy OTM (Delta < 0.50).
+    """
+    if not today_dt:
+        today_dt = date.today()
+
+    expiries = sorted(list(set([
+        i['expiry'] for i in fno_insts 
+        if i.get('expiry') is not None and i.get('instrument_type') == 'CE'
+    ])))
+    
+    valid_expiries = [exp for exp in expiries if (exp - today_dt).days >= 4]
+    if not valid_expiries:
+        valid_expiries = expiries
+
+    if not valid_expiries:
+        return None, None, "EQUITY"
+
+    target_expiry = valid_expiries[0]
+    dte_days = max(1, (target_expiry - today_dt).days)
+    target_expiry_str = target_expiry.strftime("%Y-%m-%d")
+
+    ce_contracts = [
+        i for i in fno_insts 
+        if i.get('expiry') == target_expiry and i.get('instrument_type') == 'CE'
+    ]
+    if not ce_contracts:
+        return None, None, "EQUITY"
+
+    contracts_with_delta = []
+    for c in ce_contracts:
+        try:
+            strike = float(c['strike'])
+            delta = calculate_bs_call_delta(entry_price, strike, dte_days)
+            contracts_with_delta.append((c, delta))
+        except (ValueError, TypeError):
+            continue
+
+    # Tier 1: Target In-The-Money (ITM) Delta centered around 0.65 (acceptable band 0.58 to 0.75)
+    itm_candidates = [
+        (c, delta) for c, delta in contracts_with_delta 
+        if 0.58 <= delta <= 0.75
+    ]
+    if itm_candidates:
+        best_c, best_delta = min(itm_candidates, key=lambda x: abs(x[1] - 0.65))
+        return best_c, target_expiry_str, "NFO_OPTION"
+
+    # Tier 2: Fallback to ATM (Delta 0.50 - 0.57)
+    atm_candidates = [
+        (c, delta) for c, delta in contracts_with_delta 
+        if 0.50 <= delta < 0.58
+    ]
+    if atm_candidates:
+        best_c, best_delta = min(atm_candidates, key=lambda x: abs(x[1] - 0.55))
+        return best_c, target_expiry_str, "NFO_OPTION"
+
+    # Tier 3: Absolute Invariant: Never buy OTM (Delta < 0.50). Fallback to Cash Equity.
+    return None, target_expiry_str, "EQUITY"
 
 def run_derivatives_routing_agent(state: SovereignState) -> dict:
     """
@@ -44,46 +120,31 @@ def run_derivatives_routing_agent(state: SovereignState) -> dict:
     
     for ticker, details in approved.items():
         updated_allocations[ticker] = details.copy()
+        entry_price = float(details.get("entry", 0.0))
         
-        # Check if the underlying ticker exists in the NFO segment
-        fno_insts = [i for i in instruments if i['name'] == ticker]
+        # Check if underlying ticker exists in NFO segment
+        fno_insts = [i for i in instruments if i.get('name') == ticker]
         
         if not fno_insts:
             logging.info(f"Derivatives Router: {ticker} -> Routed to EQUITY (No NFO Options Available)")
             updated_allocations[ticker]["suggested_instrument"] = "EQUITY"
             continue
             
-        # Find unique expiries
-        expiries = sorted(list(set([i['expiry'] for i in fno_insts if i['expiry'] is not None and i['instrument_type'] in ['CE', 'PE']])))
+        selected_ce, expiry_str, route_type = select_optimal_strike(fno_insts, entry_price)
         
-        if expiries:
-            nearest_expiry_date = expiries[0]
-            nearest_expiry_str = nearest_expiry_date.strftime("%Y-%m-%d")
+        if route_type == "NFO_OPTION" and selected_ce:
+            option_symbol = selected_ce['tradingsymbol']
+            strike = float(selected_ce['strike'])
+            lot_size = selected_ce['lot_size']
             
-            # Find the CE option with the strike closest to the entry price
-            ce_options = [i for i in fno_insts if i['expiry'] == nearest_expiry_date and i['instrument_type'] == 'CE']
-            
-            if ce_options:
-                entry_price = details.get("entry", 0.0)
-                # Sort CE options by proximity of strike to entry price
-                ce_options.sort(key=lambda x: abs(float(x['strike']) - entry_price))
-                selected_ce = ce_options[0]
-                
-                option_symbol = selected_ce['tradingsymbol']
-                strike = float(selected_ce['strike'])
-                lot_size = selected_ce['lot_size']
-                
-                logging.info(f"Derivatives Router: {ticker} -> Routed to NFO_OPTION (Symbol: {option_symbol}, Strike: {strike}, Lot Size: {lot_size}, Expiry: {nearest_expiry_str})")
-                updated_allocations[ticker]["suggested_instrument"] = "NFO_OPTION"
-                updated_allocations[ticker]["lot_size"] = lot_size
-                updated_allocations[ticker]["nearest_expiry"] = nearest_expiry_str
-                updated_allocations[ticker]["option_symbol"] = option_symbol
-                updated_allocations[ticker]["strike"] = strike
-            else:
-                logging.info(f"Derivatives Router: {ticker} -> Routed to EQUITY (No CE contracts found for nearest expiry)")
-                updated_allocations[ticker]["suggested_instrument"] = "EQUITY"
+            logging.info(f"Derivatives Router: {ticker} -> Routed to NFO_OPTION (Symbol: {option_symbol}, Strike: {strike}, Lot Size: {lot_size}, Expiry: {expiry_str})")
+            updated_allocations[ticker]["suggested_instrument"] = "NFO_OPTION"
+            updated_allocations[ticker]["lot_size"] = lot_size
+            updated_allocations[ticker]["nearest_expiry"] = expiry_str
+            updated_allocations[ticker]["option_symbol"] = option_symbol
+            updated_allocations[ticker]["strike"] = strike
         else:
-            logging.info(f"Derivatives Router: {ticker} -> Routed to EQUITY (No CE/PE found in NFO)")
+            logging.info(f"Derivatives Router: {ticker} -> Routed to EQUITY (No ITM/ATM contract passing Delta & DTE filters)")
             updated_allocations[ticker]["suggested_instrument"] = "EQUITY"
 
     return {"approved_allocations": updated_allocations}

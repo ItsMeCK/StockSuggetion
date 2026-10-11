@@ -108,3 +108,14 @@ class SovereignState(TypedDict):
     
     # Maps ticker -> current pipeline stage (e.g., 'ENTRY_TRIGGERED', 'IN_TRADE_MANAGEMENT')
     stage_lifecycle: Annotated[Dict[str, str], merge_dicts]
+    
+    # --- Phase 5: Master ROE Orchestration Channels (v3.3.0-PROD) ---
+    # Maps ticker -> TradeHypothesis dict
+    trade_hypotheses: Annotated[Dict[str, Any], merge_dicts]
+    
+    # Maps ticker -> List of AuditDoubtReport feedback dicts
+    doubt_reports: Annotated[Dict[str, List[Any]], merge_dicts]
+    
+    # Macro regime parameters (allow_long_calls, size_multiplier, vix_band)
+    macro_regime_details: Annotated[Dict[str, Any], merge_dicts]
+

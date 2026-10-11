@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Field, validator
 from typing import List, Dict, Optional, Any
 from datetime import datetime
+from enum import Enum
 import os
 
 class CandidateSchema(BaseModel):
@@ -70,3 +71,69 @@ class SovereignStateSchema(BaseModel):
     approved_allocations: Dict[str, AllocationSchema]
     execution_telemetry: Dict[str, ExecutionSchema]
     error_log: List[str]
+
+# =====================================================================
+# PART 3: MASTER ROE ARCHITECTURE CONTRACTS (v3.3.0-PROD)
+# =====================================================================
+
+class HoldingTier(str, Enum):
+    """
+    Three immutable holding taxonomy classes:
+    - TYPE_A_SCALP: 30 to 120 mins duration; hard exit by 15:00 IST sharp.
+    - TYPE_B_DAY_TREND: 2 to 5 hours duration; hard exit by 15:15 IST sharp.
+    - TYPE_C_BTST: Entry 15:15-15:20 IST; mandatory exit 09:15-09:30 IST on T+1.
+    """
+    TYPE_A_SCALP = "TYPE_A_SCALP"
+    TYPE_B_DAY_TREND = "TYPE_B_DAY_TREND"
+    TYPE_C_BTST = "TYPE_C_BTST"
+
+class SetupArchetype(str, Enum):
+    """Identified institutional setup archetypes."""
+    STAGE_2_EXPANSION = "STAGE_2_EXPANSION"
+    VOLATILITY_SQUEEZE = "VOLATILITY_SQUEEZE"
+    STEALTH_ACCUM = "STEALTH_ACCUM"
+    SWEEP_REVERSAL = "SWEEP_REVERSAL"
+
+class TradeHypothesis(BaseModel):
+    """
+    Immutable Trade Hypothesis formulated by the Lead Planner before dispatch.
+    Anchors technical entry bounds, taxonomy deadlines, and subagent mandate vectors.
+    """
+    symbol: str
+    holding_tier: HoldingTier
+    archetype: SetupArchetype
+    anchor_avwap: float = Field(..., gt=0)
+    proposed_entry: float = Field(..., gt=0)
+    invalidation_price: float = Field(..., gt=0)
+    target_price: float = Field(..., gt=0)
+    conviction_score: float = Field(..., ge=0, le=100)
+    mandates: List[str] = Field(default_factory=list)
+    created_at: datetime = Field(default_factory=datetime.now)
+
+class AuditDoubtReport(BaseModel):
+    """
+    Typed feedback vector from a specialist subagent back to the Planner/Arbiter.
+    Carries structured friction metrics, evidence, and concrete remedial proposals.
+    """
+    agent_id: str
+    severity: str = Field(..., pattern="^(INFO|CAUTION|STRUCTURAL_CONFLICT|FATAL_INVALIDATION)$")
+    confidence: float = Field(..., ge=0.0, le=1.0)
+    weight: float = Field(..., ge=0.0)
+    evidence: List[Dict[str, Any]] = Field(default_factory=list)
+    remedial_proposal: Optional[str] = None
+    created_at: datetime = Field(default_factory=datetime.now)
+
+class GroundingEvaluationSchema(BaseModel):
+    """
+    Structured 3D Grounding Intelligence output hardened against sycophancy.
+    Evidence must precede confidence; final score is computed by frozen code constants.
+    """
+    symbol: str
+    public_catalyst: Dict[str, Any]
+    stealth_accumulation: Dict[str, Any]
+    toxic_catalyst: Dict[str, Any]
+    final_score: float = Field(..., ge=0.0, le=100.0)
+    verdict: str = Field(..., pattern="^(APPROVED|VETOED)$")
+    devil_advocate_rebuttal: Optional[str] = None
+    evaluated_at: datetime = Field(default_factory=datetime.now)
+

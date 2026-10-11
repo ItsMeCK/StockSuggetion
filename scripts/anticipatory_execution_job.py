@@ -88,14 +88,15 @@ def run_anticipatory_execution():
         send_email_report([], [{"ticker": "MARKET CHOP", "score": 0, "reason": "Failed Insider Footprint Math"}])
         return
 
-    # 4. Google Grounding Live Veto
+    # 4. Hardened 3D Grounding Intelligence Scout (Anti-Sycophancy & Deterministic Veto)
     final_approved_trades = []
     rejected_trades = []
     
     try:
-        client = genai.Client()
+        from agents.grounding_intelligence import HardenedGroundingAgent
+        grounding_agent = HardenedGroundingAgent()
     except Exception as e:
-        print(f"❌ Failed to initialize Gemini Client: {e}")
+        print(f"❌ Failed to initialize HardenedGroundingAgent: {e}")
         return
 
     for sym in candidates:
@@ -103,48 +104,35 @@ def run_anticipatory_execution():
             print(f"🎯 Reached maximum available execution slots ({slots_available}). Stopping search.")
             break
             
-        print(f"\n🌍 Grounding Search for {sym}...")
-        prompt = f"The stock {sym} on the National Stock Exchange of India (NSE) is showing massive unexplained volume and price accumulation right now at 3:15 PM IST before the market closes. Search the live web for any breaking rumors, sector-wide tailwinds, regulatory updates, or unconfirmed chatter related to {sym} from today. Does this accumulation make logical sense? Respond with exactly one paragraph. Start your paragraph with the exact word 'APPROVED:' if you find a valid fundamental catalyst, sector tailwind, or rumor. Start with the exact word 'REJECTED:' if there is no news or logical reason."
-        
+        print(f"\n🌍 Running Hardened 3D Grounding Evaluation for {sym}...")
         try:
-            response = client.models.generate_content(
-                model='gemini-3.6-flash',
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    tools=[{"google_search": {}}],
-                )
-            )
-            verdict_text = response.text.strip()
-            print(f"Grounding Response: {verdict_text}")
+            approved, score, rationale, audit_data = grounding_agent.evaluate_symbol(sym)
+            print(f"Grounding Verdict for {sym}: {rationale}")
             
-            if verdict_text.startswith("APPROVED:"):
-                catalyst = verdict_text.replace("APPROVED:", "").strip()
-                score = 95.0
-                
+            if approved:
                 # Execute Trade
-                execute_trade(symbol=sym, score=score, catalyst=catalyst, entry_time=datetime.now())
+                execute_trade(symbol=sym, score=score, catalyst=rationale, entry_time=datetime.now())
                 
                 final_approved_trades.append({
                     "ticker": sym,
                     "score": score,
-                    "passed": [catalyst]
+                    "passed": [rationale]
                 })
-                print(f"✅ APPROVED: {sym}")
+                print(f"✅ APPROVED: {sym} (Score: {score:.1f})")
             else:
-                reason = verdict_text.replace("REJECTED:", "").strip() if verdict_text.startswith("REJECTED:") else "Failed formatting / No news found."
                 rejected_trades.append({
                     "ticker": sym,
-                    "score": 0,
-                    "reason": reason
+                    "score": score,
+                    "reason": rationale
                 })
-                print(f"🛑 REJECTED: {sym} (No Grounding Confirmation)")
+                print(f"🛑 REJECTED: {sym} -> {rationale}")
                 
         except Exception as e:
-            print(f"❌ Gemini Grounding failed for {sym}: {e}")
+            print(f"❌ Grounding evaluation failed for {sym}: {e}")
             rejected_trades.append({
                 "ticker": sym,
                 "score": 0,
-                "reason": f"API Error: {e}"
+                "reason": f"Evaluation Error: {e}"
             })
 
     # 5. Send Email Alert

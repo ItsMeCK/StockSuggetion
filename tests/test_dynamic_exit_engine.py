@@ -1,0 +1,55 @@
+import pytest
+from datetime import datetime, timedelta
+from core.dynamic_exit_engine import DynamicOptionExitEngine
+
+def test_hard_stop_loss_trigger():
+    engine = DynamicOptionExitEngine()
+    pos = {"entry_premium": 100.0, "current_sl": 85.0}
+    # Drops to 84.0 (-16% loss)
+    decision = engine.evaluate_position(pos, ltp=84.0)
+    assert decision.action == "HARD_STOP"
+    assert "Hard Stop Hit" in decision.reason
+
+def test_breakeven_ratchet_trigger():
+    engine = DynamicOptionExitEngine()
+    pos = {"entry_premium": 100.0, "current_sl": 85.0, "trailing_active": False}
+    # Surges to 116.0 (+16% gain)
+    decision = engine.evaluate_position(pos, ltp=116.0)
+    assert decision.action == "MOVE_TO_BREAKEVEN"
+    assert decision.new_sl == 101.50 # Covers cost + 1.5% fees
+
+def test_profit_lock_trigger():
+    engine = DynamicOptionExitEngine()
+    pos = {"entry_premium": 100.0, "current_sl": 101.50, "trailing_active": True}
+    # Surges to 122.0 (+22% gain)
+    decision = engine.evaluate_position(pos, ltp=122.0)
+    assert decision.action == "PROFIT_LOCK"
+    assert decision.book_lot_pct == 0.50
+    assert decision.new_sl == 115.0 # Guaranteed +15% net gain locked in
+
+def test_time_stop_stagnation_cut():
+    engine = DynamicOptionExitEngine()
+    entry_time = datetime(2026, 10, 11, 10, 15, 0)
+    now = entry_time + timedelta(minutes=95) # 95 minutes of stagnation
+    pos = {
+        "entry_premium": 100.0,
+        "entry_time": entry_time.isoformat(),
+        "highest_high": 105.0, # max reached was only +5%
+        "holding_type": "TYPE_A_SCALP"
+    }
+    decision = engine.evaluate_position(pos, ltp=101.0, now=now)
+    assert decision.action == "TIME_STOP"
+    assert "Stagnation Exit" in decision.reason
+
+def test_taxonomy_eod_cut_type_a():
+    engine = DynamicOptionExitEngine()
+    entry_time = datetime(2026, 10, 11, 11, 15, 0)
+    now = datetime(2026, 10, 11, 15, 1, 0) # 15:01 IST
+    pos = {
+        "entry_premium": 100.0,
+        "entry_time": entry_time.isoformat(),
+        "holding_type": "TYPE_A_SCALP"
+    }
+    decision = engine.evaluate_position(pos, ltp=105.0, now=now)
+    assert decision.action == "TAXONOMY_CUT"
+    assert "Type A Intraday Scalp 15:00 IST" in decision.reason

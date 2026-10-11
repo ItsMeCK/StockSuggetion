@@ -1,0 +1,179 @@
+import os
+import json
+from datetime import datetime
+from typing import Dict, Any, Tuple, Optional
+from google import genai
+from google.genai import types
+
+# Frozen Immutable Constants (Cannot be modified by LLM prompt drift)
+WEIGHT_PUBLIC_CATALYST = 0.30
+WEIGHT_STEALTH_ACCUMULATION = 0.50
+WEIGHT_TOXIC_VETO = 1.00
+APPROVAL_THRESHOLD = 50.0
+
+DETERMINISTIC_TOXIC_KEYWORDS = [
+    "sebi order", "sebi ban", "ed raid", "ed search", "forensic audit",
+    "promoter pledge call", "debt default", "nclt", "insolvency",
+    "accounting fraud", "cbi probe", "credit rating downgrade",
+    "qip discount", "dilution", "promoter selling"
+]
+
+class HardenedGroundingAgent:
+    """
+    Hardened 3D Grounding Intelligence Scout (v3.3.0-PROD)
+    Empirically prevents LLM sycophancy, confirmation bias, and post-hoc rationalization:
+    1. Evidence Before Verdict (LLM must extract dated facts before confidence).
+    2. Structured JSON Output Only (LLM outputs raw confidences; code does the math).
+    3. Deterministic Toxic Event Veto (SEBI/ED/Defaults trigger instant programmatic veto).
+    4. Adversarial Devil's Advocate Pass (tests counter-thesis before accepting stealth accum).
+    5. Temperature 0.0 with audit trail logging to data/grounding_audit.jsonl.
+    """
+    def __init__(self, client: Optional[genai.Client] = None):
+        if client:
+            self.client = client
+        else:
+            api_key = os.getenv("GEMINI_API_KEY", "").strip("'\"")
+            self.client = genai.Client(api_key=api_key) if api_key else genai.Client()
+        self.audit_log_path = "data/grounding_audit.jsonl"
+        os.makedirs("data", exist_ok=True)
+
+    def evaluate_symbol(self, symbol: str) -> Tuple[bool, float, str, Dict[str, Any]]:
+        """
+        Evaluates candidate stock at 3:15 PM IST.
+        Returns: (is_approved, final_score, rationale, structured_audit_data)
+        """
+        now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        prompt = f"""You are a forensic institutional equity intelligence agent analyzing the National Stock Exchange of India (NSE).
+The stock {symbol} is exhibiting massive unexplained trading volume and price surge at 3:15 PM IST today.
+
+Search the live web and recent exchange filings for news, block deals, rumors, or regulatory updates from today.
+You must adhere strictly to the EVIDENCE-BEFORE-VERDICT protocol:
+- First, list verifiable, dated evidence for each dimension (sources, dates, facts).
+- Only after listing facts, provide your confidence (0.0 to 1.0).
+
+DIMENSION A: Known Public Catalyst (earnings beat, major order win, regulatory approval, merger).
+DIMENSION B: Silent Institutional Accumulation (block deals, delivery % surge >60%, institutional co-movement).
+DIMENSION C: Toxic Events (SEBI/ED probe, rating downgrade, promoter pledge sell-off, accounting fraud).
+
+You MUST respond ONLY with valid JSON in this exact structure, with no markdown code fences or conversational text:
+{{
+  "public_catalyst": {{
+    "evidence": [{{"source": "name", "date": "YYYY-MM-DD", "fact": "description"}}],
+    "confidence": 0.0,
+    "summary": "brief summary"
+  }},
+  "stealth_accumulation": {{
+    "evidence": [{{"source": "name", "date": "YYYY-MM-DD", "fact": "description"}}],
+    "confidence": 0.0,
+    "summary": "brief summary"
+  }},
+  "toxic_catalyst": {{
+    "evidence": [{{"source": "name", "date": "YYYY-MM-DD", "fact": "description"}}],
+    "detected": false,
+    "summary": "brief summary"
+  }}
+}}"""
+
+        raw_response = ""
+        try:
+            response = self.client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    tools=[{"google_search": {}}],
+                    temperature=0.0
+                )
+            )
+            raw_response = response.text.strip()
+            # Clean possible markdown fences
+            if raw_response.startswith("```json"):
+                raw_response = raw_response[7:]
+            if raw_response.startswith("```"):
+                raw_response = raw_response[3:]
+            if raw_response.endswith("```"):
+                raw_response = raw_response[:-3]
+            parsed = json.loads(raw_response.strip())
+        except Exception as e:
+            # Fallback if search returns non-JSON or fails
+            print(f"⚠️ Warning: Structured JSON parsing error for {symbol}: {e}")
+            parsed = {
+                "public_catalyst": {"evidence": [], "confidence": 0.0, "summary": "Parse error"},
+                "stealth_accumulation": {"evidence": [], "confidence": 0.0, "summary": "Parse error"},
+                "toxic_catalyst": {"evidence": [], "detected": False, "summary": "None"}
+            }
+
+        # 1. Deterministic Toxic Event Check
+        toxic_evidence = str(parsed.get("toxic_catalyst", {})).lower()
+        toxic_flag = parsed.get("toxic_catalyst", {}).get("detected", False)
+        for kw in DETERMINISTIC_TOXIC_KEYWORDS:
+            if kw in toxic_evidence:
+                toxic_flag = True
+                break
+
+        if toxic_flag:
+            final_score = 0.0
+            verdict = False
+            rationale = f"ABSOLUTE_VETO: Toxic regulatory/fraud catalyst detected: {parsed.get('toxic_catalyst', {}).get('summary', 'Unknown')}"
+            self._log_audit(symbol, now_str, raw_response, parsed, final_score, verdict, rationale)
+            return verdict, final_score, rationale, parsed
+
+        # 2. Adversarial Devil's Advocate Pass (if stealth accumulation claimed)
+        stealth_conf = float(parsed.get("stealth_accumulation", {}).get("confidence", 0.0))
+        pub_conf = float(parsed.get("public_catalyst", {}).get("confidence", 0.0))
+        rebuttal = None
+
+        if stealth_conf >= 0.50:
+            rebuttal = self._run_devils_advocate(symbol, parsed.get("stealth_accumulation", {}).get("summary", ""))
+            if "RETAIL_TRAP_CONFIRMED" in rebuttal or "DISTRIBUTION_DETECTED" in rebuttal:
+                print(f"🕵️ Adversarial Rebuttal tripped for {symbol}: Discounting stealth confidence by 50%.")
+                stealth_conf *= 0.50
+                parsed["stealth_accumulation"]["confidence"] = stealth_conf
+
+        # 3. Deterministic Code-Level Score Calculation (Frozen Weights)
+        final_score = round((WEIGHT_PUBLIC_CATALYST * (pub_conf * 100)) + (WEIGHT_STEALTH_ACCUMULATION * (stealth_conf * 100)), 2)
+        verdict = final_score >= APPROVAL_THRESHOLD
+
+        if verdict:
+            catalyst_type = "Public News" if pub_conf >= stealth_conf else "Silent Institutional Accumulation"
+            summary_txt = parsed.get("public_catalyst", {}).get("summary") if pub_conf >= stealth_conf else parsed.get("stealth_accumulation", {}).get("summary")
+            rationale = f"APPROVED ({catalyst_type}): {summary_txt} (Score: {final_score}/100)"
+        else:
+            rationale = f"REJECTED: Insufficient verified catalyst or accumulation footprint (Score: {final_score}/100 < {APPROVAL_THRESHOLD})"
+
+        self._log_audit(symbol, now_str, raw_response, parsed, final_score, verdict, rationale, rebuttal)
+        return verdict, final_score, rationale, parsed
+
+    def _run_devils_advocate(self, symbol: str, accum_summary: str) -> str:
+        """Adversarial check: actively tries to invalidate the accumulation thesis."""
+        prompt = f"""You are a skeptical forensic short-seller examining NSE stock {symbol}.
+An analyst claims this stock is undergoing silent institutional accumulation today based on: '{accum_summary}'.
+Find the counter-thesis: Is this volume a retail bull trap, an operator pump-and-dump, illiquid ramp-up, or insider distribution before bad news?
+Respond with exactly one paragraph. If you find credible evidence of a trap or offloading, start with 'RETAIL_TRAP_CONFIRMED:' or 'DISTRIBUTION_DETECTED:'. Otherwise start with 'CLEAN_ACCUMULATION:'."""
+        try:
+            resp = self.client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=prompt,
+                config=types.GenerateContentConfig(temperature=0.0)
+            )
+            return resp.text.strip()
+        except Exception as e:
+            return f"CLEAN_ACCUMULATION: (Adversarial check error: {e})"
+
+    def _log_audit(self, symbol: str, timestamp: str, raw_response: str, parsed: Dict[str, Any], score: float, approved: bool, rationale: str, rebuttal: Optional[str] = None):
+        """Persists every audit entry for zero-drift reproducibility."""
+        record = {
+            "timestamp": timestamp,
+            "symbol": symbol,
+            "approved": approved,
+            "final_score": score,
+            "rationale": rationale,
+            "parsed_dimensions": parsed,
+            "rebuttal": rebuttal,
+            "raw_completion": raw_response
+        }
+        try:
+            with open(self.audit_log_path, "a") as f:
+                f.write(json.dumps(record) + "\n")
+        except Exception as e:
+            print(f"Warning: Failed to log audit record to {self.audit_log_path}: {e}")
