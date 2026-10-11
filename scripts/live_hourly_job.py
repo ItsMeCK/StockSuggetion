@@ -389,6 +389,12 @@ def run_hourly_evaluation():
                         
                     relative_velocity = intraday_return - nifty_return
                     
+                    # SHADOW MODE: Shadow-audit proposed calibrated sector rule without altering live behavior
+                    proposed_bleed = (intraday_return < -0.80) or (intraday_return < -0.50 and relative_velocity < -0.20)
+                    shadow_proposed_verdict = "VETO" if proposed_bleed else "APPROVE"
+                    print(f"👁️ SHADOW_SECTOR_AUDIT: {symbol} | Legacy={'VETO' if (intraday_return < 0.0 and relative_velocity < 0.0) else 'APPROVE'} | Proposed={shadow_proposed_verdict} (Sector {sector_name}: {intraday_return:.2f}%, RelVel: {relative_velocity:.2f}%)")
+
+                    # Live Gate 1 (Untouched per Phase 1 rule: no unvalidated live logic)
                     # Only reject if both absolute return is negative AND relative velocity is negative (underperforming the drop)
                     if intraday_return < 0.0 and relative_velocity < 0.0:
                         print(f"🛑 REJECTED: {symbol} (Sector {sector_name} is bleeding ({intraday_return:.2f}%) and underperforming Nifty ({nifty_return:.2f}%))")
@@ -427,18 +433,19 @@ def run_hourly_evaluation():
                 print(f"🛑 VETO: {symbol} (Pump & Churn: 1H accumulation lacks 15m structural synergy - No HHs and No Vol Climax)")
                 continue
             
-            # Veto 1: Exhaustion (Volume Decay)
+            # Veto 1: Exhaustion (Volume Decay) - SHADOW MODE
+            # Statistically suspect (BH p=0.0556). Shifted to Shadow Mode: log fire/no-fire without blocking.
             if final_15m_vol < (hourly_vol * 0.15):
-                print(f"🛑 VETO: {symbol} (Exhaustion: Final 15m vol is only {(final_15m_vol/hourly_vol)*100:.1f}%)")
-                continue
+                print(f"👁️ SHADOW_VETO: {symbol} (Exhaustion: Final 15m vol is only {(final_15m_vol/hourly_vol)*100:.1f}% - NON-BLOCKING)")
                 
-            # Veto 2: Terminal Rejection
+            # Veto 2: Terminal Rejection - SHADOW MODE
+            # Statistically backwards (BH p=0.0121, rejected candidates outperformed passed +0.093% vs -0.021%).
+            # Shifted to Shadow Mode: log fire/no-fire without blocking.
             candle_range = mtf_data['final_15m_high'] - mtf_data['final_15m_low']
             upper_wick = mtf_data['final_15m_high'] - max(mtf_data['final_15m_close'], mtf_data['final_15m_open'])
             upper_wick_pct = (upper_wick / candle_range) * 100 if candle_range > 0 else 0
             if upper_wick_pct > 35.0:
-                print(f"🛑 VETO: {symbol} (Terminal Rejection: Final 15m upper wick is {upper_wick_pct:.1f}%)")
-                continue
+                print(f"👁️ SHADOW_VETO: {symbol} (Terminal Rejection: Final 15m upper wick is {upper_wick_pct:.1f}% > 35% - NON-BLOCKING)")
                 
             # Veto 3: Distribution Dump
             is_red = mtf_data['final_15m_close'] < mtf_data['final_15m_open']

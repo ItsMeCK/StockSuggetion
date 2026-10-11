@@ -152,17 +152,24 @@ This Part 3 blueprint establishes the definitive **Master ROE (Routing / Orchest
 
 ---
 
-### 2.4 Subagent 4: 3D Grounding Intelligence Scout
+### 2.4 Subagent 4: 3D Grounding Intelligence Scout (Hardened Against Sycophancy)
 * **Overhauling Naive Binary News Grounding**:
-  Replaces the binary pass/fail that killed runners like `OIL` (+6.4%) and `AUROPHARMA` (+4.4%) with a 3-dimensional institutional evaluation:
-  1. **Dimension A: Public Catalysts (Weight: 30%)**:
+  Replaces the binary pass/fail that killed runners like `OIL` (+6.4%) and `AUROPHARMA` (+4.4%) with a 3-dimensional institutional evaluation hardened against LLM sycophancy:
+  1. **Dimension A: Public Catalysts (Code Weight: 0.30)**:
      - Earnings surprises, major contract wins, regulatory clearances, index inclusion.
-  2. **Dimension B: Silent Institutional Accumulation (Weight: 50%)**:
+  2. **Dimension B: Silent Institutional Accumulation (Code Weight: 0.50)**:
      - Block deals, delivery percentage surge $> 1.8\times$, delivery volume $> 60\%$, sector co-movement without retail social media hype.
      - *Principle: Real institutional positions are built BEFORE news is public.*
-  3. **Dimension C: Toxic Catalyst Filter (Weight: 20% - Hard Veto)**:
+  3. **Dimension C: Toxic Catalyst Filter (Code Weight: 1.00 - Hard Deterministic Veto)**:
      - Accounting fraud, SEBI/ED probes, promoter pledge margin calls, debt downgrades, equity dilution/QIP overhang.
-     - **Result:** Toxic flags trigger instant `ABSOLUTE_VETO`; lack of public news in Dimension A does NOT reject if Dimension B is strong.
+     - **Deterministic Lookup Rule:** Where checkable facts exist (SEBI orders, pledge disclosures $>50\%$, rating cuts), code immediately executes an `ABSOLUTE_VETO` without subjective LLM deliberation.
+* **Six Institutional Prompt & Architecture Protections (Claude Cross-Validation)**:
+  1. **Evidence Before Verdict**: The LLM must explicitly enumerate verifiable, dated evidence (filing date, deal value, volume ratio) *before* assigning any confidence. Post-hoc rationalization is forbidden.
+  2. **Structured JSON Output Only**: No self-reported blended scores. The LLM outputs typed confidences per dimension; Python code deterministically computes the final score using frozen constants.
+  3. **Deterministic Toxic Check**: Fact-checkable regulatory infractions trigger instant programmatic vetoes.
+  4. **Adversarial Devil's Advocate Pass**: Before accepting Dimension B accumulation, an adversarial second pass tests the counter-hypothesis ("Why is this move a trap or retail distribution?").
+  5. **Deterministic Temperature & Audit Logging**: Evaluated at `temperature = 0.0` with calibrated few-shot anchors. All raw completions are logged to `data/grounding_audit.jsonl` for auditability.
+  6. **Frozen Python Constants**: Weights ($0.30 / 0.50 / 1.00$) are immutable Python constants that cannot be altered or restated by model output.
 
 ---
 

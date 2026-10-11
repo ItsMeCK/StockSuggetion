@@ -9,3 +9,4 @@
 */5 * * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 scripts/health_check.py >> logs/health_check.log 2>&1
 15 10-14 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 scripts/live_hourly_job.py >> logs/live_hourly.log 2>&1
 15 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 scripts/anticipatory_execution_job.py >> logs/anticipatory_execution.log 2>&1
+15-30 09 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && PYTHONPATH=. ./venv/bin/python3 scripts/btst_liquidator.py >> logs/btst_liquidator.log 2>&1
