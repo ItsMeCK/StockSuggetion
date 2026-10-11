@@ -41,7 +41,11 @@ class CapitalRiskGatekeeper:
 
         # 2. Concurrency Check
         if active_positions is None:
-            active_positions = get_all_active_positions()
+            try:
+                active_positions = get_all_active_positions()
+            except Exception as e:
+                logging.error(f"Failed to query active positions from DB: {e}. Failing closed to safeguard capital.")
+                return False, 0.0, f"DB_UNAVAILABLE_FAIL_CLOSED: {e}"
         
         active_count = len(active_positions)
         if active_count >= self.max_concurrency:

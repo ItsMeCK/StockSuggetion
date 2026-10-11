@@ -3,6 +3,7 @@ import os
 import logging
 from typing import Dict, Any
 
+from kiteconnect import KiteConnect
 from core.state import SovereignState
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -46,22 +47,33 @@ class ZerodhaExecutionModule:
         
         order_id = None
         if self.live and self.live_buy:
-            try:
-                variety = self.kite.VARIETY_AMO if is_amo else self.kite.VARIETY_REGULAR
-                order_id = self.kite.place_order(
-                    variety=variety,
-                    tradingsymbol=symbol,
-                    exchange=self.kite.EXCHANGE_NSE,
-                    transaction_type=self.kite.TRANSACTION_TYPE_BUY,
-                    quantity=quantity,
-                    order_type=self.kite.ORDER_TYPE_LIMIT,
-                    price=limit_price,
-                    product=self.kite.PRODUCT_CNC,
-                    validity=self.kite.VALIDITY_DAY
-                )
-                logging.info(f"✅ Live {order_type_str} Order Placed: {order_id}")
-            except Exception as e:
-                logging.error(f"❌ Live {order_type_str} Order Placement failed: {e}")
+            from core.risk_gatekeeper import CapitalRiskGatekeeper
+            gatekeeper = CapitalRiskGatekeeper()
+            authorized, alloc_cap, risk_reason = gatekeeper.evaluate_entry(
+                engine_type="LEGACY_CNC_EXECUTION_AGENT",
+                free_cash=0.0,
+                total_equity=27216.0
+            )
+            if not authorized or alloc_cap <= 0.0:
+                logging.error(f"🛑 [GATEKEEPER VETO] Legacy ZerodhaExecutionModule CNC buy blocked for {symbol}: {risk_reason}")
+                return f"BLOCKED_BY_GATEKEEPER_{uuid.uuid4().hex[:6].upper()}"
+            else:
+                try:
+                    variety = self.kite.VARIETY_AMO if is_amo else self.kite.VARIETY_REGULAR
+                    order_id = self.kite.place_order(
+                        variety=variety,
+                        tradingsymbol=symbol,
+                        exchange=self.kite.EXCHANGE_NSE,
+                        transaction_type=self.kite.TRANSACTION_TYPE_BUY,
+                        quantity=quantity,
+                        order_type=self.kite.ORDER_TYPE_LIMIT,
+                        price=limit_price,
+                        product=self.kite.PRODUCT_CNC,
+                        validity=self.kite.VALIDITY_DAY
+                    )
+                    logging.info(f"✅ Live {order_type_str} Order Placed: {order_id}")
+                except Exception as e:
+                    logging.error(f"❌ Live {order_type_str} Order Placement failed: {e}")
                 
         if not order_id:
 
@@ -181,22 +193,33 @@ class ZerodhaExecutionModule:
         
         order_id = None
         if self.live and self.live_buy:
-            try:
-                variety = self.kite.VARIETY_AMO if is_amo else self.kite.VARIETY_REGULAR
-                order_id = self.kite.place_order(
-                    variety=variety,
-                    tradingsymbol=option_symbol,
-                    exchange=self.kite.EXCHANGE_NFO,
-                    transaction_type=self.kite.TRANSACTION_TYPE_BUY,
-                    quantity=quantity,
-                    order_type=self.kite.ORDER_TYPE_LIMIT,
-                    price=limit_price,
-                    product=self.kite.PRODUCT_NRML,
-                    validity=self.kite.VALIDITY_DAY
-                )
-                logging.info(f"✅ Live NFO Option Order Placed: {order_id}")
-            except Exception as e:
-                logging.error(f"❌ Live NFO Option Order Placement failed: {e}")
+            from core.risk_gatekeeper import CapitalRiskGatekeeper
+            gatekeeper = CapitalRiskGatekeeper()
+            authorized, alloc_cap, risk_reason = gatekeeper.evaluate_entry(
+                engine_type="LEGACY_NFO_EXECUTION_AGENT",
+                free_cash=0.0,
+                total_equity=27216.0
+            )
+            if not authorized or alloc_cap <= 0.0:
+                logging.error(f"🛑 [GATEKEEPER VETO] Legacy ZerodhaExecutionModule NFO buy blocked for {option_symbol}: {risk_reason}")
+                return f"BLOCKED_BY_GATEKEEPER_{uuid.uuid4().hex[:6].upper()}"
+            else:
+                try:
+                    variety = self.kite.VARIETY_AMO if is_amo else self.kite.VARIETY_REGULAR
+                    order_id = self.kite.place_order(
+                        variety=variety,
+                        tradingsymbol=option_symbol,
+                        exchange=self.kite.EXCHANGE_NFO,
+                        transaction_type=self.kite.TRANSACTION_TYPE_BUY,
+                        quantity=quantity,
+                        order_type=self.kite.ORDER_TYPE_LIMIT,
+                        price=limit_price,
+                        product=self.kite.PRODUCT_NRML,
+                        validity=self.kite.VALIDITY_DAY
+                    )
+                    logging.info(f"✅ Live NFO Option Order Placed: {order_id}")
+                except Exception as e:
+                    logging.error(f"❌ Live NFO Option Order Placement failed: {e}")
                 
         if not order_id:
             order_id = f"{order_type_str}_OPT_ORD_{uuid.uuid4().hex[:6].upper()}"

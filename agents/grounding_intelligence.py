@@ -1,4 +1,5 @@
 import os
+import re
 import json
 from datetime import datetime
 from typing import Dict, Any, Tuple, Optional
@@ -176,13 +177,38 @@ Respond with exactly one paragraph. If you find credible evidence of a trap or o
         ]
         candidate_texts = [summary] + evidence_items
 
+        contraction_expansions = {
+            "didn't": "did not", "didn’t": "did not", "didnt": "did not",
+            "wasn't": "was not", "wasn’t": "was not", "wasnt": "was not",
+            "hasn't": "has not", "hasn’t": "has not", "hasnt": "has not",
+            "haven't": "have not", "haven’t": "have not", "havent": "have not",
+            "hadn't": "had not", "hadn’t": "had not", "hadnt": "had not",
+            "isn't": "is not", "isn’t": "is not", "isnt": "is not",
+            "aren't": "are not", "aren’t": "are not", "arent": "are not",
+            "won't": "will not", "won’t": "will not", "wont": "will not",
+            "wouldn't": "would not", "wouldn’t": "would not", "wouldnt": "would not",
+            "couldn't": "could not", "couldnt": "could not",
+            "shouldn't": "should not", "shouldnt": "should not",
+            "can't": "cannot", "cant": "cannot",
+            "cannot": "can not",
+            "don't": "do not", "dont": "do not",
+            "doesn't": "does not", "doesnt": "does not",
+        }
+
+        multi_word_negations = [
+            "ruled out", "no evidence of", "no trace of", "never any",
+            "free from", "no such", "not subject to", "no findings of",
+            "found no", "no substance to", "without any", "devoid of",
+            "dismissed as", "stayed by"
+        ]
+
         negation_words = {
             "no", "not", "none", "neither", "nor", "never", "denied", "denies", "denying",
             "cleared", "clearing", "dismissed", "dismissing", "dismisses",
             "zero", "without", "unfounded", "clean", "false", "untrue", "refuted", "refutes",
             "baseless", "debunked", "disproved", "disproven", "fake", "hoax",
-            "didn't", "hasn't", "wasn't", "isn't", "aren't", "haven't", "won't", "wouldn't",
-            "didnt", "hasnt", "wasnt", "isnt", "arent", "havent", "wont", "wouldnt"
+            "unsubstantiated", "cannot", "unproven", "quashed", "absolved", "exonerated",
+            "vindicated", "dropped", "stayed"
         }
 
         clause_separators = [" but ", " however ", " yet ", ";", "."]
@@ -205,7 +231,17 @@ Respond with exactly one paragraph. If you find credible evidence of a trap or o
                     # Find which clause contains kw
                     for clause in clauses:
                         if kw in clause:
-                            words = clause.replace(",", " ").replace("'", " ").split()
+                            # 1. Normalize curly apostrophes to straight apostrophes
+                            c = clause.replace("’", "'").replace("‘", "'")
+                            # 2. Check multi-word negation phrases
+                            if any(mw in c for mw in multi_word_negations):
+                                continue
+                            # 3. Expand contractions
+                            norm = c
+                            for contr, exp in contraction_expansions.items():
+                                norm = re.sub(rf"\b{re.escape(contr)}\b", exp, norm)
+                            # 4. Tokenize cleanly without stripping apostrophes into isolated letters
+                            words = set(re.findall(r"[a-z0-9]+", norm))
                             has_negation = any(neg in words for neg in negation_words)
                             if not has_negation:
                                 return True

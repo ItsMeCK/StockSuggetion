@@ -194,3 +194,53 @@ def test_engine_2_authorized_places_live_order_with_adequate_cash(mock_exec, moc
     assert saved_position["status"] == "LIVE_TRADED"
     assert saved_position["order_id"] == "LIVE_ORD_123"
     assert saved_position["holding_type"] == "TYPE_C_BTST"
+
+@patch("core.risk_gatekeeper.get_all_active_positions", return_value=[])
+@patch.dict(os.environ, {"LIVE_BUY": "true", "EXEC_KITE_API_KEY": "fake_key", "EXEC_KITE_ACCESS_TOKEN": "fake_token"})
+def test_legacy_order_manager_blocked_by_gatekeeper(mock_active_pos):
+    """
+    Critical Invariant:
+    Even if legacy SovereignExecutionEngine.buy_top_candidates is executed with LIVE_BUY=true,
+    CapitalRiskGatekeeper must intercept and block all order placement on Zerodha.
+    """
+    from execution.order_manager import SovereignExecutionEngine
+    with patch("execution.order_manager.KiteConnect") as mock_kite_cls:
+        mock_kite = MagicMock()
+        mock_kite_cls.return_value = mock_kite
+        engine = SovereignExecutionEngine()
+        engine.kite = mock_kite
+        engine.live = True
+        engine.live_buy = True
+
+        signals = [{"ticker": "RELIANCE", "score": 90, "price": 2800.0}]
+        engine.buy_top_candidates(signals)
+
+        # Invariant: place_order MUST NEVER be called
+        mock_kite.place_order.assert_not_called()
+
+@patch("core.risk_gatekeeper.get_all_active_positions", return_value=[])
+@patch.dict(os.environ, {"LIVE_BUY": "true", "TRADING_MODE": "LIVE", "EXEC_KITE_API_KEY": "fake_key", "EXEC_KITE_ACCESS_TOKEN": "fake_token"})
+def test_legacy_execution_agent_blocked_by_gatekeeper(mock_active_pos):
+    """
+    Critical Invariant:
+    Even if legacy ZerodhaExecutionModule is executed with LIVE_BUY=true,
+    CapitalRiskGatekeeper must intercept and block CNC and NFO orders.
+    """
+    from agents.execution_agent import ZerodhaExecutionModule
+    with patch("agents.execution_agent.KiteConnect") as mock_kite_cls:
+        mock_kite = MagicMock()
+        mock_kite_cls.return_value = mock_kite
+        module = ZerodhaExecutionModule(is_historical=False)
+        module.kite = mock_kite
+        module.live = True
+        module.live_buy = True
+
+        # CNC Limit Order
+        order_id_cnc = module.place_cnc_limit_order("INFY", 10, 1800.0)
+        assert mock_kite.place_order.call_count == 0
+        assert "BLOCKED_BY_GATEKEEPER" in order_id_cnc
+
+        # NFO Limit Order
+        order_id_nfo = module.place_nfo_limit_order("INFY26OCT1820CE", 400, 25.0)
+        assert mock_kite.place_order.call_count == 0
+        assert "BLOCKED_BY_GATEKEEPER" in order_id_nfo

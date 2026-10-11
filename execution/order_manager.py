@@ -53,6 +53,18 @@ class SovereignExecutionEngine:
                 
             logging.info(f"EXECUTING BUY: {qty} shares of {symbol} @ ~{price} (Total: ₹{qty*price:.2f})")
             
+            # Defense-in-depth: CapitalRiskGatekeeper fail-closed check for legacy execution engine
+            from core.risk_gatekeeper import CapitalRiskGatekeeper
+            gatekeeper = CapitalRiskGatekeeper()
+            authorized, alloc_cap, risk_reason = gatekeeper.evaluate_entry(
+                engine_type="LEGACY_CNC_ORDER_MANAGER",
+                free_cash=0.0,
+                total_equity=27216.0
+            )
+            if not authorized or alloc_cap <= 0.0:
+                logging.error(f"🛑 [GATEKEEPER VETO] Legacy SovereignExecutionEngine blocked for {symbol}: {risk_reason}")
+                continue
+
             if self.live and self.live_buy:
                 try:
                     limit_price = round(round((price * 1.02) * 20) / 20, 2)

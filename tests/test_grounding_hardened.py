@@ -184,3 +184,70 @@ def test_grounding_toxic_veto_advanced_negations_never_refuted():
     assert approved is True
     assert score >= APPROVAL_THRESHOLD
     assert "ABSOLUTE_VETO" not in rationale
+
+def test_grounding_toxic_veto_contractions_and_multiword_phrases():
+    agent = HardenedGroundingAgent(client=MagicMock())
+
+    # 1. Contraction with straight apostrophe: didn't
+    toxic_data_1 = {
+        "detected": False,
+        "summary": "Promoter didn't face any SEBI order",
+        "evidence": []
+    }
+    assert agent._is_toxic_confirmed(toxic_data_1) is False
+
+    # 2. Contraction with curly apostrophe: wasn’t
+    toxic_data_2 = {
+        "detected": False,
+        "summary": "Company wasn’t subject to any ed raid",
+        "evidence": []
+    }
+    assert agent._is_toxic_confirmed(toxic_data_2) is False
+
+    # 3. Contraction: haven't
+    toxic_data_3 = {
+        "detected": False,
+        "summary": "Clean track record",
+        "evidence": [{"fact": "Promoters haven't engaged in promoter selling"}]
+    }
+    assert agent._is_toxic_confirmed(toxic_data_3) is False
+
+    # 4. Multi-word phrase: ruled out
+    toxic_data_4 = {
+        "detected": False,
+        "summary": "Rumors of forensic audit were ruled out by auditors",
+        "evidence": []
+    }
+    assert agent._is_toxic_confirmed(toxic_data_4) is False
+
+    # 5. Word: unsubstantiated
+    toxic_data_5 = {
+        "detected": False,
+        "summary": "Reports of promoter selling are unsubstantiated",
+        "evidence": []
+    }
+    assert agent._is_toxic_confirmed(toxic_data_5) is False
+
+    # 6. Word: cannot
+    toxic_data_6 = {
+        "detected": False,
+        "summary": "Firm cannot be subject to a forensic audit",
+        "evidence": []
+    }
+    assert agent._is_toxic_confirmed(toxic_data_6) is False
+
+    # 7. Multi-word phrase: no evidence of
+    toxic_data_7 = {
+        "detected": False,
+        "summary": "No evidence of accounting fraud found",
+        "evidence": []
+    }
+    assert agent._is_toxic_confirmed(toxic_data_7) is False
+
+    # 8. Contrast: Actual toxic event without negation MUST trigger veto
+    toxic_data_real_veto = {
+        "detected": False,
+        "summary": "SEBI order issued against promoter for market manipulation",
+        "evidence": []
+    }
+    assert agent._is_toxic_confirmed(toxic_data_real_veto) is True
