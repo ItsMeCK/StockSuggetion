@@ -68,9 +68,9 @@ def test_btst_fill_verifier_live_order_filled_with_slippage_and_missing_sl(
     assert res[0]["sl_order_id"] == "SL_ORDER_999"
 
     # Verify high slippage email alert triggered
-    mock_emailer.send_live_alert.assert_any_call(
-        "⚠️ HIGH SLIPPAGE ALERT: RELIANCE (+5.00%)",
-        pytest.approx(mock_emailer.send_live_alert.call_args_list[0][0][1]) if False else mock_emailer.send_live_alert.call_args_list[0][0][1]
+    assert any(
+        "HIGH SLIPPAGE ALERT: RELIANCE" in call[0][0] and "105.00" in call[0][1]
+        for call in mock_emailer.send_live_alert.call_args_list
     )
 
     # Verify protective SL order placed on broker

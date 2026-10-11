@@ -229,8 +229,10 @@ def run_compound_hypothesis_test():
 
     for spec in test_specs:
         subset = valid_df.filter(spec["filter"])
+        complement = valid_df.filter(~spec["filter"])
         sample = subset["forward_return"].to_numpy()
         sample_peak = subset["forward_peak"].to_numpy()
+        baseline_returns_comp = complement["forward_return"].to_numpy()
         n = len(sample)
 
         if n < 5:
@@ -238,11 +240,11 @@ def run_compound_hypothesis_test():
             continue
 
         mean_val = float(np.mean(sample))
-        baseline_mean = float(np.mean(baseline_returns))
+        baseline_mean = float(np.mean(baseline_returns_comp))
         mean_diff = mean_val - baseline_mean
-        t_stat, p_val = stats.ttest_ind(sample, baseline_returns, equal_var=False)
-        d = calculate_cohens_d(sample, baseline_returns)
-        ci_low, ci_high = bootstrap_mean_diff_ci(sample, baseline_returns, n_boot=10000)
+        t_stat, p_val = stats.ttest_ind(sample, baseline_returns_comp, equal_var=False)
+        d = calculate_cohens_d(sample, baseline_returns_comp)
+        ci_low, ci_high = bootstrap_mean_diff_ci(sample, baseline_returns_comp, n_boot=10000)
         win_rate = float(np.sum(sample > 0) / n * 100.0)
         peak_thrust = float(np.mean(sample_peak))
 
