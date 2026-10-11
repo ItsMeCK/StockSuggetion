@@ -143,9 +143,10 @@ def run_daily_debate():
             score = result["score"]
             if score >= 90:
                 print(f"✅ {sym} passed the debate with high conviction! Adding to Anticipatory Watchlist.")
-                add_anticipatory_stock(sym, result["bull_thesis"], result["bear_thesis"], score)
             else:
                 print(f"❌ {sym} failed the debate (Score {score} < 90). Rejected.")
+            # Unconditionally add to db for audit trailing
+            add_anticipatory_stock(sym, result["bull_thesis"], result["bear_thesis"], score)
         
         time.sleep(3) # Rate limit
 

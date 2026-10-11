@@ -21,7 +21,7 @@ class IntradayDebateOrchestrator:
             raise ValueError("GEMINI_API_KEY not set")
         self.client = genai.Client(api_key=api_key)
         self.model = "gemini-3.1-pro-preview"
-        self.fallback_model = "gemini-3.1-flash"
+        self.fallback_model = "gemini-3.5-flash"
         
     async def _generate_with_fallback(self, prompt, config):
         models_to_try = [self.model, self.fallback_model]

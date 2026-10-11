@@ -158,10 +158,10 @@ def add_anticipatory_stock(symbol, bull_thesis, bear_thesis, score):
 def get_anticipatory_watchlist():
     conn = get_db_connection()
     cur = conn.cursor(cursor_factory=RealDictCursor)
-    # Only get stocks added in the last 24 hours
     cur.execute("""
         SELECT * FROM anticipatory_watchlist 
         WHERE added_at > NOW() - INTERVAL '24 hours'
+        AND conviction_score >= 90
         ORDER BY conviction_score DESC
     """)
     rows = cur.fetchall()

@@ -17,29 +17,35 @@ class SovereignEmailer:
         self.port = int(os.getenv("MAIL_PORT", 587))
         self.username = os.getenv("MAIL_USERNAME")
         self.password = os.getenv("MAIL_PASSWORD").replace(" ", "")
-        self.target = os.getenv("TARGET_EMAIL")
+        self.target_string = os.getenv("TARGET_EMAIL", "")
+        self.target_list = [email.strip() for email in self.target_string.split(",")]
         
         import socket
         hostname = socket.gethostname()
         self.env_prefix = "[GCP]" if "sovereign-engine" in hostname else "[LOCAL]"
 
-    def send_scorecard(self, subject: str, signals: list):
+    def send_scorecard(self, subject: str, signals: list, rejected_signals: list = None):
         """
         Signals is a list of dicts from the Librarian.
         Sorted by score descending.
         """
-        if not signals:
+        if not rejected_signals:
+            rejected_signals = []
+            
+        if not signals and not rejected_signals:
             return
 
         # Sort signals by score descending and limit to Top 5
         signals = sorted(signals, key=lambda x: x['score'], reverse=True)[:5]
         
-        logging.info(f"📤 SENDING EMAIL: {subject} | TICKERS: {[s['ticker'] for s in signals]}")
+        logging.info(f"📤 SENDING EMAIL: {subject} | TICKERS: {[s['ticker'] for s in signals]} | REJECTED: {[s['ticker'] for s in rejected_signals]}")
 
         msg = MIMEMultipart("alternative")
         msg["Subject"] = f"{self.env_prefix} 🏛️ SOVEREIGN: {subject}"
         msg["From"] = f"Sovereign Engine <{self.username}>"
-        msg["To"] = self.target
+        msg["To"] = self.target_string
+
+        summary_msg = f"The AI Arbiter has identified <b>{len(signals)}</b> high-conviction targets." if signals else "No candidates cleared the strict conviction thresholds. Capital preserved."
 
         # Create HTML Content
         html = f"""
@@ -48,14 +54,13 @@ class SovereignEmailer:
             <div style="max-width: 650px; margin: auto; background: #151921; padding: 40px; border-radius: 16px; border: 1px solid #2d333b; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                 <div style="text-align: center; border-bottom: 1px solid #2d333b; padding-bottom: 20px; margin-bottom: 30px;">
                     <h1 style="color: #ffffff; font-size: 28px; margin: 0; letter-spacing: 1px;">SOVEREIGN INTELLIGENCE</h1>
-                    <p style="color: #8b949e; font-size: 14px; margin-top: 5px;">Pring Codex v4.0 Institutional Audit</p>
+                    <p style="color: #8b949e; font-size: 14px; margin-top: 5px;">Live Execution Report</p>
                 </div>
                 
                 <div style="background: #1f242d; border-radius: 8px; padding: 15px; margin-bottom: 30px; border: 1px solid #30363d;">
                     <p style="margin: 0; font-size: 13px; color: #58a6ff; font-weight: bold; text-transform: uppercase;">Executive Summary</p>
                     <p style="margin: 5px 0 0 0; color: #c9d1d9; font-size: 15px;">
-                        The Librarian has identified <b>{len(signals)}</b> high-conviction targets. 
-                        {"Priority: Execute Platinum signals at the 12:00 PM Strike." if "12:00" in subject else "Focus: Accumulate Incubators for tomorrow."}
+                        {summary_msg}
                     </p>
                 </div>
         """
@@ -85,23 +90,49 @@ class SovereignEmailer:
                             </td>
                             <td style="text-align: right;">
                                 <div style="font-size: 32px; font-weight: bold; color: {border_color};">{s['score']}</div>
-                                <div style="font-size: 10px; color: #8b949e; text-transform: uppercase;">Pring Score</div>
+                                <div style="font-size: 10px; color: #8b949e; text-transform: uppercase;">Conviction Score</div>
                             </td>
                         </tr>
                     </table>
                     
                     <div style="margin-top: 20px; border-top: 1px solid #30363d; padding-top: 15px;">
-                        <p style="margin: 5px 0; color: #c9d1d9; font-size: 13px;"><b>✅ COMPLIANCE:</b> {", ".join(s['passed'][:5])}...</p>
-                        <p style="margin: 5px 0; color: #8b949e; font-size: 12px;"><b>Institutional Logic:</b> Setups verified against Pring Chapters 6, 11, and 22.</p>
+                        <p style="margin: 5px 0; color: #c9d1d9; font-size: 13px;"><b>✅ CATALYST:</b> {", ".join(s['passed'][:5])}...</p>
                     </div>
                 </div>
             """
+            
+        if rejected_signals:
+            html += """
+                <div style="margin-top: 30px; margin-bottom: 30px;">
+                    <h3 style="color: #8b949e; font-size: 16px; text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid #30363d; padding-bottom: 5px;">🛡️ Cognitive Audit & Veto Registry</h3>
+            """
+            for s in rejected_signals:
+                html += f"""
+                <div style="background: rgba(248, 81, 73, 0.04); border: 1px solid rgba(248, 81, 73, 0.3); border-radius: 6px; padding: 15px; margin-bottom: 10px;">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <span style="font-size: 10px; font-weight: bold; color: #f85149; text-transform: uppercase; padding: 2px 6px; background: rgba(255, 255, 255, 0.05); border-radius: 3px; display: inline-block; margin-bottom: 5px;">🛡️ REJECTED</span>
+                                <h4 style="margin: 0; color: #ffffff; font-size: 16px;">{s['ticker']}</h4>
+                            </td>
+                            <td style="text-align: right; vertical-align: top;">
+                                <div style="font-size: 10px; color: #8b949e; text-transform: uppercase;">Score</div>
+                                <div style="font-size: 16px; font-weight: bold; color: #c9d1d9;">{s['score']}</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p style="margin: 10px 0 0 0; font-size: 13px; color: #8b949e; line-height: 1.4;">
+                        <b>Reason:</b> {s['reason']}
+                    </p>
+                </div>
+                """
+            html += "</div>"
 
         html += """
                 <div style="text-align: center; margin-top: 40px; border-top: 1px solid #2d333b; padding-top: 20px;">
                     <p style="font-size: 11px; color: #484f58; margin: 0;">
                         CONFIDENTIAL INSTITUTIONAL RESEARCH<br>
-                        This report is generated using real-time TimescaleDB OHLCV data.
+                        This report is generated using real-time live market data.
                     </p>
                 </div>
             </div>
@@ -116,8 +147,8 @@ class SovereignEmailer:
             with smtplib.SMTP(self.server, self.port) as server:
                 server.starttls()
                 server.login(self.username, self.password)
-                server.sendmail(self.username, self.target, msg.as_string())
-                logging.info(f"Email Signal Report sent successfully to {self.target}")
+                server.sendmail(self.username, self.target_list, msg.as_string())
+                logging.info(f"Email Signal Report sent successfully to {self.target_string}")
         except Exception as e:
             logging.error(f"Failed to send email: {e}")
 
@@ -144,7 +175,7 @@ class SovereignEmailer:
 
         msg["Subject"] = f"{self.env_prefix} 🏛️ SOVEREIGN: {subject}"
         msg["From"] = f"Sovereign Engine <{self.username}>"
-        msg["To"] = self.target
+        msg["To"] = self.target_string
 
         # Limit to top 2 by conviction score
         if approved_allocations:
@@ -326,8 +357,8 @@ class SovereignEmailer:
             with smtplib.SMTP(self.server, self.port) as server:
                 server.starttls()
                 server.login(self.username, self.password)
-                server.sendmail(self.username, self.target, msg.as_string())
-                logging.info(f"✅ Pulse Scorecard Email sent successfully to {self.target}")
+                server.sendmail(self.username, self.target_list, msg.as_string())
+                logging.info(f"✅ Pulse Scorecard Email sent successfully to {self.target_string}")
         except Exception as e:
             logging.error(f"❌ Failed to send pulse report email: {e}")
 
@@ -338,7 +369,7 @@ class SovereignEmailer:
         msg = MIMEMultipart("alternative")
         msg["Subject"] = f"{self.env_prefix} 🏛️ SOVEREIGN ALERT: {subject}"
         msg["From"] = f"Sovereign Engine <{self.username}>"
-        msg["To"] = self.target
+        msg["To"] = self.target_string
 
         # Create HTML Content
         html = f"""
@@ -371,7 +402,7 @@ class SovereignEmailer:
             with smtplib.SMTP(self.server, self.port) as server:
                 server.starttls()
                 server.login(self.username, self.password)
-                server.sendmail(self.username, self.target, msg.as_string())
+                server.sendmail(self.username, self.target_list, msg.as_string())
                 logging.info(f"✅ Live Alert Email sent: {subject}")
         except Exception as e:
             logging.error(f"❌ Failed to send live alert email: {e}")

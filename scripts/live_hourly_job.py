@@ -124,6 +124,7 @@ def run_hourly_evaluation():
     
     df = df.with_columns([
         pl.col("close").rolling_mean(window_size=20).over("symbol").alias("sma_20"),
+        pl.col("close").ewm_mean(span=50, adjust=False).over("symbol").alias("ema_50"),
         pl.col("close").rolling_std(window_size=20).over("symbol").alias("std_20"),
         pl.col("volume").rolling_mean(window_size=20).over("symbol").alias("vol_avg_20"),
         pl.col("volume").rolling_sum(window_size=3).over("symbol").alias("vol_sum_3"),
@@ -141,6 +142,12 @@ def run_hourly_evaluation():
         (pl.col("close") * pl.col("volume")).rolling_mean(window_size=20*6).over("symbol").alias("atv") # 20-day Average Traded Value proxy
     ])
 
+    # Extension Metrics (To prevent buying Liquidity Sweeps)
+    df = df.with_columns([
+        ((pl.col("close") - pl.col("vwap")) / pl.col("vwap") * 100).alias("vwap_ext_pct"),
+        ((pl.col("close") - pl.col("open").first()) / pl.col("open").first() * 100).over(["symbol", "date"]).alias("intraday_ext_pct")
+    ])
+
     # Dynamic BBW Percentile Calculation
     df = df.with_columns([
         ((pl.col("sma_20") + 2 * pl.col("std_20") - (pl.col("sma_20") - 2 * pl.col("std_20"))) / pl.col("sma_20")).alias("bbw")
@@ -156,6 +163,39 @@ def run_hourly_evaluation():
             (pl.col("high") - pl.col("close").shift(1).over("symbol")).abs(),
             (pl.col("low") - pl.col("close").shift(1).over("symbol")).abs()
         ).alias("true_range")
+    ])
+    df = df.with_columns([
+        pl.col("true_range").rolling_mean(window_size=14).over("symbol").alias("atr_14")
+    ])
+
+    # Dynamic Breakout Energy (Z-Score)
+    df = df.with_columns([
+        (pl.col("volume") / pl.col("vol_avg_20")).alias("vol_expansion"),
+        (pl.col("true_range") / pl.col("atr_14")).alias("range_expansion")
+    ])
+    df = df.with_columns([
+        (pl.col("vol_expansion") * pl.col("range_expansion")).alias("breakout_energy")
+    ])
+    df = df.with_columns([
+        pl.col("breakout_energy").rolling_mean(window_size=50).over("symbol").alias("energy_mean"),
+        pl.col("breakout_energy").rolling_std(window_size=50).over("symbol").alias("energy_std")
+    ])
+    df = df.with_columns([
+        ((pl.col("breakout_energy") - pl.col("energy_mean")) / pl.col("energy_std")).alias("energy_zscore")
+    ])
+
+    # Time-Weighted Volume Decay (TWVD)
+    df = df.with_columns([
+        pl.when(pl.col("close") > pl.col("open")).then(1).otherwise(-1).alias("direction")
+    ])
+    df = df.with_columns([
+        pl.when(pl.col("volume") > 1.5 * pl.col("vol_avg_20"))
+        .then(pl.col("direction") * (pl.col("volume") / pl.col("vol_avg_20")))
+        .otherwise(0)
+        .alias("surge_magnitude")
+    ])
+    df = df.with_columns([
+        pl.col("surge_magnitude").ewm_mean(alpha=0.2, ignore_nulls=True).over("symbol").alias("twvd")
     ])
     df = df.with_columns([
         pl.col("low").shift(1).over("symbol").alias("low_1"),
@@ -185,7 +225,9 @@ def run_hourly_evaluation():
         (pl.col("volume") / pl.col("vol_avg_20")).alias("vol_surge"),
         (pl.col("vol_sum_3") / (3 * pl.col("vol_avg_20"))).alias("vol_surge_3h"),
         ((pl.col("close") - pl.col("sma_20")) / pl.col("sma_20") * 100).alias("dist_sma20"),
-        ((pl.col("high") - pl.max_horizontal(pl.col("open"), pl.col("close"))) / (pl.col("high") - pl.col("low") + 0.0001) * 100).alias("upper_wick_pct")
+        ((pl.col("high") - pl.max_horizontal(pl.col("open"), pl.col("close"))) / (pl.col("high") - pl.col("low") + 0.0001) * 100).alias("upper_wick_pct"),
+        ((pl.min_horizontal(pl.col("open"), pl.col("close")) - pl.col("low")) / (pl.col("high") - pl.col("low") + 0.0001) * 100).alias("lower_wick_pct"),
+        (pl.col("high") - pl.col("low")).alias("candle_range")
     ])
     
     # Get the latest completed candle
@@ -252,13 +294,36 @@ def run_hourly_evaluation():
         (pl.col("close_range_pct") <= 85.0) # Avoid top 15% closes (hiding from screeners)
     )
     
+    # Anti-FOMO Veto: Prevent buying the absolute top of a Liquidity Sweep
+    # 1. Reject if extended > 2.5% above VWAP (Mean Reversion Trap)
+    # 2. Reject if already up > 6.0% intraday from the open (Exhaustion)
+    # 3. Reject if Breakout Energy Z-Score < 1.0 (Low Energy Churn)
+    # 4. Reject if TWVD <= 0 (Persistent Distribution)
+    anti_fomo_filter = (
+        (pl.col("vwap_ext_pct") <= 2.5) & 
+        (pl.col("intraday_ext_pct") <= 6.0) & 
+        (pl.col("energy_zscore") > 1.0) & 
+        (pl.col("twvd") > 0.0)
+    )
+    
+    # 4.3 Liquidity Sweep (The "Dip Before The Rip")
+    # A true institutional stop-hunt footprint
+    liquidity_sweep = (
+        (pl.col("sma_20") > pl.col("ema_50")) &              # Macro uptrend intact
+        (pl.col("low") < pl.col("vwap")) &                   # Action: Swept below VWAP to grab stops
+        (pl.col("close") > pl.col("vwap")) &                 # Action: Recovered above VWAP showing absorption
+        (pl.col("lower_wick_pct") >= 45.0) &                 # Footprint: Massive rejection wick (>45% of candle)
+        (pl.col("candle_range") >= (0.8 * pl.col("atr_14"))) & # Significance: Must be a volatile flush, not a tiny doji
+        (pl.col("vol_surge") > 1.2)                          # Volume: Institutional accumulation footprint
+    )
+
     track_b = (mega_cap_stealth | mid_cap_stealth) & multi_candle_iaf & ma_awareness
     
     # Relative Strength (RS) Divergence: Must outperform Nifty by at least 0.5% over 3 hours
     rs_divergence = (pl.col("ret_3h") > (nifty_ret_3h + 0.5))
     
     breakouts = current_hour_df.filter(
-        base_filter & (track_a | track_b) & rs_divergence
+        base_filter & (track_a | track_b | liquidity_sweep) & rs_divergence & anti_fomo_filter
     ).sort("vol_surge", descending=True).head(4)
     
     valid_symbols = [row['symbol'] for row in breakouts.iter_rows(named=True) if row['symbol'] != "NIFTY 50"]
@@ -306,10 +371,29 @@ def run_hourly_evaluation():
                     close_price = hist[-1]['close'] # latest price for today
                     intraday_return = ((close_price - open_price) / open_price) * 100
                     
-                    if intraday_return < -0.50:
-                        print(f"🛑 REJECTED: {symbol} (Sector {sector_name} is bleeding: {intraday_return:.2f}%)")
+                    # Calculate Nifty 50 Return for Relative Velocity
+                    nifty_return = 0.0
+                    try:
+                        nifty_hist = kite_data.historical_data(
+                            instrument_token=256265,
+                            from_date=f"{today_str} 09:15:00",
+                            to_date=f"{today_str} 15:30:00",
+                            interval="day"
+                        )
+                        if nifty_hist and len(nifty_hist) > 0:
+                            n_open = nifty_hist[0]['open']
+                            n_close = nifty_hist[-1]['close']
+                            nifty_return = ((n_close - n_open) / n_open) * 100
+                    except Exception as e:
+                        print(f"Warning: Failed to fetch NIFTY 50 return for relative velocity: {e}")
+                        
+                    relative_velocity = intraday_return - nifty_return
+                    
+                    # Only reject if both absolute return is negative AND relative velocity is negative (underperforming the drop)
+                    if intraday_return < 0.0 and relative_velocity < 0.0:
+                        print(f"🛑 REJECTED: {symbol} (Sector {sector_name} is bleeding ({intraday_return:.2f}%) and underperforming Nifty ({nifty_return:.2f}%))")
                     else:
-                        print(f"✅ APPROVED: {symbol} (Sector {sector_name} is green: +{intraday_return:.2f}%)")
+                        print(f"✅ APPROVED: {symbol} (Sector {sector_name} Return: {intraday_return:.2f}%, Rel Vel: {relative_velocity:.2f}%)")
                         approved_symbols.append(symbol)
                 else:
                     approved_symbols.append(symbol)
@@ -367,6 +451,9 @@ def run_hourly_evaluation():
             
         valid_symbols = mtf_approved_symbols
 
+    final_approved_trades = []
+    rejected_trades = []
+
     # 5. Intraday Multi-Agent Debate & Execution
     if len(valid_symbols) > 0:
         from agents.intraday_debate.intraday_orchestrator import IntradayDebateOrchestrator
@@ -399,13 +486,20 @@ def run_hourly_evaluation():
                 "arbiter_verdict": res.arbiter_verdict
             })
         
-        # Sort by score descending and take top 2
-        top_trades = sorted(top_trades, key=lambda x: x['conviction_score'], reverse=True)[:2]
+        top_trades = sorted(top_trades, key=lambda x: x['conviction_score'], reverse=True)
+        top_2_trades = top_trades[:2]
+        
         print("\n🚀 FINAL LLM EXECUTION SIGNALS 🚀")
         
-        final_approved_trades = []
+        # Track symbols that Arbiter just didn't rank high enough
+        for trade in top_trades[2:]:
+            rejected_trades.append({
+                "ticker": trade['symbol'],
+                "score": trade['conviction_score'],
+                "reason": "Ranked outside Top 2 by LLM Arbiter"
+            })
         
-        for i, trade in enumerate(top_trades, 1):
+        for i, trade in enumerate(top_2_trades, 1):
             symbol = trade['symbol']
             score = trade['conviction_score']
             print(f"Rank {i}: {symbol} | Score: {score}")
@@ -453,6 +547,11 @@ def run_hourly_evaluation():
             
             if final_score < threshold:
                 print(f"⚠️ {symbol} Final Score ({final_score}) is below the required threshold ({threshold}) for hour {now.hour}. Skipping.")
+                rejected_trades.append({
+                    "ticker": symbol,
+                    "score": round(final_score, 1),
+                    "reason": f"Final Score ({final_score:.1f}) < Threshold ({threshold})"
+                })
                 continue
                 
             # Collect for Email
@@ -470,15 +569,22 @@ def run_hourly_evaluation():
                 entry_time=now
             )
             
-        # Send Email Alert
-        if final_approved_trades:
-            try:
-                from alerts.email_notifier import SovereignEmailer
-                emailer = SovereignEmailer()
-                emailer.send_scorecard(f"Live Hourly Execution ({now.strftime('%H:%M')})", final_approved_trades)
-                print(f"📧 Sent Live Hourly Execution email with {len(final_approved_trades)} approved trades!")
-            except Exception as e:
-                print(f"❌ Failed to send email alert: {e}")
+    else:
+        print("No candidates passed the Math Engine. Skipping AI Debate.")
+        rejected_trades.append({
+            "ticker": "MARKET CHOP (ALL STOCKS)",
+            "score": 0,
+            "reason": "Failed PIM Math Engine Quantitative Filters (Volume Surge & Anti-FOMO extensions)"
+        })
+
+    # Send Email Alert
+    try:
+        from alerts.email_notifier import SovereignEmailer
+        emailer = SovereignEmailer()
+        emailer.send_scorecard(f"Live Hourly Execution ({now.strftime('%H:%M')})", final_approved_trades, rejected_trades)
+        print(f"📧 Sent Live Hourly Execution email with {len(final_approved_trades)} approved trades!")
+    except Exception as e:
+        print(f"❌ Failed to send email alert: {e}")
 
 def squash_old_positions():
     """Squares off all positions except those taken exactly around 15:00."""
