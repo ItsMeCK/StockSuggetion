@@ -145,3 +145,42 @@ def test_grounding_toxic_veto_negation_not_triggered():
     assert approved is True
     assert score >= APPROVAL_THRESHOLD
     assert "ABSOLUTE_VETO" not in rationale
+
+def test_grounding_toxic_veto_advanced_negations_never_refuted():
+    mock_client = MagicMock()
+    mock_resp = MagicMock()
+
+    # The AI summarizes: "There was never any SEBI order" and "accounting fraud allegations were refuted as baseless"
+    mock_json = {
+        "public_catalyst": {
+            "evidence": [{"source": "BSE", "date": "2026-10-11", "fact": "Major expansion approved"}],
+            "confidence": 0.90,
+            "summary": "Expansion greenlit"
+        },
+        "stealth_accumulation": {
+            "evidence": [{"source": "NSE", "date": "2026-10-11", "fact": "Block deal 3% equity"}],
+            "confidence": 0.60,
+            "summary": "Block deal accumulation"
+        },
+        "toxic_catalyst": {
+            "evidence": [
+                {"source": "Exchange", "date": "2026-10-11", "fact": "Management clarified there was never any sebi order"},
+                {"source": "Auditor", "date": "2026-10-11", "fact": "Rumors of accounting fraud were refuted as baseless"}
+            ],
+            "detected": False,
+            "summary": "There was never any SEBI order, rumors refuted"
+        }
+    }
+    mock_resp.text = json.dumps(mock_json)
+
+    rebuttal_resp = MagicMock()
+    rebuttal_resp.text = "CLEAN_ACCUMULATION: Clean institutional accumulation confirmed."
+    mock_client.models.generate_content.side_effect = [mock_resp, rebuttal_resp]
+
+    agent = HardenedGroundingAgent(client=mock_client)
+    approved, score, rationale, audit_data = agent.evaluate_symbol("NEVER_VETO_CORP")
+
+    # 'never' and 'refuted' must properly negate toxic keywords!
+    assert approved is True
+    assert score >= APPROVAL_THRESHOLD
+    assert "ABSOLUTE_VETO" not in rationale

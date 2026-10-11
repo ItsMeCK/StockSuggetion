@@ -177,8 +177,12 @@ Respond with exactly one paragraph. If you find credible evidence of a trap or o
         candidate_texts = [summary] + evidence_items
 
         negation_words = {
-            "no", "not", "none", "neither", "denied", "denies",
-            "cleared", "dismissed", "zero", "without", "unfounded", "clean"
+            "no", "not", "none", "neither", "nor", "never", "denied", "denies", "denying",
+            "cleared", "clearing", "dismissed", "dismissing", "dismisses",
+            "zero", "without", "unfounded", "clean", "false", "untrue", "refuted", "refutes",
+            "baseless", "debunked", "disproved", "disproven", "fake", "hoax",
+            "didn't", "hasn't", "wasn't", "isn't", "aren't", "haven't", "won't", "wouldn't",
+            "didnt", "hasnt", "wasnt", "isnt", "arent", "havent", "wont", "wouldnt"
         }
 
         clause_separators = [" but ", " however ", " yet ", ";", "."]

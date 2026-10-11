@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 
 from core.db_manager import (
     get_all_active_positions, update_position_sl, close_position,
-    update_sl_order_id, update_highest_oi, update_position_profit_locked
+    update_sl_order_id, update_highest_oi, update_position_profit_locked,
+    update_position_qty
 )
 from core.live_trading import get_kite_data_client, get_kite_exec_client
 from alerts.email_notifier import SovereignEmailer
@@ -181,21 +182,28 @@ def monitor_positions():
             # If multi-lot, book 50%
             if decision.book_lot_pct > 0.0 and pos["qty"] > 1:
                 book_qty = int(pos["qty"] * decision.book_lot_pct)
-                if book_qty > 0 and live_buy_flag.lower() == "true":
-                    try:
-                        kite_exec.place_order(
-                            variety=kite_exec.VARIETY_REGULAR,
-                            exchange=kite_exec.EXCHANGE_NFO,
-                            tradingsymbol=opt_symbol,
-                            transaction_type=kite_exec.TRANSACTION_TYPE_SELL,
-                            quantity=book_qty,
-                            product=kite_exec.PRODUCT_NRML,
-                            order_type=kite_exec.ORDER_TYPE_MARKET
-                        )
-                        print(f"✅ Booked {book_qty} lots at Tier 1 profit target")
-                        pos["qty"] -= book_qty
-                    except Exception as e:
-                        print(f"Warning: Failed partial profit booking order: {e}")
+                if book_qty > 0:
+                    if live_buy_flag.lower() == "true":
+                        try:
+                            kite_exec.place_order(
+                                variety=kite_exec.VARIETY_REGULAR,
+                                exchange=kite_exec.EXCHANGE_NFO,
+                                tradingsymbol=opt_symbol,
+                                transaction_type=kite_exec.TRANSACTION_TYPE_SELL,
+                                quantity=book_qty,
+                                product=kite_exec.PRODUCT_NRML,
+                                order_type=kite_exec.ORDER_TYPE_MARKET
+                            )
+                            print(f"✅ Booked {book_qty} lots at Tier 1 profit target")
+                        except Exception as e:
+                            print(f"Warning: Failed partial profit booking order: {e}")
+                    else:
+                        print(f"Paper mode: Simulated partial booking of {book_qty} lots for {opt_symbol}")
+
+                    # Invariant: Persist reduced quantity to database immediately so subsequent ticks/runs match broker state!
+                    pos["qty"] -= book_qty
+                    update_position_qty(pos["order_id"], pos["qty"])
+                    print(f"💾 Persisted reduced quantity {pos['qty']} to database for {order_id}")
 
             # Ratchet SL
             new_sl = decision.new_sl

@@ -58,11 +58,12 @@ def test_monitor_positions_triggers_hard_stop(mock_emailer, mock_exec, mock_data
 @patch("scripts.monitor_positions.update_highest_oi")
 @patch("scripts.monitor_positions.update_position_sl")
 @patch("scripts.monitor_positions.update_position_profit_locked")
+@patch("scripts.monitor_positions.update_position_qty")
 @patch("scripts.monitor_positions.get_all_active_positions")
 @patch("scripts.monitor_positions.get_kite_data_client")
 @patch("scripts.monitor_positions.get_kite_exec_client")
 @patch("scripts.monitor_positions.SovereignEmailer")
-def test_monitor_positions_triggers_profit_lock(mock_emailer, mock_exec, mock_data, mock_get_positions, mock_update_lock, mock_update_sl, mock_update_oi):
+def test_monitor_positions_triggers_profit_lock(mock_emailer, mock_exec, mock_data, mock_get_positions, mock_update_qty, mock_update_lock, mock_update_sl, mock_update_oi):
     pos = {
         "order_id": "ORD_102",
         "sl_order_id": "SL_102",
@@ -97,3 +98,6 @@ def test_monitor_positions_triggers_profit_lock(mock_emailer, mock_exec, mock_da
     assert sl_kwargs.get("trailing_active") is True or (len(sl_args) > 3 and sl_args[3] is True)
 
     mock_update_lock.assert_called_once_with("ORD_102", profit_locked=True)
+    
+    # Invariant: Reduced quantity (175 - 87 = 88) must be persisted to database!
+    mock_update_qty.assert_called_once_with("ORD_102", 88)

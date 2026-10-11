@@ -568,12 +568,14 @@ def run_hourly_evaluation():
                 "passed": [trade.get('catalyst_summary', "Quantitative Breakout")]
             })
                 
-            # Execute LIVE
+            # Execute trade (Engine 1 Hourly - strictly routed to Paper Simulation by Risk Gatekeeper)
             execute_trade(
                 symbol=symbol, 
                 score=score, 
                 catalyst=trade['catalyst_summary'],
-                entry_time=now
+                entry_time=now,
+                holding_type="TYPE_A_SCALP",
+                engine_type="ENGINE_1_HOURLY"
             )
             
     else:

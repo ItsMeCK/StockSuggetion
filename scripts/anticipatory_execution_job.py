@@ -109,8 +109,8 @@ def run_anticipatory_execution():
             approved, score, rationale, audit_data = grounding_agent.evaluate_symbol(sym)
             print(f"Grounding Verdict for {sym}: {rationale}")
             if approved:
-                # Execute Trade as TYPE_C_BTST
-                execute_trade(symbol=sym, score=score, catalyst=rationale, entry_time=datetime.now(), holding_type="TYPE_C_BTST")
+                # Execute Trade as TYPE_C_BTST (Engine 2 BTST)
+                execute_trade(symbol=sym, score=score, catalyst=rationale, entry_time=datetime.now(), holding_type="TYPE_C_BTST", engine_type="ENGINE_2_BTST")
                 
                 final_approved_trades.append({
                     "ticker": sym,

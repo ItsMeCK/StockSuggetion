@@ -24,15 +24,22 @@ def get_kite_exec_client():
     kite.set_access_token(access_token)
     return kite
 
-def execute_trade(symbol, score, catalyst, entry_time, holding_type="TYPE_A_SCALP"):
+from core.risk_gatekeeper import CapitalRiskGatekeeper
+from core.db_manager import save_active_position
+
+def execute_trade(symbol, score, catalyst, entry_time, holding_type="TYPE_A_SCALP", engine_type=None):
     """
     Executes a trade by finding an option contract
-    using the Data account, and places a market BUY order using the Exec account.
+    using the Data account, and enforces CapitalRiskGatekeeper before placing
+    any live order on the Exec account.
     """
+    if engine_type is None:
+        engine_type = "ENGINE_2_BTST" if holding_type == "TYPE_C_BTST" else "ENGINE_1_HOURLY"
+
     kite_data = get_kite_data_client()
     kite_exec = get_kite_exec_client()
     
-    print(f"[{entry_time}] 🚀 Initiating Live Execution for {symbol} (Score: {score})")
+    print(f"[{entry_time}] 🚀 Initiating Execution for {symbol} (Score: {score} | Engine: {engine_type})")
     
     # 1. Fetch current Spot Price using Data Account
     try:
@@ -95,8 +102,50 @@ def execute_trade(symbol, score, catalyst, entry_time, holding_type="TYPE_A_SCAL
     status = "PAPER_TRADED"
     
     initial_sl_price = round(entry_premium * 0.50, 1) # Tick size rounding
-    
+
+    # 4.1 Enforce CapitalRiskGatekeeper
+    gatekeeper = CapitalRiskGatekeeper()
+    free_cash = 0.0
+    total_equity = 27216.0
+
     if live_buy_flag.lower() == "true":
+        try:
+            margins = kite_exec.margins(segment="equity")
+            free_cash = float(margins.get("available", {}).get("cash", 0.0))
+            total_equity = float(margins.get("net", total_equity))
+        except Exception as e:
+            print(f"Warning: Could not fetch real-time margins from Zerodha: {e}")
+
+    # Evaluate capital allocation through gatekeeper
+    eval_cash = free_cash if live_buy_flag.lower() == "true" else 10000.0
+    is_approved, allocated_capital, gate_reason = gatekeeper.evaluate_entry(
+        engine_type=engine_type,
+        free_cash=eval_cash,
+        total_equity=total_equity
+    )
+    print(f"🛡️ Capital Risk Gatekeeper ({engine_type}): Approved={is_approved}, Allocated=₹{allocated_capital:.2f} | Reason: {gate_reason}")
+
+    # Fail-Closed Live Money Condition:
+    # 1. LIVE_BUY must be True
+    # 2. Gatekeeper must approve
+    # 3. Allocated capital must be > 0 (ONLY ENGINE_2_BTST passes this; ENGINE_1_HOURLY gets ₹0)
+    is_live_order_authorized = (
+        live_buy_flag.lower() == "true" and 
+        is_approved and 
+        allocated_capital > 0.0
+    )
+
+    if live_buy_flag.lower() == "true" and not is_approved:
+        print(f"🛑 Live Execution VETOED by Gatekeeper: {gate_reason}")
+        return
+
+    if is_live_order_authorized:
+        lot_cost = entry_premium * lot_size
+        if allocated_capital < lot_cost:
+            print(f"⚠️ Warning: Allocated capital ₹{allocated_capital:.2f} < Lot Cost ₹{lot_cost:.2f}. Falling back to PAPER simulation.")
+            is_live_order_authorized = False
+
+    if is_live_order_authorized:
         try:
             # Institutional High-Watermark Entry (Anti-Chasing)
             # We don't buy the exact close. We wait for it to break 1% higher to confirm momentum continuation.
@@ -142,7 +191,10 @@ def execute_trade(symbol, score, catalyst, entry_time, holding_type="TYPE_A_SCAL
             print(f"⚠️ Warning: Position is unprotected. Please add SL manually when Buy order fills.")
             sl_order_id = "FAILED"
     else:
-        print(f"LIVE_BUY is False. Simulating paper order: {order_id}")
+        if engine_type != "ENGINE_2_BTST":
+            print(f"🔒 Live Capital Gate Enforced: {engine_type} is ₹0 live capital. Simulating paper order: {order_id}")
+        else:
+            print(f"LIVE_BUY is False. Simulating paper order: {order_id}")
         
     # 5. Save Position State to Postgres
     position = {
@@ -168,7 +220,6 @@ def execute_trade(symbol, score, catalyst, entry_time, holding_type="TYPE_A_SCAL
         "initial_volume": initial_volume
     }
     
-    from core.db_manager import save_active_position
     try:
         save_active_position(position)
         print(f"✅ Position saved to Database: {order_id} (SL: {sl_order_id})")

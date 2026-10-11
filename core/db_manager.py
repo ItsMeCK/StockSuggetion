@@ -125,6 +125,18 @@ def update_position_profit_locked(order_id, profit_locked=True):
     cur.close()
     conn.close()
 
+def update_position_qty(order_id, new_qty):
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        UPDATE trades
+        SET qty = %s
+        WHERE order_id = %s
+    """, (new_qty, order_id))
+    conn.commit()
+    cur.close()
+    conn.close()
+
 def update_sl_order_id(order_id, new_sl_order_id):
     conn = get_db_connection()
     cur = conn.cursor()
