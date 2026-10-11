@@ -203,3 +203,35 @@ def get_anticipatory_watchlist():
     cur.close()
     conn.close()
     return rows
+
+def update_entry_fill(order_id, fill_price, new_sl=None, new_sl_order_id=None):
+    conn = get_db_connection()
+    cur = conn.cursor()
+    if new_sl is not None and new_sl_order_id is not None:
+        cur.execute("""
+            UPDATE trades
+            SET entry_premium = %s, current_sl = %s, sl_order_id = %s
+            WHERE order_id = %s
+        """, (fill_price, new_sl, new_sl_order_id, order_id))
+    elif new_sl is not None:
+        cur.execute("""
+            UPDATE trades
+            SET entry_premium = %s, current_sl = %s
+            WHERE order_id = %s
+        """, (fill_price, new_sl, order_id))
+    elif new_sl_order_id is not None:
+        cur.execute("""
+            UPDATE trades
+            SET entry_premium = %s, sl_order_id = %s
+            WHERE order_id = %s
+        """, (fill_price, new_sl_order_id, order_id))
+    else:
+        cur.execute("""
+            UPDATE trades
+            SET entry_premium = %s
+            WHERE order_id = %s
+        """, (fill_price, order_id))
+    conn.commit()
+    cur.close()
+    conn.close()
+
