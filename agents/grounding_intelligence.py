@@ -79,7 +79,7 @@ You MUST respond ONLY with valid JSON in this exact structure, with no markdown 
         raw_response = ""
         try:
             response = self.client.models.generate_content(
-                model='gemini-2.5-flash',
+                model='gemini-3.6-flash',
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     tools=[{"google_search": {}}],
@@ -149,7 +149,7 @@ Find the counter-thesis: Is this volume a retail bull trap, an operator pump-and
 Respond with exactly one paragraph. If you find credible evidence of a trap or offloading, start with 'RETAIL_TRAP_CONFIRMED:' or 'DISTRIBUTION_DETECTED:'. Otherwise start with 'CLEAN_ACCUMULATION:'."""
         try:
             resp = self.client.models.generate_content(
-                model='gemini-2.5-flash',
+                model='gemini-3.6-flash',
                 contents=prompt,
                 config=types.GenerateContentConfig(temperature=0.0)
             )
