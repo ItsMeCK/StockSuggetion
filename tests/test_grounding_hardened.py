@@ -109,6 +109,8 @@ def test_grounding_deterministic_toxic_veto():
     assert score == 0.0
     assert "ABSOLUTE_VETO" in rationale
     assert "toxic" in rationale.lower()
+    assert "2026-10-11" in rationale
+    assert "SEBI" in rationale
 
 def test_grounding_toxic_veto_negation_not_triggered():
     mock_client = MagicMock()

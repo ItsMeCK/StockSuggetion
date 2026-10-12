@@ -111,7 +111,21 @@ You MUST respond ONLY with valid JSON in this exact structure, with no markdown 
         if toxic_flag:
             final_score = 0.0
             verdict = False
-            rationale = f"ABSOLUTE_VETO: Toxic regulatory/fraud catalyst detected: {toxic_cat.get('summary', 'Unknown')}"
+            evidence_items = []
+            for item in toxic_cat.get("evidence", []):
+                if isinstance(item, dict):
+                    dt = item.get("date", "")
+                    src = item.get("source", "")
+                    fct = item.get("fact", "")
+                    prefix = f"[{dt} | {src}]" if dt or src else ""
+                    if prefix and fct:
+                        evidence_items.append(f"{prefix} {fct}")
+                    elif prefix:
+                        evidence_items.append(prefix)
+                    elif fct:
+                        evidence_items.append(fct)
+            ev_str = f" Evidence: {'; '.join(evidence_items)}" if evidence_items else ""
+            rationale = f"ABSOLUTE_VETO: Toxic regulatory/fraud catalyst detected: {toxic_cat.get('summary', 'Unknown')}.{ev_str}".strip()
             self._log_audit(symbol, now_str, raw_response, parsed, final_score, verdict, rationale)
             return verdict, final_score, rationale, parsed
 
