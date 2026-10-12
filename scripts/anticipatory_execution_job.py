@@ -71,8 +71,8 @@ def run_anticipatory_execution():
     insider_breakouts = current_hour_df.filter(
         # 1. Closing near HOD (Top 15% of range, no supply)
         (pl.col("close_to_high_ratio") > 0.85) &
-        # 2. Slow Grind (steady accumulation, not massive retail spike)
-        (pl.col("vol_surge") > 1.2) & (pl.col("vol_surge") < 3.0) &
+        # 2. Volume expansion (at least 1.2x, no upper cap for 3 PM run)
+        (pl.col("vol_surge") > 1.2) &
         # 3. Structural Integrity (Green candle, above 20 SMA)
         (pl.col("close") > pl.col("open")) &
         (pl.col("close") > pl.col("sma_20")) &
@@ -100,24 +100,28 @@ def run_anticipatory_execution():
         return
 
     for sym in candidates:
-        if len(final_approved_trades) >= slots_available:
-            print(f"🎯 Reached maximum available execution slots ({slots_available}). Stopping search.")
-            break
-            
         print(f"\n🌍 Running Hardened 3D Grounding Evaluation for {sym}...")
         try:
             approved, score, rationale, audit_data = grounding_agent.evaluate_symbol(sym)
             print(f"Grounding Verdict for {sym}: {rationale}")
             if approved:
-                # Execute Trade as TYPE_C_BTST (Engine 2 BTST)
-                execute_trade(symbol=sym, score=score, catalyst=rationale, entry_time=datetime.now(), holding_type="TYPE_C_BTST", engine_type="ENGINE_2_BTST")
-                
-                final_approved_trades.append({
-                    "ticker": sym,
-                    "score": score,
-                    "passed": [rationale]
-                })
-                print(f"✅ APPROVED: {sym} (Score: {score:.1f})")
+                if len(final_approved_trades) < slots_available:
+                    # Execute Trade as TYPE_C_BTST (Engine 2 BTST)
+                    execute_trade(symbol=sym, score=score, catalyst=rationale, entry_time=datetime.now(), holding_type="TYPE_C_BTST", engine_type="ENGINE_2_BTST")
+                    
+                    final_approved_trades.append({
+                        "ticker": sym,
+                        "score": score,
+                        "passed": [rationale]
+                    })
+                    print(f"✅ APPROVED & EXECUTED: {sym} (Score: {score:.1f})")
+                else:
+                    print(f"ℹ️ APPROVED but slots full ({slots_available}): {sym} (Score: {score:.1f})")
+                    final_approved_trades.append({
+                        "ticker": sym,
+                        "score": score,
+                        "passed": [f"APPROVED (Slots Full): {rationale}"]
+                    })
             else:
                 rejected_trades.append({
                     "ticker": sym,
