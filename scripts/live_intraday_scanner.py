@@ -116,5 +116,28 @@ def main():
     for l in laggards[:5]:
         print(f"Stock: {l['symbol']:12s} | Price: ₹{l['ltp']:<7.2f} | Change: {l['change']:+.2f}% | Open-to-LTP: {l['open_to_ltp']:+.2f}% | Order Book: {l['ratio']:.2f}x | Vol: {l['volume']:,}")
 
+    # Send Email Notification if candidates found
+    if leaders or laggards:
+        try:
+            from alerts.email_notifier import SovereignEmailer
+            emailer = SovereignEmailer()
+            
+            html = "<h3>🌅 09:25 AM Morning Momentum Scanner</h3>"
+            if leaders:
+                html += "<h4 style='color: #3fb950;'>🚀 Long Breakout Candidates (CE)</h4><ul>"
+                for l in leaders[:5]:
+                    html += f"<li><b>{l['symbol']}</b>: ₹{l['ltp']:.2f} ({l['change']:+.2f}%) | Open-to-LTP: {l['open_to_ltp']:+.2f}% | Depth Ratio: {l['ratio']:.2f}x</li>"
+                html += "</ul>"
+            if laggards:
+                html += "<h4 style='color: #f85149;'>📉 Short Breakdown Candidates (PE)</h4><ul>"
+                for l in laggards[:5]:
+                    html += f"<li><b>{l['symbol']}</b>: ₹{l['ltp']:.2f} ({l['change']:+.2f}%) | Open-to-LTP: {l['open_to_ltp']:+.2f}% | Depth Ratio: {l['ratio']:.2f}x</li>"
+                html += "</ul>"
+                
+            emailer.send_live_alert("09:25 AM Morning Momentum Scan", html)
+            print("\n📧 Successfully sent 09:25 AM Morning Momentum email alert!")
+        except Exception as e:
+            print(f"\n⚠️ Could not send morning email alert: {e}")
+
 if __name__ == "__main__":
     main()
