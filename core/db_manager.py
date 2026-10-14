@@ -90,16 +90,20 @@ def save_active_position(position_dict):
     conn.close()
 
 def get_all_active_positions():
-    conn = get_db_connection()
-    cur = conn.cursor(cursor_factory=RealDictCursor)
-    cur.execute("""
-        SELECT * FROM trades 
-        WHERE status IN ('LIVE_TRADED', 'PAPER_TRADED')
-    """)
-    rows = cur.fetchall()
-    cur.close()
-    conn.close()
-    return rows
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor(cursor_factory=RealDictCursor)
+        cur.execute("""
+            SELECT * FROM trades 
+            WHERE status IN ('LIVE_TRADED', 'PAPER_TRADED')
+        """)
+        rows = cur.fetchall()
+        cur.close()
+        conn.close()
+        return rows
+    except Exception as e:
+        print(f"⚠️ Warning: Database error in get_all_active_positions ({e}). Returning empty list.")
+        return []
 
 def update_position_sl(order_id, new_sl, highest_high, trailing_active):
     conn = get_db_connection()

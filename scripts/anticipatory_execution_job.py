@@ -15,17 +15,21 @@ def run_anticipatory_execution():
     print(f"🕒 RUNNING 3:15 PM INSIDER SNIPER AT: {datetime.now()}")
     print(f"==================================================")
     
-    # 1. Risk Management (Max 2 trades total across the entire system)
-    active_positions = get_all_active_positions()
-    current_active_count = len(active_positions)
-    max_trades = 2
-    
-    if current_active_count >= max_trades:
-        print(f"🚫 Risk Management: Already holding {current_active_count} trades. Max allowed is {max_trades}. Skipping execution.")
-        return
+    # 1. Clean up any expired daytime intraday trades (Type A/B)
+    try:
+        active_positions = get_all_active_positions()
+        from scripts.btst_liquidator import is_btst_position
+        from core.db_manager import close_position
         
-    slots_available = max_trades - current_active_count
-    print(f"🛡️ Slots available for execution: {slots_available}")
+        for pos in active_positions:
+            if not is_btst_position(pos):
+                print(f"🧹 Closing expired intraday position at 15:15: {pos.get('option_symbol', pos.get('symbol'))}")
+                try:
+                    close_position(pos, pos.get("entry_premium", 0.0), 0.0, "EOD_INTRADAY_EXPIRY")
+                except Exception as e:
+                    print(f"Warning closing expired position: {e}")
+    except Exception as e:
+        print(f"Warning during position cleanup: {e}")
     
     # 2. Ingest Latest Data (Crucial at 3:15 PM)
     print("📥 Triggering live data ingestion to fetch the 14:15 - 15:15 candle...")
@@ -105,23 +109,15 @@ def run_anticipatory_execution():
             approved, score, rationale, audit_data = grounding_agent.evaluate_symbol(sym)
             print(f"Grounding Verdict for {sym}: {rationale}")
             if approved:
-                if len(final_approved_trades) < slots_available:
-                    # Execute Trade as TYPE_C_BTST (Engine 2 BTST)
-                    execute_trade(symbol=sym, score=score, catalyst=rationale, entry_time=datetime.now(), holding_type="TYPE_C_BTST", engine_type="ENGINE_2_BTST")
-                    
-                    final_approved_trades.append({
-                        "ticker": sym,
-                        "score": score,
-                        "passed": [rationale]
-                    })
-                    print(f"✅ APPROVED & EXECUTED: {sym} (Score: {score:.1f})")
-                else:
-                    print(f"ℹ️ APPROVED but slots full ({slots_available}): {sym} (Score: {score:.1f})")
-                    final_approved_trades.append({
-                        "ticker": sym,
-                        "score": score,
-                        "passed": [f"APPROVED (Slots Full): {rationale}"]
-                    })
+                # Execute Trade as TYPE_C_BTST (Engine 2 BTST)
+                execute_trade(symbol=sym, score=score, catalyst=rationale, entry_time=datetime.now(), holding_type="TYPE_C_BTST", engine_type="ENGINE_2_BTST")
+                
+                final_approved_trades.append({
+                    "ticker": sym,
+                    "score": score,
+                    "passed": [rationale]
+                })
+                print(f"✅ APPROVED & EXECUTED: {sym} (Score: {score:.1f})")
             else:
                 rejected_trades.append({
                     "ticker": sym,

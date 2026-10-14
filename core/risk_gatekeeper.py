@@ -47,7 +47,9 @@ class CapitalRiskGatekeeper:
                 logging.error(f"Failed to query active positions from DB: {e}. Failing closed to safeguard capital.")
                 return False, 0.0, f"DB_UNAVAILABLE_FAIL_CLOSED: {e}"
         
-        active_count = len(active_positions)
+        # Concurrency Check: Only count live capital positions; daytime paper trades (10:15 - 14:15) do not consume live slots
+        live_positions = [p for p in active_positions if p.get("status") == "LIVE_TRADED"]
+        active_count = len(live_positions) if any("status" in p for p in active_positions) else len(active_positions)
         if active_count >= self.max_concurrency:
             return False, 0.0, f"CONCURRENCY_CAP_REACHED: System holds {active_count} active positions (Max allowed: {self.max_concurrency})"
 

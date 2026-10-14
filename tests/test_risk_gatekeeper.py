@@ -67,6 +67,22 @@ def test_concurrency_cap_max_2_trades():
     assert approved is False
     assert "CONCURRENCY_CAP_REACHED" in reason
 
+def test_paper_trades_do_not_block_live_concurrency_cap():
+    gatekeeper = CapitalRiskGatekeeper(max_concurrency=2)
+    # Daytime paper trades (10:15 - 14:15) have status="PAPER_TRADED"
+    approved, capital, reason = gatekeeper.evaluate_entry(
+        engine_type="ENGINE_2_BTST",
+        free_cash=15000.0,
+        total_equity=27216.0,
+        active_positions=[
+            {"order_id": "PAPER_1", "status": "PAPER_TRADED"},
+            {"order_id": "PAPER_2", "status": "PAPER_TRADED"}
+        ]
+    )
+    assert approved is True
+    assert capital > 0.0
+    assert "CONCURRENCY_CAP_REACHED" not in reason
+
 def test_5_pct_daily_drawdown_circuit_breaker():
     gatekeeper = CapitalRiskGatekeeper(daily_loss_limit_pct=0.05)
     # Total equity ₹27,216 -> 5% is ₹1,360.80
