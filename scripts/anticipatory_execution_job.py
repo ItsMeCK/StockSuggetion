@@ -77,8 +77,10 @@ def run_anticipatory_execution():
         ).alias("close_to_high_ratio")
     ])
     
-    # Apply the 4-part Filter
+    # Apply the 4-part Filter (and exclude low-beta defensives)
+    from core.watchlist_manager import DEFAULT_DEFENSIVE_BLACKLIST
     insider_breakouts = current_hour_df.filter(
+        (~pl.col("symbol").is_in(list(DEFAULT_DEFENSIVE_BLACKLIST))) &
         # 1. Closing near HOD (Top 15% of range, no supply)
         (pl.col("close_to_high_ratio") > 0.85) &
         # 2. Volume expansion (at least 1.2x, no upper cap for 3 PM run)

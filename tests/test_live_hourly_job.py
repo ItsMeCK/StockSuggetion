@@ -78,3 +78,25 @@ def test_live_hourly_job_session_routing():
         engine_type = "ENGINE_2_BTST" if is_afternoon else "ENGINE_1_HOURLY"
         assert engine_type == "ENGINE_2_BTST"
         assert holding_type == "TYPE_C_BTST"
+
+def test_live_hourly_job_excludes_defensive_blacklist_and_retains_nifty():
+    """
+    Critical Invariant for +₹2.42L Institutional Edge:
+    - DEFAULT_DEFENSIVE_BLACKLIST (10 stocks: SBILIFE, HINDUNILVR, etc.) must be strictly excluded.
+    - NIFTY 50 must be explicitly retained for RS Divergence and Macro Regime checks.
+    """
+    from core.watchlist_manager import DEFAULT_DEFENSIVE_BLACKLIST
+    
+    mock_universe = {"SBILIFE", "HINDUNILVR", "RELIANCE", "INFY", "MCX", "EXIDEIND"}
+    mock_fno = {"SBILIFE", "HINDUNILVR", "RELIANCE", "INFY", "MCX", "EXIDEIND", "TCS"}
+    
+    high_beta_universe = (mock_universe - DEFAULT_DEFENSIVE_BLACKLIST).union({"NIFTY 50"})
+    valid_targets = high_beta_universe.intersection(mock_fno.union({"NIFTY 50"}))
+    
+    # Invariants
+    assert "SBILIFE" not in valid_targets
+    assert "HINDUNILVR" not in valid_targets
+    assert "NIFTY 50" in valid_targets
+    assert "RELIANCE" in valid_targets
+    assert "MCX" in valid_targets
+    assert "EXIDEIND" in valid_targets

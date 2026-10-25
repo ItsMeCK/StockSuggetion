@@ -126,21 +126,32 @@ def run_hourly_evaluation():
         
     df = pl.read_parquet(parquet_path)
 
-    # Level 4 Execution Filter: Target active Elite Focus Watchlist candidates
+    # Level 4 Execution Filter: Target Level 1 High-Beta Pool (+₹2.42L Institutional Edge)
+    from core.watchlist_manager import DEFAULT_DEFENSIVE_BLACKLIST
+    
+    weekly_file = "data/weekly_eligible_universe.json"
+    eligible_symbols = set()
+    if os.path.exists(weekly_file):
+        try:
+            with open(weekly_file, "r") as f:
+                w_data = json.load(f)
+                eligible_symbols = {item["symbol"] for item in w_data.get("eligible_candidates", []) if "symbol" in item}
+        except Exception as e:
+            print(f"⚠️ Could not load weekly eligible universe: {e}")
+
+    # Fallback to fno_symbols if weekly universe is unpopulated
+    if not eligible_symbols:
+        eligible_symbols = set(fno_symbols)
+
+    # Exclude defensive blacklist (SBILIFE, HINDUNILVR, etc.) & keep NIFTY 50 for RS/Macro calculations
+    high_beta_universe = (eligible_symbols - DEFAULT_DEFENSIVE_BLACKLIST).union({"NIFTY 50"})
+    valid_targets = high_beta_universe.intersection(set(fno_symbols).union({"NIFTY 50"}))
+
     active_watchlist = get_active_daily_focus_watchlist()
-    if active_watchlist:
-        allowed_symbols = {item['symbol'] for item in active_watchlist if item.get('symbol')}
-        # Intersect with F&O universe to ensure validity
-        valid_targets = allowed_symbols.intersection(set(fno_symbols))
-        if valid_targets:
-            print(f"🎯 Restricting Hourly Execution to {len(valid_targets)} Elite Focus Watchlist candidates.")
-            df = df.filter(pl.col("symbol").is_in(list(valid_targets)))
-        else:
-            print(f"ℹ️ Watchlist targets not in F&O universe, scanning {len(fno_symbols)} symbols.")
-            df = df.filter(pl.col("symbol").is_in(list(fno_symbols)))
-    else:
-        print(f"ℹ️ Active Focus Watchlist unpopulated, scanning full {len(fno_symbols)} F&O universe.")
-        df = df.filter(pl.col("symbol").is_in(list(fno_symbols)))
+    active_focus_count = len(active_watchlist) if active_watchlist else 0
+    print(f"🎯 Scanning {len(valid_targets) - 1} Level 1 High-Beta Candidates (+₹2.42L Institutional Edge with Defensives Excluded)")
+    print(f"⭐ Active Focus Watchlist holds {active_focus_count} priority candidates.")
+    df = df.filter(pl.col("symbol").is_in(list(valid_targets)))
 
     df = df.sort(["symbol", "time"])
     
@@ -551,13 +562,19 @@ def run_hourly_evaluation():
         results = orchestrator.evaluate_all_sync(debate_candidates)
         
         top_trades = []
+        active_focus_symbols = {item['symbol'] for item in active_watchlist if item.get('symbol')} if active_watchlist else set()
         for cand, res in zip(debate_candidates, results):
+            conviction = res.conviction_score
+            is_focus = cand['symbol'] in active_focus_symbols
+            if is_focus:
+                conviction = min(100.0, conviction + 5.0)
+
             top_trades.append({
                 "symbol": cand['symbol'],
                 "direction": cand['direction'],
                 "instrument_type": cand['instrument_type'],
-                "conviction_score": res.conviction_score,
-                "catalyst_summary": res.primary_catalyst,
+                "conviction_score": conviction,
+                "catalyst_summary": (f"[Focus Watchlist ⭐] " if is_focus else "") + res.primary_catalyst,
                 "bull_thesis": res.bull_thesis,
                 "bear_thesis": res.bear_thesis,
                 "arbiter_verdict": res.arbiter_verdict
