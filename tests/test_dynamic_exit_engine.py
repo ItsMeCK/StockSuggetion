@@ -83,3 +83,13 @@ def test_profit_lock_already_fired_guard():
     decision = engine.evaluate_position(pos, ltp=122.0)
     assert decision.action != "PROFIT_LOCK"
     assert decision.action in ("HOLD", "UPDATE_TRAILING_SL")
+
+def test_statutory_friction_exact_calculation():
+    from core.dynamic_exit_engine import calculate_statutory_friction
+    # Scenario: 1,000 units at Rs 60 premium (Claude benchmark: ~Rs 190 round trip)
+    friction = calculate_statutory_friction(buy_premium=60.0, sell_premium=60.0, qty=1000)
+    assert friction["brokerage"] == 40.0
+    assert friction["stt"] == 90.0 # 0.15% on Rs 60,000 sell
+    assert 185.0 <= friction["total_cost"] <= 195.0
+    assert friction["cost_per_unit"] < 0.20 # Less than 0.20 premium points
+

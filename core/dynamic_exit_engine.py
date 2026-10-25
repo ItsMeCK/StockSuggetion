@@ -10,6 +10,44 @@ class ExitDecision:
     new_sl: Optional[float] = None
     book_lot_pct: float = 0.0
 
+def calculate_statutory_friction(
+    buy_premium: float,
+    sell_premium: float,
+    qty: int,
+    brokerage_per_order: float = 20.0
+) -> Dict[str, float]:
+    """
+    Computes exact round-trip statutory costs on NSE Options as of Oct 2026 (Claude Requirement V4):
+    - Brokerage: Rs 20 per order (both sides = Rs 40)
+    - STT: 0.15% on sell-side turnover (effective 1 Apr 2026)
+    - NSE Transaction Charge: 0.03553% on both buy and sell turnover
+    - GST: 18% on (Brokerage + NSE charges + SEBI charges)
+    - Stamp Duty: 0.003% on buy-side turnover
+    - SEBI Turnover Fee: Rs 10 per crore (0.0001%)
+    """
+    buy_turnover = buy_premium * qty
+    sell_turnover = sell_premium * qty
+    total_turnover = buy_turnover + sell_turnover
+
+    brokerage = brokerage_per_order * 2.0
+    stt = sell_turnover * 0.0015
+    nse_charges = total_turnover * 0.0003553
+    sebi_charges = total_turnover * 0.000001
+    stamp_duty = buy_turnover * 0.00003
+    gst = (brokerage + nse_charges + sebi_charges) * 0.18
+
+    total_cost = brokerage + stt + nse_charges + sebi_charges + stamp_duty + gst
+    return {
+        "brokerage": round(brokerage, 2),
+        "stt": round(stt, 2),
+        "nse_charges": round(nse_charges, 2),
+        "gst": round(gst, 2),
+        "stamp_duty": round(stamp_duty, 2),
+        "sebi_charges": round(sebi_charges, 2),
+        "total_cost": round(total_cost, 2),
+        "cost_per_unit": round(total_cost / qty, 3) if qty > 0 else 0.0
+    }
+
 class DynamicOptionExitEngine:
     """
     4-Tier Dynamic Option Exit Engine (v3.3.0-PROD)

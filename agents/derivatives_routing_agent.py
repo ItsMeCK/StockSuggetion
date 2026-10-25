@@ -17,21 +17,33 @@ def calculate_bs_call_delta(spot: float, strike: float, dte_days: float, r: floa
     d1 = (math.log(spot / strike) + (r + 0.5 * iv ** 2) * t) / (iv * math.sqrt(t))
     return float(norm.cdf(d1))
 
-def select_optimal_strike(fno_insts: list, entry_price: float, today_dt: date = None):
+def calculate_bs_put_delta(spot: float, strike: float, dte_days: float, r: float = 0.07, iv: float = 0.30) -> float:
+    """Calculates Black-Scholes put option delta (returns negative delta, e.g. -0.65 for ITM put)."""
+    if dte_days <= 0 or spot <= 0 or strike <= 0 or iv <= 0:
+        return -0.50 if spot <= strike else 0.0
+    t = dte_days / 365.0
+    d1 = (math.log(spot / strike) + (r + 0.5 * iv ** 2) * t) / (iv * math.sqrt(t))
+    return float(norm.cdf(d1) - 1.0)
+
+def select_optimal_strike(fno_insts: list, entry_price: float, today_dt: date = None, direction: str = "LONG", instrument_type: str = "CE"):
     """
-    High-Delta Strike Selection Algorithm (v3.3.0-PROD)
+    High-Delta Strike Selection Algorithm (v3.3.0-PROD) - Bi-Directional
     1. Filter expiries: require DTE >= 4 calendar days (roll to next monthly if DTE < 4).
-    2. Compute Black-Scholes delta for each CE contract.
-    3. Target ITM Call with Delta in [0.60, 0.70] (ideal target Delta* = 0.65).
-    4. Fallback hierarchy: ITM -> ATM (0.50-0.59) -> None (fallback to Cash EQUITY).
-    5. ABSOLUTE INVARIANT: Never buy OTM (Delta < 0.50).
+    2. Compute Black-Scholes delta for each contract matching instrument_type (CE or PE).
+    3. Target ITM Option:
+       - CE (Long): Delta in [0.58, 0.75] (ideal target Delta* = 0.65, Strike < Spot).
+       - PE (Short): |Delta| in [0.58, 0.75] (ideal target Delta* = -0.65, Strike > Spot).
+    4. Fallback hierarchy: ITM -> ATM (|Delta| 0.50-0.58) -> None (fallback to Cash EQUITY).
+    5. ABSOLUTE INVARIANT: Never buy OTM (|Delta| < 0.50).
     """
     if not today_dt:
         today_dt = date.today()
 
+    target_inst_type = "PE" if (direction == "SHORT" or instrument_type == "PE") else "CE"
+
     expiries = sorted(list(set([
         i['expiry'] for i in fno_insts 
-        if i.get('expiry') is not None and i.get('instrument_type') == 'CE'
+        if i.get('expiry') is not None and i.get('instrument_type') == target_inst_type
     ])))
     
     valid_expiries = [exp for exp in expiries if (exp - today_dt).days >= 4]
@@ -44,41 +56,44 @@ def select_optimal_strike(fno_insts: list, entry_price: float, today_dt: date = 
     dte_days = max(1, (target_expiry - today_dt).days)
     target_expiry_str = target_expiry.strftime("%Y-%m-%d")
 
-    ce_contracts = [
+    matching_contracts = [
         i for i in fno_insts 
-        if i.get('expiry') == target_expiry and i.get('instrument_type') == 'CE'
+        if i.get('expiry') == target_expiry and i.get('instrument_type') == target_inst_type
     ]
-    if not ce_contracts:
+    if not matching_contracts:
         return None, None, "EQUITY"
 
     contracts_with_delta = []
-    for c in ce_contracts:
+    for c in matching_contracts:
         try:
             strike = float(c['strike'])
-            delta = calculate_bs_call_delta(entry_price, strike, dte_days)
+            if target_inst_type == "CE":
+                delta = calculate_bs_call_delta(entry_price, strike, dte_days)
+            else:
+                delta = calculate_bs_put_delta(entry_price, strike, dte_days)
             contracts_with_delta.append((c, delta))
         except (ValueError, TypeError):
             continue
 
-    # Tier 1: Target In-The-Money (ITM) Delta centered around 0.65 (acceptable band 0.58 to 0.75)
+    # Tier 1: Target In-The-Money (ITM) Delta centered around magnitude 0.65 (acceptable band 0.58 to 0.75)
     itm_candidates = [
         (c, delta) for c, delta in contracts_with_delta 
-        if 0.58 <= delta <= 0.75
+        if 0.58 <= abs(delta) <= 0.75
     ]
     if itm_candidates:
-        best_c, best_delta = min(itm_candidates, key=lambda x: abs(x[1] - 0.65))
+        best_c, best_delta = min(itm_candidates, key=lambda x: abs(abs(x[1]) - 0.65))
         return best_c, target_expiry_str, "NFO_OPTION"
 
-    # Tier 2: Fallback to ATM (Delta 0.50 - 0.57)
+    # Tier 2: Fallback to ATM (|Delta| 0.50 - 0.58)
     atm_candidates = [
         (c, delta) for c, delta in contracts_with_delta 
-        if 0.50 <= delta < 0.58
+        if 0.50 <= abs(delta) < 0.58
     ]
     if atm_candidates:
-        best_c, best_delta = min(atm_candidates, key=lambda x: abs(x[1] - 0.55))
+        best_c, best_delta = min(atm_candidates, key=lambda x: abs(abs(x[1]) - 0.55))
         return best_c, target_expiry_str, "NFO_OPTION"
 
-    # Tier 3: Absolute Invariant: Never buy OTM (Delta < 0.50). Fallback to Cash Equity.
+    # Tier 3: Absolute Invariant: Never buy OTM (|Delta| < 0.50). Fallback to Cash Equity.
     return None, target_expiry_str, "EQUITY"
 
 def run_derivatives_routing_agent(state: SovereignState) -> dict:

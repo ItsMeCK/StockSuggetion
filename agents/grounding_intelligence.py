@@ -49,7 +49,8 @@ class HardenedGroundingAgent:
         now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         prompt = f"""You are a forensic institutional equity intelligence agent analyzing the National Stock Exchange of India (NSE).
-The stock {symbol} is exhibiting massive unexplained trading volume and price surge at 3:15 PM IST today.
+Analyze the trading volume, recent exchange filings, corporate developments, and news for {symbol}.
+What are the verifiable factual drivers of today's price and volume action?
 
 Search the live web and recent exchange filings for news, block deals, rumors, or regulatory updates from today.
 You must adhere strictly to the EVIDENCE-BEFORE-VERDICT protocol:
@@ -99,14 +100,14 @@ You MUST respond ONLY with valid JSON in this exact structure, with no markdown 
                 raw_response = raw_response[:-3]
             parsed = json.loads(raw_response.strip())
         except Exception as e:
-            # Fallback if search returns non-JSON or API fails: Rely on Math Engine quantitative breakout confirmation
+            # Rule WB5: Fail-closed. On error, empty or unparseable response, never approve or score. Tag UNKNOWN.
             print(f"⚠️ Warning: Structured JSON parsing / API error for {symbol}: {e}")
             parsed = {
-                "public_catalyst": {"evidence": [], "confidence": 0.0, "summary": "AI API Offline"},
+                "public_catalyst": {"evidence": [], "confidence": 0.0, "summary": "AI API Offline / Parse Error"},
                 "stealth_accumulation": {
-                    "evidence": [{"source": "Math Engine", "date": datetime.now().strftime("%Y-%m-%d"), "fact": "Verified HOD green candle volume surge"}],
-                    "confidence": 1.0,
-                    "summary": f"Quantitative Math Engine confirmation (Passed HOD accumulation; AI Scout offline: {e})"
+                    "evidence": [],
+                    "confidence": 0.0,
+                    "summary": f"Research offline ({e}); tagged UNKNOWN"
                 },
                 "toxic_catalyst": {"evidence": [], "detected": False, "summary": "None"}
             }

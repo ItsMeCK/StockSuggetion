@@ -12,15 +12,17 @@ class CapitalRiskGatekeeper:
     1. Zero-Cash Hard Veto: Rejects trades if free cash < ₹2,500.
     2. Dynamic 25% Allocation: Max capital per trade = min(25% Free Cash, 25% Total Equity).
     3. Strict Concurrency Cap: Max 2 concurrent positions across the entire system.
-    4. Capital Allocation by Confidence Tier:
+    4. Strict Per-Day Trade Limit: Max 5 trades executed per day.
+    5. Capital Allocation by Confidence Tier:
        - Engine 2 BTST (Confirmed Edge, BH p=0.0121): 100% of Live Capacity.
        - Engine 1 Hourly (Unconfirmed Standalone, p>0.30): 100% PAPER-TRADE ONLY (₹0 live).
-    5. Daily Drawdown Circuit Breaker: 5% equity loss halts execution for the day.
+    6. Daily Drawdown Circuit Breaker: 5% equity loss halts execution for the day.
     """
-    def __init__(self, max_concurrency: int = 2, max_allocation_pct: float = 0.25, daily_loss_limit_pct: float = 0.05):
+    def __init__(self, max_concurrency: int = 2, max_allocation_pct: float = 0.25, daily_loss_limit_pct: float = 0.05, max_daily_trades: int = 5):
         self.max_concurrency = max_concurrency
         self.max_allocation_pct = max_allocation_pct
         self.daily_loss_limit_pct = daily_loss_limit_pct
+        self.max_daily_trades = max_daily_trades
         self.min_cash_threshold = 2500.0
 
     def evaluate_entry(
@@ -29,7 +31,9 @@ class CapitalRiskGatekeeper:
         free_cash: float,
         total_equity: float,
         current_daily_loss: float = 0.0,
-        active_positions: list = None
+        active_positions: list = None,
+        trades_today_count: int = None,
+        current_time: Any = None
     ) -> Tuple[bool, float, str]:
         """
         Evaluates capital allocation and returns (is_approved, allocated_capital, reason).
@@ -38,6 +42,10 @@ class CapitalRiskGatekeeper:
         max_daily_loss = total_equity * self.daily_loss_limit_pct
         if current_daily_loss >= max_daily_loss:
             return False, 0.0, f"CIRCUIT_BREAKER_HALT: Daily loss ₹{current_daily_loss:.2f} >= 5% equity limit (₹{max_daily_loss:.2f})"
+
+        # 1b. Daily Trade Cap Check (Max 5 trades per day)
+        if trades_today_count is not None and trades_today_count >= self.max_daily_trades:
+            return False, 0.0, f"DAILY_TRADE_CAP_REACHED: Daily trade limit reached ({trades_today_count}/{self.max_daily_trades})"
 
         # 2. Concurrency Check
         if active_positions is None:
@@ -58,6 +66,14 @@ class CapitalRiskGatekeeper:
         # Any other engine (ENGINE_1_HOURLY, unknown string, typo, None) routes to paper simulation (₹0 live capital).
         if engine_type != "ENGINE_2_BTST":
             return True, 0.0, f"PAPER_TRADE_ONLY: Engine '{engine_type}' is not authorized for live capital. Routed to paper simulation (₹0 live capital)."
+
+        # 3b. Time-of-Day Fail-Closed Protection (Live Afternoon Window: 12:15 to 15:15 IST)
+        if current_time is not None:
+            from datetime import time as dt_time
+            t = current_time.time() if hasattr(current_time, 'time') else current_time
+            if isinstance(t, dt_time):
+                if t < dt_time(12, 15) or t > dt_time(15, 15):
+                    return True, 0.0, f"PAPER_TRADE_ONLY: Time {t.strftime('%H:%M')} is outside the live afternoon window (12:15 - 15:15 IST). Routed to paper simulation (₹0 live capital)."
 
         # 4. Zero-Cash Hard Veto for Live Trading
         if free_cash < self.min_cash_threshold:

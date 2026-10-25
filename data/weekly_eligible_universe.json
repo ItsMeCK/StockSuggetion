@@ -1,0 +1,1302 @@
+{
+  "generated_at": "2026-10-25T16:21:05.524282",
+  "count": 214,
+  "banned_count": 2,
+  "macro_themes": {
+    "strong_sectors": [
+      "Auto",
+      "Pharma"
+    ],
+    "weak_sectors": [
+      "IT"
+    ],
+    "market_sentiment": "BULLISH",
+    "narrative_summary": "Strong industrial demand."
+  },
+  "eligible_candidates": [
+    {
+      "symbol": "360ONE",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ABB",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ABCAPITAL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ADANIENSOL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ADANIENT",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ADANIGREEN",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ADANIPORTS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ADANIPOWER",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ALKEM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "AMBER",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "AMBUJACEM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ANGELONE",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "APLAPOLLO",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "APOLLOHOSP",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ASHOKLEY",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ASIANPAINT",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ASTRAL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "AUBANK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "AUROPHARMA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "AXISBANK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BAJAJ-AUTO",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BAJAJFINSV",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BAJAJHLDNG",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BANDHANBNK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BANKBARODA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BANKINDIA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BANKNIFTY",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BDL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BEL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BHARATFORG",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BHARTIARTL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BHEL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BIOCON",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BLUESTARCO",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BOSCHLTD",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BPCL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BRITANNIA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "BSE",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "CAMS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "CANBK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "CDSL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "CGPOWER",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "CHOLAFIN",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "CIPLA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "COALINDIA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "COCHINSHIP",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "COFORGE",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "COLPAL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "CONCOR",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "CROMPTON",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "CUMMINSIND",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "DABUR",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "DALBHARAT",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "DELHIVERY",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "DIVISLAB",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "DIXON",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "DLF",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "DMART",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "DRREDDY",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "EICHERMOT",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ETERNAL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "EXIDEIND",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "FEDERALBNK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "FINNIFTY",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "FORCEMOT",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "FORTIS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "GAIL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "GLENMARK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "GMRAIRPORT",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "GODFRYPHLP",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "GODREJCP",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "GODREJPROP",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "GRASIM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "GVT&D",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HAL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HAVELLS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HCLTECH",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HDFCAMC",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HDFCBANK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HDFCLIFE",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HEROMOTOCO",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HINDALCO",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HINDPETRO",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HINDZINC",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "HYUNDAI",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ICICIBANK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ICICIGI",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ICICIPRULI",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "IDEA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "IDFCFIRSTB",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "IEX",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "INDHOTEL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "INDIANB",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "INDIGO",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "INDUSINDBK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "INDUSTOWER",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "INFY",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "INOXWIND",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "IOC",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "IREDA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "IRFC",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ITC",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "JINDALSTEL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "JIOFIN",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "JSWENERGY",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "JSWSTEEL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "JUBLFOOD",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "KALYANKJIL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "KAYNES",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "KEI",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "KFINTECH",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "KOTAKBANK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "KPITTECH",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "LAURUSLABS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "LICHSGFIN",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "LICI",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "LODHA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "LT",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "LTF",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "LTM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "LUPIN",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "M&M",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MANAPPURAM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MANKIND",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MARICO",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MARUTI",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MAXHEALTH",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MAZDOCK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MCX",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MFSL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MIDCPNIFTY",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MOTHERSON",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MOTILALOFS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MPHASIS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "MUTHOOTFIN",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NAM-INDIA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NATIONALUM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NAUKRI",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NBCC",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NESTLEIND",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NHPC",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NIFTY",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NIFTYNXT50",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NMDC",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NTPC",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NUVAMA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "NYKAA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "OBEROIRLTY",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "OFSS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "OIL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ONGC",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PAGEIND",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PATANJALI",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PAYTM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PERSISTENT",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PETRONET",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PFC",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PGEL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PHOENIXLTD",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PIDILITIND",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PIIND",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PNB",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PNBHOUSING",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "POLICYBZR",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "POLYCAB",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "POWERGRID",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "POWERINDIA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PREMIERENE",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "PRESTIGE",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "RADICO",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "RBLBANK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "RECLTD",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "RELIANCE",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "RVNL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SBICARD",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SBILIFE",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SBIN",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SHREECEM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SHRIRAMFIN",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SIEMENS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SOLARINDS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SONACOMS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SRF",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SUPREMEIND",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SUZLON",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "SWIGGY",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TATACONSUM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TATAELXSI",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TATAPOWER",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TATASTEEL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TCS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TECHM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TIINDIA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TITAN",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TMPV",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TORNTPHARM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TRENT",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "TVSMOTOR",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ULTRACEMCO",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "UNIONBANK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "UNITDSPR",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "UNOMINDA",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "UPL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "VBL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "VEDL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "VMM",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "VOLTAS",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "WAAREEENER",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "WIPRO",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "YESBANK",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    },
+    {
+      "symbol": "ZYDUSLIFE",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000
+    }
+  ]
+}

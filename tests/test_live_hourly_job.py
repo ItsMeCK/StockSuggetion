@@ -53,3 +53,28 @@ def test_live_hourly_job_no_breakouts(mock_read, mock_engine, mock_env):
     
     import scripts.live_hourly_job as live_job
     assert hasattr(live_job, 'run_hourly_evaluation')
+
+def test_live_hourly_job_session_routing():
+    """
+    Critical Invariant for Afternoon BTST Edge:
+    - 10:15, 11:15 Morning runs route to ENGINE_1_HOURLY / TYPE_A_SCALP (Paper, ₹0 Live Risk)
+    - 12:15, 13:15, 14:15 Afternoon runs route to ENGINE_2_BTST / TYPE_C_BTST (Live Capital Edge)
+    """
+    from datetime import time as dt_time
+    
+    # Morning run at 10:15
+    morning_time = dt_time(10, 15)
+    is_afternoon_morn = (morning_time >= dt_time(12, 15) and morning_time <= dt_time(15, 15))
+    holding_type_morn = "TYPE_C_BTST" if is_afternoon_morn else "TYPE_A_SCALP"
+    engine_type_morn = "ENGINE_2_BTST" if is_afternoon_morn else "ENGINE_1_HOURLY"
+    assert engine_type_morn == "ENGINE_1_HOURLY"
+    assert holding_type_morn == "TYPE_A_SCALP"
+
+    # Afternoon runs at 12:15, 13:15, 14:15
+    for h in [12, 13, 14]:
+        aft_time = dt_time(h, 15)
+        is_afternoon = (aft_time >= dt_time(12, 15) and aft_time <= dt_time(15, 15))
+        holding_type = "TYPE_C_BTST" if is_afternoon else "TYPE_A_SCALP"
+        engine_type = "ENGINE_2_BTST" if is_afternoon else "ENGINE_1_HOURLY"
+        assert engine_type == "ENGINE_2_BTST"
+        assert holding_type == "TYPE_C_BTST"

@@ -244,3 +244,175 @@ def test_legacy_execution_agent_blocked_by_gatekeeper(mock_active_pos):
         order_id_nfo = module.place_nfo_limit_order("INFY26OCT1820CE", 400, 25.0)
         assert mock_kite.place_order.call_count == 0
         assert "BLOCKED_BY_GATEKEEPER" in order_id_nfo
+
+@patch.dict(os.environ, {"LIVE_BUY": "true"})
+@patch("core.risk_gatekeeper.get_all_active_positions", return_value=[])
+@patch("core.live_trading.save_active_position")
+@patch("core.live_trading.get_kite_data_client")
+@patch("core.live_trading.get_kite_exec_client")
+def test_engine_1_short_breakdown_routes_put_option(mock_exec, mock_data, mock_save_pos, mock_get_pos):
+    """
+    Bi-directional execution test:
+    When a short breakdown is triggered (direction='SHORT', instrument_type='PE'),
+    execute_trade selects the matching Put option contract, sets -15% Hard SL,
+    and records direction='SHORT' and instrument_type='PE' in database.
+    """
+    mock_data_client = MagicMock()
+    mock_exec_client = MagicMock()
+    mock_data.return_value = mock_data_client
+    mock_exec.return_value = mock_exec_client
+
+    mock_data_client.quote.side_effect = [
+        {"NSE:TATAMOTORS": {"last_price": 950.0}},
+        {"NFO:TATAMOTORS26OCT970PE": {"last_price": 28.0, "oi": 75000, "volume": 16000}}
+    ]
+    mock_data_client.instruments.return_value = [
+        {"name": "TATAMOTORS", "instrument_type": "PE", "expiry": datetime(2026, 10, 29).date(),
+         "strike": 970.0, "lot_size": 1400, "tradingsymbol": "TATAMOTORS26OCT970PE", "instrument_token": 88888}
+    ]
+
+    mock_exec_client.margins.return_value = {
+        "available": {"cash": 50000.0},
+        "net": 50000.0
+    }
+
+    execute_trade(
+        symbol="TATAMOTORS",
+        score=88,
+        catalyst="Bear Breakdown below 20 SMA",
+        entry_time=datetime.now(),
+        holding_type="TYPE_A_SCALP",
+        engine_type="ENGINE_1_HOURLY",
+        direction="SHORT",
+        instrument_type="PE"
+    )
+
+    mock_save_pos.assert_called_once()
+    saved_position = mock_save_pos.call_args[0][0]
+    assert saved_position["symbol"] == "TATAMOTORS"
+    assert saved_position["option_symbol"] == "TATAMOTORS26OCT970PE"
+    assert saved_position["direction"] == "SHORT"
+    assert saved_position["instrument_type"] == "PE"
+    assert saved_position["status"] == "PAPER_TRADED"
+    # -15% Hard Stop Loss: 28.0 * 0.85 = 23.80
+    assert saved_position["current_sl"] == 23.80
+
+@patch.dict(os.environ, {"LIVE_BUY": "true"})
+@patch("core.risk_gatekeeper.get_all_active_positions", return_value=[])
+@patch("core.live_trading.save_active_position")
+@patch("core.live_trading.get_kite_data_client")
+@patch("core.live_trading.get_kite_exec_client")
+def test_engine_2_order_idempotency_prevents_duplicate_orders(mock_exec, mock_data, mock_save_pos, mock_get_pos):
+    """
+    Claude Requirement E1:
+    If an order was already submitted or filled (e.g. after a network timeout retry),
+    execute_trade reconciles the existing order and DOES NOT call place_order again.
+    """
+    mock_data_client = MagicMock()
+    mock_exec_client = MagicMock()
+    mock_data.return_value = mock_data_client
+    mock_exec.return_value = mock_exec_client
+
+    mock_data_client.quote.side_effect = [
+        {"NSE:HAL": {"last_price": 4500.0}},
+        {"NFO:HAL26OCT4550CE": {"last_price": 50.0, "oi": 80000, "volume": 20000}}
+    ]
+    mock_data_client.instruments.return_value = [
+        {"name": "HAL", "instrument_type": "CE", "expiry": datetime(2026, 10, 29).date(),
+         "strike": 4550.0, "lot_size": 150, "tradingsymbol": "HAL26OCT4550CE", "instrument_token": 22222}
+    ]
+
+    mock_exec_client.margins.return_value = {
+        "available": {"cash": 100000.0},
+        "net": 100000.0
+    }
+    
+    # Simulate existing BUY and SL orders already in the broker order book!
+    mock_exec_client.orders.return_value = [
+        {
+            "order_id": "EXISTING_ORDER_999",
+            "tradingsymbol": "HAL26OCT4550CE",
+            "status": "COMPLETE",
+            "tag": "MS_HAL_12345"
+        },
+        {
+            "order_id": "EXISTING_SL_888",
+            "tradingsymbol": "HAL26OCT4550CE",
+            "transaction_type": mock_exec_client.TRANSACTION_TYPE_SELL,
+            "status": "TRIGGER PENDING"
+        }
+    ]
+
+    execute_trade(
+        symbol="HAL",
+        score=92,
+        catalyst="Defense Order Win",
+        entry_time=datetime.now(),
+        holding_type="TYPE_C_BTST",
+        engine_type="ENGINE_2_BTST"
+    )
+
+    # Invariant: place_order MUST NOT be called because both existing orders were reconciled!
+    mock_exec_client.place_order.assert_not_called()
+    mock_save_pos.assert_called_once()
+    saved_position = mock_save_pos.call_args[0][0]
+    assert saved_position["order_id"] == "EXISTING_ORDER_999"
+    assert saved_position["sl_order_id"] == "EXISTING_SL_888"
+    assert saved_position["status"] == "LIVE_TRADED"
+
+@patch.dict(os.environ, {"LIVE_BUY": "true"})
+@patch("core.risk_gatekeeper.get_all_active_positions", return_value=[])
+@patch("core.live_trading.save_active_position")
+@patch("core.live_trading.get_kite_data_client")
+@patch("core.live_trading.get_kite_exec_client")
+def test_liquidity_gate_veto_blocks_execution_on_wide_spread(mock_exec, mock_data, mock_save_pos, mock_get_pos):
+    """
+    Claude Requirement V3 & Gate 4:
+    If the bid-ask spread of the option contract exceeds 3.5%, the execution must be
+    vetoed immediately, preventing market-maker spread gouging.
+    """
+    mock_data_client = MagicMock()
+    mock_exec_client = MagicMock()
+    mock_data.return_value = mock_data_client
+    mock_exec.return_value = mock_exec_client
+
+    # Mock wide spread: Bid=50, Ask=54 (Mid=52, Spread=7.69% > 3.5%)
+    mock_data_client.quote.side_effect = [
+        {"NSE:HAL": {"last_price": 4500.0}},
+        {
+            "NFO:HAL26OCT4550CE": {
+                "last_price": 50.0,
+                "oi": 80000,
+                "volume": 20000,
+                "depth": {
+                    "buy": [{"price": 50.0, "quantity": 150}],
+                    "sell": [{"price": 54.0, "quantity": 150}]
+                }
+            }
+        }
+    ]
+    mock_data_client.instruments.return_value = [
+        {"name": "HAL", "instrument_type": "CE", "expiry": datetime(2026, 10, 29).date(),
+         "strike": 4550.0, "lot_size": 150, "tradingsymbol": "HAL26OCT4550CE", "instrument_token": 22222}
+    ]
+
+    mock_exec_client.margins.return_value = {
+        "available": {"cash": 100000.0},
+        "net": 100000.0
+    }
+
+    execute_trade(
+        symbol="HAL",
+        score=92,
+        catalyst="Defense Order Win",
+        entry_time=datetime.now(),
+        holding_type="TYPE_C_BTST",
+        engine_type="ENGINE_2_BTST"
+    )
+
+    # Invariant: Neither place_order nor save_active_position must be called due to liquidity veto!
+    mock_exec_client.place_order.assert_not_called()
+    mock_save_pos.assert_not_called()
+
+
+

@@ -96,3 +96,35 @@ def test_5_pct_daily_drawdown_circuit_breaker():
     )
     assert approved is False
     assert "CIRCUIT_BREAKER_HALT" in reason
+
+def test_risk_gatekeeper_time_of_day_morning_routes_to_paper_simulation():
+    from datetime import datetime
+    gatekeeper = CapitalRiskGatekeeper()
+    # At 10:30 AM (outside 12:15 - 15:15 window), even with ENGINE_2_BTST and ample cash,
+    # it must fail-close to paper trade with ₹0 live money to protect capital.
+    approved, capital, reason = gatekeeper.evaluate_entry(
+        engine_type="ENGINE_2_BTST",
+        free_cash=50000.0,
+        total_equity=50000.0,
+        current_time=datetime(2026, 10, 25, 10, 30),
+        active_positions=[]
+    )
+    assert approved is True
+    assert capital == 0.0
+    assert "PAPER_TRADE_ONLY" in reason
+    assert "outside the live afternoon window" in reason
+
+def test_risk_gatekeeper_time_of_day_afternoon_approves_live_btst():
+    from datetime import datetime
+    gatekeeper = CapitalRiskGatekeeper()
+    # At 13:30 PM (inside 12:15 - 15:15 window), ENGINE_2_BTST with ample cash is approved.
+    approved, capital, reason = gatekeeper.evaluate_entry(
+        engine_type="ENGINE_2_BTST",
+        free_cash=10000.0,
+        total_equity=27216.0,
+        current_time=datetime(2026, 10, 25, 13, 30),
+        active_positions=[]
+    )
+    assert approved is True
+    assert capital == 2500.0
+    assert "APPROVED_BTST" in reason
