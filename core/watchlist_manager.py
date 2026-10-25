@@ -1,12 +1,47 @@
+import os
+import logging
 from datetime import datetime, timedelta
 from typing import Dict, Any, List, Tuple, Set, Optional
 from dataclasses import dataclass
+
+logger = logging.getLogger(__name__)
 
 # Low-beta, sluggish FMCG and Insurance defensives (empirically shown to bleed option premium)
 DEFAULT_DEFENSIVE_BLACKLIST: Set[str] = {
     'SBILIFE', 'HINDUNILVR', 'TATACONSUM', 'GODREJCP', 'ETERNAL',
     'ICICIGI', 'NESTLEIND', 'DABUR', 'MARICO', 'COLPAL'
 }
+
+def compute_symbol_atr_pct(parquet_path: str = "data/intraday_ohlcv.parquet", lookback_days: int = 20) -> Dict[str, float]:
+    """
+    Computes 20-day Average Daily True Range / Range percentage for each symbol from intraday OHLCV.
+    """
+    if not os.path.exists(parquet_path):
+        return {}
+    try:
+        import polars as pl
+        df = pl.read_parquet(parquet_path)
+        df = df.with_columns(pl.col("time").dt.convert_time_zone("Asia/Kolkata").alias("ist_time"))
+        df = df.with_columns(pl.col("ist_time").dt.date().alias("trade_date"))
+
+        daily = df.group_by(["symbol", "trade_date"]).agg([
+            pl.col("high").max().alias("day_high"),
+            pl.col("low").min().alias("day_low"),
+            pl.col("close").last().alias("day_close")
+        ]).sort(["symbol", "trade_date"])
+
+        daily = daily.with_columns([
+            ((pl.col("day_high") - pl.col("day_low")) / pl.col("day_close") * 100.0).alias("daily_range_pct")
+        ])
+
+        recent_atr = daily.group_by("symbol").agg([
+            pl.col("daily_range_pct").tail(lookback_days).mean().alias("atr_pct")
+        ]).to_pandas()
+
+        return dict(zip(recent_atr["symbol"], recent_atr["atr_pct"]))
+    except Exception as e:
+        logger.warning(f"Could not compute symbol ATR% from parquet: {e}")
+        return {}
 
 @dataclass
 class WatchlistProposal:
@@ -50,7 +85,8 @@ class WatchlistManager:
         banned_stocks: Optional[Set[str]] = None,
         excluded_stocks: Optional[Set[str]] = None,
         min_dte: int = 4,
-        max_spread_pct: float = 2.0
+        max_spread_pct: float = 2.0,
+        min_atr_pct: float = 0.0
     ) -> List[Dict[str, Any]]:
         """
         Requirement W1, D4, D5:
@@ -59,6 +95,7 @@ class WatchlistManager:
         - Excludes blacklisted low-beta defensive names.
         - Excludes near-expiry contracts (DTE < min_dte).
         - Excludes contracts with wide bid-ask spread (> max_spread_pct).
+        - Excludes sluggish low-volatility contracts (ATR% < min_atr_pct).
         """
         banned = banned_stocks or set()
         excluded = excluded_stocks or set()
@@ -68,6 +105,7 @@ class WatchlistManager:
             sym = item.get("symbol", "")
             dte = int(item.get("dte", 0))
             spread = float(item.get("bid_ask_spread_pct", 0.0))
+            atr = float(item.get("atr_pct", 99.0))
 
             if sym in banned:
                 continue
@@ -76,6 +114,8 @@ class WatchlistManager:
             if dte < min_dte:
                 continue
             if spread > max_spread_pct:
+                continue
+            if atr < min_atr_pct:
                 continue
 
             approved.append(item)

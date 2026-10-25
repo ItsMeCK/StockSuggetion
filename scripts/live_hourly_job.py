@@ -36,7 +36,7 @@ def run_hourly_evaluation():
     print(f"{'='*50}")
     
     # 2. Risk Management: Momentum Decay & Max Trades
-    from core.db_manager import get_all_active_positions, close_position
+    from core.db_manager import get_all_active_positions, close_position, get_active_daily_focus_watchlist
     active_positions = get_all_active_positions()
     live_buy_flag = os.getenv("LIVE_BUY", "False")
     
@@ -125,7 +125,23 @@ def run_hourly_evaluation():
         return
         
     df = pl.read_parquet(parquet_path)
-    df = df.filter(pl.col("symbol").is_in(list(fno_symbols)))
+
+    # Level 4 Execution Filter: Target active Elite Focus Watchlist candidates
+    active_watchlist = get_active_daily_focus_watchlist()
+    if active_watchlist:
+        allowed_symbols = {item['symbol'] for item in active_watchlist if item.get('symbol')}
+        # Intersect with F&O universe to ensure validity
+        valid_targets = allowed_symbols.intersection(set(fno_symbols))
+        if valid_targets:
+            print(f"🎯 Restricting Hourly Execution to {len(valid_targets)} Elite Focus Watchlist candidates.")
+            df = df.filter(pl.col("symbol").is_in(list(valid_targets)))
+        else:
+            print(f"ℹ️ Watchlist targets not in F&O universe, scanning {len(fno_symbols)} symbols.")
+            df = df.filter(pl.col("symbol").is_in(list(fno_symbols)))
+    else:
+        print(f"ℹ️ Active Focus Watchlist unpopulated, scanning full {len(fno_symbols)} F&O universe.")
+        df = df.filter(pl.col("symbol").is_in(list(fno_symbols)))
+
     df = df.sort(["symbol", "time"])
     
     df = df.with_columns([

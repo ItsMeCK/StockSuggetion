@@ -83,6 +83,13 @@ def run_5m_morning_paper():
 
 schedule.every(5).minutes.do(run_5m_morning_paper)
 
+# 3b. 12:00 PM - Mid-Day Institutional Accumulation Sweep & Afternoon Focus Watchlist
+schedule.every().day.at("12:00").do(
+    run_script,
+    script_name="scripts/midday_watchlist_refresher.py",
+    description="12:00 PM Mid-Day Elite Watchlist Refresher"
+)
+
 # 4. 12:15 PM, 13:15 PM, 14:15 PM - Market-Wide Afternoon BTST Scanner (+₹2.13L Overnight Edge)
 # Scans full 216 F&O universe at hourly candle close to capture institutional momentum
 schedule.every().day.at("12:15").do(
@@ -136,8 +143,8 @@ schedule.every().day.at("15:45").do(
 )
 
 if __name__ == "__main__":
-    logging.info("🛡️ Sovereign Master Scheduler Active (Weekly + Pre-Open + 5m Paper + Afternoon BTST)...")
-    send_telegram("🛡️ *SOVEREIGN MASTER ONLINE*\nSchedule Active:\n• Sun 18:00: Weekly Universe Build\n• 09:08 AM: Pre-Open Watchlist Refresh\n• 09:16 AM: BTST Liquidator\n• 09:30-12:10: 5m Paper Scalp Engine\n• 12:15, 13:15, 14:15: Market-Wide BTST Scanner\n• 15:15 PM: 3:15 PM BTST Sniper\n• 15:45 PM: EOD Audit")
+    logging.info("🛡️ Sovereign Master Scheduler Active (Weekly + Pre-Open + 5m Paper + 12:00 VCP + Afternoon BTST)...")
+    send_telegram("🛡️ *SOVEREIGN MASTER ONLINE*\nSchedule Active:\n• Sun 18:00: Weekly Universe Build (ATR>=1.8%)\n• 09:08 AM: Pre-Open Watchlist Refresh\n• 09:16 AM: BTST Liquidator\n• 09:30-12:10: 5m Paper Scalp Engine\n• 12:00 PM: Mid-Day VCP Accumulation Sweep\n• 12:15, 13:15, 14:15: Afternoon BTST Scanner\n• 15:15 PM: 3:15 PM BTST Sniper\n• 15:26 PM: BTST Fill Verifier\n• 15:45 PM: EOD Audit")
     
     while True:
         schedule.run_pending()

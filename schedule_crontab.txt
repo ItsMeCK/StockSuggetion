@@ -17,6 +17,9 @@ PYTHONPATH=/Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign
 */5 10,11 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/live_5m_trigger_job.py >> logs/5m_trigger.log 2>&1
 0,5,10 12 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/live_5m_trigger_job.py >> logs/5m_trigger.log 2>&1
 
+# 3b. 12:00 PM - Mid-Day Institutional Accumulation Sweep & Afternoon Focus Build (Mon-Fri)
+0 12 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/midday_watchlist_refresher.py >> logs/midday_watchlist.log 2>&1
+
 # 4. 12:15, 13:15, 14:15 PM - Market-Wide Afternoon BTST Scanner (+₹2.13L Overnight Edge)
 # Sweeps full 216 F&O universe at hourly candle close to capture institutional momentum
 15 12,13,14 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/live_hourly_job.py >> logs/live_hourly.log 2>&1

@@ -24,7 +24,7 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from core.watchlist_manager import WatchlistManager, DEFAULT_DEFENSIVE_BLACKLIST
+from core.watchlist_manager import WatchlistManager, DEFAULT_DEFENSIVE_BLACKLIST, compute_symbol_atr_pct
 from core.fo_ban_manager import get_banned_fo_symbols
 from agents.watchlist_builder_agent import GroundedWatchlistBuilder
 from alerts.email_notifier import SovereignEmailer
@@ -55,26 +55,32 @@ def build_weekly_universe():
     banned_symbols = get_banned_fo_symbols()
     logger.info(f"NSE F&O Ban list holds {len(banned_symbols)} restricted securities.")
 
-    # 3. Construct candidate pool with baseline liquidity & DTE metrics
+    # 3. Calculate 20-Day ATR% to filter sluggish low-volatility names (Level 1: ATR >= 1.8%)
+    atr_map = compute_symbol_atr_pct()
+    logger.info(f"Computed historical 20-day ATR% for {len(atr_map)} symbols.")
+
+    # 4. Construct candidate pool with baseline liquidity & DTE metrics
     raw_universe = []
     for sym in symbols:
         raw_universe.append({
             "symbol": sym,
             "dte": 15,  # Baseline weekly DTE (refreshed daily)
             "bid_ask_spread_pct": 0.8,
-            "oi": 50000
+            "oi": 50000,
+            "atr_pct": atr_map.get(sym, 2.5)  # Default 2.5% if unmapped to avoid false exclusion
         })
 
-    # 4. Filter through WatchlistManager (Requirement W1 & Defensive Exclusion)
+    # 5. Filter through WatchlistManager (Requirement W1, Defensive Exclusion & ATR >= 1.8%)
     wm = WatchlistManager()
     eligible_candidates = wm.filter_weekly_universe(
         universe=raw_universe,
         banned_stocks=banned_symbols,
         excluded_stocks=DEFAULT_DEFENSIVE_BLACKLIST,
         min_dte=4,
-        max_spread_pct=2.0
+        max_spread_pct=2.0,
+        min_atr_pct=1.8
     )
-    logger.info(f"Filtered {len(symbols)} -> {len(eligible_candidates)} eligible candidates ({len(banned_symbols)} banned, {len(DEFAULT_DEFENSIVE_BLACKLIST)} defensives excluded).")
+    logger.info(f"Filtered {len(symbols)} -> {len(eligible_candidates)} eligible candidates ({len(banned_symbols)} banned, {len(DEFAULT_DEFENSIVE_BLACKLIST)} defensives excluded, ATR >= 1.8%).")
 
     # 5. Scan Macro & Sector Thematic Grounding for the week ahead
     builder = GroundedWatchlistBuilder()
