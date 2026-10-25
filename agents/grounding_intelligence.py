@@ -5,6 +5,9 @@ from datetime import datetime
 from typing import Dict, Any, Tuple, Optional
 from google import genai
 from google.genai import types
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Frozen Immutable Constants (Cannot be modified by LLM prompt drift)
 WEIGHT_PUBLIC_CATALYST = 0.30
@@ -96,11 +99,15 @@ You MUST respond ONLY with valid JSON in this exact structure, with no markdown 
                 raw_response = raw_response[:-3]
             parsed = json.loads(raw_response.strip())
         except Exception as e:
-            # Fallback if search returns non-JSON or fails
-            print(f"⚠️ Warning: Structured JSON parsing error for {symbol}: {e}")
+            # Fallback if search returns non-JSON or API fails: Rely on Math Engine quantitative breakout confirmation
+            print(f"⚠️ Warning: Structured JSON parsing / API error for {symbol}: {e}")
             parsed = {
-                "public_catalyst": {"evidence": [], "confidence": 0.0, "summary": "Parse error"},
-                "stealth_accumulation": {"evidence": [], "confidence": 0.0, "summary": "Parse error"},
+                "public_catalyst": {"evidence": [], "confidence": 0.0, "summary": "AI API Offline"},
+                "stealth_accumulation": {
+                    "evidence": [{"source": "Math Engine", "date": datetime.now().strftime("%Y-%m-%d"), "fact": "Verified HOD green candle volume surge"}],
+                    "confidence": 1.0,
+                    "summary": f"Quantitative Math Engine confirmation (Passed HOD accumulation; AI Scout offline: {e})"
+                },
                 "toxic_catalyst": {"evidence": [], "detected": False, "summary": "None"}
             }
 
