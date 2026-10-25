@@ -30,6 +30,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from core.watchlist_manager import WatchlistManager
+from core.sector_mapping import get_sector_for_symbol
 from agents.watchlist_builder_agent import GroundedWatchlistBuilder
 from core.db_manager import get_active_daily_focus_watchlist, save_daily_focus_stock
 from alerts.email_notifier import SovereignEmailer
@@ -38,25 +39,40 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+def matches_theme_sectors(sec: str, theme_list: list) -> bool:
+    """Checks if a stock's sector aligns with macro theme sector keywords."""
+    if not sec or not theme_list:
+        return False
+    sec_clean = sec.upper().replace("NIFTY", "").strip()
+    theme_combined = " ".join(theme_list).upper()
+    keywords = [w for w in sec_clean.split() if len(w) > 2]
+    if sec_clean in ["IT", "AUTO", "FMCG", "BANK"] and sec_clean in theme_combined:
+        return True
+    return any(kw in theme_combined for kw in keywords)
+
 def evaluate_watchlist():
     logger.info("🛡️ Initiating Daily 09:08 AM Pre-Open Watchlist Evaluation...")
     builder = GroundedWatchlistBuilder()
     wm = WatchlistManager()
 
-    # 1. Macro & Sector Thematic Grounding
-    themes = builder.scan_market_themes()
-    logger.info(f"Market Themes: {themes.get('narrative_summary')} (Sentiment: {themes.get('market_sentiment')})")
-
-    # 2. Load candidate pool
-    weekly_pool_path = "data/weekly_eligible_universe.json"
+    # 1. Load candidate pool & Cached Weekly Macro Themes (Zero-Cost Cache Reuse)
+    weekly_pool_path = os.path.join(PROJECT_ROOT, "data/weekly_eligible_universe.json")
     candidates = []
+    themes = {}
     if os.path.exists(weekly_pool_path):
         try:
             with open(weekly_pool_path, "r") as f:
-                data = json.load(f)
-                candidates = data.get("eligible_candidates", [])
+                w_data = json.load(f)
+                candidates = w_data.get("eligible_candidates", [])
+                themes = w_data.get("macro_themes", {})
         except Exception as e:
             logger.warning(f"Could not read weekly pool ({e}), building from F&O universe.")
+
+    if not themes:
+        logger.info("Weekly macro themes cache unpopulated, scanning live web grounding...")
+        themes = builder.scan_market_themes()
+    else:
+        logger.info(f"♻️ Reusing cached weekly macro themes: {themes.get('narrative_summary')} (Sentiment: {themes.get('market_sentiment')})")
 
     if not candidates:
         from scripts.weekly_watchlist_builder import build_weekly_universe
@@ -100,10 +116,52 @@ def evaluate_watchlist():
     active_daily, gap_review = wm.refresh_preopen_gaps(preopen_candidates, max_gap_pct=2.5)
     logger.info(f"Pre-open gaps evaluated: {len(active_daily)} active candidates, {len(gap_review)} routed to REVIEW.")
 
-    # 5. Build Daily Focus Watchlist (IV Crush check + Grounding Intelligence)
-    # Target top 25 candidates for deep AI grounding to preserve API budget
+    # 4b. Quantitative Sector-Thematic Alignment (Strictly caps AI Grounding to Top 10)
+    strong_sec = themes.get("strong_sectors", [])
+    weak_sec = themes.get("weak_sectors", [])
+
+    longs = []
+    shorts = []
+    for cand in active_daily:
+        sym = cand.get("symbol", "")
+        sec = get_sector_for_symbol(sym)
+        cand["sector"] = sec
+        cand_gap = ((cand["open"] - cand["prev_close"]) / cand["prev_close"]) * 100.0 if cand["prev_close"] > 0 else 0.0
+        cand["gap_pct"] = cand_gap
+        
+        is_strong = matches_theme_sectors(sec, strong_sec)
+        is_weak = matches_theme_sectors(sec, weak_sec)
+        cand["is_sector_aligned"] = is_strong if cand.get("direction") == "LONG" else is_weak
+
+        if cand.get("direction") == "LONG":
+            longs.append(cand)
+        else:
+            shorts.append(cand)
+
+    # Sort Longs: Sector-aligned first, then highest positive gap
+    longs_sorted = sorted(longs, key=lambda x: (1 if x["is_sector_aligned"] else 0, x["gap_pct"]), reverse=True)
+    # Sort Shorts: Sector-aligned first, then most negative gap
+    shorts_sorted = sorted(shorts, key=lambda x: (1 if x["is_sector_aligned"] else 0, -x["gap_pct"]), reverse=True)
+
+    # Pick Top 5 Longs (CE) + Top 5 Shorts (PE) -> Strict 10 Candidates to Preserve Query Budget
+    top_longs = longs_sorted[:5]
+    top_shorts = shorts_sorted[:5]
+    prioritized_candidates = top_longs + top_shorts
+
+    # Fallback padding if one side had fewer than 5
+    if len(prioritized_candidates) < 10:
+        seen = {c["symbol"] for c in prioritized_candidates}
+        for c in active_daily:
+            if c["symbol"] not in seen:
+                prioritized_candidates.append(c)
+                if len(prioritized_candidates) >= 10:
+                    break
+
+    logger.info(f"🎯 Filtered {len(active_daily)} -> Top {len(prioritized_candidates)} Sector-Aligned Candidates for AI Grounding (CE: {[c['symbol'] for c in top_longs]} | PE: {[c['symbol'] for c in top_shorts]})")
+
+    # 5. Build Daily Focus Watchlist (IV Crush check + Grounding Intelligence on Top 10 only)
     final_focus, grounded_review = builder.build_daily_focus_watchlist(
-        candidates=active_daily[:25],
+        candidates=prioritized_candidates,
         max_symbols=10,
         min_conviction=50.0
     )

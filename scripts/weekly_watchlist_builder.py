@@ -87,7 +87,30 @@ def build_weekly_universe():
     themes = builder.scan_market_themes()
     logger.info(f"Macro Sentiment: {themes.get('market_sentiment')} | Summary: {themes.get('narrative_summary')}")
 
-    # 6. Persist to data/weekly_eligible_universe.json
+    # 6. Rank Top 10 CE and Top 10 PE Weekly Focus Leaders based on Macro Themes & ATR%
+    from core.sector_mapping import get_sector_for_symbol
+    from core.watchlist_evaluator import matches_theme_sectors
+
+    strong_sec = themes.get("strong_sectors", [])
+    weak_sec = themes.get("weak_sectors", [])
+
+    for c in eligible_candidates:
+        c["sector"] = get_sector_for_symbol(c["symbol"])
+
+    ce_pool = [c for c in eligible_candidates if matches_theme_sectors(c["sector"], strong_sec)]
+    ce_sorted = sorted(ce_pool, key=lambda x: x.get("atr_pct", 0.0), reverse=True)
+    top_ce_weekly = ce_sorted[:10]
+
+    pe_pool = [c for c in eligible_candidates if matches_theme_sectors(c["sector"], weak_sec)]
+    pe_sorted = sorted(pe_pool, key=lambda x: x.get("atr_pct", 0.0), reverse=True)
+    top_pe_weekly = pe_sorted[:10]
+
+    focus_dict = {
+        "ce_focus": top_ce_weekly,
+        "pe_focus": top_pe_weekly
+    }
+
+    # 7. Persist to data/weekly_eligible_universe.json
     os.makedirs("data", exist_ok=True)
     out_file = "data/weekly_eligible_universe.json"
     with open(out_file, "w") as f:
@@ -96,15 +119,17 @@ def build_weekly_universe():
             "count": len(eligible_candidates),
             "banned_count": len(banned_symbols),
             "macro_themes": themes,
+            "focus_candidates": focus_dict,
             "eligible_candidates": eligible_candidates
         }, f, indent=2)
-    logger.info(f"Saved weekly eligible universe to {out_file}.")
+    logger.info(f"Saved weekly eligible universe with {len(top_ce_weekly)} CE and {len(top_pe_weekly)} PE focus leaders to {out_file}.")
 
-    # 7. Dispatch Weekly Institutional Email
+    # 8. Dispatch Weekly Institutional Email
     try:
         emailer = SovereignEmailer()
         emailer.send_weekly_universe_report(
             eligible_candidates=eligible_candidates,
+            focus_candidates=focus_dict,
             banned_count=len(banned_symbols),
             themes=themes
         )

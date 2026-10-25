@@ -651,12 +651,15 @@ class SovereignEmailer:
         except Exception as e:
             logging.error(f"❌ Failed to send pre-open watchlist email: {e}")
 
-    def send_weekly_universe_report(self, eligible_candidates: list, banned_count: int = 0, themes: dict = None):
+    def send_weekly_universe_report(self, eligible_candidates: list, banned_count: int = 0, themes: dict = None, focus_candidates: dict = None):
         """
         Sends the Sunday 18:00 IST Weekly Eligible Universe & Strategy Briefing Email.
+        Renders segregated CE and PE Focus Leaders aligned with macro sector tailwinds.
         """
         if not themes:
             themes = {}
+        if not focus_candidates:
+            focus_candidates = {}
 
         from datetime import datetime
         today_str = datetime.now().strftime("%d-%b-%Y")
@@ -674,18 +677,103 @@ class SovereignEmailer:
         weak_sectors = ", ".join(themes.get("weak_sectors", ["IT"]))
         narrative = themes.get("narrative_summary", "Weekly universe filtered against F&O Ban list and low DTE.")
 
-        rows_html = ""
-        for cand in eligible_candidates[:20]:
+        ce_list = focus_candidates.get("ce_focus", [])
+        pe_list = focus_candidates.get("pe_focus", [])
+
+        # Build Focus Tables HTML
+        ce_rows = ""
+        for cand in ce_list:
             sym = cand.get("symbol", "")
-            dte = cand.get("dte", 15)
-            spread = cand.get("bid_ask_spread_pct", 0.8)
-            rows_html += f"""
+            sec = cand.get("sector", "NIFTY")
+            atr = cand.get("atr_pct", 2.5)
+            ce_rows += f"""
             <tr style="border-bottom: 1px solid #21262d;">
                 <td style="padding: 8px; font-weight: bold; color: #ffffff; font-size: 13px;">{sym}</td>
-                <td style="padding: 8px; color: #58a6ff; font-size: 12px;">{dte} Days</td>
-                <td style="padding: 8px; color: #3fb950; font-size: 12px;">{spread:.2f}%</td>
-                <td style="padding: 8px; color: #8b949e; font-size: 12px;">Eligible Weekly F&O</td>
+                <td style="padding: 8px; color: #8b949e; font-size: 12px;">{sec}</td>
+                <td style="padding: 8px; color: #3fb950; font-size: 12px; font-weight: bold;">{atr:.2f}%</td>
+                <td style="padding: 8px; font-size: 12px;"><span style="color: #3fb950; background: rgba(63, 185, 80, 0.15); padding: 2px 8px; border-radius: 4px; font-weight: bold;">🟢 CE / CALL FOCUS</span></td>
             </tr>
+            """
+
+        pe_rows = ""
+        for cand in pe_list:
+            sym = cand.get("symbol", "")
+            sec = cand.get("sector", "NIFTY")
+            atr = cand.get("atr_pct", 2.5)
+            pe_rows += f"""
+            <tr style="border-bottom: 1px solid #21262d;">
+                <td style="padding: 8px; font-weight: bold; color: #ffffff; font-size: 13px;">{sym}</td>
+                <td style="padding: 8px; color: #8b949e; font-size: 12px;">{sec}</td>
+                <td style="padding: 8px; color: #f85149; font-size: 12px; font-weight: bold;">{atr:.2f}%</td>
+                <td style="padding: 8px; font-size: 12px;"><span style="color: #f85149; background: rgba(248, 81, 73, 0.15); padding: 2px 8px; border-radius: 4px; font-weight: bold;">🔴 PE / PUT FOCUS</span></td>
+            </tr>
+            """
+
+        focus_section_html = ""
+        if ce_rows or pe_rows:
+            focus_section_html = f"""
+            <!-- CE FOCUS TABLE -->
+            <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+                <h3 style="margin: 0 0 12px 0; color: #3fb950; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">
+                    🟢 Top Weekly Call (CE) Focus Candidates ({len(ce_list)} Tickers &bull; Sector Tailwinds)
+                </h3>
+                <table width="100%" style="border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid #30363d; font-size: 10px; color: #8b949e; text-transform: uppercase;">
+                            <th style="padding: 6px 8px;">Symbol</th>
+                            <th style="padding: 6px 8px;">Sector</th>
+                            <th style="padding: 6px 8px;">20D ATR%</th>
+                            <th style="padding: 6px 8px;">Mandate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {ce_rows}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PE FOCUS TABLE -->
+            <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+                <h3 style="margin: 0 0 12px 0; color: #f85149; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">
+                    🔴 Top Weekly Put (PE) Focus Candidates ({len(pe_list)} Tickers &bull; Sector Pressures)
+                </h3>
+                <table width="100%" style="border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid #30363d; font-size: 10px; color: #8b949e; text-transform: uppercase;">
+                            <th style="padding: 6px 8px;">Symbol</th>
+                            <th style="padding: 6px 8px;">Sector</th>
+                            <th style="padding: 6px 8px;">20D ATR%</th>
+                            <th style="padding: 6px 8px;">Mandate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {pe_rows}
+                    </tbody>
+                </table>
+            </div>
+            """
+        else:
+            # Fallback to general list
+            rows_html = ""
+            for cand in eligible_candidates[:20]:
+                sym = cand.get("symbol", "")
+                dte = cand.get("dte", 15)
+                spread = cand.get("bid_ask_spread_pct", 0.8)
+                rows_html += f"""
+                <tr style="border-bottom: 1px solid #21262d;">
+                    <td style="padding: 8px; font-weight: bold; color: #ffffff; font-size: 13px;">{sym}</td>
+                    <td style="padding: 8px; color: #58a6ff; font-size: 12px;">{dte} Days</td>
+                    <td style="padding: 8px; color: #3fb950; font-size: 12px;">{spread:.2f}%</td>
+                    <td style="padding: 8px; color: #8b949e; font-size: 12px;">Eligible Weekly F&O</td>
+                </tr>
+                """
+            focus_section_html = f"""
+            <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px;">
+                <h3 style="margin: 0 0 15px 0; color: #58a6ff; font-size: 14px; text-transform: uppercase;">Weekly Eligible Candidates</h3>
+                <table width="100%" style="border-collapse: collapse; text-align: left;">
+                    <tbody>{rows_html}</tbody>
+                </table>
+            </div>
             """
 
         html = f"""
@@ -715,24 +803,12 @@ class SovereignEmailer:
                         <p style="margin: 3px 0;"><b>🟢 Institutional Tailwinds:</b> {strong_sectors}</p>
                         <p style="margin: 3px 0;"><b>🔴 Pressured Sectors:</b> {weak_sectors}</p>
                     </div>
+                    <p style="margin: 12px 0 0 0; border-top: 1px solid #30363d; padding-top: 10px; color: #8b949e; font-size: 13px; line-height: 1.4;">
+                        <b>Executive Brief:</b> {narrative}
+                    </p>
                 </div>
 
-                <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px;">
-                    <h3 style="margin: 0 0 15px 0; color: #58a6ff; font-size: 14px; text-transform: uppercase;">Top Weekly Eligible Candidates</h3>
-                    <table width="100%" style="border-collapse: collapse; text-align: left;">
-                        <thead>
-                            <tr style="border-bottom: 1px solid #30363d; font-size: 10px; color: #8b949e; text-transform: uppercase;">
-                                <th style="padding: 6px 8px;">Symbol</th>
-                                <th style="padding: 6px 8px;">DTE</th>
-                                <th style="padding: 6px 8px;">Spread</th>
-                                <th style="padding: 6px 8px;">Eligibility</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {rows_html}
-                        </tbody>
-                    </table>
-                </div>
+                {focus_section_html}
 
                 <div style="text-align: center; margin-top: 35px; border-top: 1px solid #2d333b; padding-top: 18px;">
                     <p style="font-size: 11px; color: #484f58; margin: 0;">
