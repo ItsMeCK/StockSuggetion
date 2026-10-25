@@ -415,6 +415,9 @@ class SovereignEmailer:
     def build_watchlist_html(self, focus_watchlist: list = None) -> str:
         """
         Renders an institutional HTML card containing the current Active Focus Watchlist.
+        Segregates candidates into:
+        1. 🟢 Call Option (CE) Focus List (Bullish Momentum & Expansion)
+        2. 🔴 Put Option (PE) Focus List (Bearish Breakdown & Short Targets)
         Can be dynamically appended to any email (signals, alerts, pulses).
         """
         if focus_watchlist is None:
@@ -428,32 +431,87 @@ class SovereignEmailer:
         if not focus_watchlist:
             return ""
 
-        rows_html = ""
-        for s in focus_watchlist:
-            sym = s.get("symbol", "")
-            direction = str(s.get("direction", "LONG")).upper()
-            score = float(s.get("conviction_score", 0.0))
-            catalyst = s.get("catalyst_summary", "High institutional conviction")
-            if len(catalyst) > 95:
-                catalyst = catalyst[:92] + "..."
-            
-            is_long = (direction == "LONG")
-            dir_color = "#3fb950" if is_long else "#f85149"
-            dir_bg = "rgba(63, 185, 80, 0.15)" if is_long else "rgba(248, 81, 73, 0.15)"
-            inst_tag = "CE" if is_long else "PE"
+        ce_candidates = [s for s in focus_watchlist if str(s.get("direction", "LONG")).upper() == "LONG"]
+        pe_candidates = [s for s in focus_watchlist if str(s.get("direction", "LONG")).upper() != "LONG"]
 
-            rows_html += f"""
-            <tr style="border-bottom: 1px solid #21262d;">
-                <td style="padding: 10px 8px; font-weight: bold; color: #ffffff; font-size: 13px;">{sym}</td>
-                <td style="padding: 10px 8px;">
-                    <span style="font-size: 11px; font-weight: bold; color: {dir_color}; background: {dir_bg}; padding: 2px 7px; border-radius: 4px; display: inline-block;">
-                        {direction} &bull; {inst_tag}
-                    </span>
-                </td>
-                <td style="padding: 10px 8px; font-weight: bold; color: #ffca28; font-size: 13px; text-align: center;">{score:.0f}</td>
-                <td style="padding: 10px 8px; font-size: 12px; color: #8b949e; line-height: 1.4;">{catalyst}</td>
-            </tr>
-            """
+        def render_table_rows(candidates_list, is_call=True):
+            rows = ""
+            for s in candidates_list:
+                sym = s.get("symbol", "")
+                direction = str(s.get("direction", "LONG" if is_call else "SHORT")).upper()
+                score = float(s.get("conviction_score", 0.0))
+                catalyst = s.get("catalyst_summary", "High institutional conviction")
+                if len(catalyst) > 95:
+                    catalyst = catalyst[:92] + "..."
+
+                dir_color = "#3fb950" if is_call else "#f85149"
+                dir_bg = "rgba(63, 185, 80, 0.15)" if is_call else "rgba(248, 81, 73, 0.15)"
+                inst_tag = "CE" if is_call else "PE"
+
+                rows += f"""
+                <tr style="border-bottom: 1px solid #21262d;">
+                    <td style="padding: 10px 8px; font-weight: bold; color: #ffffff; font-size: 13px;">{sym}</td>
+                    <td style="padding: 10px 8px;">
+                        <span style="font-size: 11px; font-weight: bold; color: {dir_color}; background: {dir_bg}; padding: 2px 7px; border-radius: 4px; display: inline-block;">
+                            {direction} &bull; {inst_tag}
+                        </span>
+                    </td>
+                    <td style="padding: 10px 8px; font-weight: bold; color: #ffca28; font-size: 13px; text-align: center;">{score:.0f}</td>
+                    <td style="padding: 10px 8px; font-size: 12px; color: #8b949e; line-height: 1.4;">{catalyst}</td>
+                </tr>
+                """
+            return rows
+
+        ce_rows = render_table_rows(ce_candidates, is_call=True)
+        pe_rows = render_table_rows(pe_candidates, is_call=False)
+
+        ce_section = f"""
+        <div style="margin-bottom: 20px;">
+            <div style="background: rgba(63, 185, 80, 0.08); border: 1px solid rgba(63, 185, 80, 0.25); border-radius: 6px; padding: 8px 12px; margin-bottom: 8px;">
+                <span style="font-size: 12px; font-weight: bold; color: #3fb950; text-transform: uppercase;">
+                    🟢 Call Option (CE) Focus Candidates ({len(ce_candidates)})
+                </span>
+                <span style="font-size: 11px; color: #8b949e; margin-left: 8px;">Bullish Momentum & Ignition Targets</span>
+            </div>
+            <table width="100%" style="border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="border-bottom: 1px solid #30363d; font-size: 10px; color: #8b949e; text-transform: uppercase;">
+                        <th style="padding: 6px 8px;">Symbol</th>
+                        <th style="padding: 6px 8px;">Bias</th>
+                        <th style="padding: 6px 8px; text-align: center;">Score</th>
+                        <th style="padding: 6px 8px;">Catalyst / Setup</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {ce_rows if ce_rows else '<tr><td colspan="4" style="padding: 8px; color: #8b949e; font-size: 12px; text-align: center;">No active CE candidates flagged.</td></tr>'}
+                </tbody>
+            </table>
+        </div>
+        """
+
+        pe_section = f"""
+        <div style="margin-bottom: 10px;">
+            <div style="background: rgba(248, 81, 73, 0.08); border: 1px solid rgba(248, 81, 73, 0.25); border-radius: 6px; padding: 8px 12px; margin-bottom: 8px;">
+                <span style="font-size: 12px; font-weight: bold; color: #f85149; text-transform: uppercase;">
+                    🔴 Put Option (PE) Focus Candidates ({len(pe_candidates)})
+                </span>
+                <span style="font-size: 11px; color: #8b949e; margin-left: 8px;">Bearish Breakdown & Short Targets</span>
+            </div>
+            <table width="100%" style="border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="border-bottom: 1px solid #30363d; font-size: 10px; color: #8b949e; text-transform: uppercase;">
+                        <th style="padding: 6px 8px;">Symbol</th>
+                        <th style="padding: 6px 8px;">Bias</th>
+                        <th style="padding: 6px 8px; text-align: center;">Score</th>
+                        <th style="padding: 6px 8px;">Catalyst / Setup</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {pe_rows if pe_rows else '<tr><td colspan="4" style="padding: 8px; color: #8b949e; font-size: 12px; text-align: center;">No active PE candidates flagged.</td></tr>'}
+                </tbody>
+            </table>
+        </div>
+        """
 
         html = f"""
         <div style="margin-top: 30px; margin-bottom: 25px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px;">
@@ -466,24 +524,13 @@ class SovereignEmailer:
                             </h3>
                         </td>
                         <td style="text-align: right; color: #8b949e; font-size: 11px;">
-                            5m Precision Engine Scope
+                            Segregated by Option Mandate (CE / PE)
                         </td>
                     </tr>
                 </table>
             </div>
-            <table width="100%" style="border-collapse: collapse; text-align: left;">
-                <thead>
-                    <tr style="border-bottom: 1px solid #30363d; font-size: 10px; color: #8b949e; text-transform: uppercase;">
-                        <th style="padding: 6px 8px;">Symbol</th>
-                        <th style="padding: 6px 8px;">Bias</th>
-                        <th style="padding: 6px 8px; text-align: center;">Score</th>
-                        <th style="padding: 6px 8px;">Catalyst / Setup</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {rows_html}
-                </tbody>
-            </table>
+            {ce_section}
+            {pe_section}
         </div>
         """
         return html

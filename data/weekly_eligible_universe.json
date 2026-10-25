@@ -1,17 +1,19 @@
 {
-  "generated_at": "2026-10-25T16:21:05.524282",
-  "count": 214,
-  "banned_count": 2,
+  "generated_at": "2026-10-25T16:35:56.397178",
+  "count": 205,
+  "banned_count": 0,
   "macro_themes": {
     "strong_sectors": [
-      "Auto",
+      "Automobile",
+      "Capital Goods",
       "Pharma"
     ],
     "weak_sectors": [
       "IT"
     ],
-    "market_sentiment": "BULLISH",
-    "narrative_summary": "Strong industrial demand."
+    "macro_events": [],
+    "market_sentiment": "NEUTRAL",
+    "narrative_summary": "System operating on quantitative sector baseline."
   },
   "eligible_candidates": [
     {
@@ -303,12 +305,6 @@
       "oi": 50000
     },
     {
-      "symbol": "COLPAL",
-      "dte": 15,
-      "bid_ask_spread_pct": 0.8,
-      "oi": 50000
-    },
-    {
       "symbol": "CONCOR",
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
@@ -322,12 +318,6 @@
     },
     {
       "symbol": "CUMMINSIND",
-      "dte": 15,
-      "bid_ask_spread_pct": 0.8,
-      "oi": 50000
-    },
-    {
-      "symbol": "DABUR",
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000
@@ -376,12 +366,6 @@
     },
     {
       "symbol": "EICHERMOT",
-      "dte": 15,
-      "bid_ask_spread_pct": 0.8,
-      "oi": 50000
-    },
-    {
-      "symbol": "ETERNAL",
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000
@@ -436,12 +420,6 @@
     },
     {
       "symbol": "GODFRYPHLP",
-      "dte": 15,
-      "bid_ask_spread_pct": 0.8,
-      "oi": 50000
-    },
-    {
-      "symbol": "GODREJCP",
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000
@@ -519,12 +497,6 @@
       "oi": 50000
     },
     {
-      "symbol": "HINDUNILVR",
-      "dte": 15,
-      "bid_ask_spread_pct": 0.8,
-      "oi": 50000
-    },
-    {
       "symbol": "HINDZINC",
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
@@ -538,12 +510,6 @@
     },
     {
       "symbol": "ICICIBANK",
-      "dte": 15,
-      "bid_ask_spread_pct": 0.8,
-      "oi": 50000
-    },
-    {
-      "symbol": "ICICIGI",
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000
@@ -771,12 +737,6 @@
       "oi": 50000
     },
     {
-      "symbol": "MARICO",
-      "dte": 15,
-      "bid_ask_spread_pct": 0.8,
-      "oi": 50000
-    },
-    {
       "symbol": "MARUTI",
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
@@ -856,12 +816,6 @@
     },
     {
       "symbol": "NBCC",
-      "dte": 15,
-      "bid_ask_spread_pct": 0.8,
-      "oi": 50000
-    },
-    {
-      "symbol": "NESTLEIND",
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000
@@ -1071,13 +1025,13 @@
       "oi": 50000
     },
     {
-      "symbol": "SBICARD",
+      "symbol": "SAIL",
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000
     },
     {
-      "symbol": "SBILIFE",
+      "symbol": "SBICARD",
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000
@@ -1144,12 +1098,6 @@
     },
     {
       "symbol": "SWIGGY",
-      "dte": 15,
-      "bid_ask_spread_pct": 0.8,
-      "oi": 50000
-    },
-    {
-      "symbol": "TATACONSUM",
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000

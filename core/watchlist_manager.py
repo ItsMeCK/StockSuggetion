@@ -2,6 +2,12 @@ from datetime import datetime, timedelta
 from typing import Dict, Any, List, Tuple, Set, Optional
 from dataclasses import dataclass
 
+# Low-beta, sluggish FMCG and Insurance defensives (empirically shown to bleed option premium)
+DEFAULT_DEFENSIVE_BLACKLIST: Set[str] = {
+    'SBILIFE', 'HINDUNILVR', 'TATACONSUM', 'GODREJCP', 'ETERNAL',
+    'ICICIGI', 'NESTLEIND', 'DABUR', 'MARICO', 'COLPAL'
+}
+
 @dataclass
 class WatchlistProposal:
     symbol: str
@@ -42,6 +48,7 @@ class WatchlistManager:
         self,
         universe: List[Dict[str, Any]],
         banned_stocks: Optional[Set[str]] = None,
+        excluded_stocks: Optional[Set[str]] = None,
         min_dte: int = 4,
         max_spread_pct: float = 2.0
     ) -> List[Dict[str, Any]]:
@@ -49,10 +56,12 @@ class WatchlistManager:
         Requirement W1, D4, D5:
         Filters weekly candidate universe:
         - Excludes stocks on F&O Ban list.
+        - Excludes blacklisted low-beta defensive names.
         - Excludes near-expiry contracts (DTE < min_dte).
         - Excludes contracts with wide bid-ask spread (> max_spread_pct).
         """
         banned = banned_stocks or set()
+        excluded = excluded_stocks or set()
         approved: List[Dict[str, Any]] = []
 
         for item in universe:
@@ -61,6 +70,8 @@ class WatchlistManager:
             spread = float(item.get("bid_ask_spread_pct", 0.0))
 
             if sym in banned:
+                continue
+            if sym in excluded:
                 continue
             if dte < min_dte:
                 continue

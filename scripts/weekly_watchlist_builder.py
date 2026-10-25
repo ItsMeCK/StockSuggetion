@@ -24,7 +24,7 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from core.watchlist_manager import WatchlistManager
+from core.watchlist_manager import WatchlistManager, DEFAULT_DEFENSIVE_BLACKLIST
 from core.fo_ban_manager import get_banned_fo_symbols
 from agents.watchlist_builder_agent import GroundedWatchlistBuilder
 from alerts.email_notifier import SovereignEmailer
@@ -65,15 +65,16 @@ def build_weekly_universe():
             "oi": 50000
         })
 
-    # 4. Filter through WatchlistManager (Requirement W1)
+    # 4. Filter through WatchlistManager (Requirement W1 & Defensive Exclusion)
     wm = WatchlistManager()
     eligible_candidates = wm.filter_weekly_universe(
         universe=raw_universe,
         banned_stocks=banned_symbols,
+        excluded_stocks=DEFAULT_DEFENSIVE_BLACKLIST,
         min_dte=4,
         max_spread_pct=2.0
     )
-    logger.info(f"Filtered {len(symbols)} -> {len(eligible_candidates)} eligible candidates ({len(banned_symbols)} excluded by F&O ban).")
+    logger.info(f"Filtered {len(symbols)} -> {len(eligible_candidates)} eligible candidates ({len(banned_symbols)} banned, {len(DEFAULT_DEFENSIVE_BLACKLIST)} defensives excluded).")
 
     # 5. Scan Macro & Sector Thematic Grounding for the week ahead
     builder = GroundedWatchlistBuilder()
