@@ -90,8 +90,8 @@ def evaluate_watchlist():
             kite = KiteConnect(api_key=kite_key)
             kite.set_access_token(kite_token)
             
-            # Batch quote call for all candidates (up to 500 symbols in 1 call)
-            symbols_to_quote = [f"NSE:{c['symbol']}" for c in candidates[:100]]
+            # Batch quote call for all candidates (Zerodha supports up to 500 symbols in 1 call)
+            symbols_to_quote = [f"NSE:{c['symbol']}" for c in candidates]
             batch_quotes = kite.quote(symbols_to_quote)
             logger.info(f"Successfully fetched {len(batch_quotes)} pre-open quotes from Zerodha.")
         except Exception as e:
@@ -109,7 +109,8 @@ def evaluate_watchlist():
             "prev_close": prev_close,
             "open": open_px,
             "dte": c.get("dte", 15),
-            "bid_ask_spread_pct": c.get("bid_ask_spread_pct", 0.8)
+            "bid_ask_spread_pct": c.get("bid_ask_spread_pct", 0.8),
+            "atr_pct": c.get("atr_pct", 2.5)
         })
 
     # 4. Filter Pre-Open Gaps (Requirement W2)
@@ -138,10 +139,10 @@ def evaluate_watchlist():
         else:
             shorts.append(cand)
 
-    # Sort Longs: Sector-aligned first, then highest positive gap
-    longs_sorted = sorted(longs, key=lambda x: (1 if x["is_sector_aligned"] else 0, x["gap_pct"]), reverse=True)
-    # Sort Shorts: Sector-aligned first, then most negative gap
-    shorts_sorted = sorted(shorts, key=lambda x: (1 if x["is_sector_aligned"] else 0, -x["gap_pct"]), reverse=True)
+    # Sort Longs: 1) Sector-aligned first, 2) Highest positive gap %, 3) Highest 20D ATR%
+    longs_sorted = sorted(longs, key=lambda x: (1 if x["is_sector_aligned"] else 0, x["gap_pct"], x.get("atr_pct", 2.0)), reverse=True)
+    # Sort Shorts: 1) Sector-aligned first, 2) Most negative gap %, 3) Highest 20D ATR%
+    shorts_sorted = sorted(shorts, key=lambda x: (1 if x["is_sector_aligned"] else 0, -x["gap_pct"], x.get("atr_pct", 2.0)), reverse=True)
 
     # Pick Top 5 Longs (CE) + Top 5 Shorts (PE) -> Strict 10 Candidates to Preserve Query Budget
     top_longs = longs_sorted[:5]
