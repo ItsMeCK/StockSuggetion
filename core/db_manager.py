@@ -393,6 +393,21 @@ def get_active_daily_focus_watchlist(min_score: float = 50.0):
                 pass
         return []
 
+def expire_previous_daily_focus():
+    """
+    Marks previous active daily focus watchlist items as EXPIRED so each morning starts with a fresh slate.
+    """
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute("UPDATE daily_focus_watchlist SET status = 'EXPIRED' WHERE status = 'ACTIVE'")
+        conn.commit()
+        cur.close()
+        conn.close()
+        logger.info("🧹 Expired previous active daily focus watchlist for a fresh pre-open intake.")
+    except Exception as e:
+        logger.warning(f"Could not expire previous daily focus: {e}")
+
 def update_watchlist_stock_status(symbol: str, new_status: str, reason: str = ""):
     """
     Updates the status of a watchlist symbol (e.g. ACTIVE -> PRUNED, REVIEW).

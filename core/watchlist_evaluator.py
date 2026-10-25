@@ -32,7 +32,7 @@ if PROJECT_ROOT not in sys.path:
 from core.watchlist_manager import WatchlistManager
 from core.sector_mapping import get_sector_for_symbol
 from agents.watchlist_builder_agent import GroundedWatchlistBuilder
-from core.db_manager import get_active_daily_focus_watchlist, save_daily_focus_stock
+from core.db_manager import get_active_daily_focus_watchlist, save_daily_focus_stock, expire_previous_daily_focus
 from alerts.email_notifier import SovereignEmailer
 
 load_dotenv()
@@ -52,6 +52,7 @@ def matches_theme_sectors(sec: str, theme_list: list) -> bool:
 
 def evaluate_watchlist():
     logger.info("🛡️ Initiating Daily 09:08 AM Pre-Open Watchlist Evaluation...")
+    expire_previous_daily_focus()
     builder = GroundedWatchlistBuilder()
     wm = WatchlistManager()
 
