@@ -6,6 +6,9 @@ PYTHONPATH=/Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign
 # 0. Sunday 18:00 PM - Weekly Eligible Universe Build & Strategy Briefing
 0 18 * * 0 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/weekly_watchlist_builder.py >> logs/weekly_watchlist.log 2>&1
 
+# 0b. 09:10 AM - Automated Token Synchronization from GCP Gateway
+10 9 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python -c "from core.gcp_execution_client import GCPExecutionClient; GCPExecutionClient().sync_tokens_from_gcp()" >> logs/token_sync.log 2>&1
+
 # 1. 09:11 AM - Pre-Open Futures Discovery & Daily Focus Watchlist (Mon-Fri)
 11 9 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python core/watchlist_evaluator.py >> logs/preopen_watchlist.log 2>&1
 
@@ -37,6 +40,11 @@ PYTHONPATH=/Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign
 
 # 7. Minutely Active Position Monitor & Dynamic Exit Engine (09:15 to 15:30 IST)
 * 9-15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/monitor_positions.py >> logs/live_monitor.log 2>&1
+
+# 7b. Every 20 Minutes (09:25 to 15:15 IST) - Smart Volume Reversal & Anti-Trap Liquidation Engine
+25,45 9 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/run_20m_volume_reversal_job.py >> logs/volume_reversal.log 2>&1
+5,25,45 10,11,12,13,14 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/run_20m_volume_reversal_job.py >> logs/volume_reversal.log 2>&1
+5 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/run_20m_volume_reversal_job.py >> logs/volume_reversal.log 2>&1
 
 # 8. 15:45 PM - EOD Portfolio Dashboard & Tax Ledger Reconciliation
 45 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python generate_portfolio_dashboard.py >> logs/eod_audit.log 2>&1
