@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000088",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BLUESTARCO",
+  "company_details": {
+    "symbol": "BLUESTARCO",
+    "company_name": "Blue Star Ltd.",
+    "isin": "INE472A01039",
+    "cin": "L29100MH2018PLC100088"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190R17S16TAPN",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 261583.85,
+      "in-gaap:OtherIncome": 7847.52,
+      "in-gaap:TotalIncome": 269431.37,
+      "in-gaap:OperatingExpenses": 185521.73,
+      "in-gaap:EBITDA": 76062.12,
+      "in-gaap:DepreciationAndAmortisation": 12169.94,
+      "in-gaap:EBIT": 63892.18,
+      "in-gaap:FinanceCosts": 2502.04,
+      "in-gaap:ProfitBeforeTax": 61390.14,
+      "in-gaap:TaxExpense": 15347.53,
+      "in-gaap:ProfitAfterTax": 46042.6
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 344.36,
+      "in-gaap:OtherEquity": 157804.43,
+      "in-gaap:TotalEquity": 158148.79,
+      "in-gaap:TotalDebt": 77968.98,
+      "in-gaap:CashAndCashEquivalents": 23469.2,
+      "in-gaap:TotalCurrentAssets": 130791.93,
+      "in-gaap:TotalCurrentLiabilities": 78475.15,
+      "in-gaap:TotalAssets": 314592.93,
+      "in-gaap:RetainedEarnings": 110704.15
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 68455.91,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 16090.83,
+      "in-gaap:FreeCashFlow": 52365.08
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 59.31,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1721800000,
+      "in-gaap:MarketPriceAtFiling": 1499.0,
+      "in-gaap:EarningsPerShareBasic": 267.41,
+      "in-gaap:EarningsPerShareDiluted": 267.41,
+      "in-gaap:TrailingTwelveMonthsEPS": 1069.64,
+      "in-gaap:ForwardEPSEstimate": 1230.09,
+      "in-gaap:BookValuePerShare": 918.51,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.4,
+      "in-gaap:ForwardPE": 1.2,
+      "in-gaap:PriceToBook": 1.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.2
+    }
+  }
+}

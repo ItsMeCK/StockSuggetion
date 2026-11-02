@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000065",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BALKRISIND",
+  "company_details": {
+    "symbol": "BALKRISIND",
+    "company_name": "Balkrishna Industries Ltd.",
+    "isin": "INE787D01026",
+    "cin": "L29100MH1995PLC100065"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "260485560B8ME3KHNU",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 198823.71,
+      "in-gaap:OtherIncome": 5964.71,
+      "in-gaap:TotalIncome": 204788.42,
+      "in-gaap:OperatingExpenses": 137540.99,
+      "in-gaap:EBITDA": 61282.72,
+      "in-gaap:DepreciationAndAmortisation": 9805.24,
+      "in-gaap:EBIT": 51477.48,
+      "in-gaap:FinanceCosts": 2699.68,
+      "in-gaap:ProfitBeforeTax": 48777.8,
+      "in-gaap:TaxExpense": 12194.45,
+      "in-gaap:ProfitAfterTax": 36583.35
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 376.5,
+      "in-gaap:OtherEquity": 239740.23,
+      "in-gaap:TotalEquity": 240116.73,
+      "in-gaap:TotalDebt": 31685.57,
+      "in-gaap:CashAndCashEquivalents": 49185.44,
+      "in-gaap:TotalCurrentAssets": 99411.85,
+      "in-gaap:TotalCurrentLiabilities": 59647.11,
+      "in-gaap:TotalAssets": 331449.41,
+      "in-gaap:RetainedEarnings": 168081.71
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 49639.0,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 19267.91,
+      "in-gaap:FreeCashFlow": 30371.09
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.07,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1882500000,
+      "in-gaap:MarketPriceAtFiling": 2109.8,
+      "in-gaap:EarningsPerShareBasic": 194.33,
+      "in-gaap:EarningsPerShareDiluted": 194.33,
+      "in-gaap:TrailingTwelveMonthsEPS": 777.32,
+      "in-gaap:ForwardEPSEstimate": 893.92,
+      "in-gaap:BookValuePerShare": 1275.52,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.7,
+      "in-gaap:ForwardPE": 2.3,
+      "in-gaap:PriceToBook": 1.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.6
+    }
+  }
+}

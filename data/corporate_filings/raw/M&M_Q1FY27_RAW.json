@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000315",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_M&M",
+  "company_details": {
+    "symbol": "M&M",
+    "company_name": "Mahindra & Mahindra Ltd.",
+    "isin": "INE101A01026",
+    "cin": "L29100MH1975PLC100315"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317G807KI2ZTY",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 430341.7,
+      "in-gaap:OtherIncome": 12910.25,
+      "in-gaap:TotalIncome": 443251.95,
+      "in-gaap:OperatingExpenses": 325945.48,
+      "in-gaap:EBITDA": 104396.22,
+      "in-gaap:DepreciationAndAmortisation": 16703.4,
+      "in-gaap:EBIT": 87692.82,
+      "in-gaap:FinanceCosts": 4278.53,
+      "in-gaap:ProfitBeforeTax": 83414.29,
+      "in-gaap:TaxExpense": 20853.57,
+      "in-gaap:ProfitAfterTax": 62560.72
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 302.18,
+      "in-gaap:OtherEquity": 569219.19,
+      "in-gaap:TotalEquity": 569521.37,
+      "in-gaap:TotalDebt": 38810.11,
+      "in-gaap:CashAndCashEquivalents": 50806.34,
+      "in-gaap:TotalCurrentAssets": 215170.85,
+      "in-gaap:TotalCurrentLiabilities": 129102.51,
+      "in-gaap:TotalAssets": 737433.99,
+      "in-gaap:RetainedEarnings": 398664.96
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 98132.45,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 27542.56,
+      "in-gaap:FreeCashFlow": 70589.89
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 69.78,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1510900000,
+      "in-gaap:MarketPriceAtFiling": 2861.2,
+      "in-gaap:EarningsPerShareBasic": 414.06,
+      "in-gaap:EarningsPerShareDiluted": 414.06,
+      "in-gaap:TrailingTwelveMonthsEPS": 1656.24,
+      "in-gaap:ForwardEPSEstimate": 1904.68,
+      "in-gaap:BookValuePerShare": 3769.42,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.7,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.4
+    }
+  }
+}

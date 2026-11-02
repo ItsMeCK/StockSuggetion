@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000176",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GMRAIRPORT",
+  "company_details": {
+    "symbol": "GMRAIRPORT",
+    "company_name": "GMR Airports Ltd.",
+    "isin": "INE776C01039",
+    "cin": "L29100MH2016PLC100176"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190B6LLCPLA17",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 5810.26,
+      "in-gaap:OtherIncome": 174.31,
+      "in-gaap:TotalIncome": 5984.57,
+      "in-gaap:OperatingExpenses": 4722.35,
+      "in-gaap:EBITDA": 1087.91,
+      "in-gaap:DepreciationAndAmortisation": 174.07,
+      "in-gaap:EBIT": 913.84,
+      "in-gaap:FinanceCosts": 79.41,
+      "in-gaap:ProfitBeforeTax": 834.43,
+      "in-gaap:TaxExpense": 208.61,
+      "in-gaap:ProfitAfterTax": 625.82
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 317.8,
+      "in-gaap:OtherEquity": 8231.71,
+      "in-gaap:TotalEquity": 8549.51,
+      "in-gaap:TotalDebt": 368.12,
+      "in-gaap:CashAndCashEquivalents": 1017.84,
+      "in-gaap:TotalCurrentAssets": 2905.13,
+      "in-gaap:TotalCurrentLiabilities": 1743.08,
+      "in-gaap:TotalAssets": 10660.71,
+      "in-gaap:RetainedEarnings": 5984.66
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 924.72,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 215.4,
+      "in-gaap:FreeCashFlow": 709.32
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 35.04,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1589000000,
+      "in-gaap:MarketPriceAtFiling": 86.38,
+      "in-gaap:EarningsPerShareBasic": 3.94,
+      "in-gaap:EarningsPerShareDiluted": 3.94,
+      "in-gaap:TrailingTwelveMonthsEPS": 15.76,
+      "in-gaap:ForwardEPSEstimate": 18.12,
+      "in-gaap:BookValuePerShare": 53.8,
+      "in-gaap:EVToEBITDA": 3.0,
+      "in-gaap:TrailingPE": 5.5,
+      "in-gaap:ForwardPE": 4.7,
+      "in-gaap:PriceToBook": 1.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.8
+    }
+  }
+}

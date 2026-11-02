@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000147",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_DRREDDY",
+  "company_details": {
+    "symbol": "DRREDDY",
+    "company_name": "Dr. Reddy's Laboratories Ltd.",
+    "isin": "INE089A01031",
+    "cin": "L29100MH1987PLC100147"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556D1WS4MTQ24",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 71353.43,
+      "in-gaap:OtherIncome": 2140.6,
+      "in-gaap:TotalIncome": 73494.03,
+      "in-gaap:OperatingExpenses": 60142.9,
+      "in-gaap:EBITDA": 11210.53,
+      "in-gaap:DepreciationAndAmortisation": 1793.68,
+      "in-gaap:EBIT": 9416.85,
+      "in-gaap:FinanceCosts": 363.98,
+      "in-gaap:ProfitBeforeTax": 9052.87,
+      "in-gaap:TaxExpense": 2263.22,
+      "in-gaap:ProfitAfterTax": 6789.65
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 76.42,
+      "in-gaap:OtherEquity": 49206.42,
+      "in-gaap:TotalEquity": 49282.84,
+      "in-gaap:TotalDebt": 7026.58,
+      "in-gaap:CashAndCashEquivalents": 12222.89,
+      "in-gaap:TotalCurrentAssets": 35676.71,
+      "in-gaap:TotalCurrentLiabilities": 21406.03,
+      "in-gaap:TotalAssets": 77715.45,
+      "in-gaap:RetainedEarnings": 34497.99
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 8968.42,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3200.94,
+      "in-gaap:FreeCashFlow": 5767.48
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 39.38,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 382100000,
+      "in-gaap:MarketPriceAtFiling": 1229.5,
+      "in-gaap:EarningsPerShareBasic": 177.69,
+      "in-gaap:EarningsPerShareDiluted": 177.69,
+      "in-gaap:TrailingTwelveMonthsEPS": 710.76,
+      "in-gaap:ForwardEPSEstimate": 817.37,
+      "in-gaap:BookValuePerShare": 1289.79,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.7,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.1
+    }
+  }
+}

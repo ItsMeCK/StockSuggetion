@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000200",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HEG",
+  "company_details": {
+    "symbol": "HEG",
+    "company_name": "H.E.G. Ltd.",
+    "isin": "INE545A01024",
+    "cin": "L29100MH1995PLC100200"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814KUAY24XE46",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 55896.59,
+      "in-gaap:OtherIncome": 1676.9,
+      "in-gaap:TotalIncome": 57573.49,
+      "in-gaap:OperatingExpenses": 47990.34,
+      "in-gaap:EBITDA": 7906.25,
+      "in-gaap:DepreciationAndAmortisation": 1265.0,
+      "in-gaap:EBIT": 6641.25,
+      "in-gaap:FinanceCosts": 265.31,
+      "in-gaap:ProfitBeforeTax": 6375.94,
+      "in-gaap:TaxExpense": 1593.98,
+      "in-gaap:ProfitAfterTax": 4781.95
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 466.38,
+      "in-gaap:OtherEquity": 59388.85,
+      "in-gaap:TotalEquity": 59855.23,
+      "in-gaap:TotalDebt": 7044.49,
+      "in-gaap:CashAndCashEquivalents": 12122.63,
+      "in-gaap:TotalCurrentAssets": 27948.29,
+      "in-gaap:TotalCurrentLiabilities": 16768.98,
+      "in-gaap:TotalAssets": 83668.7,
+      "in-gaap:RetainedEarnings": 41898.66
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 6878.44,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2472.16,
+      "in-gaap:FreeCashFlow": 4406.28
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 54.47,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2331900000,
+      "in-gaap:MarketPriceAtFiling": 276.29,
+      "in-gaap:EarningsPerShareBasic": 20.51,
+      "in-gaap:EarningsPerShareDiluted": 20.51,
+      "in-gaap:TrailingTwelveMonthsEPS": 82.04,
+      "in-gaap:ForwardEPSEstimate": 94.35,
+      "in-gaap:BookValuePerShare": 256.68,
+      "in-gaap:EVToEBITDA": 1.9,
+      "in-gaap:TrailingPE": 3.4,
+      "in-gaap:ForwardPE": 2.9,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.5
+    }
+  }
+}

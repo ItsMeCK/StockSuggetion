@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000072",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BAYERCROP",
+  "company_details": {
+    "symbol": "BAYERCROP",
+    "company_name": "Bayer Cropscience Ltd.",
+    "isin": "INE462A01022",
+    "cin": "L29100MH2002PLC100072"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190HM1SEUBZWI",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 683391.55,
+      "in-gaap:OtherIncome": 20501.75,
+      "in-gaap:TotalIncome": 703893.3,
+      "in-gaap:OperatingExpenses": 569733.81,
+      "in-gaap:EBITDA": 113657.74,
+      "in-gaap:DepreciationAndAmortisation": 18185.24,
+      "in-gaap:EBIT": 95472.5,
+      "in-gaap:FinanceCosts": 11253.24,
+      "in-gaap:ProfitBeforeTax": 84219.26,
+      "in-gaap:TaxExpense": 21054.81,
+      "in-gaap:ProfitAfterTax": 63164.44
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 281.26,
+      "in-gaap:OtherEquity": 845499.81,
+      "in-gaap:TotalEquity": 845781.07,
+      "in-gaap:TotalDebt": 133157.72,
+      "in-gaap:CashAndCashEquivalents": 81413.71,
+      "in-gaap:TotalCurrentAssets": 341695.78,
+      "in-gaap:TotalCurrentLiabilities": 205017.46,
+      "in-gaap:TotalAssets": 1183956.25,
+      "in-gaap:RetainedEarnings": 592046.75
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 107974.85,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 26496.13,
+      "in-gaap:FreeCashFlow": 81478.72
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 60.3,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1406300000,
+      "in-gaap:MarketPriceAtFiling": 3383.5,
+      "in-gaap:EarningsPerShareBasic": 449.15,
+      "in-gaap:EarningsPerShareDiluted": 449.15,
+      "in-gaap:TrailingTwelveMonthsEPS": 1796.6,
+      "in-gaap:ForwardEPSEstimate": 2066.09,
+      "in-gaap:BookValuePerShare": 6014.23,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 1.9,
+      "in-gaap:ForwardPE": 1.6,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.4
+    }
+  }
+}

@@ -18,7 +18,17 @@ class CapitalRiskGatekeeper:
        - Engine 1 Hourly (Unconfirmed Standalone, p>0.30): 100% PAPER-TRADE ONLY (₹0 live).
     6. Daily Drawdown Circuit Breaker: 5% equity loss halts execution for the day.
     """
-    def __init__(self, max_concurrency: int = 2, max_allocation_pct: float = 0.25, daily_loss_limit_pct: float = 0.05, max_daily_trades: int = 5):
+    def __init__(
+        self,
+        max_concurrency: int = None,
+        max_allocation_pct: float = 0.25,
+        daily_loss_limit_pct: float = 0.05,
+        max_daily_trades: int = None
+    ):
+        if max_concurrency is None:
+            max_concurrency = int(os.getenv("MAX_CONCURRENCY", "10"))
+        if max_daily_trades is None:
+            max_daily_trades = int(os.getenv("MAX_DAILY_TRADES", "9999"))
         self.max_concurrency = max_concurrency
         self.max_allocation_pct = max_allocation_pct
         self.daily_loss_limit_pct = daily_loss_limit_pct
@@ -43,8 +53,8 @@ class CapitalRiskGatekeeper:
         if current_daily_loss >= max_daily_loss:
             return False, 0.0, f"CIRCUIT_BREAKER_HALT: Daily loss ₹{current_daily_loss:.2f} >= 5% equity limit (₹{max_daily_loss:.2f})"
 
-        # 1b. Daily Trade Cap Check (Max 5 trades per day)
-        if trades_today_count is not None and trades_today_count >= self.max_daily_trades:
+        # 1b. Daily Trade Cap Check (Configurable via MAX_DAILY_TRADES, 0 or 9999 = unlimited)
+        if self.max_daily_trades > 0 and trades_today_count is not None and trades_today_count >= self.max_daily_trades:
             return False, 0.0, f"DAILY_TRADE_CAP_REACHED: Daily trade limit reached ({trades_today_count}/{self.max_daily_trades})"
 
         # 2. Concurrency Check

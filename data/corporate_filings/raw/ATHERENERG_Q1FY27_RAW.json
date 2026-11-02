@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000051",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ATHERENERG",
+  "company_details": {
+    "symbol": "ATHERENERG",
+    "company_name": "Ather Energy Ltd.",
+    "isin": "INE0LEZ01016",
+    "cin": "L29100MH1981PLC100051"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423JHSWTZQS4T",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 137666.23,
+      "in-gaap:OtherIncome": 4129.99,
+      "in-gaap:TotalIncome": 141796.22,
+      "in-gaap:OperatingExpenses": 117240.67,
+      "in-gaap:EBITDA": 20425.56,
+      "in-gaap:DepreciationAndAmortisation": 3268.09,
+      "in-gaap:EBIT": 17157.47,
+      "in-gaap:FinanceCosts": 1104.08,
+      "in-gaap:ProfitBeforeTax": 16053.39,
+      "in-gaap:TaxExpense": 4013.35,
+      "in-gaap:ProfitAfterTax": 12040.04
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 192.18,
+      "in-gaap:OtherEquity": 151462.96,
+      "in-gaap:TotalEquity": 151655.14,
+      "in-gaap:TotalDebt": 10289.03,
+      "in-gaap:CashAndCashEquivalents": 21460.72,
+      "in-gaap:TotalCurrentAssets": 68833.12,
+      "in-gaap:TotalCurrentLiabilities": 41299.87,
+      "in-gaap:TotalAssets": 203244.04,
+      "in-gaap:RetainedEarnings": 106158.6
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 18587.26,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 5568.61,
+      "in-gaap:FreeCashFlow": 13018.65
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 35.2,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 960900000,
+      "in-gaap:MarketPriceAtFiling": 1380.0,
+      "in-gaap:EarningsPerShareBasic": 125.3,
+      "in-gaap:EarningsPerShareDiluted": 125.3,
+      "in-gaap:TrailingTwelveMonthsEPS": 501.2,
+      "in-gaap:ForwardEPSEstimate": 576.38,
+      "in-gaap:BookValuePerShare": 1578.26,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.8,
+      "in-gaap:ForwardPE": 2.4,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.7
+    }
+  }
+}

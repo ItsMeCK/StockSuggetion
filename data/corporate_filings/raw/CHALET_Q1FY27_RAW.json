@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000111",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CHALET",
+  "company_details": {
+    "symbol": "CHALET",
+    "company_name": "Chalet Hotels Ltd.",
+    "isin": "INE427F01016",
+    "cin": "L29100MH1996PLC100111"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826HECMZHEGCQ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 167576.89,
+      "in-gaap:OtherIncome": 5027.31,
+      "in-gaap:TotalIncome": 172604.2,
+      "in-gaap:OperatingExpenses": 138294.31,
+      "in-gaap:EBITDA": 29282.58,
+      "in-gaap:DepreciationAndAmortisation": 4685.21,
+      "in-gaap:EBIT": 24597.37,
+      "in-gaap:FinanceCosts": 1939.24,
+      "in-gaap:ProfitBeforeTax": 22658.13,
+      "in-gaap:TaxExpense": 5664.53,
+      "in-gaap:ProfitAfterTax": 16993.6
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 269.0,
+      "in-gaap:OtherEquity": 207924.49,
+      "in-gaap:TotalEquity": 208193.49,
+      "in-gaap:TotalDebt": 8700.53,
+      "in-gaap:CashAndCashEquivalents": 39928.68,
+      "in-gaap:TotalCurrentAssets": 83788.45,
+      "in-gaap:TotalCurrentLiabilities": 50273.07,
+      "in-gaap:TotalAssets": 267167.09,
+      "in-gaap:RetainedEarnings": 145735.44
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 26061.5,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 9921.61,
+      "in-gaap:FreeCashFlow": 16139.89
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.93,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1345000000,
+      "in-gaap:MarketPriceAtFiling": 789.4,
+      "in-gaap:EarningsPerShareBasic": 126.35,
+      "in-gaap:EarningsPerShareDiluted": 126.35,
+      "in-gaap:TrailingTwelveMonthsEPS": 505.4,
+      "in-gaap:ForwardEPSEstimate": 581.21,
+      "in-gaap:BookValuePerShare": 1547.91,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.6,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.3
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000274",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_JINDALSTEL",
+  "company_details": {
+    "symbol": "JINDALSTEL",
+    "company_name": "Jindal Steel Ltd.",
+    "isin": "INE749A01030",
+    "cin": "L29100MH1979PLC100274"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "260588141XT9WNJD6V",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 117595.45,
+      "in-gaap:OtherIncome": 3527.86,
+      "in-gaap:TotalIncome": 121123.31,
+      "in-gaap:OperatingExpenses": 80311.11,
+      "in-gaap:EBITDA": 37284.34,
+      "in-gaap:DepreciationAndAmortisation": 5965.49,
+      "in-gaap:EBIT": 31318.85,
+      "in-gaap:FinanceCosts": 2741.5,
+      "in-gaap:ProfitBeforeTax": 28577.35,
+      "in-gaap:TaxExpense": 7144.34,
+      "in-gaap:ProfitAfterTax": 21433.01
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 275.28,
+      "in-gaap:OtherEquity": 94415.75,
+      "in-gaap:TotalEquity": 94691.03,
+      "in-gaap:TotalDebt": 17561.83,
+      "in-gaap:CashAndCashEquivalents": 25364.91,
+      "in-gaap:TotalCurrentAssets": 58797.72,
+      "in-gaap:TotalCurrentLiabilities": 35278.63,
+      "in-gaap:TotalAssets": 147531.49,
+      "in-gaap:RetainedEarnings": 66283.72
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 30946.0,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6824.37,
+      "in-gaap:FreeCashFlow": 24121.63
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 67.52,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1376399999,
+      "in-gaap:MarketPriceAtFiling": 1015.9,
+      "in-gaap:EarningsPerShareBasic": 155.72,
+      "in-gaap:EarningsPerShareDiluted": 155.72,
+      "in-gaap:TrailingTwelveMonthsEPS": 622.88,
+      "in-gaap:ForwardEPSEstimate": 716.31,
+      "in-gaap:BookValuePerShare": 687.96,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.6,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 1.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.1
+    }
+  }
+}

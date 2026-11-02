@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000376",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_PINELABS",
+  "company_details": {
+    "symbol": "PINELABS",
+    "company_name": "Pine Labs Ltd.",
+    "isin": "INE15B701018",
+    "cin": "L29100MH1991PLC100376"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "2604219029DRUCWZ6T",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 12015.18,
+      "in-gaap:OtherIncome": 360.46,
+      "in-gaap:TotalIncome": 12375.64,
+      "in-gaap:OperatingExpenses": 10399.86,
+      "in-gaap:EBITDA": 1615.32,
+      "in-gaap:DepreciationAndAmortisation": 258.45,
+      "in-gaap:EBIT": 1356.87,
+      "in-gaap:FinanceCosts": 133.5,
+      "in-gaap:ProfitBeforeTax": 1223.37,
+      "in-gaap:TaxExpense": 305.84,
+      "in-gaap:ProfitAfterTax": 917.53
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 101.9,
+      "in-gaap:OtherEquity": 9505.32,
+      "in-gaap:TotalEquity": 9607.22,
+      "in-gaap:TotalDebt": 1373.69,
+      "in-gaap:CashAndCashEquivalents": 1386.56,
+      "in-gaap:TotalCurrentAssets": 6007.59,
+      "in-gaap:TotalCurrentLiabilities": 3604.55,
+      "in-gaap:TotalAssets": 14585.46,
+      "in-gaap:RetainedEarnings": 6725.05
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1227.64,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 426.67,
+      "in-gaap:FreeCashFlow": 800.97
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 57.65,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 509500000,
+      "in-gaap:MarketPriceAtFiling": 154.57,
+      "in-gaap:EarningsPerShareBasic": 18.01,
+      "in-gaap:EarningsPerShareDiluted": 18.01,
+      "in-gaap:TrailingTwelveMonthsEPS": 72.04,
+      "in-gaap:ForwardEPSEstimate": 82.85,
+      "in-gaap:BookValuePerShare": 188.56,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 2.1,
+      "in-gaap:ForwardPE": 1.8,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.7
+    }
+  }
+}

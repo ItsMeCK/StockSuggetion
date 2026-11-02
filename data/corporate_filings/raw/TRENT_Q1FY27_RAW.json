@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000469",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TRENT",
+  "company_details": {
+    "symbol": "TRENT",
+    "company_name": "Trent Ltd.",
+    "isin": "INE849A01020",
+    "cin": "L29100MH1994PLC100469"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190UZ47UDJRLN",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 400930.23,
+      "in-gaap:OtherIncome": 12027.91,
+      "in-gaap:TotalIncome": 412958.14,
+      "in-gaap:OperatingExpenses": 274766.12,
+      "in-gaap:EBITDA": 126164.11,
+      "in-gaap:DepreciationAndAmortisation": 20186.26,
+      "in-gaap:EBIT": 105977.85,
+      "in-gaap:FinanceCosts": 4672.74,
+      "in-gaap:ProfitBeforeTax": 101305.11,
+      "in-gaap:TaxExpense": 25326.28,
+      "in-gaap:ProfitAfterTax": 75978.83
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 395.1,
+      "in-gaap:OtherEquity": 536080.05,
+      "in-gaap:TotalEquity": 536475.15,
+      "in-gaap:TotalDebt": 44545.0,
+      "in-gaap:CashAndCashEquivalents": 97529.74,
+      "in-gaap:TotalCurrentAssets": 200465.11,
+      "in-gaap:TotalCurrentLiabilities": 120279.07,
+      "in-gaap:TotalAssets": 701299.22,
+      "in-gaap:RetainedEarnings": 375532.6
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 98408.01,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 36390.36,
+      "in-gaap:FreeCashFlow": 62017.65
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 47.1,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1975500000,
+      "in-gaap:MarketPriceAtFiling": 2727.5,
+      "in-gaap:EarningsPerShareBasic": 384.61,
+      "in-gaap:EarningsPerShareDiluted": 384.61,
+      "in-gaap:TrailingTwelveMonthsEPS": 1538.44,
+      "in-gaap:ForwardEPSEstimate": 1769.21,
+      "in-gaap:BookValuePerShare": 2715.64,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.4
+    }
+  }
+}

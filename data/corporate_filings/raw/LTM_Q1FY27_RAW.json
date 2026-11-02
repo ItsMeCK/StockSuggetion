@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000299",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_LTM",
+  "company_details": {
+    "symbol": "LTM",
+    "company_name": "LTM Ltd.",
+    "isin": "INE214T01019",
+    "cin": "L29100MH2004PLC100299"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317M270Q7FEDX",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 616172.84,
+      "in-gaap:OtherIncome": 18485.19,
+      "in-gaap:TotalIncome": 634658.03,
+      "in-gaap:OperatingExpenses": 484155.02,
+      "in-gaap:EBITDA": 132017.82,
+      "in-gaap:DepreciationAndAmortisation": 21122.85,
+      "in-gaap:EBIT": 110894.97,
+      "in-gaap:FinanceCosts": 6000.81,
+      "in-gaap:ProfitBeforeTax": 104894.16,
+      "in-gaap:TaxExpense": 26223.54,
+      "in-gaap:ProfitAfterTax": 78670.62
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 224.76,
+      "in-gaap:OtherEquity": 498444.31,
+      "in-gaap:TotalEquity": 498669.07,
+      "in-gaap:TotalDebt": 84619.89,
+      "in-gaap:CashAndCashEquivalents": 78384.25,
+      "in-gaap:TotalCurrentAssets": 308086.42,
+      "in-gaap:TotalCurrentLiabilities": 184851.85,
+      "in-gaap:TotalAssets": 768140.81,
+      "in-gaap:RetainedEarnings": 349068.35
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 110894.97,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 26844.89,
+      "in-gaap:FreeCashFlow": 84050.08
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 50.73,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1123800000,
+      "in-gaap:MarketPriceAtFiling": 4134.0,
+      "in-gaap:EarningsPerShareBasic": 700.04,
+      "in-gaap:EarningsPerShareDiluted": 700.04,
+      "in-gaap:TrailingTwelveMonthsEPS": 2800.16,
+      "in-gaap:ForwardEPSEstimate": 3220.18,
+      "in-gaap:BookValuePerShare": 4437.35,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.3
+    }
+  }
+}

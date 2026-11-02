@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000258",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_IPCALAB",
+  "company_details": {
+    "symbol": "IPCALAB",
+    "company_name": "Ipca Laboratories Ltd.",
+    "isin": "INE571A01038",
+    "cin": "L29100MH2008PLC100258"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814OCDFZ7W1CV",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 284947.97,
+      "in-gaap:OtherIncome": 8548.44,
+      "in-gaap:TotalIncome": 293496.41,
+      "in-gaap:OperatingExpenses": 221640.79,
+      "in-gaap:EBITDA": 63307.18,
+      "in-gaap:DepreciationAndAmortisation": 10129.15,
+      "in-gaap:EBIT": 53178.03,
+      "in-gaap:FinanceCosts": 1918.4,
+      "in-gaap:ProfitBeforeTax": 51259.63,
+      "in-gaap:TaxExpense": 12814.91,
+      "in-gaap:ProfitAfterTax": 38444.72
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 433.74,
+      "in-gaap:OtherEquity": 202975.04,
+      "in-gaap:TotalEquity": 203408.78,
+      "in-gaap:TotalDebt": 62756.95,
+      "in-gaap:CashAndCashEquivalents": 48070.66,
+      "in-gaap:TotalCurrentAssets": 142473.98,
+      "in-gaap:TotalCurrentLiabilities": 85484.39,
+      "in-gaap:TotalAssets": 351650.12,
+      "in-gaap:RetainedEarnings": 142386.15
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 56343.39,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 21323.78,
+      "in-gaap:FreeCashFlow": 35019.61
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 40.72,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2168700000,
+      "in-gaap:MarketPriceAtFiling": 1953.3,
+      "in-gaap:EarningsPerShareBasic": 177.27,
+      "in-gaap:EarningsPerShareDiluted": 177.27,
+      "in-gaap:TrailingTwelveMonthsEPS": 709.08,
+      "in-gaap:ForwardEPSEstimate": 815.44,
+      "in-gaap:BookValuePerShare": 937.93,
+      "in-gaap:EVToEBITDA": 1.7,
+      "in-gaap:TrailingPE": 2.8,
+      "in-gaap:ForwardPE": 2.4,
+      "in-gaap:PriceToBook": 2.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.9
+    }
+  }
+}

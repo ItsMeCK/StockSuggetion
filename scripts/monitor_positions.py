@@ -33,27 +33,38 @@ def monitor_positions():
     """
     load_dotenv()
     live_buy_flag = os.getenv("LIVE_BUY", "False")
+    is_live = (live_buy_flag.lower() == "true")
     try:
         kite_data = get_kite_data_client()
-        kite_exec = get_kite_exec_client()
         emailer = SovereignEmailer()
     except Exception as e:
         print(f"Error initializing clients: {e}")
         return
+
+    kite_exec = None
+    if is_live:
+        try:
+            kite_exec = get_kite_exec_client()
+        except Exception as e:
+            print(f"Failed to initialize Exec client: {e}")
+            return
 
     positions = get_all_active_positions()
     if not positions:
         return
 
     # Fetch current exchange state
-    try:
-        exchange_orders = kite_exec.orders()
-        order_dict = {o['order_id']: o for o in exchange_orders}
-        exchange_positions = kite_exec.positions()
-        net_positions = {p['tradingsymbol']: p['quantity'] for p in exchange_positions.get('net', [])}
-    except Exception as e:
-        print(f"Failed to fetch exchange data via Exec account: {e}")
-        return
+    order_dict = {}
+    net_positions = {}
+    if is_live and kite_exec:
+        try:
+            exchange_orders = kite_exec.orders()
+            order_dict = {o['order_id']: o for o in exchange_orders}
+            exchange_positions = kite_exec.positions()
+            net_positions = {p['tradingsymbol']: p['quantity'] for p in exchange_positions.get('net', [])}
+        except Exception as e:
+            print(f"Failed to fetch exchange data via Exec account: {e}")
+            return
 
     exit_engine = DynamicOptionExitEngine()
     now_dt = datetime.now()

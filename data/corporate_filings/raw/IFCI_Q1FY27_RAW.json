@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000230",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_IFCI",
+  "company_details": {
+    "symbol": "IFCI",
+    "company_name": "IFCI Ltd.",
+    "isin": "INE039A01010",
+    "cin": "L29100MH1980PLC100230"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190X652XBNMYH",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 7854.52,
+      "in-gaap:OtherIncome": 235.64,
+      "in-gaap:TotalIncome": 8090.16,
+      "in-gaap:OperatingExpenses": 5717.58,
+      "in-gaap:EBITDA": 2136.94,
+      "in-gaap:DepreciationAndAmortisation": 341.91,
+      "in-gaap:EBIT": 1795.03,
+      "in-gaap:FinanceCosts": 87.22,
+      "in-gaap:ProfitBeforeTax": 1707.81,
+      "in-gaap:TaxExpense": 426.95,
+      "in-gaap:ProfitAfterTax": 1280.86
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 242.34,
+      "in-gaap:OtherEquity": 9754.81,
+      "in-gaap:TotalEquity": 9997.15,
+      "in-gaap:TotalDebt": 620.87,
+      "in-gaap:CashAndCashEquivalents": 1392.62,
+      "in-gaap:TotalCurrentAssets": 3927.26,
+      "in-gaap:TotalCurrentLiabilities": 2356.36,
+      "in-gaap:TotalAssets": 12974.38,
+      "in-gaap:RetainedEarnings": 6998.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1859.14,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 539.33,
+      "in-gaap:FreeCashFlow": 1319.81
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 35.41,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1211700000,
+      "in-gaap:MarketPriceAtFiling": 59.28,
+      "in-gaap:EarningsPerShareBasic": 10.57,
+      "in-gaap:EarningsPerShareDiluted": 10.57,
+      "in-gaap:TrailingTwelveMonthsEPS": 42.28,
+      "in-gaap:ForwardEPSEstimate": 48.62,
+      "in-gaap:BookValuePerShare": 82.51,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.4,
+      "in-gaap:ForwardPE": 1.2,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.0
+    }
+  }
+}

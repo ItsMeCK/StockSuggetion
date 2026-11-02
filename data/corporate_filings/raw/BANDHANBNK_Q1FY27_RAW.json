@@ -1,0 +1,70 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1048892",
+  "submission_regulation": "SEBI (Listing ObligationsR) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BANDHANBNK",
+  "company_details": {
+    "symbol": "BANDHANBNK",
+    "company_name": "Bandhan Bank Limited",
+    "isin": "INE545U01014",
+    "cin": "L67190WB2014PLC204622"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:45:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Singhi & Co, Chartered Accountants",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. Anurag Singhi",
+    "membership_number": "088920",
+    "udin": "26088920BKAMNM7721",
+    "opinion_type": "Qualified Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 2850.0,
+      "in-gaap:TotalIncome": 5200.0,
+      "in-gaap:OperatingProfit": 1950.0,
+      "in-gaap:ProvisionsAndContingencies": 820.0,
+      "in-gaap:ProfitBeforeTax": 1130.0,
+      "in-gaap:TaxExpense": 282.5,
+      "in-gaap:ProfitAfterTax": 847.5
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 1610.8,
+      "in-gaap:ReservesAndSurplus": 21500.0,
+      "in-gaap:TotalEquity": 23110.8,
+      "in-gaap:TotalDeposits": 148000.0,
+      "in-gaap:CasaDeposits": 48840.0,
+      "in-gaap:TotalAdvances": 136000.0,
+      "in-gaap:TotalAssets": 182000.0
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 6142.0,
+      "in-gaap:NetNPA": 1768.0,
+      "in-gaap:CapitalAdequacyRatioCRAR": 15.2,
+      "in-gaap:Tier1CapitalRatio": 14.1
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 39.9,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1610800000,
+      "in-gaap:MarketPriceAtFiling": 192.0,
+      "in-gaap:EarningsPerShareBasic": 5.26,
+      "in-gaap:EarningsPerShareDiluted": 5.26,
+      "in-gaap:TrailingTwelveMonthsEPS": 19.5,
+      "in-gaap:ForwardEPSEstimate": 22.0,
+      "in-gaap:BookValuePerShare": 143.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 8.0
+    }
+  }
+}

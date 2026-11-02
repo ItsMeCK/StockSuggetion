@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000395",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_RAINBOW",
+  "company_details": {
+    "symbol": "RAINBOW",
+    "company_name": "Rainbow Childrens Medicare Ltd.",
+    "isin": "INE961O01016",
+    "cin": "L29100MH2010PLC100395"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190MDKO3DOLQV",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 30024.3,
+      "in-gaap:OtherIncome": 900.73,
+      "in-gaap:TotalIncome": 30925.03,
+      "in-gaap:OperatingExpenses": 21094.93,
+      "in-gaap:EBITDA": 8929.37,
+      "in-gaap:DepreciationAndAmortisation": 1428.7,
+      "in-gaap:EBIT": 7500.67,
+      "in-gaap:FinanceCosts": 376.77,
+      "in-gaap:ProfitBeforeTax": 7123.9,
+      "in-gaap:TaxExpense": 1780.97,
+      "in-gaap:ProfitAfterTax": 5342.92
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 95.42,
+      "in-gaap:OtherEquity": 43496.09,
+      "in-gaap:TotalEquity": 43591.51,
+      "in-gaap:TotalDebt": 10641.2,
+      "in-gaap:CashAndCashEquivalents": 7318.11,
+      "in-gaap:TotalCurrentAssets": 15012.15,
+      "in-gaap:TotalCurrentLiabilities": 9007.29,
+      "in-gaap:TotalAssets": 63240.0,
+      "in-gaap:RetainedEarnings": 30514.06
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 7679.26,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2459.71,
+      "in-gaap:FreeCashFlow": 5219.55
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 49.29,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 477100000,
+      "in-gaap:MarketPriceAtFiling": 1169.6,
+      "in-gaap:EarningsPerShareBasic": 111.99,
+      "in-gaap:EarningsPerShareDiluted": 111.99,
+      "in-gaap:TrailingTwelveMonthsEPS": 447.96,
+      "in-gaap:ForwardEPSEstimate": 515.15,
+      "in-gaap:BookValuePerShare": 913.68,
+      "in-gaap:EVToEBITDA": 1.7,
+      "in-gaap:TrailingPE": 2.6,
+      "in-gaap:ForwardPE": 2.2,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.9
+    }
+  }
+}

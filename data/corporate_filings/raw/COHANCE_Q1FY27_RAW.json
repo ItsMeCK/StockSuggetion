@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000123",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_COHANCE",
+  "company_details": {
+    "symbol": "COHANCE",
+    "company_name": "Cohance Lifesciences Ltd.",
+    "isin": "INE03QK01018",
+    "cin": "L29100MH2008PLC100123"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190BXZ14R2RLR",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 69568.2,
+      "in-gaap:OtherIncome": 2087.05,
+      "in-gaap:TotalIncome": 71655.25,
+      "in-gaap:OperatingExpenses": 55874.57,
+      "in-gaap:EBITDA": 13693.63,
+      "in-gaap:DepreciationAndAmortisation": 2190.98,
+      "in-gaap:EBIT": 11502.65,
+      "in-gaap:FinanceCosts": 1244.88,
+      "in-gaap:ProfitBeforeTax": 10257.77,
+      "in-gaap:TaxExpense": 2564.44,
+      "in-gaap:ProfitAfterTax": 7693.33
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 260.92,
+      "in-gaap:OtherEquity": 79319.65,
+      "in-gaap:TotalEquity": 79580.57,
+      "in-gaap:TotalDebt": 14987.05,
+      "in-gaap:CashAndCashEquivalents": 7443.09,
+      "in-gaap:TotalCurrentAssets": 34784.1,
+      "in-gaap:TotalCurrentLiabilities": 20870.46,
+      "in-gaap:TotalAssets": 115438.08,
+      "in-gaap:RetainedEarnings": 55706.4
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 12598.14,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2542.24,
+      "in-gaap:FreeCashFlow": 10055.9
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 41.5,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1304600000,
+      "in-gaap:MarketPriceAtFiling": 449.85,
+      "in-gaap:EarningsPerShareBasic": 58.97,
+      "in-gaap:EarningsPerShareDiluted": 58.97,
+      "in-gaap:TrailingTwelveMonthsEPS": 235.88,
+      "in-gaap:ForwardEPSEstimate": 271.26,
+      "in-gaap:BookValuePerShare": 610.0,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 1.9,
+      "in-gaap:ForwardPE": 1.6,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.2
+    }
+  }
+}

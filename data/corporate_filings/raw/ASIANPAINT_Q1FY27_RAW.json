@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000048",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ASIANPAINT",
+  "company_details": {
+    "symbol": "ASIANPAINT",
+    "company_name": "Asian Paints Ltd.",
+    "isin": "INE021A01026",
+    "cin": "L29100MH1978PLC100048"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987OVA2DCUPGT",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 512769.74,
+      "in-gaap:OtherIncome": 15383.09,
+      "in-gaap:TotalIncome": 528152.83,
+      "in-gaap:OperatingExpenses": 364246.78,
+      "in-gaap:EBITDA": 148522.96,
+      "in-gaap:DepreciationAndAmortisation": 23763.67,
+      "in-gaap:EBIT": 124759.29,
+      "in-gaap:FinanceCosts": 5248.16,
+      "in-gaap:ProfitBeforeTax": 119511.13,
+      "in-gaap:TaxExpense": 29877.78,
+      "in-gaap:ProfitAfterTax": 89633.35
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 459.64,
+      "in-gaap:OtherEquity": 399800.14,
+      "in-gaap:TotalEquity": 400259.78,
+      "in-gaap:TotalDebt": 110369.13,
+      "in-gaap:CashAndCashEquivalents": 125512.57,
+      "in-gaap:TotalCurrentAssets": 256384.87,
+      "in-gaap:TotalCurrentLiabilities": 153830.92,
+      "in-gaap:TotalAssets": 664459.83,
+      "in-gaap:RetainedEarnings": 280181.85
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 121788.83,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 34321.56,
+      "in-gaap:FreeCashFlow": 87467.27
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 71.62,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2298200000,
+      "in-gaap:MarketPriceAtFiling": 2307.0,
+      "in-gaap:EarningsPerShareBasic": 390.02,
+      "in-gaap:EarningsPerShareDiluted": 390.02,
+      "in-gaap:TrailingTwelveMonthsEPS": 1560.08,
+      "in-gaap:ForwardEPSEstimate": 1794.09,
+      "in-gaap:BookValuePerShare": 1741.62,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.2
+    }
+  }
+}

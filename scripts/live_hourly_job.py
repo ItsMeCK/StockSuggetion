@@ -96,9 +96,20 @@ def run_hourly_evaluation():
         else:
             surviving_positions.append(pos)
             
-    MAX_OPEN_TRADES = 3
+    MAX_OPEN_TRADES = int(os.getenv("MAX_OPEN_TRADES", "10"))
     if len(surviving_positions) >= MAX_OPEN_TRADES:
         print(f"🛑 MAX TRADES LIMIT REACHED ({len(surviving_positions)}/{MAX_OPEN_TRADES}). Skipping new trades to preserve capital.")
+        try:
+            from alerts.email_notifier import SovereignEmailer
+            emailer = SovereignEmailer()
+            emailer.send_scorecard(
+                f"Live Hourly Execution ({now.strftime('%H:%M')})",
+                [],
+                [{"ticker": "CAPACITY CEILING", "score": 0, "reason": f"Active trades limit reached ({len(surviving_positions)}/{MAX_OPEN_TRADES}). Existing positions running/trailing. New entries skipped to preserve capital."}]
+            )
+            print("📧 Dispatched Capacity Alert Email Report.")
+        except Exception as e:
+            print(f"Failed to send capacity email alert: {e}")
         return
         
     # 3. Fetch FNO Universe
@@ -277,6 +288,9 @@ def run_hourly_evaluation():
     # Calculate exactly what the completed candle timestamp should be
     if now_ist.hour == 10:
         target_hour, target_minute = 9, 15
+    elif now_ist.hour == 15 and now_ist.minute < 15:
+        # At 15:00 (3 PM run), evaluate the 14:15 afternoon candle
+        target_hour, target_minute = 14, 15
     else:
         target_hour, target_minute = now_ist.hour - 1, 15
         
@@ -325,8 +339,8 @@ def run_hourly_evaluation():
     # Moving Average Awareness: Ascending VWAP (> 0.1% slope) + Flat-to-Neutral SMA20
     ma_awareness = (pl.col("vwap_slope_pct") > 0.1) & (pl.col("sma20_slope_pct") > -0.05)
     
-    # Track A: Breakout Thrust (Momentum Climax)
-    track_a = (pl.col("vol_surge") > 2.5) & (pl.col("upper_wick_pct") < 25.0)
+    # Track A: Breakout Thrust (Aligned to 1.5x backtest volume surge)
+    track_a = (pl.col("vol_surge") >= 1.5) & (pl.col("upper_wick_pct") < 25.0)
     
     # Track B: Stealth Accumulation (Multi-Candle IAF + Dynamic ATV Tiers)
     mega_cap_stealth = (pl.col("atv") >= 500_000_000) & (pl.col("vol_surge_3h") >= 1.60) & (pl.col("close") <= (pl.col("vwap") * 1.015))

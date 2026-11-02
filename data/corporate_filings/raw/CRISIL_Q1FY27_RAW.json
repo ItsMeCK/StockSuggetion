@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000098",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CRISIL",
+  "company_details": {
+    "symbol": "CRISIL",
+    "company_name": "CRISIL Ltd.",
+    "isin": "INE007A01025",
+    "cin": "L29100MH1983PLC100098"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "260424230WEMLRMP0E",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 530404.36,
+      "in-gaap:OtherIncome": 15912.13,
+      "in-gaap:TotalIncome": 546316.49,
+      "in-gaap:OperatingExpenses": 404400.08,
+      "in-gaap:EBITDA": 126004.28,
+      "in-gaap:DepreciationAndAmortisation": 20160.68,
+      "in-gaap:EBIT": 105843.6,
+      "in-gaap:FinanceCosts": 4719.26,
+      "in-gaap:ProfitBeforeTax": 101124.34,
+      "in-gaap:TaxExpense": 25281.08,
+      "in-gaap:ProfitAfterTax": 75843.26
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 281.48,
+      "in-gaap:OtherEquity": 523244.67,
+      "in-gaap:TotalEquity": 523526.15,
+      "in-gaap:TotalDebt": 67477.81,
+      "in-gaap:CashAndCashEquivalents": 94356.47,
+      "in-gaap:TotalCurrentAssets": 265202.18,
+      "in-gaap:TotalCurrentLiabilities": 159121.31,
+      "in-gaap:TotalAssets": 750125.27,
+      "in-gaap:RetainedEarnings": 366468.3
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 99543.38,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 27100.66,
+      "in-gaap:FreeCashFlow": 72442.72
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 47.9,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1407400000,
+      "in-gaap:MarketPriceAtFiling": 4751.1,
+      "in-gaap:EarningsPerShareBasic": 538.89,
+      "in-gaap:EarningsPerShareDiluted": 538.89,
+      "in-gaap:TrailingTwelveMonthsEPS": 2155.56,
+      "in-gaap:ForwardEPSEstimate": 2478.89,
+      "in-gaap:BookValuePerShare": 3719.81,
+      "in-gaap:EVToEBITDA": 1.3,
+      "in-gaap:TrailingPE": 2.2,
+      "in-gaap:ForwardPE": 1.9,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.5
+    }
+  }
+}

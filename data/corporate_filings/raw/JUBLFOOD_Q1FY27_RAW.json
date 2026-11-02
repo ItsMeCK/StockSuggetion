@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000276",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_JUBLFOOD",
+  "company_details": {
+    "symbol": "JUBLFOOD",
+    "company_name": "Jubilant Foodworks Ltd.",
+    "isin": "INE797F01020",
+    "cin": "L29100MH1981PLC100276"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "260485563D5G6OOG5K",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 15991.34,
+      "in-gaap:OtherIncome": 479.74,
+      "in-gaap:TotalIncome": 16471.08,
+      "in-gaap:OperatingExpenses": 12241.72,
+      "in-gaap:EBITDA": 3749.62,
+      "in-gaap:DepreciationAndAmortisation": 599.94,
+      "in-gaap:EBIT": 3149.68,
+      "in-gaap:FinanceCosts": 143.66,
+      "in-gaap:ProfitBeforeTax": 3006.02,
+      "in-gaap:TaxExpense": 751.5,
+      "in-gaap:ProfitAfterTax": 2254.51
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 117.34,
+      "in-gaap:OtherEquity": 16892.7,
+      "in-gaap:TotalEquity": 17010.04,
+      "in-gaap:TotalDebt": 1904.87,
+      "in-gaap:CashAndCashEquivalents": 2476.84,
+      "in-gaap:TotalCurrentAssets": 7995.67,
+      "in-gaap:TotalCurrentLiabilities": 4797.4,
+      "in-gaap:TotalAssets": 23712.31,
+      "in-gaap:RetainedEarnings": 11907.03
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 3299.67,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1287.78,
+      "in-gaap:FreeCashFlow": 2011.89
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 51.19,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 586700000,
+      "in-gaap:MarketPriceAtFiling": 404.0,
+      "in-gaap:EarningsPerShareBasic": 38.43,
+      "in-gaap:EarningsPerShareDiluted": 38.43,
+      "in-gaap:TrailingTwelveMonthsEPS": 153.72,
+      "in-gaap:ForwardEPSEstimate": 176.78,
+      "in-gaap:BookValuePerShare": 289.93,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.6,
+      "in-gaap:ForwardPE": 2.2,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.8
+    }
+  }
+}

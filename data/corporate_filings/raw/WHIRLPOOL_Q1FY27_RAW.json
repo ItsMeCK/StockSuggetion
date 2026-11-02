@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000493",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_WHIRLPOOL",
+  "company_details": {
+    "symbol": "WHIRLPOOL",
+    "company_name": "Whirlpool of India Ltd.",
+    "isin": "INE716A01013",
+    "cin": "L29100MH2018PLC100493"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826NUI2IW0OJ0",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 163129.95,
+      "in-gaap:OtherIncome": 4893.9,
+      "in-gaap:TotalIncome": 168023.85,
+      "in-gaap:OperatingExpenses": 130509.57,
+      "in-gaap:EBITDA": 32620.38,
+      "in-gaap:DepreciationAndAmortisation": 5219.26,
+      "in-gaap:EBIT": 27401.12,
+      "in-gaap:FinanceCosts": 1707.87,
+      "in-gaap:ProfitBeforeTax": 25693.25,
+      "in-gaap:TaxExpense": 6423.31,
+      "in-gaap:ProfitAfterTax": 19269.94
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 238.44,
+      "in-gaap:OtherEquity": 157296.92,
+      "in-gaap:TotalEquity": 157535.36,
+      "in-gaap:TotalDebt": 18680.74,
+      "in-gaap:CashAndCashEquivalents": 23908.35,
+      "in-gaap:TotalCurrentAssets": 81564.98,
+      "in-gaap:TotalCurrentLiabilities": 48938.99,
+      "in-gaap:TotalAssets": 225155.08,
+      "in-gaap:RetainedEarnings": 110274.75
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 24465.28,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8892.49,
+      "in-gaap:FreeCashFlow": 15572.79
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 66.3,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1192200000,
+      "in-gaap:MarketPriceAtFiling": 790.45,
+      "in-gaap:EarningsPerShareBasic": 161.63,
+      "in-gaap:EarningsPerShareDiluted": 161.63,
+      "in-gaap:TrailingTwelveMonthsEPS": 646.52,
+      "in-gaap:ForwardEPSEstimate": 743.5,
+      "in-gaap:BookValuePerShare": 1321.38,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.2,
+      "in-gaap:ForwardPE": 1.0,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.9
+    }
+  }
+}

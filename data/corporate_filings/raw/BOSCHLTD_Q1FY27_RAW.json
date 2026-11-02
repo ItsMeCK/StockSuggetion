@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000090",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BOSCHLTD",
+  "company_details": {
+    "symbol": "BOSCHLTD",
+    "company_name": "Bosch Ltd.",
+    "isin": "INE323A01026",
+    "cin": "L29100MH1975PLC100090"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423DLL1PYWTJX",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 2874934.11,
+      "in-gaap:OtherIncome": 86248.02,
+      "in-gaap:TotalIncome": 2961182.13,
+      "in-gaap:OperatingExpenses": 2492602.69,
+      "in-gaap:EBITDA": 382331.42,
+      "in-gaap:DepreciationAndAmortisation": 61173.03,
+      "in-gaap:EBIT": 321158.39,
+      "in-gaap:FinanceCosts": 40245.41,
+      "in-gaap:ProfitBeforeTax": 280912.98,
+      "in-gaap:TaxExpense": 70228.24,
+      "in-gaap:ProfitAfterTax": 210684.73
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 307.9,
+      "in-gaap:OtherEquity": 2638726.93,
+      "in-gaap:TotalEquity": 2639034.83,
+      "in-gaap:TotalDebt": 173333.75,
+      "in-gaap:CashAndCashEquivalents": 681984.63,
+      "in-gaap:TotalCurrentAssets": 1437467.05,
+      "in-gaap:TotalCurrentLiabilities": 862480.23,
+      "in-gaap:TotalAssets": 3674848.81,
+      "in-gaap:RetainedEarnings": 1847324.38
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 294395.19,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 100523.49,
+      "in-gaap:FreeCashFlow": 193871.7
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 69.19,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1539500000,
+      "in-gaap:MarketPriceAtFiling": 44085.0,
+      "in-gaap:EarningsPerShareBasic": 1368.53,
+      "in-gaap:EarningsPerShareDiluted": 1368.53,
+      "in-gaap:TrailingTwelveMonthsEPS": 5474.12,
+      "in-gaap:ForwardEPSEstimate": 6295.24,
+      "in-gaap:BookValuePerShare": 17142.16,
+      "in-gaap:EVToEBITDA": 4.1,
+      "in-gaap:TrailingPE": 8.1,
+      "in-gaap:ForwardPE": 6.9,
+      "in-gaap:PriceToBook": 2.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.1
+    }
+  }
+}

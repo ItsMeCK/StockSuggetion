@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000372",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_PFIZER",
+  "company_details": {
+    "symbol": "PFIZER",
+    "company_name": "Pfizer Ltd.",
+    "isin": "INE182A01018",
+    "cin": "L29100MH1987PLC100372"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "2604219056NHOACYTA",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 260719.59,
+      "in-gaap:OtherIncome": 7821.59,
+      "in-gaap:TotalIncome": 268541.18,
+      "in-gaap:OperatingExpenses": 183570.3,
+      "in-gaap:EBITDA": 77149.29,
+      "in-gaap:DepreciationAndAmortisation": 12343.89,
+      "in-gaap:EBIT": 64805.4,
+      "in-gaap:FinanceCosts": 2216.93,
+      "in-gaap:ProfitBeforeTax": 62588.47,
+      "in-gaap:TaxExpense": 15647.12,
+      "in-gaap:ProfitAfterTax": 46941.35
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 195.06,
+      "in-gaap:OtherEquity": 339994.23,
+      "in-gaap:TotalEquity": 340189.29,
+      "in-gaap:TotalDebt": 20840.93,
+      "in-gaap:CashAndCashEquivalents": 31426.48,
+      "in-gaap:TotalCurrentAssets": 130359.79,
+      "in-gaap:TotalCurrentLiabilities": 78215.88,
+      "in-gaap:TotalAssets": 439246.1,
+      "in-gaap:RetainedEarnings": 238132.5
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 60947.94,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 23246.49,
+      "in-gaap:FreeCashFlow": 37701.45
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 40.24,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 975300000,
+      "in-gaap:MarketPriceAtFiling": 3612.3,
+      "in-gaap:EarningsPerShareBasic": 481.3,
+      "in-gaap:EarningsPerShareDiluted": 481.3,
+      "in-gaap:TrailingTwelveMonthsEPS": 1925.2,
+      "in-gaap:ForwardEPSEstimate": 2213.98,
+      "in-gaap:BookValuePerShare": 3488.05,
+      "in-gaap:EVToEBITDA": 1.1,
+      "in-gaap:TrailingPE": 1.9,
+      "in-gaap:ForwardPE": 1.6,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.0
+    }
+  }
+}

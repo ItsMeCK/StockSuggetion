@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000100",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CANBK",
+  "company_details": {
+    "symbol": "CANBK",
+    "company_name": "Canara Bank",
+    "isin": "INE476A01022",
+    "cin": "L65191MH2000PLC100100"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190NVV0ML69TS",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 320.48,
+      "in-gaap:OtherIncome": 112.17,
+      "in-gaap:OperatingExpenses": 181.71,
+      "in-gaap:OperatingProfit": 250.94,
+      "in-gaap:ProvisionsAndContingencies": 63.58,
+      "in-gaap:ProfitBeforeTax": 187.36,
+      "in-gaap:TaxExpense": 46.84,
+      "in-gaap:ProfitAfterTax": 140.52
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 92.04,
+      "in-gaap:ReservesAndSurplus": 4353.95,
+      "in-gaap:TotalEquity": 4445.99,
+      "in-gaap:TotalDeposits": 29639.94,
+      "in-gaap:CasaDeposits": 12093.1,
+      "in-gaap:TotalAdvances": 25431.07,
+      "in-gaap:TotalAssets": 37049.92
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 450.13,
+      "in-gaap:NetNPA": 134.78,
+      "in-gaap:CapitalAdequacyRatioCRAR": 20.6,
+      "in-gaap:Tier1CapitalRatio": 18.6
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 32.07,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 460200000,
+      "in-gaap:MarketPriceAtFiling": 116.16,
+      "in-gaap:EarningsPerShareBasic": 3.05,
+      "in-gaap:EarningsPerShareDiluted": 3.05,
+      "in-gaap:TrailingTwelveMonthsEPS": 12.2,
+      "in-gaap:ForwardEPSEstimate": 14.03,
+      "in-gaap:BookValuePerShare": 96.61,
+      "in-gaap:TrailingPE": 9.5,
+      "in-gaap:ForwardPE": 8.1,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.4
+    }
+  }
+}

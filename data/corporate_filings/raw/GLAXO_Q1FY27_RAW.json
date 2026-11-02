@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000183",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GLAXO",
+  "company_details": {
+    "symbol": "GLAXO",
+    "company_name": "Glaxosmithkline Pharmaceuticals Ltd.",
+    "isin": "INE159A01016",
+    "cin": "L29100MH1978PLC100183"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "260229877GDV2W0J4C",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 310715.32,
+      "in-gaap:OtherIncome": 9321.46,
+      "in-gaap:TotalIncome": 320036.78,
+      "in-gaap:OperatingExpenses": 231487.9,
+      "in-gaap:EBITDA": 79227.42,
+      "in-gaap:DepreciationAndAmortisation": 12676.39,
+      "in-gaap:EBIT": 66551.03,
+      "in-gaap:FinanceCosts": 3827.41,
+      "in-gaap:ProfitBeforeTax": 62723.62,
+      "in-gaap:TaxExpense": 15680.91,
+      "in-gaap:ProfitAfterTax": 47042.72
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 174.6,
+      "in-gaap:OtherEquity": 321970.68,
+      "in-gaap:TotalEquity": 322145.28,
+      "in-gaap:TotalDebt": 66286.01,
+      "in-gaap:CashAndCashEquivalents": 41152.63,
+      "in-gaap:TotalCurrentAssets": 155357.66,
+      "in-gaap:TotalCurrentLiabilities": 93214.6,
+      "in-gaap:TotalAssets": 481645.89,
+      "in-gaap:RetainedEarnings": 225501.7
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 74473.77,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 26704.03,
+      "in-gaap:FreeCashFlow": 47769.74
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 61.2,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 873000000,
+      "in-gaap:MarketPriceAtFiling": 2404.7,
+      "in-gaap:EarningsPerShareBasic": 538.86,
+      "in-gaap:EarningsPerShareDiluted": 538.86,
+      "in-gaap:TrailingTwelveMonthsEPS": 2155.44,
+      "in-gaap:ForwardEPSEstimate": 2478.76,
+      "in-gaap:BookValuePerShare": 3690.09,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.8
+    }
+  }
+}

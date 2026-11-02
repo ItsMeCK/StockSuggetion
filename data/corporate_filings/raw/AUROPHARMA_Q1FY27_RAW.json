@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000053",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_AUROPHARMA",
+  "company_details": {
+    "symbol": "AUROPHARMA",
+    "company_name": "Aurobindo Pharma Ltd.",
+    "isin": "INE406A01037",
+    "cin": "L29100MH1983PLC100053"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812490YD84WZX",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 64200.34,
+      "in-gaap:OtherIncome": 1926.01,
+      "in-gaap:TotalIncome": 66126.35,
+      "in-gaap:OperatingExpenses": 55691.38,
+      "in-gaap:EBITDA": 8508.96,
+      "in-gaap:DepreciationAndAmortisation": 1361.43,
+      "in-gaap:EBIT": 7147.53,
+      "in-gaap:FinanceCosts": 378.18,
+      "in-gaap:ProfitBeforeTax": 6769.35,
+      "in-gaap:TaxExpense": 1692.34,
+      "in-gaap:ProfitAfterTax": 5077.01
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 81.46,
+      "in-gaap:OtherEquity": 41080.55,
+      "in-gaap:TotalEquity": 41162.01,
+      "in-gaap:TotalDebt": 5927.77,
+      "in-gaap:CashAndCashEquivalents": 7053.56,
+      "in-gaap:TotalCurrentAssets": 32100.17,
+      "in-gaap:TotalCurrentLiabilities": 19260.1,
+      "in-gaap:TotalAssets": 66349.88,
+      "in-gaap:RetainedEarnings": 28813.41
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 6551.9,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2195.22,
+      "in-gaap:FreeCashFlow": 4356.68
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 54.72,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 407299999,
+      "in-gaap:MarketPriceAtFiling": 1571.7,
+      "in-gaap:EarningsPerShareBasic": 124.65,
+      "in-gaap:EarningsPerShareDiluted": 124.65,
+      "in-gaap:TrailingTwelveMonthsEPS": 498.6,
+      "in-gaap:ForwardEPSEstimate": 573.39,
+      "in-gaap:BookValuePerShare": 1010.61,
+      "in-gaap:EVToEBITDA": 1.8,
+      "in-gaap:TrailingPE": 3.2,
+      "in-gaap:ForwardPE": 2.7,
+      "in-gaap:PriceToBook": 1.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.9
+    }
+  }
+}

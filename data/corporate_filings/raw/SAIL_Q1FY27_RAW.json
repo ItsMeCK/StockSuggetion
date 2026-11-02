@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000427",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SAIL",
+  "company_details": {
+    "symbol": "SAIL",
+    "company_name": "Steel Authority of India Ltd.",
+    "isin": "INE114A01011",
+    "cin": "L29100MH1997PLC100427"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987URP6GPDDRV",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 34968.04,
+      "in-gaap:OtherIncome": 1049.04,
+      "in-gaap:TotalIncome": 36017.08,
+      "in-gaap:OperatingExpenses": 27376.37,
+      "in-gaap:EBITDA": 7591.67,
+      "in-gaap:DepreciationAndAmortisation": 1214.67,
+      "in-gaap:EBIT": 6377.0,
+      "in-gaap:FinanceCosts": 554.14,
+      "in-gaap:ProfitBeforeTax": 5822.86,
+      "in-gaap:TaxExpense": 1455.71,
+      "in-gaap:ProfitAfterTax": 4367.14
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 276.64,
+      "in-gaap:OtherEquity": 24233.06,
+      "in-gaap:TotalEquity": 24509.7,
+      "in-gaap:TotalDebt": 1277.7,
+      "in-gaap:CashAndCashEquivalents": 6697.4,
+      "in-gaap:TotalCurrentAssets": 17484.02,
+      "in-gaap:TotalCurrentLiabilities": 10490.41,
+      "in-gaap:TotalAssets": 36277.81,
+      "in-gaap:RetainedEarnings": 17156.79
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 5921.5,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2031.19,
+      "in-gaap:FreeCashFlow": 3890.31
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.6,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1383200000,
+      "in-gaap:MarketPriceAtFiling": 164.34,
+      "in-gaap:EarningsPerShareBasic": 31.57,
+      "in-gaap:EarningsPerShareDiluted": 31.57,
+      "in-gaap:TrailingTwelveMonthsEPS": 126.28,
+      "in-gaap:ForwardEPSEstimate": 145.22,
+      "in-gaap:BookValuePerShare": 177.2,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.1
+    }
+  }
+}

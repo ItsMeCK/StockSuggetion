@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000153",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_EIHOTEL",
+  "company_details": {
+    "symbol": "EIHOTEL",
+    "company_name": "EIH Ltd.",
+    "isin": "INE230A01023",
+    "cin": "L29100MH1993PLC100153"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "260485560F1W1G23EZ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 24103.66,
+      "in-gaap:OtherIncome": 723.11,
+      "in-gaap:TotalIncome": 24826.77,
+      "in-gaap:OperatingExpenses": 19418.92,
+      "in-gaap:EBITDA": 4684.74,
+      "in-gaap:DepreciationAndAmortisation": 749.56,
+      "in-gaap:EBIT": 3935.18,
+      "in-gaap:FinanceCosts": 292.8,
+      "in-gaap:ProfitBeforeTax": 3642.38,
+      "in-gaap:TaxExpense": 910.6,
+      "in-gaap:ProfitAfterTax": 2731.78
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 348.36,
+      "in-gaap:OtherEquity": 34604.27,
+      "in-gaap:TotalEquity": 34952.63,
+      "in-gaap:TotalDebt": 4254.25,
+      "in-gaap:CashAndCashEquivalents": 5842.91,
+      "in-gaap:TotalCurrentAssets": 12051.83,
+      "in-gaap:TotalCurrentLiabilities": 7231.1,
+      "in-gaap:TotalAssets": 46437.98,
+      "in-gaap:RetainedEarnings": 24466.84
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 4356.81,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1178.19,
+      "in-gaap:FreeCashFlow": 3178.62
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 66.49,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1741800000,
+      "in-gaap:MarketPriceAtFiling": 288.1,
+      "in-gaap:EarningsPerShareBasic": 15.68,
+      "in-gaap:EarningsPerShareDiluted": 15.68,
+      "in-gaap:TrailingTwelveMonthsEPS": 62.72,
+      "in-gaap:ForwardEPSEstimate": 72.13,
+      "in-gaap:BookValuePerShare": 200.67,
+      "in-gaap:EVToEBITDA": 2.6,
+      "in-gaap:TrailingPE": 4.6,
+      "in-gaap:ForwardPE": 3.9,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.1
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000363",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_PIIND",
+  "company_details": {
+    "symbol": "PIIND",
+    "company_name": "PI Industries Ltd.",
+    "isin": "INE603J01030",
+    "cin": "L29100MH1978PLC100363"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "261053175THAFSZ7QP",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 291643.33,
+      "in-gaap:OtherIncome": 8749.3,
+      "in-gaap:TotalIncome": 300392.63,
+      "in-gaap:OperatingExpenses": 213946.33,
+      "in-gaap:EBITDA": 77697.0,
+      "in-gaap:DepreciationAndAmortisation": 12431.52,
+      "in-gaap:EBIT": 65265.48,
+      "in-gaap:FinanceCosts": 5179.8,
+      "in-gaap:ProfitBeforeTax": 60085.68,
+      "in-gaap:TaxExpense": 15021.42,
+      "in-gaap:ProfitAfterTax": 45064.26
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 498.18,
+      "in-gaap:OtherEquity": 392737.78,
+      "in-gaap:TotalEquity": 393235.96,
+      "in-gaap:TotalDebt": 20746.92,
+      "in-gaap:CashAndCashEquivalents": 60805.52,
+      "in-gaap:TotalCurrentAssets": 145821.67,
+      "in-gaap:TotalCurrentLiabilities": 87493.0,
+      "in-gaap:TotalAssets": 501475.88,
+      "in-gaap:RetainedEarnings": 275265.17
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 69927.3,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 14791.11,
+      "in-gaap:FreeCashFlow": 55136.19
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 62.19,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2490900000,
+      "in-gaap:MarketPriceAtFiling": 2051.0,
+      "in-gaap:EarningsPerShareBasic": 180.92,
+      "in-gaap:EarningsPerShareDiluted": 180.92,
+      "in-gaap:TrailingTwelveMonthsEPS": 723.68,
+      "in-gaap:ForwardEPSEstimate": 832.23,
+      "in-gaap:BookValuePerShare": 1578.69,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.8,
+      "in-gaap:ForwardPE": 2.4,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.1
+    }
+  }
+}

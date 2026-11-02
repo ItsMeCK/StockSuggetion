@@ -1,0 +1,82 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1049281",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BEL",
+  "company_details": {
+    "symbol": "BEL",
+    "company_name": "Bharat Electronics Limited",
+    "isin": "INE263A01024",
+    "cin": "L32309KA1954GOI000787"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:15:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Badari, Madhuraksh & Suguna, Chartered Accountants",
+    "firm_registration_number": "000169S",
+    "signing_partner": "CA. B. C. Madhuraksh",
+    "membership_number": "021200",
+    "udin": "26021200BKAGVJ8432",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 5533.06,
+      "in-gaap:OtherIncome": 260.0,
+      "in-gaap:TotalIncome": 5793.06,
+      "in-gaap:OperatingExpenses": 4210.0,
+      "in-gaap:EBITDA": 1323.06,
+      "in-gaap:DepreciationAndAmortisation": 155.0,
+      "in-gaap:EBIT": 1168.06,
+      "in-gaap:FinanceCosts": 2.5,
+      "in-gaap:ProfitBeforeTax": 1405.3,
+      "in-gaap:TaxExpense": 351.3,
+      "in-gaap:ProfitAfterTax": 1054.0
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 730.98,
+      "in-gaap:OtherEquity": 18200.0,
+      "in-gaap:TotalEquity": 18930.98,
+      "in-gaap:TotalDebt": 0.0,
+      "in-gaap:CashAndCashEquivalents": 9850.0,
+      "in-gaap:TotalCurrentAssets": 34200.0,
+      "in-gaap:TotalCurrentLiabilities": 16100.0,
+      "in-gaap:TotalAssets": 38500.0,
+      "in-gaap:RetainedEarnings": 17500.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1120.0,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 240.0,
+      "in-gaap:FreeCashFlow": 880.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 51.14,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false,
+      "in-gaap:TradeReceivablesPriorPeriod": 7800.0,
+      "in-gaap:TradeReceivablesCurrentPeriod": 8100.0,
+      "in-gaap:GrossMarginPriorPeriodPercentage": 43.1,
+      "in-gaap:GrossMarginCurrentPeriodPercentage": 43.8,
+      "in-gaap:RevenuePriorPeriod": 4416.83,
+      "in-gaap:PriorPeriodLeverage": 0.0
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 7309835424,
+      "in-gaap:MarketPriceAtFiling": 405.0,
+      "in-gaap:EarningsPerShareBasic": 1.44,
+      "in-gaap:EarningsPerShareDiluted": 1.44,
+      "in-gaap:TrailingTwelveMonthsEPS": 6.8,
+      "in-gaap:ForwardEPSEstimate": 8.5,
+      "in-gaap:BookValuePerShare": 25.9,
+      "in-gaap:EVToEBITDA": 29.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.0
+    }
+  }
+}

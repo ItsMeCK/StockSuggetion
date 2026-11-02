@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000152",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_EIDPARRY",
+  "company_details": {
+    "symbol": "EIDPARRY",
+    "company_name": "E.I.D. Parry (India) Ltd.",
+    "isin": "INE126A01031",
+    "cin": "L29100MH1992PLC100152"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-17T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826JRSOHTZG50",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 127571.75,
+      "in-gaap:OtherIncome": 3827.15,
+      "in-gaap:TotalIncome": 131398.9,
+      "in-gaap:OperatingExpenses": 101639.37,
+      "in-gaap:EBITDA": 25932.38,
+      "in-gaap:DepreciationAndAmortisation": 4149.18,
+      "in-gaap:EBIT": 21783.2,
+      "in-gaap:FinanceCosts": 1571.66,
+      "in-gaap:ProfitBeforeTax": 20211.54,
+      "in-gaap:TaxExpense": 5052.89,
+      "in-gaap:ProfitAfterTax": 15158.66
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 478.6,
+      "in-gaap:OtherEquity": 162398.09,
+      "in-gaap:TotalEquity": 162876.69,
+      "in-gaap:TotalDebt": 10821.16,
+      "in-gaap:CashAndCashEquivalents": 13288.21,
+      "in-gaap:TotalCurrentAssets": 63785.88,
+      "in-gaap:TotalCurrentLiabilities": 38271.53,
+      "in-gaap:TotalAssets": 211969.38,
+      "in-gaap:RetainedEarnings": 114013.68
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 20227.26,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6116.38,
+      "in-gaap:FreeCashFlow": 14110.88
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 68.58,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2393000000,
+      "in-gaap:MarketPriceAtFiling": 627.5,
+      "in-gaap:EarningsPerShareBasic": 63.35,
+      "in-gaap:EarningsPerShareDiluted": 63.35,
+      "in-gaap:TrailingTwelveMonthsEPS": 253.4,
+      "in-gaap:ForwardEPSEstimate": 291.41,
+      "in-gaap:BookValuePerShare": 680.64,
+      "in-gaap:EVToEBITDA": 1.4,
+      "in-gaap:TrailingPE": 2.5,
+      "in-gaap:ForwardPE": 2.1,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.7
+    }
+  }
+}

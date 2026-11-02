@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000435",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SWANCORP",
+  "company_details": {
+    "symbol": "SWANCORP",
+    "company_name": "Swan Corp Ltd.",
+    "isin": "INE665A01038",
+    "cin": "L29100MH2005PLC100435"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826OP2VUOXLUO",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 52661.36,
+      "in-gaap:OtherIncome": 1579.84,
+      "in-gaap:TotalIncome": 54241.2,
+      "in-gaap:OperatingExpenses": 40473.82,
+      "in-gaap:EBITDA": 12187.54,
+      "in-gaap:DepreciationAndAmortisation": 1950.01,
+      "in-gaap:EBIT": 10237.53,
+      "in-gaap:FinanceCosts": 472.39,
+      "in-gaap:ProfitBeforeTax": 9765.14,
+      "in-gaap:TaxExpense": 2441.28,
+      "in-gaap:ProfitAfterTax": 7323.85
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 301.08,
+      "in-gaap:OtherEquity": 37168.79,
+      "in-gaap:TotalEquity": 37469.87,
+      "in-gaap:TotalDebt": 10676.48,
+      "in-gaap:CashAndCashEquivalents": 11610.17,
+      "in-gaap:TotalCurrentAssets": 26330.68,
+      "in-gaap:TotalCurrentLiabilities": 15798.41,
+      "in-gaap:TotalAssets": 63944.76,
+      "in-gaap:RetainedEarnings": 26228.91
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 10725.04,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2864.98,
+      "in-gaap:FreeCashFlow": 7860.06
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 51.98,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1505400000,
+      "in-gaap:MarketPriceAtFiling": 239.85,
+      "in-gaap:EarningsPerShareBasic": 48.65,
+      "in-gaap:EarningsPerShareDiluted": 48.65,
+      "in-gaap:TrailingTwelveMonthsEPS": 194.6,
+      "in-gaap:ForwardEPSEstimate": 223.79,
+      "in-gaap:BookValuePerShare": 248.9,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.2,
+      "in-gaap:ForwardPE": 1.0,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.3
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1049112",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TECHM",
+  "company_details": {
+    "symbol": "TECHM",
+    "company_name": "Tech Mahindra Limited",
+    "isin": "INE669C01036",
+    "cin": "L64200MH1986PLC041370"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T18:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R Kasat",
+    "membership_number": "102527",
+    "udin": "26102527BKAJZZ6712",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 15712.0,
+      "in-gaap:OtherIncome": 310.0,
+      "in-gaap:TotalIncome": 16022.0,
+      "in-gaap:OperatingExpenses": 13742.0,
+      "in-gaap:EBITDA": 1970.0,
+      "in-gaap:DepreciationAndAmortisation": 310.0,
+      "in-gaap:EBIT": 1660.0,
+      "in-gaap:FinanceCosts": 65.0,
+      "in-gaap:ProfitBeforeTax": 1905.0,
+      "in-gaap:TaxExpense": 440.0,
+      "in-gaap:ProfitAfterTax": 1465.0
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 489.0,
+      "in-gaap:OtherEquity": 28500.0,
+      "in-gaap:TotalEquity": 28989.0,
+      "in-gaap:TotalDebt": 2200.0,
+      "in-gaap:CashAndCashEquivalents": 9100.0,
+      "in-gaap:TotalCurrentAssets": 22000.0,
+      "in-gaap:TotalCurrentLiabilities": 8500.0,
+      "in-gaap:TotalAssets": 42000.0,
+      "in-gaap:RetainedEarnings": 26000.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1380.0,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 180.0,
+      "in-gaap:FreeCashFlow": 1200.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 35.1,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false,
+      "in-gaap:TradeReceivablesPriorPeriod": 4100.0,
+      "in-gaap:TradeReceivablesCurrentPeriod": 4250.0,
+      "in-gaap:GrossMarginPriorPeriodPercentage": 28.5,
+      "in-gaap:GrossMarginCurrentPeriodPercentage": 29.8,
+      "in-gaap:RevenuePriorPeriod": 13351.0,
+      "in-gaap:PriorPeriodLeverage": 0.1
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 978000000,
+      "in-gaap:MarketPriceAtFiling": 1540.0,
+      "in-gaap:EarningsPerShareBasic": 14.98,
+      "in-gaap:EarningsPerShareDiluted": 14.98,
+      "in-gaap:TrailingTwelveMonthsEPS": 52.0,
+      "in-gaap:ForwardEPSEstimate": 64.0,
+      "in-gaap:BookValuePerShare": 296.4,
+      "in-gaap:EVToEBITDA": 16.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.0
+    }
+  }
+}

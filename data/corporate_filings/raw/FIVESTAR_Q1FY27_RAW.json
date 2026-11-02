@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000171",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_FIVESTAR",
+  "company_details": {
+    "symbol": "FIVESTAR",
+    "company_name": "Five-Star Business Finance Ltd.",
+    "isin": "INE128S01021",
+    "cin": "L65191MH1991PLC100171"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "260421909AYF2F5DDG",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 4788.33,
+      "in-gaap:OtherIncome": 1675.92,
+      "in-gaap:OperatingExpenses": 2714.98,
+      "in-gaap:OperatingProfit": 3749.27,
+      "in-gaap:ProvisionsAndContingencies": 798.16,
+      "in-gaap:ProfitBeforeTax": 2951.11,
+      "in-gaap:TaxExpense": 737.78,
+      "in-gaap:ProfitAfterTax": 2213.33
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 416.12,
+      "in-gaap:ReservesAndSurplus": 64510.32,
+      "in-gaap:TotalEquity": 64926.44,
+      "in-gaap:TotalDeposits": 432842.96,
+      "in-gaap:CasaDeposits": 197376.39,
+      "in-gaap:TotalAdvances": 319264.97,
+      "in-gaap:TotalAssets": 541053.7
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 7566.58,
+      "in-gaap:NetNPA": 2266.78,
+      "in-gaap:CapitalAdequacyRatioCRAR": 17.2,
+      "in-gaap:Tier1CapitalRatio": 15.2
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 35.37,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2080600000,
+      "in-gaap:MarketPriceAtFiling": 448.4,
+      "in-gaap:EarningsPerShareBasic": 10.64,
+      "in-gaap:EarningsPerShareDiluted": 10.64,
+      "in-gaap:TrailingTwelveMonthsEPS": 42.56,
+      "in-gaap:ForwardEPSEstimate": 48.94,
+      "in-gaap:BookValuePerShare": 312.06,
+      "in-gaap:TrailingPE": 10.5,
+      "in-gaap:ForwardPE": 8.9,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.4
+    }
+  }
+}

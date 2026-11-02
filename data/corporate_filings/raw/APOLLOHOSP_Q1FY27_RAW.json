@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000043",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_APOLLOHOSP",
+  "company_details": {
+    "symbol": "APOLLOHOSP",
+    "company_name": "Apollo Hospitals Enterprise Ltd.",
+    "isin": "INE437A01024",
+    "cin": "L29100MH2018PLC100043"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814R1RJU0MRU0",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 149292.22,
+      "in-gaap:OtherIncome": 4478.77,
+      "in-gaap:TotalIncome": 153770.99,
+      "in-gaap:OperatingExpenses": 112518.48,
+      "in-gaap:EBITDA": 36773.74,
+      "in-gaap:DepreciationAndAmortisation": 5883.8,
+      "in-gaap:EBIT": 30889.94,
+      "in-gaap:FinanceCosts": 1238.17,
+      "in-gaap:ProfitBeforeTax": 29651.77,
+      "in-gaap:TaxExpense": 7412.94,
+      "in-gaap:ProfitAfterTax": 22238.83
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 41.24,
+      "in-gaap:OtherEquity": 114567.26,
+      "in-gaap:TotalEquity": 114608.5,
+      "in-gaap:TotalDebt": 38838.47,
+      "in-gaap:CashAndCashEquivalents": 31052.94,
+      "in-gaap:TotalCurrentAssets": 74646.11,
+      "in-gaap:TotalCurrentLiabilities": 44787.67,
+      "in-gaap:TotalAssets": 198234.64,
+      "in-gaap:RetainedEarnings": 80225.95
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 29786.73,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8335.85,
+      "in-gaap:FreeCashFlow": 21450.88
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 60.6,
+      "in-gaap:PromoterPledgedSharesPercentage": 16.5,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 206200000,
+      "in-gaap:MarketPriceAtFiling": 7730.0,
+      "in-gaap:EarningsPerShareBasic": 1078.51,
+      "in-gaap:EarningsPerShareDiluted": 1078.51,
+      "in-gaap:TrailingTwelveMonthsEPS": 4314.04,
+      "in-gaap:ForwardEPSEstimate": 4961.15,
+      "in-gaap:BookValuePerShare": 5558.12,
+      "in-gaap:EVToEBITDA": 1.1,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.3
+    }
+  }
+}

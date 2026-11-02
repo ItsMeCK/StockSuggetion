@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000245",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_IRCTC",
+  "company_details": {
+    "symbol": "IRCTC",
+    "company_name": "Indian Railway Catering And Tourism Corporation Ltd.",
+    "isin": "INE335Y01020",
+    "cin": "L29100MH1995PLC100245"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814Z955A3VMSZ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 22931.54,
+      "in-gaap:OtherIncome": 687.95,
+      "in-gaap:TotalIncome": 23619.49,
+      "in-gaap:OperatingExpenses": 16611.39,
+      "in-gaap:EBITDA": 6320.15,
+      "in-gaap:DepreciationAndAmortisation": 1011.22,
+      "in-gaap:EBIT": 5308.93,
+      "in-gaap:FinanceCosts": 195.67,
+      "in-gaap:ProfitBeforeTax": 5113.26,
+      "in-gaap:TaxExpense": 1278.32,
+      "in-gaap:ProfitAfterTax": 3834.95
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 133.32,
+      "in-gaap:OtherEquity": 13980.08,
+      "in-gaap:TotalEquity": 14113.4,
+      "in-gaap:TotalDebt": 2425.19,
+      "in-gaap:CashAndCashEquivalents": 1855.76,
+      "in-gaap:TotalCurrentAssets": 11465.77,
+      "in-gaap:TotalCurrentLiabilities": 6879.46,
+      "in-gaap:TotalAssets": 23418.05,
+      "in-gaap:RetainedEarnings": 9879.38
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 4929.72,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1088.74,
+      "in-gaap:FreeCashFlow": 3840.98
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 58.96,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 666600000,
+      "in-gaap:MarketPriceAtFiling": 441.4,
+      "in-gaap:EarningsPerShareBasic": 57.53,
+      "in-gaap:EarningsPerShareDiluted": 57.53,
+      "in-gaap:TrailingTwelveMonthsEPS": 230.12,
+      "in-gaap:ForwardEPSEstimate": 264.64,
+      "in-gaap:BookValuePerShare": 211.72,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 1.9,
+      "in-gaap:ForwardPE": 1.6,
+      "in-gaap:PriceToBook": 2.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.1
+    }
+  }
+}

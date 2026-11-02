@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000207",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HFCL",
+  "company_details": {
+    "symbol": "HFCL",
+    "company_name": "HFCL Ltd.",
+    "isin": "INE548A01028",
+    "cin": "L29100MH2002PLC100207"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "2611781281EX8804B1",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 70999.19,
+      "in-gaap:OtherIncome": 2129.98,
+      "in-gaap:TotalIncome": 73129.17,
+      "in-gaap:OperatingExpenses": 53215.08,
+      "in-gaap:EBITDA": 17784.11,
+      "in-gaap:DepreciationAndAmortisation": 2845.46,
+      "in-gaap:EBIT": 14938.65,
+      "in-gaap:FinanceCosts": 855.01,
+      "in-gaap:ProfitBeforeTax": 14083.64,
+      "in-gaap:TaxExpense": 3520.91,
+      "in-gaap:ProfitAfterTax": 10562.73
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 106.56,
+      "in-gaap:OtherEquity": 88301.94,
+      "in-gaap:TotalEquity": 88408.5,
+      "in-gaap:TotalDebt": 11089.54,
+      "in-gaap:CashAndCashEquivalents": 10753.04,
+      "in-gaap:TotalCurrentAssets": 35499.6,
+      "in-gaap:TotalCurrentLiabilities": 21299.76,
+      "in-gaap:TotalAssets": 120797.8,
+      "in-gaap:RetainedEarnings": 61885.95
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 14582.97,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3340.79,
+      "in-gaap:FreeCashFlow": 11242.18
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 66.12,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 532800000,
+      "in-gaap:MarketPriceAtFiling": 1821.02,
+      "in-gaap:EarningsPerShareBasic": 198.25,
+      "in-gaap:EarningsPerShareDiluted": 198.25,
+      "in-gaap:TrailingTwelveMonthsEPS": 793.0,
+      "in-gaap:ForwardEPSEstimate": 911.95,
+      "in-gaap:BookValuePerShare": 1659.32,
+      "in-gaap:EVToEBITDA": 1.4,
+      "in-gaap:TrailingPE": 2.3,
+      "in-gaap:ForwardPE": 2.0,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.5
+    }
+  }
+}

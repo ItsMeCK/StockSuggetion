@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000371",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_PETRONET",
+  "company_details": {
+    "symbol": "PETRONET",
+    "company_name": "Petronet LNG Ltd.",
+    "isin": "INE347G01014",
+    "cin": "L29100MH1986PLC100371"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190N7HLOX3GNS",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 33750.01,
+      "in-gaap:OtherIncome": 1012.5,
+      "in-gaap:TotalIncome": 34762.51,
+      "in-gaap:OperatingExpenses": 27423.07,
+      "in-gaap:EBITDA": 6326.94,
+      "in-gaap:DepreciationAndAmortisation": 1012.31,
+      "in-gaap:EBIT": 5314.63,
+      "in-gaap:FinanceCosts": 223.57,
+      "in-gaap:ProfitBeforeTax": 5091.06,
+      "in-gaap:TaxExpense": 1272.77,
+      "in-gaap:ProfitAfterTax": 3818.3
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 189.26,
+      "in-gaap:OtherEquity": 33427.13,
+      "in-gaap:TotalEquity": 33616.39,
+      "in-gaap:TotalDebt": 5981.68,
+      "in-gaap:CashAndCashEquivalents": 3650.43,
+      "in-gaap:TotalCurrentAssets": 16875.01,
+      "in-gaap:TotalCurrentLiabilities": 10125.0,
+      "in-gaap:TotalAssets": 49723.07,
+      "in-gaap:RetainedEarnings": 23531.47
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 4681.94,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1712.5,
+      "in-gaap:FreeCashFlow": 2969.44
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 47.77,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 946300000,
+      "in-gaap:MarketPriceAtFiling": 286.3,
+      "in-gaap:EarningsPerShareBasic": 40.35,
+      "in-gaap:EarningsPerShareDiluted": 40.35,
+      "in-gaap:TrailingTwelveMonthsEPS": 161.4,
+      "in-gaap:ForwardEPSEstimate": 185.61,
+      "in-gaap:BookValuePerShare": 355.24,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.4
+    }
+  }
+}

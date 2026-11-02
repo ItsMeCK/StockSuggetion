@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000321",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MFSL",
+  "company_details": {
+    "symbol": "MFSL",
+    "company_name": "Max Financial Services Ltd.",
+    "isin": "INE180A01020",
+    "cin": "L29100MH1981PLC100321"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317I4EWUK2KC5",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 86909.02,
+      "in-gaap:OtherIncome": 2607.27,
+      "in-gaap:TotalIncome": 89516.29,
+      "in-gaap:OperatingExpenses": 66311.87,
+      "in-gaap:EBITDA": 20597.15,
+      "in-gaap:DepreciationAndAmortisation": 3295.54,
+      "in-gaap:EBIT": 17301.61,
+      "in-gaap:FinanceCosts": 707.81,
+      "in-gaap:ProfitBeforeTax": 16593.8,
+      "in-gaap:TaxExpense": 4148.45,
+      "in-gaap:ProfitAfterTax": 12445.35
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 105.74,
+      "in-gaap:OtherEquity": 102229.51,
+      "in-gaap:TotalEquity": 102335.25,
+      "in-gaap:TotalDebt": 7553.59,
+      "in-gaap:CashAndCashEquivalents": 7117.06,
+      "in-gaap:TotalCurrentAssets": 43454.51,
+      "in-gaap:TotalCurrentLiabilities": 26072.71,
+      "in-gaap:TotalAssets": 135961.55,
+      "in-gaap:RetainedEarnings": 71634.67
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 16477.72,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 4661.74,
+      "in-gaap:FreeCashFlow": 11815.98
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 69.57,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 528700000,
+      "in-gaap:MarketPriceAtFiling": 1211.3,
+      "in-gaap:EarningsPerShareBasic": 235.4,
+      "in-gaap:EarningsPerShareDiluted": 235.4,
+      "in-gaap:TrailingTwelveMonthsEPS": 941.6,
+      "in-gaap:ForwardEPSEstimate": 1082.84,
+      "in-gaap:BookValuePerShare": 1935.6,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.6
+    }
+  }
+}

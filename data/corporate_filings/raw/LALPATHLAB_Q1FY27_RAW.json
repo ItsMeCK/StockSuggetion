@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000146",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_LALPATHLAB",
+  "company_details": {
+    "symbol": "LALPATHLAB",
+    "company_name": "Dr. Lal Path Labs Ltd.",
+    "isin": "INE600L01024",
+    "cin": "L29100MH1986PLC100146"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987KV7HL5JWQM",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 281549.04,
+      "in-gaap:OtherIncome": 8446.47,
+      "in-gaap:TotalIncome": 289995.51,
+      "in-gaap:OperatingExpenses": 194334.81,
+      "in-gaap:EBITDA": 87214.23,
+      "in-gaap:DepreciationAndAmortisation": 13954.28,
+      "in-gaap:EBIT": 73259.95,
+      "in-gaap:FinanceCosts": 4765.8,
+      "in-gaap:ProfitBeforeTax": 68494.15,
+      "in-gaap:TaxExpense": 17123.54,
+      "in-gaap:ProfitAfterTax": 51370.61
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 325.24,
+      "in-gaap:OtherEquity": 171922.37,
+      "in-gaap:TotalEquity": 172247.61,
+      "in-gaap:TotalDebt": 36422.38,
+      "in-gaap:CashAndCashEquivalents": 58806.33,
+      "in-gaap:TotalCurrentAssets": 140774.52,
+      "in-gaap:TotalCurrentLiabilities": 84464.71,
+      "in-gaap:TotalAssets": 293134.7,
+      "in-gaap:RetainedEarnings": 120573.33
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 77620.66,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 27973.4,
+      "in-gaap:FreeCashFlow": 49647.26
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 64.42,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1626200000,
+      "in-gaap:MarketPriceAtFiling": 1838.2,
+      "in-gaap:EarningsPerShareBasic": 315.89,
+      "in-gaap:EarningsPerShareDiluted": 315.89,
+      "in-gaap:TrailingTwelveMonthsEPS": 1263.56,
+      "in-gaap:ForwardEPSEstimate": 1453.09,
+      "in-gaap:BookValuePerShare": 1059.2,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 1.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.3
+    }
+  }
+}

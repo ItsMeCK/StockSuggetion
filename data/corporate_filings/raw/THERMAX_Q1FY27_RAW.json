@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000461",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_THERMAX",
+  "company_details": {
+    "symbol": "THERMAX",
+    "company_name": "Thermax Ltd.",
+    "isin": "INE152A01029",
+    "cin": "L29100MH1986PLC100461"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190EIMN1C1DX6",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 164217.29,
+      "in-gaap:OtherIncome": 4926.52,
+      "in-gaap:TotalIncome": 169143.81,
+      "in-gaap:OperatingExpenses": 125688.64,
+      "in-gaap:EBITDA": 38528.65,
+      "in-gaap:DepreciationAndAmortisation": 6164.58,
+      "in-gaap:EBIT": 32364.07,
+      "in-gaap:FinanceCosts": 1395.97,
+      "in-gaap:ProfitBeforeTax": 30968.1,
+      "in-gaap:TaxExpense": 7742.02,
+      "in-gaap:ProfitAfterTax": 23226.07
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 258.72,
+      "in-gaap:OtherEquity": 209697.67,
+      "in-gaap:TotalEquity": 209956.39,
+      "in-gaap:TotalDebt": 21526.23,
+      "in-gaap:CashAndCashEquivalents": 17917.27,
+      "in-gaap:TotalCurrentAssets": 82108.65,
+      "in-gaap:TotalCurrentLiabilities": 49265.19,
+      "in-gaap:TotalAssets": 280747.81,
+      "in-gaap:RetainedEarnings": 146969.47
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 30822.92,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 10157.82,
+      "in-gaap:FreeCashFlow": 20665.1
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 61.27,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1293600000,
+      "in-gaap:MarketPriceAtFiling": 3096.0,
+      "in-gaap:EarningsPerShareBasic": 179.55,
+      "in-gaap:EarningsPerShareDiluted": 179.55,
+      "in-gaap:TrailingTwelveMonthsEPS": 718.2,
+      "in-gaap:ForwardEPSEstimate": 825.93,
+      "in-gaap:BookValuePerShare": 1623.04,
+      "in-gaap:EVToEBITDA": 2.6,
+      "in-gaap:TrailingPE": 4.3,
+      "in-gaap:ForwardPE": 3.7,
+      "in-gaap:PriceToBook": 1.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.1
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000426",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SBIN",
+  "company_details": {
+    "symbol": "SBIN",
+    "company_name": "State Bank of India",
+    "isin": "INE062A01020",
+    "cin": "L65191MH2006PLC100426"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "260588145V16D3AZNH",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 2058.89,
+      "in-gaap:OtherIncome": 720.61,
+      "in-gaap:OperatingExpenses": 1167.39,
+      "in-gaap:OperatingProfit": 1612.11,
+      "in-gaap:ProvisionsAndContingencies": 365.58,
+      "in-gaap:ProfitBeforeTax": 1246.53,
+      "in-gaap:TaxExpense": 311.63,
+      "in-gaap:ProfitAfterTax": 934.9
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 67.28,
+      "in-gaap:ReservesAndSurplus": 30062.87,
+      "in-gaap:TotalEquity": 30130.15,
+      "in-gaap:TotalDeposits": 200867.7,
+      "in-gaap:CasaDeposits": 82556.62,
+      "in-gaap:TotalAdvances": 146231.69,
+      "in-gaap:TotalAssets": 251084.62
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 3231.72,
+      "in-gaap:NetNPA": 833.52,
+      "in-gaap:CapitalAdequacyRatioCRAR": 14.2,
+      "in-gaap:Tier1CapitalRatio": 12.2
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 7.16,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 336400000,
+      "in-gaap:MarketPriceAtFiling": 958.6,
+      "in-gaap:EarningsPerShareBasic": 27.79,
+      "in-gaap:EarningsPerShareDiluted": 27.79,
+      "in-gaap:TrailingTwelveMonthsEPS": 111.16,
+      "in-gaap:ForwardEPSEstimate": 127.83,
+      "in-gaap:BookValuePerShare": 895.66,
+      "in-gaap:TrailingPE": 8.6,
+      "in-gaap:ForwardPE": 7.3,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.4
+    }
+  }
+}

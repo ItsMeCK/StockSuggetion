@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000129",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CRAFTSMAN",
+  "company_details": {
+    "symbol": "CRAFTSMAN",
+    "company_name": "Craftsman Automation Ltd.",
+    "isin": "INE00LO01017",
+    "cin": "L29100MH2014PLC100129"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-24T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317X0TMSSVCMD",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 3224106.98,
+      "in-gaap:OtherIncome": 96723.21,
+      "in-gaap:TotalIncome": 3320830.19,
+      "in-gaap:OperatingExpenses": 2440173.98,
+      "in-gaap:EBITDA": 783933.0,
+      "in-gaap:DepreciationAndAmortisation": 125429.28,
+      "in-gaap:EBIT": 658503.72,
+      "in-gaap:FinanceCosts": 27700.81,
+      "in-gaap:ProfitBeforeTax": 630802.91,
+      "in-gaap:TaxExpense": 157700.73,
+      "in-gaap:ProfitAfterTax": 473102.18
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 431.56,
+      "in-gaap:OtherEquity": 2695904.75,
+      "in-gaap:TotalEquity": 2696336.31,
+      "in-gaap:TotalDebt": 145904.83,
+      "in-gaap:CashAndCashEquivalents": 604172.71,
+      "in-gaap:TotalCurrentAssets": 1612053.49,
+      "in-gaap:TotalCurrentLiabilities": 967232.09,
+      "in-gaap:TotalAssets": 3809473.23,
+      "in-gaap:RetainedEarnings": 1887435.42
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 619307.07,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 183801.41,
+      "in-gaap:FreeCashFlow": 435505.66
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 64.78,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2157800000,
+      "in-gaap:MarketPriceAtFiling": 10488.0,
+      "in-gaap:EarningsPerShareBasic": 2192.52,
+      "in-gaap:EarningsPerShareDiluted": 2192.52,
+      "in-gaap:TrailingTwelveMonthsEPS": 8770.08,
+      "in-gaap:ForwardEPSEstimate": 10085.59,
+      "in-gaap:BookValuePerShare": 12495.77,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.2,
+      "in-gaap:ForwardPE": 1.0,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.6
+    }
+  }
+}

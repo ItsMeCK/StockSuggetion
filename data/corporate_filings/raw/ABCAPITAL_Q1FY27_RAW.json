@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000021",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ABCAPITAL",
+  "company_details": {
+    "symbol": "ABCAPITAL",
+    "company_name": "Aditya Birla Capital Ltd.",
+    "isin": "INE674K01013",
+    "cin": "L29100MH1996PLC100021"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556LQ1KXGLLDA",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 39074.67,
+      "in-gaap:OtherIncome": 1172.24,
+      "in-gaap:TotalIncome": 40246.91,
+      "in-gaap:OperatingExpenses": 26664.97,
+      "in-gaap:EBITDA": 12409.7,
+      "in-gaap:DepreciationAndAmortisation": 1985.55,
+      "in-gaap:EBIT": 10424.15,
+      "in-gaap:FinanceCosts": 506.52,
+      "in-gaap:ProfitBeforeTax": 9917.63,
+      "in-gaap:TaxExpense": 2479.41,
+      "in-gaap:ProfitAfterTax": 7438.22
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 299.86,
+      "in-gaap:OtherEquity": 53244.73,
+      "in-gaap:TotalEquity": 53544.59,
+      "in-gaap:TotalDebt": 6652.33,
+      "in-gaap:CashAndCashEquivalents": 7463.64,
+      "in-gaap:TotalCurrentAssets": 19537.33,
+      "in-gaap:TotalCurrentLiabilities": 11722.4,
+      "in-gaap:TotalAssets": 71919.32,
+      "in-gaap:RetainedEarnings": 37481.21
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 11416.92,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3473.34,
+      "in-gaap:FreeCashFlow": 7943.58
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 59.46,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1499300000,
+      "in-gaap:MarketPriceAtFiling": 347.25,
+      "in-gaap:EarningsPerShareBasic": 49.61,
+      "in-gaap:EarningsPerShareDiluted": 49.61,
+      "in-gaap:TrailingTwelveMonthsEPS": 198.44,
+      "in-gaap:ForwardEPSEstimate": 228.21,
+      "in-gaap:BookValuePerShare": 357.13,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.7,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.5
+    }
+  }
+}

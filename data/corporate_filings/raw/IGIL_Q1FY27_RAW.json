@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000256",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_IGIL",
+  "company_details": {
+    "symbol": "IGIL",
+    "company_name": "International Gemmological Institute (India) Ltd.",
+    "isin": "INE0Q9301021",
+    "cin": "L29100MH2006PLC100256"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812A39U79C1L8",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 22234.49,
+      "in-gaap:OtherIncome": 667.03,
+      "in-gaap:TotalIncome": 22901.52,
+      "in-gaap:OperatingExpenses": 18933.53,
+      "in-gaap:EBITDA": 3300.96,
+      "in-gaap:DepreciationAndAmortisation": 528.15,
+      "in-gaap:EBIT": 2772.81,
+      "in-gaap:FinanceCosts": 159.47,
+      "in-gaap:ProfitBeforeTax": 2613.34,
+      "in-gaap:TaxExpense": 653.34,
+      "in-gaap:ProfitAfterTax": 1960.01
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 153.26,
+      "in-gaap:OtherEquity": 15077.89,
+      "in-gaap:TotalEquity": 15231.15,
+      "in-gaap:TotalDebt": 2552.79,
+      "in-gaap:CashAndCashEquivalents": 4072.15,
+      "in-gaap:TotalCurrentAssets": 11117.25,
+      "in-gaap:TotalCurrentLiabilities": 6670.35,
+      "in-gaap:TotalAssets": 24454.29,
+      "in-gaap:RetainedEarnings": 10661.8
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 2706.79,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 774.65,
+      "in-gaap:FreeCashFlow": 1932.14
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 62.63,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 766300000,
+      "in-gaap:MarketPriceAtFiling": 381.15,
+      "in-gaap:EarningsPerShareBasic": 25.58,
+      "in-gaap:EarningsPerShareDiluted": 25.58,
+      "in-gaap:TrailingTwelveMonthsEPS": 102.32,
+      "in-gaap:ForwardEPSEstimate": 117.67,
+      "in-gaap:BookValuePerShare": 198.76,
+      "in-gaap:EVToEBITDA": 2.1,
+      "in-gaap:TrailingPE": 3.7,
+      "in-gaap:ForwardPE": 3.1,
+      "in-gaap:PriceToBook": 1.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.1
+    }
+  }
+}

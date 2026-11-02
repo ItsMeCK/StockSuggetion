@@ -145,6 +145,8 @@ def get_daily_trades_count(target_date: Optional[datetime] = None) -> int:
         cur.execute("""
             SELECT COUNT(*) FROM trades 
             WHERE entry_time::date = %s
+              AND status NOT LIKE 'ARCHIVED%%'
+              AND status NOT LIKE 'TEST%%'
         """, (t_date,))
         row = cur.fetchone()
         count = int(row[0]) if row else 0

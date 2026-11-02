@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000369",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_PATANJALI",
+  "company_details": {
+    "symbol": "PATANJALI",
+    "company_name": "Patanjali Foods Ltd.",
+    "isin": "INE619A01035",
+    "cin": "L29100MH1984PLC100369"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-24T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556QWE1EMHGP0",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 100966.33,
+      "in-gaap:OtherIncome": 3028.99,
+      "in-gaap:TotalIncome": 103995.32,
+      "in-gaap:OperatingExpenses": 80655.75,
+      "in-gaap:EBITDA": 20310.58,
+      "in-gaap:DepreciationAndAmortisation": 3249.69,
+      "in-gaap:EBIT": 17060.89,
+      "in-gaap:FinanceCosts": 1046.94,
+      "in-gaap:ProfitBeforeTax": 16013.95,
+      "in-gaap:TaxExpense": 4003.49,
+      "in-gaap:ProfitAfterTax": 12010.46
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 396.48,
+      "in-gaap:OtherEquity": 79008.65,
+      "in-gaap:TotalEquity": 79405.13,
+      "in-gaap:TotalDebt": 8510.37,
+      "in-gaap:CashAndCashEquivalents": 12861.48,
+      "in-gaap:TotalCurrentAssets": 50483.17,
+      "in-gaap:TotalCurrentLiabilities": 30289.9,
+      "in-gaap:TotalAssets": 118205.4,
+      "in-gaap:RetainedEarnings": 55583.59
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 16857.78,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 4744.01,
+      "in-gaap:FreeCashFlow": 12113.77
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 46.98,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1982400000,
+      "in-gaap:MarketPriceAtFiling": 349.75,
+      "in-gaap:EarningsPerShareBasic": 60.59,
+      "in-gaap:EarningsPerShareDiluted": 60.59,
+      "in-gaap:TrailingTwelveMonthsEPS": 242.36,
+      "in-gaap:ForwardEPSEstimate": 278.71,
+      "in-gaap:BookValuePerShare": 400.55,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.4,
+      "in-gaap:ForwardPE": 1.2,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.7
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000172",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_FORCEMOT",
+  "company_details": {
+    "symbol": "FORCEMOT",
+    "company_name": "Force Motors Ltd.",
+    "isin": "INE451A01017",
+    "cin": "L29100MH2012PLC100172"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "261053170DXFZCVN44",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 1397092.89,
+      "in-gaap:OtherIncome": 41912.79,
+      "in-gaap:TotalIncome": 1439005.68,
+      "in-gaap:OperatingExpenses": 1003121.51,
+      "in-gaap:EBITDA": 393971.38,
+      "in-gaap:DepreciationAndAmortisation": 63035.42,
+      "in-gaap:EBIT": 330935.96,
+      "in-gaap:FinanceCosts": 34864.72,
+      "in-gaap:ProfitBeforeTax": 296071.24,
+      "in-gaap:TaxExpense": 74017.81,
+      "in-gaap:ProfitAfterTax": 222053.43
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 138.36,
+      "in-gaap:OtherEquity": 1476828.25,
+      "in-gaap:TotalEquity": 1476966.61,
+      "in-gaap:TotalDebt": 193538.69,
+      "in-gaap:CashAndCashEquivalents": 139149.96,
+      "in-gaap:TotalCurrentAssets": 698546.44,
+      "in-gaap:TotalCurrentLiabilities": 419127.87,
+      "in-gaap:TotalAssets": 2089633.17,
+      "in-gaap:RetainedEarnings": 1033876.63
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 358513.96,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 97947.52,
+      "in-gaap:FreeCashFlow": 260566.44
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 43.49,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 691800000,
+      "in-gaap:MarketPriceAtFiling": 16400.0,
+      "in-gaap:EarningsPerShareBasic": 3209.79,
+      "in-gaap:EarningsPerShareDiluted": 3209.79,
+      "in-gaap:TrailingTwelveMonthsEPS": 12839.16,
+      "in-gaap:ForwardEPSEstimate": 14765.03,
+      "in-gaap:BookValuePerShare": 21349.62,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.1
+    }
+  }
+}

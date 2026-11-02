@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000317",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MRPL",
+  "company_details": {
+    "symbol": "MRPL",
+    "company_name": "Mangalore Refinery & Petrochemicals Ltd.",
+    "isin": "INE103A01014",
+    "cin": "L29100MH1977PLC100317"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-17T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423QE7LKCOHQW",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 16655.47,
+      "in-gaap:OtherIncome": 499.66,
+      "in-gaap:TotalIncome": 17155.13,
+      "in-gaap:OperatingExpenses": 13592.94,
+      "in-gaap:EBITDA": 3062.53,
+      "in-gaap:DepreciationAndAmortisation": 490.0,
+      "in-gaap:EBIT": 2572.53,
+      "in-gaap:FinanceCosts": 211.21,
+      "in-gaap:ProfitBeforeTax": 2361.32,
+      "in-gaap:TaxExpense": 590.33,
+      "in-gaap:ProfitAfterTax": 1770.99
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 474.46,
+      "in-gaap:OtherEquity": 24358.13,
+      "in-gaap:TotalEquity": 24832.59,
+      "in-gaap:TotalDebt": 2853.91,
+      "in-gaap:CashAndCashEquivalents": 2796.68,
+      "in-gaap:TotalCurrentAssets": 8327.74,
+      "in-gaap:TotalCurrentLiabilities": 4996.64,
+      "in-gaap:TotalAssets": 32683.14,
+      "in-gaap:RetainedEarnings": 17382.81
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 2664.4,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 532.97,
+      "in-gaap:FreeCashFlow": 2131.43
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 68.16,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2372300000,
+      "in-gaap:MarketPriceAtFiling": 162.25,
+      "in-gaap:EarningsPerShareBasic": 7.47,
+      "in-gaap:EarningsPerShareDiluted": 7.47,
+      "in-gaap:TrailingTwelveMonthsEPS": 29.88,
+      "in-gaap:ForwardEPSEstimate": 34.36,
+      "in-gaap:BookValuePerShare": 104.68,
+      "in-gaap:EVToEBITDA": 3.1,
+      "in-gaap:TrailingPE": 5.4,
+      "in-gaap:ForwardPE": 4.6,
+      "in-gaap:PriceToBook": 1.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.8
+    }
+  }
+}

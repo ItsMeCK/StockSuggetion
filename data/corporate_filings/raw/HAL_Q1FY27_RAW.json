@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000213",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HAL",
+  "company_details": {
+    "symbol": "HAL",
+    "company_name": "Hindustan Aeronautics Ltd.",
+    "isin": "INE066F01020",
+    "cin": "L29100MH2008PLC100213"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423R96GS1IM5S",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 792943.8,
+      "in-gaap:OtherIncome": 23788.31,
+      "in-gaap:TotalIncome": 816732.11,
+      "in-gaap:OperatingExpenses": 619029.99,
+      "in-gaap:EBITDA": 173913.81,
+      "in-gaap:DepreciationAndAmortisation": 27826.21,
+      "in-gaap:EBIT": 146087.6,
+      "in-gaap:FinanceCosts": 6324.14,
+      "in-gaap:ProfitBeforeTax": 139763.46,
+      "in-gaap:TaxExpense": 34940.86,
+      "in-gaap:ProfitAfterTax": 104822.6
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 317.24,
+      "in-gaap:OtherEquity": 911488.67,
+      "in-gaap:TotalEquity": 911805.91,
+      "in-gaap:TotalDebt": 96048.74,
+      "in-gaap:CashAndCashEquivalents": 160871.12,
+      "in-gaap:TotalCurrentAssets": 396471.9,
+      "in-gaap:TotalCurrentLiabilities": 237883.14,
+      "in-gaap:TotalAssets": 1245737.79,
+      "in-gaap:RetainedEarnings": 638264.14
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 140870.19,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 46827.16,
+      "in-gaap:FreeCashFlow": 94043.03
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.51,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1586200000,
+      "in-gaap:MarketPriceAtFiling": 4725.0,
+      "in-gaap:EarningsPerShareBasic": 660.84,
+      "in-gaap:EarningsPerShareDiluted": 660.84,
+      "in-gaap:TrailingTwelveMonthsEPS": 2643.36,
+      "in-gaap:ForwardEPSEstimate": 3039.86,
+      "in-gaap:BookValuePerShare": 5748.37,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.2
+    }
+  }
+}

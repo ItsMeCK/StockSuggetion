@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000486",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_VIJAYA",
+  "company_details": {
+    "symbol": "VIJAYA",
+    "company_name": "Vijaya Diagnostic Centre Ltd.",
+    "isin": "INE043W01024",
+    "cin": "L29100MH2011PLC100486"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "2604219033TC97VSQM",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 68247.17,
+      "in-gaap:OtherIncome": 2047.42,
+      "in-gaap:TotalIncome": 70294.59,
+      "in-gaap:OperatingExpenses": 52238.88,
+      "in-gaap:EBITDA": 16008.29,
+      "in-gaap:DepreciationAndAmortisation": 2561.33,
+      "in-gaap:EBIT": 13446.96,
+      "in-gaap:FinanceCosts": 622.89,
+      "in-gaap:ProfitBeforeTax": 12824.07,
+      "in-gaap:TaxExpense": 3206.02,
+      "in-gaap:ProfitAfterTax": 9618.05
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 139.7,
+      "in-gaap:OtherEquity": 53890.69,
+      "in-gaap:TotalEquity": 54030.39,
+      "in-gaap:TotalDebt": 8030.63,
+      "in-gaap:CashAndCashEquivalents": 8170.34,
+      "in-gaap:TotalCurrentAssets": 34123.58,
+      "in-gaap:TotalCurrentLiabilities": 20474.15,
+      "in-gaap:TotalAssets": 82535.17,
+      "in-gaap:RetainedEarnings": 37821.27
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 11846.13,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 4440.99,
+      "in-gaap:FreeCashFlow": 7405.14
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 53.06,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 698500000,
+      "in-gaap:MarketPriceAtFiling": 1389.4,
+      "in-gaap:EarningsPerShareBasic": 137.7,
+      "in-gaap:EarningsPerShareDiluted": 137.7,
+      "in-gaap:TrailingTwelveMonthsEPS": 550.8,
+      "in-gaap:ForwardEPSEstimate": 633.42,
+      "in-gaap:BookValuePerShare": 773.52,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.5,
+      "in-gaap:ForwardPE": 2.1,
+      "in-gaap:PriceToBook": 1.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.8
+    }
+  }
+}

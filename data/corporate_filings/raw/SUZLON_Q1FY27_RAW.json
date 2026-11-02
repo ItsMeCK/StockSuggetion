@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000434",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SUZLON",
+  "company_details": {
+    "symbol": "SUZLON",
+    "company_name": "Suzlon Energy Ltd.",
+    "isin": "INE040H01021",
+    "cin": "L29100MH2004PLC100434"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826FRV2CTGMRC",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 2511.13,
+      "in-gaap:OtherIncome": 75.33,
+      "in-gaap:TotalIncome": 2586.46,
+      "in-gaap:OperatingExpenses": 2150.84,
+      "in-gaap:EBITDA": 360.29,
+      "in-gaap:DepreciationAndAmortisation": 57.65,
+      "in-gaap:EBIT": 302.64,
+      "in-gaap:FinanceCosts": 20.59,
+      "in-gaap:ProfitBeforeTax": 282.05,
+      "in-gaap:TaxExpense": 70.51,
+      "in-gaap:ProfitAfterTax": 211.54
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 128.52,
+      "in-gaap:OtherEquity": 1863.45,
+      "in-gaap:TotalEquity": 1991.97,
+      "in-gaap:TotalDebt": 387.14,
+      "in-gaap:CashAndCashEquivalents": 576.47,
+      "in-gaap:TotalCurrentAssets": 1255.57,
+      "in-gaap:TotalCurrentLiabilities": 753.34,
+      "in-gaap:TotalAssets": 3132.45,
+      "in-gaap:RetainedEarnings": 1394.38
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 277.42,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 68.63,
+      "in-gaap:FreeCashFlow": 208.79
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.82,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 642600000,
+      "in-gaap:MarketPriceAtFiling": 37.4,
+      "in-gaap:EarningsPerShareBasic": 3.29,
+      "in-gaap:EarningsPerShareDiluted": 3.29,
+      "in-gaap:TrailingTwelveMonthsEPS": 13.16,
+      "in-gaap:ForwardEPSEstimate": 15.13,
+      "in-gaap:BookValuePerShare": 31.0,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.8,
+      "in-gaap:ForwardPE": 2.4,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.9
+    }
+  }
+}

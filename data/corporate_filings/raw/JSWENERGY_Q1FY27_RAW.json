@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000266",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_JSWENERGY",
+  "company_details": {
+    "symbol": "JSWENERGY",
+    "company_name": "JSW Energy Ltd.",
+    "isin": "INE121E01018",
+    "cin": "L29100MH2016PLC100266"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826CKLHBBSK0E",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 52857.37,
+      "in-gaap:OtherIncome": 1585.72,
+      "in-gaap:TotalIncome": 54443.09,
+      "in-gaap:OperatingExpenses": 37452.13,
+      "in-gaap:EBITDA": 15405.24,
+      "in-gaap:DepreciationAndAmortisation": 2464.84,
+      "in-gaap:EBIT": 12940.4,
+      "in-gaap:FinanceCosts": 489.06,
+      "in-gaap:ProfitBeforeTax": 12451.34,
+      "in-gaap:TaxExpense": 3112.84,
+      "in-gaap:ProfitAfterTax": 9338.51
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 276.42,
+      "in-gaap:OtherEquity": 43697.97,
+      "in-gaap:TotalEquity": 43974.39,
+      "in-gaap:TotalDebt": 6578.31,
+      "in-gaap:CashAndCashEquivalents": 7009.7,
+      "in-gaap:TotalCurrentAssets": 26428.69,
+      "in-gaap:TotalCurrentLiabilities": 15857.21,
+      "in-gaap:TotalAssets": 66409.91,
+      "in-gaap:RetainedEarnings": 30782.07
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 13864.72,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 4785.47,
+      "in-gaap:FreeCashFlow": 9079.25
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 69.33,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1382100000,
+      "in-gaap:MarketPriceAtFiling": 448.55,
+      "in-gaap:EarningsPerShareBasic": 67.57,
+      "in-gaap:EarningsPerShareDiluted": 67.57,
+      "in-gaap:TrailingTwelveMonthsEPS": 270.28,
+      "in-gaap:ForwardEPSEstimate": 310.82,
+      "in-gaap:BookValuePerShare": 318.17,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.7,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.9
+    }
+  }
+}

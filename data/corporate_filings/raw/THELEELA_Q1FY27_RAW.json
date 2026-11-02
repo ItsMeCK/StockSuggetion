@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000303",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_THELEELA",
+  "company_details": {
+    "symbol": "THELEELA",
+    "company_name": "Leela Palaces Hotels & Resorts Ltd.",
+    "isin": "INE0AQ201015",
+    "cin": "L29100MH2008PLC100303"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "261178129GJ11U69LU",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 123758.44,
+      "in-gaap:OtherIncome": 3712.75,
+      "in-gaap:TotalIncome": 127471.19,
+      "in-gaap:OperatingExpenses": 90718.55,
+      "in-gaap:EBITDA": 33039.89,
+      "in-gaap:DepreciationAndAmortisation": 5286.38,
+      "in-gaap:EBIT": 27753.51,
+      "in-gaap:FinanceCosts": 1990.35,
+      "in-gaap:ProfitBeforeTax": 25763.16,
+      "in-gaap:TaxExpense": 6440.79,
+      "in-gaap:ProfitAfterTax": 19322.37
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 344.8,
+      "in-gaap:OtherEquity": 117961.99,
+      "in-gaap:TotalEquity": 118306.79,
+      "in-gaap:TotalDebt": 37141.0,
+      "in-gaap:CashAndCashEquivalents": 18605.5,
+      "in-gaap:TotalCurrentAssets": 61879.22,
+      "in-gaap:TotalCurrentLiabilities": 37127.53,
+      "in-gaap:TotalAssets": 192575.32,
+      "in-gaap:RetainedEarnings": 82814.75
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 30066.3,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 11669.0,
+      "in-gaap:FreeCashFlow": 18397.3
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 62.84,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1724000000,
+      "in-gaap:MarketPriceAtFiling": 577.95,
+      "in-gaap:EarningsPerShareBasic": 112.08,
+      "in-gaap:EarningsPerShareDiluted": 112.08,
+      "in-gaap:TrailingTwelveMonthsEPS": 448.32,
+      "in-gaap:ForwardEPSEstimate": 515.57,
+      "in-gaap:BookValuePerShare": 686.23,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.3
+    }
+  }
+}

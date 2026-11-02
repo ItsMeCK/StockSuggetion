@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000304",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_LEMONTREE",
+  "company_details": {
+    "symbol": "LEMONTREE",
+    "company_name": "Lemon Tree Hotels Ltd.",
+    "isin": "INE970X01018",
+    "cin": "L29100MH2009PLC100304"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826X4RO4HP4OI",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 4079.82,
+      "in-gaap:OtherIncome": 122.39,
+      "in-gaap:TotalIncome": 4202.21,
+      "in-gaap:OperatingExpenses": 2958.1,
+      "in-gaap:EBITDA": 1121.72,
+      "in-gaap:DepreciationAndAmortisation": 179.48,
+      "in-gaap:EBIT": 942.24,
+      "in-gaap:FinanceCosts": 119.33,
+      "in-gaap:ProfitBeforeTax": 822.91,
+      "in-gaap:TaxExpense": 205.73,
+      "in-gaap:ProfitAfterTax": 617.18
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 123.32,
+      "in-gaap:OtherEquity": 5736.59,
+      "in-gaap:TotalEquity": 5859.91,
+      "in-gaap:TotalDebt": 122.03,
+      "in-gaap:CashAndCashEquivalents": 593.08,
+      "in-gaap:TotalCurrentAssets": 2039.91,
+      "in-gaap:TotalCurrentLiabilities": 1223.95,
+      "in-gaap:TotalAssets": 7205.89,
+      "in-gaap:RetainedEarnings": 4101.94
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 975.9,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 220.65,
+      "in-gaap:FreeCashFlow": 755.25
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 55.79,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 616600000,
+      "in-gaap:MarketPriceAtFiling": 108.94,
+      "in-gaap:EarningsPerShareBasic": 10.01,
+      "in-gaap:EarningsPerShareDiluted": 10.01,
+      "in-gaap:TrailingTwelveMonthsEPS": 40.04,
+      "in-gaap:ForwardEPSEstimate": 46.05,
+      "in-gaap:BookValuePerShare": 95.04,
+      "in-gaap:EVToEBITDA": 1.4,
+      "in-gaap:TrailingPE": 2.7,
+      "in-gaap:ForwardPE": 2.3,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.6
+    }
+  }
+}

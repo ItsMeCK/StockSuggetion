@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000050",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ASTRAL",
+  "company_details": {
+    "symbol": "ASTRAL",
+    "company_name": "Astral Ltd.",
+    "isin": "INE006I01046",
+    "cin": "L29100MH1980PLC100050"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "260398261Q9TWJOXI9",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 36186.88,
+      "in-gaap:OtherIncome": 1085.61,
+      "in-gaap:TotalIncome": 37272.49,
+      "in-gaap:OperatingExpenses": 31065.08,
+      "in-gaap:EBITDA": 5121.8,
+      "in-gaap:DepreciationAndAmortisation": 819.49,
+      "in-gaap:EBIT": 4302.31,
+      "in-gaap:FinanceCosts": 172.45,
+      "in-gaap:ProfitBeforeTax": 4129.86,
+      "in-gaap:TaxExpense": 1032.46,
+      "in-gaap:ProfitAfterTax": 3097.39
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 36.16,
+      "in-gaap:OtherEquity": 35320.35,
+      "in-gaap:TotalEquity": 35356.51,
+      "in-gaap:TotalDebt": 617.37,
+      "in-gaap:CashAndCashEquivalents": 7355.69,
+      "in-gaap:TotalCurrentAssets": 18093.44,
+      "in-gaap:TotalCurrentLiabilities": 10856.06,
+      "in-gaap:TotalAssets": 46829.94,
+      "in-gaap:RetainedEarnings": 24749.56
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 4251.09,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1045.93,
+      "in-gaap:FreeCashFlow": 3205.16
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 44.8,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 180799999,
+      "in-gaap:MarketPriceAtFiling": 1357.0,
+      "in-gaap:EarningsPerShareBasic": 171.32,
+      "in-gaap:EarningsPerShareDiluted": 171.32,
+      "in-gaap:TrailingTwelveMonthsEPS": 685.28,
+      "in-gaap:ForwardEPSEstimate": 788.07,
+      "in-gaap:BookValuePerShare": 1955.56,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 2.0,
+      "in-gaap:ForwardPE": 1.7,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.5
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000275",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_JIOFIN",
+  "company_details": {
+    "symbol": "JIOFIN",
+    "company_name": "Jio Financial Services Ltd.",
+    "isin": "INE758E01017",
+    "cin": "L29100MH1980PLC100275"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317HC8Q0QOBM9",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 7676.99,
+      "in-gaap:OtherIncome": 230.31,
+      "in-gaap:TotalIncome": 7907.3,
+      "in-gaap:OperatingExpenses": 5837.41,
+      "in-gaap:EBITDA": 1839.58,
+      "in-gaap:DepreciationAndAmortisation": 294.33,
+      "in-gaap:EBIT": 1545.25,
+      "in-gaap:FinanceCosts": 84.77,
+      "in-gaap:ProfitBeforeTax": 1460.48,
+      "in-gaap:TaxExpense": 365.12,
+      "in-gaap:ProfitAfterTax": 1095.36
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 136.88,
+      "in-gaap:OtherEquity": 10428.83,
+      "in-gaap:TotalEquity": 10565.71,
+      "in-gaap:TotalDebt": 1605.25,
+      "in-gaap:CashAndCashEquivalents": 1667.66,
+      "in-gaap:TotalCurrentAssets": 3838.49,
+      "in-gaap:TotalCurrentLiabilities": 2303.1,
+      "in-gaap:TotalAssets": 14474.06,
+      "in-gaap:RetainedEarnings": 7396.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1600.43,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 603.56,
+      "in-gaap:FreeCashFlow": 996.87
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 36.46,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 684400000,
+      "in-gaap:MarketPriceAtFiling": 205.03,
+      "in-gaap:EarningsPerShareBasic": 16.0,
+      "in-gaap:EarningsPerShareDiluted": 16.0,
+      "in-gaap:TrailingTwelveMonthsEPS": 64.0,
+      "in-gaap:ForwardEPSEstimate": 73.6,
+      "in-gaap:BookValuePerShare": 154.38,
+      "in-gaap:EVToEBITDA": 1.9,
+      "in-gaap:TrailingPE": 3.2,
+      "in-gaap:ForwardPE": 2.7,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.7
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000408",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MOTHERSON",
+  "company_details": {
+    "symbol": "MOTHERSON",
+    "company_name": "Samvardhana Motherson International Ltd.",
+    "isin": "INE775A01035",
+    "cin": "L29100MH1978PLC100408"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556VBTEDCKSOX",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 10929.11,
+      "in-gaap:OtherIncome": 327.87,
+      "in-gaap:TotalIncome": 11256.98,
+      "in-gaap:OperatingExpenses": 9002.15,
+      "in-gaap:EBITDA": 1926.96,
+      "in-gaap:DepreciationAndAmortisation": 308.31,
+      "in-gaap:EBIT": 1618.65,
+      "in-gaap:FinanceCosts": 99.33,
+      "in-gaap:ProfitBeforeTax": 1519.32,
+      "in-gaap:TaxExpense": 379.83,
+      "in-gaap:ProfitAfterTax": 1139.49
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 194.16,
+      "in-gaap:OtherEquity": 12987.39,
+      "in-gaap:TotalEquity": 13181.55,
+      "in-gaap:TotalDebt": 1695.28,
+      "in-gaap:CashAndCashEquivalents": 2592.51,
+      "in-gaap:TotalCurrentAssets": 5464.56,
+      "in-gaap:TotalCurrentLiabilities": 3278.73,
+      "in-gaap:TotalAssets": 18155.56,
+      "in-gaap:RetainedEarnings": 9227.08
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1503.03,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 441.16,
+      "in-gaap:FreeCashFlow": 1061.87
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 47.85,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 970800000,
+      "in-gaap:MarketPriceAtFiling": 151.67,
+      "in-gaap:EarningsPerShareBasic": 11.74,
+      "in-gaap:EarningsPerShareDiluted": 11.74,
+      "in-gaap:TrailingTwelveMonthsEPS": 46.96,
+      "in-gaap:ForwardEPSEstimate": 54.0,
+      "in-gaap:BookValuePerShare": 135.78,
+      "in-gaap:EVToEBITDA": 1.8,
+      "in-gaap:TrailingPE": 3.2,
+      "in-gaap:ForwardPE": 2.7,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.4
+    }
+  }
+}

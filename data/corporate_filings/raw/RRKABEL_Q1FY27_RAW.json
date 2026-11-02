@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000387",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_RRKABEL",
+  "company_details": {
+    "symbol": "RRKABEL",
+    "company_name": "R R Kabel Ltd.",
+    "isin": "INE777K01022",
+    "cin": "L29100MH2002PLC100387"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814D97G5864B2",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 451414.49,
+      "in-gaap:OtherIncome": 13542.43,
+      "in-gaap:TotalIncome": 464956.92,
+      "in-gaap:OperatingExpenses": 361785.8,
+      "in-gaap:EBITDA": 89628.69,
+      "in-gaap:DepreciationAndAmortisation": 14340.59,
+      "in-gaap:EBIT": 75288.1,
+      "in-gaap:FinanceCosts": 3382.21,
+      "in-gaap:ProfitBeforeTax": 71905.89,
+      "in-gaap:TaxExpense": 17976.47,
+      "in-gaap:ProfitAfterTax": 53929.42
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 448.04,
+      "in-gaap:OtherEquity": 532352.01,
+      "in-gaap:TotalEquity": 532800.05,
+      "in-gaap:TotalDebt": 86299.19,
+      "in-gaap:CashAndCashEquivalents": 82518.92,
+      "in-gaap:TotalCurrentAssets": 225707.24,
+      "in-gaap:TotalCurrentLiabilities": 135424.35,
+      "in-gaap:TotalAssets": 754523.59,
+      "in-gaap:RetainedEarnings": 372960.04
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 85147.26,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 18632.77,
+      "in-gaap:FreeCashFlow": 66514.49
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 49.87,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2240200000,
+      "in-gaap:MarketPriceAtFiling": 2140.0,
+      "in-gaap:EarningsPerShareBasic": 240.73,
+      "in-gaap:EarningsPerShareDiluted": 240.73,
+      "in-gaap:TrailingTwelveMonthsEPS": 962.92,
+      "in-gaap:ForwardEPSEstimate": 1107.36,
+      "in-gaap:BookValuePerShare": 2378.36,
+      "in-gaap:EVToEBITDA": 1.3,
+      "in-gaap:TrailingPE": 2.2,
+      "in-gaap:ForwardPE": 1.9,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.4
+    }
+  }
+}

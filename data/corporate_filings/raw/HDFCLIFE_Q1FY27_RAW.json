@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000206",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HDFCLIFE",
+  "company_details": {
+    "symbol": "HDFCLIFE",
+    "company_name": "HDFC Life Insurance Company Ltd.",
+    "isin": "INE795G01014",
+    "cin": "L65191MH1986PLC100206"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "260421902HTHOB0SL3",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 6042.82,
+      "in-gaap:OtherIncome": 2114.99,
+      "in-gaap:OperatingExpenses": 3426.28,
+      "in-gaap:OperatingProfit": 4731.53,
+      "in-gaap:ProvisionsAndContingencies": 1006.11,
+      "in-gaap:ProfitBeforeTax": 3725.42,
+      "in-gaap:TaxExpense": 931.36,
+      "in-gaap:ProfitAfterTax": 2794.07
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 346.26,
+      "in-gaap:ReservesAndSurplus": 73271.81,
+      "in-gaap:TotalEquity": 73618.07,
+      "in-gaap:TotalDeposits": 490787.14,
+      "in-gaap:CasaDeposits": 197296.43,
+      "in-gaap:TotalAdvances": 402445.45,
+      "in-gaap:TotalAssets": 613483.93
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 11831.9,
+      "in-gaap:NetNPA": 3541.52,
+      "in-gaap:CapitalAdequacyRatioCRAR": 18.7,
+      "in-gaap:Tier1CapitalRatio": 16.7
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.94,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1731300000,
+      "in-gaap:MarketPriceAtFiling": 523.75,
+      "in-gaap:EarningsPerShareBasic": 16.14,
+      "in-gaap:EarningsPerShareDiluted": 16.14,
+      "in-gaap:TrailingTwelveMonthsEPS": 64.56,
+      "in-gaap:ForwardEPSEstimate": 74.24,
+      "in-gaap:BookValuePerShare": 425.22,
+      "in-gaap:TrailingPE": 8.1,
+      "in-gaap:ForwardPE": 6.9,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 13.7
+    }
+  }
+}

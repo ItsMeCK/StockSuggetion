@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000265",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_JSWDULUX",
+  "company_details": {
+    "symbol": "JSWDULUX",
+    "company_name": "JSW Dulux Ltd.",
+    "isin": "INE133A01011",
+    "cin": "L29100MH2015PLC100265"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423WOHISGW1SY",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 22550.67,
+      "in-gaap:OtherIncome": 676.52,
+      "in-gaap:TotalIncome": 23227.19,
+      "in-gaap:OperatingExpenses": 18746.25,
+      "in-gaap:EBITDA": 3804.42,
+      "in-gaap:DepreciationAndAmortisation": 608.71,
+      "in-gaap:EBIT": 3195.71,
+      "in-gaap:FinanceCosts": 172.93,
+      "in-gaap:ProfitBeforeTax": 3022.78,
+      "in-gaap:TaxExpense": 755.7,
+      "in-gaap:ProfitAfterTax": 2267.09
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 207.86,
+      "in-gaap:OtherEquity": 23631.61,
+      "in-gaap:TotalEquity": 23839.47,
+      "in-gaap:TotalDebt": 3801.24,
+      "in-gaap:CashAndCashEquivalents": 5622.29,
+      "in-gaap:TotalCurrentAssets": 11275.33,
+      "in-gaap:TotalCurrentLiabilities": 6765.2,
+      "in-gaap:TotalAssets": 34405.91,
+      "in-gaap:RetainedEarnings": 16687.63
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 3423.98,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 704.92,
+      "in-gaap:FreeCashFlow": 2719.06
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 57.77,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1039300000,
+      "in-gaap:MarketPriceAtFiling": 286.6,
+      "in-gaap:EarningsPerShareBasic": 21.81,
+      "in-gaap:EarningsPerShareDiluted": 21.81,
+      "in-gaap:TrailingTwelveMonthsEPS": 87.24,
+      "in-gaap:ForwardEPSEstimate": 100.33,
+      "in-gaap:BookValuePerShare": 229.38,
+      "in-gaap:EVToEBITDA": 1.8,
+      "in-gaap:TrailingPE": 3.3,
+      "in-gaap:ForwardPE": 2.8,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.0
+    }
+  }
+}

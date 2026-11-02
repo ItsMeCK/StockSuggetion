@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000356",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_OLECTRA",
+  "company_details": {
+    "symbol": "OLECTRA",
+    "company_name": "Olectra Greentech Ltd.",
+    "isin": "INE260D01016",
+    "cin": "L29100MH2016PLC100356"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317YWMP8XW779",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 113705.49,
+      "in-gaap:OtherIncome": 3411.16,
+      "in-gaap:TotalIncome": 117116.65,
+      "in-gaap:OperatingExpenses": 85630.62,
+      "in-gaap:EBITDA": 28074.87,
+      "in-gaap:DepreciationAndAmortisation": 4491.98,
+      "in-gaap:EBIT": 23582.89,
+      "in-gaap:FinanceCosts": 1396.76,
+      "in-gaap:ProfitBeforeTax": 22186.13,
+      "in-gaap:TaxExpense": 5546.53,
+      "in-gaap:ProfitAfterTax": 16639.6
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 490.32,
+      "in-gaap:OtherEquity": 110210.75,
+      "in-gaap:TotalEquity": 110701.07,
+      "in-gaap:TotalDebt": 7473.41,
+      "in-gaap:CashAndCashEquivalents": 26834.02,
+      "in-gaap:TotalCurrentAssets": 56852.75,
+      "in-gaap:TotalCurrentLiabilities": 34111.65,
+      "in-gaap:TotalAssets": 152286.13,
+      "in-gaap:RetainedEarnings": 77490.75
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 25828.88,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 9003.75,
+      "in-gaap:FreeCashFlow": 16825.13
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 53.15,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2451600000,
+      "in-gaap:MarketPriceAtFiling": 955.7,
+      "in-gaap:EarningsPerShareBasic": 67.87,
+      "in-gaap:EarningsPerShareDiluted": 67.87,
+      "in-gaap:TrailingTwelveMonthsEPS": 271.48,
+      "in-gaap:ForwardEPSEstimate": 312.2,
+      "in-gaap:BookValuePerShare": 451.55,
+      "in-gaap:EVToEBITDA": 1.9,
+      "in-gaap:TrailingPE": 3.5,
+      "in-gaap:ForwardPE": 3.0,
+      "in-gaap:PriceToBook": 2.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.6
+    }
+  }
+}

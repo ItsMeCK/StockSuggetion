@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000269",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_JAINREC",
+  "company_details": {
+    "symbol": "JAINREC",
+    "company_name": "Jain Resource Recycling Ltd.",
+    "isin": "INE0YD401026",
+    "cin": "L29100MH2019PLC100269"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "260424231WXHQABJ0T",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 104264.04,
+      "in-gaap:OtherIncome": 3127.92,
+      "in-gaap:TotalIncome": 107391.96,
+      "in-gaap:OperatingExpenses": 75668.4,
+      "in-gaap:EBITDA": 28595.64,
+      "in-gaap:DepreciationAndAmortisation": 4575.3,
+      "in-gaap:EBIT": 24020.34,
+      "in-gaap:FinanceCosts": 1999.7,
+      "in-gaap:ProfitBeforeTax": 22020.64,
+      "in-gaap:TaxExpense": 5505.16,
+      "in-gaap:ProfitAfterTax": 16515.48
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 463.78,
+      "in-gaap:OtherEquity": 115544.3,
+      "in-gaap:TotalEquity": 116008.08,
+      "in-gaap:TotalDebt": 3255.72,
+      "in-gaap:CashAndCashEquivalents": 11482.74,
+      "in-gaap:TotalCurrentAssets": 52132.02,
+      "in-gaap:TotalCurrentLiabilities": 31279.21,
+      "in-gaap:TotalAssets": 150543.01,
+      "in-gaap:RetainedEarnings": 81205.66
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 26307.99,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 7881.22,
+      "in-gaap:FreeCashFlow": 18426.77
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 66.08,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2318900000,
+      "in-gaap:MarketPriceAtFiling": 289.2,
+      "in-gaap:EarningsPerShareBasic": 71.22,
+      "in-gaap:EarningsPerShareDiluted": 71.22,
+      "in-gaap:TrailingTwelveMonthsEPS": 284.88,
+      "in-gaap:ForwardEPSEstimate": 327.61,
+      "in-gaap:BookValuePerShare": 500.27,
+      "in-gaap:EVToEBITDA": 0.5,
+      "in-gaap:TrailingPE": 1.0,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.6
+    }
+  }
+}

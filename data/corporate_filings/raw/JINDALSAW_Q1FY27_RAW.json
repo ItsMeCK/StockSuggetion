@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000272",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_JINDALSAW",
+  "company_details": {
+    "symbol": "JINDALSAW",
+    "company_name": "Jindal Saw Ltd.",
+    "isin": "INE324A01032",
+    "cin": "L29100MH1977PLC100272"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-17T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "2603982647QHHRIE9N",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 3969.52,
+      "in-gaap:OtherIncome": 119.09,
+      "in-gaap:TotalIncome": 4088.61,
+      "in-gaap:OperatingExpenses": 2984.85,
+      "in-gaap:EBITDA": 984.67,
+      "in-gaap:DepreciationAndAmortisation": 157.55,
+      "in-gaap:EBIT": 827.12,
+      "in-gaap:FinanceCosts": 47.57,
+      "in-gaap:ProfitBeforeTax": 779.55,
+      "in-gaap:TaxExpense": 194.89,
+      "in-gaap:ProfitAfterTax": 584.66
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 47.58,
+      "in-gaap:OtherEquity": 3648.86,
+      "in-gaap:TotalEquity": 3696.44,
+      "in-gaap:TotalDebt": 751.97,
+      "in-gaap:CashAndCashEquivalents": 505.57,
+      "in-gaap:TotalCurrentAssets": 1984.76,
+      "in-gaap:TotalCurrentLiabilities": 1190.86,
+      "in-gaap:TotalAssets": 5639.27,
+      "in-gaap:RetainedEarnings": 2587.51
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 738.5,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 237.2,
+      "in-gaap:FreeCashFlow": 501.3
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 53.73,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 237900000,
+      "in-gaap:MarketPriceAtFiling": 232.15,
+      "in-gaap:EarningsPerShareBasic": 24.58,
+      "in-gaap:EarningsPerShareDiluted": 24.58,
+      "in-gaap:TrailingTwelveMonthsEPS": 98.32,
+      "in-gaap:ForwardEPSEstimate": 113.07,
+      "in-gaap:BookValuePerShare": 155.38,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.4,
+      "in-gaap:ForwardPE": 2.0,
+      "in-gaap:PriceToBook": 1.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.3
+    }
+  }
+}

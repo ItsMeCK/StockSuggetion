@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000368",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_PARADEEP",
+  "company_details": {
+    "symbol": "PARADEEP",
+    "company_name": "Paradeep Phosphates Ltd.",
+    "isin": "INE088F01024",
+    "cin": "L29100MH1983PLC100368"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814LHHW1C9ASP",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 25779.14,
+      "in-gaap:OtherIncome": 773.37,
+      "in-gaap:TotalIncome": 26552.51,
+      "in-gaap:OperatingExpenses": 21266.43,
+      "in-gaap:EBITDA": 4512.71,
+      "in-gaap:DepreciationAndAmortisation": 722.03,
+      "in-gaap:EBIT": 3790.68,
+      "in-gaap:FinanceCosts": 147.96,
+      "in-gaap:ProfitBeforeTax": 3642.72,
+      "in-gaap:TaxExpense": 910.68,
+      "in-gaap:ProfitAfterTax": 2732.04
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 456.08,
+      "in-gaap:OtherEquity": 20954.74,
+      "in-gaap:TotalEquity": 21410.82,
+      "in-gaap:TotalDebt": 973.27,
+      "in-gaap:CashAndCashEquivalents": 5047.25,
+      "in-gaap:TotalCurrentAssets": 12889.57,
+      "in-gaap:TotalCurrentLiabilities": 7733.74,
+      "in-gaap:TotalAssets": 30117.83,
+      "in-gaap:RetainedEarnings": 14987.57
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 4016.31,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1209.63,
+      "in-gaap:FreeCashFlow": 2806.68
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.37,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2280400000,
+      "in-gaap:MarketPriceAtFiling": 133.57,
+      "in-gaap:EarningsPerShareBasic": 11.98,
+      "in-gaap:EarningsPerShareDiluted": 11.98,
+      "in-gaap:TrailingTwelveMonthsEPS": 47.92,
+      "in-gaap:ForwardEPSEstimate": 55.11,
+      "in-gaap:BookValuePerShare": 93.89,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.8,
+      "in-gaap:ForwardPE": 2.4,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.4
+    }
+  }
+}

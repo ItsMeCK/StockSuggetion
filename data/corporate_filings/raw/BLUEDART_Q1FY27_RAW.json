@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000086",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BLUEDART",
+  "company_details": {
+    "symbol": "BLUEDART",
+    "company_name": "Blue Dart Express Ltd.",
+    "isin": "INE233B01017",
+    "cin": "L29100MH2016PLC100086"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556LBSYSP53NF",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 710319.92,
+      "in-gaap:OtherIncome": 21309.6,
+      "in-gaap:TotalIncome": 731629.52,
+      "in-gaap:OperatingExpenses": 536604.83,
+      "in-gaap:EBITDA": 173715.09,
+      "in-gaap:DepreciationAndAmortisation": 27794.41,
+      "in-gaap:EBIT": 145920.68,
+      "in-gaap:FinanceCosts": 11658.73,
+      "in-gaap:ProfitBeforeTax": 134261.95,
+      "in-gaap:TaxExpense": 33565.49,
+      "in-gaap:ProfitAfterTax": 100696.46
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 493.74,
+      "in-gaap:OtherEquity": 441343.06,
+      "in-gaap:TotalEquity": 441836.8,
+      "in-gaap:TotalDebt": 201207.08,
+      "in-gaap:CashAndCashEquivalents": 107403.3,
+      "in-gaap:TotalCurrentAssets": 355159.96,
+      "in-gaap:TotalCurrentLiabilities": 213095.98,
+      "in-gaap:TotalAssets": 856139.86,
+      "in-gaap:RetainedEarnings": 309285.76
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 158080.73,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 42400.46,
+      "in-gaap:FreeCashFlow": 115680.27
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 39.61,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2468700000,
+      "in-gaap:MarketPriceAtFiling": 4215.3,
+      "in-gaap:EarningsPerShareBasic": 407.89,
+      "in-gaap:EarningsPerShareDiluted": 407.89,
+      "in-gaap:TrailingTwelveMonthsEPS": 1631.56,
+      "in-gaap:ForwardEPSEstimate": 1876.29,
+      "in-gaap:BookValuePerShare": 1789.75,
+      "in-gaap:EVToEBITDA": 1.6,
+      "in-gaap:TrailingPE": 2.6,
+      "in-gaap:ForwardPE": 2.2,
+      "in-gaap:PriceToBook": 2.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.5
+    }
+  }
+}

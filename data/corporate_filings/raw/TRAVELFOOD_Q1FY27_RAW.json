@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000468",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TRAVELFOOD",
+  "company_details": {
+    "symbol": "TRAVELFOOD",
+    "company_name": "Travel Food Services Ltd.",
+    "isin": "INE103V01028",
+    "cin": "L29100MH1993PLC100468"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317F2F6L096LF",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 114776.23,
+      "in-gaap:OtherIncome": 3443.29,
+      "in-gaap:TotalIncome": 118219.52,
+      "in-gaap:OperatingExpenses": 81418.91,
+      "in-gaap:EBITDA": 33357.32,
+      "in-gaap:DepreciationAndAmortisation": 5337.17,
+      "in-gaap:EBIT": 28020.15,
+      "in-gaap:FinanceCosts": 2508.07,
+      "in-gaap:ProfitBeforeTax": 25512.08,
+      "in-gaap:TaxExpense": 6378.02,
+      "in-gaap:ProfitAfterTax": 19134.06
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 447.74,
+      "in-gaap:OtherEquity": 128026.52,
+      "in-gaap:TotalEquity": 128474.26,
+      "in-gaap:TotalDebt": 10634.99,
+      "in-gaap:CashAndCashEquivalents": 21465.14,
+      "in-gaap:TotalCurrentAssets": 57388.11,
+      "in-gaap:TotalCurrentLiabilities": 34432.87,
+      "in-gaap:TotalAssets": 173542.12,
+      "in-gaap:RetainedEarnings": 89931.98
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 26352.28,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 10406.61,
+      "in-gaap:FreeCashFlow": 15945.67
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.43,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2238700000,
+      "in-gaap:MarketPriceAtFiling": 1157.8,
+      "in-gaap:EarningsPerShareBasic": 85.47,
+      "in-gaap:EarningsPerShareDiluted": 85.47,
+      "in-gaap:TrailingTwelveMonthsEPS": 341.88,
+      "in-gaap:ForwardEPSEstimate": 393.16,
+      "in-gaap:BookValuePerShare": 573.88,
+      "in-gaap:EVToEBITDA": 1.9,
+      "in-gaap:TrailingPE": 3.4,
+      "in-gaap:ForwardPE": 2.9,
+      "in-gaap:PriceToBook": 2.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.6
+    }
+  }
+}

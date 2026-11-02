@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000177",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GABRIEL",
+  "company_details": {
+    "symbol": "GABRIEL",
+    "company_name": "Gabriel India Ltd.",
+    "isin": "INE524A01029",
+    "cin": "L29100MH2017PLC100177"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826NX9J3CZ80W",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 213714.32,
+      "in-gaap:OtherIncome": 6411.43,
+      "in-gaap:TotalIncome": 220125.75,
+      "in-gaap:OperatingExpenses": 165727.53,
+      "in-gaap:EBITDA": 47986.79,
+      "in-gaap:DepreciationAndAmortisation": 7677.89,
+      "in-gaap:EBIT": 40308.9,
+      "in-gaap:FinanceCosts": 1411.38,
+      "in-gaap:ProfitBeforeTax": 38897.52,
+      "in-gaap:TaxExpense": 9724.38,
+      "in-gaap:ProfitAfterTax": 29173.14
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 195.62,
+      "in-gaap:OtherEquity": 188721.99,
+      "in-gaap:TotalEquity": 188917.61,
+      "in-gaap:TotalDebt": 7506.7,
+      "in-gaap:CashAndCashEquivalents": 29990.48,
+      "in-gaap:TotalCurrentAssets": 106857.16,
+      "in-gaap:TotalCurrentLiabilities": 64114.3,
+      "in-gaap:TotalAssets": 260538.61,
+      "in-gaap:RetainedEarnings": 132242.33
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 41748.51,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 15000.7,
+      "in-gaap:FreeCashFlow": 26747.81
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 58.86,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 978100000,
+      "in-gaap:MarketPriceAtFiling": 1370.7,
+      "in-gaap:EarningsPerShareBasic": 298.26,
+      "in-gaap:EarningsPerShareDiluted": 298.26,
+      "in-gaap:TrailingTwelveMonthsEPS": 1193.04,
+      "in-gaap:ForwardEPSEstimate": 1372.0,
+      "in-gaap:BookValuePerShare": 1931.48,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.0
+    }
+  }
+}

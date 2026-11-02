@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000358",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ONESOURCE",
+  "company_details": {
+    "symbol": "ONESOURCE",
+    "company_name": "Onesource Specialty Pharma Ltd.",
+    "isin": "INE013P01021",
+    "cin": "L29100MH2018PLC100358"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556W8PUJNGNBG",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 45210.81,
+      "in-gaap:OtherIncome": 1356.32,
+      "in-gaap:TotalIncome": 46567.13,
+      "in-gaap:OperatingExpenses": 38356.44,
+      "in-gaap:EBITDA": 6854.37,
+      "in-gaap:DepreciationAndAmortisation": 1096.7,
+      "in-gaap:EBIT": 5757.67,
+      "in-gaap:FinanceCosts": 634.66,
+      "in-gaap:ProfitBeforeTax": 5123.01,
+      "in-gaap:TaxExpense": 1280.75,
+      "in-gaap:ProfitAfterTax": 3842.26
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 58.08,
+      "in-gaap:OtherEquity": 59819.35,
+      "in-gaap:TotalEquity": 59877.43,
+      "in-gaap:TotalDebt": 2044.57,
+      "in-gaap:CashAndCashEquivalents": 7233.56,
+      "in-gaap:TotalCurrentAssets": 22605.4,
+      "in-gaap:TotalCurrentLiabilities": 13563.24,
+      "in-gaap:TotalAssets": 75485.24,
+      "in-gaap:RetainedEarnings": 41914.2
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 5277.86,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1092.92,
+      "in-gaap:FreeCashFlow": 4184.94
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 42.77,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 290400000,
+      "in-gaap:MarketPriceAtFiling": 1334.1,
+      "in-gaap:EarningsPerShareBasic": 132.31,
+      "in-gaap:EarningsPerShareDiluted": 132.31,
+      "in-gaap:TrailingTwelveMonthsEPS": 529.24,
+      "in-gaap:ForwardEPSEstimate": 608.63,
+      "in-gaap:BookValuePerShare": 2061.89,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 2.5,
+      "in-gaap:ForwardPE": 2.1,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.0
+    }
+  }
+}

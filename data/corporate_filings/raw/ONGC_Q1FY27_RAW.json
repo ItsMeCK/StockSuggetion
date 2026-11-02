@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000353",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ONGC",
+  "company_details": {
+    "symbol": "ONGC",
+    "company_name": "Oil & Natural Gas Corporation Ltd.",
+    "isin": "INE213A01029",
+    "cin": "L29100MH2013PLC100353"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812U01G66BBMA",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 52915.94,
+      "in-gaap:OtherIncome": 1587.48,
+      "in-gaap:TotalIncome": 54503.42,
+      "in-gaap:OperatingExpenses": 40756.29,
+      "in-gaap:EBITDA": 12159.65,
+      "in-gaap:DepreciationAndAmortisation": 1945.54,
+      "in-gaap:EBIT": 10214.11,
+      "in-gaap:FinanceCosts": 1293.58,
+      "in-gaap:ProfitBeforeTax": 8920.53,
+      "in-gaap:TaxExpense": 2230.13,
+      "in-gaap:ProfitAfterTax": 6690.4
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 337.34,
+      "in-gaap:OtherEquity": 53210.94,
+      "in-gaap:TotalEquity": 53548.28,
+      "in-gaap:TotalDebt": 1231.17,
+      "in-gaap:CashAndCashEquivalents": 10773.95,
+      "in-gaap:TotalCurrentAssets": 26457.97,
+      "in-gaap:TotalCurrentLiabilities": 15874.78,
+      "in-gaap:TotalAssets": 70654.23,
+      "in-gaap:RetainedEarnings": 37483.8
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 11065.28,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3448.91,
+      "in-gaap:FreeCashFlow": 7616.37
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 43.85,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1686699999,
+      "in-gaap:MarketPriceAtFiling": 227.5,
+      "in-gaap:EarningsPerShareBasic": 39.67,
+      "in-gaap:EarningsPerShareDiluted": 39.67,
+      "in-gaap:TrailingTwelveMonthsEPS": 158.68,
+      "in-gaap:ForwardEPSEstimate": 182.48,
+      "in-gaap:BookValuePerShare": 317.47,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.4,
+      "in-gaap:ForwardPE": 1.2,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.1
+    }
+  }
+}

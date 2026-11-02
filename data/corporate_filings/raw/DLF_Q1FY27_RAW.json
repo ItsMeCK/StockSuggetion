@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000135",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_DLF",
+  "company_details": {
+    "symbol": "DLF",
+    "company_name": "DLF Ltd.",
+    "isin": "INE271C01023",
+    "cin": "L29100MH1975PLC100135"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826VJJ0H5IFAZ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 103232.02,
+      "in-gaap:OtherIncome": 3096.96,
+      "in-gaap:TotalIncome": 106328.98,
+      "in-gaap:OperatingExpenses": 83673.68,
+      "in-gaap:EBITDA": 19558.34,
+      "in-gaap:DepreciationAndAmortisation": 3129.33,
+      "in-gaap:EBIT": 16429.01,
+      "in-gaap:FinanceCosts": 698.51,
+      "in-gaap:ProfitBeforeTax": 15730.5,
+      "in-gaap:TaxExpense": 3932.62,
+      "in-gaap:ProfitAfterTax": 11797.88
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 239.5,
+      "in-gaap:OtherEquity": 102797.42,
+      "in-gaap:TotalEquity": 103036.92,
+      "in-gaap:TotalDebt": 19268.31,
+      "in-gaap:CashAndCashEquivalents": 24220.95,
+      "in-gaap:TotalCurrentAssets": 51616.01,
+      "in-gaap:TotalCurrentLiabilities": 30969.61,
+      "in-gaap:TotalAssets": 153274.84,
+      "in-gaap:RetainedEarnings": 72125.84
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 17798.09,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3733.76,
+      "in-gaap:FreeCashFlow": 14064.33
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 51.95,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1197500000,
+      "in-gaap:MarketPriceAtFiling": 657.0,
+      "in-gaap:EarningsPerShareBasic": 98.52,
+      "in-gaap:EarningsPerShareDiluted": 98.52,
+      "in-gaap:TrailingTwelveMonthsEPS": 394.08,
+      "in-gaap:ForwardEPSEstimate": 453.19,
+      "in-gaap:BookValuePerShare": 860.43,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.7,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.9
+    }
+  }
+}

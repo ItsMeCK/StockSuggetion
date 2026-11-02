@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000052",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ATUL",
+  "company_details": {
+    "symbol": "ATUL",
+    "company_name": "Atul Ltd.",
+    "isin": "INE100A01010",
+    "cin": "L29100MH1982PLC100052"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423HG16ECWY5U",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 931545.53,
+      "in-gaap:OtherIncome": 27946.37,
+      "in-gaap:TotalIncome": 959491.9,
+      "in-gaap:OperatingExpenses": 683123.83,
+      "in-gaap:EBITDA": 248421.7,
+      "in-gaap:DepreciationAndAmortisation": 39747.47,
+      "in-gaap:EBIT": 208674.23,
+      "in-gaap:FinanceCosts": 10754.19,
+      "in-gaap:ProfitBeforeTax": 197920.04,
+      "in-gaap:TaxExpense": 49480.01,
+      "in-gaap:ProfitAfterTax": 148440.03
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 448.64,
+      "in-gaap:OtherEquity": 691741.47,
+      "in-gaap:TotalEquity": 692190.11,
+      "in-gaap:TotalDebt": 272741.25,
+      "in-gaap:CashAndCashEquivalents": 79595.34,
+      "in-gaap:TotalCurrentAssets": 465772.77,
+      "in-gaap:TotalCurrentLiabilities": 279463.66,
+      "in-gaap:TotalAssets": 1244395.02,
+      "in-gaap:RetainedEarnings": 484533.08
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 188800.49,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 43963.5,
+      "in-gaap:FreeCashFlow": 144836.99
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 66.75,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2243200000,
+      "in-gaap:MarketPriceAtFiling": 5576.0,
+      "in-gaap:EarningsPerShareBasic": 661.73,
+      "in-gaap:EarningsPerShareDiluted": 661.73,
+      "in-gaap:TrailingTwelveMonthsEPS": 2646.92,
+      "in-gaap:ForwardEPSEstimate": 3043.96,
+      "in-gaap:BookValuePerShare": 3085.73,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.1,
+      "in-gaap:ForwardPE": 1.8,
+      "in-gaap:PriceToBook": 1.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.6
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000182",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GLAND",
+  "company_details": {
+    "symbol": "GLAND",
+    "company_name": "Gland Pharma Ltd.",
+    "isin": "INE068V01023",
+    "cin": "L29100MH1977PLC100182"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-17T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "260421905T2C334VPK",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 590425.96,
+      "in-gaap:OtherIncome": 17712.78,
+      "in-gaap:TotalIncome": 608138.74,
+      "in-gaap:OperatingExpenses": 434901.38,
+      "in-gaap:EBITDA": 155524.58,
+      "in-gaap:DepreciationAndAmortisation": 24883.93,
+      "in-gaap:EBIT": 130640.65,
+      "in-gaap:FinanceCosts": 13523.88,
+      "in-gaap:ProfitBeforeTax": 117116.77,
+      "in-gaap:TaxExpense": 29279.19,
+      "in-gaap:ProfitAfterTax": 87837.58
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 421.18,
+      "in-gaap:OtherEquity": 655651.52,
+      "in-gaap:TotalEquity": 656072.7,
+      "in-gaap:TotalDebt": 170292.05,
+      "in-gaap:CashAndCashEquivalents": 131399.89,
+      "in-gaap:TotalCurrentAssets": 295212.98,
+      "in-gaap:TotalCurrentLiabilities": 177127.79,
+      "in-gaap:TotalAssets": 1003492.54,
+      "in-gaap:RetainedEarnings": 459250.89
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 116643.43,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 40133.62,
+      "in-gaap:FreeCashFlow": 76509.81
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 57.91,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2105900000,
+      "in-gaap:MarketPriceAtFiling": 2826.8,
+      "in-gaap:EarningsPerShareBasic": 417.1,
+      "in-gaap:EarningsPerShareDiluted": 417.1,
+      "in-gaap:TrailingTwelveMonthsEPS": 1668.4,
+      "in-gaap:ForwardEPSEstimate": 1918.66,
+      "in-gaap:BookValuePerShare": 3115.4,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.7,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.0
+    }
+  }
+}

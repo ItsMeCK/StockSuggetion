@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000197",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_FLUOROCHEM",
+  "company_details": {
+    "symbol": "FLUOROCHEM",
+    "company_name": "Gujarat Fluorochemicals Ltd.",
+    "isin": "INE09N301011",
+    "cin": "L29100MH1992PLC100197"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-17T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812M826G6IQQU",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 720781.4,
+      "in-gaap:OtherIncome": 21623.44,
+      "in-gaap:TotalIncome": 742404.84,
+      "in-gaap:OperatingExpenses": 518742.6,
+      "in-gaap:EBITDA": 202038.8,
+      "in-gaap:DepreciationAndAmortisation": 32326.21,
+      "in-gaap:EBIT": 169712.59,
+      "in-gaap:FinanceCosts": 8383.35,
+      "in-gaap:ProfitBeforeTax": 161329.24,
+      "in-gaap:TaxExpense": 40332.31,
+      "in-gaap:ProfitAfterTax": 120996.93
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 398.96,
+      "in-gaap:OtherEquity": 940354.77,
+      "in-gaap:TotalEquity": 940753.73,
+      "in-gaap:TotalDebt": 74390.78,
+      "in-gaap:CashAndCashEquivalents": 60952.59,
+      "in-gaap:TotalCurrentAssets": 360390.7,
+      "in-gaap:TotalCurrentLiabilities": 216234.42,
+      "in-gaap:TotalAssets": 1231378.93,
+      "in-gaap:RetainedEarnings": 658527.61
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 185875.7,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 69066.95,
+      "in-gaap:FreeCashFlow": 116808.75
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 68.11,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1994800000,
+      "in-gaap:MarketPriceAtFiling": 4236.1,
+      "in-gaap:EarningsPerShareBasic": 606.56,
+      "in-gaap:EarningsPerShareDiluted": 606.56,
+      "in-gaap:TrailingTwelveMonthsEPS": 2426.24,
+      "in-gaap:ForwardEPSEstimate": 2790.18,
+      "in-gaap:BookValuePerShare": 4716.03,
+      "in-gaap:EVToEBITDA": 1.1,
+      "in-gaap:TrailingPE": 1.7,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.6
+    }
+  }
+}

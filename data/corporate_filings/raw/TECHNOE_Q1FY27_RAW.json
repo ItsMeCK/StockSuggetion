@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000455",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TECHNOE",
+  "company_details": {
+    "symbol": "TECHNOE",
+    "company_name": "Techno Electric & Engineering Company Ltd.",
+    "isin": "INE285K01026",
+    "cin": "L29100MH1980PLC100455"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317JGTHW3KLNG",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 169924.57,
+      "in-gaap:OtherIncome": 5097.74,
+      "in-gaap:TotalIncome": 175022.31,
+      "in-gaap:OperatingExpenses": 127414.4,
+      "in-gaap:EBITDA": 42510.17,
+      "in-gaap:DepreciationAndAmortisation": 6801.63,
+      "in-gaap:EBIT": 35708.54,
+      "in-gaap:FinanceCosts": 4671.45,
+      "in-gaap:ProfitBeforeTax": 31037.09,
+      "in-gaap:TaxExpense": 7759.27,
+      "in-gaap:ProfitAfterTax": 23277.82
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 248.12,
+      "in-gaap:OtherEquity": 190958.3,
+      "in-gaap:TotalEquity": 191206.42,
+      "in-gaap:TotalDebt": 19304.35,
+      "in-gaap:CashAndCashEquivalents": 34737.12,
+      "in-gaap:TotalCurrentAssets": 84962.29,
+      "in-gaap:TotalCurrentLiabilities": 50977.37,
+      "in-gaap:TotalAssets": 261488.14,
+      "in-gaap:RetainedEarnings": 133844.49
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 31882.63,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 11057.57,
+      "in-gaap:FreeCashFlow": 20825.06
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 44.69,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1240600000,
+      "in-gaap:MarketPriceAtFiling": 824.6,
+      "in-gaap:EarningsPerShareBasic": 187.63,
+      "in-gaap:EarningsPerShareDiluted": 187.63,
+      "in-gaap:TrailingTwelveMonthsEPS": 750.52,
+      "in-gaap:ForwardEPSEstimate": 863.1,
+      "in-gaap:BookValuePerShare": 1541.24,
+      "in-gaap:EVToEBITDA": 0.5,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.5
+    }
+  }
+}

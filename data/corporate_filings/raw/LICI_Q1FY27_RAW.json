@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000306",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_LICI",
+  "company_details": {
+    "symbol": "LICI",
+    "company_name": "Life Insurance Corporation of India",
+    "isin": "INE0J1Y01017",
+    "cin": "L65191MH2006PLC100306"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "260424234XNOT3XMC6",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 2701.94,
+      "in-gaap:OtherIncome": 945.68,
+      "in-gaap:OperatingExpenses": 1532.0,
+      "in-gaap:OperatingProfit": 2115.62,
+      "in-gaap:ProvisionsAndContingencies": 411.19,
+      "in-gaap:ProfitBeforeTax": 1704.43,
+      "in-gaap:TaxExpense": 426.11,
+      "in-gaap:ProfitAfterTax": 1278.32
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 214.0,
+      "in-gaap:ReservesAndSurplus": 29532.09,
+      "in-gaap:TotalEquity": 29746.09,
+      "in-gaap:TotalDeposits": 198307.28,
+      "in-gaap:CasaDeposits": 87255.2,
+      "in-gaap:TotalAdvances": 164476.06,
+      "in-gaap:TotalAssets": 247884.1
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 4901.39,
+      "in-gaap:NetNPA": 1463.84,
+      "in-gaap:CapitalAdequacyRatioCRAR": 20.8,
+      "in-gaap:Tier1CapitalRatio": 18.8
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 43.47,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1070000000,
+      "in-gaap:MarketPriceAtFiling": 381.5,
+      "in-gaap:EarningsPerShareBasic": 11.95,
+      "in-gaap:EarningsPerShareDiluted": 11.95,
+      "in-gaap:TrailingTwelveMonthsEPS": 47.8,
+      "in-gaap:ForwardEPSEstimate": 54.97,
+      "in-gaap:BookValuePerShare": 278.0,
+      "in-gaap:TrailingPE": 8.0,
+      "in-gaap:ForwardPE": 6.8,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.4
+    }
+  }
+}

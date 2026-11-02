@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000175",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GVT&D",
+  "company_details": {
+    "symbol": "GVT&D",
+    "company_name": "GE Vernova T&D India Ltd.",
+    "isin": "INE200A01026",
+    "cin": "L29100MH2015PLC100175"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812KXGF5QYH0V",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 521217.32,
+      "in-gaap:OtherIncome": 15636.52,
+      "in-gaap:TotalIncome": 536853.84,
+      "in-gaap:OperatingExpenses": 407683.26,
+      "in-gaap:EBITDA": 113534.06,
+      "in-gaap:DepreciationAndAmortisation": 18165.45,
+      "in-gaap:EBIT": 95368.61,
+      "in-gaap:FinanceCosts": 10047.26,
+      "in-gaap:ProfitBeforeTax": 85321.35,
+      "in-gaap:TaxExpense": 21330.34,
+      "in-gaap:ProfitAfterTax": 63991.01
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 236.76,
+      "in-gaap:OtherEquity": 691839.3,
+      "in-gaap:TotalEquity": 692076.06,
+      "in-gaap:TotalDebt": 83447.22,
+      "in-gaap:CashAndCashEquivalents": 96199.97,
+      "in-gaap:TotalCurrentAssets": 260608.66,
+      "in-gaap:TotalCurrentLiabilities": 156365.2,
+      "in-gaap:TotalAssets": 931888.48,
+      "in-gaap:RetainedEarnings": 484453.24
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 103315.99,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 38603.16,
+      "in-gaap:FreeCashFlow": 64712.83
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 50.59,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1183800000,
+      "in-gaap:MarketPriceAtFiling": 3700.0,
+      "in-gaap:EarningsPerShareBasic": 540.56,
+      "in-gaap:EarningsPerShareDiluted": 540.56,
+      "in-gaap:TrailingTwelveMonthsEPS": 2162.24,
+      "in-gaap:ForwardEPSEstimate": 2486.58,
+      "in-gaap:BookValuePerShare": 5846.22,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.7,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.4
+    }
+  }
+}

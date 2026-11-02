@@ -1,0 +1,82 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1045201",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TCS",
+  "company_details": {
+    "symbol": "TCS",
+    "company_name": "Tata Consultancy Services Limited",
+    "isin": "INE467B01029",
+    "cin": "L22210MH1995PLC084781"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-11T17:45:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R Kasat",
+    "membership_number": "105317",
+    "udin": "26105317BKAGXW5921",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 72275.0,
+      "in-gaap:OtherIncome": 1420.0,
+      "in-gaap:TotalIncome": 73695.0,
+      "in-gaap:OperatingExpenses": 53509.0,
+      "in-gaap:EBITDA": 18766.0,
+      "in-gaap:DepreciationAndAmortisation": 1420.0,
+      "in-gaap:EBIT": 17346.0,
+      "in-gaap:FinanceCosts": 210.0,
+      "in-gaap:ProfitBeforeTax": 18556.0,
+      "in-gaap:TaxExpense": 5207.0,
+      "in-gaap:ProfitAfterTax": 13349.0
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 361.81,
+      "in-gaap:OtherEquity": 112000.0,
+      "in-gaap:TotalEquity": 112361.81,
+      "in-gaap:TotalDebt": 0.0,
+      "in-gaap:CashAndCashEquivalents": 52400.0,
+      "in-gaap:TotalCurrentAssets": 105000.0,
+      "in-gaap:TotalCurrentLiabilities": 34000.0,
+      "in-gaap:TotalAssets": 165000.0,
+      "in-gaap:RetainedEarnings": 108000.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 12100.0,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 750.0,
+      "in-gaap:FreeCashFlow": 11350.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 71.77,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false,
+      "in-gaap:TradeReceivablesPriorPeriod": 14800.0,
+      "in-gaap:TradeReceivablesCurrentPeriod": 15200.0,
+      "in-gaap:GrossMarginPriorPeriodPercentage": 40.5,
+      "in-gaap:GrossMarginCurrentPeriodPercentage": 41.2,
+      "in-gaap:RevenuePriorPeriod": 63437.0,
+      "in-gaap:PriorPeriodLeverage": 0.0
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 3618087518,
+      "in-gaap:MarketPriceAtFiling": 3920.0,
+      "in-gaap:EarningsPerShareBasic": 36.89,
+      "in-gaap:EarningsPerShareDiluted": 36.89,
+      "in-gaap:TrailingTwelveMonthsEPS": 145.0,
+      "in-gaap:ForwardEPSEstimate": 166.0,
+      "in-gaap:BookValuePerShare": 310.5,
+      "in-gaap:EVToEBITDA": 18.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 12.0
+    }
+  }
+}

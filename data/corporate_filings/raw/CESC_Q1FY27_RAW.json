@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000096",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CESC",
+  "company_details": {
+    "symbol": "CESC",
+    "company_name": "CESC Ltd.",
+    "isin": "INE486A01021",
+    "cin": "L29100MH1981PLC100096"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317D423UHHSG6",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 2036.46,
+      "in-gaap:OtherIncome": 61.09,
+      "in-gaap:TotalIncome": 2097.55,
+      "in-gaap:OperatingExpenses": 1431.08,
+      "in-gaap:EBITDA": 605.38,
+      "in-gaap:DepreciationAndAmortisation": 96.86,
+      "in-gaap:EBIT": 508.52,
+      "in-gaap:FinanceCosts": 39.06,
+      "in-gaap:ProfitBeforeTax": 469.46,
+      "in-gaap:TaxExpense": 117.36,
+      "in-gaap:ProfitAfterTax": 352.09
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 72.04,
+      "in-gaap:OtherEquity": 1360.66,
+      "in-gaap:TotalEquity": 1432.7,
+      "in-gaap:TotalDebt": 314.25,
+      "in-gaap:CashAndCashEquivalents": 330.11,
+      "in-gaap:TotalCurrentAssets": 1018.23,
+      "in-gaap:TotalCurrentLiabilities": 610.94,
+      "in-gaap:TotalAssets": 2357.89,
+      "in-gaap:RetainedEarnings": 1002.89
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 478.25,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 172.58,
+      "in-gaap:FreeCashFlow": 305.67
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 64.56,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 360200000,
+      "in-gaap:MarketPriceAtFiling": 124.79,
+      "in-gaap:EarningsPerShareBasic": 9.77,
+      "in-gaap:EarningsPerShareDiluted": 9.77,
+      "in-gaap:TrailingTwelveMonthsEPS": 39.08,
+      "in-gaap:ForwardEPSEstimate": 44.94,
+      "in-gaap:BookValuePerShare": 39.78,
+      "in-gaap:EVToEBITDA": 1.8,
+      "in-gaap:TrailingPE": 3.2,
+      "in-gaap:ForwardPE": 2.7,
+      "in-gaap:PriceToBook": 3.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.1
+    }
+  }
+}

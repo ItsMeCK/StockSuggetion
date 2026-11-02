@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000478",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_UNIONBANK",
+  "company_details": {
+    "symbol": "UNIONBANK",
+    "company_name": "Union Bank of India",
+    "isin": "INE692A01016",
+    "cin": "L65191MH2018PLC100478"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "261178127QK8NUTI0W",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 419.98,
+      "in-gaap:OtherIncome": 146.99,
+      "in-gaap:OperatingExpenses": 238.13,
+      "in-gaap:OperatingProfit": 328.84,
+      "in-gaap:ProvisionsAndContingencies": 59.73,
+      "in-gaap:ProfitBeforeTax": 269.11,
+      "in-gaap:TaxExpense": 67.28,
+      "in-gaap:ProfitAfterTax": 201.83
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 78.04,
+      "in-gaap:ReservesAndSurplus": 4610.06,
+      "in-gaap:TotalEquity": 4688.1,
+      "in-gaap:TotalDeposits": 31253.98,
+      "in-gaap:CasaDeposits": 12220.31,
+      "in-gaap:TotalAdvances": 23893.67,
+      "in-gaap:TotalAssets": 39067.47
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 485.04,
+      "in-gaap:NetNPA": 145.75,
+      "in-gaap:CapitalAdequacyRatioCRAR": 17.9,
+      "in-gaap:Tier1CapitalRatio": 15.9
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 0.76,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 390200000,
+      "in-gaap:MarketPriceAtFiling": 178.9,
+      "in-gaap:EarningsPerShareBasic": 5.17,
+      "in-gaap:EarningsPerShareDiluted": 5.17,
+      "in-gaap:TrailingTwelveMonthsEPS": 20.68,
+      "in-gaap:ForwardEPSEstimate": 23.78,
+      "in-gaap:BookValuePerShare": 120.15,
+      "in-gaap:TrailingPE": 8.7,
+      "in-gaap:ForwardPE": 7.4,
+      "in-gaap:PriceToBook": 1.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 13.9
+    }
+  }
+}

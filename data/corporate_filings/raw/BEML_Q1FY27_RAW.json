@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000057",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BEML",
+  "company_details": {
+    "symbol": "BEML",
+    "company_name": "BEML Ltd.",
+    "isin": "INE258A01024",
+    "cin": "L29100MH1987PLC100057"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190BE8WHSUZ9G",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 39100.7,
+      "in-gaap:OtherIncome": 1173.02,
+      "in-gaap:TotalIncome": 40273.72,
+      "in-gaap:OperatingExpenses": 30546.41,
+      "in-gaap:EBITDA": 8554.29,
+      "in-gaap:DepreciationAndAmortisation": 1368.69,
+      "in-gaap:EBIT": 7185.6,
+      "in-gaap:FinanceCosts": 417.28,
+      "in-gaap:ProfitBeforeTax": 6768.32,
+      "in-gaap:TaxExpense": 1692.08,
+      "in-gaap:ProfitAfterTax": 5076.24
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 41.78,
+      "in-gaap:OtherEquity": 48445.88,
+      "in-gaap:TotalEquity": 48487.66,
+      "in-gaap:TotalDebt": 9015.02,
+      "in-gaap:CashAndCashEquivalents": 5900.21,
+      "in-gaap:TotalCurrentAssets": 19550.35,
+      "in-gaap:TotalCurrentLiabilities": 11730.21,
+      "in-gaap:TotalAssets": 69232.89,
+      "in-gaap:RetainedEarnings": 33941.36
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 7784.4,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2799.81,
+      "in-gaap:FreeCashFlow": 4984.59
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 38.5,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 208900000,
+      "in-gaap:MarketPriceAtFiling": 1851.3,
+      "in-gaap:EarningsPerShareBasic": 243.0,
+      "in-gaap:EarningsPerShareDiluted": 243.0,
+      "in-gaap:TrailingTwelveMonthsEPS": 972.0,
+      "in-gaap:ForwardEPSEstimate": 1117.8,
+      "in-gaap:BookValuePerShare": 2321.09,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 1.9,
+      "in-gaap:ForwardPE": 1.6,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.2
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000178",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GALLANTT",
+  "company_details": {
+    "symbol": "GALLANTT",
+    "company_name": "Gallantt Ispat Ltd.",
+    "isin": "INE297H01019",
+    "cin": "L29100MH2018PLC100178"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987KAMZLGH32I",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 18256.9,
+      "in-gaap:OtherIncome": 547.71,
+      "in-gaap:TotalIncome": 18804.61,
+      "in-gaap:OperatingExpenses": 13900.81,
+      "in-gaap:EBITDA": 4356.09,
+      "in-gaap:DepreciationAndAmortisation": 696.97,
+      "in-gaap:EBIT": 3659.12,
+      "in-gaap:FinanceCosts": 141.89,
+      "in-gaap:ProfitBeforeTax": 3517.23,
+      "in-gaap:TaxExpense": 879.31,
+      "in-gaap:ProfitAfterTax": 2637.92
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 58.44,
+      "in-gaap:OtherEquity": 17482.47,
+      "in-gaap:TotalEquity": 17540.91,
+      "in-gaap:TotalDebt": 3180.52,
+      "in-gaap:CashAndCashEquivalents": 2159.91,
+      "in-gaap:TotalCurrentAssets": 9128.45,
+      "in-gaap:TotalCurrentLiabilities": 5477.07,
+      "in-gaap:TotalAssets": 26198.5,
+      "in-gaap:RetainedEarnings": 12278.64
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 3833.36,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 880.1,
+      "in-gaap:FreeCashFlow": 2953.26
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 65.07,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 292200000,
+      "in-gaap:MarketPriceAtFiling": 541.85,
+      "in-gaap:EarningsPerShareBasic": 90.28,
+      "in-gaap:EarningsPerShareDiluted": 90.28,
+      "in-gaap:TrailingTwelveMonthsEPS": 361.12,
+      "in-gaap:ForwardEPSEstimate": 415.29,
+      "in-gaap:BookValuePerShare": 600.3,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.7
+    }
+  }
+}

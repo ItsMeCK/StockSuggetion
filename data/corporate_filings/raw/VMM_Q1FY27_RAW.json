@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000487",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_VMM",
+  "company_details": {
+    "symbol": "VMM",
+    "company_name": "Vishal Mega Mart Ltd.",
+    "isin": "INE01EA01019",
+    "cin": "L29100MH2012PLC100487"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987IMHNZCJ9BQ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 4196.18,
+      "in-gaap:OtherIncome": 125.89,
+      "in-gaap:TotalIncome": 4322.07,
+      "in-gaap:OperatingExpenses": 2902.08,
+      "in-gaap:EBITDA": 1294.1,
+      "in-gaap:DepreciationAndAmortisation": 207.06,
+      "in-gaap:EBIT": 1087.04,
+      "in-gaap:FinanceCosts": 57.77,
+      "in-gaap:ProfitBeforeTax": 1029.27,
+      "in-gaap:TaxExpense": 257.32,
+      "in-gaap:ProfitAfterTax": 771.95
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 179.18,
+      "in-gaap:OtherEquity": 3798.75,
+      "in-gaap:TotalEquity": 3977.93,
+      "in-gaap:TotalDebt": 944.23,
+      "in-gaap:CashAndCashEquivalents": 583.29,
+      "in-gaap:TotalCurrentAssets": 2098.09,
+      "in-gaap:TotalCurrentLiabilities": 1258.85,
+      "in-gaap:TotalAssets": 6181.01,
+      "in-gaap:RetainedEarnings": 2784.55
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1035.28,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 255.7,
+      "in-gaap:FreeCashFlow": 779.58
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 62.51,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 895900000,
+      "in-gaap:MarketPriceAtFiling": 87.35,
+      "in-gaap:EarningsPerShareBasic": 8.62,
+      "in-gaap:EarningsPerShareDiluted": 8.62,
+      "in-gaap:TrailingTwelveMonthsEPS": 34.48,
+      "in-gaap:ForwardEPSEstimate": 39.65,
+      "in-gaap:BookValuePerShare": 44.4,
+      "in-gaap:EVToEBITDA": 1.6,
+      "in-gaap:TrailingPE": 2.5,
+      "in-gaap:ForwardPE": 2.1,
+      "in-gaap:PriceToBook": 2.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.0
+    }
+  }
+}

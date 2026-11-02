@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000222",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HUDCO",
+  "company_details": {
+    "symbol": "HUDCO",
+    "company_name": "Housing & Urban Development Corporation Ltd.",
+    "isin": "INE031A01017",
+    "cin": "L29100MH2017PLC100222"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556AKZ1GBA3FK",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 13953.24,
+      "in-gaap:OtherIncome": 418.6,
+      "in-gaap:TotalIncome": 14371.84,
+      "in-gaap:OperatingExpenses": 11958.1,
+      "in-gaap:EBITDA": 1995.14,
+      "in-gaap:DepreciationAndAmortisation": 319.22,
+      "in-gaap:EBIT": 1675.92,
+      "in-gaap:FinanceCosts": 102.31,
+      "in-gaap:ProfitBeforeTax": 1573.61,
+      "in-gaap:TaxExpense": 393.4,
+      "in-gaap:ProfitAfterTax": 1180.21
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 250.38,
+      "in-gaap:OtherEquity": 13618.29,
+      "in-gaap:TotalEquity": 13868.67,
+      "in-gaap:TotalDebt": 2195.65,
+      "in-gaap:CashAndCashEquivalents": 3429.83,
+      "in-gaap:TotalCurrentAssets": 6976.62,
+      "in-gaap:TotalCurrentLiabilities": 4185.97,
+      "in-gaap:TotalAssets": 20250.29,
+      "in-gaap:RetainedEarnings": 9708.07
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1695.87,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 619.77,
+      "in-gaap:FreeCashFlow": 1076.1
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 36.18,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1251900000,
+      "in-gaap:MarketPriceAtFiling": 146.02,
+      "in-gaap:EarningsPerShareBasic": 9.43,
+      "in-gaap:EarningsPerShareDiluted": 9.43,
+      "in-gaap:TrailingTwelveMonthsEPS": 37.72,
+      "in-gaap:ForwardEPSEstimate": 43.38,
+      "in-gaap:BookValuePerShare": 110.78,
+      "in-gaap:EVToEBITDA": 2.1,
+      "in-gaap:TrailingPE": 3.9,
+      "in-gaap:ForwardPE": 3.3,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.4
+    }
+  }
+}

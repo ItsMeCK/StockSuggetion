@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000082",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BIKAJI",
+  "company_details": {
+    "symbol": "BIKAJI",
+    "company_name": "Bikaji Foods International Ltd.",
+    "isin": "INE00E101023",
+    "cin": "L29100MH2012PLC100082"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814TADAZ0WRX4",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 149031.45,
+      "in-gaap:OtherIncome": 4470.94,
+      "in-gaap:TotalIncome": 153502.39,
+      "in-gaap:OperatingExpenses": 126329.52,
+      "in-gaap:EBITDA": 22701.93,
+      "in-gaap:DepreciationAndAmortisation": 3632.31,
+      "in-gaap:EBIT": 19069.62,
+      "in-gaap:FinanceCosts": 1027.24,
+      "in-gaap:ProfitBeforeTax": 18042.38,
+      "in-gaap:TaxExpense": 4510.6,
+      "in-gaap:ProfitAfterTax": 13531.78
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 454.12,
+      "in-gaap:OtherEquity": 172762.31,
+      "in-gaap:TotalEquity": 173216.43,
+      "in-gaap:TotalDebt": 22564.02,
+      "in-gaap:CashAndCashEquivalents": 23666.29,
+      "in-gaap:TotalCurrentAssets": 74515.73,
+      "in-gaap:TotalCurrentLiabilities": 44709.44,
+      "in-gaap:TotalAssets": 240489.88,
+      "in-gaap:RetainedEarnings": 121251.5
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 21112.79,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 5026.29,
+      "in-gaap:FreeCashFlow": 16086.5
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 36.99,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2270600000,
+      "in-gaap:MarketPriceAtFiling": 462.75,
+      "in-gaap:EarningsPerShareBasic": 59.6,
+      "in-gaap:EarningsPerShareDiluted": 59.6,
+      "in-gaap:TrailingTwelveMonthsEPS": 238.4,
+      "in-gaap:ForwardEPSEstimate": 274.16,
+      "in-gaap:BookValuePerShare": 762.87,
+      "in-gaap:EVToEBITDA": 1.1,
+      "in-gaap:TrailingPE": 1.9,
+      "in-gaap:ForwardPE": 1.6,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.6
+    }
+  }
+}

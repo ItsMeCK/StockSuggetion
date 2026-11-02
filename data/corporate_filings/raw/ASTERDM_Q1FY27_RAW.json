@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000049",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ASTERDM",
+  "company_details": {
+    "symbol": "ASTERDM",
+    "company_name": "Aster DM Healthcare Ltd.",
+    "isin": "INE914M01019",
+    "cin": "L29100MH1979PLC100049"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812L0TJEX7TIE",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 130221.1,
+      "in-gaap:OtherIncome": 3906.63,
+      "in-gaap:TotalIncome": 134127.73,
+      "in-gaap:OperatingExpenses": 95118.86,
+      "in-gaap:EBITDA": 35102.24,
+      "in-gaap:DepreciationAndAmortisation": 5616.36,
+      "in-gaap:EBIT": 29485.88,
+      "in-gaap:FinanceCosts": 1117.91,
+      "in-gaap:ProfitBeforeTax": 28367.97,
+      "in-gaap:TaxExpense": 7091.99,
+      "in-gaap:ProfitAfterTax": 21275.98
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 271.0,
+      "in-gaap:OtherEquity": 92457.22,
+      "in-gaap:TotalEquity": 92728.22,
+      "in-gaap:TotalDebt": 15123.91,
+      "in-gaap:CashAndCashEquivalents": 11595.56,
+      "in-gaap:TotalCurrentAssets": 65110.55,
+      "in-gaap:TotalCurrentLiabilities": 39066.33,
+      "in-gaap:TotalAssets": 146918.46,
+      "in-gaap:RetainedEarnings": 64909.75
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 31943.04,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8204.54,
+      "in-gaap:FreeCashFlow": 23738.5
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 41.51,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1355000000,
+      "in-gaap:MarketPriceAtFiling": 644.75,
+      "in-gaap:EarningsPerShareBasic": 157.02,
+      "in-gaap:EarningsPerShareDiluted": 157.02,
+      "in-gaap:TrailingTwelveMonthsEPS": 628.08,
+      "in-gaap:ForwardEPSEstimate": 722.29,
+      "in-gaap:BookValuePerShare": 684.34,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.0,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.4
+    }
+  }
+}

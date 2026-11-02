@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000246",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_IRFC",
+  "company_details": {
+    "symbol": "IRFC",
+    "company_name": "Indian Railway Finance Corporation Ltd.",
+    "isin": "INE053F01010",
+    "cin": "L65191MH1986PLC100246"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826FQXCWQRW5J",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 142.94,
+      "in-gaap:OtherIncome": 50.03,
+      "in-gaap:OperatingExpenses": 81.05,
+      "in-gaap:OperatingProfit": 111.92,
+      "in-gaap:ProvisionsAndContingencies": 23.4,
+      "in-gaap:ProfitBeforeTax": 88.52,
+      "in-gaap:TaxExpense": 22.13,
+      "in-gaap:ProfitAfterTax": 66.39
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 77.94,
+      "in-gaap:ReservesAndSurplus": 1727.63,
+      "in-gaap:TotalEquity": 1805.57,
+      "in-gaap:TotalDeposits": 12037.14,
+      "in-gaap:CasaDeposits": 5043.56,
+      "in-gaap:TotalAdvances": 9358.88,
+      "in-gaap:TotalAssets": 15046.42
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 176.88,
+      "in-gaap:NetNPA": 53.35,
+      "in-gaap:CapitalAdequacyRatioCRAR": 17.0,
+      "in-gaap:Tier1CapitalRatio": 15.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 35.67,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 389700000,
+      "in-gaap:MarketPriceAtFiling": 74.45,
+      "in-gaap:EarningsPerShareBasic": 1.7,
+      "in-gaap:EarningsPerShareDiluted": 1.7,
+      "in-gaap:TrailingTwelveMonthsEPS": 6.8,
+      "in-gaap:ForwardEPSEstimate": 7.82,
+      "in-gaap:BookValuePerShare": 46.33,
+      "in-gaap:TrailingPE": 10.9,
+      "in-gaap:ForwardPE": 9.3,
+      "in-gaap:PriceToBook": 1.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.0
+    }
+  }
+}

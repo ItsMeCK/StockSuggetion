@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000329",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MCX",
+  "company_details": {
+    "symbol": "MCX",
+    "company_name": "Multi Commodity Exchange of India Ltd.",
+    "isin": "INE745G01043",
+    "cin": "L29100MH1989PLC100329"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814ZD5DXIX20U",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 970275.58,
+      "in-gaap:OtherIncome": 29108.27,
+      "in-gaap:TotalIncome": 999383.85,
+      "in-gaap:OperatingExpenses": 831740.15,
+      "in-gaap:EBITDA": 138535.43,
+      "in-gaap:DepreciationAndAmortisation": 22165.67,
+      "in-gaap:EBIT": 116369.76,
+      "in-gaap:FinanceCosts": 12259.77,
+      "in-gaap:ProfitBeforeTax": 104109.99,
+      "in-gaap:TaxExpense": 26027.5,
+      "in-gaap:ProfitAfterTax": 78082.49
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 414.0,
+      "in-gaap:OtherEquity": 1305158.06,
+      "in-gaap:TotalEquity": 1305572.06,
+      "in-gaap:TotalDebt": 66764.8,
+      "in-gaap:CashAndCashEquivalents": 197294.23,
+      "in-gaap:TotalCurrentAssets": 485137.79,
+      "in-gaap:TotalCurrentLiabilities": 291082.67,
+      "in-gaap:TotalAssets": 1663419.53,
+      "in-gaap:RetainedEarnings": 913900.44
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 105286.93,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 31227.75,
+      "in-gaap:FreeCashFlow": 74059.18
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 36.22,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2070000000,
+      "in-gaap:MarketPriceAtFiling": 3020.3,
+      "in-gaap:EarningsPerShareBasic": 377.21,
+      "in-gaap:EarningsPerShareDiluted": 377.21,
+      "in-gaap:TrailingTwelveMonthsEPS": 1508.84,
+      "in-gaap:ForwardEPSEstimate": 1735.17,
+      "in-gaap:BookValuePerShare": 6307.11,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 2.0,
+      "in-gaap:ForwardPE": 1.7,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.6
+    }
+  }
+}

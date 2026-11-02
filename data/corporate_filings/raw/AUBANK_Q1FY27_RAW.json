@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000007",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_AUBANK",
+  "company_details": {
+    "symbol": "AUBANK",
+    "company_name": "AU Small Finance Bank Ltd.",
+    "isin": "INE949L01017",
+    "cin": "L65191MH1987PLC100007"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423EHVO1LIO2L",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 816.39,
+      "in-gaap:OtherIncome": 285.74,
+      "in-gaap:OperatingExpenses": 462.89,
+      "in-gaap:OperatingProfit": 639.24,
+      "in-gaap:ProvisionsAndContingencies": 172.57,
+      "in-gaap:ProfitBeforeTax": 466.67,
+      "in-gaap:TaxExpense": 116.67,
+      "in-gaap:ProfitAfterTax": 350.0
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 37.72,
+      "in-gaap:ReservesAndSurplus": 11873.13,
+      "in-gaap:TotalEquity": 11910.85,
+      "in-gaap:TotalDeposits": 79405.68,
+      "in-gaap:CasaDeposits": 35017.9,
+      "in-gaap:TotalAdvances": 69027.36,
+      "in-gaap:TotalAssets": 99257.1
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 1925.86,
+      "in-gaap:NetNPA": 579.83,
+      "in-gaap:CapitalAdequacyRatioCRAR": 16.1,
+      "in-gaap:Tier1CapitalRatio": 14.1
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 39.26,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 188600000,
+      "in-gaap:MarketPriceAtFiling": 932.9,
+      "in-gaap:EarningsPerShareBasic": 18.56,
+      "in-gaap:EarningsPerShareDiluted": 18.56,
+      "in-gaap:TrailingTwelveMonthsEPS": 74.24,
+      "in-gaap:ForwardEPSEstimate": 85.38,
+      "in-gaap:BookValuePerShare": 631.54,
+      "in-gaap:TrailingPE": 12.6,
+      "in-gaap:ForwardPE": 10.7,
+      "in-gaap:PriceToBook": 1.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.8
+    }
+  }
+}

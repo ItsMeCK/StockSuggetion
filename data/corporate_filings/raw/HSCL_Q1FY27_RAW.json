@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000211",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HSCL",
+  "company_details": {
+    "symbol": "HSCL",
+    "company_name": "Himadri Speciality Chemical Ltd.",
+    "isin": "INE019C01026",
+    "cin": "L29100MH2006PLC100211"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812RB828QIAUK",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 167011.55,
+      "in-gaap:OtherIncome": 5010.35,
+      "in-gaap:TotalIncome": 172021.9,
+      "in-gaap:OperatingExpenses": 143670.22,
+      "in-gaap:EBITDA": 23341.33,
+      "in-gaap:DepreciationAndAmortisation": 3734.61,
+      "in-gaap:EBIT": 19606.72,
+      "in-gaap:FinanceCosts": 884.14,
+      "in-gaap:ProfitBeforeTax": 18722.58,
+      "in-gaap:TaxExpense": 4680.65,
+      "in-gaap:ProfitAfterTax": 14041.94
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 460.66,
+      "in-gaap:OtherEquity": 161874.63,
+      "in-gaap:TotalEquity": 162335.29,
+      "in-gaap:TotalDebt": 17247.62,
+      "in-gaap:CashAndCashEquivalents": 15672.95,
+      "in-gaap:TotalCurrentAssets": 83505.77,
+      "in-gaap:TotalCurrentLiabilities": 50103.46,
+      "in-gaap:TotalAssets": 229686.38,
+      "in-gaap:RetainedEarnings": 113634.7
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 20306.96,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 7266.04,
+      "in-gaap:FreeCashFlow": 13040.92
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 41.83,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2303300000,
+      "in-gaap:MarketPriceAtFiling": 492.0,
+      "in-gaap:EarningsPerShareBasic": 60.96,
+      "in-gaap:EarningsPerShareDiluted": 60.96,
+      "in-gaap:TrailingTwelveMonthsEPS": 243.84,
+      "in-gaap:ForwardEPSEstimate": 280.42,
+      "in-gaap:BookValuePerShare": 704.79,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 2.0,
+      "in-gaap:ForwardPE": 1.7,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.8
+    }
+  }
+}

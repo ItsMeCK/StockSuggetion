@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000121",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_COCHINSHIP",
+  "company_details": {
+    "symbol": "COCHINSHIP",
+    "company_name": "Cochin Shipyard Ltd.",
+    "isin": "INE704P01025",
+    "cin": "L29100MH2006PLC100121"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "261053176IRLJA3F2E",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 396421.97,
+      "in-gaap:OtherIncome": 11892.66,
+      "in-gaap:TotalIncome": 408314.63,
+      "in-gaap:OperatingExpenses": 308823.41,
+      "in-gaap:EBITDA": 87598.56,
+      "in-gaap:DepreciationAndAmortisation": 14015.77,
+      "in-gaap:EBIT": 73582.79,
+      "in-gaap:FinanceCosts": 7299.88,
+      "in-gaap:ProfitBeforeTax": 66282.91,
+      "in-gaap:TaxExpense": 16570.73,
+      "in-gaap:ProfitAfterTax": 49712.18
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 437.12,
+      "in-gaap:OtherEquity": 309136.65,
+      "in-gaap:TotalEquity": 309573.77,
+      "in-gaap:TotalDebt": 44626.83,
+      "in-gaap:CashAndCashEquivalents": 42669.21,
+      "in-gaap:TotalCurrentAssets": 198210.98,
+      "in-gaap:TotalCurrentLiabilities": 118926.59,
+      "in-gaap:TotalAssets": 473127.19,
+      "in-gaap:RetainedEarnings": 216701.64
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 83218.63,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 22348.72,
+      "in-gaap:FreeCashFlow": 60869.91
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 42.27,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2185600000,
+      "in-gaap:MarketPriceAtFiling": 1139.9,
+      "in-gaap:EarningsPerShareBasic": 227.45,
+      "in-gaap:EarningsPerShareDiluted": 227.45,
+      "in-gaap:TrailingTwelveMonthsEPS": 909.8,
+      "in-gaap:ForwardEPSEstimate": 1046.27,
+      "in-gaap:BookValuePerShare": 1416.42,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.4
+    }
+  }
+}

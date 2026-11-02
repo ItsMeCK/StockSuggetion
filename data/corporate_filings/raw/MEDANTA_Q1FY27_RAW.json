@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000185",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MEDANTA",
+  "company_details": {
+    "symbol": "MEDANTA",
+    "company_name": "Global Health Ltd.",
+    "isin": "INE474Q01031",
+    "cin": "L29100MH1980PLC100185"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987C9N3N325ZQ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 106892.0,
+      "in-gaap:OtherIncome": 3206.76,
+      "in-gaap:TotalIncome": 110098.76,
+      "in-gaap:OperatingExpenses": 86785.25,
+      "in-gaap:EBITDA": 20106.75,
+      "in-gaap:DepreciationAndAmortisation": 3217.08,
+      "in-gaap:EBIT": 16889.67,
+      "in-gaap:FinanceCosts": 733.82,
+      "in-gaap:ProfitBeforeTax": 16155.85,
+      "in-gaap:TaxExpense": 4038.96,
+      "in-gaap:ProfitAfterTax": 12116.89
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 203.48,
+      "in-gaap:OtherEquity": 108801.52,
+      "in-gaap:TotalEquity": 109005.0,
+      "in-gaap:TotalDebt": 2732.21,
+      "in-gaap:CashAndCashEquivalents": 19670.47,
+      "in-gaap:TotalCurrentAssets": 53446.0,
+      "in-gaap:TotalCurrentLiabilities": 32067.6,
+      "in-gaap:TotalAssets": 143804.81,
+      "in-gaap:RetainedEarnings": 76303.5
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 18699.28,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 5555.02,
+      "in-gaap:FreeCashFlow": 13144.26
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 69.12,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1017400000,
+      "in-gaap:MarketPriceAtFiling": 1185.0,
+      "in-gaap:EarningsPerShareBasic": 119.1,
+      "in-gaap:EarningsPerShareDiluted": 119.1,
+      "in-gaap:TrailingTwelveMonthsEPS": 476.4,
+      "in-gaap:ForwardEPSEstimate": 547.86,
+      "in-gaap:BookValuePerShare": 1071.41,
+      "in-gaap:EVToEBITDA": 1.3,
+      "in-gaap:TrailingPE": 2.5,
+      "in-gaap:ForwardPE": 2.1,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.0
+    }
+  }
+}

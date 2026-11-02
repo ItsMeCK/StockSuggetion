@@ -1,0 +1,82 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1051443",
+  "submission_regulation": "SEBI (Listing Obligations) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_RPOWER",
+  "company_details": {
+    "symbol": "RPOWER",
+    "company_name": "Reliance Power Limited",
+    "isin": "INE614G01033",
+    "cin": "L40101MH1995PLC084687"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-08-14T18:30:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Pathak H.D. & Associates",
+    "firm_registration_number": "107783W",
+    "signing_partner": "CA. Jignesh Shah",
+    "membership_number": "045612",
+    "udin": "26045612BKAPRP1199",
+    "opinion_type": "Adverse / Material CARO Disclosures"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 1950.0,
+      "in-gaap:OtherIncome": 45.0,
+      "in-gaap:TotalIncome": 1995.0,
+      "in-gaap:OperatingExpenses": 1620.0,
+      "in-gaap:EBITDA": 375.0,
+      "in-gaap:DepreciationAndAmortisation": 210.0,
+      "in-gaap:EBIT": 165.0,
+      "in-gaap:FinanceCosts": 450.0,
+      "in-gaap:ProfitBeforeTax": -285.0,
+      "in-gaap:TaxExpense": 0.0,
+      "in-gaap:ProfitAfterTax": -285.0
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 4016.0,
+      "in-gaap:OtherEquity": 8200.0,
+      "in-gaap:TotalEquity": 12216.0,
+      "in-gaap:TotalDebt": 18500.0,
+      "in-gaap:CashAndCashEquivalents": 380.0,
+      "in-gaap:TotalCurrentAssets": 3200.0,
+      "in-gaap:TotalCurrentLiabilities": 9400.0,
+      "in-gaap:TotalAssets": 32000.0,
+      "in-gaap:RetainedEarnings": 6500.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 220.0,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 90.0,
+      "in-gaap:FreeCashFlow": 130.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 24.5,
+      "in-gaap:PromoterPledgedSharesPercentage": 28.5,
+      "in-gaap:PledgeChangeQoQPercentage": 6.2,
+      "in-gaap:UnderAsmGsmSurveillance": true,
+      "in-gaap:AuditorResignation": true,
+      "in-gaap:CaroAdverseQualifications": true,
+      "in-gaap:TradeReceivablesPriorPeriod": 1400.0,
+      "in-gaap:TradeReceivablesCurrentPeriod": 1650.0,
+      "in-gaap:GrossMarginPriorPeriodPercentage": 19.5,
+      "in-gaap:GrossMarginCurrentPeriodPercentage": 18.2,
+      "in-gaap:RevenuePriorPeriod": 1880.0,
+      "in-gaap:PriorPeriodLeverage": 1.6
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 4016000000,
+      "in-gaap:MarketPriceAtFiling": 32.5,
+      "in-gaap:EarningsPerShareBasic": -0.07,
+      "in-gaap:EarningsPerShareDiluted": -0.07,
+      "in-gaap:TrailingTwelveMonthsEPS": -0.45,
+      "in-gaap:ForwardEPSEstimate": -0.2,
+      "in-gaap:BookValuePerShare": 30.4,
+      "in-gaap:EVToEBITDA": 22.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 2.0
+    }
+  }
+}

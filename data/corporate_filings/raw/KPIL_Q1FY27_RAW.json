@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000285",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_KPIL",
+  "company_details": {
+    "symbol": "KPIL",
+    "company_name": "Kalpataru Projects International Ltd.",
+    "isin": "INE220B01022",
+    "cin": "L29100MH1990PLC100285"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987J4Z6QPNM6M",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 53322.3,
+      "in-gaap:OtherIncome": 1599.67,
+      "in-gaap:TotalIncome": 54921.97,
+      "in-gaap:OperatingExpenses": 37791.03,
+      "in-gaap:EBITDA": 15531.27,
+      "in-gaap:DepreciationAndAmortisation": 2485.0,
+      "in-gaap:EBIT": 13046.27,
+      "in-gaap:FinanceCosts": 830.55,
+      "in-gaap:ProfitBeforeTax": 12215.72,
+      "in-gaap:TaxExpense": 3053.93,
+      "in-gaap:ProfitAfterTax": 9161.79
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 131.76,
+      "in-gaap:OtherEquity": 53228.07,
+      "in-gaap:TotalEquity": 53359.83,
+      "in-gaap:TotalDebt": 18238.35,
+      "in-gaap:CashAndCashEquivalents": 5855.8,
+      "in-gaap:TotalCurrentAssets": 26661.15,
+      "in-gaap:TotalCurrentLiabilities": 15996.69,
+      "in-gaap:TotalAssets": 87594.87,
+      "in-gaap:RetainedEarnings": 37351.88
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 13512.2,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3887.64,
+      "in-gaap:FreeCashFlow": 9624.56
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 46.31,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 658800000,
+      "in-gaap:MarketPriceAtFiling": 1291.6,
+      "in-gaap:EarningsPerShareBasic": 139.07,
+      "in-gaap:EarningsPerShareDiluted": 139.07,
+      "in-gaap:TrailingTwelveMonthsEPS": 556.28,
+      "in-gaap:ForwardEPSEstimate": 639.72,
+      "in-gaap:BookValuePerShare": 809.95,
+      "in-gaap:EVToEBITDA": 1.6,
+      "in-gaap:TrailingPE": 2.3,
+      "in-gaap:ForwardPE": 2.0,
+      "in-gaap:PriceToBook": 1.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.0
+    }
+  }
+}

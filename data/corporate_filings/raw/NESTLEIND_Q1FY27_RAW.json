@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000344",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_NESTLEIND",
+  "company_details": {
+    "symbol": "NESTLEIND",
+    "company_name": "Nestle India Ltd.",
+    "isin": "INE239A01024",
+    "cin": "L29100MH2004PLC100344"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556AQE2VRDY1E",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 215563.78,
+      "in-gaap:OtherIncome": 6466.91,
+      "in-gaap:TotalIncome": 222030.69,
+      "in-gaap:OperatingExpenses": 186921.57,
+      "in-gaap:EBITDA": 28642.21,
+      "in-gaap:DepreciationAndAmortisation": 4582.75,
+      "in-gaap:EBIT": 24059.46,
+      "in-gaap:FinanceCosts": 1049.17,
+      "in-gaap:ProfitBeforeTax": 23010.29,
+      "in-gaap:TaxExpense": 5752.57,
+      "in-gaap:ProfitAfterTax": 17257.72
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 371.8,
+      "in-gaap:OtherEquity": 161795.35,
+      "in-gaap:TotalEquity": 162167.15,
+      "in-gaap:TotalDebt": 3773.79,
+      "in-gaap:CashAndCashEquivalents": 46205.75,
+      "in-gaap:TotalCurrentAssets": 107781.89,
+      "in-gaap:TotalCurrentLiabilities": 64669.13,
+      "in-gaap:TotalAssets": 230610.07,
+      "in-gaap:RetainedEarnings": 113517.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 25205.14,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6496.02,
+      "in-gaap:FreeCashFlow": 18709.12
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 57.52,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1859000000,
+      "in-gaap:MarketPriceAtFiling": 1175.0,
+      "in-gaap:EarningsPerShareBasic": 92.83,
+      "in-gaap:EarningsPerShareDiluted": 92.83,
+      "in-gaap:TrailingTwelveMonthsEPS": 371.32,
+      "in-gaap:ForwardEPSEstimate": 427.02,
+      "in-gaap:BookValuePerShare": 872.34,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 3.2,
+      "in-gaap:ForwardPE": 2.7,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.0
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000382",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_PFC",
+  "company_details": {
+    "symbol": "PFC",
+    "company_name": "Power Finance Corporation Ltd.",
+    "isin": "INE134E01011",
+    "cin": "L65191MH2002PLC100382"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826IUIU18K00O",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 781.33,
+      "in-gaap:OtherIncome": 273.47,
+      "in-gaap:OperatingExpenses": 443.02,
+      "in-gaap:OperatingProfit": 611.78,
+      "in-gaap:ProvisionsAndContingencies": 150.7,
+      "in-gaap:ProfitBeforeTax": 461.08,
+      "in-gaap:TaxExpense": 115.27,
+      "in-gaap:ProfitAfterTax": 345.81
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 61.16,
+      "in-gaap:ReservesAndSurplus": 10213.88,
+      "in-gaap:TotalEquity": 10275.04,
+      "in-gaap:TotalDeposits": 68500.24,
+      "in-gaap:CasaDeposits": 23975.08,
+      "in-gaap:TotalAdvances": 60280.21,
+      "in-gaap:TotalAssets": 85625.3
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 1627.57,
+      "in-gaap:NetNPA": 512.38,
+      "in-gaap:CapitalAdequacyRatioCRAR": 25.5,
+      "in-gaap:Tier1CapitalRatio": 23.5
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 46.06,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 305800000,
+      "in-gaap:MarketPriceAtFiling": 316.0,
+      "in-gaap:EarningsPerShareBasic": 11.31,
+      "in-gaap:EarningsPerShareDiluted": 11.31,
+      "in-gaap:TrailingTwelveMonthsEPS": 45.24,
+      "in-gaap:ForwardEPSEstimate": 52.03,
+      "in-gaap:BookValuePerShare": 336.01,
+      "in-gaap:TrailingPE": 7.0,
+      "in-gaap:ForwardPE": 6.0,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.2
+    }
+  }
+}

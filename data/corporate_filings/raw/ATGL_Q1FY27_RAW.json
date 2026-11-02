@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000020",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ATGL",
+  "company_details": {
+    "symbol": "ATGL",
+    "company_name": "Adani Total Gas Ltd.",
+    "isin": "INE399L01023",
+    "cin": "L29100MH1995PLC100020"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826TZJQI8ZABL",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 113535.13,
+      "in-gaap:OtherIncome": 3406.05,
+      "in-gaap:TotalIncome": 116941.18,
+      "in-gaap:OperatingExpenses": 77503.61,
+      "in-gaap:EBITDA": 36031.52,
+      "in-gaap:DepreciationAndAmortisation": 5765.04,
+      "in-gaap:EBIT": 30266.48,
+      "in-gaap:FinanceCosts": 2251.97,
+      "in-gaap:ProfitBeforeTax": 28014.51,
+      "in-gaap:TaxExpense": 7003.63,
+      "in-gaap:ProfitAfterTax": 21010.88
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 240.84,
+      "in-gaap:OtherEquity": 163016.54,
+      "in-gaap:TotalEquity": 163257.38,
+      "in-gaap:TotalDebt": 15275.53,
+      "in-gaap:CashAndCashEquivalents": 9993.79,
+      "in-gaap:TotalCurrentAssets": 56767.57,
+      "in-gaap:TotalCurrentLiabilities": 34060.54,
+      "in-gaap:TotalAssets": 212593.45,
+      "in-gaap:RetainedEarnings": 114280.17
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 29185.53,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 10543.13,
+      "in-gaap:FreeCashFlow": 18642.4
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.32,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1204200000,
+      "in-gaap:MarketPriceAtFiling": 529.5,
+      "in-gaap:EarningsPerShareBasic": 174.48,
+      "in-gaap:EarningsPerShareDiluted": 174.48,
+      "in-gaap:TrailingTwelveMonthsEPS": 697.92,
+      "in-gaap:ForwardEPSEstimate": 802.61,
+      "in-gaap:BookValuePerShare": 1355.73,
+      "in-gaap:EVToEBITDA": 0.5,
+      "in-gaap:TrailingPE": 0.8,
+      "in-gaap:ForwardPE": 0.7,
+      "in-gaap:PriceToBook": 0.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.9
+    }
+  }
+}

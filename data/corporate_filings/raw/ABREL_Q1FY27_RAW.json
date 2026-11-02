@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000024",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ABREL",
+  "company_details": {
+    "symbol": "ABREL",
+    "company_name": "Aditya Birla Real Estate Ltd.",
+    "isin": "INE055A01016",
+    "cin": "L29100MH1999PLC100024"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-24T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "260398264SPJ3HAACG",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 131801.21,
+      "in-gaap:OtherIncome": 3954.04,
+      "in-gaap:TotalIncome": 135755.25,
+      "in-gaap:OperatingExpenses": 97183.21,
+      "in-gaap:EBITDA": 34618.0,
+      "in-gaap:DepreciationAndAmortisation": 5538.88,
+      "in-gaap:EBIT": 29079.12,
+      "in-gaap:FinanceCosts": 2072.93,
+      "in-gaap:ProfitBeforeTax": 27006.19,
+      "in-gaap:TaxExpense": 6751.55,
+      "in-gaap:ProfitAfterTax": 20254.64
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 263.92,
+      "in-gaap:OtherEquity": 115527.71,
+      "in-gaap:TotalEquity": 115791.63,
+      "in-gaap:TotalDebt": 24768.68,
+      "in-gaap:CashAndCashEquivalents": 12542.74,
+      "in-gaap:TotalCurrentAssets": 65900.6,
+      "in-gaap:TotalCurrentLiabilities": 39540.36,
+      "in-gaap:TotalAssets": 180100.67,
+      "in-gaap:RetainedEarnings": 81054.14
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 30463.84,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6964.74,
+      "in-gaap:FreeCashFlow": 23499.1
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 51.13,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1319600000,
+      "in-gaap:MarketPriceAtFiling": 1042.4,
+      "in-gaap:EarningsPerShareBasic": 153.49,
+      "in-gaap:EarningsPerShareDiluted": 153.49,
+      "in-gaap:TrailingTwelveMonthsEPS": 613.96,
+      "in-gaap:ForwardEPSEstimate": 706.05,
+      "in-gaap:BookValuePerShare": 877.48,
+      "in-gaap:EVToEBITDA": 1.1,
+      "in-gaap:TrailingPE": 1.7,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.0
+    }
+  }
+}

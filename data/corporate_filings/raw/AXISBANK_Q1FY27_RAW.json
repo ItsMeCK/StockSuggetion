@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000056",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_AXISBANK",
+  "company_details": {
+    "symbol": "AXISBANK",
+    "company_name": "Axis Bank Ltd.",
+    "isin": "INE238A01034",
+    "cin": "L65191MH1996PLC100056"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987V7I7SMTS7Y",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 2425.88,
+      "in-gaap:OtherIncome": 849.06,
+      "in-gaap:OperatingExpenses": 1375.47,
+      "in-gaap:OperatingProfit": 1899.47,
+      "in-gaap:ProvisionsAndContingencies": 366.04,
+      "in-gaap:ProfitBeforeTax": 1533.43,
+      "in-gaap:TaxExpense": 383.36,
+      "in-gaap:ProfitAfterTax": 1150.07
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 70.86,
+      "in-gaap:ReservesAndSurplus": 29333.73,
+      "in-gaap:TotalEquity": 29404.59,
+      "in-gaap:TotalDeposits": 196030.62,
+      "in-gaap:CasaDeposits": 90566.15,
+      "in-gaap:TotalAdvances": 146415.27,
+      "in-gaap:TotalAssets": 245038.27
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 1903.4,
+      "in-gaap:NetNPA": 571.02,
+      "in-gaap:CapitalAdequacyRatioCRAR": 15.0,
+      "in-gaap:Tier1CapitalRatio": 13.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 7.12,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 354300000,
+      "in-gaap:MarketPriceAtFiling": 1217.5,
+      "in-gaap:EarningsPerShareBasic": 32.46,
+      "in-gaap:EarningsPerShareDiluted": 32.46,
+      "in-gaap:TrailingTwelveMonthsEPS": 129.84,
+      "in-gaap:ForwardEPSEstimate": 149.32,
+      "in-gaap:BookValuePerShare": 829.93,
+      "in-gaap:TrailingPE": 9.4,
+      "in-gaap:ForwardPE": 8.0,
+      "in-gaap:PriceToBook": 1.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.7
+    }
+  }
+}

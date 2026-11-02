@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000314",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_M&MFIN",
+  "company_details": {
+    "symbol": "M&MFIN",
+    "company_name": "Mahindra & Mahindra Financial Services Ltd.",
+    "isin": "INE774D01024",
+    "cin": "L29100MH2019PLC100314"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987TK1V8AGOE0",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 52208.59,
+      "in-gaap:OtherIncome": 1566.26,
+      "in-gaap:TotalIncome": 53774.85,
+      "in-gaap:OperatingExpenses": 41142.81,
+      "in-gaap:EBITDA": 11065.78,
+      "in-gaap:DepreciationAndAmortisation": 1770.52,
+      "in-gaap:EBIT": 9295.26,
+      "in-gaap:FinanceCosts": 666.61,
+      "in-gaap:ProfitBeforeTax": 8628.65,
+      "in-gaap:TaxExpense": 2157.16,
+      "in-gaap:ProfitAfterTax": 6471.49
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 217.58,
+      "in-gaap:OtherEquity": 37551.24,
+      "in-gaap:TotalEquity": 37768.82,
+      "in-gaap:TotalDebt": 10812.93,
+      "in-gaap:CashAndCashEquivalents": 8350.84,
+      "in-gaap:TotalCurrentAssets": 26104.29,
+      "in-gaap:TotalCurrentLiabilities": 15662.58,
+      "in-gaap:TotalAssets": 64244.33,
+      "in-gaap:RetainedEarnings": 26438.17
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 9516.57,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3556.02,
+      "in-gaap:FreeCashFlow": 5960.55
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.51,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1087900000,
+      "in-gaap:MarketPriceAtFiling": 276.9,
+      "in-gaap:EarningsPerShareBasic": 59.49,
+      "in-gaap:EarningsPerShareDiluted": 59.49,
+      "in-gaap:TrailingTwelveMonthsEPS": 237.96,
+      "in-gaap:ForwardEPSEstimate": 273.65,
+      "in-gaap:BookValuePerShare": 347.17,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.2,
+      "in-gaap:ForwardPE": 1.0,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.1
+    }
+  }
+}

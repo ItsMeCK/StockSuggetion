@@ -100,3 +100,26 @@ def test_live_hourly_job_excludes_defensive_blacklist_and_retains_nifty():
     assert "RELIANCE" in valid_targets
     assert "MCX" in valid_targets
     assert "EXIDEIND" in valid_targets
+
+@patch('scripts.live_hourly_job.get_kite_data_client')
+@patch('scripts.live_hourly_job.get_kite_exec_client')
+@patch('core.db_manager.get_all_active_positions')
+@patch('alerts.email_notifier.SovereignEmailer')
+def test_live_hourly_job_sends_email_when_max_trades_reached(mock_emailer_cls, mock_positions, mock_exec, mock_data):
+    from scripts.live_hourly_job import run_hourly_evaluation
+    
+    # 10 active positions (hitting max trades cap)
+    mock_positions.return_value = [{"symbol": f"SYM_{i}", "option_symbol": f"OPT_{i}", "entry_time": datetime.now()} for i in range(10)]
+    mock_emailer = MagicMock()
+    mock_emailer_cls.return_value = mock_emailer
+    
+    with patch('scripts.live_hourly_job.datetime') as mock_dt:
+        mock_dt.now.return_value = datetime(2026, 10, 30, 13, 15, 0)
+        run_hourly_evaluation()
+        
+    assert mock_emailer.send_scorecard.called
+    args, _ = mock_emailer.send_scorecard.call_args
+    assert "Live Hourly Execution (13:15)" in args[0]
+    assert args[1] == []
+    assert args[2][0]["ticker"] == "CAPACITY CEILING"
+

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000499",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ZENTEC",
+  "company_details": {
+    "symbol": "ZENTEC",
+    "company_name": "Zen Technologies Ltd.",
+    "isin": "INE251B01027",
+    "cin": "L29100MH1979PLC100499"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317ENDH0W7R8G",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 358537.92,
+      "in-gaap:OtherIncome": 10756.14,
+      "in-gaap:TotalIncome": 369294.06,
+      "in-gaap:OperatingExpenses": 260107.17,
+      "in-gaap:EBITDA": 98430.75,
+      "in-gaap:DepreciationAndAmortisation": 15748.92,
+      "in-gaap:EBIT": 82681.83,
+      "in-gaap:FinanceCosts": 3659.14,
+      "in-gaap:ProfitBeforeTax": 79022.69,
+      "in-gaap:TaxExpense": 19755.67,
+      "in-gaap:ProfitAfterTax": 59267.02
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 329.74,
+      "in-gaap:OtherEquity": 502074.65,
+      "in-gaap:TotalEquity": 502404.39,
+      "in-gaap:TotalDebt": 76376.85,
+      "in-gaap:CashAndCashEquivalents": 51644.85,
+      "in-gaap:TotalCurrentAssets": 179268.96,
+      "in-gaap:TotalCurrentLiabilities": 107561.38,
+      "in-gaap:TotalAssets": 686342.62,
+      "in-gaap:RetainedEarnings": 351683.07
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 89571.98,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 27426.97,
+      "in-gaap:FreeCashFlow": 62145.01
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 42.78,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1648700000,
+      "in-gaap:MarketPriceAtFiling": 1493.8,
+      "in-gaap:EarningsPerShareBasic": 359.48,
+      "in-gaap:EarningsPerShareDiluted": 359.48,
+      "in-gaap:TrailingTwelveMonthsEPS": 1437.92,
+      "in-gaap:ForwardEPSEstimate": 1653.61,
+      "in-gaap:BookValuePerShare": 3047.28,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.0,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.8
+    }
+  }
+}

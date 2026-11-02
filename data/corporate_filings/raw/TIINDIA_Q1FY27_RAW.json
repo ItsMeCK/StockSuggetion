@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000472",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TIINDIA",
+  "company_details": {
+    "symbol": "TIINDIA",
+    "company_name": "Tube Investments of India Ltd.",
+    "isin": "INE974X01010",
+    "cin": "L29100MH1997PLC100472"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317C1MM9J5YKZ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 87972.72,
+      "in-gaap:OtherIncome": 2639.18,
+      "in-gaap:TotalIncome": 90611.9,
+      "in-gaap:OperatingExpenses": 63744.89,
+      "in-gaap:EBITDA": 24227.83,
+      "in-gaap:DepreciationAndAmortisation": 3876.45,
+      "in-gaap:EBIT": 20351.38,
+      "in-gaap:FinanceCosts": 2144.06,
+      "in-gaap:ProfitBeforeTax": 18207.32,
+      "in-gaap:TaxExpense": 4551.83,
+      "in-gaap:ProfitAfterTax": 13655.49
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 47.66,
+      "in-gaap:OtherEquity": 98223.71,
+      "in-gaap:TotalEquity": 98271.37,
+      "in-gaap:TotalDebt": 24735.86,
+      "in-gaap:CashAndCashEquivalents": 8869.36,
+      "in-gaap:TotalCurrentAssets": 43986.36,
+      "in-gaap:TotalCurrentLiabilities": 26391.82,
+      "in-gaap:TotalAssets": 149399.05,
+      "in-gaap:RetainedEarnings": 68789.96
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 21320.49,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 5678.57,
+      "in-gaap:FreeCashFlow": 15641.92
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 61.27,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 238299999,
+      "in-gaap:MarketPriceAtFiling": 2080.0,
+      "in-gaap:EarningsPerShareBasic": 573.04,
+      "in-gaap:EarningsPerShareDiluted": 573.04,
+      "in-gaap:TrailingTwelveMonthsEPS": 2292.16,
+      "in-gaap:ForwardEPSEstimate": 2635.98,
+      "in-gaap:BookValuePerShare": 4123.85,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 0.9,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.8
+    }
+  }
+}

@@ -41,6 +41,22 @@ def test_time_stop_stagnation_cut():
     assert decision.action == "TIME_STOP"
     assert "Stagnation Exit" in decision.reason
 
+def test_btst_positions_exempt_from_90m_time_stop():
+    engine = DynamicOptionExitEngine()
+    entry_time = datetime(2026, 10, 11, 15, 15, 0)
+    # Next day at 09:10 AM (1075 minutes later)
+    now = datetime(2026, 10, 12, 9, 10, 0)
+    pos = {
+        "entry_premium": 100.0,
+        "entry_time": entry_time.isoformat(),
+        "highest_high": 102.0,
+        "holding_type": "TYPE_C_BTST"
+    }
+    decision = engine.evaluate_position(pos, ltp=100.0, now=now)
+    # BTST position held overnight must NOT be cut by 90m time stop
+    assert decision.action != "TIME_STOP"
+    assert decision.action == "HOLD"
+
 def test_taxonomy_eod_cut_type_a():
     engine = DynamicOptionExitEngine()
     entry_time = datetime(2026, 10, 11, 11, 15, 0)

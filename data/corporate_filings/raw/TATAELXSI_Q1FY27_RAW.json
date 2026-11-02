@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000446",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TATAELXSI",
+  "company_details": {
+    "symbol": "TATAELXSI",
+    "company_name": "Tata Elxsi Ltd.",
+    "isin": "INE670A01012",
+    "cin": "L29100MH2016PLC100446"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812ICPHSWX0ND",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 624760.26,
+      "in-gaap:OtherIncome": 18742.81,
+      "in-gaap:TotalIncome": 643503.07,
+      "in-gaap:OperatingExpenses": 472234.96,
+      "in-gaap:EBITDA": 152525.3,
+      "in-gaap:DepreciationAndAmortisation": 24404.05,
+      "in-gaap:EBIT": 128121.25,
+      "in-gaap:FinanceCosts": 12009.87,
+      "in-gaap:ProfitBeforeTax": 116111.38,
+      "in-gaap:TaxExpense": 29027.85,
+      "in-gaap:ProfitAfterTax": 87083.54
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 438.2,
+      "in-gaap:OtherEquity": 422028.92,
+      "in-gaap:TotalEquity": 422467.12,
+      "in-gaap:TotalDebt": 43925.14,
+      "in-gaap:CashAndCashEquivalents": 108191.42,
+      "in-gaap:TotalCurrentAssets": 312380.13,
+      "in-gaap:TotalCurrentLiabilities": 187428.08,
+      "in-gaap:TotalAssets": 653820.34,
+      "in-gaap:RetainedEarnings": 295726.98
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 129646.5,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 32548.08,
+      "in-gaap:FreeCashFlow": 97098.42
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 38.21,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2191000000,
+      "in-gaap:MarketPriceAtFiling": 3700.0,
+      "in-gaap:EarningsPerShareBasic": 397.46,
+      "in-gaap:EarningsPerShareDiluted": 397.46,
+      "in-gaap:TrailingTwelveMonthsEPS": 1589.84,
+      "in-gaap:ForwardEPSEstimate": 1828.32,
+      "in-gaap:BookValuePerShare": 1928.19,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 2.3,
+      "in-gaap:ForwardPE": 2.0,
+      "in-gaap:PriceToBook": 1.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.7
+    }
+  }
+}

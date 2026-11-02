@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000405",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SAGILITY",
+  "company_details": {
+    "symbol": "SAGILITY",
+    "company_name": "Sagility Ltd.",
+    "isin": "INE0W2G01015",
+    "cin": "L29100MH1975PLC100405"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317IEAJEUUV6M",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 6973.47,
+      "in-gaap:OtherIncome": 209.2,
+      "in-gaap:TotalIncome": 7182.67,
+      "in-gaap:OperatingExpenses": 5243.43,
+      "in-gaap:EBITDA": 1730.04,
+      "in-gaap:DepreciationAndAmortisation": 276.81,
+      "in-gaap:EBIT": 1453.23,
+      "in-gaap:FinanceCosts": 52.27,
+      "in-gaap:ProfitBeforeTax": 1400.96,
+      "in-gaap:TaxExpense": 350.24,
+      "in-gaap:ProfitAfterTax": 1050.72
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 267.2,
+      "in-gaap:OtherEquity": 5850.02,
+      "in-gaap:TotalEquity": 6117.22,
+      "in-gaap:TotalDebt": 1763.22,
+      "in-gaap:CashAndCashEquivalents": 1266.71,
+      "in-gaap:TotalCurrentAssets": 3486.74,
+      "in-gaap:TotalCurrentLiabilities": 2092.04,
+      "in-gaap:TotalAssets": 9972.48,
+      "in-gaap:RetainedEarnings": 4282.05
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1366.73,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 397.57,
+      "in-gaap:FreeCashFlow": 969.16
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 36.89,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1336000000,
+      "in-gaap:MarketPriceAtFiling": 44.18,
+      "in-gaap:EarningsPerShareBasic": 7.86,
+      "in-gaap:EarningsPerShareDiluted": 7.86,
+      "in-gaap:TrailingTwelveMonthsEPS": 31.44,
+      "in-gaap:ForwardEPSEstimate": 36.16,
+      "in-gaap:BookValuePerShare": 45.79,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.4,
+      "in-gaap:ForwardPE": 1.2,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.8
+    }
+  }
+}

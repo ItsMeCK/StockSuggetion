@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000456",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TEGA",
+  "company_details": {
+    "symbol": "TEGA",
+    "company_name": "Tega Industries Ltd.",
+    "isin": "INE011K01018",
+    "cin": "L29100MH1981PLC100456"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812HDIIY63ZSP",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 448935.76,
+      "in-gaap:OtherIncome": 13468.07,
+      "in-gaap:TotalIncome": 462403.83,
+      "in-gaap:OperatingExpenses": 394874.68,
+      "in-gaap:EBITDA": 54061.08,
+      "in-gaap:DepreciationAndAmortisation": 8649.77,
+      "in-gaap:EBIT": 45411.31,
+      "in-gaap:FinanceCosts": 1923.88,
+      "in-gaap:ProfitBeforeTax": 43487.43,
+      "in-gaap:TaxExpense": 10871.86,
+      "in-gaap:ProfitAfterTax": 32615.57
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 458.8,
+      "in-gaap:OtherEquity": 613660.04,
+      "in-gaap:TotalEquity": 614118.84,
+      "in-gaap:TotalDebt": 63351.1,
+      "in-gaap:CashAndCashEquivalents": 59338.35,
+      "in-gaap:TotalCurrentAssets": 224467.88,
+      "in-gaap:TotalCurrentLiabilities": 134680.73,
+      "in-gaap:TotalAssets": 812150.67,
+      "in-gaap:RetainedEarnings": 429883.19
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 47573.75,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 16191.33,
+      "in-gaap:FreeCashFlow": 31382.42
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 62.8,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2294000000,
+      "in-gaap:MarketPriceAtFiling": 1723.5,
+      "in-gaap:EarningsPerShareBasic": 142.18,
+      "in-gaap:EarningsPerShareDiluted": 142.18,
+      "in-gaap:TrailingTwelveMonthsEPS": 568.72,
+      "in-gaap:ForwardEPSEstimate": 654.03,
+      "in-gaap:BookValuePerShare": 2677.07,
+      "in-gaap:EVToEBITDA": 1.8,
+      "in-gaap:TrailingPE": 3.0,
+      "in-gaap:ForwardPE": 2.5,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.6
+    }
+  }
+}

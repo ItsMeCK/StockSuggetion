@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000041",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ANURAS",
+  "company_details": {
+    "symbol": "ANURAS",
+    "company_name": "Anupam Rasayan India Ltd.",
+    "isin": "INE930P01018",
+    "cin": "L29100MH2016PLC100041"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "260229874F8JUMER9C",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 228870.85,
+      "in-gaap:OtherIncome": 6866.13,
+      "in-gaap:TotalIncome": 235736.98,
+      "in-gaap:OperatingExpenses": 155958.41,
+      "in-gaap:EBITDA": 72912.44,
+      "in-gaap:DepreciationAndAmortisation": 11665.99,
+      "in-gaap:EBIT": 61246.45,
+      "in-gaap:FinanceCosts": 6285.56,
+      "in-gaap:ProfitBeforeTax": 54960.89,
+      "in-gaap:TaxExpense": 13740.22,
+      "in-gaap:ProfitAfterTax": 41220.67
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 389.16,
+      "in-gaap:OtherEquity": 185301.45,
+      "in-gaap:TotalEquity": 185690.61,
+      "in-gaap:TotalDebt": 69911.86,
+      "in-gaap:CashAndCashEquivalents": 39636.57,
+      "in-gaap:TotalCurrentAssets": 114435.43,
+      "in-gaap:TotalCurrentLiabilities": 68661.26,
+      "in-gaap:TotalAssets": 324263.72,
+      "in-gaap:RetainedEarnings": 129983.43
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 54684.33,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 16827.31,
+      "in-gaap:FreeCashFlow": 37857.02
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 38.85,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1945800000,
+      "in-gaap:MarketPriceAtFiling": 1101.6,
+      "in-gaap:EarningsPerShareBasic": 211.84,
+      "in-gaap:EarningsPerShareDiluted": 211.84,
+      "in-gaap:TrailingTwelveMonthsEPS": 847.36,
+      "in-gaap:ForwardEPSEstimate": 974.46,
+      "in-gaap:BookValuePerShare": 954.31,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.1
+    }
+  }
+}

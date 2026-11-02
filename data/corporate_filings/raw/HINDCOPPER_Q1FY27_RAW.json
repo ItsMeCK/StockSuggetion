@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000214",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HINDCOPPER",
+  "company_details": {
+    "symbol": "HINDCOPPER",
+    "company_name": "Hindustan Copper Ltd.",
+    "isin": "INE531E01026",
+    "cin": "L29100MH2009PLC100214"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423FOFB7OGQ17",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 58012.02,
+      "in-gaap:OtherIncome": 1740.36,
+      "in-gaap:TotalIncome": 59752.38,
+      "in-gaap:OperatingExpenses": 40464.86,
+      "in-gaap:EBITDA": 17547.16,
+      "in-gaap:DepreciationAndAmortisation": 2807.55,
+      "in-gaap:EBIT": 14739.61,
+      "in-gaap:FinanceCosts": 835.58,
+      "in-gaap:ProfitBeforeTax": 13904.03,
+      "in-gaap:TaxExpense": 3476.01,
+      "in-gaap:ProfitAfterTax": 10428.02
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 232.98,
+      "in-gaap:OtherEquity": 69776.45,
+      "in-gaap:TotalEquity": 70009.43,
+      "in-gaap:TotalDebt": 11204.12,
+      "in-gaap:CashAndCashEquivalents": 12316.38,
+      "in-gaap:TotalCurrentAssets": 29006.01,
+      "in-gaap:TotalCurrentLiabilities": 17403.61,
+      "in-gaap:TotalAssets": 98617.16,
+      "in-gaap:RetainedEarnings": 49006.6
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 13335.84,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3477.04,
+      "in-gaap:FreeCashFlow": 9858.8
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 55.45,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1164900000,
+      "in-gaap:MarketPriceAtFiling": 399.05,
+      "in-gaap:EarningsPerShareBasic": 89.52,
+      "in-gaap:EarningsPerShareDiluted": 89.52,
+      "in-gaap:TrailingTwelveMonthsEPS": 358.08,
+      "in-gaap:ForwardEPSEstimate": 411.79,
+      "in-gaap:BookValuePerShare": 600.99,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.1
+    }
+  }
+}

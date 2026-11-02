@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000180",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GICRE",
+  "company_details": {
+    "symbol": "GICRE",
+    "company_name": "General Insurance Corporation of India",
+    "isin": "INE481Y01014",
+    "cin": "L65191MH2000PLC100180"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987X1IK2PGPO1",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 458.7,
+      "in-gaap:OtherIncome": 160.54,
+      "in-gaap:OperatingExpenses": 260.08,
+      "in-gaap:OperatingProfit": 359.16,
+      "in-gaap:ProvisionsAndContingencies": 68.9,
+      "in-gaap:ProfitBeforeTax": 290.26,
+      "in-gaap:TaxExpense": 72.56,
+      "in-gaap:ProfitAfterTax": 217.69
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 39.98,
+      "in-gaap:ReservesAndSurplus": 5562.46,
+      "in-gaap:TotalEquity": 5602.44,
+      "in-gaap:TotalDeposits": 37349.58,
+      "in-gaap:CasaDeposits": 15051.88,
+      "in-gaap:TotalAdvances": 27560.26,
+      "in-gaap:TotalAssets": 46686.98
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 457.5,
+      "in-gaap:NetNPA": 137.8,
+      "in-gaap:CapitalAdequacyRatioCRAR": 21.0,
+      "in-gaap:Tier1CapitalRatio": 19.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 32.19,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 199899999,
+      "in-gaap:MarketPriceAtFiling": 323.75,
+      "in-gaap:EarningsPerShareBasic": 10.89,
+      "in-gaap:EarningsPerShareDiluted": 10.89,
+      "in-gaap:TrailingTwelveMonthsEPS": 43.56,
+      "in-gaap:ForwardEPSEstimate": 50.09,
+      "in-gaap:BookValuePerShare": 280.26,
+      "in-gaap:TrailingPE": 7.4,
+      "in-gaap:ForwardPE": 6.3,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.9
+    }
+  }
+}

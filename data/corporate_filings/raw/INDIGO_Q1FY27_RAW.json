@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000255",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_INDIGO",
+  "company_details": {
+    "symbol": "INDIGO",
+    "company_name": "InterGlobe Aviation Ltd.",
+    "isin": "INE646L01027",
+    "cin": "L29100MH2005PLC100255"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "261053178OKU0UJ0MX",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 369915.37,
+      "in-gaap:OtherIncome": 11097.46,
+      "in-gaap:TotalIncome": 381012.83,
+      "in-gaap:OperatingExpenses": 279794.6,
+      "in-gaap:EBITDA": 90120.77,
+      "in-gaap:DepreciationAndAmortisation": 14419.32,
+      "in-gaap:EBIT": 75701.45,
+      "in-gaap:FinanceCosts": 3065.33,
+      "in-gaap:ProfitBeforeTax": 72636.12,
+      "in-gaap:TaxExpense": 18159.03,
+      "in-gaap:ProfitAfterTax": 54477.09
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 251.12,
+      "in-gaap:OtherEquity": 392253.84,
+      "in-gaap:TotalEquity": 392504.96,
+      "in-gaap:TotalDebt": 65792.16,
+      "in-gaap:CashAndCashEquivalents": 31619.19,
+      "in-gaap:TotalCurrentAssets": 184957.68,
+      "in-gaap:TotalCurrentLiabilities": 110974.61,
+      "in-gaap:TotalAssets": 569271.73,
+      "in-gaap:RetainedEarnings": 274753.47
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 76602.65,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 18981.43,
+      "in-gaap:FreeCashFlow": 57621.22
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 58.64,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1255600000,
+      "in-gaap:MarketPriceAtFiling": 4549.0,
+      "in-gaap:EarningsPerShareBasic": 433.87,
+      "in-gaap:EarningsPerShareDiluted": 433.87,
+      "in-gaap:TrailingTwelveMonthsEPS": 1735.48,
+      "in-gaap:ForwardEPSEstimate": 1995.8,
+      "in-gaap:BookValuePerShare": 3126.04,
+      "in-gaap:EVToEBITDA": 1.7,
+      "in-gaap:TrailingPE": 2.6,
+      "in-gaap:ForwardPE": 2.2,
+      "in-gaap:PriceToBook": 1.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.7
+    }
+  }
+}

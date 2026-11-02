@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000450",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TATAPOWER",
+  "company_details": {
+    "symbol": "TATAPOWER",
+    "company_name": "Tata Power Co. Ltd.",
+    "isin": "INE245A01021",
+    "cin": "L29100MH1975PLC100450"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "260229875ANPQ2OWCI",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 24175.29,
+      "in-gaap:OtherIncome": 725.26,
+      "in-gaap:TotalIncome": 24900.55,
+      "in-gaap:OperatingExpenses": 20094.15,
+      "in-gaap:EBITDA": 4081.14,
+      "in-gaap:DepreciationAndAmortisation": 652.98,
+      "in-gaap:EBIT": 3428.16,
+      "in-gaap:FinanceCosts": 340.09,
+      "in-gaap:ProfitBeforeTax": 3088.07,
+      "in-gaap:TaxExpense": 772.02,
+      "in-gaap:ProfitAfterTax": 2316.05
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 311.02,
+      "in-gaap:OtherEquity": 26923.45,
+      "in-gaap:TotalEquity": 27234.47,
+      "in-gaap:TotalDebt": 1798.62,
+      "in-gaap:CashAndCashEquivalents": 3455.47,
+      "in-gaap:TotalCurrentAssets": 12087.65,
+      "in-gaap:TotalCurrentLiabilities": 7252.59,
+      "in-gaap:TotalAssets": 36285.68,
+      "in-gaap:RetainedEarnings": 19064.13
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 3305.72,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1077.98,
+      "in-gaap:FreeCashFlow": 2227.74
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.29,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1555100000,
+      "in-gaap:MarketPriceAtFiling": 348.1,
+      "in-gaap:EarningsPerShareBasic": 14.89,
+      "in-gaap:EarningsPerShareDiluted": 14.89,
+      "in-gaap:TrailingTwelveMonthsEPS": 59.56,
+      "in-gaap:ForwardEPSEstimate": 68.49,
+      "in-gaap:BookValuePerShare": 175.13,
+      "in-gaap:EVToEBITDA": 3.2,
+      "in-gaap:TrailingPE": 5.8,
+      "in-gaap:ForwardPE": 4.9,
+      "in-gaap:PriceToBook": 2.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.2
+    }
+  }
+}

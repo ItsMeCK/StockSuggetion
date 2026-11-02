@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000081",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BHARTIHEXA",
+  "company_details": {
+    "symbol": "BHARTIHEXA",
+    "company_name": "Bharti Hexacom Ltd.",
+    "isin": "INE343G01021",
+    "cin": "L29100MH2011PLC100081"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826DRKK3MIV93",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 307236.44,
+      "in-gaap:OtherIncome": 9217.09,
+      "in-gaap:TotalIncome": 316453.53,
+      "in-gaap:OperatingExpenses": 269589.8,
+      "in-gaap:EBITDA": 37646.64,
+      "in-gaap:DepreciationAndAmortisation": 6023.46,
+      "in-gaap:EBIT": 31623.18,
+      "in-gaap:FinanceCosts": 1836.42,
+      "in-gaap:ProfitBeforeTax": 29786.76,
+      "in-gaap:TaxExpense": 7446.69,
+      "in-gaap:ProfitAfterTax": 22340.07
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 225.74,
+      "in-gaap:OtherEquity": 459508.51,
+      "in-gaap:TotalEquity": 459734.25,
+      "in-gaap:TotalDebt": 16192.98,
+      "in-gaap:CashAndCashEquivalents": 25710.75,
+      "in-gaap:TotalCurrentAssets": 153618.22,
+      "in-gaap:TotalCurrentLiabilities": 92170.93,
+      "in-gaap:TotalAssets": 568098.16,
+      "in-gaap:RetainedEarnings": 321813.97
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 30117.31,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 9025.33,
+      "in-gaap:FreeCashFlow": 21091.98
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 71.93,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1128700000,
+      "in-gaap:MarketPriceAtFiling": 1637.9,
+      "in-gaap:EarningsPerShareBasic": 197.93,
+      "in-gaap:EarningsPerShareDiluted": 197.93,
+      "in-gaap:TrailingTwelveMonthsEPS": 791.72,
+      "in-gaap:ForwardEPSEstimate": 910.48,
+      "in-gaap:BookValuePerShare": 4073.13,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 2.1,
+      "in-gaap:ForwardPE": 1.8,
+      "in-gaap:PriceToBook": 0.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.4
+    }
+  }
+}

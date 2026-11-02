@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000402",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SBILIFE",
+  "company_details": {
+    "symbol": "SBILIFE",
+    "company_name": "SBI Life Insurance Company Ltd.",
+    "isin": "INE123W01016",
+    "cin": "L65191MH1982PLC100402"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "2604855617TWTUGPA6",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 21480.46,
+      "in-gaap:OtherIncome": 7518.16,
+      "in-gaap:OperatingExpenses": 12179.42,
+      "in-gaap:OperatingProfit": 16819.2,
+      "in-gaap:ProvisionsAndContingencies": 3844.6,
+      "in-gaap:ProfitBeforeTax": 12974.6,
+      "in-gaap:TaxExpense": 3243.65,
+      "in-gaap:ProfitAfterTax": 9730.95
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 404.06,
+      "in-gaap:ReservesAndSurplus": 319801.57,
+      "in-gaap:TotalEquity": 320205.63,
+      "in-gaap:TotalDeposits": 2134704.23,
+      "in-gaap:CasaDeposits": 1018253.92,
+      "in-gaap:TotalAdvances": 1537840.93,
+      "in-gaap:TotalAssets": 2668380.29
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 43674.68,
+      "in-gaap:NetNPA": 13071.65,
+      "in-gaap:CapitalAdequacyRatioCRAR": 17.4,
+      "in-gaap:Tier1CapitalRatio": 15.4
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 9.96,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2020300000,
+      "in-gaap:MarketPriceAtFiling": 1640.0,
+      "in-gaap:EarningsPerShareBasic": 48.17,
+      "in-gaap:EarningsPerShareDiluted": 48.17,
+      "in-gaap:TrailingTwelveMonthsEPS": 192.68,
+      "in-gaap:ForwardEPSEstimate": 221.58,
+      "in-gaap:BookValuePerShare": 1584.94,
+      "in-gaap:TrailingPE": 8.5,
+      "in-gaap:ForwardPE": 7.2,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.5
+    }
+  }
+}

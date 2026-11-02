@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000128",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_COROMANDEL",
+  "company_details": {
+    "symbol": "COROMANDEL",
+    "company_name": "Coromandel International Ltd.",
+    "isin": "INE169A01031",
+    "cin": "L29100MH2013PLC100128"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190C33H2BUE10",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 188742.65,
+      "in-gaap:OtherIncome": 5662.28,
+      "in-gaap:TotalIncome": 194404.93,
+      "in-gaap:OperatingExpenses": 133550.55,
+      "in-gaap:EBITDA": 55192.1,
+      "in-gaap:DepreciationAndAmortisation": 8830.74,
+      "in-gaap:EBIT": 46361.36,
+      "in-gaap:FinanceCosts": 1877.28,
+      "in-gaap:ProfitBeforeTax": 44484.08,
+      "in-gaap:TaxExpense": 11121.02,
+      "in-gaap:ProfitAfterTax": 33363.06
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 429.92,
+      "in-gaap:OtherEquity": 188656.68,
+      "in-gaap:TotalEquity": 189086.6,
+      "in-gaap:TotalDebt": 18237.34,
+      "in-gaap:CashAndCashEquivalents": 34666.9,
+      "in-gaap:TotalCurrentAssets": 94371.32,
+      "in-gaap:TotalCurrentLiabilities": 56622.79,
+      "in-gaap:TotalAssets": 263946.73,
+      "in-gaap:RetainedEarnings": 132360.62
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 44705.6,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 15187.72,
+      "in-gaap:FreeCashFlow": 29517.88
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 42.18,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2149600000,
+      "in-gaap:MarketPriceAtFiling": 1718.0,
+      "in-gaap:EarningsPerShareBasic": 155.21,
+      "in-gaap:EarningsPerShareDiluted": 155.21,
+      "in-gaap:TrailingTwelveMonthsEPS": 620.84,
+      "in-gaap:ForwardEPSEstimate": 713.97,
+      "in-gaap:BookValuePerShare": 879.64,
+      "in-gaap:EVToEBITDA": 1.6,
+      "in-gaap:TrailingPE": 2.8,
+      "in-gaap:ForwardPE": 2.4,
+      "in-gaap:PriceToBook": 2.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.3
+    }
+  }
+}

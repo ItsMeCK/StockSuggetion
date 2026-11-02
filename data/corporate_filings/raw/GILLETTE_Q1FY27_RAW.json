@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000181",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GILLETTE",
+  "company_details": {
+    "symbol": "GILLETTE",
+    "company_name": "Gillette India Ltd.",
+    "isin": "INE322A01010",
+    "cin": "L29100MH1976PLC100181"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "2604855690UE94LY94",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 125667.86,
+      "in-gaap:OtherIncome": 3770.04,
+      "in-gaap:TotalIncome": 129437.9,
+      "in-gaap:OperatingExpenses": 108598.01,
+      "in-gaap:EBITDA": 17069.85,
+      "in-gaap:DepreciationAndAmortisation": 2731.18,
+      "in-gaap:EBIT": 14338.67,
+      "in-gaap:FinanceCosts": 509.55,
+      "in-gaap:ProfitBeforeTax": 13829.12,
+      "in-gaap:TaxExpense": 3457.28,
+      "in-gaap:ProfitAfterTax": 10371.84
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 44.58,
+      "in-gaap:OtherEquity": 178217.39,
+      "in-gaap:TotalEquity": 178261.97,
+      "in-gaap:TotalDebt": 4136.61,
+      "in-gaap:CashAndCashEquivalents": 18060.29,
+      "in-gaap:TotalCurrentAssets": 62833.93,
+      "in-gaap:TotalCurrentLiabilities": 37700.36,
+      "in-gaap:TotalAssets": 220098.94,
+      "in-gaap:RetainedEarnings": 124783.38
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 15533.56,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 4769.37,
+      "in-gaap:FreeCashFlow": 10764.19
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.76,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 222900000,
+      "in-gaap:MarketPriceAtFiling": 7220.0,
+      "in-gaap:EarningsPerShareBasic": 465.31,
+      "in-gaap:EarningsPerShareDiluted": 465.31,
+      "in-gaap:TrailingTwelveMonthsEPS": 1861.24,
+      "in-gaap:ForwardEPSEstimate": 2140.43,
+      "in-gaap:BookValuePerShare": 7997.4,
+      "in-gaap:EVToEBITDA": 2.2,
+      "in-gaap:TrailingPE": 3.9,
+      "in-gaap:ForwardPE": 3.3,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.5
+    }
+  }
+}

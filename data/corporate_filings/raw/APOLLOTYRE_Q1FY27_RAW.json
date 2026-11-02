@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000044",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_APOLLOTYRE",
+  "company_details": {
+    "symbol": "APOLLOTYRE",
+    "company_name": "Apollo Tyres Ltd.",
+    "isin": "INE438A01022",
+    "cin": "L29100MH2019PLC100044"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812G36ENEDF15",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 136534.38,
+      "in-gaap:OtherIncome": 4096.03,
+      "in-gaap:TotalIncome": 140630.41,
+      "in-gaap:OperatingExpenses": 114483.96,
+      "in-gaap:EBITDA": 22050.42,
+      "in-gaap:DepreciationAndAmortisation": 3528.07,
+      "in-gaap:EBIT": 18522.35,
+      "in-gaap:FinanceCosts": 1450.69,
+      "in-gaap:ProfitBeforeTax": 17071.66,
+      "in-gaap:TaxExpense": 4267.91,
+      "in-gaap:ProfitAfterTax": 12803.74
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 485.7,
+      "in-gaap:OtherEquity": 93429.26,
+      "in-gaap:TotalEquity": 93914.96,
+      "in-gaap:TotalDebt": 21702.88,
+      "in-gaap:CashAndCashEquivalents": 18719.26,
+      "in-gaap:TotalCurrentAssets": 68267.19,
+      "in-gaap:TotalCurrentLiabilities": 40960.31,
+      "in-gaap:TotalAssets": 156578.15,
+      "in-gaap:RetainedEarnings": 65740.47
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 16758.32,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 5619.88,
+      "in-gaap:FreeCashFlow": 11138.44
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 44.24,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2428500000,
+      "in-gaap:MarketPriceAtFiling": 384.15,
+      "in-gaap:EarningsPerShareBasic": 52.72,
+      "in-gaap:EarningsPerShareDiluted": 52.72,
+      "in-gaap:TrailingTwelveMonthsEPS": 210.88,
+      "in-gaap:ForwardEPSEstimate": 242.51,
+      "in-gaap:BookValuePerShare": 386.72,
+      "in-gaap:EVToEBITDA": 1.1,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.7
+    }
+  }
+}

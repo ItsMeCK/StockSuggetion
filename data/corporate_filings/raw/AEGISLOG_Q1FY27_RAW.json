@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000027",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_AEGISLOG",
+  "company_details": {
+    "symbol": "AEGISLOG",
+    "company_name": "Aegis Logistics Ltd.",
+    "isin": "INE208C01025",
+    "cin": "L29100MH2002PLC100027"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190WHPFDOCXKX",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 344162.62,
+      "in-gaap:OtherIncome": 10324.88,
+      "in-gaap:TotalIncome": 354487.5,
+      "in-gaap:OperatingExpenses": 269066.48,
+      "in-gaap:EBITDA": 75096.14,
+      "in-gaap:DepreciationAndAmortisation": 12015.38,
+      "in-gaap:EBIT": 63080.76,
+      "in-gaap:FinanceCosts": 6826.92,
+      "in-gaap:ProfitBeforeTax": 56253.84,
+      "in-gaap:TaxExpense": 14063.46,
+      "in-gaap:ProfitAfterTax": 42190.38
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 309.9,
+      "in-gaap:OtherEquity": 348008.1,
+      "in-gaap:TotalEquity": 348318.0,
+      "in-gaap:TotalDebt": 43833.65,
+      "in-gaap:CashAndCashEquivalents": 84792.9,
+      "in-gaap:TotalCurrentAssets": 172081.31,
+      "in-gaap:TotalCurrentLiabilities": 103248.79,
+      "in-gaap:TotalAssets": 495400.44,
+      "in-gaap:RetainedEarnings": 243822.6
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 70590.37,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 17592.67,
+      "in-gaap:FreeCashFlow": 52997.7
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 69.48,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1549500000,
+      "in-gaap:MarketPriceAtFiling": 1247.2,
+      "in-gaap:EarningsPerShareBasic": 272.28,
+      "in-gaap:EarningsPerShareDiluted": 272.28,
+      "in-gaap:TrailingTwelveMonthsEPS": 1089.12,
+      "in-gaap:ForwardEPSEstimate": 1252.49,
+      "in-gaap:BookValuePerShare": 2247.94,
+      "in-gaap:EVToEBITDA": 0.5,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.6
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000293",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_KIMS",
+  "company_details": {
+    "symbol": "KIMS",
+    "company_name": "Krishna Institute of Medical Sciences Ltd.",
+    "isin": "INE967H01025",
+    "cin": "L29100MH1998PLC100293"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317W8DP4MSQZ8",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 59422.41,
+      "in-gaap:OtherIncome": 1782.67,
+      "in-gaap:TotalIncome": 61205.08,
+      "in-gaap:OperatingExpenses": 43745.22,
+      "in-gaap:EBITDA": 15677.19,
+      "in-gaap:DepreciationAndAmortisation": 2508.35,
+      "in-gaap:EBIT": 13168.84,
+      "in-gaap:FinanceCosts": 1136.03,
+      "in-gaap:ProfitBeforeTax": 12032.81,
+      "in-gaap:TaxExpense": 3008.2,
+      "in-gaap:ProfitAfterTax": 9024.61
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 415.14,
+      "in-gaap:OtherEquity": 60514.54,
+      "in-gaap:TotalEquity": 60929.68,
+      "in-gaap:TotalDebt": 8511.41,
+      "in-gaap:CashAndCashEquivalents": 5432.64,
+      "in-gaap:TotalCurrentAssets": 29711.21,
+      "in-gaap:TotalCurrentLiabilities": 17826.72,
+      "in-gaap:TotalAssets": 87267.81,
+      "in-gaap:RetainedEarnings": 42650.78
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 12071.44,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3809.87,
+      "in-gaap:FreeCashFlow": 8261.57
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 54.73,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2075700000,
+      "in-gaap:MarketPriceAtFiling": 665.15,
+      "in-gaap:EarningsPerShareBasic": 43.48,
+      "in-gaap:EarningsPerShareDiluted": 43.48,
+      "in-gaap:TrailingTwelveMonthsEPS": 173.92,
+      "in-gaap:ForwardEPSEstimate": 200.01,
+      "in-gaap:BookValuePerShare": 293.54,
+      "in-gaap:EVToEBITDA": 2.3,
+      "in-gaap:TrailingPE": 3.8,
+      "in-gaap:ForwardPE": 3.2,
+      "in-gaap:PriceToBook": 2.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.0
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000364",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_PNBHOUSING",
+  "company_details": {
+    "symbol": "PNBHOUSING",
+    "company_name": "PNB Housing Finance Ltd.",
+    "isin": "INE572E01012",
+    "cin": "L65191MH1984PLC100364"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "260588149GFFWBEAF6",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 5816.82,
+      "in-gaap:OtherIncome": 2035.89,
+      "in-gaap:OperatingExpenses": 3298.14,
+      "in-gaap:OperatingProfit": 4554.57,
+      "in-gaap:ProvisionsAndContingencies": 892.25,
+      "in-gaap:ProfitBeforeTax": 3662.32,
+      "in-gaap:TaxExpense": 915.58,
+      "in-gaap:ProfitAfterTax": 2746.74
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 142.94,
+      "in-gaap:ReservesAndSurplus": 71265.61,
+      "in-gaap:TotalEquity": 71408.55,
+      "in-gaap:TotalDeposits": 476057.02,
+      "in-gaap:CasaDeposits": 203752.4,
+      "in-gaap:TotalAdvances": 356899.95,
+      "in-gaap:TotalAssets": 595071.28
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 9671.99,
+      "in-gaap:NetNPA": 2890.89,
+      "in-gaap:CapitalAdequacyRatioCRAR": 20.0,
+      "in-gaap:Tier1CapitalRatio": 18.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.87,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 714700000,
+      "in-gaap:MarketPriceAtFiling": 1089.1,
+      "in-gaap:EarningsPerShareBasic": 38.43,
+      "in-gaap:EarningsPerShareDiluted": 38.43,
+      "in-gaap:TrailingTwelveMonthsEPS": 153.72,
+      "in-gaap:ForwardEPSEstimate": 176.78,
+      "in-gaap:BookValuePerShare": 999.14,
+      "in-gaap:TrailingPE": 7.1,
+      "in-gaap:ForwardPE": 6.0,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.9
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000348",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_NAM-INDIA",
+  "company_details": {
+    "symbol": "NAM-INDIA",
+    "company_name": "Nippon Life India Asset Management Ltd.",
+    "isin": "INE298J01013",
+    "cin": "L29100MH2008PLC100348"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814EPJRH7SQ3Y",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 309677.34,
+      "in-gaap:OtherIncome": 9290.32,
+      "in-gaap:TotalIncome": 318967.66,
+      "in-gaap:OperatingExpenses": 262019.74,
+      "in-gaap:EBITDA": 47657.6,
+      "in-gaap:DepreciationAndAmortisation": 7625.22,
+      "in-gaap:EBIT": 40032.38,
+      "in-gaap:FinanceCosts": 2010.87,
+      "in-gaap:ProfitBeforeTax": 38021.51,
+      "in-gaap:TaxExpense": 9505.38,
+      "in-gaap:ProfitAfterTax": 28516.13
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 236.5,
+      "in-gaap:OtherEquity": 364476.61,
+      "in-gaap:TotalEquity": 364713.11,
+      "in-gaap:TotalDebt": 38816.26,
+      "in-gaap:CashAndCashEquivalents": 58794.58,
+      "in-gaap:TotalCurrentAssets": 154838.67,
+      "in-gaap:TotalCurrentLiabilities": 92903.2,
+      "in-gaap:TotalAssets": 496432.57,
+      "in-gaap:RetainedEarnings": 255299.18
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 43368.42,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 10265.61,
+      "in-gaap:FreeCashFlow": 33102.81
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 54.53,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1182500000,
+      "in-gaap:MarketPriceAtFiling": 2027.65,
+      "in-gaap:EarningsPerShareBasic": 241.15,
+      "in-gaap:EarningsPerShareDiluted": 241.15,
+      "in-gaap:TrailingTwelveMonthsEPS": 964.6,
+      "in-gaap:ForwardEPSEstimate": 1109.29,
+      "in-gaap:BookValuePerShare": 3084.25,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 2.1,
+      "in-gaap:ForwardPE": 1.8,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.4
+    }
+  }
+}

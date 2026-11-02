@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000413",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SCHNEIDER",
+  "company_details": {
+    "symbol": "SCHNEIDER",
+    "company_name": "Schneider Electric Infrastructure Ltd.",
+    "isin": "INE839M01018",
+    "cin": "L29100MH1983PLC100413"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "260588144YMYUBA1UU",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 67965.2,
+      "in-gaap:OtherIncome": 2038.96,
+      "in-gaap:TotalIncome": 70004.16,
+      "in-gaap:OperatingExpenses": 59592.92,
+      "in-gaap:EBITDA": 8372.28,
+      "in-gaap:DepreciationAndAmortisation": 1339.56,
+      "in-gaap:EBIT": 7032.72,
+      "in-gaap:FinanceCosts": 247.7,
+      "in-gaap:ProfitBeforeTax": 6785.02,
+      "in-gaap:TaxExpense": 1696.26,
+      "in-gaap:ProfitAfterTax": 5088.77
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 79.74,
+      "in-gaap:OtherEquity": 78605.87,
+      "in-gaap:TotalEquity": 78685.61,
+      "in-gaap:TotalDebt": 8951.93,
+      "in-gaap:CashAndCashEquivalents": 11580.45,
+      "in-gaap:TotalCurrentAssets": 33982.6,
+      "in-gaap:TotalCurrentLiabilities": 20389.56,
+      "in-gaap:TotalAssets": 108027.1,
+      "in-gaap:RetainedEarnings": 55079.93
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 7953.67,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2537.39,
+      "in-gaap:FreeCashFlow": 5416.28
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 48.57,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 398700000,
+      "in-gaap:MarketPriceAtFiling": 1114.1,
+      "in-gaap:EarningsPerShareBasic": 127.63,
+      "in-gaap:EarningsPerShareDiluted": 127.63,
+      "in-gaap:TrailingTwelveMonthsEPS": 510.52,
+      "in-gaap:ForwardEPSEstimate": 587.1,
+      "in-gaap:BookValuePerShare": 1973.55,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 2.2,
+      "in-gaap:ForwardPE": 1.9,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.5
+    }
+  }
+}

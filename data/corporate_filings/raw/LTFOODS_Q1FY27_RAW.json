@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000298",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_LTFOODS",
+  "company_details": {
+    "symbol": "LTFOODS",
+    "company_name": "LT Foods Ltd.",
+    "isin": "INE818H01020",
+    "cin": "L29100MH2003PLC100298"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423FUMFCG1QXZ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 63375.88,
+      "in-gaap:OtherIncome": 1901.28,
+      "in-gaap:TotalIncome": 65277.16,
+      "in-gaap:OperatingExpenses": 46205.38,
+      "in-gaap:EBITDA": 17170.5,
+      "in-gaap:DepreciationAndAmortisation": 2747.28,
+      "in-gaap:EBIT": 14423.22,
+      "in-gaap:FinanceCosts": 733.78,
+      "in-gaap:ProfitBeforeTax": 13689.44,
+      "in-gaap:TaxExpense": 3422.36,
+      "in-gaap:ProfitAfterTax": 10267.08
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 479.5,
+      "in-gaap:OtherEquity": 68496.54,
+      "in-gaap:TotalEquity": 68976.04,
+      "in-gaap:TotalDebt": 9211.6,
+      "in-gaap:CashAndCashEquivalents": 12730.33,
+      "in-gaap:TotalCurrentAssets": 31687.94,
+      "in-gaap:TotalCurrentLiabilities": 19012.76,
+      "in-gaap:TotalAssets": 97200.4,
+      "in-gaap:RetainedEarnings": 48283.23
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 14079.81,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 5455.81,
+      "in-gaap:FreeCashFlow": 8624.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 36.15,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2397500000,
+      "in-gaap:MarketPriceAtFiling": 379.85,
+      "in-gaap:EarningsPerShareBasic": 42.82,
+      "in-gaap:EarningsPerShareDiluted": 42.82,
+      "in-gaap:TrailingTwelveMonthsEPS": 171.28,
+      "in-gaap:ForwardEPSEstimate": 196.97,
+      "in-gaap:BookValuePerShare": 287.7,
+      "in-gaap:EVToEBITDA": 1.3,
+      "in-gaap:TrailingPE": 2.2,
+      "in-gaap:ForwardPE": 1.9,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.3
+    }
+  }
+}

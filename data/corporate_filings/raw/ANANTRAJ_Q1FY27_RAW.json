@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000038",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ANANTRAJ",
+  "company_details": {
+    "symbol": "ANANTRAJ",
+    "company_name": "Anant Raj Ltd.",
+    "isin": "INE242C01024",
+    "cin": "L29100MH2013PLC100038"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814UFL8OI0H5O",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 58365.01,
+      "in-gaap:OtherIncome": 1750.95,
+      "in-gaap:TotalIncome": 60115.96,
+      "in-gaap:OperatingExpenses": 46671.25,
+      "in-gaap:EBITDA": 11693.76,
+      "in-gaap:DepreciationAndAmortisation": 1871.0,
+      "in-gaap:EBIT": 9822.76,
+      "in-gaap:FinanceCosts": 434.71,
+      "in-gaap:ProfitBeforeTax": 9388.05,
+      "in-gaap:TaxExpense": 2347.01,
+      "in-gaap:ProfitAfterTax": 7041.04
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 260.96,
+      "in-gaap:OtherEquity": 44099.26,
+      "in-gaap:TotalEquity": 44360.22,
+      "in-gaap:TotalDebt": 8200.61,
+      "in-gaap:CashAndCashEquivalents": 6371.12,
+      "in-gaap:TotalCurrentAssets": 29182.51,
+      "in-gaap:TotalCurrentLiabilities": 17509.5,
+      "in-gaap:TotalAssets": 70070.33,
+      "in-gaap:RetainedEarnings": 31052.15
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 9822.76,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3503.97,
+      "in-gaap:FreeCashFlow": 6318.79
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.47,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1304800000,
+      "in-gaap:MarketPriceAtFiling": 460.4,
+      "in-gaap:EarningsPerShareBasic": 53.96,
+      "in-gaap:EarningsPerShareDiluted": 53.96,
+      "in-gaap:TrailingTwelveMonthsEPS": 215.84,
+      "in-gaap:ForwardEPSEstimate": 248.22,
+      "in-gaap:BookValuePerShare": 339.98,
+      "in-gaap:EVToEBITDA": 1.3,
+      "in-gaap:TrailingPE": 2.1,
+      "in-gaap:ForwardPE": 1.8,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.2
+    }
+  }
+}

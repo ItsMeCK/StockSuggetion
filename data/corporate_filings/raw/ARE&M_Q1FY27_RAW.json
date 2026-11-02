@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000034",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ARE&M",
+  "company_details": {
+    "symbol": "ARE&M",
+    "company_name": "Amara Raja Energy & Mobility Ltd.",
+    "isin": "INE885A01032",
+    "cin": "L29100MH2009PLC100034"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814EFU5N96S71",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 40667.82,
+      "in-gaap:OtherIncome": 1220.03,
+      "in-gaap:TotalIncome": 41887.85,
+      "in-gaap:OperatingExpenses": 29095.22,
+      "in-gaap:EBITDA": 11572.6,
+      "in-gaap:DepreciationAndAmortisation": 1851.62,
+      "in-gaap:EBIT": 9720.98,
+      "in-gaap:FinanceCosts": 618.86,
+      "in-gaap:ProfitBeforeTax": 9102.12,
+      "in-gaap:TaxExpense": 2275.53,
+      "in-gaap:ProfitAfterTax": 6826.59
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 123.64,
+      "in-gaap:OtherEquity": 51616.31,
+      "in-gaap:TotalEquity": 51739.95,
+      "in-gaap:TotalDebt": 8577.64,
+      "in-gaap:CashAndCashEquivalents": 4182.13,
+      "in-gaap:TotalCurrentAssets": 20333.91,
+      "in-gaap:TotalCurrentLiabilities": 12200.35,
+      "in-gaap:TotalAssets": 72517.94,
+      "in-gaap:RetainedEarnings": 36217.96
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 8795.18,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2414.78,
+      "in-gaap:FreeCashFlow": 6380.4
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 44.93,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 618200000,
+      "in-gaap:MarketPriceAtFiling": 687.2,
+      "in-gaap:EarningsPerShareBasic": 110.43,
+      "in-gaap:EarningsPerShareDiluted": 110.43,
+      "in-gaap:TrailingTwelveMonthsEPS": 441.72,
+      "in-gaap:ForwardEPSEstimate": 507.98,
+      "in-gaap:BookValuePerShare": 836.95,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.6,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.6
+    }
+  }
+}

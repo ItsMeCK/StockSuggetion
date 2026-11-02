@@ -187,8 +187,9 @@ def execute_trade(
     eval_cash = free_cash if live_buy_flag.lower() == "true" else 10000.0
     from core.db_manager import get_daily_trades_count
     daily_trades_count = get_daily_trades_count()
-    if daily_trades_count >= 5:
-        print(f"🛑 DAILY TRADES CAP: Already reached daily ceiling of {daily_trades_count}/5 trades today. Aborting trade execution.")
+    max_daily_trades = int(os.getenv("MAX_DAILY_TRADES", "9999"))
+    if max_daily_trades > 0 and daily_trades_count >= max_daily_trades:
+        print(f"🛑 DAILY TRADES CAP: Already reached daily ceiling of {daily_trades_count}/{max_daily_trades} trades today. Aborting trade execution.")
         return
 
     is_approved, allocated_capital, gate_reason = gatekeeper.evaluate_entry(
@@ -327,5 +328,32 @@ def execute_trade(
     try:
         save_active_position(position)
         print(f"✅ Position saved to Database: {order_id} (SL: {sl_order_id})")
+        
+        # Dispatch Real-Time Trade Entry Email Notification
+        try:
+            from alerts.email_notifier import SovereignEmailer
+            emailer = SovereignEmailer()
+            mode_label = "LIVE EXCHANGE ORDER" if is_live_order_authorized else "PAPER SIMULATION (₹0 Live Risk)"
+            subject = f"🚀 NEW TRADE ENTRY: {symbol} {option_symbol} ({target_inst_type}) [{mode_label}]"
+            html = f"""
+            <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+                <h3 style="color: #3fb950; margin-top: 0;">⚡ 5-Minute Breakout Execution Fired</h3>
+                <table width="100%" style="color: #c9d1d9; border-collapse: collapse; font-size: 14px;">
+                    <tr><td style="padding: 6px 0; color: #8b949e;">Underlying Stock:</td><td><b>{symbol}</b> (Spot: ₹{spot_price:.2f})</td></tr>
+                    <tr><td style="padding: 6px 0; color: #8b949e;">Option Contract:</td><td><b style="color: #58a6ff;">{option_symbol}</b></td></tr>
+                    <tr><td style="padding: 6px 0; color: #8b949e;">Direction:</td><td><b>{direction} ({target_inst_type})</b></td></tr>
+                    <tr><td style="padding: 6px 0; color: #8b949e;">Entry Premium:</td><td><b style="color: #ffffff;">₹{entry_premium:.2f}</b></td></tr>
+                    <tr><td style="padding: 6px 0; color: #8b949e;">Hard Stop-Loss Floor:</td><td><b style="color: #f85149;">₹{initial_sl_price:.2f}</b> (-15%)</td></tr>
+                    <tr><td style="padding: 6px 0; color: #8b949e;">Target 1 (+20% Profit Lock):</td><td><b style="color: #3fb950;">₹{round(entry_premium * 1.20, 2):.2f}</b></td></tr>
+                    <tr><td style="padding: 6px 0; color: #8b949e;">Target 2 (+35% Runner):</td><td><b style="color: #3fb950;">₹{round(entry_premium * 1.35, 2):.2f}</b></td></tr>
+                    <tr><td style="padding: 6px 0; color: #8b949e;">Execution Engine:</td><td>{engine_type} ({mode_label})</td></tr>
+                    <tr><td style="padding: 6px 0; color: #8b949e;">Catalyst / Reason:</td><td>{catalyst}</td></tr>
+                </table>
+            </div>
+            """
+            emailer.send_live_alert(subject, html)
+            print(f"📧 Trade entry email alert dispatched for {option_symbol}!")
+        except Exception as mail_err:
+            print(f"⚠️ Could not dispatch trade entry email alert: {mail_err}")
     except Exception as e:
         print(f"❌ Failed to save position to DB: {e}")

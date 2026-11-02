@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000138",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_DALBHARAT",
+  "company_details": {
+    "symbol": "DALBHARAT",
+    "company_name": "Dalmia Bharat Ltd.",
+    "isin": "INE00R701025",
+    "cin": "L29100MH1978PLC100138"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "260588146MFAD98LVC",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 277929.19,
+      "in-gaap:OtherIncome": 8337.88,
+      "in-gaap:TotalIncome": 286267.07,
+      "in-gaap:OperatingExpenses": 244374.3,
+      "in-gaap:EBITDA": 33554.89,
+      "in-gaap:DepreciationAndAmortisation": 5368.78,
+      "in-gaap:EBIT": 28186.11,
+      "in-gaap:FinanceCosts": 2222.18,
+      "in-gaap:ProfitBeforeTax": 25963.93,
+      "in-gaap:TaxExpense": 6490.98,
+      "in-gaap:ProfitAfterTax": 19472.95
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 398.84,
+      "in-gaap:OtherEquity": 286369.93,
+      "in-gaap:TotalEquity": 286768.77,
+      "in-gaap:TotalDebt": 5094.33,
+      "in-gaap:CashAndCashEquivalents": 39189.92,
+      "in-gaap:TotalCurrentAssets": 138964.6,
+      "in-gaap:TotalCurrentLiabilities": 83378.76,
+      "in-gaap:TotalAssets": 375241.86,
+      "in-gaap:RetainedEarnings": 200738.14
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 31541.6,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8398.75,
+      "in-gaap:FreeCashFlow": 23142.85
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 63.32,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1994199999,
+      "in-gaap:MarketPriceAtFiling": 1591.3,
+      "in-gaap:EarningsPerShareBasic": 97.65,
+      "in-gaap:EarningsPerShareDiluted": 97.65,
+      "in-gaap:TrailingTwelveMonthsEPS": 390.6,
+      "in-gaap:ForwardEPSEstimate": 449.19,
+      "in-gaap:BookValuePerShare": 1438.01,
+      "in-gaap:EVToEBITDA": 2.1,
+      "in-gaap:TrailingPE": 4.1,
+      "in-gaap:ForwardPE": 3.5,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.3
+    }
+  }
+}

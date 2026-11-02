@@ -1,0 +1,82 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1049880",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_DIXON",
+  "company_details": {
+    "symbol": "DIXON",
+    "company_name": "Dixon Technologies (India) Limited",
+    "isin": "INE935N01020",
+    "cin": "L32101UP1993PLC066581"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-30T18:15:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "SN Dhawan & Co LLP",
+    "firm_registration_number": "000050N/N500045",
+    "signing_partner": "CA. V. K. Dhawan",
+    "membership_number": "089456",
+    "udin": "26089456BKAPQR3344",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 15547.66,
+      "in-gaap:OtherIncome": 528.0,
+      "in-gaap:TotalIncome": 16075.66,
+      "in-gaap:OperatingExpenses": 14950.0,
+      "in-gaap:EBITDA": 597.66,
+      "in-gaap:DepreciationAndAmortisation": 145.0,
+      "in-gaap:EBIT": 452.66,
+      "in-gaap:FinanceCosts": 85.0,
+      "in-gaap:ProfitBeforeTax": 895.66,
+      "in-gaap:TaxExpense": 232.24,
+      "in-gaap:ProfitAfterTax": 663.42
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 11.96,
+      "in-gaap:OtherEquity": 3200.0,
+      "in-gaap:TotalEquity": 3211.96,
+      "in-gaap:TotalDebt": 950.0,
+      "in-gaap:CashAndCashEquivalents": 420.0,
+      "in-gaap:TotalCurrentAssets": 8500.0,
+      "in-gaap:TotalCurrentLiabilities": 6100.0,
+      "in-gaap:TotalAssets": 10500.0,
+      "in-gaap:RetainedEarnings": 2900.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 380.0,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 220.0,
+      "in-gaap:FreeCashFlow": 160.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 33.4,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false,
+      "in-gaap:TradeReceivablesPriorPeriod": 2100.0,
+      "in-gaap:TradeReceivablesCurrentPeriod": 2400.0,
+      "in-gaap:GrossMarginPriorPeriodPercentage": 8.2,
+      "in-gaap:GrossMarginCurrentPeriodPercentage": 8.5,
+      "in-gaap:RevenuePriorPeriod": 12835.0,
+      "in-gaap:PriorPeriodLeverage": 0.3
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 59800000,
+      "in-gaap:MarketPriceAtFiling": 11800.0,
+      "in-gaap:EarningsPerShareBasic": 110.94,
+      "in-gaap:EarningsPerShareDiluted": 110.94,
+      "in-gaap:TrailingTwelveMonthsEPS": 124.0,
+      "in-gaap:ForwardEPSEstimate": 158.0,
+      "in-gaap:BookValuePerShare": 537.1,
+      "in-gaap:EVToEBITDA": 58.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.0
+    }
+  }
+}

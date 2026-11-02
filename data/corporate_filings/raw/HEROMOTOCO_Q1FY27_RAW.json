@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000209",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HEROMOTOCO",
+  "company_details": {
+    "symbol": "HEROMOTOCO",
+    "company_name": "Hero MotoCorp Ltd.",
+    "isin": "INE158A01026",
+    "cin": "L29100MH2004PLC100209"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "261178125BALRBN8B6",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 240322.67,
+      "in-gaap:OtherIncome": 7209.68,
+      "in-gaap:TotalIncome": 247532.35,
+      "in-gaap:OperatingExpenses": 190384.99,
+      "in-gaap:EBITDA": 49937.68,
+      "in-gaap:DepreciationAndAmortisation": 7990.03,
+      "in-gaap:EBIT": 41947.65,
+      "in-gaap:FinanceCosts": 2063.54,
+      "in-gaap:ProfitBeforeTax": 39884.11,
+      "in-gaap:TaxExpense": 9971.03,
+      "in-gaap:ProfitAfterTax": 29913.08
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 203.72,
+      "in-gaap:OtherEquity": 173747.74,
+      "in-gaap:TotalEquity": 173951.46,
+      "in-gaap:TotalDebt": 45166.37,
+      "in-gaap:CashAndCashEquivalents": 24988.3,
+      "in-gaap:TotalCurrentAssets": 120161.34,
+      "in-gaap:TotalCurrentLiabilities": 72096.8,
+      "in-gaap:TotalAssets": 291214.63,
+      "in-gaap:RetainedEarnings": 121766.02
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 43445.78,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 13525.12,
+      "in-gaap:FreeCashFlow": 29920.66
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 70.8,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1018600000,
+      "in-gaap:MarketPriceAtFiling": 5047.0,
+      "in-gaap:EarningsPerShareBasic": 293.67,
+      "in-gaap:EarningsPerShareDiluted": 293.67,
+      "in-gaap:TrailingTwelveMonthsEPS": 1174.68,
+      "in-gaap:ForwardEPSEstimate": 1350.88,
+      "in-gaap:BookValuePerShare": 1707.75,
+      "in-gaap:EVToEBITDA": 2.7,
+      "in-gaap:TrailingPE": 4.3,
+      "in-gaap:ForwardPE": 3.7,
+      "in-gaap:PriceToBook": 3.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.8
+    }
+  }
+}

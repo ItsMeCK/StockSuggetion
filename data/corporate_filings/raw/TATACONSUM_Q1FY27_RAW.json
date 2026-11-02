@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000445",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TATACONSUM",
+  "company_details": {
+    "symbol": "TATACONSUM",
+    "company_name": "Tata Consumer Products Ltd.",
+    "isin": "INE192A01025",
+    "cin": "L29100MH2015PLC100445"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814JJO9MANPV6",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 106482.87,
+      "in-gaap:OtherIncome": 3194.49,
+      "in-gaap:TotalIncome": 109677.36,
+      "in-gaap:OperatingExpenses": 74418.86,
+      "in-gaap:EBITDA": 32064.01,
+      "in-gaap:DepreciationAndAmortisation": 5130.24,
+      "in-gaap:EBIT": 26933.77,
+      "in-gaap:FinanceCosts": 1512.45,
+      "in-gaap:ProfitBeforeTax": 25421.32,
+      "in-gaap:TaxExpense": 6355.33,
+      "in-gaap:ProfitAfterTax": 19065.99
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 196.96,
+      "in-gaap:OtherEquity": 132138.33,
+      "in-gaap:TotalEquity": 132335.29,
+      "in-gaap:TotalDebt": 9742.45,
+      "in-gaap:CashAndCashEquivalents": 22157.82,
+      "in-gaap:TotalCurrentAssets": 53241.43,
+      "in-gaap:TotalCurrentLiabilities": 31944.86,
+      "in-gaap:TotalAssets": 174022.6,
+      "in-gaap:RetainedEarnings": 92634.7
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 24689.29,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 4981.58,
+      "in-gaap:FreeCashFlow": 19707.71
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 62.48,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 984800000,
+      "in-gaap:MarketPriceAtFiling": 963.9,
+      "in-gaap:EarningsPerShareBasic": 193.6,
+      "in-gaap:EarningsPerShareDiluted": 193.6,
+      "in-gaap:TrailingTwelveMonthsEPS": 774.4,
+      "in-gaap:ForwardEPSEstimate": 890.56,
+      "in-gaap:BookValuePerShare": 1343.78,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.2,
+      "in-gaap:ForwardPE": 1.0,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.3
+    }
+  }
+}

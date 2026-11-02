@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000055",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_DMART",
+  "company_details": {
+    "symbol": "DMART",
+    "company_name": "Avenue Supermarts Ltd.",
+    "isin": "INE192R01011",
+    "cin": "L29100MH1985PLC100055"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317ESR189P8MW",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 141654.02,
+      "in-gaap:OtherIncome": 4249.62,
+      "in-gaap:TotalIncome": 145903.64,
+      "in-gaap:OperatingExpenses": 104763.64,
+      "in-gaap:EBITDA": 36890.38,
+      "in-gaap:DepreciationAndAmortisation": 5902.46,
+      "in-gaap:EBIT": 30987.92,
+      "in-gaap:FinanceCosts": 1371.39,
+      "in-gaap:ProfitBeforeTax": 29616.53,
+      "in-gaap:TaxExpense": 7404.13,
+      "in-gaap:ProfitAfterTax": 22212.4
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 82.26,
+      "in-gaap:OtherEquity": 92444.64,
+      "in-gaap:TotalEquity": 92526.9,
+      "in-gaap:TotalDebt": 12926.59,
+      "in-gaap:CashAndCashEquivalents": 12522.15,
+      "in-gaap:TotalCurrentAssets": 70827.01,
+      "in-gaap:TotalCurrentLiabilities": 42496.21,
+      "in-gaap:TotalAssets": 147949.7,
+      "in-gaap:RetainedEarnings": 64768.83
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 30987.92,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8103.34,
+      "in-gaap:FreeCashFlow": 22884.58
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 54.03,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 411300000,
+      "in-gaap:MarketPriceAtFiling": 3157.7,
+      "in-gaap:EarningsPerShareBasic": 540.05,
+      "in-gaap:EarningsPerShareDiluted": 540.05,
+      "in-gaap:TrailingTwelveMonthsEPS": 2160.2,
+      "in-gaap:ForwardEPSEstimate": 2484.23,
+      "in-gaap:BookValuePerShare": 2249.62,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.8
+    }
+  }
+}

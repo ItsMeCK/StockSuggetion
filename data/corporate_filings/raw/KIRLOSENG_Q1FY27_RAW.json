@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000291",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_KIRLOSENG",
+  "company_details": {
+    "symbol": "KIRLOSENG",
+    "company_name": "Kirloskar Oil Eng Ltd.",
+    "isin": "INE146L01010",
+    "cin": "L29100MH1996PLC100291"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826UAKOIW44PI",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 221757.34,
+      "in-gaap:OtherIncome": 6652.72,
+      "in-gaap:TotalIncome": 228410.06,
+      "in-gaap:OperatingExpenses": 156813.68,
+      "in-gaap:EBITDA": 64943.66,
+      "in-gaap:DepreciationAndAmortisation": 10390.99,
+      "in-gaap:EBIT": 54552.67,
+      "in-gaap:FinanceCosts": 2270.76,
+      "in-gaap:ProfitBeforeTax": 52281.91,
+      "in-gaap:TaxExpense": 13070.48,
+      "in-gaap:ProfitAfterTax": 39211.43
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 269.54,
+      "in-gaap:OtherEquity": 287095.16,
+      "in-gaap:TotalEquity": 287364.7,
+      "in-gaap:TotalDebt": 7442.37,
+      "in-gaap:CashAndCashEquivalents": 33223.78,
+      "in-gaap:TotalCurrentAssets": 110878.67,
+      "in-gaap:TotalCurrentLiabilities": 66527.2,
+      "in-gaap:TotalAssets": 361334.27,
+      "in-gaap:RetainedEarnings": 201155.29
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 58449.29,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 11735.96,
+      "in-gaap:FreeCashFlow": 46713.33
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 57.68,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1347700000,
+      "in-gaap:MarketPriceAtFiling": 1784.7,
+      "in-gaap:EarningsPerShareBasic": 290.95,
+      "in-gaap:EarningsPerShareDiluted": 290.95,
+      "in-gaap:TrailingTwelveMonthsEPS": 1163.8,
+      "in-gaap:ForwardEPSEstimate": 1338.37,
+      "in-gaap:BookValuePerShare": 2132.26,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.8
+    }
+  }
+}

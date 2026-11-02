@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000011",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_AAVAS",
+  "company_details": {
+    "symbol": "AAVAS",
+    "company_name": "Aavas Financiers Ltd.",
+    "isin": "INE216P01012",
+    "cin": "L29100MH1986PLC100011"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812TCXBDPYMWE",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 72247.82,
+      "in-gaap:OtherIncome": 2167.43,
+      "in-gaap:TotalIncome": 74415.25,
+      "in-gaap:OperatingExpenses": 59893.46,
+      "in-gaap:EBITDA": 12354.36,
+      "in-gaap:DepreciationAndAmortisation": 1976.7,
+      "in-gaap:EBIT": 10377.66,
+      "in-gaap:FinanceCosts": 359.14,
+      "in-gaap:ProfitBeforeTax": 10018.52,
+      "in-gaap:TaxExpense": 2504.63,
+      "in-gaap:ProfitAfterTax": 7513.89
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 143.6,
+      "in-gaap:OtherEquity": 87328.5,
+      "in-gaap:TotalEquity": 87472.1,
+      "in-gaap:TotalDebt": 4146.62,
+      "in-gaap:CashAndCashEquivalents": 11768.48,
+      "in-gaap:TotalCurrentAssets": 36123.91,
+      "in-gaap:TotalCurrentLiabilities": 21674.35,
+      "in-gaap:TotalAssets": 113293.07,
+      "in-gaap:RetainedEarnings": 61230.47
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 10007.03,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3963.27,
+      "in-gaap:FreeCashFlow": 6043.76
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 56.74,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 718000000,
+      "in-gaap:MarketPriceAtFiling": 1114.1,
+      "in-gaap:EarningsPerShareBasic": 104.65,
+      "in-gaap:EarningsPerShareDiluted": 104.65,
+      "in-gaap:TrailingTwelveMonthsEPS": 418.6,
+      "in-gaap:ForwardEPSEstimate": 481.39,
+      "in-gaap:BookValuePerShare": 1218.27,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.7,
+      "in-gaap:ForwardPE": 2.3,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.2
+    }
+  }
+}

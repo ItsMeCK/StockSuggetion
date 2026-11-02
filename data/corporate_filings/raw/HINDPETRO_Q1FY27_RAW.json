@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000215",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HINDPETRO",
+  "company_details": {
+    "symbol": "HINDPETRO",
+    "company_name": "Hindustan Petroleum Corporation Ltd.",
+    "isin": "INE094A01015",
+    "cin": "L29100MH2010PLC100215"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317SUYAWO4AHG",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 16281.43,
+      "in-gaap:OtherIncome": 488.44,
+      "in-gaap:TotalIncome": 16769.87,
+      "in-gaap:OperatingExpenses": 13104.14,
+      "in-gaap:EBITDA": 3177.29,
+      "in-gaap:DepreciationAndAmortisation": 508.37,
+      "in-gaap:EBIT": 2668.92,
+      "in-gaap:FinanceCosts": 94.28,
+      "in-gaap:ProfitBeforeTax": 2574.64,
+      "in-gaap:TaxExpense": 643.66,
+      "in-gaap:ProfitAfterTax": 1930.98
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 196.78,
+      "in-gaap:OtherEquity": 13846.95,
+      "in-gaap:TotalEquity": 14043.73,
+      "in-gaap:TotalDebt": 1295.42,
+      "in-gaap:CashAndCashEquivalents": 3304.77,
+      "in-gaap:TotalCurrentAssets": 8140.72,
+      "in-gaap:TotalCurrentLiabilities": 4884.43,
+      "in-gaap:TotalAssets": 20223.58,
+      "in-gaap:RetainedEarnings": 9830.61
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 2986.65,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1094.83,
+      "in-gaap:FreeCashFlow": 1891.82
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 64.88,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 983900000,
+      "in-gaap:MarketPriceAtFiling": 338.3,
+      "in-gaap:EarningsPerShareBasic": 19.63,
+      "in-gaap:EarningsPerShareDiluted": 19.63,
+      "in-gaap:TrailingTwelveMonthsEPS": 78.52,
+      "in-gaap:ForwardEPSEstimate": 90.3,
+      "in-gaap:BookValuePerShare": 142.74,
+      "in-gaap:EVToEBITDA": 2.5,
+      "in-gaap:TrailingPE": 4.3,
+      "in-gaap:ForwardPE": 3.7,
+      "in-gaap:PriceToBook": 2.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.5
+    }
+  }
+}

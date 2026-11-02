@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000229",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_IDFCFIRSTB",
+  "company_details": {
+    "symbol": "IDFCFIRSTB",
+    "company_name": "IDFC First Bank Ltd.",
+    "isin": "INE092T01019",
+    "cin": "L65191MH2009PLC100229"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812KWP6DFSGLZ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 125.41,
+      "in-gaap:OtherIncome": 43.89,
+      "in-gaap:OperatingExpenses": 71.11,
+      "in-gaap:OperatingProfit": 98.19,
+      "in-gaap:ProvisionsAndContingencies": 24.87,
+      "in-gaap:ProfitBeforeTax": 73.32,
+      "in-gaap:TaxExpense": 18.33,
+      "in-gaap:ProfitAfterTax": 54.99
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 60.52,
+      "in-gaap:ReservesAndSurplus": 1875.05,
+      "in-gaap:TotalEquity": 1935.57,
+      "in-gaap:TotalDeposits": 12903.81,
+      "in-gaap:CasaDeposits": 5690.58,
+      "in-gaap:TotalAdvances": 9946.26,
+      "in-gaap:TotalAssets": 16129.76
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 141.24,
+      "in-gaap:NetNPA": 42.77,
+      "in-gaap:CapitalAdequacyRatioCRAR": 17.9,
+      "in-gaap:Tier1CapitalRatio": 15.9
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 49.08,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 302600000,
+      "in-gaap:MarketPriceAtFiling": 72.3,
+      "in-gaap:EarningsPerShareBasic": 1.82,
+      "in-gaap:EarningsPerShareDiluted": 1.82,
+      "in-gaap:TrailingTwelveMonthsEPS": 7.28,
+      "in-gaap:ForwardEPSEstimate": 8.37,
+      "in-gaap:BookValuePerShare": 63.96,
+      "in-gaap:TrailingPE": 9.9,
+      "in-gaap:ForwardPE": 8.4,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.7
+    }
+  }
+}

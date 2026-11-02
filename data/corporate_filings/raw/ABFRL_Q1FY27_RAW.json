@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000022",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ABFRL",
+  "company_details": {
+    "symbol": "ABFRL",
+    "company_name": "Aditya Birla Fashion and Retail Ltd.",
+    "isin": "INE647O01011",
+    "cin": "L29100MH1997PLC100022"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987NLRD3BZ1PD",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 757.57,
+      "in-gaap:OtherIncome": 22.73,
+      "in-gaap:TotalIncome": 780.3,
+      "in-gaap:OperatingExpenses": 541.36,
+      "in-gaap:EBITDA": 216.21,
+      "in-gaap:DepreciationAndAmortisation": 34.59,
+      "in-gaap:EBIT": 181.62,
+      "in-gaap:FinanceCosts": 21.84,
+      "in-gaap:ProfitBeforeTax": 159.78,
+      "in-gaap:TaxExpense": 39.95,
+      "in-gaap:ProfitAfterTax": 119.84
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 89.5,
+      "in-gaap:OtherEquity": 588.39,
+      "in-gaap:TotalEquity": 677.89,
+      "in-gaap:TotalDebt": 249.2,
+      "in-gaap:CashAndCashEquivalents": 134.79,
+      "in-gaap:TotalCurrentAssets": 378.79,
+      "in-gaap:TotalCurrentLiabilities": 227.27,
+      "in-gaap:TotalAssets": 1154.36,
+      "in-gaap:RetainedEarnings": 474.52
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 172.97,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 44.89,
+      "in-gaap:FreeCashFlow": 128.08
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 56.6,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 447500000,
+      "in-gaap:MarketPriceAtFiling": 39.77,
+      "in-gaap:EarningsPerShareBasic": 2.68,
+      "in-gaap:EarningsPerShareDiluted": 2.68,
+      "in-gaap:TrailingTwelveMonthsEPS": 10.72,
+      "in-gaap:ForwardEPSEstimate": 12.33,
+      "in-gaap:BookValuePerShare": 15.15,
+      "in-gaap:EVToEBITDA": 2.2,
+      "in-gaap:TrailingPE": 3.7,
+      "in-gaap:ForwardPE": 3.1,
+      "in-gaap:PriceToBook": 2.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.4
+    }
+  }
+}

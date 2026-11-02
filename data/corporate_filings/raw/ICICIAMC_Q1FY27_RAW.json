@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000226",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ICICIAMC",
+  "company_details": {
+    "symbol": "ICICIAMC",
+    "company_name": "ICICI Prudential Asset Management Company Ltd.",
+    "isin": "INE346A01027",
+    "cin": "L29100MH1976PLC100226"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190ZH9EK9R6NN",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 323780.92,
+      "in-gaap:OtherIncome": 9713.43,
+      "in-gaap:TotalIncome": 333494.35,
+      "in-gaap:OperatingExpenses": 255321.1,
+      "in-gaap:EBITDA": 68459.82,
+      "in-gaap:DepreciationAndAmortisation": 10953.57,
+      "in-gaap:EBIT": 57506.25,
+      "in-gaap:FinanceCosts": 2281.99,
+      "in-gaap:ProfitBeforeTax": 55224.26,
+      "in-gaap:TaxExpense": 13806.07,
+      "in-gaap:ProfitAfterTax": 41418.19
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 243.64,
+      "in-gaap:OtherEquity": 413129.63,
+      "in-gaap:TotalEquity": 413373.27,
+      "in-gaap:TotalDebt": 53963.88,
+      "in-gaap:CashAndCashEquivalents": 68683.29,
+      "in-gaap:TotalCurrentAssets": 161890.46,
+      "in-gaap:TotalCurrentLiabilities": 97134.28,
+      "in-gaap:TotalAssets": 564471.43,
+      "in-gaap:RetainedEarnings": 289361.29
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 58875.45,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 18449.74,
+      "in-gaap:FreeCashFlow": 40425.71
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 49.81,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1218200000,
+      "in-gaap:MarketPriceAtFiling": 2651.8,
+      "in-gaap:EarningsPerShareBasic": 339.99,
+      "in-gaap:EarningsPerShareDiluted": 339.99,
+      "in-gaap:TrailingTwelveMonthsEPS": 1359.96,
+      "in-gaap:ForwardEPSEstimate": 1563.95,
+      "in-gaap:BookValuePerShare": 3393.31,
+      "in-gaap:EVToEBITDA": 1.1,
+      "in-gaap:TrailingPE": 1.9,
+      "in-gaap:ForwardPE": 1.6,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.5
+    }
+  }
+}

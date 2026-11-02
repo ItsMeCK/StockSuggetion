@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000288",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_KAYNES",
+  "company_details": {
+    "symbol": "KAYNES",
+    "company_name": "Kaynes Technology India Ltd.",
+    "isin": "INE918Z01012",
+    "cin": "L29100MH1993PLC100288"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812GMD1V0JNA2",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 363987.27,
+      "in-gaap:OtherIncome": 10919.62,
+      "in-gaap:TotalIncome": 374906.89,
+      "in-gaap:OperatingExpenses": 299374.13,
+      "in-gaap:EBITDA": 64613.14,
+      "in-gaap:DepreciationAndAmortisation": 10338.1,
+      "in-gaap:EBIT": 54275.04,
+      "in-gaap:FinanceCosts": 3473.82,
+      "in-gaap:ProfitBeforeTax": 50801.22,
+      "in-gaap:TaxExpense": 12700.31,
+      "in-gaap:ProfitAfterTax": 38100.92
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 483.82,
+      "in-gaap:OtherEquity": 269251.27,
+      "in-gaap:TotalEquity": 269735.09,
+      "in-gaap:TotalDebt": 21538.46,
+      "in-gaap:CashAndCashEquivalents": 46901.46,
+      "in-gaap:TotalCurrentAssets": 181993.64,
+      "in-gaap:TotalCurrentLiabilities": 109196.18,
+      "in-gaap:TotalAssets": 400469.73,
+      "in-gaap:RetainedEarnings": 188814.56
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 60736.35,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 23468.87,
+      "in-gaap:FreeCashFlow": 37267.48
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 49.36,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2419100000,
+      "in-gaap:MarketPriceAtFiling": 3187.9,
+      "in-gaap:EarningsPerShareBasic": 157.5,
+      "in-gaap:EarningsPerShareDiluted": 157.5,
+      "in-gaap:TrailingTwelveMonthsEPS": 630.0,
+      "in-gaap:ForwardEPSEstimate": 724.5,
+      "in-gaap:BookValuePerShare": 1115.02,
+      "in-gaap:EVToEBITDA": 2.9,
+      "in-gaap:TrailingPE": 5.1,
+      "in-gaap:ForwardPE": 4.3,
+      "in-gaap:PriceToBook": 2.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.9
+    }
+  }
+}

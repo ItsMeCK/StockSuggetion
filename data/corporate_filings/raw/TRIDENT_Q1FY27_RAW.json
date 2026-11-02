@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000470",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TRIDENT",
+  "company_details": {
+    "symbol": "TRIDENT",
+    "company_name": "Trident Ltd.",
+    "isin": "INE064C01022",
+    "cin": "L29100MH1995PLC100470"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556NGY9MPXU1F",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 4780.16,
+      "in-gaap:OtherIncome": 143.4,
+      "in-gaap:TotalIncome": 4923.56,
+      "in-gaap:OperatingExpenses": 3627.13,
+      "in-gaap:EBITDA": 1153.03,
+      "in-gaap:DepreciationAndAmortisation": 184.48,
+      "in-gaap:EBIT": 968.55,
+      "in-gaap:FinanceCosts": 48.45,
+      "in-gaap:ProfitBeforeTax": 920.1,
+      "in-gaap:TaxExpense": 230.03,
+      "in-gaap:ProfitAfterTax": 690.08
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 287.36,
+      "in-gaap:OtherEquity": 3629.94,
+      "in-gaap:TotalEquity": 3917.3,
+      "in-gaap:TotalDebt": 741.67,
+      "in-gaap:CashAndCashEquivalents": 918.96,
+      "in-gaap:TotalCurrentAssets": 2390.08,
+      "in-gaap:TotalCurrentLiabilities": 1434.05,
+      "in-gaap:TotalAssets": 6093.02,
+      "in-gaap:RetainedEarnings": 2742.11
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1003.14,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 241.16,
+      "in-gaap:FreeCashFlow": 761.98
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 53.72,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1436800000,
+      "in-gaap:MarketPriceAtFiling": 20.49,
+      "in-gaap:EarningsPerShareBasic": 4.8,
+      "in-gaap:EarningsPerShareDiluted": 4.8,
+      "in-gaap:TrailingTwelveMonthsEPS": 19.2,
+      "in-gaap:ForwardEPSEstimate": 22.08,
+      "in-gaap:BookValuePerShare": 27.26,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.2
+    }
+  }
+}

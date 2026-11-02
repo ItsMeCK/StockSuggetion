@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000078",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BHEL",
+  "company_details": {
+    "symbol": "BHEL",
+    "company_name": "Bharat Heavy Electricals Ltd.",
+    "isin": "INE257A01026",
+    "cin": "L29100MH2008PLC100078"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "260588141IIUABWLO5",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 23928.71,
+      "in-gaap:OtherIncome": 717.86,
+      "in-gaap:TotalIncome": 24646.57,
+      "in-gaap:OperatingExpenses": 20270.39,
+      "in-gaap:EBITDA": 3658.32,
+      "in-gaap:DepreciationAndAmortisation": 585.33,
+      "in-gaap:EBIT": 3072.99,
+      "in-gaap:FinanceCosts": 123.59,
+      "in-gaap:ProfitBeforeTax": 2949.4,
+      "in-gaap:TaxExpense": 737.35,
+      "in-gaap:ProfitAfterTax": 2212.05
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 103.14,
+      "in-gaap:OtherEquity": 15998.83,
+      "in-gaap:TotalEquity": 16101.97,
+      "in-gaap:TotalDebt": 2041.36,
+      "in-gaap:CashAndCashEquivalents": 3932.93,
+      "in-gaap:TotalCurrentAssets": 11964.35,
+      "in-gaap:TotalCurrentLiabilities": 7178.61,
+      "in-gaap:TotalAssets": 25321.94,
+      "in-gaap:RetainedEarnings": 11271.38
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 2853.49,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 583.39,
+      "in-gaap:FreeCashFlow": 2270.1
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 64.92,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 515700000,
+      "in-gaap:MarketPriceAtFiling": 387.5,
+      "in-gaap:EarningsPerShareBasic": 42.89,
+      "in-gaap:EarningsPerShareDiluted": 42.89,
+      "in-gaap:TrailingTwelveMonthsEPS": 171.56,
+      "in-gaap:ForwardEPSEstimate": 197.29,
+      "in-gaap:BookValuePerShare": 312.24,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 2.3,
+      "in-gaap:ForwardPE": 2.0,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.9
+    }
+  }
+}

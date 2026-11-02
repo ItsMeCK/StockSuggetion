@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000443",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TATACOMM",
+  "company_details": {
+    "symbol": "TATACOMM",
+    "company_name": "Tata Communications Ltd.",
+    "isin": "INE151A01013",
+    "cin": "L29100MH2013PLC100443"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "260421909Z7XJSCORW",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 149738.95,
+      "in-gaap:OtherIncome": 4492.17,
+      "in-gaap:TotalIncome": 154231.12,
+      "in-gaap:OperatingExpenses": 119954.27,
+      "in-gaap:EBITDA": 29784.68,
+      "in-gaap:DepreciationAndAmortisation": 4765.55,
+      "in-gaap:EBIT": 25019.13,
+      "in-gaap:FinanceCosts": 1972.5,
+      "in-gaap:ProfitBeforeTax": 23046.63,
+      "in-gaap:TaxExpense": 5761.66,
+      "in-gaap:ProfitAfterTax": 17284.97
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 123.52,
+      "in-gaap:OtherEquity": 149598.41,
+      "in-gaap:TotalEquity": 149721.93,
+      "in-gaap:TotalDebt": 25841.4,
+      "in-gaap:CashAndCashEquivalents": 31048.78,
+      "in-gaap:TotalCurrentAssets": 74869.48,
+      "in-gaap:TotalCurrentLiabilities": 44921.69,
+      "in-gaap:TotalAssets": 220485.01,
+      "in-gaap:RetainedEarnings": 104805.35
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 25614.82,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 5386.96,
+      "in-gaap:FreeCashFlow": 20227.86
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 39.69,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 617600000,
+      "in-gaap:MarketPriceAtFiling": 1654.4,
+      "in-gaap:EarningsPerShareBasic": 279.87,
+      "in-gaap:EarningsPerShareDiluted": 279.87,
+      "in-gaap:TrailingTwelveMonthsEPS": 1119.48,
+      "in-gaap:ForwardEPSEstimate": 1287.4,
+      "in-gaap:BookValuePerShare": 2424.25,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.9
+    }
+  }
+}

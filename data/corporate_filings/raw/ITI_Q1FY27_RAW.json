@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000236",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ITI",
+  "company_details": {
+    "symbol": "ITI",
+    "company_name": "ITI Ltd.",
+    "isin": "INE248A01017",
+    "cin": "L29100MH1986PLC100236"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "261178129MGQQ3FET4",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 65131.21,
+      "in-gaap:OtherIncome": 1953.94,
+      "in-gaap:TotalIncome": 67085.15,
+      "in-gaap:OperatingExpenses": 50217.58,
+      "in-gaap:EBITDA": 14913.63,
+      "in-gaap:DepreciationAndAmortisation": 2386.18,
+      "in-gaap:EBIT": 12527.45,
+      "in-gaap:FinanceCosts": 720.47,
+      "in-gaap:ProfitBeforeTax": 11806.98,
+      "in-gaap:TaxExpense": 2951.74,
+      "in-gaap:ProfitAfterTax": 8855.24
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 468.96,
+      "in-gaap:OtherEquity": 48724.31,
+      "in-gaap:TotalEquity": 49193.27,
+      "in-gaap:TotalDebt": 9234.03,
+      "in-gaap:CashAndCashEquivalents": 11184.33,
+      "in-gaap:TotalCurrentAssets": 32565.6,
+      "in-gaap:TotalCurrentLiabilities": 19539.36,
+      "in-gaap:TotalAssets": 77966.66,
+      "in-gaap:RetainedEarnings": 34435.29
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 12229.18,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 4228.69,
+      "in-gaap:FreeCashFlow": 8000.49
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 43.48,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2344800000,
+      "in-gaap:MarketPriceAtFiling": 215.38,
+      "in-gaap:EarningsPerShareBasic": 37.77,
+      "in-gaap:EarningsPerShareDiluted": 37.77,
+      "in-gaap:TrailingTwelveMonthsEPS": 151.08,
+      "in-gaap:ForwardEPSEstimate": 173.74,
+      "in-gaap:BookValuePerShare": 209.8,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.4,
+      "in-gaap:ForwardPE": 1.2,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.2
+    }
+  }
+}

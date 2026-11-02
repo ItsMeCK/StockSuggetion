@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000001",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_3MINDIA",
+  "company_details": {
+    "symbol": "3MINDIA",
+    "company_name": "3M India Ltd.",
+    "isin": "INE470A01017",
+    "cin": "L29100MH1976PLC100001"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556XF4NQFC11E",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 3866558.01,
+      "in-gaap:OtherIncome": 115996.74,
+      "in-gaap:TotalIncome": 3982554.75,
+      "in-gaap:OperatingExpenses": 3149287.62,
+      "in-gaap:EBITDA": 717270.39,
+      "in-gaap:DepreciationAndAmortisation": 114763.26,
+      "in-gaap:EBIT": 602507.13,
+      "in-gaap:FinanceCosts": 41460.72,
+      "in-gaap:ProfitBeforeTax": 561046.41,
+      "in-gaap:TaxExpense": 140261.6,
+      "in-gaap:ProfitAfterTax": 420784.81
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 266.2,
+      "in-gaap:OtherEquity": 5320230.33,
+      "in-gaap:TotalEquity": 5320496.53,
+      "in-gaap:TotalDebt": 356929.03,
+      "in-gaap:CashAndCashEquivalents": 583504.77,
+      "in-gaap:TotalCurrentAssets": 1933279.0,
+      "in-gaap:TotalCurrentLiabilities": 1159967.4,
+      "in-gaap:TotalAssets": 6837392.96,
+      "in-gaap:RetainedEarnings": 3724347.57
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 588161.72,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 145290.0,
+      "in-gaap:FreeCashFlow": 442871.72
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 69.48,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1331000000,
+      "in-gaap:MarketPriceAtFiling": 28815.0,
+      "in-gaap:EarningsPerShareBasic": 3161.42,
+      "in-gaap:EarningsPerShareDiluted": 3161.42,
+      "in-gaap:TrailingTwelveMonthsEPS": 12645.68,
+      "in-gaap:ForwardEPSEstimate": 14542.53,
+      "in-gaap:BookValuePerShare": 39973.68,
+      "in-gaap:EVToEBITDA": 1.3,
+      "in-gaap:TrailingPE": 2.3,
+      "in-gaap:ForwardPE": 2.0,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.4
+    }
+  }
+}

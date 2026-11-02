@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000349",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_NIVABUPA",
+  "company_details": {
+    "symbol": "NIVABUPA",
+    "company_name": "Niva Bupa Health Insurance Company Ltd.",
+    "isin": "INE995S01015",
+    "cin": "L65191MH2009PLC100349"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "260229873WXFEB3ZV6",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 982.07,
+      "in-gaap:OtherIncome": 343.72,
+      "in-gaap:OperatingExpenses": 556.83,
+      "in-gaap:OperatingProfit": 768.96,
+      "in-gaap:ProvisionsAndContingencies": 162.1,
+      "in-gaap:ProfitBeforeTax": 606.86,
+      "in-gaap:TaxExpense": 151.72,
+      "in-gaap:ProfitAfterTax": 455.14
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 387.04,
+      "in-gaap:ReservesAndSurplus": 12083.65,
+      "in-gaap:TotalEquity": 12470.69,
+      "in-gaap:TotalDeposits": 83137.91,
+      "in-gaap:CasaDeposits": 36996.37,
+      "in-gaap:TotalAdvances": 64839.26,
+      "in-gaap:TotalAssets": 103922.39
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 1977.6,
+      "in-gaap:NetNPA": 590.04,
+      "in-gaap:CapitalAdequacyRatioCRAR": 15.2,
+      "in-gaap:Tier1CapitalRatio": 13.2
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 7.79,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1935200000,
+      "in-gaap:MarketPriceAtFiling": 71.93,
+      "in-gaap:EarningsPerShareBasic": 2.35,
+      "in-gaap:EarningsPerShareDiluted": 2.35,
+      "in-gaap:TrailingTwelveMonthsEPS": 9.4,
+      "in-gaap:ForwardEPSEstimate": 10.81,
+      "in-gaap:BookValuePerShare": 64.44,
+      "in-gaap:TrailingPE": 7.7,
+      "in-gaap:ForwardPE": 6.5,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.3
+    }
+  }
+}

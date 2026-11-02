@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000161",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ENGINERSIN",
+  "company_details": {
+    "symbol": "ENGINERSIN",
+    "company_name": "Engineers India Ltd.",
+    "isin": "INE510A01028",
+    "cin": "L29100MH2001PLC100161"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556FZTVFVS6J7",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 39841.2,
+      "in-gaap:OtherIncome": 1195.24,
+      "in-gaap:TotalIncome": 41036.44,
+      "in-gaap:OperatingExpenses": 30937.0,
+      "in-gaap:EBITDA": 8904.2,
+      "in-gaap:DepreciationAndAmortisation": 1424.67,
+      "in-gaap:EBIT": 7479.53,
+      "in-gaap:FinanceCosts": 729.85,
+      "in-gaap:ProfitBeforeTax": 6749.68,
+      "in-gaap:TaxExpense": 1687.42,
+      "in-gaap:ProfitAfterTax": 5062.26
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 184.54,
+      "in-gaap:OtherEquity": 26456.48,
+      "in-gaap:TotalEquity": 26641.02,
+      "in-gaap:TotalDebt": 1287.4,
+      "in-gaap:CashAndCashEquivalents": 9721.26,
+      "in-gaap:TotalCurrentAssets": 19920.6,
+      "in-gaap:TotalCurrentLiabilities": 11952.36,
+      "in-gaap:TotalAssets": 39880.78,
+      "in-gaap:RetainedEarnings": 18648.71
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 7746.65,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2750.74,
+      "in-gaap:FreeCashFlow": 4995.91
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 64.85,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 922700000,
+      "in-gaap:MarketPriceAtFiling": 242.5,
+      "in-gaap:EarningsPerShareBasic": 54.86,
+      "in-gaap:EarningsPerShareDiluted": 54.86,
+      "in-gaap:TrailingTwelveMonthsEPS": 219.44,
+      "in-gaap:ForwardEPSEstimate": 252.36,
+      "in-gaap:BookValuePerShare": 288.73,
+      "in-gaap:EVToEBITDA": 0.4,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.2
+    }
+  }
+}

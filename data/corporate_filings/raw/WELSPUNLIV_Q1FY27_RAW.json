@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000492",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_WELSPUNLIV",
+  "company_details": {
+    "symbol": "WELSPUNLIV",
+    "company_name": "Welspun Living Ltd.",
+    "isin": "INE192B01031",
+    "cin": "L29100MH2017PLC100492"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556ZYEWPT8OQ7",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 47488.95,
+      "in-gaap:OtherIncome": 1424.67,
+      "in-gaap:TotalIncome": 48913.62,
+      "in-gaap:OperatingExpenses": 38775.2,
+      "in-gaap:EBITDA": 8713.75,
+      "in-gaap:DepreciationAndAmortisation": 1394.2,
+      "in-gaap:EBIT": 7319.55,
+      "in-gaap:FinanceCosts": 414.94,
+      "in-gaap:ProfitBeforeTax": 6904.61,
+      "in-gaap:TaxExpense": 1726.15,
+      "in-gaap:ProfitAfterTax": 5178.46
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 313.72,
+      "in-gaap:OtherEquity": 63998.19,
+      "in-gaap:TotalEquity": 64311.91,
+      "in-gaap:TotalDebt": 9343.29,
+      "in-gaap:CashAndCashEquivalents": 5409.66,
+      "in-gaap:TotalCurrentAssets": 23744.47,
+      "in-gaap:TotalCurrentLiabilities": 14246.68,
+      "in-gaap:TotalAssets": 87901.89,
+      "in-gaap:RetainedEarnings": 45018.34
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 8278.06,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1734.65,
+      "in-gaap:FreeCashFlow": 6543.41
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.02,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1568600000,
+      "in-gaap:MarketPriceAtFiling": 209.92,
+      "in-gaap:EarningsPerShareBasic": 33.01,
+      "in-gaap:EarningsPerShareDiluted": 33.01,
+      "in-gaap:TrailingTwelveMonthsEPS": 132.04,
+      "in-gaap:ForwardEPSEstimate": 151.85,
+      "in-gaap:BookValuePerShare": 410.0,
+      "in-gaap:EVToEBITDA": 1.1,
+      "in-gaap:TrailingPE": 1.6,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.1
+    }
+  }
+}

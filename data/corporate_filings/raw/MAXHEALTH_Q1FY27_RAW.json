@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000322",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MAXHEALTH",
+  "company_details": {
+    "symbol": "MAXHEALTH",
+    "company_name": "Max Healthcare Institute Ltd.",
+    "isin": "INE027H01010",
+    "cin": "L29100MH1982PLC100322"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556OGGYMAL2QY",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 238945.72,
+      "in-gaap:OtherIncome": 7168.37,
+      "in-gaap:TotalIncome": 246114.09,
+      "in-gaap:OperatingExpenses": 197298.37,
+      "in-gaap:EBITDA": 41647.35,
+      "in-gaap:DepreciationAndAmortisation": 6663.58,
+      "in-gaap:EBIT": 34983.77,
+      "in-gaap:FinanceCosts": 1659.26,
+      "in-gaap:ProfitBeforeTax": 33324.51,
+      "in-gaap:TaxExpense": 8331.13,
+      "in-gaap:ProfitAfterTax": 24993.38
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 441.46,
+      "in-gaap:OtherEquity": 224121.82,
+      "in-gaap:TotalEquity": 224563.28,
+      "in-gaap:TotalDebt": 7226.66,
+      "in-gaap:CashAndCashEquivalents": 20439.33,
+      "in-gaap:TotalCurrentAssets": 119472.86,
+      "in-gaap:TotalCurrentLiabilities": 71683.72,
+      "in-gaap:TotalAssets": 303473.66,
+      "in-gaap:RetainedEarnings": 157194.3
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 36649.67,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8895.43,
+      "in-gaap:FreeCashFlow": 27754.24
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 51.05,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2207300000,
+      "in-gaap:MarketPriceAtFiling": 815.0,
+      "in-gaap:EarningsPerShareBasic": 113.23,
+      "in-gaap:EarningsPerShareDiluted": 113.23,
+      "in-gaap:TrailingTwelveMonthsEPS": 452.92,
+      "in-gaap:ForwardEPSEstimate": 520.86,
+      "in-gaap:BookValuePerShare": 1017.37,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.3
+    }
+  }
+}

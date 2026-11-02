@@ -148,8 +148,8 @@ class DynamicOptionExitEngine:
                 new_sl=be_sl
             )
 
-        # 5. Tier 4: Time-Stop Cut after 90 minutes of stagnation
-        if now:
+        # 5. Tier 4: Time-Stop Cut after 90 minutes of stagnation (Applies only to intraday scalps; BTST positions are held overnight)
+        if now and pos.get("holding_type") != "TYPE_C_BTST":
             entry_time = pos.get("entry_time")
             if entry_time:
                 if isinstance(entry_time, str):

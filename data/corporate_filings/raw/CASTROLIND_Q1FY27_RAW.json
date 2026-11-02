@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000106",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CASTROLIND",
+  "company_details": {
+    "symbol": "CASTROLIND",
+    "company_name": "Castrol India Ltd.",
+    "isin": "INE172A01027",
+    "cin": "L29100MH1991PLC100106"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "260398267KQD374A2A",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 26525.47,
+      "in-gaap:OtherIncome": 795.76,
+      "in-gaap:TotalIncome": 27321.23,
+      "in-gaap:OperatingExpenses": 19131.59,
+      "in-gaap:EBITDA": 7393.88,
+      "in-gaap:DepreciationAndAmortisation": 1183.02,
+      "in-gaap:EBIT": 6210.86,
+      "in-gaap:FinanceCosts": 450.85,
+      "in-gaap:ProfitBeforeTax": 5760.01,
+      "in-gaap:TaxExpense": 1440.0,
+      "in-gaap:ProfitAfterTax": 4320.01
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 154.26,
+      "in-gaap:OtherEquity": 32607.68,
+      "in-gaap:TotalEquity": 32761.94,
+      "in-gaap:TotalDebt": 7534.27,
+      "in-gaap:CashAndCashEquivalents": 3329.47,
+      "in-gaap:TotalCurrentAssets": 13262.74,
+      "in-gaap:TotalCurrentLiabilities": 7957.64,
+      "in-gaap:TotalAssets": 48253.85,
+      "in-gaap:RetainedEarnings": 22933.36
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 6728.43,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1636.12,
+      "in-gaap:FreeCashFlow": 5092.31
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 42.97,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 771300000,
+      "in-gaap:MarketPriceAtFiling": 194.64,
+      "in-gaap:EarningsPerShareBasic": 56.01,
+      "in-gaap:EarningsPerShareDiluted": 56.01,
+      "in-gaap:TrailingTwelveMonthsEPS": 224.04,
+      "in-gaap:ForwardEPSEstimate": 257.65,
+      "in-gaap:BookValuePerShare": 424.76,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 0.9,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.1
+    }
+  }
+}

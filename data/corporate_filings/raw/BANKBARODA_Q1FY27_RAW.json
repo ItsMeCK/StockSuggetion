@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000068",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BANKBARODA",
+  "company_details": {
+    "symbol": "BANKBARODA",
+    "company_name": "Bank of Baroda",
+    "isin": "INE028A01039",
+    "cin": "L65191MH2008PLC100068"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987T7OIHVRPLU",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 1858.07,
+      "in-gaap:OtherIncome": 650.32,
+      "in-gaap:OperatingExpenses": 1053.52,
+      "in-gaap:OperatingProfit": 1454.87,
+      "in-gaap:ProvisionsAndContingencies": 334.27,
+      "in-gaap:ProfitBeforeTax": 1120.6,
+      "in-gaap:TaxExpense": 280.15,
+      "in-gaap:ProfitAfterTax": 840.45
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 256.76,
+      "in-gaap:ReservesAndSurplus": 24586.47,
+      "in-gaap:TotalEquity": 24843.23,
+      "in-gaap:TotalDeposits": 165621.53,
+      "in-gaap:CasaDeposits": 77179.63,
+      "in-gaap:TotalAdvances": 133706.26,
+      "in-gaap:TotalAssets": 207026.91
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 2687.5,
+      "in-gaap:NetNPA": 802.24,
+      "in-gaap:CapitalAdequacyRatioCRAR": 20.6,
+      "in-gaap:Tier1CapitalRatio": 18.6
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 10.71,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1283800000,
+      "in-gaap:MarketPriceAtFiling": 230.9,
+      "in-gaap:EarningsPerShareBasic": 6.55,
+      "in-gaap:EarningsPerShareDiluted": 6.55,
+      "in-gaap:TrailingTwelveMonthsEPS": 26.2,
+      "in-gaap:ForwardEPSEstimate": 30.13,
+      "in-gaap:BookValuePerShare": 193.51,
+      "in-gaap:TrailingPE": 8.8,
+      "in-gaap:ForwardPE": 7.5,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.6
+    }
+  }
+}

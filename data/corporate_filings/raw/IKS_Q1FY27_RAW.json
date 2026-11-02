@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000257",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_IKS",
+  "company_details": {
+    "symbol": "IKS",
+    "company_name": "Inventurus Knowledge Solutions Ltd.",
+    "isin": "INE115Q01022",
+    "cin": "L29100MH2007PLC100257"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-17T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987RNPB1LYRHE",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 589618.04,
+      "in-gaap:OtherIncome": 17688.54,
+      "in-gaap:TotalIncome": 607306.58,
+      "in-gaap:OperatingExpenses": 452451.71,
+      "in-gaap:EBITDA": 137166.33,
+      "in-gaap:DepreciationAndAmortisation": 21946.61,
+      "in-gaap:EBIT": 115219.72,
+      "in-gaap:FinanceCosts": 5836.87,
+      "in-gaap:ProfitBeforeTax": 109382.85,
+      "in-gaap:TaxExpense": 27345.71,
+      "in-gaap:ProfitAfterTax": 82037.14
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 411.02,
+      "in-gaap:OtherEquity": 667355.73,
+      "in-gaap:TotalEquity": 667766.75,
+      "in-gaap:TotalDebt": 60915.38,
+      "in-gaap:CashAndCashEquivalents": 107205.95,
+      "in-gaap:TotalCurrentAssets": 294809.02,
+      "in-gaap:TotalCurrentLiabilities": 176885.41,
+      "in-gaap:TotalAssets": 905567.54,
+      "in-gaap:RetainedEarnings": 467436.72
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 109733.06,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 30282.1,
+      "in-gaap:FreeCashFlow": 79450.96
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 36.89,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2055100000,
+      "in-gaap:MarketPriceAtFiling": 1618.0,
+      "in-gaap:EarningsPerShareBasic": 399.19,
+      "in-gaap:EarningsPerShareDiluted": 399.19,
+      "in-gaap:TrailingTwelveMonthsEPS": 1596.76,
+      "in-gaap:ForwardEPSEstimate": 1836.27,
+      "in-gaap:BookValuePerShare": 3249.32,
+      "in-gaap:EVToEBITDA": 0.5,
+      "in-gaap:TrailingPE": 1.0,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.4
+    }
+  }
+}

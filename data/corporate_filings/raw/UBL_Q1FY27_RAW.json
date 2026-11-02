@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000479",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_UBL",
+  "company_details": {
+    "symbol": "UBL",
+    "company_name": "United Breweries Ltd.",
+    "isin": "INE686F01025",
+    "cin": "L29100MH2004PLC100479"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190Y7A9WO5U3U",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 383328.06,
+      "in-gaap:OtherIncome": 11499.84,
+      "in-gaap:TotalIncome": 394827.9,
+      "in-gaap:OperatingExpenses": 280626.54,
+      "in-gaap:EBITDA": 102701.52,
+      "in-gaap:DepreciationAndAmortisation": 16432.24,
+      "in-gaap:EBIT": 86269.28,
+      "in-gaap:FinanceCosts": 3131.14,
+      "in-gaap:ProfitBeforeTax": 83138.14,
+      "in-gaap:TaxExpense": 20784.53,
+      "in-gaap:ProfitAfterTax": 62353.6
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 452.9,
+      "in-gaap:OtherEquity": 556794.01,
+      "in-gaap:TotalEquity": 557246.91,
+      "in-gaap:TotalDebt": 110839.29,
+      "in-gaap:CashAndCashEquivalents": 72548.26,
+      "in-gaap:TotalCurrentAssets": 191664.03,
+      "in-gaap:TotalCurrentLiabilities": 114998.42,
+      "in-gaap:TotalAssets": 783084.62,
+      "in-gaap:RetainedEarnings": 390072.84
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 86269.28,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 26813.22,
+      "in-gaap:FreeCashFlow": 59456.06
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 47.63,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2264500000,
+      "in-gaap:MarketPriceAtFiling": 1142.6,
+      "in-gaap:EarningsPerShareBasic": 275.35,
+      "in-gaap:EarningsPerShareDiluted": 275.35,
+      "in-gaap:TrailingTwelveMonthsEPS": 1101.4,
+      "in-gaap:ForwardEPSEstimate": 1266.61,
+      "in-gaap:BookValuePerShare": 2460.79,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.0,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.9
+    }
+  }
+}

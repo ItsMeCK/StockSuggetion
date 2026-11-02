@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000301",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_LATENTVIEW",
+  "company_details": {
+    "symbol": "LATENTVIEW",
+    "company_name": "Latent View Analytics Ltd.",
+    "isin": "INE0I7C01011",
+    "cin": "L29100MH2006PLC100301"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423TWODFXF0MD",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 14703.25,
+      "in-gaap:OtherIncome": 441.1,
+      "in-gaap:TotalIncome": 15144.35,
+      "in-gaap:OperatingExpenses": 12576.34,
+      "in-gaap:EBITDA": 2126.91,
+      "in-gaap:DepreciationAndAmortisation": 340.31,
+      "in-gaap:EBIT": 1786.6,
+      "in-gaap:FinanceCosts": 67.52,
+      "in-gaap:ProfitBeforeTax": 1719.08,
+      "in-gaap:TaxExpense": 429.77,
+      "in-gaap:ProfitAfterTax": 1289.31
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 315.4,
+      "in-gaap:OtherEquity": 13514.47,
+      "in-gaap:TotalEquity": 13829.87,
+      "in-gaap:TotalDebt": 1919.12,
+      "in-gaap:CashAndCashEquivalents": 1749.78,
+      "in-gaap:TotalCurrentAssets": 7351.62,
+      "in-gaap:TotalCurrentLiabilities": 4410.97,
+      "in-gaap:TotalAssets": 20159.97,
+      "in-gaap:RetainedEarnings": 9680.91
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1999.3,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 414.85,
+      "in-gaap:FreeCashFlow": 1584.45
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 48.19,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1577000000,
+      "in-gaap:MarketPriceAtFiling": 221.86,
+      "in-gaap:EarningsPerShareBasic": 8.18,
+      "in-gaap:EarningsPerShareDiluted": 8.18,
+      "in-gaap:TrailingTwelveMonthsEPS": 32.72,
+      "in-gaap:ForwardEPSEstimate": 37.63,
+      "in-gaap:BookValuePerShare": 87.7,
+      "in-gaap:EVToEBITDA": 4.1,
+      "in-gaap:TrailingPE": 6.8,
+      "in-gaap:ForwardPE": 5.8,
+      "in-gaap:PriceToBook": 2.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.0
+    }
+  }
+}

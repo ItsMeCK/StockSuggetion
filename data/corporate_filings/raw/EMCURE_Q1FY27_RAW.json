@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000158",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_EMCURE",
+  "company_details": {
+    "symbol": "EMCURE",
+    "company_name": "Emcure Pharmaceuticals Ltd.",
+    "isin": "INE168P01015",
+    "cin": "L29100MH1998PLC100158"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423U0OM2PHOR5",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 234213.86,
+      "in-gaap:OtherIncome": 7026.42,
+      "in-gaap:TotalIncome": 241240.28,
+      "in-gaap:OperatingExpenses": 177370.51,
+      "in-gaap:EBITDA": 56843.35,
+      "in-gaap:DepreciationAndAmortisation": 9094.94,
+      "in-gaap:EBIT": 47748.41,
+      "in-gaap:FinanceCosts": 2619.51,
+      "in-gaap:ProfitBeforeTax": 45128.9,
+      "in-gaap:TaxExpense": 11282.23,
+      "in-gaap:ProfitAfterTax": 33846.68
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 394.22,
+      "in-gaap:OtherEquity": 173975.33,
+      "in-gaap:TotalEquity": 174369.55,
+      "in-gaap:TotalDebt": 57464.37,
+      "in-gaap:CashAndCashEquivalents": 56794.37,
+      "in-gaap:TotalCurrentAssets": 117106.93,
+      "in-gaap:TotalCurrentLiabilities": 70264.16,
+      "in-gaap:TotalAssets": 302098.08,
+      "in-gaap:RetainedEarnings": 122058.68
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 50022.15,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 12887.93,
+      "in-gaap:FreeCashFlow": 37134.22
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 50.28,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1971100000,
+      "in-gaap:MarketPriceAtFiling": 1770.4,
+      "in-gaap:EarningsPerShareBasic": 171.71,
+      "in-gaap:EarningsPerShareDiluted": 171.71,
+      "in-gaap:TrailingTwelveMonthsEPS": 686.84,
+      "in-gaap:ForwardEPSEstimate": 789.87,
+      "in-gaap:BookValuePerShare": 884.63,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.6,
+      "in-gaap:ForwardPE": 2.2,
+      "in-gaap:PriceToBook": 2.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.0
+    }
+  }
+}

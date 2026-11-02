@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000018",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ADANIPORTS",
+  "company_details": {
+    "symbol": "ADANIPORTS",
+    "company_name": "Adani Ports and Special Economic Zone Ltd.",
+    "isin": "INE742F01042",
+    "cin": "L29100MH1993PLC100018"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423ENHEH8N4P8",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 181507.38,
+      "in-gaap:OtherIncome": 5445.22,
+      "in-gaap:TotalIncome": 186952.6,
+      "in-gaap:OperatingExpenses": 145578.27,
+      "in-gaap:EBITDA": 35929.11,
+      "in-gaap:DepreciationAndAmortisation": 5748.66,
+      "in-gaap:EBIT": 30180.45,
+      "in-gaap:FinanceCosts": 1144.24,
+      "in-gaap:ProfitBeforeTax": 29036.21,
+      "in-gaap:TaxExpense": 7259.05,
+      "in-gaap:ProfitAfterTax": 21777.16
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 230.04,
+      "in-gaap:OtherEquity": 155422.06,
+      "in-gaap:TotalEquity": 155652.1,
+      "in-gaap:TotalDebt": 29344.72,
+      "in-gaap:CashAndCashEquivalents": 29245.71,
+      "in-gaap:TotalCurrentAssets": 90753.69,
+      "in-gaap:TotalCurrentLiabilities": 54452.21,
+      "in-gaap:TotalAssets": 239449.03,
+      "in-gaap:RetainedEarnings": 108956.47
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 27306.12,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 9150.33,
+      "in-gaap:FreeCashFlow": 18155.79
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 48.44,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1150200000,
+      "in-gaap:MarketPriceAtFiling": 1702.7,
+      "in-gaap:EarningsPerShareBasic": 189.33,
+      "in-gaap:EarningsPerShareDiluted": 189.33,
+      "in-gaap:TrailingTwelveMonthsEPS": 757.32,
+      "in-gaap:ForwardEPSEstimate": 870.92,
+      "in-gaap:BookValuePerShare": 1353.26,
+      "in-gaap:EVToEBITDA": 1.4,
+      "in-gaap:TrailingPE": 2.2,
+      "in-gaap:ForwardPE": 1.9,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.3
+    }
+  }
+}

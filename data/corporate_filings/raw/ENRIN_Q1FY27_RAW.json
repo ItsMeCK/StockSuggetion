@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000418",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ENRIN",
+  "company_details": {
+    "symbol": "ENRIN",
+    "company_name": "Siemens Energy India Ltd.",
+    "isin": "INE1NPP01017",
+    "cin": "L29100MH1988PLC100418"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556A2GFKVT2YE",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 506039.97,
+      "in-gaap:OtherIncome": 15181.2,
+      "in-gaap:TotalIncome": 521221.17,
+      "in-gaap:OperatingExpenses": 358687.14,
+      "in-gaap:EBITDA": 147352.83,
+      "in-gaap:DepreciationAndAmortisation": 23576.45,
+      "in-gaap:EBIT": 123776.38,
+      "in-gaap:FinanceCosts": 8420.16,
+      "in-gaap:ProfitBeforeTax": 115356.22,
+      "in-gaap:TaxExpense": 28839.06,
+      "in-gaap:ProfitAfterTax": 86517.17
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 426.52,
+      "in-gaap:OtherEquity": 662480.14,
+      "in-gaap:TotalEquity": 662906.66,
+      "in-gaap:TotalDebt": 94793.34,
+      "in-gaap:CashAndCashEquivalents": 80631.85,
+      "in-gaap:TotalCurrentAssets": 253019.98,
+      "in-gaap:TotalCurrentLiabilities": 151811.99,
+      "in-gaap:TotalAssets": 909511.99,
+      "in-gaap:RetainedEarnings": 464034.66
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 116408.74,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 24752.41,
+      "in-gaap:FreeCashFlow": 91656.33
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 55.57,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2132600000,
+      "in-gaap:MarketPriceAtFiling": 2653.3,
+      "in-gaap:EarningsPerShareBasic": 405.69,
+      "in-gaap:EarningsPerShareDiluted": 405.69,
+      "in-gaap:TrailingTwelveMonthsEPS": 1622.76,
+      "in-gaap:ForwardEPSEstimate": 1866.17,
+      "in-gaap:BookValuePerShare": 3108.44,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.6,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.5
+    }
+  }
+}

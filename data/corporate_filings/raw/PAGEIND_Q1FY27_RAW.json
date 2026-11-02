@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000367",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_PAGEIND",
+  "company_details": {
+    "symbol": "PAGEIND",
+    "company_name": "Page Industries Ltd.",
+    "isin": "INE761H01022",
+    "cin": "L29100MH1982PLC100367"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190SGDOXVY30Q",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 8185413.12,
+      "in-gaap:OtherIncome": 245562.39,
+      "in-gaap:TotalIncome": 8430975.51,
+      "in-gaap:OperatingExpenses": 7026827.38,
+      "in-gaap:EBITDA": 1158585.74,
+      "in-gaap:DepreciationAndAmortisation": 185373.72,
+      "in-gaap:EBIT": 973212.02,
+      "in-gaap:FinanceCosts": 69794.32,
+      "in-gaap:ProfitBeforeTax": 903417.7,
+      "in-gaap:TaxExpense": 225854.42,
+      "in-gaap:ProfitAfterTax": 677563.27
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 326.1,
+      "in-gaap:OtherEquity": 7392986.47,
+      "in-gaap:TotalEquity": 7393312.57,
+      "in-gaap:TotalDebt": 136485.47,
+      "in-gaap:CashAndCashEquivalents": 1146998.27,
+      "in-gaap:TotalCurrentAssets": 4092706.56,
+      "in-gaap:TotalCurrentLiabilities": 2455623.94,
+      "in-gaap:TotalAssets": 9985421.98,
+      "in-gaap:RetainedEarnings": 5175318.8
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1007969.59,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 246600.66,
+      "in-gaap:FreeCashFlow": 761368.93
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 64.56,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1630500000,
+      "in-gaap:MarketPriceAtFiling": 33830.0,
+      "in-gaap:EarningsPerShareBasic": 4155.56,
+      "in-gaap:EarningsPerShareDiluted": 4155.56,
+      "in-gaap:TrailingTwelveMonthsEPS": 16622.24,
+      "in-gaap:ForwardEPSEstimate": 19115.58,
+      "in-gaap:BookValuePerShare": 45343.84,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 2.0,
+      "in-gaap:ForwardPE": 1.7,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.3
+    }
+  }
+}

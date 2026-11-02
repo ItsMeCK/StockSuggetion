@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000108",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CEMPRO",
+  "company_details": {
+    "symbol": "CEMPRO",
+    "company_name": "Cemindia Projects Ltd.",
+    "isin": "INE686A01026",
+    "cin": "L29100MH1993PLC100108"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317VLIXXDRGLD",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 150257.34,
+      "in-gaap:OtherIncome": 4507.72,
+      "in-gaap:TotalIncome": 154765.06,
+      "in-gaap:OperatingExpenses": 123958.36,
+      "in-gaap:EBITDA": 26298.98,
+      "in-gaap:DepreciationAndAmortisation": 4207.84,
+      "in-gaap:EBIT": 22091.14,
+      "in-gaap:FinanceCosts": 1852.04,
+      "in-gaap:ProfitBeforeTax": 20239.1,
+      "in-gaap:TaxExpense": 5059.77,
+      "in-gaap:ProfitAfterTax": 15179.32
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 365.9,
+      "in-gaap:OtherEquity": 199330.76,
+      "in-gaap:TotalEquity": 199696.66,
+      "in-gaap:TotalDebt": 6408.86,
+      "in-gaap:CashAndCashEquivalents": 37014.26,
+      "in-gaap:TotalCurrentAssets": 75128.67,
+      "in-gaap:TotalCurrentLiabilities": 45077.2,
+      "in-gaap:TotalAssets": 251182.72,
+      "in-gaap:RetainedEarnings": 139787.66
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 23932.07,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8673.17,
+      "in-gaap:FreeCashFlow": 15258.9
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 59.2,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1829500000,
+      "in-gaap:MarketPriceAtFiling": 1149.9,
+      "in-gaap:EarningsPerShareBasic": 82.97,
+      "in-gaap:EarningsPerShareDiluted": 82.97,
+      "in-gaap:TrailingTwelveMonthsEPS": 331.88,
+      "in-gaap:ForwardEPSEstimate": 381.66,
+      "in-gaap:BookValuePerShare": 1091.54,
+      "in-gaap:EVToEBITDA": 1.7,
+      "in-gaap:TrailingPE": 3.5,
+      "in-gaap:ForwardPE": 3.0,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.0
+    }
+  }
+}

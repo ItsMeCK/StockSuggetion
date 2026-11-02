@@ -13,7 +13,7 @@ load_dotenv()
 WEIGHT_PUBLIC_CATALYST = 0.30
 WEIGHT_STEALTH_ACCUMULATION = 0.50
 WEIGHT_TOXIC_VETO = 1.00
-APPROVAL_THRESHOLD = 50.0
+APPROVAL_THRESHOLD = float(os.getenv("BTST_APPROVAL_THRESHOLD", "45.0"))
 
 DETERMINISTIC_TOXIC_KEYWORDS = [
     "sebi order", "sebi ban", "ed raid", "ed search", "forensic audit",
@@ -81,16 +81,30 @@ You MUST respond ONLY with valid JSON in this exact structure, with no markdown 
 }}"""
 
         raw_response = ""
-        try:
-            response = self.client.models.generate_content(
-                model='gemini-3.6-flash',
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    tools=[{"google_search": {}}],
-                    temperature=0.0
+        response = None
+        for attempt in range(2):
+            try:
+                response = self.client.models.generate_content(
+                    model='gemini-3.6-flash',
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        tools=[{"google_search": {}}],
+                        temperature=0.0
+                    )
                 )
-            )
-            raw_response = response.text.strip()
+                if response and response.text:
+                    raw_response = response.text.strip()
+                    break
+            except Exception as e_gen:
+                if attempt == 0:
+                    import time
+                    time.sleep(1.0)
+                else:
+                    print(f"⚠️ Warning: generate_content retry failed for {symbol}: {e_gen}")
+
+        try:
+            if not raw_response and response and response.text:
+                raw_response = response.text.strip()
             # Clean possible markdown fences
             if raw_response.startswith("```json"):
                 raw_response = raw_response[7:]

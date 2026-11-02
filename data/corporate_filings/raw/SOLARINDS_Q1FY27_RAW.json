@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000422",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SOLARINDS",
+  "company_details": {
+    "symbol": "SOLARINDS",
+    "company_name": "Solar Industries India Ltd.",
+    "isin": "INE343H01029",
+    "cin": "L29100MH1992PLC100422"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-17T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317STBP2PXB0B",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 2913964.6,
+      "in-gaap:OtherIncome": 87418.94,
+      "in-gaap:TotalIncome": 3001383.54,
+      "in-gaap:OperatingExpenses": 2450805.57,
+      "in-gaap:EBITDA": 463159.03,
+      "in-gaap:DepreciationAndAmortisation": 74105.44,
+      "in-gaap:EBIT": 389053.59,
+      "in-gaap:FinanceCosts": 20769.46,
+      "in-gaap:ProfitBeforeTax": 368284.13,
+      "in-gaap:TaxExpense": 92071.03,
+      "in-gaap:ProfitAfterTax": 276213.1
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 334.32,
+      "in-gaap:OtherEquity": 1986892.97,
+      "in-gaap:TotalEquity": 1987227.29,
+      "in-gaap:TotalDebt": 453799.12,
+      "in-gaap:CashAndCashEquivalents": 487940.0,
+      "in-gaap:TotalCurrentAssets": 1456982.3,
+      "in-gaap:TotalCurrentLiabilities": 874189.38,
+      "in-gaap:TotalAssets": 3315215.79,
+      "in-gaap:RetainedEarnings": 1391059.1
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 440001.08,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 129685.34,
+      "in-gaap:FreeCashFlow": 310315.74
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 51.7,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1671600000,
+      "in-gaap:MarketPriceAtFiling": 18365.0,
+      "in-gaap:EarningsPerShareBasic": 1652.39,
+      "in-gaap:EarningsPerShareDiluted": 1652.39,
+      "in-gaap:TrailingTwelveMonthsEPS": 6609.56,
+      "in-gaap:ForwardEPSEstimate": 7600.99,
+      "in-gaap:BookValuePerShare": 11888.17,
+      "in-gaap:EVToEBITDA": 1.6,
+      "in-gaap:TrailingPE": 2.8,
+      "in-gaap:ForwardPE": 2.4,
+      "in-gaap:PriceToBook": 1.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.1
+    }
+  }
+}

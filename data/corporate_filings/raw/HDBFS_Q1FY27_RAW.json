@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000203",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HDBFS",
+  "company_details": {
+    "symbol": "HDBFS",
+    "company_name": "HDB Financial Services Ltd.",
+    "isin": "INE756I01012",
+    "cin": "L29100MH1998PLC100203"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190F8STV50A6V",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 77670.45,
+      "in-gaap:OtherIncome": 2330.11,
+      "in-gaap:TotalIncome": 80000.56,
+      "in-gaap:OperatingExpenses": 62188.46,
+      "in-gaap:EBITDA": 15481.99,
+      "in-gaap:DepreciationAndAmortisation": 2477.12,
+      "in-gaap:EBIT": 13004.87,
+      "in-gaap:FinanceCosts": 1334.65,
+      "in-gaap:ProfitBeforeTax": 11670.22,
+      "in-gaap:TaxExpense": 2917.55,
+      "in-gaap:ProfitAfterTax": 8752.66
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 418.84,
+      "in-gaap:OtherEquity": 50626.41,
+      "in-gaap:TotalEquity": 51045.25,
+      "in-gaap:TotalDebt": 12330.92,
+      "in-gaap:CashAndCashEquivalents": 6382.5,
+      "in-gaap:TotalCurrentAssets": 38835.22,
+      "in-gaap:TotalCurrentLiabilities": 23301.13,
+      "in-gaap:TotalAssets": 86677.3,
+      "in-gaap:RetainedEarnings": 35731.67
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 13004.87,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 5194.69,
+      "in-gaap:FreeCashFlow": 7810.18
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 38.52,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2094199999,
+      "in-gaap:MarketPriceAtFiling": 504.85,
+      "in-gaap:EarningsPerShareBasic": 41.79,
+      "in-gaap:EarningsPerShareDiluted": 41.79,
+      "in-gaap:TrailingTwelveMonthsEPS": 167.16,
+      "in-gaap:ForwardEPSEstimate": 192.23,
+      "in-gaap:BookValuePerShare": 243.75,
+      "in-gaap:EVToEBITDA": 1.8,
+      "in-gaap:TrailingPE": 3.0,
+      "in-gaap:ForwardPE": 2.5,
+      "in-gaap:PriceToBook": 2.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.5
+    }
+  }
+}

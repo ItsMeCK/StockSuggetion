@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000026",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CPPLUS",
+  "company_details": {
+    "symbol": "CPPLUS",
+    "company_name": "Aditya Infotech Ltd.",
+    "isin": "INE819V01029",
+    "cin": "L29100MH2001PLC100026"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556BHKTLKVR52",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 590532.87,
+      "in-gaap:OtherIncome": 17715.99,
+      "in-gaap:TotalIncome": 608248.86,
+      "in-gaap:OperatingExpenses": 476176.77,
+      "in-gaap:EBITDA": 114356.1,
+      "in-gaap:DepreciationAndAmortisation": 18296.98,
+      "in-gaap:EBIT": 96059.12,
+      "in-gaap:FinanceCosts": 3774.13,
+      "in-gaap:ProfitBeforeTax": 92284.99,
+      "in-gaap:TaxExpense": 23071.25,
+      "in-gaap:ProfitAfterTax": 69213.74
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 408.26,
+      "in-gaap:OtherEquity": 585404.13,
+      "in-gaap:TotalEquity": 585812.39,
+      "in-gaap:TotalDebt": 134060.49,
+      "in-gaap:CashAndCashEquivalents": 124361.73,
+      "in-gaap:TotalCurrentAssets": 295266.43,
+      "in-gaap:TotalCurrentLiabilities": 177159.86,
+      "in-gaap:TotalAssets": 897032.74,
+      "in-gaap:RetainedEarnings": 410068.67
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 108638.29,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 42982.3,
+      "in-gaap:FreeCashFlow": 65655.99
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 35.83,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2041300000,
+      "in-gaap:MarketPriceAtFiling": 3798.0,
+      "in-gaap:EarningsPerShareBasic": 339.07,
+      "in-gaap:EarningsPerShareDiluted": 339.07,
+      "in-gaap:TrailingTwelveMonthsEPS": 1356.28,
+      "in-gaap:ForwardEPSEstimate": 1559.72,
+      "in-gaap:BookValuePerShare": 2869.8,
+      "in-gaap:EVToEBITDA": 1.7,
+      "in-gaap:TrailingPE": 2.8,
+      "in-gaap:ForwardPE": 2.4,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.8
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000325",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MINDACORP",
+  "company_details": {
+    "symbol": "MINDACORP",
+    "company_name": "Minda Corporation Ltd.",
+    "isin": "INE842C01021",
+    "cin": "L29100MH1985PLC100325"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826JTSLRYILMC",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 12359.09,
+      "in-gaap:OtherIncome": 370.77,
+      "in-gaap:TotalIncome": 12729.86,
+      "in-gaap:OperatingExpenses": 9459.05,
+      "in-gaap:EBITDA": 2900.04,
+      "in-gaap:DepreciationAndAmortisation": 464.01,
+      "in-gaap:EBIT": 2436.03,
+      "in-gaap:FinanceCosts": 93.85,
+      "in-gaap:ProfitBeforeTax": 2342.18,
+      "in-gaap:TaxExpense": 585.54,
+      "in-gaap:ProfitAfterTax": 1756.63
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 79.14,
+      "in-gaap:OtherEquity": 11222.85,
+      "in-gaap:TotalEquity": 11301.99,
+      "in-gaap:TotalDebt": 1509.04,
+      "in-gaap:CashAndCashEquivalents": 2958.49,
+      "in-gaap:TotalCurrentAssets": 6179.55,
+      "in-gaap:TotalCurrentLiabilities": 3707.73,
+      "in-gaap:TotalAssets": 16518.76,
+      "in-gaap:RetainedEarnings": 7911.39
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 2668.04,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 661.62,
+      "in-gaap:FreeCashFlow": 2006.42
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 64.54,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 395700000,
+      "in-gaap:MarketPriceAtFiling": 600.65,
+      "in-gaap:EarningsPerShareBasic": 44.39,
+      "in-gaap:EarningsPerShareDiluted": 44.39,
+      "in-gaap:TrailingTwelveMonthsEPS": 177.56,
+      "in-gaap:ForwardEPSEstimate": 204.19,
+      "in-gaap:BookValuePerShare": 285.62,
+      "in-gaap:EVToEBITDA": 1.9,
+      "in-gaap:TrailingPE": 3.4,
+      "in-gaap:ForwardPE": 2.9,
+      "in-gaap:PriceToBook": 2.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.1
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000355",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_OLAELEC",
+  "company_details": {
+    "symbol": "OLAELEC",
+    "company_name": "Ola Electric Mobility Ltd.",
+    "isin": "INE0LXG01040",
+    "cin": "L29100MH2015PLC100355"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317BE287PFZ0I",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 944.38,
+      "in-gaap:OtherIncome": 28.33,
+      "in-gaap:TotalIncome": 972.71,
+      "in-gaap:OperatingExpenses": 800.83,
+      "in-gaap:EBITDA": 143.55,
+      "in-gaap:DepreciationAndAmortisation": 22.97,
+      "in-gaap:EBIT": 120.58,
+      "in-gaap:FinanceCosts": 7.84,
+      "in-gaap:ProfitBeforeTax": 112.74,
+      "in-gaap:TaxExpense": 28.18,
+      "in-gaap:ProfitAfterTax": 84.55
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 140.26,
+      "in-gaap:OtherEquity": 607.81,
+      "in-gaap:TotalEquity": 748.07,
+      "in-gaap:TotalDebt": 150.54,
+      "in-gaap:CashAndCashEquivalents": 191.94,
+      "in-gaap:TotalCurrentAssets": 472.19,
+      "in-gaap:TotalCurrentLiabilities": 283.31,
+      "in-gaap:TotalAssets": 1181.92,
+      "in-gaap:RetainedEarnings": 523.65
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 130.63,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 32.76,
+      "in-gaap:FreeCashFlow": 97.87
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 51.3,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 701300000,
+      "in-gaap:MarketPriceAtFiling": 29.93,
+      "in-gaap:EarningsPerShareBasic": 1.21,
+      "in-gaap:EarningsPerShareDiluted": 1.21,
+      "in-gaap:TrailingTwelveMonthsEPS": 4.84,
+      "in-gaap:ForwardEPSEstimate": 5.57,
+      "in-gaap:BookValuePerShare": 10.67,
+      "in-gaap:EVToEBITDA": 3.6,
+      "in-gaap:TrailingPE": 6.2,
+      "in-gaap:ForwardPE": 5.3,
+      "in-gaap:PriceToBook": 2.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.1
+    }
+  }
+}

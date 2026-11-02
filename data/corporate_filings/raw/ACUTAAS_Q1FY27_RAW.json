@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000014",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ACUTAAS",
+  "company_details": {
+    "symbol": "ACUTAAS",
+    "company_name": "Acutaas Chemicals Ltd.",
+    "isin": "INE00FF01025",
+    "cin": "L29100MH1989PLC100014"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "2604242354MQZ7LCZX",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 277617.54,
+      "in-gaap:OtherIncome": 8328.53,
+      "in-gaap:TotalIncome": 285946.07,
+      "in-gaap:OperatingExpenses": 231289.37,
+      "in-gaap:EBITDA": 46328.17,
+      "in-gaap:DepreciationAndAmortisation": 7412.51,
+      "in-gaap:EBIT": 38915.66,
+      "in-gaap:FinanceCosts": 1416.76,
+      "in-gaap:ProfitBeforeTax": 37498.9,
+      "in-gaap:TaxExpense": 9374.73,
+      "in-gaap:ProfitAfterTax": 28124.18
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 114.1,
+      "in-gaap:OtherEquity": 183847.06,
+      "in-gaap:TotalEquity": 183961.16,
+      "in-gaap:TotalDebt": 52133.52,
+      "in-gaap:CashAndCashEquivalents": 44663.81,
+      "in-gaap:TotalCurrentAssets": 138808.77,
+      "in-gaap:TotalCurrentLiabilities": 83285.26,
+      "in-gaap:TotalAssets": 319379.94,
+      "in-gaap:RetainedEarnings": 128772.81
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 42158.63,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8588.98,
+      "in-gaap:FreeCashFlow": 33569.65
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 54.56,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 570500000,
+      "in-gaap:MarketPriceAtFiling": 3137.7,
+      "in-gaap:EarningsPerShareBasic": 492.97,
+      "in-gaap:EarningsPerShareDiluted": 492.97,
+      "in-gaap:TrailingTwelveMonthsEPS": 1971.88,
+      "in-gaap:ForwardEPSEstimate": 2267.66,
+      "in-gaap:BookValuePerShare": 3224.56,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.6,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.7
+    }
+  }
+}

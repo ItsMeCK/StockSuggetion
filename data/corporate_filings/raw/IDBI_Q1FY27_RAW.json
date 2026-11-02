@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000228",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_IDBI",
+  "company_details": {
+    "symbol": "IDBI",
+    "company_name": "IDBI Bank Ltd.",
+    "isin": "INE008A01015",
+    "cin": "L65191MH2008PLC100228"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556Y5EMYF6EPZ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 299.7,
+      "in-gaap:OtherIncome": 104.89,
+      "in-gaap:OperatingExpenses": 169.93,
+      "in-gaap:OperatingProfit": 234.66,
+      "in-gaap:ProvisionsAndContingencies": 52.93,
+      "in-gaap:ProfitBeforeTax": 181.73,
+      "in-gaap:TaxExpense": 45.43,
+      "in-gaap:ProfitAfterTax": 136.3
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 121.78,
+      "in-gaap:ReservesAndSurplus": 3663.87,
+      "in-gaap:TotalEquity": 3785.65,
+      "in-gaap:TotalDeposits": 25237.69,
+      "in-gaap:CasaDeposits": 9943.65,
+      "in-gaap:TotalAdvances": 21171.9,
+      "in-gaap:TotalAssets": 31547.11
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 639.39,
+      "in-gaap:NetNPA": 192.66,
+      "in-gaap:CapitalAdequacyRatioCRAR": 15.9,
+      "in-gaap:Tier1CapitalRatio": 13.9
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 16.41,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 608900000,
+      "in-gaap:MarketPriceAtFiling": 76.44,
+      "in-gaap:EarningsPerShareBasic": 2.24,
+      "in-gaap:EarningsPerShareDiluted": 2.24,
+      "in-gaap:TrailingTwelveMonthsEPS": 8.96,
+      "in-gaap:ForwardEPSEstimate": 10.3,
+      "in-gaap:BookValuePerShare": 62.17,
+      "in-gaap:TrailingPE": 8.5,
+      "in-gaap:ForwardPE": 7.2,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.6
+    }
+  }
+}

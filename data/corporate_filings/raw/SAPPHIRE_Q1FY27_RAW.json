@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000409",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SAPPHIRE",
+  "company_details": {
+    "symbol": "SAPPHIRE",
+    "company_name": "Sapphire Foods India Ltd.",
+    "isin": "INE806T01020",
+    "cin": "L29100MH1979PLC100409"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423EHMOD0ZFBD",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 38445.25,
+      "in-gaap:OtherIncome": 1153.36,
+      "in-gaap:TotalIncome": 39598.61,
+      "in-gaap:OperatingExpenses": 31887.8,
+      "in-gaap:EBITDA": 6557.45,
+      "in-gaap:DepreciationAndAmortisation": 1049.19,
+      "in-gaap:EBIT": 5508.26,
+      "in-gaap:FinanceCosts": 362.29,
+      "in-gaap:ProfitBeforeTax": 5145.97,
+      "in-gaap:TaxExpense": 1286.49,
+      "in-gaap:ProfitAfterTax": 3859.48
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 309.94,
+      "in-gaap:OtherEquity": 31439.95,
+      "in-gaap:TotalEquity": 31749.89,
+      "in-gaap:TotalDebt": 1099.42,
+      "in-gaap:CashAndCashEquivalents": 7361.53,
+      "in-gaap:TotalCurrentAssets": 19222.62,
+      "in-gaap:TotalCurrentLiabilities": 11533.57,
+      "in-gaap:TotalAssets": 44382.88,
+      "in-gaap:RetainedEarnings": 22224.92
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 5508.26,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1285.41,
+      "in-gaap:FreeCashFlow": 4222.85
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 56.56,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1549700000,
+      "in-gaap:MarketPriceAtFiling": 195.51,
+      "in-gaap:EarningsPerShareBasic": 24.9,
+      "in-gaap:EarningsPerShareDiluted": 24.9,
+      "in-gaap:TrailingTwelveMonthsEPS": 99.6,
+      "in-gaap:ForwardEPSEstimate": 114.54,
+      "in-gaap:BookValuePerShare": 204.88,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 2.0,
+      "in-gaap:ForwardPE": 1.7,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.9
+    }
+  }
+}

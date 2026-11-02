@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000195",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GRAVITA",
+  "company_details": {
+    "symbol": "GRAVITA",
+    "company_name": "Gravita India Ltd.",
+    "isin": "INE024L01027",
+    "cin": "L29100MH1990PLC100195"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987JI9RXR1CNN",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 79719.48,
+      "in-gaap:OtherIncome": 2391.58,
+      "in-gaap:TotalIncome": 82111.06,
+      "in-gaap:OperatingExpenses": 56048.02,
+      "in-gaap:EBITDA": 23671.46,
+      "in-gaap:DepreciationAndAmortisation": 3787.43,
+      "in-gaap:EBIT": 19884.03,
+      "in-gaap:FinanceCosts": 1132.61,
+      "in-gaap:ProfitBeforeTax": 18751.42,
+      "in-gaap:TaxExpense": 4687.85,
+      "in-gaap:ProfitAfterTax": 14063.56
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 148.3,
+      "in-gaap:OtherEquity": 48798.93,
+      "in-gaap:TotalEquity": 48947.23,
+      "in-gaap:TotalDebt": 21982.69,
+      "in-gaap:CashAndCashEquivalents": 12754.14,
+      "in-gaap:TotalCurrentAssets": 39859.74,
+      "in-gaap:TotalCurrentLiabilities": 23915.84,
+      "in-gaap:TotalAssets": 94845.76,
+      "in-gaap:RetainedEarnings": 34263.06
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 19173.88,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 7030.42,
+      "in-gaap:FreeCashFlow": 12143.46
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 49.58,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 741500000,
+      "in-gaap:MarketPriceAtFiling": 1343.2,
+      "in-gaap:EarningsPerShareBasic": 189.66,
+      "in-gaap:EarningsPerShareDiluted": 189.66,
+      "in-gaap:TrailingTwelveMonthsEPS": 758.64,
+      "in-gaap:ForwardEPSEstimate": 872.44,
+      "in-gaap:BookValuePerShare": 660.11,
+      "in-gaap:EVToEBITDA": 1.1,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 2.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.2
+    }
+  }
+}

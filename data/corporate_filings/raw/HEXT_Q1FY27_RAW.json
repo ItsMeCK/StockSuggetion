@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000210",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HEXT",
+  "company_details": {
+    "symbol": "HEXT",
+    "company_name": "Hexaware Technologies Ltd.",
+    "isin": "INE093A01041",
+    "cin": "L29100MH2005PLC100210"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190GGORRZ0MIB",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 136154.31,
+      "in-gaap:OtherIncome": 4084.63,
+      "in-gaap:TotalIncome": 140238.94,
+      "in-gaap:OperatingExpenses": 93109.7,
+      "in-gaap:EBITDA": 43044.61,
+      "in-gaap:DepreciationAndAmortisation": 6887.14,
+      "in-gaap:EBIT": 36157.47,
+      "in-gaap:FinanceCosts": 1570.97,
+      "in-gaap:ProfitBeforeTax": 34586.5,
+      "in-gaap:TaxExpense": 8646.62,
+      "in-gaap:ProfitAfterTax": 25939.88
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 389.52,
+      "in-gaap:OtherEquity": 174315.22,
+      "in-gaap:TotalEquity": 174704.74,
+      "in-gaap:TotalDebt": 25442.04,
+      "in-gaap:CashAndCashEquivalents": 21020.43,
+      "in-gaap:TotalCurrentAssets": 68077.15,
+      "in-gaap:TotalCurrentLiabilities": 40846.29,
+      "in-gaap:TotalAssets": 240993.07,
+      "in-gaap:RetainedEarnings": 122293.32
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 34866.13,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 7166.66,
+      "in-gaap:FreeCashFlow": 27699.47
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 48.8,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1947600000,
+      "in-gaap:MarketPriceAtFiling": 590.8,
+      "in-gaap:EarningsPerShareBasic": 133.19,
+      "in-gaap:EarningsPerShareDiluted": 133.19,
+      "in-gaap:TrailingTwelveMonthsEPS": 532.76,
+      "in-gaap:ForwardEPSEstimate": 612.67,
+      "in-gaap:BookValuePerShare": 897.03,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.3
+    }
+  }
+}

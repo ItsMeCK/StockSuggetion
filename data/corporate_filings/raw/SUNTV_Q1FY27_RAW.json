@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000430",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SUNTV",
+  "company_details": {
+    "symbol": "SUNTV",
+    "company_name": "Sun TV Network Ltd.",
+    "isin": "INE424H01027",
+    "cin": "L29100MH2000PLC100430"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317IHY1VW05T4",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 73385.75,
+      "in-gaap:OtherIncome": 2201.57,
+      "in-gaap:TotalIncome": 75587.32,
+      "in-gaap:OperatingExpenses": 60659.41,
+      "in-gaap:EBITDA": 12726.34,
+      "in-gaap:DepreciationAndAmortisation": 2036.21,
+      "in-gaap:EBIT": 10690.13,
+      "in-gaap:FinanceCosts": 489.47,
+      "in-gaap:ProfitBeforeTax": 10200.66,
+      "in-gaap:TaxExpense": 2550.16,
+      "in-gaap:ProfitAfterTax": 7650.49
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 321.1,
+      "in-gaap:OtherEquity": 66941.68,
+      "in-gaap:TotalEquity": 67262.78,
+      "in-gaap:TotalDebt": 4780.63,
+      "in-gaap:CashAndCashEquivalents": 17483.96,
+      "in-gaap:TotalCurrentAssets": 36692.88,
+      "in-gaap:TotalCurrentLiabilities": 22015.72,
+      "in-gaap:TotalAssets": 94059.14,
+      "in-gaap:RetainedEarnings": 47083.95
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 10308.34,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2348.94,
+      "in-gaap:FreeCashFlow": 7959.4
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 64.92,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1605500000,
+      "in-gaap:MarketPriceAtFiling": 578.8,
+      "in-gaap:EarningsPerShareBasic": 47.65,
+      "in-gaap:EarningsPerShareDiluted": 47.65,
+      "in-gaap:TrailingTwelveMonthsEPS": 190.6,
+      "in-gaap:ForwardEPSEstimate": 219.19,
+      "in-gaap:BookValuePerShare": 418.95,
+      "in-gaap:EVToEBITDA": 1.6,
+      "in-gaap:TrailingPE": 3.0,
+      "in-gaap:ForwardPE": 2.5,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.2
+    }
+  }
+}

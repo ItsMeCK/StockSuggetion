@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000237",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_INDGN",
+  "company_details": {
+    "symbol": "INDGN",
+    "company_name": "Indegene Ltd.",
+    "isin": "INE065X01017",
+    "cin": "L29100MH1987PLC100237"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190HZDYU65HEO",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 138796.09,
+      "in-gaap:OtherIncome": 4163.88,
+      "in-gaap:TotalIncome": 142959.97,
+      "in-gaap:OperatingExpenses": 101195.74,
+      "in-gaap:EBITDA": 37600.35,
+      "in-gaap:DepreciationAndAmortisation": 6016.06,
+      "in-gaap:EBIT": 31584.29,
+      "in-gaap:FinanceCosts": 1083.58,
+      "in-gaap:ProfitBeforeTax": 30500.71,
+      "in-gaap:TaxExpense": 7625.18,
+      "in-gaap:ProfitAfterTax": 22875.53
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 312.94,
+      "in-gaap:OtherEquity": 97435.18,
+      "in-gaap:TotalEquity": 97748.12,
+      "in-gaap:TotalDebt": 24325.14,
+      "in-gaap:CashAndCashEquivalents": 16377.02,
+      "in-gaap:TotalCurrentAssets": 69398.04,
+      "in-gaap:TotalCurrentLiabilities": 41638.83,
+      "in-gaap:TotalAssets": 163712.09,
+      "in-gaap:RetainedEarnings": 68423.68
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 29704.28,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 9211.34,
+      "in-gaap:FreeCashFlow": 20492.94
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 39.34,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1564700000,
+      "in-gaap:MarketPriceAtFiling": 571.9,
+      "in-gaap:EarningsPerShareBasic": 146.2,
+      "in-gaap:EarningsPerShareDiluted": 146.2,
+      "in-gaap:TrailingTwelveMonthsEPS": 584.8,
+      "in-gaap:ForwardEPSEstimate": 672.52,
+      "in-gaap:BookValuePerShare": 624.71,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.0,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.9
+    }
+  }
+}

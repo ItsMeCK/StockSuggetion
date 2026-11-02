@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000324",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MEESHO",
+  "company_details": {
+    "symbol": "MEESHO",
+    "company_name": "Meesho Ltd.",
+    "isin": "INE0VDM01015",
+    "cin": "L29100MH1984PLC100324"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-24T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556MDEC6RGHDR",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 5989.48,
+      "in-gaap:OtherIncome": 179.68,
+      "in-gaap:TotalIncome": 6169.16,
+      "in-gaap:OperatingExpenses": 4236.96,
+      "in-gaap:EBITDA": 1752.52,
+      "in-gaap:DepreciationAndAmortisation": 280.4,
+      "in-gaap:EBIT": 1472.12,
+      "in-gaap:FinanceCosts": 71.53,
+      "in-gaap:ProfitBeforeTax": 1400.59,
+      "in-gaap:TaxExpense": 350.15,
+      "in-gaap:ProfitAfterTax": 1050.44
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 50.56,
+      "in-gaap:OtherEquity": 7928.66,
+      "in-gaap:TotalEquity": 7979.22,
+      "in-gaap:TotalDebt": 1076.36,
+      "in-gaap:CashAndCashEquivalents": 915.94,
+      "in-gaap:TotalCurrentAssets": 2994.74,
+      "in-gaap:TotalCurrentLiabilities": 1796.84,
+      "in-gaap:TotalAssets": 10852.42,
+      "in-gaap:RetainedEarnings": 5585.45
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1384.49,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 431.78,
+      "in-gaap:FreeCashFlow": 952.71
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 44.18,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 252800000,
+      "in-gaap:MarketPriceAtFiling": 214.9,
+      "in-gaap:EarningsPerShareBasic": 41.55,
+      "in-gaap:EarningsPerShareDiluted": 41.55,
+      "in-gaap:TrailingTwelveMonthsEPS": 166.2,
+      "in-gaap:ForwardEPSEstimate": 191.13,
+      "in-gaap:BookValuePerShare": 315.63,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.2
+    }
+  }
+}

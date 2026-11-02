@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000502",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ZYDUSWELL",
+  "company_details": {
+    "symbol": "ZYDUSWELL",
+    "company_name": "Zydus Wellness Ltd.",
+    "isin": "INE768C01028",
+    "cin": "L29100MH1982PLC100502"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "2610531776WH3NWQ6I",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 72483.01,
+      "in-gaap:OtherIncome": 2174.49,
+      "in-gaap:TotalIncome": 74657.5,
+      "in-gaap:OperatingExpenses": 49942.24,
+      "in-gaap:EBITDA": 22540.77,
+      "in-gaap:DepreciationAndAmortisation": 3606.52,
+      "in-gaap:EBIT": 18934.25,
+      "in-gaap:FinanceCosts": 1400.05,
+      "in-gaap:ProfitBeforeTax": 17534.2,
+      "in-gaap:TaxExpense": 4383.55,
+      "in-gaap:ProfitAfterTax": 13150.65
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 246.82,
+      "in-gaap:OtherEquity": 69211.05,
+      "in-gaap:TotalEquity": 69457.87,
+      "in-gaap:TotalDebt": 7525.62,
+      "in-gaap:CashAndCashEquivalents": 7555.42,
+      "in-gaap:TotalCurrentAssets": 36241.5,
+      "in-gaap:TotalCurrentLiabilities": 21744.9,
+      "in-gaap:TotalAssets": 98728.39,
+      "in-gaap:RetainedEarnings": 48620.51
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 19835.88,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6369.91,
+      "in-gaap:FreeCashFlow": 13465.97
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 41.37,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1234100000,
+      "in-gaap:MarketPriceAtFiling": 463.35,
+      "in-gaap:EarningsPerShareBasic": 106.56,
+      "in-gaap:EarningsPerShareDiluted": 106.56,
+      "in-gaap:TrailingTwelveMonthsEPS": 426.24,
+      "in-gaap:ForwardEPSEstimate": 490.18,
+      "in-gaap:BookValuePerShare": 562.82,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.8
+    }
+  }
+}

@@ -77,6 +77,46 @@ def test_daily_watchlist_evaluator_evaluates_gaps_and_dispatches_email(mock_wm_c
     assert final_focus[0]["symbol"] == "BHARTIARTL"
     mock_emailer.send_morning_watchlist_report.assert_called_once()
 
+@patch("core.watchlist_evaluator.SovereignEmailer")
+@patch("core.watchlist_evaluator.GroundedWatchlistBuilder")
+@patch("core.watchlist_evaluator.WatchlistManager")
+def test_daily_watchlist_evaluator_fallback_ranks_quantitatively_not_alphabetically(mock_wm_cls, mock_builder_cls, mock_emailer_cls):
+    """
+    Test that when AI grounding yields 0 symbols, the fallback promotes candidates
+    ranked by sector alignment and ATR%, NEVER by alphabetical order.
+    """
+    mock_emailer_cls.return_value = MagicMock()
+    mock_builder = MagicMock()
+    mock_builder_cls.return_value = mock_builder
+    mock_builder.scan_market_themes.return_value = {
+        "strong_sectors": ["Auto"],
+        "weak_sectors": ["IT"],
+        "market_sentiment": "NEUTRAL",
+        "narrative_summary": "Auto demand firm."
+    }
+    # Simulate grounding yielding 0 symbols
+    mock_builder.build_daily_focus_watchlist.return_value = ([], [])
+
+    mock_wm = MagicMock()
+    mock_wm_cls.return_value = mock_wm
+    # Alphabetical candidates with varying ATR and sectors
+    mock_wm.refresh_preopen_gaps.return_value = (
+        [
+            {"symbol": "A_LOW_ATR", "open": 100.0, "prev_close": 100.0, "dte": 15, "atr_pct": 1.0, "sector": "NIFTY FMCG"},
+            {"symbol": "B_AUTO_HIGH_ATR", "open": 200.0, "prev_close": 200.0, "dte": 15, "atr_pct": 3.8, "sector": "NIFTY AUTO"},
+            {"symbol": "C_IT_HIGH_ATR", "open": 300.0, "prev_close": 300.0, "dte": 15, "atr_pct": 3.5, "sector": "NIFTY IT"},
+            {"symbol": "Z_AUTO_TOP_ATR", "open": 400.0, "prev_close": 400.0, "dte": 15, "atr_pct": 4.5, "sector": "NIFTY AUTO"},
+        ],
+        []
+    )
+
+    final_focus = evaluate_watchlist()
+    assert len(final_focus) > 0
+    # Top candidate should be the highest ATR sector-aligned stock ('Z_AUTO_TOP_ATR'), NOT 'A_LOW_ATR'!
+    first_sym = final_focus[0]["symbol"]
+    assert first_sym != "A_LOW_ATR", "Fallback must not pick alphabetically!"
+    assert first_sym in ["Z_AUTO_TOP_ATR", "B_AUTO_HIGH_ATR"]
+
 def test_email_notifier_renders_active_watchlist():
     """
     Test that SovereignEmailer builds an institutional HTML card for the active focus watchlist.

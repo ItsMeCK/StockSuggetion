@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000503",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ECLERX",
+  "company_details": {
+    "symbol": "ECLERX",
+    "company_name": "eClerx Services Ltd.",
+    "isin": "INE738I01010",
+    "cin": "L29100MH1983PLC100503"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "260421903I1F01PF3R",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 322874.4,
+      "in-gaap:OtherIncome": 9686.23,
+      "in-gaap:TotalIncome": 332560.63,
+      "in-gaap:OperatingExpenses": 267704.23,
+      "in-gaap:EBITDA": 55170.17,
+      "in-gaap:DepreciationAndAmortisation": 8827.23,
+      "in-gaap:EBIT": 46342.94,
+      "in-gaap:FinanceCosts": 3343.65,
+      "in-gaap:ProfitBeforeTax": 42999.29,
+      "in-gaap:TaxExpense": 10749.82,
+      "in-gaap:ProfitAfterTax": 32249.47
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 496.2,
+      "in-gaap:OtherEquity": 217651.42,
+      "in-gaap:TotalEquity": 218147.62,
+      "in-gaap:TotalDebt": 40304.57,
+      "in-gaap:CashAndCashEquivalents": 37886.69,
+      "in-gaap:TotalCurrentAssets": 161437.2,
+      "in-gaap:TotalCurrentLiabilities": 96862.32,
+      "in-gaap:TotalAssets": 355314.51,
+      "in-gaap:RetainedEarnings": 152703.33
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 43032.73,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 15921.82,
+      "in-gaap:FreeCashFlow": 27110.91
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 35.91,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2481000000,
+      "in-gaap:MarketPriceAtFiling": 1891.7,
+      "in-gaap:EarningsPerShareBasic": 129.99,
+      "in-gaap:EarningsPerShareDiluted": 129.99,
+      "in-gaap:TrailingTwelveMonthsEPS": 519.96,
+      "in-gaap:ForwardEPSEstimate": 597.95,
+      "in-gaap:BookValuePerShare": 879.27,
+      "in-gaap:EVToEBITDA": 2.1,
+      "in-gaap:TrailingPE": 3.6,
+      "in-gaap:ForwardPE": 3.1,
+      "in-gaap:PriceToBook": 2.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.8
+    }
+  }
+}

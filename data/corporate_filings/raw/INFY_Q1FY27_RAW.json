@@ -1,0 +1,82 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1046890",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_INFY",
+  "company_details": {
+    "symbol": "INFY",
+    "company_name": "Infosys Limited",
+    "isin": "INE009A01021",
+    "cin": "L85110KA1981PLC013115"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Vikas Bagaria",
+    "membership_number": "110128",
+    "udin": "26110128BKAFWQ7812",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 48211.0,
+      "in-gaap:OtherIncome": 850.0,
+      "in-gaap:TotalIncome": 49061.0,
+      "in-gaap:OperatingExpenses": 37087.0,
+      "in-gaap:EBITDA": 11124.0,
+      "in-gaap:DepreciationAndAmortisation": 1000.0,
+      "in-gaap:EBIT": 10124.0,
+      "in-gaap:FinanceCosts": 110.0,
+      "in-gaap:ProfitBeforeTax": 10864.0,
+      "in-gaap:TaxExpense": 3095.0,
+      "in-gaap:ProfitAfterTax": 7769.0
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 2075.5,
+      "in-gaap:OtherEquity": 86000.0,
+      "in-gaap:TotalEquity": 88075.5,
+      "in-gaap:TotalDebt": 0.0,
+      "in-gaap:CashAndCashEquivalents": 28500.0,
+      "in-gaap:TotalCurrentAssets": 74000.0,
+      "in-gaap:TotalCurrentLiabilities": 25000.0,
+      "in-gaap:TotalAssets": 122000.0,
+      "in-gaap:RetainedEarnings": 82000.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 7050.0,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 550.0,
+      "in-gaap:FreeCashFlow": 6500.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 14.6,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false,
+      "in-gaap:TradeReceivablesPriorPeriod": 10500.0,
+      "in-gaap:TradeReceivablesCurrentPeriod": 10900.0,
+      "in-gaap:GrossMarginPriorPeriodPercentage": 37.8,
+      "in-gaap:GrossMarginCurrentPeriodPercentage": 38.2,
+      "in-gaap:RevenuePriorPeriod": 42279.0,
+      "in-gaap:PriorPeriodLeverage": 0.0
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 4151000000,
+      "in-gaap:MarketPriceAtFiling": 1750.0,
+      "in-gaap:EarningsPerShareBasic": 18.72,
+      "in-gaap:EarningsPerShareDiluted": 18.72,
+      "in-gaap:TrailingTwelveMonthsEPS": 72.0,
+      "in-gaap:ForwardEPSEstimate": 83.0,
+      "in-gaap:BookValuePerShare": 212.2,
+      "in-gaap:EVToEBITDA": 17.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.0
+    }
+  }
+}

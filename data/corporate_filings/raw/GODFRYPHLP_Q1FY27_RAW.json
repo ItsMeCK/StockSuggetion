@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000188",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GODFRYPHLP",
+  "company_details": {
+    "symbol": "GODFRYPHLP",
+    "company_name": "Godfrey Phillips India Ltd.",
+    "isin": "INE260B01028",
+    "cin": "L29100MH1983PLC100188"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987Z7GGNEYFOB",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 412087.23,
+      "in-gaap:OtherIncome": 12362.62,
+      "in-gaap:TotalIncome": 424449.85,
+      "in-gaap:OperatingExpenses": 318539.67,
+      "in-gaap:EBITDA": 93547.56,
+      "in-gaap:DepreciationAndAmortisation": 14967.61,
+      "in-gaap:EBIT": 78579.95,
+      "in-gaap:FinanceCosts": 4772.83,
+      "in-gaap:ProfitBeforeTax": 73807.12,
+      "in-gaap:TaxExpense": 18451.78,
+      "in-gaap:ProfitAfterTax": 55355.34
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 290.66,
+      "in-gaap:OtherEquity": 570396.37,
+      "in-gaap:TotalEquity": 570687.03,
+      "in-gaap:TotalDebt": 88618.76,
+      "in-gaap:CashAndCashEquivalents": 57876.46,
+      "in-gaap:TotalCurrentAssets": 206043.61,
+      "in-gaap:TotalCurrentLiabilities": 123626.17,
+      "in-gaap:TotalAssets": 782931.96,
+      "in-gaap:RetainedEarnings": 399480.92
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 79515.43,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 30589.86,
+      "in-gaap:FreeCashFlow": 48925.57
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 57.91,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1453300000,
+      "in-gaap:MarketPriceAtFiling": 1669.0,
+      "in-gaap:EarningsPerShareBasic": 380.89,
+      "in-gaap:EarningsPerShareDiluted": 380.89,
+      "in-gaap:TrailingTwelveMonthsEPS": 1523.56,
+      "in-gaap:ForwardEPSEstimate": 1752.09,
+      "in-gaap:BookValuePerShare": 3926.84,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.6
+    }
+  }
+}

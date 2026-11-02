@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000452",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TATATECH",
+  "company_details": {
+    "symbol": "TATATECH",
+    "company_name": "Tata Technologies Ltd.",
+    "isin": "INE142M01025",
+    "cin": "L29100MH1977PLC100452"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-17T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190II07ELLDW4",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 111407.43,
+      "in-gaap:OtherIncome": 3342.22,
+      "in-gaap:TotalIncome": 114749.65,
+      "in-gaap:OperatingExpenses": 77485.3,
+      "in-gaap:EBITDA": 33922.13,
+      "in-gaap:DepreciationAndAmortisation": 5427.54,
+      "in-gaap:EBIT": 28494.59,
+      "in-gaap:FinanceCosts": 1514.38,
+      "in-gaap:ProfitBeforeTax": 26980.21,
+      "in-gaap:TaxExpense": 6745.05,
+      "in-gaap:ProfitAfterTax": 20235.16
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 235.26,
+      "in-gaap:OtherEquity": 145966.64,
+      "in-gaap:TotalEquity": 146201.9,
+      "in-gaap:TotalDebt": 20386.21,
+      "in-gaap:CashAndCashEquivalents": 13889.96,
+      "in-gaap:TotalCurrentAssets": 55703.71,
+      "in-gaap:TotalCurrentLiabilities": 33422.23,
+      "in-gaap:TotalAssets": 200010.34,
+      "in-gaap:RetainedEarnings": 102341.33
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 30869.14,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6242.53,
+      "in-gaap:FreeCashFlow": 24626.61
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 61.4,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1176300000,
+      "in-gaap:MarketPriceAtFiling": 657.35,
+      "in-gaap:EarningsPerShareBasic": 172.02,
+      "in-gaap:EarningsPerShareDiluted": 172.02,
+      "in-gaap:TrailingTwelveMonthsEPS": 688.08,
+      "in-gaap:ForwardEPSEstimate": 791.29,
+      "in-gaap:BookValuePerShare": 1242.9,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.0,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.4
+    }
+  }
+}

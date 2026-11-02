@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000392",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_RADICO",
+  "company_details": {
+    "symbol": "RADICO",
+    "company_name": "Radico Khaitan Ltd",
+    "isin": "INE944F01028",
+    "cin": "L29100MH2007PLC100392"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-17T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "260229878VZTLOIVHQ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 232823.41,
+      "in-gaap:OtherIncome": 6984.7,
+      "in-gaap:TotalIncome": 239808.11,
+      "in-gaap:OperatingExpenses": 168873.74,
+      "in-gaap:EBITDA": 63949.67,
+      "in-gaap:DepreciationAndAmortisation": 10231.95,
+      "in-gaap:EBIT": 53717.72,
+      "in-gaap:FinanceCosts": 3104.35,
+      "in-gaap:ProfitBeforeTax": 50613.37,
+      "in-gaap:TaxExpense": 12653.34,
+      "in-gaap:ProfitAfterTax": 37960.03
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 191.9,
+      "in-gaap:OtherEquity": 299734.83,
+      "in-gaap:TotalEquity": 299926.73,
+      "in-gaap:TotalDebt": 34272.21,
+      "in-gaap:CashAndCashEquivalents": 52651.29,
+      "in-gaap:TotalCurrentAssets": 116411.71,
+      "in-gaap:TotalCurrentLiabilities": 69847.02,
+      "in-gaap:TotalAssets": 404045.96,
+      "in-gaap:RetainedEarnings": 209948.71
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 49241.25,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 15490.78,
+      "in-gaap:FreeCashFlow": 33750.47
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 70.34,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 959500000,
+      "in-gaap:MarketPriceAtFiling": 4157.3,
+      "in-gaap:EarningsPerShareBasic": 395.62,
+      "in-gaap:EarningsPerShareDiluted": 395.62,
+      "in-gaap:TrailingTwelveMonthsEPS": 1582.48,
+      "in-gaap:ForwardEPSEstimate": 1819.85,
+      "in-gaap:BookValuePerShare": 3125.86,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.6,
+      "in-gaap:ForwardPE": 2.2,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.3
+    }
+  }
+}

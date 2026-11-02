@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000490",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_WAAREEENER",
+  "company_details": {
+    "symbol": "WAAREEENER",
+    "company_name": "Waaree Energies Ltd.",
+    "isin": "INE377N01017",
+    "cin": "L29100MH2015PLC100490"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317MKAA4APIZ9",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 591859.79,
+      "in-gaap:OtherIncome": 17755.79,
+      "in-gaap:TotalIncome": 609615.58,
+      "in-gaap:OperatingExpenses": 437095.66,
+      "in-gaap:EBITDA": 154764.13,
+      "in-gaap:DepreciationAndAmortisation": 24762.26,
+      "in-gaap:EBIT": 130001.87,
+      "in-gaap:FinanceCosts": 5430.32,
+      "in-gaap:ProfitBeforeTax": 124571.55,
+      "in-gaap:TaxExpense": 31142.89,
+      "in-gaap:ProfitAfterTax": 93428.66
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 296.32,
+      "in-gaap:OtherEquity": 762962.53,
+      "in-gaap:TotalEquity": 763258.85,
+      "in-gaap:TotalDebt": 98463.72,
+      "in-gaap:CashAndCashEquivalents": 55488.54,
+      "in-gaap:TotalCurrentAssets": 295929.9,
+      "in-gaap:TotalCurrentLiabilities": 177557.94,
+      "in-gaap:TotalAssets": 1039280.51,
+      "in-gaap:RetainedEarnings": 534281.19
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 130001.87,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 39068.93,
+      "in-gaap:FreeCashFlow": 90932.94
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 58.85,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1481600000,
+      "in-gaap:MarketPriceAtFiling": 2354.9,
+      "in-gaap:EarningsPerShareBasic": 630.59,
+      "in-gaap:EarningsPerShareDiluted": 630.59,
+      "in-gaap:TrailingTwelveMonthsEPS": 2522.36,
+      "in-gaap:ForwardEPSEstimate": 2900.71,
+      "in-gaap:BookValuePerShare": 5151.59,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 0.9,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.9
+    }
+  }
+}

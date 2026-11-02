@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000093",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BRITANNIA",
+  "company_details": {
+    "symbol": "BRITANNIA",
+    "company_name": "Britannia Industries Ltd.",
+    "isin": "INE216A01030",
+    "cin": "L29100MH1978PLC100093"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190YSDUMF750I",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 43714.43,
+      "in-gaap:OtherIncome": 1311.43,
+      "in-gaap:TotalIncome": 45025.86,
+      "in-gaap:OperatingExpenses": 32175.92,
+      "in-gaap:EBITDA": 11538.51,
+      "in-gaap:DepreciationAndAmortisation": 1846.16,
+      "in-gaap:EBIT": 9692.35,
+      "in-gaap:FinanceCosts": 427.35,
+      "in-gaap:ProfitBeforeTax": 9265.0,
+      "in-gaap:TaxExpense": 2316.25,
+      "in-gaap:ProfitAfterTax": 6948.75
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 30.12,
+      "in-gaap:OtherEquity": 36463.75,
+      "in-gaap:TotalEquity": 36493.87,
+      "in-gaap:TotalDebt": 2624.3,
+      "in-gaap:CashAndCashEquivalents": 8002.03,
+      "in-gaap:TotalCurrentAssets": 21857.22,
+      "in-gaap:TotalCurrentLiabilities": 13114.33,
+      "in-gaap:TotalAssets": 52232.5,
+      "in-gaap:RetainedEarnings": 25545.71
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 9692.35,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3750.83,
+      "in-gaap:FreeCashFlow": 5941.52
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 68.75,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 150600000,
+      "in-gaap:MarketPriceAtFiling": 4537.9,
+      "in-gaap:EarningsPerShareBasic": 461.4,
+      "in-gaap:EarningsPerShareDiluted": 461.4,
+      "in-gaap:TrailingTwelveMonthsEPS": 1845.6,
+      "in-gaap:ForwardEPSEstimate": 2122.44,
+      "in-gaap:BookValuePerShare": 2423.23,
+      "in-gaap:EVToEBITDA": 1.4,
+      "in-gaap:TrailingPE": 2.5,
+      "in-gaap:ForwardPE": 2.1,
+      "in-gaap:PriceToBook": 1.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.5
+    }
+  }
+}

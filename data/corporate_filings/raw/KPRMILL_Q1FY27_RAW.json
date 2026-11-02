@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000281",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_KPRMILL",
+  "company_details": {
+    "symbol": "KPRMILL",
+    "company_name": "K.P.R. Mill Ltd.",
+    "isin": "INE930H01031",
+    "cin": "L29100MH1986PLC100281"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826IW2GS15HA3",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 33727.11,
+      "in-gaap:OtherIncome": 1011.81,
+      "in-gaap:TotalIncome": 34738.92,
+      "in-gaap:OperatingExpenses": 27979.08,
+      "in-gaap:EBITDA": 5748.03,
+      "in-gaap:DepreciationAndAmortisation": 919.68,
+      "in-gaap:EBIT": 4828.35,
+      "in-gaap:FinanceCosts": 209.78,
+      "in-gaap:ProfitBeforeTax": 4618.57,
+      "in-gaap:TaxExpense": 1154.64,
+      "in-gaap:ProfitAfterTax": 3463.93
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 154.26,
+      "in-gaap:OtherEquity": 26832.04,
+      "in-gaap:TotalEquity": 26986.3,
+      "in-gaap:TotalDebt": 3042.3,
+      "in-gaap:CashAndCashEquivalents": 2901.48,
+      "in-gaap:TotalCurrentAssets": 16863.56,
+      "in-gaap:TotalCurrentLiabilities": 10118.13,
+      "in-gaap:TotalAssets": 40146.73,
+      "in-gaap:RetainedEarnings": 18890.41
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 4540.94,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1683.42,
+      "in-gaap:FreeCashFlow": 2857.52
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 44.11,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 771300000,
+      "in-gaap:MarketPriceAtFiling": 1024.6,
+      "in-gaap:EarningsPerShareBasic": 44.91,
+      "in-gaap:EarningsPerShareDiluted": 44.91,
+      "in-gaap:TrailingTwelveMonthsEPS": 179.64,
+      "in-gaap:ForwardEPSEstimate": 206.59,
+      "in-gaap:BookValuePerShare": 349.88,
+      "in-gaap:EVToEBITDA": 3.4,
+      "in-gaap:TrailingPE": 5.7,
+      "in-gaap:ForwardPE": 4.8,
+      "in-gaap:PriceToBook": 2.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.7
+    }
+  }
+}

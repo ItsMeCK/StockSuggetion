@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000476",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_UTIAMC",
+  "company_details": {
+    "symbol": "UTIAMC",
+    "company_name": "UTI Asset Management Company Ltd.",
+    "isin": "INE094J01016",
+    "cin": "L29100MH2001PLC100476"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190EY4A0F1FC6",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 47697.95,
+      "in-gaap:OtherIncome": 1430.94,
+      "in-gaap:TotalIncome": 49128.89,
+      "in-gaap:OperatingExpenses": 36819.58,
+      "in-gaap:EBITDA": 10878.37,
+      "in-gaap:DepreciationAndAmortisation": 1740.54,
+      "in-gaap:EBIT": 9137.83,
+      "in-gaap:FinanceCosts": 636.16,
+      "in-gaap:ProfitBeforeTax": 8501.67,
+      "in-gaap:TaxExpense": 2125.42,
+      "in-gaap:ProfitAfterTax": 6376.25
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 180.12,
+      "in-gaap:OtherEquity": 29684.98,
+      "in-gaap:TotalEquity": 29865.1,
+      "in-gaap:TotalDebt": 7432.45,
+      "in-gaap:CashAndCashEquivalents": 5789.92,
+      "in-gaap:TotalCurrentAssets": 23848.97,
+      "in-gaap:TotalCurrentLiabilities": 14309.38,
+      "in-gaap:TotalAssets": 51606.93,
+      "in-gaap:RetainedEarnings": 20905.57
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 10008.1,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2629.59,
+      "in-gaap:FreeCashFlow": 7378.51
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 67.06,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 900600000,
+      "in-gaap:MarketPriceAtFiling": 817.05,
+      "in-gaap:EarningsPerShareBasic": 70.8,
+      "in-gaap:EarningsPerShareDiluted": 70.8,
+      "in-gaap:TrailingTwelveMonthsEPS": 283.2,
+      "in-gaap:ForwardEPSEstimate": 325.68,
+      "in-gaap:BookValuePerShare": 331.61,
+      "in-gaap:EVToEBITDA": 1.7,
+      "in-gaap:TrailingPE": 2.9,
+      "in-gaap:ForwardPE": 2.5,
+      "in-gaap:PriceToBook": 2.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.9
+    }
+  }
+}

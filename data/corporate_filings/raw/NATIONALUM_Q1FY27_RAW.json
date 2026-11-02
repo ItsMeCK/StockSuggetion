@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000341",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_NATIONALUM",
+  "company_details": {
+    "symbol": "NATIONALUM",
+    "company_name": "National Aluminium Co. Ltd.",
+    "isin": "INE139A01034",
+    "cin": "L29100MH2001PLC100341"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987L505FMB2N0",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 97202.79,
+      "in-gaap:OtherIncome": 2916.08,
+      "in-gaap:TotalIncome": 100118.87,
+      "in-gaap:OperatingExpenses": 77717.82,
+      "in-gaap:EBITDA": 19484.97,
+      "in-gaap:DepreciationAndAmortisation": 3117.6,
+      "in-gaap:EBIT": 16367.37,
+      "in-gaap:FinanceCosts": 579.91,
+      "in-gaap:ProfitBeforeTax": 15787.46,
+      "in-gaap:TaxExpense": 3946.86,
+      "in-gaap:ProfitAfterTax": 11840.59
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 398.28,
+      "in-gaap:OtherEquity": 113663.98,
+      "in-gaap:TotalEquity": 114062.26,
+      "in-gaap:TotalDebt": 20062.82,
+      "in-gaap:CashAndCashEquivalents": 15619.33,
+      "in-gaap:TotalCurrentAssets": 48601.39,
+      "in-gaap:TotalCurrentLiabilities": 29160.84,
+      "in-gaap:TotalAssets": 163285.92,
+      "in-gaap:RetainedEarnings": 79843.58
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 15393.13,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 4061.5,
+      "in-gaap:FreeCashFlow": 11331.63
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 58.17,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1991399999,
+      "in-gaap:MarketPriceAtFiling": 301.75,
+      "in-gaap:EarningsPerShareBasic": 59.46,
+      "in-gaap:EarningsPerShareDiluted": 59.46,
+      "in-gaap:TrailingTwelveMonthsEPS": 237.84,
+      "in-gaap:ForwardEPSEstimate": 273.52,
+      "in-gaap:BookValuePerShare": 572.77,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.5
+    }
+  }
+}

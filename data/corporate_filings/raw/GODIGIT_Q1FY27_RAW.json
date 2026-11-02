@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000186",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GODIGIT",
+  "company_details": {
+    "symbol": "GODIGIT",
+    "company_name": "Go Digit General Insurance Ltd.",
+    "isin": "INE03JT01014",
+    "cin": "L65191MH2006PLC100186"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317U88UL4LIUU",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 2609.81,
+      "in-gaap:OtherIncome": 913.43,
+      "in-gaap:OperatingExpenses": 1479.76,
+      "in-gaap:OperatingProfit": 2043.48,
+      "in-gaap:ProvisionsAndContingencies": 498.8,
+      "in-gaap:ProfitBeforeTax": 1544.68,
+      "in-gaap:TaxExpense": 386.17,
+      "in-gaap:ProfitAfterTax": 1158.51
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 278.76,
+      "in-gaap:ReservesAndSurplus": 36674.31,
+      "in-gaap:TotalEquity": 36953.07,
+      "in-gaap:TotalDeposits": 246353.82,
+      "in-gaap:CasaDeposits": 109627.45,
+      "in-gaap:TotalAdvances": 199521.96,
+      "in-gaap:TotalAssets": 307942.28
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 5686.38,
+      "in-gaap:NetNPA": 1695.94,
+      "in-gaap:CapitalAdequacyRatioCRAR": 20.6,
+      "in-gaap:Tier1CapitalRatio": 18.6
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 41.68,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1393800000,
+      "in-gaap:MarketPriceAtFiling": 269.5,
+      "in-gaap:EarningsPerShareBasic": 8.31,
+      "in-gaap:EarningsPerShareDiluted": 8.31,
+      "in-gaap:TrailingTwelveMonthsEPS": 33.24,
+      "in-gaap:ForwardEPSEstimate": 38.23,
+      "in-gaap:BookValuePerShare": 265.12,
+      "in-gaap:TrailingPE": 8.1,
+      "in-gaap:ForwardPE": 6.9,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.0
+    }
+  }
+}

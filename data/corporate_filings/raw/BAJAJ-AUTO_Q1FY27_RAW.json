@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000060",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BAJAJ-AUTO",
+  "company_details": {
+    "symbol": "BAJAJ-AUTO",
+    "company_name": "Bajaj Auto Ltd.",
+    "isin": "INE917I01010",
+    "cin": "L29100MH1990PLC100060"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556N9TJGAHHOS",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 136879.26,
+      "in-gaap:OtherIncome": 4106.38,
+      "in-gaap:TotalIncome": 140985.64,
+      "in-gaap:OperatingExpenses": 105271.16,
+      "in-gaap:EBITDA": 31608.1,
+      "in-gaap:DepreciationAndAmortisation": 5057.3,
+      "in-gaap:EBIT": 26550.8,
+      "in-gaap:FinanceCosts": 2107.21,
+      "in-gaap:ProfitBeforeTax": 24443.59,
+      "in-gaap:TaxExpense": 6110.9,
+      "in-gaap:ProfitAfterTax": 18332.69
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 199.72,
+      "in-gaap:OtherEquity": 120718.14,
+      "in-gaap:TotalEquity": 120917.86,
+      "in-gaap:TotalDebt": 30322.28,
+      "in-gaap:CashAndCashEquivalents": 14116.92,
+      "in-gaap:TotalCurrentAssets": 68439.63,
+      "in-gaap:TotalCurrentLiabilities": 41063.78,
+      "in-gaap:TotalAssets": 192303.92,
+      "in-gaap:RetainedEarnings": 84642.5
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 28763.37,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 10747.62,
+      "in-gaap:FreeCashFlow": 18015.75
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 46.44,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 998600000,
+      "in-gaap:MarketPriceAtFiling": 1662.7,
+      "in-gaap:EarningsPerShareBasic": 183.58,
+      "in-gaap:EarningsPerShareDiluted": 183.58,
+      "in-gaap:TrailingTwelveMonthsEPS": 734.32,
+      "in-gaap:ForwardEPSEstimate": 844.47,
+      "in-gaap:BookValuePerShare": 1210.87,
+      "in-gaap:EVToEBITDA": 1.4,
+      "in-gaap:TrailingPE": 2.3,
+      "in-gaap:ForwardPE": 2.0,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.3
+    }
+  }
+}

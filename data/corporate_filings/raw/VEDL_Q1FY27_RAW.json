@@ -1,0 +1,82 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1049981",
+  "submission_regulation": "SEBI (Listing Obligations) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_VEDL",
+  "company_details": {
+    "symbol": "VEDL",
+    "company_name": "Vedanta Limited",
+    "isin": "INE205A01025",
+    "cin": "L13209GA1965PLC000044"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-08-06T19:30:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Co. LLP",
+    "firm_registration_number": "301003E/E300005",
+    "signing_partner": "CA. Tridibes Basu",
+    "membership_number": "041870",
+    "udin": "26041870BKAVED8877",
+    "opinion_type": "Unmodified with Emphasis of Matter on Promoter Pledge"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 36500.0,
+      "in-gaap:OtherIncome": 680.0,
+      "in-gaap:TotalIncome": 37180.0,
+      "in-gaap:OperatingExpenses": 26800.0,
+      "in-gaap:EBITDA": 10380.0,
+      "in-gaap:DepreciationAndAmortisation": 2700.0,
+      "in-gaap:EBIT": 7680.0,
+      "in-gaap:FinanceCosts": 2200.0,
+      "in-gaap:ProfitBeforeTax": 6160.0,
+      "in-gaap:TaxExpense": 1360.0,
+      "in-gaap:ProfitAfterTax": 4800.0
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 372.0,
+      "in-gaap:OtherEquity": 38500.0,
+      "in-gaap:TotalEquity": 38872.0,
+      "in-gaap:TotalDebt": 75000.0,
+      "in-gaap:CashAndCashEquivalents": 16500.0,
+      "in-gaap:TotalCurrentAssets": 42000.0,
+      "in-gaap:TotalCurrentLiabilities": 49000.0,
+      "in-gaap:TotalAssets": 158000.0,
+      "in-gaap:RetainedEarnings": 28000.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 7200.0,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2800.0,
+      "in-gaap:FreeCashFlow": 4400.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 56.4,
+      "in-gaap:PromoterPledgedSharesPercentage": 99.8,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false,
+      "in-gaap:TradeReceivablesPriorPeriod": 4200.0,
+      "in-gaap:TradeReceivablesCurrentPeriod": 4500.0,
+      "in-gaap:GrossMarginPriorPeriodPercentage": 28.0,
+      "in-gaap:GrossMarginCurrentPeriodPercentage": 28.4,
+      "in-gaap:RevenuePriorPeriod": 34800.0,
+      "in-gaap:PriorPeriodLeverage": 2.1
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 3720000000,
+      "in-gaap:MarketPriceAtFiling": 440.0,
+      "in-gaap:EarningsPerShareBasic": 12.9,
+      "in-gaap:EarningsPerShareDiluted": 12.9,
+      "in-gaap:TrailingTwelveMonthsEPS": 42.0,
+      "in-gaap:ForwardEPSEstimate": 48.0,
+      "in-gaap:BookValuePerShare": 104.5,
+      "in-gaap:EVToEBITDA": 6.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 8.0
+    }
+  }
+}

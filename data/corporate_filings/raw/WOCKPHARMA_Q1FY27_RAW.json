@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000495",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_WOCKPHARMA",
+  "company_details": {
+    "symbol": "WOCKPHARMA",
+    "company_name": "Wockhardt Ltd.",
+    "isin": "INE049B01025",
+    "cin": "L29100MH1975PLC100495"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "261053170MYR1F42EI",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 533193.33,
+      "in-gaap:OtherIncome": 15995.8,
+      "in-gaap:TotalIncome": 549189.13,
+      "in-gaap:OperatingExpenses": 411261.79,
+      "in-gaap:EBITDA": 121931.54,
+      "in-gaap:DepreciationAndAmortisation": 19509.05,
+      "in-gaap:EBIT": 102422.49,
+      "in-gaap:FinanceCosts": 5123.17,
+      "in-gaap:ProfitBeforeTax": 97299.32,
+      "in-gaap:TaxExpense": 24324.83,
+      "in-gaap:ProfitAfterTax": 72974.49
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 352.32,
+      "in-gaap:OtherEquity": 485997.55,
+      "in-gaap:TotalEquity": 486349.87,
+      "in-gaap:TotalDebt": 15874.97,
+      "in-gaap:CashAndCashEquivalents": 78415.28,
+      "in-gaap:TotalCurrentAssets": 266596.66,
+      "in-gaap:TotalCurrentLiabilities": 159958.0,
+      "in-gaap:TotalAssets": 662182.84,
+      "in-gaap:RetainedEarnings": 340444.91
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 115834.96,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 44327.37,
+      "in-gaap:FreeCashFlow": 71507.59
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 47.3,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1761600000,
+      "in-gaap:MarketPriceAtFiling": 1801.7,
+      "in-gaap:EarningsPerShareBasic": 414.25,
+      "in-gaap:EarningsPerShareDiluted": 414.25,
+      "in-gaap:TrailingTwelveMonthsEPS": 1657.0,
+      "in-gaap:ForwardEPSEstimate": 1905.55,
+      "in-gaap:BookValuePerShare": 2760.84,
+      "in-gaap:EVToEBITDA": 0.5,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.4
+    }
+  }
+}

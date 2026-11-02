@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000319",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MARICO",
+  "company_details": {
+    "symbol": "MARICO",
+    "company_name": "Marico Ltd.",
+    "isin": "INE196A01026",
+    "cin": "L29100MH1979PLC100319"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190Q68QMJGK6G",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 226050.11,
+      "in-gaap:OtherIncome": 6781.5,
+      "in-gaap:TotalIncome": 232831.61,
+      "in-gaap:OperatingExpenses": 189579.26,
+      "in-gaap:EBITDA": 36470.85,
+      "in-gaap:DepreciationAndAmortisation": 5835.34,
+      "in-gaap:EBIT": 30635.51,
+      "in-gaap:FinanceCosts": 1494.71,
+      "in-gaap:ProfitBeforeTax": 29140.8,
+      "in-gaap:TaxExpense": 7285.2,
+      "in-gaap:ProfitAfterTax": 21855.6
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 496.26,
+      "in-gaap:OtherEquity": 227900.64,
+      "in-gaap:TotalEquity": 228396.9,
+      "in-gaap:TotalDebt": 43328.07,
+      "in-gaap:CashAndCashEquivalents": 51819.84,
+      "in-gaap:TotalCurrentAssets": 113025.05,
+      "in-gaap:TotalCurrentLiabilities": 67815.03,
+      "in-gaap:TotalAssets": 339540.0,
+      "in-gaap:RetainedEarnings": 159877.83
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 29906.1,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 10641.99,
+      "in-gaap:FreeCashFlow": 19264.11
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 38.82,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2481300000,
+      "in-gaap:MarketPriceAtFiling": 766.5,
+      "in-gaap:EarningsPerShareBasic": 88.08,
+      "in-gaap:EarningsPerShareDiluted": 88.08,
+      "in-gaap:TrailingTwelveMonthsEPS": 352.32,
+      "in-gaap:ForwardEPSEstimate": 405.17,
+      "in-gaap:BookValuePerShare": 920.47,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 2.2,
+      "in-gaap:ForwardPE": 1.9,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.4
+    }
+  }
+}

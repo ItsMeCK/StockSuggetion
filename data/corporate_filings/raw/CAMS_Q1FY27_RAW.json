@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000125",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CAMS",
+  "company_details": {
+    "symbol": "CAMS",
+    "company_name": "Computer Age Management Services Ltd.",
+    "isin": "INE596I01020",
+    "cin": "L29100MH2010PLC100125"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190WZ9UFXHIOC",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 53132.24,
+      "in-gaap:OtherIncome": 1593.97,
+      "in-gaap:TotalIncome": 54726.21,
+      "in-gaap:OperatingExpenses": 39575.01,
+      "in-gaap:EBITDA": 13557.23,
+      "in-gaap:DepreciationAndAmortisation": 2169.16,
+      "in-gaap:EBIT": 11388.07,
+      "in-gaap:FinanceCosts": 674.49,
+      "in-gaap:ProfitBeforeTax": 10713.58,
+      "in-gaap:TaxExpense": 2678.39,
+      "in-gaap:ProfitAfterTax": 8035.18
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 133.42,
+      "in-gaap:OtherEquity": 42386.13,
+      "in-gaap:TotalEquity": 42519.55,
+      "in-gaap:TotalDebt": 8627.06,
+      "in-gaap:CashAndCashEquivalents": 5284.39,
+      "in-gaap:TotalCurrentAssets": 26566.12,
+      "in-gaap:TotalCurrentLiabilities": 15939.67,
+      "in-gaap:TotalAssets": 67086.28,
+      "in-gaap:RetainedEarnings": 29763.69
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 11116.93,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 4361.8,
+      "in-gaap:FreeCashFlow": 6755.13
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 48.91,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 667099999,
+      "in-gaap:MarketPriceAtFiling": 650.0,
+      "in-gaap:EarningsPerShareBasic": 120.45,
+      "in-gaap:EarningsPerShareDiluted": 120.45,
+      "in-gaap:TrailingTwelveMonthsEPS": 481.8,
+      "in-gaap:ForwardEPSEstimate": 554.07,
+      "in-gaap:BookValuePerShare": 637.38,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.9
+    }
+  }
+}

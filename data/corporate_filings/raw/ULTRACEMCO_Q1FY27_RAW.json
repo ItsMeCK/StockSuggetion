@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000477",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ULTRACEMCO",
+  "company_details": {
+    "symbol": "ULTRACEMCO",
+    "company_name": "UltraTech Cement Ltd.",
+    "isin": "INE481G01011",
+    "cin": "L29100MH2002PLC100477"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "261053177BNPGQ6KAX",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 1556551.12,
+      "in-gaap:OtherIncome": 46696.53,
+      "in-gaap:TotalIncome": 1603247.65,
+      "in-gaap:OperatingExpenses": 1328298.89,
+      "in-gaap:EBITDA": 228252.23,
+      "in-gaap:DepreciationAndAmortisation": 36520.36,
+      "in-gaap:EBIT": 191731.87,
+      "in-gaap:FinanceCosts": 9838.46,
+      "in-gaap:ProfitBeforeTax": 181893.41,
+      "in-gaap:TaxExpense": 45473.35,
+      "in-gaap:ProfitAfterTax": 136420.06
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 247.18,
+      "in-gaap:OtherEquity": 1987245.73,
+      "in-gaap:TotalEquity": 1987492.91,
+      "in-gaap:TotalDebt": 107227.59,
+      "in-gaap:CashAndCashEquivalents": 147512.06,
+      "in-gaap:TotalCurrentAssets": 778275.56,
+      "in-gaap:TotalCurrentLiabilities": 466965.34,
+      "in-gaap:TotalAssets": 2561685.84,
+      "in-gaap:RetainedEarnings": 1391245.04
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 184884.31,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 42784.54,
+      "in-gaap:FreeCashFlow": 142099.77
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 59.36,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1235900000,
+      "in-gaap:MarketPriceAtFiling": 11050.0,
+      "in-gaap:EarningsPerShareBasic": 1103.81,
+      "in-gaap:EarningsPerShareDiluted": 1103.81,
+      "in-gaap:TrailingTwelveMonthsEPS": 4415.24,
+      "in-gaap:ForwardEPSEstimate": 5077.53,
+      "in-gaap:BookValuePerShare": 16081.34,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.5,
+      "in-gaap:ForwardPE": 2.1,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.4
+    }
+  }
+}

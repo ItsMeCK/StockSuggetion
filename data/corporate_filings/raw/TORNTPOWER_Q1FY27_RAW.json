@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000466",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TORNTPOWER",
+  "company_details": {
+    "symbol": "TORNTPOWER",
+    "company_name": "Torrent Power Ltd.",
+    "isin": "INE813H01021",
+    "cin": "L29100MH1991PLC100466"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556DITF823ZZB",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 358782.57,
+      "in-gaap:OtherIncome": 10763.48,
+      "in-gaap:TotalIncome": 369546.05,
+      "in-gaap:OperatingExpenses": 298660.99,
+      "in-gaap:EBITDA": 60121.58,
+      "in-gaap:DepreciationAndAmortisation": 9619.45,
+      "in-gaap:EBIT": 50502.13,
+      "in-gaap:FinanceCosts": 7243.56,
+      "in-gaap:ProfitBeforeTax": 43258.57,
+      "in-gaap:TaxExpense": 10814.64,
+      "in-gaap:ProfitAfterTax": 32443.93
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 391.34,
+      "in-gaap:OtherEquity": 425457.35,
+      "in-gaap:TotalEquity": 425848.69,
+      "in-gaap:TotalDebt": 59912.98,
+      "in-gaap:CashAndCashEquivalents": 86679.73,
+      "in-gaap:TotalCurrentAssets": 179391.29,
+      "in-gaap:TotalCurrentLiabilities": 107634.77,
+      "in-gaap:TotalAssets": 593396.44,
+      "in-gaap:RetainedEarnings": 298094.08
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 52906.99,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 17615.61,
+      "in-gaap:FreeCashFlow": 35291.38
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 58.48,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1956699999,
+      "in-gaap:MarketPriceAtFiling": 1169.0,
+      "in-gaap:EarningsPerShareBasic": 165.81,
+      "in-gaap:EarningsPerShareDiluted": 165.81,
+      "in-gaap:TrailingTwelveMonthsEPS": 663.24,
+      "in-gaap:ForwardEPSEstimate": 762.73,
+      "in-gaap:BookValuePerShare": 2176.36,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.8
+    }
+  }
+}

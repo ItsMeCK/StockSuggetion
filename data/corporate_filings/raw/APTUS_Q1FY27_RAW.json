@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000045",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_APTUS",
+  "company_details": {
+    "symbol": "APTUS",
+    "company_name": "Aptus Value Housing Finance India Ltd.",
+    "isin": "INE852O01025",
+    "cin": "L65191MH1985PLC100045"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826F8ISZN2121",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 2246.18,
+      "in-gaap:OtherIncome": 786.16,
+      "in-gaap:OperatingExpenses": 1273.58,
+      "in-gaap:OperatingProfit": 1758.76,
+      "in-gaap:ProvisionsAndContingencies": 380.54,
+      "in-gaap:ProfitBeforeTax": 1378.22,
+      "in-gaap:TaxExpense": 344.56,
+      "in-gaap:ProfitAfterTax": 1033.66
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 365.26,
+      "in-gaap:ReservesAndSurplus": 27280.0,
+      "in-gaap:TotalEquity": 27645.26,
+      "in-gaap:TotalDeposits": 184301.72,
+      "in-gaap:CasaDeposits": 79434.04,
+      "in-gaap:TotalAdvances": 152214.79,
+      "in-gaap:TotalAssets": 230377.15
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 3272.62,
+      "in-gaap:NetNPA": 974.17,
+      "in-gaap:CapitalAdequacyRatioCRAR": 17.6,
+      "in-gaap:Tier1CapitalRatio": 15.6
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 25.43,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1826300000,
+      "in-gaap:MarketPriceAtFiling": 196.47,
+      "in-gaap:EarningsPerShareBasic": 5.66,
+      "in-gaap:EarningsPerShareDiluted": 5.66,
+      "in-gaap:TrailingTwelveMonthsEPS": 22.64,
+      "in-gaap:ForwardEPSEstimate": 26.04,
+      "in-gaap:BookValuePerShare": 151.37,
+      "in-gaap:TrailingPE": 8.7,
+      "in-gaap:ForwardPE": 7.4,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 13.6
+    }
+  }
+}

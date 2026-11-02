@@ -133,31 +133,47 @@ def evaluate_watchlist():
         
         is_strong = matches_theme_sectors(sec, strong_sec)
         is_weak = matches_theme_sectors(sec, weak_sec)
-        cand["is_sector_aligned"] = is_strong if cand.get("direction") == "LONG" else is_weak
 
-        if cand.get("direction") == "LONG":
+        # Sector-directed alignment:
+        # If in a strong macro sector, evaluate as Long (CE) setup
+        # If in a weak macro sector, evaluate as Short (PE) setup
+        # Otherwise, assign direction by pre-open gap
+        if is_strong:
+            cand["direction"] = "LONG"
+            cand["is_sector_aligned"] = True
             longs.append(cand)
-        else:
+        elif is_weak:
+            cand["direction"] = "SHORT"
+            cand["is_sector_aligned"] = True
             shorts.append(cand)
+        else:
+            cand["is_sector_aligned"] = False
+            if cand.get("direction") == "SHORT" or cand_gap < 0:
+                cand["direction"] = "SHORT"
+                shorts.append(cand)
+            else:
+                cand["direction"] = "LONG"
+                longs.append(cand)
 
     # Sort Longs: 1) Sector-aligned first, 2) Highest positive gap %, 3) Highest 20D ATR%
-    longs_sorted = sorted(longs, key=lambda x: (1 if x["is_sector_aligned"] else 0, x["gap_pct"], x.get("atr_pct", 2.0)), reverse=True)
+    longs_sorted = sorted(longs, key=lambda x: (1 if x.get("is_sector_aligned") else 0, x.get("gap_pct", 0.0), x.get("atr_pct", 2.0)), reverse=True)
     # Sort Shorts: 1) Sector-aligned first, 2) Most negative gap %, 3) Highest 20D ATR%
-    shorts_sorted = sorted(shorts, key=lambda x: (1 if x["is_sector_aligned"] else 0, -x["gap_pct"], x.get("atr_pct", 2.0)), reverse=True)
+    shorts_sorted = sorted(shorts, key=lambda x: (1 if x.get("is_sector_aligned") else 0, -x.get("gap_pct", 0.0), x.get("atr_pct", 2.0)), reverse=True)
 
     # Pick Top 5 Longs (CE) + Top 5 Shorts (PE) -> Strict 10 Candidates to Preserve Query Budget
     top_longs = longs_sorted[:5]
     top_shorts = shorts_sorted[:5]
     prioritized_candidates = top_longs + top_shorts
 
-    # Fallback padding if one side had fewer than 5
+    # Fallback padding if one side had fewer than 5 (Rank by ATR% - NEVER alphabetical)
     if len(prioritized_candidates) < 10:
         seen = {c["symbol"] for c in prioritized_candidates}
-        for c in active_daily:
-            if c["symbol"] not in seen:
-                prioritized_candidates.append(c)
-                if len(prioritized_candidates) >= 10:
-                    break
+        remaining_pool = [c for c in longs_sorted + shorts_sorted if c["symbol"] not in seen]
+        remaining_sorted = sorted(remaining_pool, key=lambda x: x.get("atr_pct", 2.0), reverse=True)
+        for c in remaining_sorted:
+            prioritized_candidates.append(c)
+            if len(prioritized_candidates) >= 10:
+                break
 
     logger.info(f"🎯 Filtered {len(active_daily)} -> Top {len(prioritized_candidates)} Sector-Aligned Candidates for AI Grounding (CE: {[c['symbol'] for c in top_longs]} | PE: {[c['symbol'] for c in top_shorts]})")
 
@@ -169,10 +185,30 @@ def evaluate_watchlist():
     )
 
     # Fail-safe (Requirement WB2): If AI grounding yielded 0 symbols (e.g. offline/API rate limit),
-    # activate quantitative fallback from active_daily so desk never operates on an empty watchlist.
+    # activate quantitative fallback from ranked sector leaders so desk never operates on an unranked list.
     if not final_focus and active_daily:
         logger.warning("⚠️ Grounding yielded 0 symbols. Activating quantitative pre-open fallback.")
-        for cand in active_daily[:10]:
+        vetoed_syms = {
+            c.get("symbol") for c in grounded_review 
+            if "ABSOLUTE_VETO" in c.get("route_reason", "") or "ABSOLUTE_VETO" in c.get("catalyst_summary", "")
+        }
+        clean_longs = [c for c in longs_sorted if c["symbol"] not in vetoed_syms]
+        clean_shorts = [c for c in shorts_sorted if c["symbol"] not in vetoed_syms]
+
+        fallback_pool = clean_longs[:5] + clean_shorts[:5]
+        if len(fallback_pool) < 10:
+            seen_fb = {c["symbol"] for c in fallback_pool}
+            remaining_clean = sorted(
+                [c for c in active_daily if c["symbol"] not in seen_fb and c["symbol"] not in vetoed_syms],
+                key=lambda x: x.get("atr_pct", 2.0),
+                reverse=True
+            )
+            for c in remaining_clean:
+                fallback_pool.append(c)
+                if len(fallback_pool) >= 10:
+                    break
+
+        for cand in fallback_pool[:10]:
             sym = cand.get("symbol", "")
             direction = cand.get("direction", "LONG")
             fallback_stock = {

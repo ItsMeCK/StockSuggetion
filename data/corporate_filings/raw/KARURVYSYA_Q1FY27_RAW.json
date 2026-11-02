@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000287",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_KARURVYSYA",
+  "company_details": {
+    "symbol": "KARURVYSYA",
+    "company_name": "Karur Vysya Bank Ltd.",
+    "isin": "INE036D01028",
+    "cin": "L65191MH1987PLC100287"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-17T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556SKLBGFTHOC",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 5112.9,
+      "in-gaap:OtherIncome": 1789.51,
+      "in-gaap:OperatingExpenses": 2899.01,
+      "in-gaap:OperatingProfit": 4003.4,
+      "in-gaap:ProvisionsAndContingencies": 776.28,
+      "in-gaap:ProfitBeforeTax": 3227.12,
+      "in-gaap:TaxExpense": 806.78,
+      "in-gaap:ProfitAfterTax": 2420.34
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 436.48,
+      "in-gaap:ReservesAndSurplus": 57996.7,
+      "in-gaap:TotalEquity": 58433.18,
+      "in-gaap:TotalDeposits": 389554.54,
+      "in-gaap:CasaDeposits": 153484.49,
+      "in-gaap:TotalAdvances": 310513.92,
+      "in-gaap:TotalAssets": 486943.17
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 8352.82,
+      "in-gaap:NetNPA": 2515.16,
+      "in-gaap:CapitalAdequacyRatioCRAR": 19.5,
+      "in-gaap:Tier1CapitalRatio": 17.5
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 17.31,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2182400000,
+      "in-gaap:MarketPriceAtFiling": 336.3,
+      "in-gaap:EarningsPerShareBasic": 11.09,
+      "in-gaap:EarningsPerShareDiluted": 11.09,
+      "in-gaap:TrailingTwelveMonthsEPS": 44.36,
+      "in-gaap:ForwardEPSEstimate": 51.01,
+      "in-gaap:BookValuePerShare": 267.75,
+      "in-gaap:TrailingPE": 7.6,
+      "in-gaap:ForwardPE": 6.5,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.1
+    }
+  }
+}

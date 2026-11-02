@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000040",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ANTHEM",
+  "company_details": {
+    "symbol": "ANTHEM",
+    "company_name": "Anthem Biosciences Ltd.",
+    "isin": "INE0CZ201020",
+    "cin": "L29100MH2015PLC100040"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987OBNRSOX0TN",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 143180.59,
+      "in-gaap:OtherIncome": 4295.42,
+      "in-gaap:TotalIncome": 147476.01,
+      "in-gaap:OperatingExpenses": 125705.18,
+      "in-gaap:EBITDA": 17475.41,
+      "in-gaap:DepreciationAndAmortisation": 2796.07,
+      "in-gaap:EBIT": 14679.34,
+      "in-gaap:FinanceCosts": 1065.57,
+      "in-gaap:ProfitBeforeTax": 13613.77,
+      "in-gaap:TaxExpense": 3403.44,
+      "in-gaap:ProfitAfterTax": 10210.33
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 415.74,
+      "in-gaap:OtherEquity": 89633.17,
+      "in-gaap:TotalEquity": 90048.91,
+      "in-gaap:TotalDebt": 7944.67,
+      "in-gaap:CashAndCashEquivalents": 20467.85,
+      "in-gaap:TotalCurrentAssets": 71590.29,
+      "in-gaap:TotalCurrentLiabilities": 42954.18,
+      "in-gaap:TotalAssets": 140947.76,
+      "in-gaap:RetainedEarnings": 63034.24
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 16077.38,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 5529.36,
+      "in-gaap:FreeCashFlow": 10548.02
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 41.99,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2078700000,
+      "in-gaap:MarketPriceAtFiling": 812.8,
+      "in-gaap:EarningsPerShareBasic": 49.12,
+      "in-gaap:EarningsPerShareDiluted": 49.12,
+      "in-gaap:TrailingTwelveMonthsEPS": 196.48,
+      "in-gaap:ForwardEPSEstimate": 225.95,
+      "in-gaap:BookValuePerShare": 433.2,
+      "in-gaap:EVToEBITDA": 2.2,
+      "in-gaap:TrailingPE": 4.1,
+      "in-gaap:ForwardPE": 3.5,
+      "in-gaap:PriceToBook": 1.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.4
+    }
+  }
+}

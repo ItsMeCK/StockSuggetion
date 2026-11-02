@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000391",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_RITES",
+  "company_details": {
+    "symbol": "RITES",
+    "company_name": "RITES Ltd.",
+    "isin": "INE320J01015",
+    "cin": "L29100MH2006PLC100391"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814ZMBLT6U7HV",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 32105.01,
+      "in-gaap:OtherIncome": 963.15,
+      "in-gaap:TotalIncome": 33068.16,
+      "in-gaap:OperatingExpenses": 22308.74,
+      "in-gaap:EBITDA": 9796.27,
+      "in-gaap:DepreciationAndAmortisation": 1567.4,
+      "in-gaap:EBIT": 8228.87,
+      "in-gaap:FinanceCosts": 502.37,
+      "in-gaap:ProfitBeforeTax": 7726.5,
+      "in-gaap:TaxExpense": 1931.62,
+      "in-gaap:ProfitAfterTax": 5794.88
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 393.62,
+      "in-gaap:OtherEquity": 28837.76,
+      "in-gaap:TotalEquity": 29231.38,
+      "in-gaap:TotalDebt": 9050.22,
+      "in-gaap:CashAndCashEquivalents": 6162.18,
+      "in-gaap:TotalCurrentAssets": 16052.5,
+      "in-gaap:TotalCurrentLiabilities": 9631.5,
+      "in-gaap:TotalAssets": 47913.1,
+      "in-gaap:RetainedEarnings": 20461.97
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 7641.09,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2610.07,
+      "in-gaap:FreeCashFlow": 5031.02
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.84,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1968100000,
+      "in-gaap:MarketPriceAtFiling": 189.4,
+      "in-gaap:EarningsPerShareBasic": 29.44,
+      "in-gaap:EarningsPerShareDiluted": 29.44,
+      "in-gaap:TrailingTwelveMonthsEPS": 117.76,
+      "in-gaap:ForwardEPSEstimate": 135.42,
+      "in-gaap:BookValuePerShare": 148.53,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.6,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.3
+    }
+  }
+}

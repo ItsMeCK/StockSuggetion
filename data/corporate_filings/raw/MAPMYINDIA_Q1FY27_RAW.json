@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000094",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MAPMYINDIA",
+  "company_details": {
+    "symbol": "MAPMYINDIA",
+    "company_name": "C.E. Info Systems Ltd.",
+    "isin": "INE0BV301023",
+    "cin": "L29100MH1979PLC100094"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "261178127Z04RD8NRK",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 72631.4,
+      "in-gaap:OtherIncome": 2178.94,
+      "in-gaap:TotalIncome": 74810.34,
+      "in-gaap:OperatingExpenses": 62816.36,
+      "in-gaap:EBITDA": 9815.04,
+      "in-gaap:DepreciationAndAmortisation": 1570.41,
+      "in-gaap:EBIT": 8244.63,
+      "in-gaap:FinanceCosts": 732.47,
+      "in-gaap:ProfitBeforeTax": 7512.16,
+      "in-gaap:TaxExpense": 1878.04,
+      "in-gaap:ProfitAfterTax": 5634.12
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 165.26,
+      "in-gaap:OtherEquity": 104922.8,
+      "in-gaap:TotalEquity": 105088.06,
+      "in-gaap:TotalDebt": 9467.55,
+      "in-gaap:CashAndCashEquivalents": 17601.71,
+      "in-gaap:TotalCurrentAssets": 36315.7,
+      "in-gaap:TotalCurrentLiabilities": 21789.42,
+      "in-gaap:TotalAssets": 136345.03,
+      "in-gaap:RetainedEarnings": 73561.64
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 8244.63,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2195.96,
+      "in-gaap:FreeCashFlow": 6048.67
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.37,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 826300000,
+      "in-gaap:MarketPriceAtFiling": 820.3,
+      "in-gaap:EarningsPerShareBasic": 68.18,
+      "in-gaap:EarningsPerShareDiluted": 68.18,
+      "in-gaap:TrailingTwelveMonthsEPS": 272.72,
+      "in-gaap:ForwardEPSEstimate": 313.63,
+      "in-gaap:BookValuePerShare": 1271.79,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 3.0,
+      "in-gaap:ForwardPE": 2.5,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.5
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000500",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ZENSARTECH",
+  "company_details": {
+    "symbol": "ZENSARTECH",
+    "company_name": "Zensar Technolgies Ltd.",
+    "isin": "INE520A01027",
+    "cin": "L29100MH1980PLC100500"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "261178123SELPBHO68",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 101863.42,
+      "in-gaap:OtherIncome": 3055.9,
+      "in-gaap:TotalIncome": 104919.32,
+      "in-gaap:OperatingExpenses": 82637.0,
+      "in-gaap:EBITDA": 19226.42,
+      "in-gaap:DepreciationAndAmortisation": 3076.23,
+      "in-gaap:EBIT": 16150.19,
+      "in-gaap:FinanceCosts": 728.27,
+      "in-gaap:ProfitBeforeTax": 15421.92,
+      "in-gaap:TaxExpense": 3855.48,
+      "in-gaap:ProfitAfterTax": 11566.44
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 238.1,
+      "in-gaap:OtherEquity": 75280.74,
+      "in-gaap:TotalEquity": 75518.84,
+      "in-gaap:TotalDebt": 7830.12,
+      "in-gaap:CashAndCashEquivalents": 10966.96,
+      "in-gaap:TotalCurrentAssets": 50931.71,
+      "in-gaap:TotalCurrentLiabilities": 30559.03,
+      "in-gaap:TotalAssets": 113907.99,
+      "in-gaap:RetainedEarnings": 52863.19
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 16342.46,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 5422.71,
+      "in-gaap:FreeCashFlow": 10919.75
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 66.71,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1190500000,
+      "in-gaap:MarketPriceAtFiling": 493.7,
+      "in-gaap:EarningsPerShareBasic": 97.16,
+      "in-gaap:EarningsPerShareDiluted": 97.16,
+      "in-gaap:TrailingTwelveMonthsEPS": 388.64,
+      "in-gaap:ForwardEPSEstimate": 446.94,
+      "in-gaap:BookValuePerShare": 634.35,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.3
+    }
+  }
+}

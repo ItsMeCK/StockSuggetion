@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000035",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_AMBER",
+  "company_details": {
+    "symbol": "AMBER",
+    "company_name": "Amber Enterprises India Ltd.",
+    "isin": "INE371P01015",
+    "cin": "L29100MH2010PLC100035"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423YBS4A2YHO3",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 2113962.39,
+      "in-gaap:OtherIncome": 63418.87,
+      "in-gaap:TotalIncome": 2177381.26,
+      "in-gaap:OperatingExpenses": 1559775.65,
+      "in-gaap:EBITDA": 554186.74,
+      "in-gaap:DepreciationAndAmortisation": 88669.88,
+      "in-gaap:EBIT": 465516.86,
+      "in-gaap:FinanceCosts": 20152.25,
+      "in-gaap:ProfitBeforeTax": 445364.61,
+      "in-gaap:TaxExpense": 111341.15,
+      "in-gaap:ProfitAfterTax": 334023.46
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 463.28,
+      "in-gaap:OtherEquity": 2393014.77,
+      "in-gaap:TotalEquity": 2393478.05,
+      "in-gaap:TotalDebt": 293324.59,
+      "in-gaap:CashAndCashEquivalents": 264220.7,
+      "in-gaap:TotalCurrentAssets": 1056981.2,
+      "in-gaap:TotalCurrentLiabilities": 634188.72,
+      "in-gaap:TotalAssets": 3320991.36,
+      "in-gaap:RetainedEarnings": 1675434.63
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 459974.99,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 118705.23,
+      "in-gaap:FreeCashFlow": 341269.76
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 58.2,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2316400000,
+      "in-gaap:MarketPriceAtFiling": 6004.5,
+      "in-gaap:EarningsPerShareBasic": 1441.99,
+      "in-gaap:EarningsPerShareDiluted": 1441.99,
+      "in-gaap:TrailingTwelveMonthsEPS": 5767.96,
+      "in-gaap:ForwardEPSEstimate": 6633.15,
+      "in-gaap:BookValuePerShare": 10332.75,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.0,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.2
+    }
+  }
+}

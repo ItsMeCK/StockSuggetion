@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000136",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_DOMS",
+  "company_details": {
+    "symbol": "DOMS",
+    "company_name": "DOMS Industries Ltd.",
+    "isin": "INE321T01012",
+    "cin": "L29100MH1976PLC100136"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987V9P9BZL2KM",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 414054.72,
+      "in-gaap:OtherIncome": 12421.64,
+      "in-gaap:TotalIncome": 426476.36,
+      "in-gaap:OperatingExpenses": 295764.09,
+      "in-gaap:EBITDA": 118290.63,
+      "in-gaap:DepreciationAndAmortisation": 18926.5,
+      "in-gaap:EBIT": 99364.13,
+      "in-gaap:FinanceCosts": 10110.31,
+      "in-gaap:ProfitBeforeTax": 89253.82,
+      "in-gaap:TaxExpense": 22313.46,
+      "in-gaap:ProfitAfterTax": 66940.37
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 351.52,
+      "in-gaap:OtherEquity": 553978.98,
+      "in-gaap:TotalEquity": 554330.5,
+      "in-gaap:TotalDebt": 69527.39,
+      "in-gaap:CashAndCashEquivalents": 101389.03,
+      "in-gaap:TotalCurrentAssets": 207027.36,
+      "in-gaap:TotalCurrentLiabilities": 124216.42,
+      "in-gaap:TotalAssets": 748074.31,
+      "in-gaap:RetainedEarnings": 388031.35
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 95815.41,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 27833.51,
+      "in-gaap:FreeCashFlow": 67981.9
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.04,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1757600000,
+      "in-gaap:MarketPriceAtFiling": 1874.2,
+      "in-gaap:EarningsPerShareBasic": 380.86,
+      "in-gaap:EarningsPerShareDiluted": 380.86,
+      "in-gaap:TrailingTwelveMonthsEPS": 1523.44,
+      "in-gaap:ForwardEPSEstimate": 1751.96,
+      "in-gaap:BookValuePerShare": 3153.91,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.2,
+      "in-gaap:ForwardPE": 1.0,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.8
+    }
+  }
+}

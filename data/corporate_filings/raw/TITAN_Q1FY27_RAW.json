@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000464",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TITAN",
+  "company_details": {
+    "symbol": "TITAN",
+    "company_name": "Titan Company Ltd.",
+    "isin": "INE280A01028",
+    "cin": "L29100MH1989PLC100464"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814BT2AEYMXZK",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 197599.16,
+      "in-gaap:OtherIncome": 5927.97,
+      "in-gaap:TotalIncome": 203527.13,
+      "in-gaap:OperatingExpenses": 140249.07,
+      "in-gaap:EBITDA": 57350.09,
+      "in-gaap:DepreciationAndAmortisation": 9176.01,
+      "in-gaap:EBIT": 48174.08,
+      "in-gaap:FinanceCosts": 3393.5,
+      "in-gaap:ProfitBeforeTax": 44780.58,
+      "in-gaap:TaxExpense": 11195.15,
+      "in-gaap:ProfitAfterTax": 33585.43
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 213.2,
+      "in-gaap:OtherEquity": 268069.83,
+      "in-gaap:TotalEquity": 268283.03,
+      "in-gaap:TotalDebt": 43819.19,
+      "in-gaap:CashAndCashEquivalents": 30336.48,
+      "in-gaap:TotalCurrentAssets": 98799.58,
+      "in-gaap:TotalCurrentLiabilities": 59279.75,
+      "in-gaap:TotalAssets": 371381.97,
+      "in-gaap:RetainedEarnings": 187798.12
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 45880.07,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 17207.93,
+      "in-gaap:FreeCashFlow": 28672.14
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 54.27,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1066000000,
+      "in-gaap:MarketPriceAtFiling": 4299.7,
+      "in-gaap:EarningsPerShareBasic": 315.06,
+      "in-gaap:EarningsPerShareDiluted": 315.06,
+      "in-gaap:TrailingTwelveMonthsEPS": 1260.24,
+      "in-gaap:ForwardEPSEstimate": 1449.28,
+      "in-gaap:BookValuePerShare": 2516.73,
+      "in-gaap:EVToEBITDA": 2.1,
+      "in-gaap:TrailingPE": 3.4,
+      "in-gaap:ForwardPE": 2.9,
+      "in-gaap:PriceToBook": 1.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.2
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000192",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GRANULES",
+  "company_details": {
+    "symbol": "GRANULES",
+    "company_name": "Granules India Ltd.",
+    "isin": "INE101D01020",
+    "cin": "L29100MH1987PLC100192"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556U4APNBHUV3",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 123684.55,
+      "in-gaap:OtherIncome": 3710.54,
+      "in-gaap:TotalIncome": 127395.09,
+      "in-gaap:OperatingExpenses": 107380.22,
+      "in-gaap:EBITDA": 16304.33,
+      "in-gaap:DepreciationAndAmortisation": 2608.69,
+      "in-gaap:EBIT": 13695.64,
+      "in-gaap:FinanceCosts": 1393.53,
+      "in-gaap:ProfitBeforeTax": 12302.11,
+      "in-gaap:TaxExpense": 3075.53,
+      "in-gaap:ProfitAfterTax": 9226.58
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 484.72,
+      "in-gaap:OtherEquity": 81278.49,
+      "in-gaap:TotalEquity": 81763.21,
+      "in-gaap:TotalDebt": 2608.49,
+      "in-gaap:CashAndCashEquivalents": 29291.83,
+      "in-gaap:TotalCurrentAssets": 61842.28,
+      "in-gaap:TotalCurrentLiabilities": 37105.36,
+      "in-gaap:TotalAssets": 121477.07,
+      "in-gaap:RetainedEarnings": 57234.25
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 13206.51,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3443.32,
+      "in-gaap:FreeCashFlow": 9763.19
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 51.02,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2423600000,
+      "in-gaap:MarketPriceAtFiling": 794.75,
+      "in-gaap:EarningsPerShareBasic": 38.07,
+      "in-gaap:EarningsPerShareDiluted": 38.07,
+      "in-gaap:TrailingTwelveMonthsEPS": 152.28,
+      "in-gaap:ForwardEPSEstimate": 175.12,
+      "in-gaap:BookValuePerShare": 337.36,
+      "in-gaap:EVToEBITDA": 2.5,
+      "in-gaap:TrailingPE": 5.2,
+      "in-gaap:ForwardPE": 4.4,
+      "in-gaap:PriceToBook": 2.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.8
+    }
+  }
+}

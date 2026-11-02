@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000414",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SCI",
+  "company_details": {
+    "symbol": "SCI",
+    "company_name": "Shipping Corporation of India Ltd.",
+    "isin": "INE109A01011",
+    "cin": "L29100MH1984PLC100414"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-24T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317VHDA5TJS9C",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 35394.0,
+      "in-gaap:OtherIncome": 1061.82,
+      "in-gaap:TotalIncome": 36455.82,
+      "in-gaap:OperatingExpenses": 30888.67,
+      "in-gaap:EBITDA": 4505.33,
+      "in-gaap:DepreciationAndAmortisation": 720.85,
+      "in-gaap:EBIT": 3784.48,
+      "in-gaap:FinanceCosts": 190.9,
+      "in-gaap:ProfitBeforeTax": 3593.58,
+      "in-gaap:TaxExpense": 898.39,
+      "in-gaap:ProfitAfterTax": 2695.18
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 291.6,
+      "in-gaap:OtherEquity": 23925.07,
+      "in-gaap:TotalEquity": 24216.67,
+      "in-gaap:TotalDebt": 1910.57,
+      "in-gaap:CashAndCashEquivalents": 6520.59,
+      "in-gaap:TotalCurrentAssets": 17697.0,
+      "in-gaap:TotalCurrentLiabilities": 10618.2,
+      "in-gaap:TotalAssets": 36745.44,
+      "in-gaap:RetainedEarnings": 16951.67
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 3649.32,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1437.27,
+      "in-gaap:FreeCashFlow": 2212.05
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.08,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1458000000,
+      "in-gaap:MarketPriceAtFiling": 237.8,
+      "in-gaap:EarningsPerShareBasic": 18.49,
+      "in-gaap:EarningsPerShareDiluted": 18.49,
+      "in-gaap:TrailingTwelveMonthsEPS": 73.96,
+      "in-gaap:ForwardEPSEstimate": 85.05,
+      "in-gaap:BookValuePerShare": 166.1,
+      "in-gaap:EVToEBITDA": 1.7,
+      "in-gaap:TrailingPE": 3.2,
+      "in-gaap:ForwardPE": 2.7,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.3
+    }
+  }
+}

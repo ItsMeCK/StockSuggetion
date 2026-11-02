@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000216",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HINDUNILVR",
+  "company_details": {
+    "symbol": "HINDUNILVR",
+    "company_name": "Hindustan Unilever Ltd.",
+    "isin": "INE030A01027",
+    "cin": "L29100MH2011PLC100216"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826E07GXPSC6L",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 202131.8,
+      "in-gaap:OtherIncome": 6063.95,
+      "in-gaap:TotalIncome": 208195.75,
+      "in-gaap:OperatingExpenses": 148206.97,
+      "in-gaap:EBITDA": 53924.83,
+      "in-gaap:DepreciationAndAmortisation": 8627.97,
+      "in-gaap:EBIT": 45296.86,
+      "in-gaap:FinanceCosts": 2808.58,
+      "in-gaap:ProfitBeforeTax": 42488.28,
+      "in-gaap:TaxExpense": 10622.07,
+      "in-gaap:ProfitAfterTax": 31866.21
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 227.86,
+      "in-gaap:OtherEquity": 230765.42,
+      "in-gaap:TotalEquity": 230993.28,
+      "in-gaap:TotalDebt": 51159.51,
+      "in-gaap:CashAndCashEquivalents": 36086.29,
+      "in-gaap:TotalCurrentAssets": 101065.9,
+      "in-gaap:TotalCurrentLiabilities": 60639.54,
+      "in-gaap:TotalAssets": 342792.33,
+      "in-gaap:RetainedEarnings": 161695.3
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 41522.12,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 10554.43,
+      "in-gaap:FreeCashFlow": 30967.69
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 67.96,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1139300000,
+      "in-gaap:MarketPriceAtFiling": 1814.7,
+      "in-gaap:EarningsPerShareBasic": 279.7,
+      "in-gaap:EarningsPerShareDiluted": 279.7,
+      "in-gaap:TrailingTwelveMonthsEPS": 1118.8,
+      "in-gaap:ForwardEPSEstimate": 1286.62,
+      "in-gaap:BookValuePerShare": 2027.5,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.6,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.0
+    }
+  }
+}

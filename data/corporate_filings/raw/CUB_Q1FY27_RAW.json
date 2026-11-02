@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000118",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CUB",
+  "company_details": {
+    "symbol": "CUB",
+    "company_name": "City Union Bank Ltd.",
+    "isin": "INE491A01021",
+    "cin": "L65191MH2018PLC100118"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "260588145R9AQOOHHA",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 991.48,
+      "in-gaap:OtherIncome": 347.02,
+      "in-gaap:OperatingExpenses": 562.17,
+      "in-gaap:OperatingProfit": 776.33,
+      "in-gaap:ProvisionsAndContingencies": 200.32,
+      "in-gaap:ProfitBeforeTax": 576.01,
+      "in-gaap:TaxExpense": 144.0,
+      "in-gaap:ProfitAfterTax": 432.01
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 110.02,
+      "in-gaap:ReservesAndSurplus": 14533.34,
+      "in-gaap:TotalEquity": 14643.36,
+      "in-gaap:TotalDeposits": 97622.37,
+      "in-gaap:CasaDeposits": 44320.56,
+      "in-gaap:TotalAdvances": 80128.44,
+      "in-gaap:TotalAssets": 122027.96
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 2211.54,
+      "in-gaap:NetNPA": 665.07,
+      "in-gaap:CapitalAdequacyRatioCRAR": 20.8,
+      "in-gaap:Tier1CapitalRatio": 18.8
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 33.95,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 550100000,
+      "in-gaap:MarketPriceAtFiling": 222.02,
+      "in-gaap:EarningsPerShareBasic": 7.85,
+      "in-gaap:EarningsPerShareDiluted": 7.85,
+      "in-gaap:TrailingTwelveMonthsEPS": 31.4,
+      "in-gaap:ForwardEPSEstimate": 36.11,
+      "in-gaap:BookValuePerShare": 266.19,
+      "in-gaap:TrailingPE": 7.1,
+      "in-gaap:ForwardPE": 6.0,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.2
+    }
+  }
+}

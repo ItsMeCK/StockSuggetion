@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000441",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TATACAP",
+  "company_details": {
+    "symbol": "TATACAP",
+    "company_name": "Tata Capital Ltd.",
+    "isin": "INE976I01016",
+    "cin": "L29100MH2011PLC100441"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190IYFMG3KAP2",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 41082.82,
+      "in-gaap:OtherIncome": 1232.48,
+      "in-gaap:TotalIncome": 42315.3,
+      "in-gaap:OperatingExpenses": 33991.61,
+      "in-gaap:EBITDA": 7091.21,
+      "in-gaap:DepreciationAndAmortisation": 1134.59,
+      "in-gaap:EBIT": 5956.62,
+      "in-gaap:FinanceCosts": 301.75,
+      "in-gaap:ProfitBeforeTax": 5654.87,
+      "in-gaap:TaxExpense": 1413.72,
+      "in-gaap:ProfitAfterTax": 4241.15
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 352.04,
+      "in-gaap:OtherEquity": 39082.38,
+      "in-gaap:TotalEquity": 39434.42,
+      "in-gaap:TotalDebt": 7670.23,
+      "in-gaap:CashAndCashEquivalents": 9868.32,
+      "in-gaap:TotalCurrentAssets": 20541.41,
+      "in-gaap:TotalCurrentLiabilities": 12324.85,
+      "in-gaap:TotalAssets": 59429.5,
+      "in-gaap:RetainedEarnings": 27604.09
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 6382.09,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1331.61,
+      "in-gaap:FreeCashFlow": 5050.48
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 35.98,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1760200000,
+      "in-gaap:MarketPriceAtFiling": 306.75,
+      "in-gaap:EarningsPerShareBasic": 24.09,
+      "in-gaap:EarningsPerShareDiluted": 24.09,
+      "in-gaap:TrailingTwelveMonthsEPS": 96.36,
+      "in-gaap:ForwardEPSEstimate": 110.81,
+      "in-gaap:BookValuePerShare": 224.03,
+      "in-gaap:EVToEBITDA": 1.8,
+      "in-gaap:TrailingPE": 3.2,
+      "in-gaap:ForwardPE": 2.7,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.9
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000156",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ELGIEQUIP",
+  "company_details": {
+    "symbol": "ELGIEQUIP",
+    "company_name": "Elgi Equipments Ltd.",
+    "isin": "INE285A01027",
+    "cin": "L29100MH1996PLC100156"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826A71L45S8B1",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 115681.26,
+      "in-gaap:OtherIncome": 3470.44,
+      "in-gaap:TotalIncome": 119151.7,
+      "in-gaap:OperatingExpenses": 85549.2,
+      "in-gaap:EBITDA": 30132.06,
+      "in-gaap:DepreciationAndAmortisation": 4821.13,
+      "in-gaap:EBIT": 25310.93,
+      "in-gaap:FinanceCosts": 1007.76,
+      "in-gaap:ProfitBeforeTax": 24303.17,
+      "in-gaap:TaxExpense": 6075.79,
+      "in-gaap:ProfitAfterTax": 18227.38
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 357.2,
+      "in-gaap:OtherEquity": 116421.43,
+      "in-gaap:TotalEquity": 116778.63,
+      "in-gaap:TotalDebt": 31914.33,
+      "in-gaap:CashAndCashEquivalents": 12361.14,
+      "in-gaap:TotalCurrentAssets": 57840.63,
+      "in-gaap:TotalCurrentLiabilities": 34704.38,
+      "in-gaap:TotalAssets": 183397.34,
+      "in-gaap:RetainedEarnings": 81745.04
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 24708.29,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6021.7,
+      "in-gaap:FreeCashFlow": 18686.59
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 49.13,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1786000000,
+      "in-gaap:MarketPriceAtFiling": 512.85,
+      "in-gaap:EarningsPerShareBasic": 102.06,
+      "in-gaap:EarningsPerShareDiluted": 102.06,
+      "in-gaap:TrailingTwelveMonthsEPS": 408.24,
+      "in-gaap:ForwardEPSEstimate": 469.48,
+      "in-gaap:BookValuePerShare": 653.86,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.0
+    }
+  }
+}

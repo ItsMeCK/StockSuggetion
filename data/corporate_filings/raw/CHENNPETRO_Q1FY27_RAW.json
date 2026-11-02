@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000113",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CHENNPETRO",
+  "company_details": {
+    "symbol": "CHENNPETRO",
+    "company_name": "Chennai Petroleum Corporation Ltd.",
+    "isin": "INE178A01016",
+    "cin": "L29100MH1998PLC100113"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "260398265CPI7X7NC0",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 364569.45,
+      "in-gaap:OtherIncome": 10937.08,
+      "in-gaap:TotalIncome": 375506.53,
+      "in-gaap:OperatingExpenses": 278696.42,
+      "in-gaap:EBITDA": 85873.03,
+      "in-gaap:DepreciationAndAmortisation": 13739.68,
+      "in-gaap:EBIT": 72133.35,
+      "in-gaap:FinanceCosts": 3066.89,
+      "in-gaap:ProfitBeforeTax": 69066.46,
+      "in-gaap:TaxExpense": 17266.62,
+      "in-gaap:ProfitAfterTax": 51799.85
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 299.48,
+      "in-gaap:OtherEquity": 455575.26,
+      "in-gaap:TotalEquity": 455874.74,
+      "in-gaap:TotalDebt": 69765.45,
+      "in-gaap:CashAndCashEquivalents": 68677.21,
+      "in-gaap:TotalCurrentAssets": 182284.73,
+      "in-gaap:TotalCurrentLiabilities": 109370.84,
+      "in-gaap:TotalAssets": 635011.02,
+      "in-gaap:RetainedEarnings": 319112.32
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 71274.61,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 15821.1,
+      "in-gaap:FreeCashFlow": 55453.51
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 51.57,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1497400000,
+      "in-gaap:MarketPriceAtFiling": 1475.6,
+      "in-gaap:EarningsPerShareBasic": 345.93,
+      "in-gaap:EarningsPerShareDiluted": 345.93,
+      "in-gaap:TrailingTwelveMonthsEPS": 1383.72,
+      "in-gaap:ForwardEPSEstimate": 1591.28,
+      "in-gaap:BookValuePerShare": 3044.44,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.7
+    }
+  }
+}

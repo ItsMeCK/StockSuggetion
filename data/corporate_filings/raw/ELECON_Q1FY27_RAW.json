@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000155",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ELECON",
+  "company_details": {
+    "symbol": "ELECON",
+    "company_name": "Elecon Engineering Co. Ltd.",
+    "isin": "INE205B01031",
+    "cin": "L29100MH1995PLC100155"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987Z6L3OW1V42",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 14649.0,
+      "in-gaap:OtherIncome": 439.47,
+      "in-gaap:TotalIncome": 15088.47,
+      "in-gaap:OperatingExpenses": 12424.4,
+      "in-gaap:EBITDA": 2224.6,
+      "in-gaap:DepreciationAndAmortisation": 355.94,
+      "in-gaap:EBIT": 1868.66,
+      "in-gaap:FinanceCosts": 112.92,
+      "in-gaap:ProfitBeforeTax": 1755.74,
+      "in-gaap:TaxExpense": 438.94,
+      "in-gaap:ProfitAfterTax": 1316.81
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 129.2,
+      "in-gaap:OtherEquity": 15945.07,
+      "in-gaap:TotalEquity": 16074.27,
+      "in-gaap:TotalDebt": 639.3,
+      "in-gaap:CashAndCashEquivalents": 2003.02,
+      "in-gaap:TotalCurrentAssets": 7324.5,
+      "in-gaap:TotalCurrentLiabilities": 4394.7,
+      "in-gaap:TotalAssets": 21108.27,
+      "in-gaap:RetainedEarnings": 11251.99
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1979.89,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 696.24,
+      "in-gaap:FreeCashFlow": 1283.65
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 57.8,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 646000000,
+      "in-gaap:MarketPriceAtFiling": 416.2,
+      "in-gaap:EarningsPerShareBasic": 20.38,
+      "in-gaap:EarningsPerShareDiluted": 20.38,
+      "in-gaap:TrailingTwelveMonthsEPS": 81.52,
+      "in-gaap:ForwardEPSEstimate": 93.75,
+      "in-gaap:BookValuePerShare": 248.83,
+      "in-gaap:EVToEBITDA": 2.9,
+      "in-gaap:TrailingPE": 5.1,
+      "in-gaap:ForwardPE": 4.3,
+      "in-gaap:PriceToBook": 1.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.3
+    }
+  }
+}

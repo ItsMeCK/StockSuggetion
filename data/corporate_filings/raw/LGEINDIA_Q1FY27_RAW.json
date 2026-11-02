@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000296",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_LGEINDIA",
+  "company_details": {
+    "symbol": "LGEINDIA",
+    "company_name": "LG Electronics India Ltd.",
+    "isin": "INE324D01010",
+    "cin": "L29100MH2001PLC100296"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "261178129GKNFOT2RM",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 77104.88,
+      "in-gaap:OtherIncome": 2313.15,
+      "in-gaap:TotalIncome": 79418.03,
+      "in-gaap:OperatingExpenses": 56480.31,
+      "in-gaap:EBITDA": 20624.57,
+      "in-gaap:DepreciationAndAmortisation": 3299.93,
+      "in-gaap:EBIT": 17324.64,
+      "in-gaap:FinanceCosts": 592.66,
+      "in-gaap:ProfitBeforeTax": 16731.98,
+      "in-gaap:TaxExpense": 4182.99,
+      "in-gaap:ProfitAfterTax": 12548.99
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 159.22,
+      "in-gaap:OtherEquity": 50947.86,
+      "in-gaap:TotalEquity": 51107.08,
+      "in-gaap:TotalDebt": 7611.46,
+      "in-gaap:CashAndCashEquivalents": 9892.83,
+      "in-gaap:TotalCurrentAssets": 38552.44,
+      "in-gaap:TotalCurrentLiabilities": 23131.46,
+      "in-gaap:TotalAssets": 81850.0,
+      "in-gaap:RetainedEarnings": 35774.96
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 18355.87,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6464.58,
+      "in-gaap:FreeCashFlow": 11891.29
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 47.42,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 796100000,
+      "in-gaap:MarketPriceAtFiling": 1610.7,
+      "in-gaap:EarningsPerShareBasic": 157.63,
+      "in-gaap:EarningsPerShareDiluted": 157.63,
+      "in-gaap:TrailingTwelveMonthsEPS": 630.52,
+      "in-gaap:ForwardEPSEstimate": 725.1,
+      "in-gaap:BookValuePerShare": 641.97,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 2.6,
+      "in-gaap:ForwardPE": 2.2,
+      "in-gaap:PriceToBook": 2.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.6
+    }
+  }
+}

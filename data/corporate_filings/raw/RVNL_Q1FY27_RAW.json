@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000393",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_RVNL",
+  "company_details": {
+    "symbol": "RVNL",
+    "company_name": "Rail Vikas Nigam Ltd.",
+    "isin": "INE415G01027",
+    "cin": "L29100MH2008PLC100393"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317YEHDWC5LUB",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 40335.41,
+      "in-gaap:OtherIncome": 1210.06,
+      "in-gaap:TotalIncome": 41545.47,
+      "in-gaap:OperatingExpenses": 29308.66,
+      "in-gaap:EBITDA": 11026.75,
+      "in-gaap:DepreciationAndAmortisation": 1764.28,
+      "in-gaap:EBIT": 9262.47,
+      "in-gaap:FinanceCosts": 822.89,
+      "in-gaap:ProfitBeforeTax": 8439.58,
+      "in-gaap:TaxExpense": 2109.89,
+      "in-gaap:ProfitAfterTax": 6329.68
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 361.02,
+      "in-gaap:OtherEquity": 53621.92,
+      "in-gaap:TotalEquity": 53982.94,
+      "in-gaap:TotalDebt": 7126.1,
+      "in-gaap:CashAndCashEquivalents": 6055.8,
+      "in-gaap:TotalCurrentAssets": 20167.71,
+      "in-gaap:TotalCurrentLiabilities": 12100.62,
+      "in-gaap:TotalAssets": 73209.66,
+      "in-gaap:RetainedEarnings": 37788.06
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 8380.33,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2115.03,
+      "in-gaap:FreeCashFlow": 6265.3
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 42.44,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1805100000,
+      "in-gaap:MarketPriceAtFiling": 181.31,
+      "in-gaap:EarningsPerShareBasic": 35.07,
+      "in-gaap:EarningsPerShareDiluted": 35.07,
+      "in-gaap:TrailingTwelveMonthsEPS": 140.28,
+      "in-gaap:ForwardEPSEstimate": 161.32,
+      "in-gaap:BookValuePerShare": 299.06,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.2
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000033",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ABDL",
+  "company_details": {
+    "symbol": "ABDL",
+    "company_name": "Allied Blenders and Distillers Ltd.",
+    "isin": "INE552Z01027",
+    "cin": "L29100MH2008PLC100033"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812PL38WZ51PY",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 157896.96,
+      "in-gaap:OtherIncome": 4736.91,
+      "in-gaap:TotalIncome": 162633.87,
+      "in-gaap:OperatingExpenses": 120619.24,
+      "in-gaap:EBITDA": 37277.72,
+      "in-gaap:DepreciationAndAmortisation": 5964.44,
+      "in-gaap:EBIT": 31313.28,
+      "in-gaap:FinanceCosts": 1285.44,
+      "in-gaap:ProfitBeforeTax": 30027.84,
+      "in-gaap:TaxExpense": 7506.96,
+      "in-gaap:ProfitAfterTax": 22520.88
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 393.32,
+      "in-gaap:OtherEquity": 191187.41,
+      "in-gaap:TotalEquity": 191580.73,
+      "in-gaap:TotalDebt": 17779.01,
+      "in-gaap:CashAndCashEquivalents": 21413.28,
+      "in-gaap:TotalCurrentAssets": 78948.48,
+      "in-gaap:TotalCurrentLiabilities": 47369.09,
+      "in-gaap:TotalAssets": 256728.83,
+      "in-gaap:RetainedEarnings": 134106.51
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 28703.84,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 5923.58,
+      "in-gaap:FreeCashFlow": 22780.26
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 35.66,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1966600000,
+      "in-gaap:MarketPriceAtFiling": 672.65,
+      "in-gaap:EarningsPerShareBasic": 114.52,
+      "in-gaap:EarningsPerShareDiluted": 114.52,
+      "in-gaap:TrailingTwelveMonthsEPS": 458.08,
+      "in-gaap:ForwardEPSEstimate": 526.79,
+      "in-gaap:BookValuePerShare": 974.17,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.9
+    }
+  }
+}

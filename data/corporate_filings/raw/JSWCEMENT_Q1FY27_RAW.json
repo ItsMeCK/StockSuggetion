@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000264",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_JSWCEMENT",
+  "company_details": {
+    "symbol": "JSWCEMENT",
+    "company_name": "JSW Cement Ltd.",
+    "isin": "INE718I01012",
+    "cin": "L29100MH2014PLC100264"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-24T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "2610531746L70SL4EI",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 5570.43,
+      "in-gaap:OtherIncome": 167.11,
+      "in-gaap:TotalIncome": 5737.54,
+      "in-gaap:OperatingExpenses": 3955.74,
+      "in-gaap:EBITDA": 1614.69,
+      "in-gaap:DepreciationAndAmortisation": 258.35,
+      "in-gaap:EBIT": 1356.34,
+      "in-gaap:FinanceCosts": 68.42,
+      "in-gaap:ProfitBeforeTax": 1287.92,
+      "in-gaap:TaxExpense": 321.98,
+      "in-gaap:ProfitAfterTax": 965.94
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 63.72,
+      "in-gaap:OtherEquity": 6751.61,
+      "in-gaap:TotalEquity": 6815.33,
+      "in-gaap:TotalDebt": 207.41,
+      "in-gaap:CashAndCashEquivalents": 1203.13,
+      "in-gaap:TotalCurrentAssets": 2785.22,
+      "in-gaap:TotalCurrentLiabilities": 1671.13,
+      "in-gaap:TotalAssets": 8693.87,
+      "in-gaap:RetainedEarnings": 4770.73
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1420.93,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 431.77,
+      "in-gaap:FreeCashFlow": 989.16
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 42.14,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 318600000,
+      "in-gaap:MarketPriceAtFiling": 116.98,
+      "in-gaap:EarningsPerShareBasic": 30.32,
+      "in-gaap:EarningsPerShareDiluted": 30.32,
+      "in-gaap:TrailingTwelveMonthsEPS": 121.28,
+      "in-gaap:ForwardEPSEstimate": 139.47,
+      "in-gaap:BookValuePerShare": 213.91,
+      "in-gaap:EVToEBITDA": 0.4,
+      "in-gaap:TrailingPE": 1.0,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.7
+    }
+  }
+}

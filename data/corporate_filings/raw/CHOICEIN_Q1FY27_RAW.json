@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000114",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CHOICEIN",
+  "company_details": {
+    "symbol": "CHOICEIN",
+    "company_name": "Choice International Ltd.",
+    "isin": "INE102B01014",
+    "cin": "L29100MH1999PLC100114"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-24T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556YKU9LYTRZK",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 180558.78,
+      "in-gaap:OtherIncome": 5416.76,
+      "in-gaap:TotalIncome": 185975.54,
+      "in-gaap:OperatingExpenses": 138060.68,
+      "in-gaap:EBITDA": 42498.1,
+      "in-gaap:DepreciationAndAmortisation": 6799.7,
+      "in-gaap:EBIT": 35698.4,
+      "in-gaap:FinanceCosts": 1949.45,
+      "in-gaap:ProfitBeforeTax": 33748.95,
+      "in-gaap:TaxExpense": 8437.24,
+      "in-gaap:ProfitAfterTax": 25311.71
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 310.64,
+      "in-gaap:OtherEquity": 252743.64,
+      "in-gaap:TotalEquity": 253054.28,
+      "in-gaap:TotalDebt": 34691.11,
+      "in-gaap:CashAndCashEquivalents": 41304.1,
+      "in-gaap:TotalCurrentAssets": 90279.39,
+      "in-gaap:TotalCurrentLiabilities": 54167.63,
+      "in-gaap:TotalAssets": 341913.02,
+      "in-gaap:RetainedEarnings": 177138.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 37823.31,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 9506.07,
+      "in-gaap:FreeCashFlow": 28317.24
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.33,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1553200000,
+      "in-gaap:MarketPriceAtFiling": 686.65,
+      "in-gaap:EarningsPerShareBasic": 162.96,
+      "in-gaap:EarningsPerShareDiluted": 162.96,
+      "in-gaap:TrailingTwelveMonthsEPS": 651.84,
+      "in-gaap:ForwardEPSEstimate": 749.62,
+      "in-gaap:BookValuePerShare": 1629.24,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.9
+    }
+  }
+}

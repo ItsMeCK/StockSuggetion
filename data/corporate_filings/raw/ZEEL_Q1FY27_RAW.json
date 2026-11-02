@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000498",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ZEEL",
+  "company_details": {
+    "symbol": "ZEEL",
+    "company_name": "Zee Entertainment Enterprises Ltd.",
+    "isin": "INE256A01028",
+    "cin": "L29100MH1978PLC100498"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317IU5E5LEEJS",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 21883.35,
+      "in-gaap:OtherIncome": 656.5,
+      "in-gaap:TotalIncome": 22539.85,
+      "in-gaap:OperatingExpenses": 18427.11,
+      "in-gaap:EBITDA": 3456.24,
+      "in-gaap:DepreciationAndAmortisation": 553.0,
+      "in-gaap:EBIT": 2903.24,
+      "in-gaap:FinanceCosts": 300.54,
+      "in-gaap:ProfitBeforeTax": 2602.7,
+      "in-gaap:TaxExpense": 650.67,
+      "in-gaap:ProfitAfterTax": 1952.02
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 455.54,
+      "in-gaap:OtherEquity": 25775.16,
+      "in-gaap:TotalEquity": 26230.7,
+      "in-gaap:TotalDebt": 3601.31,
+      "in-gaap:CashAndCashEquivalents": 4253.21,
+      "in-gaap:TotalCurrentAssets": 10941.67,
+      "in-gaap:TotalCurrentLiabilities": 6565.0,
+      "in-gaap:TotalAssets": 36397.01,
+      "in-gaap:RetainedEarnings": 18361.49
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 3076.05,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1226.59,
+      "in-gaap:FreeCashFlow": 1849.46
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 50.07,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2277700000,
+      "in-gaap:MarketPriceAtFiling": 65.42,
+      "in-gaap:EarningsPerShareBasic": 8.57,
+      "in-gaap:EarningsPerShareDiluted": 8.57,
+      "in-gaap:TrailingTwelveMonthsEPS": 34.28,
+      "in-gaap:ForwardEPSEstimate": 39.42,
+      "in-gaap:BookValuePerShare": 115.16,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.9,
+      "in-gaap:ForwardPE": 1.6,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.0
+    }
+  }
+}

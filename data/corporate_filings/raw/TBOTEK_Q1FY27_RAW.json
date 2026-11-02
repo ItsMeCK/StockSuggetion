@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000439",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TBOTEK",
+  "company_details": {
+    "symbol": "TBOTEK",
+    "company_name": "TBO Tek Ltd.",
+    "isin": "INE673O01025",
+    "cin": "L29100MH2009PLC100439"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317DP2E9UDD8B",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 240959.27,
+      "in-gaap:OtherIncome": 7228.78,
+      "in-gaap:TotalIncome": 248188.05,
+      "in-gaap:OperatingExpenses": 186095.42,
+      "in-gaap:EBITDA": 54863.85,
+      "in-gaap:DepreciationAndAmortisation": 8778.22,
+      "in-gaap:EBIT": 46085.63,
+      "in-gaap:FinanceCosts": 1764.11,
+      "in-gaap:ProfitBeforeTax": 44321.52,
+      "in-gaap:TaxExpense": 11080.38,
+      "in-gaap:ProfitAfterTax": 33241.14
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 315.56,
+      "in-gaap:OtherEquity": 204385.81,
+      "in-gaap:TotalEquity": 204701.37,
+      "in-gaap:TotalDebt": 21352.64,
+      "in-gaap:CashAndCashEquivalents": 35335.81,
+      "in-gaap:TotalCurrentAssets": 120479.63,
+      "in-gaap:TotalCurrentLiabilities": 72287.78,
+      "in-gaap:TotalAssets": 298341.79,
+      "in-gaap:RetainedEarnings": 143290.96
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 52120.66,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 20138.48,
+      "in-gaap:FreeCashFlow": 31982.18
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 41.51,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1577800000,
+      "in-gaap:MarketPriceAtFiling": 1523.8,
+      "in-gaap:EarningsPerShareBasic": 210.68,
+      "in-gaap:EarningsPerShareDiluted": 210.68,
+      "in-gaap:TrailingTwelveMonthsEPS": 842.72,
+      "in-gaap:ForwardEPSEstimate": 969.13,
+      "in-gaap:BookValuePerShare": 1297.38,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.5
+    }
+  }
+}

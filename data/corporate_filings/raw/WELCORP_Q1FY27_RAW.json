@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000491",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_WELCORP",
+  "company_details": {
+    "symbol": "WELCORP",
+    "company_name": "Welspun Corp Ltd.",
+    "isin": "INE191B01025",
+    "cin": "L29100MH2016PLC100491"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826IYI3L6GE72",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 384657.1,
+      "in-gaap:OtherIncome": 11539.71,
+      "in-gaap:TotalIncome": 396196.81,
+      "in-gaap:OperatingExpenses": 289091.59,
+      "in-gaap:EBITDA": 95565.51,
+      "in-gaap:DepreciationAndAmortisation": 15290.48,
+      "in-gaap:EBIT": 80275.03,
+      "in-gaap:FinanceCosts": 3762.42,
+      "in-gaap:ProfitBeforeTax": 76512.61,
+      "in-gaap:TaxExpense": 19128.15,
+      "in-gaap:ProfitAfterTax": 57384.46
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 355.22,
+      "in-gaap:OtherEquity": 442461.13,
+      "in-gaap:TotalEquity": 442816.35,
+      "in-gaap:TotalDebt": 100915.05,
+      "in-gaap:CashAndCashEquivalents": 33087.75,
+      "in-gaap:TotalCurrentAssets": 192328.55,
+      "in-gaap:TotalCurrentLiabilities": 115397.13,
+      "in-gaap:TotalAssets": 659128.53,
+      "in-gaap:RetainedEarnings": 309971.44
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 90787.23,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 35757.46,
+      "in-gaap:FreeCashFlow": 55029.77
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 39.18,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1776100000,
+      "in-gaap:MarketPriceAtFiling": 2388.7,
+      "in-gaap:EarningsPerShareBasic": 323.09,
+      "in-gaap:EarningsPerShareDiluted": 323.09,
+      "in-gaap:TrailingTwelveMonthsEPS": 1292.36,
+      "in-gaap:ForwardEPSEstimate": 1486.21,
+      "in-gaap:BookValuePerShare": 2493.19,
+      "in-gaap:EVToEBITDA": 1.3,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.7
+    }
+  }
+}

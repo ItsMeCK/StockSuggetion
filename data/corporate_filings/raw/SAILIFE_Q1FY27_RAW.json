@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000406",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SAILIFE",
+  "company_details": {
+    "symbol": "SAILIFE",
+    "company_name": "Sai Life Sciences Ltd.",
+    "isin": "INE570L01029",
+    "cin": "L29100MH1976PLC100406"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "260398267R7LQ46239",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 150390.09,
+      "in-gaap:OtherIncome": 4511.7,
+      "in-gaap:TotalIncome": 154901.79,
+      "in-gaap:OperatingExpenses": 127681.68,
+      "in-gaap:EBITDA": 22708.41,
+      "in-gaap:DepreciationAndAmortisation": 3633.35,
+      "in-gaap:EBIT": 19075.06,
+      "in-gaap:FinanceCosts": 866.73,
+      "in-gaap:ProfitBeforeTax": 18208.33,
+      "in-gaap:TaxExpense": 4552.08,
+      "in-gaap:ProfitAfterTax": 13656.25
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 139.18,
+      "in-gaap:OtherEquity": 140646.17,
+      "in-gaap:TotalEquity": 140785.35,
+      "in-gaap:TotalDebt": 11329.88,
+      "in-gaap:CashAndCashEquivalents": 29956.09,
+      "in-gaap:TotalCurrentAssets": 75195.04,
+      "in-gaap:TotalCurrentLiabilities": 45117.03,
+      "in-gaap:TotalAssets": 197232.26,
+      "in-gaap:RetainedEarnings": 98549.74
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 17712.56,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6420.79,
+      "in-gaap:FreeCashFlow": 11291.77
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 58.33,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 695900000,
+      "in-gaap:MarketPriceAtFiling": 1395.3,
+      "in-gaap:EarningsPerShareBasic": 196.24,
+      "in-gaap:EarningsPerShareDiluted": 196.24,
+      "in-gaap:TrailingTwelveMonthsEPS": 784.96,
+      "in-gaap:ForwardEPSEstimate": 902.7,
+      "in-gaap:BookValuePerShare": 2023.07,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.5
+    }
+  }
+}

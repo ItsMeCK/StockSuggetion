@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000036",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_AMBUJACEM",
+  "company_details": {
+    "symbol": "AMBUJACEM",
+    "company_name": "Ambuja Cements Ltd.",
+    "isin": "INE079A01024",
+    "cin": "L29100MH2011PLC100036"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556QWMKS74EVP",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 3972.72,
+      "in-gaap:OtherIncome": 119.18,
+      "in-gaap:TotalIncome": 4091.9,
+      "in-gaap:OperatingExpenses": 3268.62,
+      "in-gaap:EBITDA": 704.1,
+      "in-gaap:DepreciationAndAmortisation": 112.66,
+      "in-gaap:EBIT": 591.44,
+      "in-gaap:FinanceCosts": 26.27,
+      "in-gaap:ProfitBeforeTax": 565.17,
+      "in-gaap:TaxExpense": 141.29,
+      "in-gaap:ProfitAfterTax": 423.88
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 49.26,
+      "in-gaap:OtherEquity": 2435.1,
+      "in-gaap:TotalEquity": 2484.36,
+      "in-gaap:TotalDebt": 423.48,
+      "in-gaap:CashAndCashEquivalents": 938.98,
+      "in-gaap:TotalCurrentAssets": 1986.36,
+      "in-gaap:TotalCurrentLiabilities": 1191.82,
+      "in-gaap:TotalAssets": 4099.66,
+      "in-gaap:RetainedEarnings": 1739.05
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 570.32,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 157.18,
+      "in-gaap:FreeCashFlow": 413.14
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 58.68,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 246300000,
+      "in-gaap:MarketPriceAtFiling": 358.9,
+      "in-gaap:EarningsPerShareBasic": 17.21,
+      "in-gaap:EarningsPerShareDiluted": 17.21,
+      "in-gaap:TrailingTwelveMonthsEPS": 68.84,
+      "in-gaap:ForwardEPSEstimate": 79.17,
+      "in-gaap:BookValuePerShare": 100.87,
+      "in-gaap:EVToEBITDA": 3.0,
+      "in-gaap:TrailingPE": 5.2,
+      "in-gaap:ForwardPE": 4.4,
+      "in-gaap:PriceToBook": 3.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.3
+    }
+  }
+}

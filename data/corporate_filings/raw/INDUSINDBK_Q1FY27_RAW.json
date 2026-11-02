@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000250",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_INDUSINDBK",
+  "company_details": {
+    "symbol": "INDUSINDBK",
+    "company_name": "IndusInd Bank Ltd.",
+    "isin": "INE095A01012",
+    "cin": "L65191MH1990PLC100250"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317O4MCT8DLIN",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 8491.71,
+      "in-gaap:OtherIncome": 2972.1,
+      "in-gaap:OperatingExpenses": 4814.8,
+      "in-gaap:OperatingProfit": 6649.01,
+      "in-gaap:ProvisionsAndContingencies": 1709.35,
+      "in-gaap:ProfitBeforeTax": 4939.66,
+      "in-gaap:TaxExpense": 1234.91,
+      "in-gaap:ProfitAfterTax": 3704.74
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 384.14,
+      "in-gaap:ReservesAndSurplus": 126594.75,
+      "in-gaap:TotalEquity": 126978.89,
+      "in-gaap:TotalDeposits": 846525.93,
+      "in-gaap:CasaDeposits": 338610.37,
+      "in-gaap:TotalAdvances": 683738.99,
+      "in-gaap:TotalAssets": 1058157.41
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 12512.42,
+      "in-gaap:NetNPA": 3760.56,
+      "in-gaap:CapitalAdequacyRatioCRAR": 17.6,
+      "in-gaap:Tier1CapitalRatio": 15.6
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 23.65,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1920700000,
+      "in-gaap:MarketPriceAtFiling": 835.0,
+      "in-gaap:EarningsPerShareBasic": 19.29,
+      "in-gaap:EarningsPerShareDiluted": 19.29,
+      "in-gaap:TrailingTwelveMonthsEPS": 77.16,
+      "in-gaap:ForwardEPSEstimate": 88.73,
+      "in-gaap:BookValuePerShare": 661.11,
+      "in-gaap:TrailingPE": 10.8,
+      "in-gaap:ForwardPE": 9.2,
+      "in-gaap:PriceToBook": 1.3,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.4
+    }
+  }
+}

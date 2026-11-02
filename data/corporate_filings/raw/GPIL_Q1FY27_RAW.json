@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000187",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GPIL",
+  "company_details": {
+    "symbol": "GPIL",
+    "company_name": "Godawari Power & Ispat Ltd.",
+    "isin": "INE177H01039",
+    "cin": "L29100MH1982PLC100187"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "26048556DLL5J5L1N7",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 59481.8,
+      "in-gaap:OtherIncome": 1784.45,
+      "in-gaap:TotalIncome": 61266.25,
+      "in-gaap:OperatingExpenses": 46176.78,
+      "in-gaap:EBITDA": 13305.02,
+      "in-gaap:DepreciationAndAmortisation": 2128.8,
+      "in-gaap:EBIT": 11176.22,
+      "in-gaap:FinanceCosts": 394.81,
+      "in-gaap:ProfitBeforeTax": 10781.41,
+      "in-gaap:TaxExpense": 2695.35,
+      "in-gaap:ProfitAfterTax": 8086.06
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 393.72,
+      "in-gaap:OtherEquity": 59799.47,
+      "in-gaap:TotalEquity": 60193.19,
+      "in-gaap:TotalDebt": 3388.66,
+      "in-gaap:CashAndCashEquivalents": 10267.21,
+      "in-gaap:TotalCurrentAssets": 29740.9,
+      "in-gaap:TotalCurrentLiabilities": 17844.54,
+      "in-gaap:TotalAssets": 81426.39,
+      "in-gaap:RetainedEarnings": 42135.23
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 12107.57,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2957.24,
+      "in-gaap:FreeCashFlow": 9150.33
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 62.58,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1968600000,
+      "in-gaap:MarketPriceAtFiling": 192.34,
+      "in-gaap:EarningsPerShareBasic": 41.08,
+      "in-gaap:EarningsPerShareDiluted": 41.08,
+      "in-gaap:TrailingTwelveMonthsEPS": 164.32,
+      "in-gaap:ForwardEPSEstimate": 188.97,
+      "in-gaap:BookValuePerShare": 305.77,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.2,
+      "in-gaap:ForwardPE": 1.0,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.7
+    }
+  }
+}

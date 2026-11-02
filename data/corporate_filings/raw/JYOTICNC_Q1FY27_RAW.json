@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000280",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_JYOTICNC",
+  "company_details": {
+    "symbol": "JYOTICNC",
+    "company_name": "Jyoti CNC Automation Ltd.",
+    "isin": "INE980O01024",
+    "cin": "L29100MH1985PLC100280"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "260229870TRPWZ9SJ3",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 144236.61,
+      "in-gaap:OtherIncome": 4327.1,
+      "in-gaap:TotalIncome": 148563.71,
+      "in-gaap:OperatingExpenses": 104072.24,
+      "in-gaap:EBITDA": 40164.37,
+      "in-gaap:DepreciationAndAmortisation": 6426.3,
+      "in-gaap:EBIT": 33738.07,
+      "in-gaap:FinanceCosts": 2449.05,
+      "in-gaap:ProfitBeforeTax": 31289.02,
+      "in-gaap:TaxExpense": 7822.26,
+      "in-gaap:ProfitAfterTax": 23466.76
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 440.06,
+      "in-gaap:OtherEquity": 122945.28,
+      "in-gaap:TotalEquity": 123385.34,
+      "in-gaap:TotalDebt": 12202.6,
+      "in-gaap:CashAndCashEquivalents": 26531.5,
+      "in-gaap:TotalCurrentAssets": 72118.3,
+      "in-gaap:TotalCurrentLiabilities": 43270.98,
+      "in-gaap:TotalAssets": 178858.92,
+      "in-gaap:RetainedEarnings": 86369.74
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 32934.78,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8852.81,
+      "in-gaap:FreeCashFlow": 24081.97
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 58.35,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2200300000,
+      "in-gaap:MarketPriceAtFiling": 890.8,
+      "in-gaap:EarningsPerShareBasic": 106.65,
+      "in-gaap:EarningsPerShareDiluted": 106.65,
+      "in-gaap:TrailingTwelveMonthsEPS": 426.6,
+      "in-gaap:ForwardEPSEstimate": 490.59,
+      "in-gaap:BookValuePerShare": 560.77,
+      "in-gaap:EVToEBITDA": 1.1,
+      "in-gaap:TrailingPE": 2.1,
+      "in-gaap:ForwardPE": 1.8,
+      "in-gaap:PriceToBook": 1.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.4
+    }
+  }
+}

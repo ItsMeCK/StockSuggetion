@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000383",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_POWERGRID",
+  "company_details": {
+    "symbol": "POWERGRID",
+    "company_name": "Power Grid Corporation of India Ltd.",
+    "isin": "INE752E01010",
+    "cin": "L29100MH1998PLC100383"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423EEP1PYRZ91",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 11401.74,
+      "in-gaap:OtherIncome": 342.05,
+      "in-gaap:TotalIncome": 11743.79,
+      "in-gaap:OperatingExpenses": 8096.42,
+      "in-gaap:EBITDA": 3305.32,
+      "in-gaap:DepreciationAndAmortisation": 528.85,
+      "in-gaap:EBIT": 2776.47,
+      "in-gaap:FinanceCosts": 166.1,
+      "in-gaap:ProfitBeforeTax": 2610.37,
+      "in-gaap:TaxExpense": 652.59,
+      "in-gaap:ProfitAfterTax": 1957.78
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 55.56,
+      "in-gaap:OtherEquity": 12732.48,
+      "in-gaap:TotalEquity": 12788.04,
+      "in-gaap:TotalDebt": 742.64,
+      "in-gaap:CashAndCashEquivalents": 2818.07,
+      "in-gaap:TotalCurrentAssets": 5700.87,
+      "in-gaap:TotalCurrentLiabilities": 3420.52,
+      "in-gaap:TotalAssets": 16951.2,
+      "in-gaap:RetainedEarnings": 8951.63
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 2941.73,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 962.97,
+      "in-gaap:FreeCashFlow": 1978.76
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.72,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 277800000,
+      "in-gaap:MarketPriceAtFiling": 247.4,
+      "in-gaap:EarningsPerShareBasic": 70.47,
+      "in-gaap:EarningsPerShareDiluted": 70.47,
+      "in-gaap:TrailingTwelveMonthsEPS": 281.88,
+      "in-gaap:ForwardEPSEstimate": 324.16,
+      "in-gaap:BookValuePerShare": 460.33,
+      "in-gaap:EVToEBITDA": 0.4,
+      "in-gaap:TrailingPE": 0.9,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.5
+    }
+  }
+}

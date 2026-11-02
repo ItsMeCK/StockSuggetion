@@ -14,7 +14,7 @@ class IntradayIngestionEngine:
     def __init__(self):
         self.api_key = os.getenv("KITE_API_KEY", "MOCK_KEY").strip("'\"")
         self.access_token = os.getenv("KITE_ACCESS_TOKEN", "MOCK_TOKEN").strip("'\"")
-        self.kite = KiteConnect(api_key=self.api_key)
+        self.kite = KiteConnect(api_key=self.api_key, timeout=25)
         self.kite.set_access_token(self.access_token)
         self.data_dir = "data"
         os.makedirs(self.data_dir, exist_ok=True)
@@ -78,9 +78,19 @@ class IntradayIngestionEngine:
         for i, asset in enumerate(full_market_list):
             if i % 50 == 0:
                 logging.info(f"Progress: {i}/{len(full_market_list)} symbols fetched...")
-            try:
-                # Use 60minute interval to get hourly candles
-                data = self.kite.historical_data(asset['token'], lookback_start, target_date, interval="60minute")
+            data = None
+            for attempt in range(2):
+                try:
+                    # Use 60minute interval to get hourly candles
+                    data = self.kite.historical_data(asset['token'], lookback_start, target_date, interval="60minute")
+                    break
+                except Exception as e:
+                    if attempt == 0:
+                        time.sleep(0.5)
+                    else:
+                        logging.warning(f"Failed to fetch {asset['symbol']}: {e}")
+            
+            if data:
                 for row in data:
                     all_records.append({
                         "time": row['date'], # This is a datetime object
@@ -91,8 +101,6 @@ class IntradayIngestionEngine:
                         "close": row['close'],
                         "volume": row['volume']
                     })
-            except Exception as e:
-                logging.warning(f"Failed to fetch {asset['symbol']}: {e}")
             
             # Comply with 3 requests per second Kite API rate limits
             time.sleep(0.34)
@@ -107,7 +115,8 @@ class IntradayIngestionEngine:
                 if c_time.tzinfo is None:
                     c_time = ist_tz.localize(c_time)
                 
-                if now_ist >= c_time + timedelta(minutes=60):
+                # Allow 60m completed candles, and allow 14:15 candle for the 15:00 (3 PM) run after 40+ mins
+                if now_ist >= c_time + timedelta(minutes=60) or (now_ist.hour >= 15 and c_time.hour == 14 and c_time.minute == 15 and now_ist >= c_time + timedelta(minutes=40)):
                     valid_records.append(r)
             
             if not valid_records:

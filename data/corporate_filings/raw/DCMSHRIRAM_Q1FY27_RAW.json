@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000134",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_DCMSHRIRAM",
+  "company_details": {
+    "symbol": "DCMSHRIRAM",
+    "company_name": "DCM Shriram Ltd.",
+    "isin": "INE499A01024",
+    "cin": "L29100MH2019PLC100134"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "260398262DUB2YGUTO",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 219255.52,
+      "in-gaap:OtherIncome": 6577.67,
+      "in-gaap:TotalIncome": 225833.19,
+      "in-gaap:OperatingExpenses": 183188.59,
+      "in-gaap:EBITDA": 36066.93,
+      "in-gaap:DepreciationAndAmortisation": 5770.71,
+      "in-gaap:EBIT": 30296.22,
+      "in-gaap:FinanceCosts": 1376.6,
+      "in-gaap:ProfitBeforeTax": 28919.62,
+      "in-gaap:TaxExpense": 7229.9,
+      "in-gaap:ProfitAfterTax": 21689.72
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 289.54,
+      "in-gaap:OtherEquity": 319115.08,
+      "in-gaap:TotalEquity": 319404.62,
+      "in-gaap:TotalDebt": 21941.36,
+      "in-gaap:CashAndCashEquivalents": 42629.88,
+      "in-gaap:TotalCurrentAssets": 109627.76,
+      "in-gaap:TotalCurrentLiabilities": 65776.66,
+      "in-gaap:TotalAssets": 407122.64,
+      "in-gaap:RetainedEarnings": 223583.23
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 30656.89,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 9841.84,
+      "in-gaap:FreeCashFlow": 20815.05
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 66.07,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1447700000,
+      "in-gaap:MarketPriceAtFiling": 964.5,
+      "in-gaap:EarningsPerShareBasic": 149.82,
+      "in-gaap:EarningsPerShareDiluted": 149.82,
+      "in-gaap:TrailingTwelveMonthsEPS": 599.28,
+      "in-gaap:ForwardEPSEstimate": 689.17,
+      "in-gaap:BookValuePerShare": 2206.29,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.6,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 0.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.1
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000015",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ADANIENSOL",
+  "company_details": {
+    "symbol": "ADANIENSOL",
+    "company_name": "Adani Energy Solutions Ltd.",
+    "isin": "INE931S01010",
+    "cin": "L29100MH1990PLC100015"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317BOSQJQ88P4",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 311712.48,
+      "in-gaap:OtherIncome": 9351.37,
+      "in-gaap:TotalIncome": 321063.85,
+      "in-gaap:OperatingExpenses": 240989.89,
+      "in-gaap:EBITDA": 70722.59,
+      "in-gaap:DepreciationAndAmortisation": 11315.61,
+      "in-gaap:EBIT": 59406.98,
+      "in-gaap:FinanceCosts": 7771.71,
+      "in-gaap:ProfitBeforeTax": 51635.27,
+      "in-gaap:TaxExpense": 12908.82,
+      "in-gaap:ProfitAfterTax": 38726.45
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 384.18,
+      "in-gaap:OtherEquity": 300296.44,
+      "in-gaap:TotalEquity": 300680.62,
+      "in-gaap:TotalDebt": 11466.22,
+      "in-gaap:CashAndCashEquivalents": 66188.19,
+      "in-gaap:TotalCurrentAssets": 155856.24,
+      "in-gaap:TotalCurrentLiabilities": 93513.74,
+      "in-gaap:TotalAssets": 405660.58,
+      "in-gaap:RetainedEarnings": 210476.43
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 64357.56,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 21081.49,
+      "in-gaap:FreeCashFlow": 43276.07
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 39.89,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1920900000,
+      "in-gaap:MarketPriceAtFiling": 1220.0,
+      "in-gaap:EarningsPerShareBasic": 201.61,
+      "in-gaap:EarningsPerShareDiluted": 201.61,
+      "in-gaap:TrailingTwelveMonthsEPS": 806.44,
+      "in-gaap:ForwardEPSEstimate": 927.41,
+      "in-gaap:BookValuePerShare": 1565.31,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.8
+    }
+  }
+}

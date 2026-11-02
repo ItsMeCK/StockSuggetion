@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000070",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MAHABANK",
+  "company_details": {
+    "symbol": "MAHABANK",
+    "company_name": "Bank of Maharashtra",
+    "isin": "INE457A01014",
+    "cin": "L65191MH2010PLC100070"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826442LR7G1PO",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 140.92,
+      "in-gaap:OtherIncome": 49.32,
+      "in-gaap:OperatingExpenses": 79.9,
+      "in-gaap:OperatingProfit": 110.34,
+      "in-gaap:ProvisionsAndContingencies": 26.98,
+      "in-gaap:ProfitBeforeTax": 83.36,
+      "in-gaap:TaxExpense": 20.84,
+      "in-gaap:ProfitAfterTax": 62.52
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 60.8,
+      "in-gaap:ReservesAndSurplus": 1982.74,
+      "in-gaap:TotalEquity": 2043.54,
+      "in-gaap:TotalDeposits": 13623.57,
+      "in-gaap:CasaDeposits": 5531.17,
+      "in-gaap:TotalAdvances": 10793.95,
+      "in-gaap:TotalAssets": 17029.46
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 200.77,
+      "in-gaap:NetNPA": 60.45,
+      "in-gaap:CapitalAdequacyRatioCRAR": 18.8,
+      "in-gaap:Tier1CapitalRatio": 16.8
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 55.75,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 304000000,
+      "in-gaap:MarketPriceAtFiling": 75.32,
+      "in-gaap:EarningsPerShareBasic": 2.06,
+      "in-gaap:EarningsPerShareDiluted": 2.06,
+      "in-gaap:TrailingTwelveMonthsEPS": 8.24,
+      "in-gaap:ForwardEPSEstimate": 9.48,
+      "in-gaap:BookValuePerShare": 67.22,
+      "in-gaap:TrailingPE": 9.1,
+      "in-gaap:ForwardPE": 7.7,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.3
+    }
+  }
+}

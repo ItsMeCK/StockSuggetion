@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from kiteconnect import KiteConnect
 
-from core.db_manager import get_active_daily_focus_watchlist, get_daily_trades_count
+from core.db_manager import get_active_daily_focus_watchlist, get_daily_trades_count, get_all_active_positions
 from core.trigger_engine_5m import evaluate_5m_trigger, FiveMinuteBar
 from core.live_trading import execute_trade
 from core.watchlist_manager import WatchlistManager
@@ -33,14 +33,14 @@ def run_5m_trigger_cycle(now_dt=None):
     now = now_dt or datetime.now()
     logger.info(f"⚡ Running 5-Minute Precision Trigger Cycle at {now.strftime('%Y-%m-%d %H:%M:%S IST')}...")
 
-    # 1. Hard Daily Trade Cap Check (Max 5 trades per day)
+    # 1. Hard Daily Trade Cap Check (Configurable via MAX_DAILY_TRADES, 0 or 9999 = unlimited)
     trades_today = get_daily_trades_count()
-    max_daily_trades = 5
-    if trades_today >= max_daily_trades:
+    max_daily_trades = int(os.getenv("MAX_DAILY_TRADES", "9999"))
+    if max_daily_trades > 0 and trades_today >= max_daily_trades:
         logger.info(f"🛑 DAILY TRADES CEILING: Already executed {trades_today}/{max_daily_trades} trades today. No further entries permitted.")
         return
 
-    logger.info(f"Daily Trades Count: {trades_today}/{max_daily_trades} slots consumed.")
+    logger.info(f"Daily Trades Count: {trades_today}/{max_daily_trades if max_daily_trades > 0 else 'Unlimited'} slots consumed.")
 
     # 2. Fetch Active Daily Focus Watchlist
     active_stocks = get_active_daily_focus_watchlist(min_score=50.0)
@@ -80,16 +80,25 @@ def run_5m_trigger_cycle(now_dt=None):
         logger.error(f"Error fetching batch quotes from Zerodha: {e}")
         batch_quotes = {}
 
-    from_date = (now - timedelta(days=2)).strftime("%Y-%m-%d")
+    # Use 5-day lookback to reliably span weekends and holidays (need at least 22 5m bars for 20-SMA)
+    from_date = (now - timedelta(days=5)).strftime("%Y-%m-%d")
     to_date = now.strftime("%Y-%m-%d")
+
+    # 5b. Deduplication Guard: Check existing open positions
+    open_positions = get_all_active_positions()
+    open_symbols = {p.get("symbol") for p in open_positions}
 
     # 6. Evaluate each symbol on closed 5-minute bars
     for idx, stock in enumerate(active_stocks):
         symbol = stock["symbol"]
         direction = stock.get("direction", "LONG")
 
+        if symbol in open_symbols:
+            logger.info(f"   ↳ {symbol}: Active trade already running in DB. Skipping duplicate entry.")
+            continue
+
         # Re-check daily cap before every trade
-        if get_daily_trades_count() >= max_daily_trades:
+        if max_daily_trades > 0 and get_daily_trades_count() >= max_daily_trades:
             logger.info("Daily trades limit reached during execution loop. Halting further triggers.")
             break
 
@@ -148,7 +157,7 @@ def run_5m_trigger_cycle(now_dt=None):
                     instrument_type=signal.instrument_type
                 )
             else:
-                logger.debug(f"{symbol}: No trigger ({signal.reason})")
+                logger.info(f"   ↳ {symbol}: No trigger ({signal.reason})")
 
         except Exception as e:
             logger.error(f"Error evaluating 5m candle for {symbol}: {e}")

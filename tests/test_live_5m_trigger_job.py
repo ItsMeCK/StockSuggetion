@@ -3,6 +3,7 @@ from unittest.mock import MagicMock, patch
 from datetime import datetime
 from scripts.live_5m_trigger_job import run_5m_trigger_cycle
 
+@patch.dict("os.environ", {"MAX_DAILY_TRADES": "5"})
 @patch("scripts.live_5m_trigger_job.get_daily_trades_count")
 @patch("scripts.live_5m_trigger_job.get_active_daily_focus_watchlist")
 def test_5m_trigger_job_aborts_when_daily_cap_reached(mock_focus, mock_count):
@@ -118,3 +119,16 @@ def test_5m_trigger_job_afternoon_routes_to_live_btst(mock_kite_cls, mock_focus,
         assert kwargs["engine_type"] == "ENGINE_2_BTST"
         assert kwargs["holding_type"] == "TYPE_C_BTST"
         assert "LIVE AFTERNOON BTST" in kwargs["catalyst"]
+
+@patch("scripts.live_5m_trigger_job.get_all_active_positions")
+@patch("scripts.live_5m_trigger_job.get_daily_trades_count", return_value=0)
+@patch("scripts.live_5m_trigger_job.get_active_daily_focus_watchlist")
+@patch("scripts.live_5m_trigger_job.KiteConnect")
+def test_5m_trigger_job_skips_duplicate_symbol_if_already_open(mock_kite_cls, mock_focus, mock_count, mock_active):
+    mock_focus.return_value = [{"symbol": "ZYDUSLIFE", "direction": "LONG", "conviction_score": 85.0}]
+    mock_active.return_value = [{"symbol": "ZYDUSLIFE", "option_symbol": "ZYDUSLIFE26NOV1200CE"}]
+    
+    with patch("scripts.live_5m_trigger_job.execute_trade") as mock_exec:
+        run_5m_trigger_cycle()
+        mock_exec.assert_not_called()
+

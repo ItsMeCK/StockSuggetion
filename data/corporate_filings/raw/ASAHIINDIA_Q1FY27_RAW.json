@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000046",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ASAHIINDIA",
+  "company_details": {
+    "symbol": "ASAHIINDIA",
+    "company_name": "Asahi India Glass Ltd.",
+    "isin": "INE439A01020",
+    "cin": "L29100MH1976PLC100046"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-16T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423IOIKP7BYK4",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 95064.93,
+      "in-gaap:OtherIncome": 2851.95,
+      "in-gaap:TotalIncome": 97916.88,
+      "in-gaap:OperatingExpenses": 70649.31,
+      "in-gaap:EBITDA": 24415.62,
+      "in-gaap:DepreciationAndAmortisation": 3906.5,
+      "in-gaap:EBIT": 20509.12,
+      "in-gaap:FinanceCosts": 853.69,
+      "in-gaap:ProfitBeforeTax": 19655.43,
+      "in-gaap:TaxExpense": 4913.86,
+      "in-gaap:ProfitAfterTax": 14741.57
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 322.48,
+      "in-gaap:OtherEquity": 79117.18,
+      "in-gaap:TotalEquity": 79439.66,
+      "in-gaap:TotalDebt": 8858.72,
+      "in-gaap:CashAndCashEquivalents": 23366.28,
+      "in-gaap:TotalCurrentAssets": 47532.46,
+      "in-gaap:TotalCurrentLiabilities": 28519.48,
+      "in-gaap:TotalAssets": 116817.86,
+      "in-gaap:RetainedEarnings": 55607.76
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 20997.43,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 7927.03,
+      "in-gaap:FreeCashFlow": 13070.4
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 71.1,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1612400000,
+      "in-gaap:MarketPriceAtFiling": 894.3,
+      "in-gaap:EarningsPerShareBasic": 91.43,
+      "in-gaap:EarningsPerShareDiluted": 91.43,
+      "in-gaap:TrailingTwelveMonthsEPS": 365.72,
+      "in-gaap:ForwardEPSEstimate": 420.58,
+      "in-gaap:BookValuePerShare": 492.68,
+      "in-gaap:EVToEBITDA": 1.3,
+      "in-gaap:TrailingPE": 2.4,
+      "in-gaap:ForwardPE": 2.0,
+      "in-gaap:PriceToBook": 1.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.9
+    }
+  }
+}

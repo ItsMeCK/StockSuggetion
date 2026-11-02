@@ -1,0 +1,14 @@
+{
+  "architecture": "4-Level Watchlist & Precision Execution Engine",
+  "live_session": "Afternoon 12:15 - 15:15 IST (Overnight Gap Capture)",
+  "paper_session": "Morning 09:30 - 12:10 IST (\u20b90 Live Risk)",
+  "total_live_trades": 112,
+  "win_count": 56,
+  "loss_count": 56,
+  "win_rate_pct": 50.0,
+  "gross_pnl_inr": 212905.65,
+  "statutory_charges_inr": 13916.31,
+  "net_realized_pnl_inr": 198989.34,
+  "profit_factor": 2.01,
+  "average_trade_pnl_inr": 1776.69
+}

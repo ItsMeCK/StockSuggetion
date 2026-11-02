@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000386",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_PNB",
+  "company_details": {
+    "symbol": "PNB",
+    "company_name": "Punjab National Bank",
+    "isin": "INE160A01022",
+    "cin": "L65191MH2006PLC100386"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "260421900YZNEG45BH",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 378.66,
+      "in-gaap:OtherIncome": 132.53,
+      "in-gaap:OperatingExpenses": 214.7,
+      "in-gaap:OperatingProfit": 296.49,
+      "in-gaap:ProvisionsAndContingencies": 78.33,
+      "in-gaap:ProfitBeforeTax": 218.16,
+      "in-gaap:TaxExpense": 54.54,
+      "in-gaap:ProfitAfterTax": 163.62
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 103.9,
+      "in-gaap:ReservesAndSurplus": 5454.36,
+      "in-gaap:TotalEquity": 5558.26,
+      "in-gaap:TotalDeposits": 37055.06,
+      "in-gaap:CasaDeposits": 17341.77,
+      "in-gaap:TotalAdvances": 31330.05,
+      "in-gaap:TotalAssets": 46318.82
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 689.26,
+      "in-gaap:NetNPA": 206.78,
+      "in-gaap:CapitalAdequacyRatioCRAR": 19.8,
+      "in-gaap:Tier1CapitalRatio": 17.8
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 9.9,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 519500000,
+      "in-gaap:MarketPriceAtFiling": 120.37,
+      "in-gaap:EarningsPerShareBasic": 3.15,
+      "in-gaap:EarningsPerShareDiluted": 3.15,
+      "in-gaap:TrailingTwelveMonthsEPS": 12.6,
+      "in-gaap:ForwardEPSEstimate": 14.49,
+      "in-gaap:BookValuePerShare": 106.99,
+      "in-gaap:TrailingPE": 9.6,
+      "in-gaap:ForwardPE": 8.2,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.4
+    }
+  }
+}

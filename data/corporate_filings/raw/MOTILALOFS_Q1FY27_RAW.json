@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000327",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MOTILALOFS",
+  "company_details": {
+    "symbol": "MOTILALOFS",
+    "company_name": "Motilal Oswal Financial Services Ltd.",
+    "isin": "INE338I01027",
+    "cin": "L29100MH1987PLC100327"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814TIKIEC0TC5",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 331896.77,
+      "in-gaap:OtherIncome": 9956.9,
+      "in-gaap:TotalIncome": 341853.67,
+      "in-gaap:OperatingExpenses": 273105.43,
+      "in-gaap:EBITDA": 58791.34,
+      "in-gaap:DepreciationAndAmortisation": 9406.61,
+      "in-gaap:EBIT": 49384.73,
+      "in-gaap:FinanceCosts": 2491.16,
+      "in-gaap:ProfitBeforeTax": 46893.57,
+      "in-gaap:TaxExpense": 11723.39,
+      "in-gaap:ProfitAfterTax": 35170.18
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 423.54,
+      "in-gaap:OtherEquity": 410833.63,
+      "in-gaap:TotalEquity": 411257.17,
+      "in-gaap:TotalDebt": 39333.57,
+      "in-gaap:CashAndCashEquivalents": 46102.1,
+      "in-gaap:TotalCurrentAssets": 165948.39,
+      "in-gaap:TotalCurrentLiabilities": 99569.03,
+      "in-gaap:TotalAssets": 550159.77,
+      "in-gaap:RetainedEarnings": 287880.02
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 47620.99,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 11317.46,
+      "in-gaap:FreeCashFlow": 36303.53
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.19,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2117700000,
+      "in-gaap:MarketPriceAtFiling": 925.8,
+      "in-gaap:EarningsPerShareBasic": 166.08,
+      "in-gaap:EarningsPerShareDiluted": 166.08,
+      "in-gaap:TrailingTwelveMonthsEPS": 664.32,
+      "in-gaap:ForwardEPSEstimate": 763.97,
+      "in-gaap:BookValuePerShare": 1942.0,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.4,
+      "in-gaap:ForwardPE": 1.2,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.2
+    }
+  }
+}

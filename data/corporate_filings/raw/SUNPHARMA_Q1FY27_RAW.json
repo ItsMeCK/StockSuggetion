@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000429",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SUNPHARMA",
+  "company_details": {
+    "symbol": "SUNPHARMA",
+    "company_name": "Sun Pharmaceutical Industries Ltd.",
+    "isin": "INE044A01036",
+    "cin": "L29100MH1999PLC100429"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-24T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "261053172GTD0K32EY",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 62422.45,
+      "in-gaap:OtherIncome": 1872.67,
+      "in-gaap:TotalIncome": 64295.12,
+      "in-gaap:OperatingExpenses": 51420.47,
+      "in-gaap:EBITDA": 11001.98,
+      "in-gaap:DepreciationAndAmortisation": 1760.32,
+      "in-gaap:EBIT": 9241.66,
+      "in-gaap:FinanceCosts": 687.62,
+      "in-gaap:ProfitBeforeTax": 8554.04,
+      "in-gaap:TaxExpense": 2138.51,
+      "in-gaap:ProfitAfterTax": 6415.53
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 44.12,
+      "in-gaap:OtherEquity": 62468.51,
+      "in-gaap:TotalEquity": 62512.63,
+      "in-gaap:TotalDebt": 9068.0,
+      "in-gaap:CashAndCashEquivalents": 12897.59,
+      "in-gaap:TotalCurrentAssets": 31211.22,
+      "in-gaap:TotalCurrentLiabilities": 18726.73,
+      "in-gaap:TotalAssets": 90307.37,
+      "in-gaap:RetainedEarnings": 43758.84
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 8361.5,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3337.92,
+      "in-gaap:FreeCashFlow": 5023.58
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.41,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 220600000,
+      "in-gaap:MarketPriceAtFiling": 1748.0,
+      "in-gaap:EarningsPerShareBasic": 290.82,
+      "in-gaap:EarningsPerShareDiluted": 290.82,
+      "in-gaap:TrailingTwelveMonthsEPS": 1163.28,
+      "in-gaap:ForwardEPSEstimate": 1337.77,
+      "in-gaap:BookValuePerShare": 2833.75,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.6
+    }
+  }
+}

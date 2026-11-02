@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000397",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_REDINGTON",
+  "company_details": {
+    "symbol": "REDINGTON",
+    "company_name": "Redington Ltd.",
+    "isin": "INE891D01026",
+    "cin": "L29100MH2012PLC100397"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317BIH36HT5TH",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 7603.85,
+      "in-gaap:OtherIncome": 228.12,
+      "in-gaap:TotalIncome": 7831.97,
+      "in-gaap:OperatingExpenses": 5588.05,
+      "in-gaap:EBITDA": 2015.8,
+      "in-gaap:DepreciationAndAmortisation": 322.53,
+      "in-gaap:EBIT": 1693.27,
+      "in-gaap:FinanceCosts": 92.47,
+      "in-gaap:ProfitBeforeTax": 1600.8,
+      "in-gaap:TaxExpense": 400.2,
+      "in-gaap:ProfitAfterTax": 1200.6
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 30.42,
+      "in-gaap:OtherEquity": 4850.41,
+      "in-gaap:TotalEquity": 4880.83,
+      "in-gaap:TotalDebt": 713.3,
+      "in-gaap:CashAndCashEquivalents": 1888.83,
+      "in-gaap:TotalCurrentAssets": 3801.93,
+      "in-gaap:TotalCurrentLiabilities": 2281.16,
+      "in-gaap:TotalAssets": 7875.28,
+      "in-gaap:RetainedEarnings": 3416.58
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1733.59,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 659.89,
+      "in-gaap:FreeCashFlow": 1073.7
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 50.93,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 152100000,
+      "in-gaap:MarketPriceAtFiling": 359.1,
+      "in-gaap:EarningsPerShareBasic": 78.93,
+      "in-gaap:EarningsPerShareDiluted": 78.93,
+      "in-gaap:TrailingTwelveMonthsEPS": 315.72,
+      "in-gaap:ForwardEPSEstimate": 363.08,
+      "in-gaap:BookValuePerShare": 320.9,
+      "in-gaap:EVToEBITDA": 0.5,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.5
+    }
+  }
+}

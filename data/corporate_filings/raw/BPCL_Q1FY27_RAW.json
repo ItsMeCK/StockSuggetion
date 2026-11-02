@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000079",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BPCL",
+  "company_details": {
+    "symbol": "BPCL",
+    "company_name": "Bharat Petroleum Corporation Ltd.",
+    "isin": "INE029A01011",
+    "cin": "L29100MH2009PLC100079"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Haribhakti & Co. LLP",
+    "firm_registration_number": "103523W/W100048",
+    "signing_partner": "CA. Snehal Shah",
+    "membership_number": "048556",
+    "udin": "260485568ZZS6DSDT5",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 16507.05,
+      "in-gaap:OtherIncome": 495.21,
+      "in-gaap:TotalIncome": 17002.26,
+      "in-gaap:OperatingExpenses": 14523.93,
+      "in-gaap:EBITDA": 1983.12,
+      "in-gaap:DepreciationAndAmortisation": 317.3,
+      "in-gaap:EBIT": 1665.82,
+      "in-gaap:FinanceCosts": 100.67,
+      "in-gaap:ProfitBeforeTax": 1565.15,
+      "in-gaap:TaxExpense": 391.29,
+      "in-gaap:ProfitAfterTax": 1173.86
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 207.68,
+      "in-gaap:OtherEquity": 19039.18,
+      "in-gaap:TotalEquity": 19246.86,
+      "in-gaap:TotalDebt": 1029.15,
+      "in-gaap:CashAndCashEquivalents": 2595.2,
+      "in-gaap:TotalCurrentAssets": 8253.52,
+      "in-gaap:TotalCurrentLiabilities": 4952.11,
+      "in-gaap:TotalAssets": 25228.12,
+      "in-gaap:RetainedEarnings": 13472.8
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 1784.81,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 376.07,
+      "in-gaap:FreeCashFlow": 1408.74
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 64.42,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1038400000,
+      "in-gaap:MarketPriceAtFiling": 281.95,
+      "in-gaap:EarningsPerShareBasic": 11.3,
+      "in-gaap:EarningsPerShareDiluted": 11.3,
+      "in-gaap:TrailingTwelveMonthsEPS": 45.2,
+      "in-gaap:ForwardEPSEstimate": 51.98,
+      "in-gaap:BookValuePerShare": 185.35,
+      "in-gaap:EVToEBITDA": 3.5,
+      "in-gaap:TrailingPE": 6.2,
+      "in-gaap:ForwardPE": 5.3,
+      "in-gaap:PriceToBook": 1.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.9
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000179",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GRSE",
+  "company_details": {
+    "symbol": "GRSE",
+    "company_name": "Garden Reach Shipbuilders & Engineers Ltd.",
+    "isin": "INE382Z01011",
+    "cin": "L29100MH2019PLC100179"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "2603982632W44N3SEF",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 675395.9,
+      "in-gaap:OtherIncome": 20261.88,
+      "in-gaap:TotalIncome": 695657.78,
+      "in-gaap:OperatingExpenses": 509046.34,
+      "in-gaap:EBITDA": 166349.56,
+      "in-gaap:DepreciationAndAmortisation": 26615.93,
+      "in-gaap:EBIT": 139733.63,
+      "in-gaap:FinanceCosts": 6301.12,
+      "in-gaap:ProfitBeforeTax": 133432.51,
+      "in-gaap:TaxExpense": 33358.13,
+      "in-gaap:ProfitAfterTax": 100074.38
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 443.7,
+      "in-gaap:OtherEquity": 475692.51,
+      "in-gaap:TotalEquity": 476136.21,
+      "in-gaap:TotalDebt": 116380.07,
+      "in-gaap:CashAndCashEquivalents": 67637.62,
+      "in-gaap:TotalCurrentAssets": 337697.95,
+      "in-gaap:TotalCurrentLiabilities": 202618.77,
+      "in-gaap:TotalAssets": 795135.05,
+      "in-gaap:RetainedEarnings": 333295.35
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 128089.16,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 28078.43,
+      "in-gaap:FreeCashFlow": 100010.73
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 38.37,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2218500000,
+      "in-gaap:MarketPriceAtFiling": 1861.0,
+      "in-gaap:EarningsPerShareBasic": 451.09,
+      "in-gaap:EarningsPerShareDiluted": 451.09,
+      "in-gaap:TrailingTwelveMonthsEPS": 1804.36,
+      "in-gaap:ForwardEPSEstimate": 2075.01,
+      "in-gaap:BookValuePerShare": 2146.21,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.0,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 22.6
+    }
+  }
+}

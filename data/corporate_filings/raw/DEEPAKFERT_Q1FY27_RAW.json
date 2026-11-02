@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000140",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_DEEPAKFERT",
+  "company_details": {
+    "symbol": "DEEPAKFERT",
+    "company_name": "Deepak Fertilisers & Petrochemicals Corp. Ltd.",
+    "isin": "INE501A01019",
+    "cin": "L29100MH1980PLC100140"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317V19WE8GYVU",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 86170.09,
+      "in-gaap:OtherIncome": 2585.1,
+      "in-gaap:TotalIncome": 88755.19,
+      "in-gaap:OperatingExpenses": 62259.88,
+      "in-gaap:EBITDA": 23910.21,
+      "in-gaap:DepreciationAndAmortisation": 3825.63,
+      "in-gaap:EBIT": 20084.58,
+      "in-gaap:FinanceCosts": 1008.87,
+      "in-gaap:ProfitBeforeTax": 19075.71,
+      "in-gaap:TaxExpense": 4768.93,
+      "in-gaap:ProfitAfterTax": 14306.78
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 107.64,
+      "in-gaap:OtherEquity": 57652.78,
+      "in-gaap:TotalEquity": 57760.42,
+      "in-gaap:TotalDebt": 14355.26,
+      "in-gaap:CashAndCashEquivalents": 13267.94,
+      "in-gaap:TotalCurrentAssets": 43085.04,
+      "in-gaap:TotalCurrentLiabilities": 25851.03,
+      "in-gaap:TotalAssets": 97966.71,
+      "in-gaap:RetainedEarnings": 40432.29
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 22714.7,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6818.78,
+      "in-gaap:FreeCashFlow": 15895.92
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 56.44,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 538200000,
+      "in-gaap:MarketPriceAtFiling": 1136.5,
+      "in-gaap:EarningsPerShareBasic": 265.83,
+      "in-gaap:EarningsPerShareDiluted": 265.83,
+      "in-gaap:TrailingTwelveMonthsEPS": 1063.32,
+      "in-gaap:ForwardEPSEstimate": 1222.82,
+      "in-gaap:BookValuePerShare": 1073.21,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 1.1,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.1
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000029",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_AFCONS",
+  "company_details": {
+    "symbol": "AFCONS",
+    "company_name": "Afcons Infrastructure Ltd.",
+    "isin": "INE101I01011",
+    "cin": "L29100MH2004PLC100029"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-29T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317QGHCJFF8WY",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 36631.1,
+      "in-gaap:OtherIncome": 1098.93,
+      "in-gaap:TotalIncome": 37730.03,
+      "in-gaap:OperatingExpenses": 26453.49,
+      "in-gaap:EBITDA": 10177.61,
+      "in-gaap:DepreciationAndAmortisation": 1628.42,
+      "in-gaap:EBIT": 8549.19,
+      "in-gaap:FinanceCosts": 295.0,
+      "in-gaap:ProfitBeforeTax": 8254.19,
+      "in-gaap:TaxExpense": 2063.55,
+      "in-gaap:ProfitAfterTax": 6190.64
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 252.78,
+      "in-gaap:OtherEquity": 44574.08,
+      "in-gaap:TotalEquity": 44826.86,
+      "in-gaap:TotalDebt": 6668.72,
+      "in-gaap:CashAndCashEquivalents": 7533.36,
+      "in-gaap:TotalCurrentAssets": 18315.55,
+      "in-gaap:TotalCurrentLiabilities": 10989.33,
+      "in-gaap:TotalAssets": 62484.91,
+      "in-gaap:RetainedEarnings": 31378.8
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 8447.42,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2665.27,
+      "in-gaap:FreeCashFlow": 5782.15
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 41.49,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1263900000,
+      "in-gaap:MarketPriceAtFiling": 217.84,
+      "in-gaap:EarningsPerShareBasic": 48.98,
+      "in-gaap:EarningsPerShareDiluted": 48.98,
+      "in-gaap:TrailingTwelveMonthsEPS": 195.92,
+      "in-gaap:ForwardEPSEstimate": 225.31,
+      "in-gaap:BookValuePerShare": 354.67,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 14.2
+    }
+  }
+}

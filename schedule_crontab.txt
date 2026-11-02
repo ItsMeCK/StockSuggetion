@@ -6,8 +6,8 @@ PYTHONPATH=/Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign
 # 0. Sunday 18:00 PM - Weekly Eligible Universe Build & Strategy Briefing
 0 18 * * 0 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/weekly_watchlist_builder.py >> logs/weekly_watchlist.log 2>&1
 
-# 1. 09:08 AM - Pre-Open Futures Discovery & Daily Focus Watchlist (Mon-Fri)
-8 9 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python core/watchlist_evaluator.py >> logs/preopen_watchlist.log 2>&1
+# 1. 09:11 AM - Pre-Open Futures Discovery & Daily Focus Watchlist (Mon-Fri)
+11 9 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python core/watchlist_evaluator.py >> logs/preopen_watchlist.log 2>&1
 
 # 2. 09:16 AM - T+1 Morning BTST Liquidator (Exit overnight holds at open gap)
 16 9 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/btst_liquidator.py >> logs/btst_liquidator.log 2>&1
@@ -20,9 +20,14 @@ PYTHONPATH=/Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign
 # 3b. 12:00 PM - Mid-Day Institutional Accumulation Sweep & Afternoon Focus Build (Mon-Fri)
 0 12 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/midday_watchlist_refresher.py >> logs/midday_watchlist.log 2>&1
 
-# 4. 12:15, 13:15, 14:15 PM - Market-Wide Afternoon BTST Scanner (+₹2.13L Overnight Edge)
+# 3c. 10:15, 11:15, 12:15, 13:15, 14:15, 15:00 - Hourly Live Position Guardian & Anti-Trap Co-Pilot
+15 10,11,12,13,14 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/live_position_guardian_job.py >> logs/position_guardian.log 2>&1
+00 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/live_position_guardian_job.py >> logs/position_guardian.log 2>&1
+
+# 4. 12:15, 13:15, 14:15, 15:00 PM - Market-Wide Afternoon BTST Scanner (+₹2.13L Overnight Edge)
 # Sweeps full 216 F&O universe at hourly candle close to capture institutional momentum
 15 12,13,14 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/live_hourly_job.py >> logs/live_hourly.log 2>&1
+00 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/live_hourly_job.py >> logs/live_hourly.log 2>&1
 
 # 5. 15:15 PM - Engine 2 3:15 PM Insider / BTST Sniper (100% Live Capital Edge)
 15 15 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/anticipatory_execution_job.py >> logs/btst_sniper.log 2>&1

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000150",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_DUMMYVEDL3",
+  "company_details": {
+    "symbol": "DUMMYVEDL3",
+    "company_name": "Dummy Vedanta Ltd. 3",
+    "isin": "DU3205A01025",
+    "cin": "L29100MH1990PLC100150"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317KLI6DGBJ6W",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 51774.55,
+      "in-gaap:OtherIncome": 1553.24,
+      "in-gaap:TotalIncome": 53327.79,
+      "in-gaap:OperatingExpenses": 39848.82,
+      "in-gaap:EBITDA": 11925.73,
+      "in-gaap:DepreciationAndAmortisation": 1908.12,
+      "in-gaap:EBIT": 10017.61,
+      "in-gaap:FinanceCosts": 368.08,
+      "in-gaap:ProfitBeforeTax": 9649.53,
+      "in-gaap:TaxExpense": 2412.38,
+      "in-gaap:ProfitAfterTax": 7237.15
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 375.02,
+      "in-gaap:OtherEquity": 37758.9,
+      "in-gaap:TotalEquity": 38133.92,
+      "in-gaap:TotalDebt": 5113.23,
+      "in-gaap:CashAndCashEquivalents": 9450.86,
+      "in-gaap:TotalCurrentAssets": 25887.28,
+      "in-gaap:TotalCurrentLiabilities": 15532.36,
+      "in-gaap:TotalAssets": 58779.51,
+      "in-gaap:RetainedEarnings": 26693.74
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 10733.16,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 3343.3,
+      "in-gaap:FreeCashFlow": 7389.86
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 53.74,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1875100000,
+      "in-gaap:MarketPriceAtFiling": 241.33,
+      "in-gaap:EarningsPerShareBasic": 38.6,
+      "in-gaap:EarningsPerShareDiluted": 38.6,
+      "in-gaap:TrailingTwelveMonthsEPS": 154.4,
+      "in-gaap:ForwardEPSEstimate": 177.56,
+      "in-gaap:BookValuePerShare": 203.37,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.6,
+      "in-gaap:ForwardPE": 1.4,
+      "in-gaap:PriceToBook": 1.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 16.7
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000415",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SHREECEM",
+  "company_details": {
+    "symbol": "SHREECEM",
+    "company_name": "Shree Cement Ltd.",
+    "isin": "INE070A01015",
+    "cin": "L29100MH1985PLC100415"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-25T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "261178126L8ZKP5QTT",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 324698.15,
+      "in-gaap:OtherIncome": 9740.94,
+      "in-gaap:TotalIncome": 334439.09,
+      "in-gaap:OperatingExpenses": 276191.5,
+      "in-gaap:EBITDA": 48506.65,
+      "in-gaap:DepreciationAndAmortisation": 7761.06,
+      "in-gaap:EBIT": 40745.59,
+      "in-gaap:FinanceCosts": 3911.83,
+      "in-gaap:ProfitBeforeTax": 36833.76,
+      "in-gaap:TaxExpense": 9208.44,
+      "in-gaap:ProfitAfterTax": 27625.32
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 31.12,
+      "in-gaap:OtherEquity": 451230.44,
+      "in-gaap:TotalEquity": 451261.56,
+      "in-gaap:TotalDebt": 31895.08,
+      "in-gaap:CashAndCashEquivalents": 80057.68,
+      "in-gaap:TotalCurrentAssets": 162349.08,
+      "in-gaap:TotalCurrentLiabilities": 97409.45,
+      "in-gaap:TotalAssets": 580566.08,
+      "in-gaap:RetainedEarnings": 315883.09
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 44141.05,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 16299.62,
+      "in-gaap:FreeCashFlow": 27841.43
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 57.62,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 155600000,
+      "in-gaap:MarketPriceAtFiling": 22735.0,
+      "in-gaap:EarningsPerShareBasic": 1775.41,
+      "in-gaap:EarningsPerShareDiluted": 1775.41,
+      "in-gaap:TrailingTwelveMonthsEPS": 7101.64,
+      "in-gaap:ForwardEPSEstimate": 8166.89,
+      "in-gaap:BookValuePerShare": 29001.39,
+      "in-gaap:EVToEBITDA": 1.6,
+      "in-gaap:TrailingPE": 3.2,
+      "in-gaap:ForwardPE": 2.7,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.8
+    }
+  }
+}

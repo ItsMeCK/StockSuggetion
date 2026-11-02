@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000013",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ACE",
+  "company_details": {
+    "symbol": "ACE",
+    "company_name": "Action Construction Equipment Ltd.",
+    "isin": "INE731H01025",
+    "cin": "L29100MH1988PLC100013"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317WPX40TF3XO",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 123707.16,
+      "in-gaap:OtherIncome": 3711.21,
+      "in-gaap:TotalIncome": 127418.37,
+      "in-gaap:OperatingExpenses": 100801.57,
+      "in-gaap:EBITDA": 22905.59,
+      "in-gaap:DepreciationAndAmortisation": 3664.89,
+      "in-gaap:EBIT": 19240.7,
+      "in-gaap:FinanceCosts": 654.45,
+      "in-gaap:ProfitBeforeTax": 18586.25,
+      "in-gaap:TaxExpense": 4646.56,
+      "in-gaap:ProfitAfterTax": 13939.69
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 156.16,
+      "in-gaap:OtherEquity": 88183.44,
+      "in-gaap:TotalEquity": 88339.6,
+      "in-gaap:TotalDebt": 19465.92,
+      "in-gaap:CashAndCashEquivalents": 30554.28,
+      "in-gaap:TotalCurrentAssets": 61853.58,
+      "in-gaap:TotalCurrentLiabilities": 37112.15,
+      "in-gaap:TotalAssets": 144917.67,
+      "in-gaap:RetainedEarnings": 61837.72
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 17866.36,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6507.04,
+      "in-gaap:FreeCashFlow": 11359.32
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 60.85,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 780800000,
+      "in-gaap:MarketPriceAtFiling": 1000.1,
+      "in-gaap:EarningsPerShareBasic": 178.53,
+      "in-gaap:EarningsPerShareDiluted": 178.53,
+      "in-gaap:TrailingTwelveMonthsEPS": 714.12,
+      "in-gaap:ForwardEPSEstimate": 821.24,
+      "in-gaap:BookValuePerShare": 1131.4,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.4,
+      "in-gaap:ForwardPE": 1.2,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.2
+    }
+  }
+}

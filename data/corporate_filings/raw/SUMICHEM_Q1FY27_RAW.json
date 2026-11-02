@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000428",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SUMICHEM",
+  "company_details": {
+    "symbol": "SUMICHEM",
+    "company_name": "Sumitomo Chemical India Ltd.",
+    "isin": "INE258G01013",
+    "cin": "L29100MH1998PLC100428"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "260229879JZZQJGDOJ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 39465.2,
+      "in-gaap:OtherIncome": 1183.96,
+      "in-gaap:TotalIncome": 40649.16,
+      "in-gaap:OperatingExpenses": 28111.88,
+      "in-gaap:EBITDA": 11353.32,
+      "in-gaap:DepreciationAndAmortisation": 1816.53,
+      "in-gaap:EBIT": 9536.79,
+      "in-gaap:FinanceCosts": 412.85,
+      "in-gaap:ProfitBeforeTax": 9123.94,
+      "in-gaap:TaxExpense": 2280.99,
+      "in-gaap:ProfitAfterTax": 6842.95
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 169.64,
+      "in-gaap:OtherEquity": 44310.05,
+      "in-gaap:TotalEquity": 44479.69,
+      "in-gaap:TotalDebt": 13254.67,
+      "in-gaap:CashAndCashEquivalents": 5872.91,
+      "in-gaap:TotalCurrentAssets": 19732.6,
+      "in-gaap:TotalCurrentLiabilities": 11839.56,
+      "in-gaap:TotalAssets": 69573.92,
+      "in-gaap:RetainedEarnings": 31135.78
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 8742.06,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1829.24,
+      "in-gaap:FreeCashFlow": 6912.82
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.64,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 848199999,
+      "in-gaap:MarketPriceAtFiling": 360.6,
+      "in-gaap:EarningsPerShareBasic": 80.68,
+      "in-gaap:EarningsPerShareDiluted": 80.68,
+      "in-gaap:TrailingTwelveMonthsEPS": 322.72,
+      "in-gaap:ForwardEPSEstimate": 371.13,
+      "in-gaap:BookValuePerShare": 524.4,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 21.6
+    }
+  }
+}

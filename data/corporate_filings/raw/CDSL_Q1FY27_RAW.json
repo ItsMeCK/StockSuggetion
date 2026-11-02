@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000110",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CDSL",
+  "company_details": {
+    "symbol": "CDSL",
+    "company_name": "Central Depository Services (India) Ltd.",
+    "isin": "INE736A01011",
+    "cin": "L29100MH1995PLC100110"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-20T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "260398268IZZWHJPZZ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 322396.83,
+      "in-gaap:OtherIncome": 9671.9,
+      "in-gaap:TotalIncome": 332068.73,
+      "in-gaap:OperatingExpenses": 235648.57,
+      "in-gaap:EBITDA": 86748.26,
+      "in-gaap:DepreciationAndAmortisation": 13879.72,
+      "in-gaap:EBIT": 72868.54,
+      "in-gaap:FinanceCosts": 6995.83,
+      "in-gaap:ProfitBeforeTax": 65872.71,
+      "in-gaap:TaxExpense": 16468.18,
+      "in-gaap:ProfitAfterTax": 49404.53
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 398.08,
+      "in-gaap:OtherEquity": 334368.76,
+      "in-gaap:TotalEquity": 334766.84,
+      "in-gaap:TotalDebt": 32116.19,
+      "in-gaap:CashAndCashEquivalents": 50219.87,
+      "in-gaap:TotalCurrentAssets": 161198.42,
+      "in-gaap:TotalCurrentLiabilities": 96719.05,
+      "in-gaap:TotalAssets": 463602.08,
+      "in-gaap:RetainedEarnings": 234336.79
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 79808.4,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 21104.56,
+      "in-gaap:FreeCashFlow": 58703.84
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 60.2,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1990400000,
+      "in-gaap:MarketPriceAtFiling": 1188.5,
+      "in-gaap:EarningsPerShareBasic": 248.21,
+      "in-gaap:EarningsPerShareDiluted": 248.21,
+      "in-gaap:TrailingTwelveMonthsEPS": 992.84,
+      "in-gaap:ForwardEPSEstimate": 1141.77,
+      "in-gaap:BookValuePerShare": 1681.91,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.2,
+      "in-gaap:ForwardPE": 1.0,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.5
+    }
+  }
+}

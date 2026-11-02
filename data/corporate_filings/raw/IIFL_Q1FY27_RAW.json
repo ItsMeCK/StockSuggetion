@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000231",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_IIFL",
+  "company_details": {
+    "symbol": "IIFL",
+    "company_name": "IIFL Finance Ltd.",
+    "isin": "INE530B01024",
+    "cin": "L65191MH2011PLC100231"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-21T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190NE0RTBB3RU",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 6739.69,
+      "in-gaap:OtherIncome": 2358.89,
+      "in-gaap:OperatingExpenses": 3821.4,
+      "in-gaap:OperatingProfit": 5277.18,
+      "in-gaap:ProvisionsAndContingencies": 1264.85,
+      "in-gaap:ProfitBeforeTax": 4012.33,
+      "in-gaap:TaxExpense": 1003.08,
+      "in-gaap:ProfitAfterTax": 3009.25
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 453.58,
+      "in-gaap:ReservesAndSurplus": 87935.79,
+      "in-gaap:TotalEquity": 88389.37,
+      "in-gaap:TotalDeposits": 589262.45,
+      "in-gaap:CasaDeposits": 271060.73,
+      "in-gaap:TotalAdvances": 505940.74,
+      "in-gaap:TotalAssets": 736578.06
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 14722.88,
+      "in-gaap:NetNPA": 4401.68,
+      "in-gaap:CapitalAdequacyRatioCRAR": 16.4,
+      "in-gaap:Tier1CapitalRatio": 14.4
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 19.86,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2267900000,
+      "in-gaap:MarketPriceAtFiling": 531.65,
+      "in-gaap:EarningsPerShareBasic": 13.27,
+      "in-gaap:EarningsPerShareDiluted": 13.27,
+      "in-gaap:TrailingTwelveMonthsEPS": 53.08,
+      "in-gaap:ForwardEPSEstimate": 61.04,
+      "in-gaap:BookValuePerShare": 389.74,
+      "in-gaap:TrailingPE": 10.0,
+      "in-gaap:ForwardPE": 8.5,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.2
+    }
+  }
+}

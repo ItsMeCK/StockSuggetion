@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000174",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GAIL",
+  "company_details": {
+    "symbol": "GAIL",
+    "company_name": "GAIL (India) Ltd.",
+    "isin": "INE129A01019",
+    "cin": "L29100MH2014PLC100174"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-24T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423UTG9WAUI60",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 19182.85,
+      "in-gaap:OtherIncome": 575.49,
+      "in-gaap:TotalIncome": 19758.34,
+      "in-gaap:OperatingExpenses": 15675.0,
+      "in-gaap:EBITDA": 3507.85,
+      "in-gaap:DepreciationAndAmortisation": 561.26,
+      "in-gaap:EBIT": 2946.59,
+      "in-gaap:FinanceCosts": 134.4,
+      "in-gaap:ProfitBeforeTax": 2812.19,
+      "in-gaap:TaxExpense": 703.05,
+      "in-gaap:ProfitAfterTax": 2109.14
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 482.98,
+      "in-gaap:OtherEquity": 21954.6,
+      "in-gaap:TotalEquity": 22437.58,
+      "in-gaap:TotalDebt": 2686.03,
+      "in-gaap:CashAndCashEquivalents": 1793.49,
+      "in-gaap:TotalCurrentAssets": 9591.42,
+      "in-gaap:TotalCurrentLiabilities": 5754.85,
+      "in-gaap:TotalAssets": 30878.47,
+      "in-gaap:RetainedEarnings": 15706.31
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 3016.75,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 884.62,
+      "in-gaap:FreeCashFlow": 2132.13
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 71.01,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2414900000,
+      "in-gaap:MarketPriceAtFiling": 163.96,
+      "in-gaap:EarningsPerShareBasic": 8.73,
+      "in-gaap:EarningsPerShareDiluted": 8.73,
+      "in-gaap:TrailingTwelveMonthsEPS": 34.92,
+      "in-gaap:ForwardEPSEstimate": 40.16,
+      "in-gaap:BookValuePerShare": 92.91,
+      "in-gaap:EVToEBITDA": 2.9,
+      "in-gaap:TrailingPE": 4.7,
+      "in-gaap:ForwardPE": 4.0,
+      "in-gaap:PriceToBook": 1.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.7
+    }
+  }
+}

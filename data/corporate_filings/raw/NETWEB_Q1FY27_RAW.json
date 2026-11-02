@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000345",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_NETWEB",
+  "company_details": {
+    "symbol": "NETWEB",
+    "company_name": "Netweb Technologies India Ltd.",
+    "isin": "INE0NT901020",
+    "cin": "L29100MH2005PLC100345"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "260424238PP8O5F3WF",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 304296.08,
+      "in-gaap:OtherIncome": 9128.88,
+      "in-gaap:TotalIncome": 313424.96,
+      "in-gaap:OperatingExpenses": 244889.78,
+      "in-gaap:EBITDA": 59406.3,
+      "in-gaap:DepreciationAndAmortisation": 9505.01,
+      "in-gaap:EBIT": 49901.29,
+      "in-gaap:FinanceCosts": 2517.22,
+      "in-gaap:ProfitBeforeTax": 47384.07,
+      "in-gaap:TaxExpense": 11846.02,
+      "in-gaap:ProfitAfterTax": 35538.05
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 266.32,
+      "in-gaap:OtherEquity": 419736.25,
+      "in-gaap:TotalEquity": 420002.57,
+      "in-gaap:TotalDebt": 54177.58,
+      "in-gaap:CashAndCashEquivalents": 62718.27,
+      "in-gaap:TotalCurrentAssets": 152148.04,
+      "in-gaap:TotalCurrentLiabilities": 91288.82,
+      "in-gaap:TotalAssets": 565468.97,
+      "in-gaap:RetainedEarnings": 294001.8
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 52277.54,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 15074.9,
+      "in-gaap:FreeCashFlow": 37202.64
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 67.7,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1331600000,
+      "in-gaap:MarketPriceAtFiling": 4335.8,
+      "in-gaap:EarningsPerShareBasic": 266.88,
+      "in-gaap:EarningsPerShareDiluted": 266.88,
+      "in-gaap:TrailingTwelveMonthsEPS": 1067.52,
+      "in-gaap:ForwardEPSEstimate": 1227.65,
+      "in-gaap:BookValuePerShare": 3154.12,
+      "in-gaap:EVToEBITDA": 2.4,
+      "in-gaap:TrailingPE": 4.1,
+      "in-gaap:ForwardPE": 3.5,
+      "in-gaap:PriceToBook": 1.4,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.2
+    }
+  }
+}

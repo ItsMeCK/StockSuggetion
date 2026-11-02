@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000463",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TITAGARH",
+  "company_details": {
+    "symbol": "TITAGARH",
+    "company_name": "Titagarh Rail Systems Ltd.",
+    "isin": "INE615H01020",
+    "cin": "L29100MH1988PLC100463"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826652NFJ95JU",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 127526.89,
+      "in-gaap:OtherIncome": 3825.81,
+      "in-gaap:TotalIncome": 131352.7,
+      "in-gaap:OperatingExpenses": 96246.68,
+      "in-gaap:EBITDA": 31280.21,
+      "in-gaap:DepreciationAndAmortisation": 5004.83,
+      "in-gaap:EBIT": 26275.38,
+      "in-gaap:FinanceCosts": 2218.45,
+      "in-gaap:ProfitBeforeTax": 24056.93,
+      "in-gaap:TaxExpense": 6014.23,
+      "in-gaap:ProfitAfterTax": 18042.7
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 479.78,
+      "in-gaap:OtherEquity": 101473.88,
+      "in-gaap:TotalEquity": 101953.66,
+      "in-gaap:TotalDebt": 5291.65,
+      "in-gaap:CashAndCashEquivalents": 10775.16,
+      "in-gaap:TotalCurrentAssets": 63763.44,
+      "in-gaap:TotalCurrentLiabilities": 38258.07,
+      "in-gaap:TotalAssets": 145503.38,
+      "in-gaap:RetainedEarnings": 71367.56
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 26275.38,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 6124.08,
+      "in-gaap:FreeCashFlow": 20151.3
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 57.46,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2398900000,
+      "in-gaap:MarketPriceAtFiling": 663.35,
+      "in-gaap:EarningsPerShareBasic": 75.21,
+      "in-gaap:EarningsPerShareDiluted": 75.21,
+      "in-gaap:TrailingTwelveMonthsEPS": 300.84,
+      "in-gaap:ForwardEPSEstimate": 345.97,
+      "in-gaap:BookValuePerShare": 425.0,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 2.2,
+      "in-gaap:ForwardPE": 1.9,
+      "in-gaap:PriceToBook": 1.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 23.6
+    }
+  }
+}

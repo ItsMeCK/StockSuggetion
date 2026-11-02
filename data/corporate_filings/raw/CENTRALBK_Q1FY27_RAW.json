@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000109",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CENTRALBK",
+  "company_details": {
+    "symbol": "CENTRALBK",
+    "company_name": "Central Bank of India",
+    "isin": "INE483A01010",
+    "cin": "L65191MH2009PLC100109"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812OU80Y4AG0L",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 561.05,
+      "in-gaap:OtherIncome": 196.37,
+      "in-gaap:OperatingExpenses": 318.12,
+      "in-gaap:OperatingProfit": 439.3,
+      "in-gaap:ProvisionsAndContingencies": 98.57,
+      "in-gaap:ProfitBeforeTax": 340.73,
+      "in-gaap:TaxExpense": 85.18,
+      "in-gaap:ProfitAfterTax": 255.55
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 438.7,
+      "in-gaap:ReservesAndSurplus": 6379.13,
+      "in-gaap:TotalEquity": 6817.83,
+      "in-gaap:TotalDeposits": 45452.21,
+      "in-gaap:CasaDeposits": 20089.88,
+      "in-gaap:TotalAdvances": 39429.79,
+      "in-gaap:TotalAssets": 56815.26
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 895.06,
+      "in-gaap:NetNPA": 268.12,
+      "in-gaap:CapitalAdequacyRatioCRAR": 15.9,
+      "in-gaap:Tier1CapitalRatio": 13.9
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 37.87,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2193500000,
+      "in-gaap:MarketPriceAtFiling": 28.83,
+      "in-gaap:EarningsPerShareBasic": 1.17,
+      "in-gaap:EarningsPerShareDiluted": 1.17,
+      "in-gaap:TrailingTwelveMonthsEPS": 4.68,
+      "in-gaap:ForwardEPSEstimate": 5.38,
+      "in-gaap:BookValuePerShare": 31.08,
+      "in-gaap:TrailingPE": 6.2,
+      "in-gaap:ForwardPE": 5.3,
+      "in-gaap:PriceToBook": 0.9,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.3
+    }
+  }
+}

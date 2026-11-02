@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000083",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_GROWW",
+  "company_details": {
+    "symbol": "GROWW",
+    "company_name": "Billionbrains Garage Ventures Ltd.",
+    "isin": "INE0HOQ01053",
+    "cin": "L29100MH2013PLC100083"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Singhi & Co",
+    "firm_registration_number": "302049E",
+    "signing_partner": "CA. B. L. Choraria",
+    "membership_number": "022987",
+    "udin": "26022987A0EEL9VXGZ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 18854.8,
+      "in-gaap:OtherIncome": 565.64,
+      "in-gaap:TotalIncome": 19420.44,
+      "in-gaap:OperatingExpenses": 14887.81,
+      "in-gaap:EBITDA": 3966.99,
+      "in-gaap:DepreciationAndAmortisation": 634.72,
+      "in-gaap:EBIT": 3332.27,
+      "in-gaap:FinanceCosts": 271.71,
+      "in-gaap:ProfitBeforeTax": 3060.56,
+      "in-gaap:TaxExpense": 765.14,
+      "in-gaap:ProfitAfterTax": 2295.42
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 129.78,
+      "in-gaap:OtherEquity": 17955.45,
+      "in-gaap:TotalEquity": 18085.23,
+      "in-gaap:TotalDebt": 3147.96,
+      "in-gaap:CashAndCashEquivalents": 3657.32,
+      "in-gaap:TotalCurrentAssets": 9427.4,
+      "in-gaap:TotalCurrentLiabilities": 5656.44,
+      "in-gaap:TotalAssets": 26889.63,
+      "in-gaap:RetainedEarnings": 12659.66
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 3570.29,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 763.11,
+      "in-gaap:FreeCashFlow": 2807.18
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 66.27,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 648900000,
+      "in-gaap:MarketPriceAtFiling": 181.52,
+      "in-gaap:EarningsPerShareBasic": 35.37,
+      "in-gaap:EarningsPerShareDiluted": 35.37,
+      "in-gaap:TrailingTwelveMonthsEPS": 141.48,
+      "in-gaap:ForwardEPSEstimate": 162.7,
+      "in-gaap:BookValuePerShare": 278.71,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.7
+    }
+  }
+}

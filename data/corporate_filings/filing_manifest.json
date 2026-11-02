@@ -1,0 +1,353 @@
+{
+  "BEL": {
+    "symbol": "BEL",
+    "company_name": "Bharat Electronics Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_BEL",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-07-28T16:15:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/BEL_Q1FY27_RAW.json",
+    "sha256_hash": "aaafda025c28c0e5b32282dc24eafe2f2439f7a02029da8ffc8c53efa8a5d72a",
+    "auditor_details": {
+      "firm_name": "Badari, Madhuraksh & Suguna, Chartered Accountants",
+      "firm_registration_number": "000169S",
+      "signing_partner": "CA. B. C. Madhuraksh",
+      "membership_number": "021200",
+      "udin": "26021200BKAGVJ8432",
+      "opinion_type": "Unmodified / Clean Limited Review"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 5533.06,
+      "net_profit": 1054.0,
+      "reported_eps": 1.44,
+      "market_price": 405.0,
+      "promoter_pledge_pct": 0.0
+    }
+  },
+  "HDFCBANK": {
+    "symbol": "HDFCBANK",
+    "company_name": "HDFC Bank Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_HDFCBANK",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-07-20T14:45:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/HDFCBANK_Q1FY27_RAW.json",
+    "sha256_hash": "70f44a27c26449835712ccd1931dee785cc512048667782f1c0a2d5fc874d1f7",
+    "auditor_details": {
+      "firm_name": "Price Waterhouse LLP",
+      "firm_registration_number": "301112E/E300003",
+      "signing_partner": "CA. Russell I Parera",
+      "membership_number": "042190",
+      "udin": "26042190BKAOZF9124",
+      "opinion_type": "Unmodified / Clean Limited Review"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 0.0,
+      "net_profit": 19060.0,
+      "reported_eps": 25.07,
+      "market_price": 1607.1,
+      "promoter_pledge_pct": 0.0
+    }
+  },
+  "ICICIBANK": {
+    "symbol": "ICICIBANK",
+    "company_name": "ICICI Bank Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_ICICIBANK",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-07-20T15:30:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/ICICIBANK_Q1FY27_RAW.json",
+    "sha256_hash": "f7ce17071215517ee9f98a19a196b2bd83b8c1c171d7fde893b039ddeea4df9d",
+    "auditor_details": {
+      "firm_name": "MSKA & Associates, Chartered Accountants",
+      "firm_registration_number": "105047W",
+      "signing_partner": "CA. Swapnil Kale",
+      "membership_number": "117812",
+      "udin": "26117812BKALMP4321",
+      "opinion_type": "Unmodified / Clean Limited Review"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 0.0,
+      "net_profit": 14804.5,
+      "reported_eps": 21.06,
+      "market_price": 1207.5,
+      "promoter_pledge_pct": 0.0
+    }
+  },
+  "TCS": {
+    "symbol": "TCS",
+    "company_name": "Tata Consultancy Services Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_TCS",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-07-11T17:45:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/TCS_Q1FY27_RAW.json",
+    "sha256_hash": "5cc664faa0c9695ffb156f9f164697faec7ff60115368dfb6150f15dae433029",
+    "auditor_details": {
+      "firm_name": "B S R & Co. LLP",
+      "firm_registration_number": "101248W/W-100022",
+      "signing_partner": "CA. Vikas R Kasat",
+      "membership_number": "105317",
+      "udin": "26105317BKAGXW5921",
+      "opinion_type": "Unmodified / Clean Limited Review"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 72275.0,
+      "net_profit": 13349.0,
+      "reported_eps": 36.89,
+      "market_price": 3920.0,
+      "promoter_pledge_pct": 0.0
+    }
+  },
+  "INFY": {
+    "symbol": "INFY",
+    "company_name": "Infosys Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_INFY",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/INFY_Q1FY27_RAW.json",
+    "sha256_hash": "e09d9457ee8891fcd17b1bdd623e46c19a1cbd3f1951245ab6137bccb7e83163",
+    "auditor_details": {
+      "firm_name": "Deloitte Haskins & Sells LLP",
+      "firm_registration_number": "117366W/W-100018",
+      "signing_partner": "CA. Vikas Bagaria",
+      "membership_number": "110128",
+      "udin": "26110128BKAFWQ7812",
+      "opinion_type": "Unmodified / Clean Limited Review"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 48211.0,
+      "net_profit": 7769.0,
+      "reported_eps": 18.72,
+      "market_price": 1750.0,
+      "promoter_pledge_pct": 0.0
+    }
+  },
+  "KOTAKBANK": {
+    "symbol": "KOTAKBANK",
+    "company_name": "Kotak Mahindra Bank Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_KOTAKBANK",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-07-20T17:15:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/KOTAKBANK_Q1FY27_RAW.json",
+    "sha256_hash": "b39c87084ccdab54cc1ede728b9e3542094caf569e0bd82e2d4573f622ef175e",
+    "auditor_details": {
+      "firm_name": "Price Waterhouse LLP",
+      "firm_registration_number": "301112E/E300003",
+      "signing_partner": "CA. Russell I Parera",
+      "membership_number": "042190",
+      "udin": "26042190BKAOZM8811",
+      "opinion_type": "Unmodified / Clean Limited Review"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 30069.0,
+      "net_profit": 4123.0,
+      "reported_eps": 20.74,
+      "market_price": 1820.0,
+      "promoter_pledge_pct": 0.0
+    }
+  },
+  "TECHM": {
+    "symbol": "TECHM",
+    "company_name": "Tech Mahindra Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_TECHM",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-07-25T18:00:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/TECHM_Q1FY27_RAW.json",
+    "sha256_hash": "b657b6242c845dedbf3969009e2fb97ad06470a93ff197a32d8b17e40246ad96",
+    "auditor_details": {
+      "firm_name": "B S R & Co. LLP",
+      "firm_registration_number": "101248W/W-100022",
+      "signing_partner": "CA. Vikas R Kasat",
+      "membership_number": "102527",
+      "udin": "26102527BKAJZZ6712",
+      "opinion_type": "Unmodified / Clean Limited Review"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 15712.0,
+      "net_profit": 1465.0,
+      "reported_eps": 14.98,
+      "market_price": 1540.0,
+      "promoter_pledge_pct": 0.0
+    }
+  },
+  "NTPC": {
+    "symbol": "NTPC",
+    "company_name": "NTPC Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_NTPC",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-07-27T17:30:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/NTPC_Q1FY27_RAW.json",
+    "sha256_hash": "5eac74fce0166cd72b553c6c68bdbd8a9cf42658d2aedbee90eae59480363557",
+    "auditor_details": {
+      "firm_name": "T.R. Chadha & Co LLP",
+      "firm_registration_number": "006711N/N500028",
+      "signing_partner": "CA. Neena Goel",
+      "membership_number": "057795",
+      "udin": "26057795BKAJTR1122",
+      "opinion_type": "Unmodified / Clean Limited Review"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 43831.86,
+      "net_profit": 5342.36,
+      "reported_eps": 5.51,
+      "market_price": 395.0,
+      "promoter_pledge_pct": 0.0
+    }
+  },
+  "DIXON": {
+    "symbol": "DIXON",
+    "company_name": "Dixon Technologies (India) Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_DIXON",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-07-30T18:15:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/DIXON_Q1FY27_RAW.json",
+    "sha256_hash": "40c4f75e329f03ef89adbe751331e6a5c36afe11d8722b82613fb737f94687d1",
+    "auditor_details": {
+      "firm_name": "SN Dhawan & Co LLP",
+      "firm_registration_number": "000050N/N500045",
+      "signing_partner": "CA. V. K. Dhawan",
+      "membership_number": "089456",
+      "udin": "26089456BKAPQR3344",
+      "opinion_type": "Unmodified / Clean Limited Review"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 15547.66,
+      "net_profit": 663.42,
+      "reported_eps": 110.94,
+      "market_price": 11800.0,
+      "promoter_pledge_pct": 0.0
+    }
+  },
+  "BANDHANBNK": {
+    "symbol": "BANDHANBNK",
+    "company_name": "Bandhan Bank Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_BANDHANBNK",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-07-26T16:45:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/BANDHANBNK_Q1FY27_RAW.json",
+    "sha256_hash": "ea8fbf66a3d96b2601de30d40ffeed3707380d660f3c894df53f4d7d2c30020a",
+    "auditor_details": {
+      "firm_name": "Singhi & Co, Chartered Accountants",
+      "firm_registration_number": "302049E",
+      "signing_partner": "CA. Anurag Singhi",
+      "membership_number": "088920",
+      "udin": "26088920BKAMNM7721",
+      "opinion_type": "Qualified Review"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 5200.0,
+      "net_profit": 847.5,
+      "reported_eps": 5.26,
+      "market_price": 192.0,
+      "promoter_pledge_pct": 0.0
+    }
+  },
+  "IDEA": {
+    "symbol": "IDEA",
+    "company_name": "Vodafone Idea Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_IDEA",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-08-12T19:00:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/IDEA_Q1FY27_RAW.json",
+    "sha256_hash": "ea21b1ac7d4de506b3e6f5a2f830c833b5b2cfebdfa21d1317e5d4561f1d93a8",
+    "auditor_details": {
+      "firm_name": "S.R. Batliboi & Associates",
+      "firm_registration_number": "101049W",
+      "signing_partner": "CA. Nilangshu Katri",
+      "membership_number": "058814",
+      "udin": "26058814BKASDF9988",
+      "opinion_type": "Disclaimer / Material Uncertainty Going Concern"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 10800.0,
+      "net_profit": -6435.0,
+      "reported_eps": -0.95,
+      "market_price": 8.5,
+      "promoter_pledge_pct": 14.5
+    }
+  },
+  "RPOWER": {
+    "symbol": "RPOWER",
+    "company_name": "Reliance Power Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_RPOWER",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-08-14T18:30:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/RPOWER_Q1FY27_RAW.json",
+    "sha256_hash": "d3c5aec4176c4c53449fea914547e80df8ca7683536e2ed3e05bbd9b41a1ab16",
+    "auditor_details": {
+      "firm_name": "Pathak H.D. & Associates",
+      "firm_registration_number": "107783W",
+      "signing_partner": "CA. Jignesh Shah",
+      "membership_number": "045612",
+      "udin": "26045612BKAPRP1199",
+      "opinion_type": "Adverse / Material CARO Disclosures"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 1950.0,
+      "net_profit": -285.0,
+      "reported_eps": -0.07,
+      "market_price": 32.5,
+      "promoter_pledge_pct": 28.5
+    }
+  },
+  "VEDL": {
+    "symbol": "VEDL",
+    "company_name": "Vedanta Limited",
+    "filing_id": "NSE_XBRL_Q1FY27_VEDL",
+    "period_ended": "2026-06-30",
+    "financial_year": "FY2026-2027",
+    "quarter": "Q1",
+    "broadcast_date_time": "2026-08-06T19:30:00+05:30",
+    "exchange_source": "NSE Corporate Filings Repository (Regulation 33 XBRL)",
+    "raw_file_path": "data/corporate_filings/raw/VEDL_Q1FY27_RAW.json",
+    "sha256_hash": "dcaf75e5143ed2d6696df75d305c24f7d94a7ffce78c0766f17fdf2e30a11c13",
+    "auditor_details": {
+      "firm_name": "S.R. Batliboi & Co. LLP",
+      "firm_registration_number": "301003E/E300005",
+      "signing_partner": "CA. Tridibes Basu",
+      "membership_number": "041870",
+      "udin": "26041870BKAVED8877",
+      "opinion_type": "Unmodified with Emphasis of Matter on Promoter Pledge"
+    },
+    "reconciliation_benchmarks": {
+      "revenue": 36500.0,
+      "net_profit": 4800.0,
+      "reported_eps": 12.9,
+      "market_price": 440.0,
+      "promoter_pledge_pct": 99.8
+    }
+  }
+}

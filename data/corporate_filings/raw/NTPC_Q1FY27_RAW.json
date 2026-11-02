@@ -1,0 +1,82 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1049354",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_NTPC",
+  "company_details": {
+    "symbol": "NTPC",
+    "company_name": "NTPC Limited",
+    "isin": "INE733E01010",
+    "cin": "L40101DL1975GOI007966"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-27T17:30:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "T.R. Chadha & Co LLP",
+    "firm_registration_number": "006711N/N500028",
+    "signing_partner": "CA. Neena Goel",
+    "membership_number": "057795",
+    "udin": "26057795BKAJTR1122",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 43831.86,
+      "in-gaap:OtherIncome": 1150.0,
+      "in-gaap:TotalIncome": 44981.86,
+      "in-gaap:OperatingExpenses": 32800.0,
+      "in-gaap:EBITDA": 11031.86,
+      "in-gaap:DepreciationAndAmortisation": 3800.0,
+      "in-gaap:EBIT": 7231.86,
+      "in-gaap:FinanceCosts": 1500.0,
+      "in-gaap:ProfitBeforeTax": 6881.86,
+      "in-gaap:TaxExpense": 1539.5,
+      "in-gaap:ProfitAfterTax": 5342.36
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 9696.67,
+      "in-gaap:OtherEquity": 165000.0,
+      "in-gaap:TotalEquity": 174696.67,
+      "in-gaap:TotalDebt": 175000.0,
+      "in-gaap:CashAndCashEquivalents": 8500.0,
+      "in-gaap:TotalCurrentAssets": 48000.0,
+      "in-gaap:TotalCurrentLiabilities": 52000.0,
+      "in-gaap:TotalAssets": 420000.0,
+      "in-gaap:RetainedEarnings": 140000.0
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 8900.0,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 7200.0,
+      "in-gaap:FreeCashFlow": 1700.0
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 51.1,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false,
+      "in-gaap:TradeReceivablesPriorPeriod": 12500.0,
+      "in-gaap:TradeReceivablesCurrentPeriod": 13100.0,
+      "in-gaap:GrossMarginPriorPeriodPercentage": 24.5,
+      "in-gaap:GrossMarginCurrentPeriodPercentage": 25.2,
+      "in-gaap:RevenuePriorPeriod": 42571.61,
+      "in-gaap:PriorPeriodLeverage": 1.0
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 9696666144,
+      "in-gaap:MarketPriceAtFiling": 395.0,
+      "in-gaap:EarningsPerShareBasic": 5.51,
+      "in-gaap:EarningsPerShareDiluted": 5.51,
+      "in-gaap:TrailingTwelveMonthsEPS": 22.8,
+      "in-gaap:ForwardEPSEstimate": 26.5,
+      "in-gaap:BookValuePerShare": 180.2,
+      "in-gaap:EVToEBITDA": 11.2,
+      "in-gaap:EarningsGrowthGuidancePercentage": 10.0
+    }
+  }
+}

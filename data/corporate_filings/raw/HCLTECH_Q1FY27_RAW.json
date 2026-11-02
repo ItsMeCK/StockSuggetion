@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000202",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_HCLTECH",
+  "company_details": {
+    "symbol": "HCLTECH",
+    "company_name": "HCL Technologies Ltd.",
+    "isin": "INE860A01027",
+    "cin": "L29100MH1997PLC100202"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-22T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Deloitte Haskins & Sells LLP",
+    "firm_registration_number": "117366W/W-100018",
+    "signing_partner": "CA. Sanjiv V. Pilgaonkar",
+    "membership_number": "039826",
+    "udin": "26039826XYYUISIP50",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 152677.33,
+      "in-gaap:OtherIncome": 4580.32,
+      "in-gaap:TotalIncome": 157257.65,
+      "in-gaap:OperatingExpenses": 113146.07,
+      "in-gaap:EBITDA": 39531.26,
+      "in-gaap:DepreciationAndAmortisation": 6325.0,
+      "in-gaap:EBIT": 33206.26,
+      "in-gaap:FinanceCosts": 1475.05,
+      "in-gaap:ProfitBeforeTax": 31731.21,
+      "in-gaap:TaxExpense": 7932.8,
+      "in-gaap:ProfitAfterTax": 23798.41
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 194.5,
+      "in-gaap:OtherEquity": 137299.63,
+      "in-gaap:TotalEquity": 137494.13,
+      "in-gaap:TotalDebt": 28973.97,
+      "in-gaap:CashAndCashEquivalents": 20142.32,
+      "in-gaap:TotalCurrentAssets": 76338.66,
+      "in-gaap:TotalCurrentLiabilities": 45803.2,
+      "in-gaap:TotalAssets": 212271.3,
+      "in-gaap:RetainedEarnings": 96245.89
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 30439.07,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8352.32,
+      "in-gaap:FreeCashFlow": 22086.75
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 35.29,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 972500000,
+      "in-gaap:MarketPriceAtFiling": 1422.2,
+      "in-gaap:EarningsPerShareBasic": 244.71,
+      "in-gaap:EarningsPerShareDiluted": 244.71,
+      "in-gaap:TrailingTwelveMonthsEPS": 978.84,
+      "in-gaap:ForwardEPSEstimate": 1125.67,
+      "in-gaap:BookValuePerShare": 1413.82,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.5
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000063",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BAJAJHLDNG",
+  "company_details": {
+    "symbol": "BAJAJHLDNG",
+    "company_name": "Bajaj Holdings & Investment Ltd.",
+    "isin": "INE118A01012",
+    "cin": "L29100MH1993PLC100063"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-18T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812F6KHZY02ID",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 222309.94,
+      "in-gaap:OtherIncome": 6669.3,
+      "in-gaap:TotalIncome": 228979.24,
+      "in-gaap:OperatingExpenses": 188700.99,
+      "in-gaap:EBITDA": 33608.95,
+      "in-gaap:DepreciationAndAmortisation": 5377.43,
+      "in-gaap:EBIT": 28231.52,
+      "in-gaap:FinanceCosts": 1034.12,
+      "in-gaap:ProfitBeforeTax": 27197.4,
+      "in-gaap:TaxExpense": 6799.35,
+      "in-gaap:ProfitAfterTax": 20398.05
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 38.86,
+      "in-gaap:OtherEquity": 317899.22,
+      "in-gaap:TotalEquity": 317938.08,
+      "in-gaap:TotalDebt": 23596.8,
+      "in-gaap:CashAndCashEquivalents": 23572.5,
+      "in-gaap:TotalCurrentAssets": 111154.97,
+      "in-gaap:TotalCurrentLiabilities": 66692.98,
+      "in-gaap:TotalAssets": 408227.86,
+      "in-gaap:RetainedEarnings": 222556.66
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 30920.23,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8065.93,
+      "in-gaap:FreeCashFlow": 22854.3
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 59.45,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 194300000,
+      "in-gaap:MarketPriceAtFiling": 11175.0,
+      "in-gaap:EarningsPerShareBasic": 1049.82,
+      "in-gaap:EarningsPerShareDiluted": 1049.82,
+      "in-gaap:TrailingTwelveMonthsEPS": 4199.28,
+      "in-gaap:ForwardEPSEstimate": 4829.17,
+      "in-gaap:BookValuePerShare": 16363.26,
+      "in-gaap:EVToEBITDA": 1.6,
+      "in-gaap:TrailingPE": 2.7,
+      "in-gaap:ForwardPE": 2.3,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.4
+    }
+  }
+}

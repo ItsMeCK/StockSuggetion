@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000225",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ICICIGI",
+  "company_details": {
+    "symbol": "ICICIGI",
+    "company_name": "ICICI Lombard General Insurance Company Ltd.",
+    "isin": "INE765G01017",
+    "cin": "L65191MH2005PLC100225"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "MSKA & Associates",
+    "firm_registration_number": "105047W",
+    "signing_partner": "CA. Swapnil Kale",
+    "membership_number": "117812",
+    "udin": "26117812W4V8XAXNVT",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 23386.11,
+      "in-gaap:OtherIncome": 8185.14,
+      "in-gaap:OperatingExpenses": 13259.92,
+      "in-gaap:OperatingProfit": 18311.33,
+      "in-gaap:ProvisionsAndContingencies": 3525.38,
+      "in-gaap:ProfitBeforeTax": 14785.95,
+      "in-gaap:TaxExpense": 3696.49,
+      "in-gaap:ProfitAfterTax": 11089.46
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 367.12,
+      "in-gaap:ReservesAndSurplus": 292722.47,
+      "in-gaap:TotalEquity": 293089.59,
+      "in-gaap:TotalDeposits": 1953930.63,
+      "in-gaap:CasaDeposits": 758125.08,
+      "in-gaap:TotalAdvances": 1410151.74,
+      "in-gaap:TotalAssets": 2442413.29
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 24959.69,
+      "in-gaap:NetNPA": 7473.8,
+      "in-gaap:CapitalAdequacyRatioCRAR": 20.8,
+      "in-gaap:Tier1CapitalRatio": 18.8
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 49.53,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1835600000,
+      "in-gaap:MarketPriceAtFiling": 1592.0,
+      "in-gaap:EarningsPerShareBasic": 60.41,
+      "in-gaap:EarningsPerShareDiluted": 60.41,
+      "in-gaap:TrailingTwelveMonthsEPS": 241.64,
+      "in-gaap:ForwardEPSEstimate": 277.89,
+      "in-gaap:BookValuePerShare": 1596.7,
+      "in-gaap:TrailingPE": 6.6,
+      "in-gaap:ForwardPE": 5.6,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.8
+    }
+  }
+}

@@ -1,14 +1,38 @@
 [
   {
-    "symbol": "BHARTIARTL",
+    "symbol": "Z_AUTO_TOP_ATR",
     "direction": "LONG",
-    "conviction_score": 85.0,
-    "catalyst_summary": "5G expansion"
+    "conviction_score": 60.0,
+    "catalyst_summary": "QUANT_FALLBACK: Promoted via quantitative pre-open rank",
+    "upcoming_events": "Clean (Quantitative Fallback)",
+    "market_buzz": "Quantitative Pre-Open Selection",
+    "status": "ACTIVE"
   },
   {
-    "symbol": "TATAMOTORS",
+    "symbol": "B_AUTO_HIGH_ATR",
     "direction": "LONG",
-    "conviction_score": 82.0,
-    "catalyst_summary": "Commercial vehicle demand"
+    "conviction_score": 60.0,
+    "catalyst_summary": "QUANT_FALLBACK: Promoted via quantitative pre-open rank",
+    "upcoming_events": "Clean (Quantitative Fallback)",
+    "market_buzz": "Quantitative Pre-Open Selection",
+    "status": "ACTIVE"
+  },
+  {
+    "symbol": "C_IT_HIGH_ATR",
+    "direction": "LONG",
+    "conviction_score": 60.0,
+    "catalyst_summary": "QUANT_FALLBACK: Promoted via quantitative pre-open rank",
+    "upcoming_events": "Clean (Quantitative Fallback)",
+    "market_buzz": "Quantitative Pre-Open Selection",
+    "status": "ACTIVE"
+  },
+  {
+    "symbol": "A_LOW_ATR",
+    "direction": "LONG",
+    "conviction_score": 60.0,
+    "catalyst_summary": "QUANT_FALLBACK: Promoted via quantitative pre-open rank",
+    "upcoming_events": "Clean (Quantitative Fallback)",
+    "market_buzz": "Quantitative Pre-Open Selection",
+    "status": "ACTIVE"
   }
 ]

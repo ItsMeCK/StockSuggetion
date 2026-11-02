@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000311",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_MMTC",
+  "company_details": {
+    "symbol": "MMTC",
+    "company_name": "MMTC Ltd.",
+    "isin": "INE123F01029",
+    "cin": "L29100MH2016PLC100311"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "S.R. Batliboi & Associates LLP",
+    "firm_registration_number": "101049W/E300004",
+    "signing_partner": "CA. Pramod Kumar Bapna",
+    "membership_number": "058814",
+    "udin": "26058814XME0ICNJWM",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 7310.3,
+      "in-gaap:OtherIncome": 219.31,
+      "in-gaap:TotalIncome": 7529.61,
+      "in-gaap:OperatingExpenses": 6263.59,
+      "in-gaap:EBITDA": 1046.71,
+      "in-gaap:DepreciationAndAmortisation": 167.47,
+      "in-gaap:EBIT": 879.24,
+      "in-gaap:FinanceCosts": 50.57,
+      "in-gaap:ProfitBeforeTax": 828.67,
+      "in-gaap:TaxExpense": 207.17,
+      "in-gaap:ProfitAfterTax": 621.5
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 174.62,
+      "in-gaap:OtherEquity": 6739.41,
+      "in-gaap:TotalEquity": 6914.03,
+      "in-gaap:TotalDebt": 249.54,
+      "in-gaap:CashAndCashEquivalents": 919.69,
+      "in-gaap:TotalCurrentAssets": 3655.15,
+      "in-gaap:TotalCurrentLiabilities": 2193.09,
+      "in-gaap:TotalAssets": 9356.66,
+      "in-gaap:RetainedEarnings": 4839.82
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 816.43,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 174.5,
+      "in-gaap:FreeCashFlow": 641.93
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 36.01,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 873100000,
+      "in-gaap:MarketPriceAtFiling": 50.57,
+      "in-gaap:EarningsPerShareBasic": 7.12,
+      "in-gaap:EarningsPerShareDiluted": 7.12,
+      "in-gaap:TrailingTwelveMonthsEPS": 28.48,
+      "in-gaap:ForwardEPSEstimate": 32.75,
+      "in-gaap:BookValuePerShare": 79.19,
+      "in-gaap:EVToEBITDA": 0.9,
+      "in-gaap:TrailingPE": 1.8,
+      "in-gaap:ForwardPE": 1.5,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.1
+    }
+  }
+}

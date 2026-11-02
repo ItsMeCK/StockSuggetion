@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000448",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TMCV",
+  "company_details": {
+    "symbol": "TMCV",
+    "company_name": "Tata Motors Ltd.",
+    "isin": "INE1TAE01010",
+    "cin": "L29100MH2018PLC100448"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423WPZN1Y4VR7",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 92222.26,
+      "in-gaap:OtherIncome": 2766.67,
+      "in-gaap:TotalIncome": 94988.93,
+      "in-gaap:OperatingExpenses": 72581.34,
+      "in-gaap:EBITDA": 19640.92,
+      "in-gaap:DepreciationAndAmortisation": 3142.55,
+      "in-gaap:EBIT": 16498.37,
+      "in-gaap:FinanceCosts": 1135.31,
+      "in-gaap:ProfitBeforeTax": 15363.06,
+      "in-gaap:TaxExpense": 3840.76,
+      "in-gaap:ProfitAfterTax": 11522.3
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 307.76,
+      "in-gaap:OtherEquity": 133772.34,
+      "in-gaap:TotalEquity": 134080.1,
+      "in-gaap:TotalDebt": 15446.89,
+      "in-gaap:CashAndCashEquivalents": 9746.99,
+      "in-gaap:TotalCurrentAssets": 46111.13,
+      "in-gaap:TotalCurrentLiabilities": 27666.68,
+      "in-gaap:TotalAssets": 177193.67,
+      "in-gaap:RetainedEarnings": 93856.07
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 16105.55,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 4254.67,
+      "in-gaap:FreeCashFlow": 11850.88
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 56.68,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1538800000,
+      "in-gaap:MarketPriceAtFiling": 396.0,
+      "in-gaap:EarningsPerShareBasic": 74.88,
+      "in-gaap:EarningsPerShareDiluted": 74.88,
+      "in-gaap:TrailingTwelveMonthsEPS": 299.52,
+      "in-gaap:ForwardEPSEstimate": 344.45,
+      "in-gaap:BookValuePerShare": 871.33,
+      "in-gaap:EVToEBITDA": 0.8,
+      "in-gaap:TrailingPE": 1.3,
+      "in-gaap:ForwardPE": 1.1,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 19.7
+    }
+  }
+}

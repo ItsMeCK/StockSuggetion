@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000401",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_SBICARD",
+  "company_details": {
+    "symbol": "SBICARD",
+    "company_name": "SBI Cards and Payment Services Ltd.",
+    "isin": "INE018E01016",
+    "cin": "L29100MH2016PLC100401"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-26T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "261053170W06Q9S2PQ",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 188630.53,
+      "in-gaap:OtherIncome": 5658.92,
+      "in-gaap:TotalIncome": 194289.45,
+      "in-gaap:OperatingExpenses": 149626.03,
+      "in-gaap:EBITDA": 39004.5,
+      "in-gaap:DepreciationAndAmortisation": 6240.72,
+      "in-gaap:EBIT": 32763.78,
+      "in-gaap:FinanceCosts": 1418.35,
+      "in-gaap:ProfitBeforeTax": 31345.43,
+      "in-gaap:TaxExpense": 7836.36,
+      "in-gaap:ProfitAfterTax": 23509.07
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 395.84,
+      "in-gaap:OtherEquity": 216538.89,
+      "in-gaap:TotalEquity": 216934.73,
+      "in-gaap:TotalDebt": 15339.34,
+      "in-gaap:CashAndCashEquivalents": 26289.31,
+      "in-gaap:TotalCurrentAssets": 94315.26,
+      "in-gaap:TotalCurrentLiabilities": 56589.16,
+      "in-gaap:TotalAssets": 288863.23,
+      "in-gaap:RetainedEarnings": 151854.31
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 29643.42,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 10549.5,
+      "in-gaap:FreeCashFlow": 19093.92
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 71.49,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1979199999,
+      "in-gaap:MarketPriceAtFiling": 545.55,
+      "in-gaap:EarningsPerShareBasic": 118.78,
+      "in-gaap:EarningsPerShareDiluted": 118.78,
+      "in-gaap:TrailingTwelveMonthsEPS": 475.12,
+      "in-gaap:ForwardEPSEstimate": 546.39,
+      "in-gaap:BookValuePerShare": 1096.07,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.1
+    }
+  }
+}

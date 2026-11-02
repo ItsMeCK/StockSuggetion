@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000234",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_ITCHOTELS",
+  "company_details": {
+    "symbol": "ITCHOTELS",
+    "company_name": "ITC Hotels Ltd.",
+    "isin": "INE379A01028",
+    "cin": "L29100MH1984PLC100234"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-24T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "260421906O697PV6GH",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 19378.39,
+      "in-gaap:OtherIncome": 581.35,
+      "in-gaap:TotalIncome": 19959.74,
+      "in-gaap:OperatingExpenses": 14372.96,
+      "in-gaap:EBITDA": 5005.43,
+      "in-gaap:DepreciationAndAmortisation": 800.87,
+      "in-gaap:EBIT": 4204.56,
+      "in-gaap:FinanceCosts": 224.46,
+      "in-gaap:ProfitBeforeTax": 3980.1,
+      "in-gaap:TaxExpense": 995.02,
+      "in-gaap:ProfitAfterTax": 2985.07
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 434.02,
+      "in-gaap:OtherEquity": 16809.64,
+      "in-gaap:TotalEquity": 17243.66,
+      "in-gaap:TotalDebt": 4282.91,
+      "in-gaap:CashAndCashEquivalents": 4162.94,
+      "in-gaap:TotalCurrentAssets": 9689.19,
+      "in-gaap:TotalCurrentLiabilities": 5813.52,
+      "in-gaap:TotalAssets": 27340.09,
+      "in-gaap:RetainedEarnings": 12070.56
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 4655.05,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1380.74,
+      "in-gaap:FreeCashFlow": 3274.31
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 39.34,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 2170100000,
+      "in-gaap:MarketPriceAtFiling": 156.25,
+      "in-gaap:EarningsPerShareBasic": 13.76,
+      "in-gaap:EarningsPerShareDiluted": 13.76,
+      "in-gaap:TrailingTwelveMonthsEPS": 55.04,
+      "in-gaap:ForwardEPSEstimate": 63.3,
+      "in-gaap:BookValuePerShare": 79.46,
+      "in-gaap:EVToEBITDA": 1.7,
+      "in-gaap:TrailingPE": 2.8,
+      "in-gaap:ForwardPE": 2.4,
+      "in-gaap:PriceToBook": 2.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.0
+    }
+  }
+}

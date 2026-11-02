@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000075",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_BDL",
+  "company_details": {
+    "symbol": "BDL",
+    "company_name": "Bharat Dynamics Ltd.",
+    "isin": "INE171Z01026",
+    "cin": "L29100MH2005PLC100075"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-15T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190CQ1D8PBTNK",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 183069.78,
+      "in-gaap:OtherIncome": 5492.09,
+      "in-gaap:TotalIncome": 188561.87,
+      "in-gaap:OperatingExpenses": 139853.06,
+      "in-gaap:EBITDA": 43216.72,
+      "in-gaap:DepreciationAndAmortisation": 6914.68,
+      "in-gaap:EBIT": 36302.04,
+      "in-gaap:FinanceCosts": 3065.02,
+      "in-gaap:ProfitBeforeTax": 33237.02,
+      "in-gaap:TaxExpense": 8309.25,
+      "in-gaap:ProfitAfterTax": 24927.76
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 292.7,
+      "in-gaap:OtherEquity": 211790.5,
+      "in-gaap:TotalEquity": 212083.2,
+      "in-gaap:TotalDebt": 39765.14,
+      "in-gaap:CashAndCashEquivalents": 19653.04,
+      "in-gaap:TotalCurrentAssets": 91534.89,
+      "in-gaap:TotalCurrentLiabilities": 54920.93,
+      "in-gaap:TotalAssets": 306769.27,
+      "in-gaap:RetainedEarnings": 148458.24
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 33276.87,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 8091.08,
+      "in-gaap:FreeCashFlow": 25185.79
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 55.58,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1463500000,
+      "in-gaap:MarketPriceAtFiling": 1017.5,
+      "in-gaap:EarningsPerShareBasic": 170.33,
+      "in-gaap:EarningsPerShareDiluted": 170.33,
+      "in-gaap:TrailingTwelveMonthsEPS": 681.32,
+      "in-gaap:ForwardEPSEstimate": 783.52,
+      "in-gaap:BookValuePerShare": 1449.15,
+      "in-gaap:EVToEBITDA": 1.0,
+      "in-gaap:TrailingPE": 1.5,
+      "in-gaap:ForwardPE": 1.3,
+      "in-gaap:PriceToBook": 0.7,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.0
+    }
+  }
+}

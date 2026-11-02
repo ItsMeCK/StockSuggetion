@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000263",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_JMFINANCIL",
+  "company_details": {
+    "symbol": "JMFINANCIL",
+    "company_name": "JM Financial Ltd.",
+    "isin": "INE780C01023",
+    "cin": "L29100MH2013PLC100263"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190AVQG8ZKQJO",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 21129.18,
+      "in-gaap:OtherIncome": 633.88,
+      "in-gaap:TotalIncome": 21763.06,
+      "in-gaap:OperatingExpenses": 14834.25,
+      "in-gaap:EBITDA": 6294.93,
+      "in-gaap:DepreciationAndAmortisation": 1007.19,
+      "in-gaap:EBIT": 5287.74,
+      "in-gaap:FinanceCosts": 287.44,
+      "in-gaap:ProfitBeforeTax": 5000.3,
+      "in-gaap:TaxExpense": 1250.08,
+      "in-gaap:ProfitAfterTax": 3750.23
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 251.92,
+      "in-gaap:OtherEquity": 25741.77,
+      "in-gaap:TotalEquity": 25993.69,
+      "in-gaap:TotalDebt": 7396.44,
+      "in-gaap:CashAndCashEquivalents": 1993.16,
+      "in-gaap:TotalCurrentAssets": 10564.59,
+      "in-gaap:TotalCurrentLiabilities": 6338.75,
+      "in-gaap:TotalAssets": 39728.88,
+      "in-gaap:RetainedEarnings": 18195.58
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 5854.28,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 2182.48,
+      "in-gaap:FreeCashFlow": 3671.8
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 62.83,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1259600000,
+      "in-gaap:MarketPriceAtFiling": 106.19,
+      "in-gaap:EarningsPerShareBasic": 29.77,
+      "in-gaap:EarningsPerShareDiluted": 29.77,
+      "in-gaap:TrailingTwelveMonthsEPS": 119.08,
+      "in-gaap:ForwardEPSEstimate": 136.94,
+      "in-gaap:BookValuePerShare": 206.36,
+      "in-gaap:EVToEBITDA": 0.7,
+      "in-gaap:TrailingPE": 0.9,
+      "in-gaap:ForwardPE": 0.8,
+      "in-gaap:PriceToBook": 0.5,
+      "in-gaap:EarningsGrowthGuidancePercentage": 18.1
+    }
+  }
+}

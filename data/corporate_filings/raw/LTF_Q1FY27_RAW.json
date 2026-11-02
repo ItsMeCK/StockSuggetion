@@ -1,0 +1,74 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000294",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_LTF",
+  "company_details": {
+    "symbol": "LTF",
+    "company_name": "L&T Finance Ltd.",
+    "isin": "INE498L01015",
+    "cin": "L65191MH1994PLC100294"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-24T15:30:00+05:30",
+  "is_banking_or_nbfc": true,
+  "auditor_report": {
+    "firm_name": "Walker Chandiok & Co LLP",
+    "firm_registration_number": "001076N/N500013",
+    "signing_partner": "CA. Khushroo B. Panthaky",
+    "membership_number": "042423",
+    "udin": "26042423HXDRLT4QHD",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:NetInterestIncome": 1520.99,
+      "in-gaap:OtherIncome": 532.35,
+      "in-gaap:OperatingExpenses": 862.4,
+      "in-gaap:OperatingProfit": 1190.94,
+      "in-gaap:ProvisionsAndContingencies": 240.83,
+      "in-gaap:ProfitBeforeTax": 950.11,
+      "in-gaap:TaxExpense": 237.53,
+      "in-gaap:ProfitAfterTax": 712.58
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 145.78,
+      "in-gaap:ReservesAndSurplus": 16522.58,
+      "in-gaap:TotalEquity": 16668.36,
+      "in-gaap:TotalDeposits": 111122.41,
+      "in-gaap:CasaDeposits": 46782.53,
+      "in-gaap:TotalAdvances": 96332.02,
+      "in-gaap:TotalAssets": 138903.01
+    },
+    "prudential_banking_disclosures": {
+      "in-gaap:GrossNPA": 2186.74,
+      "in-gaap:NetNPA": 655.06,
+      "in-gaap:CapitalAdequacyRatioCRAR": 17.6,
+      "in-gaap:Tier1CapitalRatio": 15.6
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 27.62,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 728900000,
+      "in-gaap:MarketPriceAtFiling": 237.5,
+      "in-gaap:EarningsPerShareBasic": 9.78,
+      "in-gaap:EarningsPerShareDiluted": 9.78,
+      "in-gaap:TrailingTwelveMonthsEPS": 39.12,
+      "in-gaap:ForwardEPSEstimate": 44.99,
+      "in-gaap:BookValuePerShare": 228.68,
+      "in-gaap:TrailingPE": 6.1,
+      "in-gaap:ForwardPE": 5.2,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.3
+    }
+  }
+}

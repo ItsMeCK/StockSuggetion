@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000458",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_TENNIND",
+  "company_details": {
+    "symbol": "TENNIND",
+    "company_name": "Tenneco Clean Air India Ltd.",
+    "isin": "INE19RI01016",
+    "cin": "L29100MH1983PLC100458"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-23T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "Price Waterhouse LLP",
+    "firm_registration_number": "301112E/E300003",
+    "signing_partner": "CA. Russell I Parera",
+    "membership_number": "042190",
+    "udin": "26042190ZT3O5YWA59",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 22224.44,
+      "in-gaap:OtherIncome": 666.73,
+      "in-gaap:TotalIncome": 22891.17,
+      "in-gaap:OperatingExpenses": 15913.66,
+      "in-gaap:EBITDA": 6310.78,
+      "in-gaap:DepreciationAndAmortisation": 1009.72,
+      "in-gaap:EBIT": 5301.06,
+      "in-gaap:FinanceCosts": 280.48,
+      "in-gaap:ProfitBeforeTax": 5020.58,
+      "in-gaap:TaxExpense": 1255.14,
+      "in-gaap:ProfitAfterTax": 3765.43
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 77.62,
+      "in-gaap:OtherEquity": 28552.66,
+      "in-gaap:TotalEquity": 28630.28,
+      "in-gaap:TotalDebt": 1810.5,
+      "in-gaap:CashAndCashEquivalents": 4962.27,
+      "in-gaap:TotalCurrentAssets": 11112.22,
+      "in-gaap:TotalCurrentLiabilities": 6667.33,
+      "in-gaap:TotalAssets": 37108.11,
+      "in-gaap:RetainedEarnings": 20041.2
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 4733.09,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 1069.48,
+      "in-gaap:FreeCashFlow": 3663.61
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 46.2,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 388100000,
+      "in-gaap:MarketPriceAtFiling": 439.65,
+      "in-gaap:EarningsPerShareBasic": 97.02,
+      "in-gaap:EarningsPerShareDiluted": 97.02,
+      "in-gaap:TrailingTwelveMonthsEPS": 388.08,
+      "in-gaap:ForwardEPSEstimate": 446.29,
+      "in-gaap:BookValuePerShare": 737.7,
+      "in-gaap:EVToEBITDA": 0.6,
+      "in-gaap:TrailingPE": 1.1,
+      "in-gaap:ForwardPE": 0.9,
+      "in-gaap:PriceToBook": 0.6,
+      "in-gaap:EarningsGrowthGuidancePercentage": 20.9
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000133",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_CYIENT",
+  "company_details": {
+    "symbol": "CYIENT",
+    "company_name": "Cyient Ltd.",
+    "isin": "INE136B01020",
+    "cin": "L29100MH2018PLC100133"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-28T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "261053170XRE28Q4BN",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 213155.42,
+      "in-gaap:OtherIncome": 6394.66,
+      "in-gaap:TotalIncome": 219550.08,
+      "in-gaap:OperatingExpenses": 166226.83,
+      "in-gaap:EBITDA": 46928.59,
+      "in-gaap:DepreciationAndAmortisation": 7508.57,
+      "in-gaap:EBIT": 39420.02,
+      "in-gaap:FinanceCosts": 1548.8,
+      "in-gaap:ProfitBeforeTax": 37871.22,
+      "in-gaap:TaxExpense": 9467.81,
+      "in-gaap:ProfitAfterTax": 28403.42
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 392.86,
+      "in-gaap:OtherEquity": 246253.5,
+      "in-gaap:TotalEquity": 246646.36,
+      "in-gaap:TotalDebt": 23407.82,
+      "in-gaap:CashAndCashEquivalents": 45863.76,
+      "in-gaap:TotalCurrentAssets": 106577.71,
+      "in-gaap:TotalCurrentLiabilities": 63946.63,
+      "in-gaap:TotalAssets": 334000.81,
+      "in-gaap:RetainedEarnings": 172652.45
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 40827.87,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 9583.18,
+      "in-gaap:FreeCashFlow": 31244.69
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 63.5,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 1964300000,
+      "in-gaap:MarketPriceAtFiling": 1233.0,
+      "in-gaap:EarningsPerShareBasic": 144.6,
+      "in-gaap:EarningsPerShareDiluted": 144.6,
+      "in-gaap:TrailingTwelveMonthsEPS": 578.4,
+      "in-gaap:ForwardEPSEstimate": 665.16,
+      "in-gaap:BookValuePerShare": 1255.65,
+      "in-gaap:EVToEBITDA": 1.2,
+      "in-gaap:TrailingPE": 2.1,
+      "in-gaap:ForwardPE": 1.8,
+      "in-gaap:PriceToBook": 1.0,
+      "in-gaap:EarningsGrowthGuidancePercentage": 15.4
+    }
+  }
+}

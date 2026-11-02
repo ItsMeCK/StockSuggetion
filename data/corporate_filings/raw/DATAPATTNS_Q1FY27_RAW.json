@@ -1,0 +1,79 @@
+{
+  "exchange": "NSE",
+  "segment": "EQUITY",
+  "corporate_announcement_id": "NSE-CORP-Q1FY27-1000139",
+  "submission_regulation": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Regulation 33",
+  "filing_id": "NSE_XBRL_Q1FY27_DATAPATTNS",
+  "company_details": {
+    "symbol": "DATAPATTNS",
+    "company_name": "Data Patterns (India) Ltd.",
+    "isin": "INE0IX101010",
+    "cin": "L29100MH1979PLC100139"
+  },
+  "period_ended": "2026-06-30",
+  "financial_year": "FY2026-2027",
+  "quarter": "Q1",
+  "broadcast_date_time": "2026-07-19T16:00:00+05:30",
+  "is_banking_or_nbfc": false,
+  "auditor_report": {
+    "firm_name": "B S R & Co. LLP",
+    "firm_registration_number": "101248W/W-100022",
+    "signing_partner": "CA. Vikas R. Kasat",
+    "membership_number": "105317",
+    "udin": "26105317GYNHETTVI6",
+    "opinion_type": "Unmodified / Clean Limited Review"
+  },
+  "raw_financial_statements": {
+    "statement_of_profit_and_loss": {
+      "in-gaap:RevenueFromOperations": 336875.18,
+      "in-gaap:OtherIncome": 10106.26,
+      "in-gaap:TotalIncome": 346981.44,
+      "in-gaap:OperatingExpenses": 290986.55,
+      "in-gaap:EBITDA": 45888.63,
+      "in-gaap:DepreciationAndAmortisation": 7342.18,
+      "in-gaap:EBIT": 38546.45,
+      "in-gaap:FinanceCosts": 4060.94,
+      "in-gaap:ProfitBeforeTax": 34485.51,
+      "in-gaap:TaxExpense": 8621.38,
+      "in-gaap:ProfitAfterTax": 25864.13
+    },
+    "statement_of_balance_sheet": {
+      "in-gaap:EquityShareCapital": 178.08,
+      "in-gaap:OtherEquity": 424987.23,
+      "in-gaap:TotalEquity": 425165.31,
+      "in-gaap:TotalDebt": 7769.54,
+      "in-gaap:CashAndCashEquivalents": 71924.15,
+      "in-gaap:TotalCurrentAssets": 168437.59,
+      "in-gaap:TotalCurrentLiabilities": 101062.55,
+      "in-gaap:TotalAssets": 533997.4,
+      "in-gaap:RetainedEarnings": 297615.72
+    },
+    "statement_of_cash_flows": {
+      "in-gaap:CashFlowsFromOperatingActivities": 41758.65,
+      "in-gaap:PurchaseOfPropertyPlantAndEquipment": 10227.16,
+      "in-gaap:FreeCashFlow": 31531.49
+    },
+    "governance_and_statutory": {
+      "in-gaap:PromoterShareholdingPercentage": 52.97,
+      "in-gaap:PromoterPledgedSharesPercentage": 0.0,
+      "in-gaap:PledgeChangeQoQPercentage": 0.0,
+      "in-gaap:UnderAsmGsmSurveillance": false,
+      "in-gaap:AuditorResignation": false,
+      "in-gaap:CaroAdverseQualifications": false
+    },
+    "market_and_equity_disclosures": {
+      "in-gaap:NumberOfEquityShares": 890400000,
+      "in-gaap:MarketPriceAtFiling": 3792.2,
+      "in-gaap:EarningsPerShareBasic": 290.48,
+      "in-gaap:EarningsPerShareDiluted": 290.48,
+      "in-gaap:TrailingTwelveMonthsEPS": 1161.92,
+      "in-gaap:ForwardEPSEstimate": 1336.21,
+      "in-gaap:BookValuePerShare": 4774.99,
+      "in-gaap:EVToEBITDA": 1.5,
+      "in-gaap:TrailingPE": 3.3,
+      "in-gaap:ForwardPE": 2.8,
+      "in-gaap:PriceToBook": 0.8,
+      "in-gaap:EarningsGrowthGuidancePercentage": 17.8
+    }
+  }
+}
