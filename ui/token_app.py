@@ -566,7 +566,8 @@ def execute_order_endpoint():
         best_ask=data.get("best_ask"),
         catalyst=data.get("catalyst", ""),
         score=float(data.get("score", 85.0)),
-        holding_type=data.get("holding_type", "TYPE_C_BTST")
+        holding_type=data.get("holding_type", "TYPE_C_BTST"),
+        is_amo=bool(data.get("is_amo", False))
     )
 
     status_code = 200 if result.get("success") else 422

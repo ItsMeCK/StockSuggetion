@@ -146,3 +146,39 @@ def test_gateway_order_filled_places_sl_and_sends_executed_email():
         subject = mock_emailer.send_live_alert.call_args[0][0]
         assert "[ORDER EXECUTED]" in subject
         assert "BHARATFORG" in subject
+
+def test_gateway_amo_order_stays_open_without_cancellation():
+    mock_kite = MagicMock()
+    mock_kite.VARIETY_AMO = "amo"
+    mock_kite.margins.return_value = {
+        "available": {"live_balance": 50000.0}
+    }
+    mock_kite.place_order.return_value = "ORD_AMO_789"
+    
+    gateway = SovereignExecutionGateway(kite_exec=mock_kite)
+    
+    result = gateway.execute_option_order(
+        symbol="NIFTY",
+        option_symbol="NIFTY26N0323000PE",
+        lot_size=65,
+        entry_premium=0.5,
+        is_amo=True
+    )
+    
+    assert result["success"] is True
+    assert result["status"] == "OPEN"
+    assert result["order_id"] == "ORD_AMO_789"
+    assert result["variety"] == "amo"
+    mock_kite.place_order.assert_called_once_with(
+        variety="amo",
+        exchange=mock_kite.EXCHANGE_NFO,
+        tradingsymbol="NIFTY26N0323000PE",
+        transaction_type=mock_kite.TRANSACTION_TYPE_BUY,
+        quantity=65,
+        product=mock_kite.PRODUCT_NRML,
+        order_type=mock_kite.ORDER_TYPE_LIMIT,
+        price=pytest.approx(0.5, 0.05),
+        tag=pytest.approx(mock_kite.place_order.call_args[1]["tag"])
+    )
+    mock_kite.cancel_order.assert_not_called()
+

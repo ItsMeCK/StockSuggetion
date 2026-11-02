@@ -28,7 +28,8 @@ class GCPExecutionClient:
         best_ask: Optional[float] = None,
         catalyst: str = "",
         score: float = 85.0,
-        holding_type: str = "TYPE_C_BTST"
+        holding_type: str = "TYPE_C_BTST",
+        is_amo: bool = False
     ) -> Dict[str, Any]:
         """
         Dispatches order execution payload to GCP Gateway with timeout & error handling.
@@ -43,7 +44,8 @@ class GCPExecutionClient:
             "best_ask": best_ask,
             "catalyst": catalyst,
             "score": score,
-            "holding_type": holding_type
+            "holding_type": holding_type,
+            "is_amo": is_amo
         }
 
         url = f"{self.base_url}/api/orders/execute"

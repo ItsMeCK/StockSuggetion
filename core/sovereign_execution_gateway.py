@@ -182,7 +182,8 @@ class SovereignExecutionGateway:
         best_ask: Optional[float] = None,
         catalyst: str = "",
         score: float = 85.0,
-        holding_type: str = "TYPE_C_BTST"
+        holding_type: str = "TYPE_C_BTST",
+        is_amo: bool = False
     ) -> Dict[str, Any]:
         """
         Full Institutional Execution Pipeline:
@@ -258,9 +259,10 @@ class SovereignExecutionGateway:
 
         # 4. Submit Marketable Limit Order to Zerodha
         order_tag = f"MS_{symbol[:6]}_{int(time.time()) % 100000}"[:20]
+        order_variety = self.kite_exec.VARIETY_AMO if is_amo else self.kite_exec.VARIETY_REGULAR
         try:
             buy_order_id = self.kite_exec.place_order(
-                variety=self.kite_exec.VARIETY_REGULAR,
+                variety=order_variety,
                 exchange=self.kite_exec.EXCHANGE_NFO,
                 tradingsymbol=option_symbol,
                 transaction_type=self.kite_exec.TRANSACTION_TYPE_BUY,
@@ -270,7 +272,7 @@ class SovereignExecutionGateway:
                 price=limit_price,
                 tag=order_tag
             )
-            logger.info(f"✅ Limit Buy order submitted: ID {buy_order_id} for {lot_size} qty @ ₹{limit_price}")
+            logger.info(f"✅ Limit Buy order submitted: ID {buy_order_id} (variety={order_variety}) for {lot_size} qty @ ₹{limit_price}")
         except Exception as e:
             err_msg = str(e)
             logger.error(f"❌ Failed to submit buy order to broker: {err_msg}")
@@ -285,6 +287,19 @@ class SovereignExecutionGateway:
                 "error": "SUBMISSION_FAILED",
                 "message": err_msg,
                 "order_id": None
+            }
+
+        # For After Market Orders (AMO), order stays OPEN in order book until market opens tomorrow
+        if is_amo:
+            logger.info(f"📋 AMO Order successfully placed at broker: ID {buy_order_id} is OPEN/PENDING")
+            return {
+                "success": True,
+                "status": "OPEN",
+                "order_id": buy_order_id,
+                "variety": "amo",
+                "fill_price": limit_price,
+                "lot_size": lot_size,
+                "message": f"AMO limit order placed successfully and is OPEN: {buy_order_id}"
             }
 
         # 5. 10-Second Order Execution Check
