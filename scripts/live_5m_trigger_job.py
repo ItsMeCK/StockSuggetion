@@ -53,6 +53,13 @@ def run_5m_trigger_cycle(now_dt=None):
     # 3. Initialize Kite Data Client
     api_key = os.getenv("KITE_API_KEY", "").strip("'\"")
     access_token = os.getenv("KITE_ACCESS_TOKEN", "").strip("'\"")
+    if not access_token:
+        try:
+            from core.token_manager import sync_tokens_from_server
+            sync_tokens_from_server()
+            access_token = os.getenv("KITE_ACCESS_TOKEN", "").strip("'\"")
+        except Exception:
+            pass
     
     if not api_key or not access_token:
         logger.warning("Kite API credentials not set. Running in dry-run simulation mode.")

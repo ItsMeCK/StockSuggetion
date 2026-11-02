@@ -9,6 +9,14 @@ def get_kite_data_client():
     api_key = os.getenv("KITE_API_KEY", "").strip("'\"")
     access_token = os.getenv("KITE_ACCESS_TOKEN", "").strip("'\"")
     if not api_key or not access_token:
+        try:
+            from core.token_manager import sync_tokens_from_server
+            sync_tokens_from_server()
+            load_dotenv()
+            access_token = os.getenv("KITE_ACCESS_TOKEN", "").strip("'\"")
+        except Exception:
+            pass
+    if not api_key or not access_token:
         raise ValueError("Missing regular KITE credentials in .env")
     kite = KiteConnect(api_key=api_key, timeout=25)
     kite.set_access_token(access_token)
@@ -18,6 +26,14 @@ def get_kite_exec_client():
     load_dotenv()
     api_key = os.getenv("EXEC_KITE_API_KEY", "").strip("'\"")
     access_token = os.getenv("EXEC_KITE_ACCESS_TOKEN", "").strip("'\"")
+    if not api_key or not access_token:
+        try:
+            from core.token_manager import sync_tokens_from_server
+            sync_tokens_from_server()
+            load_dotenv()
+            access_token = os.getenv("EXEC_KITE_ACCESS_TOKEN", "").strip("'\"")
+        except Exception:
+            pass
     if not api_key or not access_token:
         raise ValueError("Missing EXEC_KITE credentials in .env")
     kite = KiteConnect(api_key=api_key, timeout=25)

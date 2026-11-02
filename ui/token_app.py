@@ -493,11 +493,28 @@ def generate():
 # =============================================================================
 
 def is_authorized(req) -> bool:
-    """Verifies X-Sovereign-Auth header or auth_key query parameter."""
+    """Verifies X-Sovereign-Auth header, Bearer token, or auth_key/token query parameter."""
     auth_header = req.headers.get("X-Sovereign-Auth")
-    auth_param = req.args.get("auth_key")
-    token = auth_header or auth_param
+    auth_bearer = req.headers.get("Authorization", "").replace("Bearer ", "").strip()
+    auth_param = req.args.get("auth_key") or req.args.get("token")
+    token = auth_header or auth_bearer or auth_param
     return token in (SOVEREIGN_AUTH_KEY, UI_PASSWORD)
+
+@app.route("/api/tokens/data", methods=["GET"])
+def get_data_token_endpoint():
+    """Returns only the Data Account (YF4472) access token."""
+    if not is_authorized(request):
+        return jsonify({"error": "Unauthorized"}), 401
+
+    load_dotenv()
+    persistent = load_persistent_tokens()
+    token = persistent.get("KITE_ACCESS_TOKEN") or os.getenv("KITE_ACCESS_TOKEN", "")
+    return jsonify({
+        "account": "YF4472",
+        "api_key": os.getenv("KITE_API_KEY", "").strip("'\""),
+        "access_token": token,
+        "updated_at": persistent.get("updated_at", datetime.now().isoformat())
+    }), 200
 
 @app.route("/api/tokens/sync", methods=["GET"])
 def sync_tokens():

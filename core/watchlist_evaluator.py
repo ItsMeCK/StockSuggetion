@@ -82,6 +82,13 @@ def evaluate_watchlist():
     # 3. Fetch pre-open quotes from Zerodha Kite (if available)
     kite_key = os.getenv("KITE_API_KEY", "").strip("'\"")
     kite_token = os.getenv("KITE_ACCESS_TOKEN", "").strip("'\"")
+    if not kite_token:
+        try:
+            from core.token_manager import sync_tokens_from_server
+            sync_tokens_from_server()
+            kite_token = os.getenv("KITE_ACCESS_TOKEN", "").strip("'\"")
+        except Exception:
+            pass
 
     preopen_candidates = []
     batch_quotes = {}

@@ -59,6 +59,13 @@ def refresh_midday_watchlist(top_n: int = 15):
     # Check Zerodha Kite live quotes / candles if available; otherwise use parquet dataset
     kite_key = os.getenv("KITE_API_KEY", "").strip("'\"")
     kite_token = os.getenv("KITE_ACCESS_TOKEN", "").strip("'\"")
+    if not kite_token:
+        try:
+            from core.token_manager import sync_tokens_from_server
+            sync_tokens_from_server()
+            kite_token = os.getenv("KITE_ACCESS_TOKEN", "").strip("'\"")
+        except Exception:
+            pass
 
     morning_quotes = {}
     if kite_key and kite_token:
