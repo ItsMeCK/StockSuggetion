@@ -1,16 +1,119 @@
 import os
+import re
+import json
+import logging
+import urllib.parse
+from datetime import datetime
 from flask import Flask, request, render_template_string, redirect, url_for, session, jsonify
 from dotenv import load_dotenv
 from kiteconnect import KiteConnect
+
+from core.sovereign_execution_gateway import SovereignExecutionGateway
+from core.smart_volume_reversal_engine import SmartVolumeReversalEngine
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 load_dotenv()
 UI_PASSWORD = os.getenv("UI_PASSWORD", "midnight123")
+SOVEREIGN_AUTH_KEY = os.getenv("SOVEREIGN_AUTH_KEY", UI_PASSWORD)
 LOGS_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "logs")
+TOKENS_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "kite_tokens.json")
 
-# Premium HTML Template with CSS/JS embedded
+def extract_request_token(raw_input: str) -> str:
+    """
+    Extracts request_token whether user pastes the raw string or the full redirect URL:
+    e.g. 'https://www.google.com/?action=login&type=login&status=success&request_token=abc123xyz'
+    """
+    if not raw_input:
+        return ""
+    raw_input = raw_input.strip()
+    if "request_token=" in raw_input:
+        try:
+            parsed = urllib.parse.urlparse(raw_input)
+            qs = urllib.parse.parse_qs(parsed.query)
+            if "request_token" in qs:
+                return qs["request_token"][0].strip()
+        except Exception:
+            pass
+        match = re.search(r"request_token=([a-zA-Z0-9]+)", raw_input)
+        if match:
+            return match.group(1).strip()
+    return raw_input
+
+def update_env_file(key, value, filepath=".env"):
+    if not os.path.exists(filepath):
+        with open(filepath, "w") as f:
+            f.write(f"{key}='{value}'\n")
+        return
+
+    with open(filepath, "r") as f:
+        lines = f.readlines()
+        
+    updated = False
+    with open(filepath, "w") as f:
+        for line in lines:
+            if line.startswith(f"{key}="):
+                f.write(f"{key}='{value}'\n")
+                updated = True
+            else:
+                f.write(line)
+        if not updated:
+            f.write(f"{key}='{value}'\n")
+
+def save_persistent_tokens(tokens_dict: dict):
+    os.makedirs(os.path.dirname(TOKENS_FILE), exist_ok=True)
+    existing = {}
+    if os.path.exists(TOKENS_FILE):
+        try:
+            with open(TOKENS_FILE, "r") as f:
+                existing = json.load(f)
+        except Exception:
+            existing = {}
+    existing.update(tokens_dict)
+    existing["updated_at"] = datetime.now().isoformat()
+    with open(TOKENS_FILE, "w") as f:
+        json.dump(existing, f, indent=2)
+
+def load_persistent_tokens() -> dict:
+    if os.path.exists(TOKENS_FILE):
+        try:
+            with open(TOKENS_FILE, "r") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
+
+def get_log_files():
+    if not os.path.exists(LOGS_DIR):
+        return []
+    return sorted([f for f in os.listdir(LOGS_DIR) if f.endswith(".log")])
+
+def parse_cron():
+    cron_file = "current_cron.txt"
+    if not os.path.exists(cron_file):
+        cron_file = "gcp_cron.txt"
+    if not os.path.exists(cron_file):
+        return []
+
+    crons = []
+    with open(cron_file, "r") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            parts = line.split(maxsplit=5)
+            if len(parts) == 6:
+                crons.append({
+                    "time": " ".join(parts[:5]),
+                    "cmd": parts[5]
+                })
+    return crons
+
+# Premium HTML Template
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +128,7 @@ HTML_TEMPLATE = """
             --border-color: rgba(48, 54, 61, 0.8);
             --accent-color: #58a6ff;
             --success-color: #3fb950;
+            --danger-color: #ff7b72;
             --text-color: #c9d1d9;
             --text-muted: #8b949e;
         }
@@ -42,7 +146,7 @@ HTML_TEMPLATE = """
             min-height: 100vh;
         }
         .container { 
-            max-width: 800px; 
+            max-width: 860px; 
             width: 100%; 
             background: var(--surface-color); 
             backdrop-filter: blur(16px);
@@ -55,7 +159,6 @@ HTML_TEMPLATE = """
         }
         h2 { color: var(--accent-color); text-align: center; margin-top: 0; font-weight: 700; letter-spacing: -0.5px; }
         
-        /* Navigation Tabs */
         .nav-tabs {
             display: flex;
             border-bottom: 1px solid var(--border-color);
@@ -80,8 +183,8 @@ HTML_TEMPLATE = """
         
         @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Forms */
         label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 14px; }
+        .hint { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
         input[type="text"], input[type="password"], select { 
             width: 100%; padding: 12px; margin-bottom: 20px; 
             border: 1px solid var(--border-color); 
@@ -102,12 +205,14 @@ HTML_TEMPLATE = """
         }
         button:hover { filter: brightness(1.1); }
         
-        /* Alerts */
         .alert { padding: 14px; border-radius: 8px; margin-bottom: 20px; font-size: 14px; font-weight: 500; }
         .alert.success { background-color: rgba(35, 134, 54, 0.15); border: 1px solid rgba(46, 160, 67, 0.4); color: var(--success-color); }
-        .alert.error { background-color: rgba(248, 81, 73, 0.1); border: 1px solid rgba(248, 81, 73, 0.4); color: #ff7b72; }
+        .alert.error { background-color: rgba(248, 81, 73, 0.1); border: 1px solid rgba(248, 81, 73, 0.4); color: var(--danger-color); }
         
-        /* Terminal / Logs */
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+        .badge.active { background: rgba(63, 185, 80, 0.2); color: var(--success-color); border: 1px solid var(--success-color); }
+        .badge.inactive { background: rgba(248, 81, 73, 0.2); color: var(--danger-color); border: 1px solid var(--danger-color); }
+
         .terminal {
             background-color: #010409;
             border: 1px solid var(--border-color);
@@ -144,29 +249,21 @@ HTML_TEMPLATE = """
         }
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
 
-        /* Schedule Table */
-        .schedule-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .schedule-item {
-            background: rgba(13, 17, 23, 0.5);
+        .status-card {
+            background: rgba(13, 17, 23, 0.6);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 10px;
+            padding: 16px;
+            margin-bottom: 20px;
             display: flex;
-            flex-direction: column;
-            gap: 5px;
+            justify-content: space-between;
+            align-items: center;
         }
-        .schedule-cron { color: var(--accent-color); font-family: monospace; font-weight: bold; }
-        .schedule-cmd { color: var(--text-color); font-size: 14px; word-break: break-all; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Midnight Sovereign</h2>
+        <h2>🏛️ Midnight Sovereign Command Center</h2>
         
         {% if message %}
             <div class="alert {% if success %}success{% else %}error{% endif %}">
@@ -183,13 +280,36 @@ HTML_TEMPLATE = """
         {% else %}
             
             <div class="nav-tabs">
-                <div class="nav-tab active" onclick="switchTab('logs')">Live Telemetry</div>
+                <div class="nav-tab active" onclick="switchTab('tokens')">Token Manager</div>
+                <div class="nav-tab" onclick="switchTab('logs')">Live Telemetry</div>
                 <div class="nav-tab" onclick="switchTab('schedule')">Schedule</div>
-                <div class="nav-tab" onclick="switchTab('tokens')">Tokens</div>
             </div>
             
+            <!-- TOKENS TAB -->
+            <div id="tab-tokens" class="tab-content active">
+                <div class="status-card">
+                    <div>
+                        <div style="font-weight: bold; color: #ffffff;">Execution Gateway (Port 5000)</div>
+                        <div style="font-size: 12px; color: var(--text-muted);">Status: Active | Policy: Lot Size &lt; 600 Only | 10s Verification: Armed</div>
+                    </div>
+                    <span class="badge active">OPERATIONAL</span>
+                </div>
+
+                <form method="POST" action="/generate">
+                    <label for="main_token">1. Main Data Account (YF4472)</label>
+                    <div class="hint">Paste raw Request Token OR complete redirected Google URL (e.g. https://www.google.com/?...request_token=xyz)</div>
+                    <input type="text" id="main_token" name="main_token" placeholder="Paste Data Account Request Token or Redirect URL">
+                    
+                    <label for="exec_token">2. Live Execution Account (HU0092)</label>
+                    <div class="hint">Paste raw Request Token OR complete redirected Google URL</div>
+                    <input type="text" id="exec_token" name="exec_token" placeholder="Paste Execution Account Request Token or Redirect URL">
+                    
+                    <button type="submit">Generate & Sync Tokens to Engine</button>
+                </form>
+            </div>
+
             <!-- LOGS TAB -->
-            <div id="tab-logs" class="tab-content active">
+            <div id="tab-logs" class="tab-content">
                 <div class="terminal-header">
                     <select id="log_selector" onchange="fetchLogs()">
                         <option value="">Select Log Stream...</option>
@@ -204,29 +324,16 @@ HTML_TEMPLATE = """
 
             <!-- SCHEDULE TAB -->
             <div id="tab-schedule" class="tab-content">
-                <ul class="schedule-list">
+                <ul style="list-style: none; padding: 0;">
                     {% for cron in crons %}
-                        <li class="schedule-item">
-                            <span class="schedule-cron">{{ cron.time }}</span>
-                            <span class="schedule-cmd">{{ cron.cmd }}</span>
+                        <li style="background: rgba(13, 17, 23, 0.5); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; margin-bottom: 8px;">
+                            <span style="color: var(--accent-color); font-family: monospace; font-weight: bold;">{{ cron.time }}</span>
+                            <div style="color: var(--text-color); font-size: 13px; margin-top: 4px; word-break: break-all;">{{ cron.cmd }}</div>
                         </li>
                     {% else %}
-                        <li class="schedule-item">No active crons found.</li>
+                        <li>No active crons found.</li>
                     {% endfor %}
                 </ul>
-            </div>
-
-            <!-- TOKENS TAB -->
-            <div id="tab-tokens" class="tab-content">
-                <form method="POST" action="/generate">
-                    <label for="main_token">Main Account Request Token</label>
-                    <input type="text" id="main_token" name="main_token" required placeholder="Paste Main Request Token">
-                    
-                    <label for="exec_token">Execution Account Request Token</label>
-                    <input type="text" id="exec_token" name="exec_token" required placeholder="Paste Execution Request Token">
-                    
-                    <button type="submit">Generate & Sync to .env</button>
-                </form>
             </div>
 
             <script>
@@ -242,7 +349,7 @@ HTML_TEMPLATE = """
                 function fetchLogs() {
                     if(logInterval) clearInterval(logInterval);
                     updateLog();
-                    logInterval = setInterval(updateLog, 2000); // Fetch every 2s
+                    logInterval = setInterval(updateLog, 2000);
                 }
 
                 function updateLog() {
@@ -270,51 +377,9 @@ HTML_TEMPLATE = """
 </html>
 """
 
-def update_env_file(key, value, filepath=".env"):
-    if not os.path.exists(filepath):
-        with open(filepath, "w") as f:
-            f.write(f"{key}='{value}'\n")
-        return
-
-    with open(filepath, "r") as f:
-        lines = f.readlines()
-        
-    updated = False
-    with open(filepath, "w") as f:
-        for line in lines:
-            if line.startswith(f"{key}="):
-                f.write(f"{key}='{value}'\n")
-                updated = True
-            else:
-                f.write(line)
-        if not updated:
-            f.write(f"{key}='{value}'\n")
-
-def get_log_files():
-    if not os.path.exists(LOGS_DIR):
-        return []
-    return sorted([f for f in os.listdir(LOGS_DIR) if f.endswith(".log")])
-
-def parse_cron():
-    cron_file = "current_cron.txt"
-    if not os.path.exists(cron_file):
-        cron_file = "gcp_cron.txt"
-    if not os.path.exists(cron_file):
-        return []
-
-    crons = []
-    with open(cron_file, "r") as f:
-        for line in f:
-            line = line.strip()
-            if not line or line.startswith("#"):
-                continue
-            parts = line.split(maxsplit=5)
-            if len(parts) == 6:
-                crons.append({
-                    "time": " ".join(parts[:5]),
-                    "cmd": parts[5]
-                })
-    return crons
+# =============================================================================
+# Web Routes
+# =============================================================================
 
 @app.route("/", methods=["GET"])
 def index():
@@ -341,7 +406,6 @@ def get_logs(filename):
         return f"File {filename} not found."
     
     try:
-        # Read the last 150 lines safely
         with open(filepath, "r") as f:
             lines = f.readlines()
             return "".join(lines[-150:])
@@ -355,8 +419,11 @@ def generate():
 
     load_dotenv() 
     
-    main_request_token = request.form.get("main_token", "").strip()
-    exec_request_token = request.form.get("exec_token", "").strip()
+    raw_main = request.form.get("main_token", "").strip()
+    raw_exec = request.form.get("exec_token", "").strip()
+    
+    main_request_token = extract_request_token(raw_main)
+    exec_request_token = extract_request_token(raw_exec)
     
     main_api_key = os.getenv("KITE_API_KEY", "").strip("'\"")
     main_api_secret = os.getenv("KITE_API_SECRET", "").strip("'\"")
@@ -364,22 +431,120 @@ def generate():
     exec_api_key = os.getenv("EXEC_KITE_API_KEY", "").strip("'\"")
     exec_api_secret = os.getenv("EXEC_KITE_API_SECRET", "").strip("'\"")
     
+    tokens_to_save = {}
+    success_msgs = []
+
     try:
         if main_request_token:
             kite_main = KiteConnect(api_key=main_api_key)
             data_main = kite_main.generate_session(main_request_token, api_secret=main_api_secret)
-            update_env_file("KITE_ACCESS_TOKEN", data_main["access_token"])
+            acc_token = data_main["access_token"]
+            update_env_file("KITE_ACCESS_TOKEN", acc_token)
+            tokens_to_save["KITE_ACCESS_TOKEN"] = acc_token
+            success_msgs.append("Data Account (YF4472) Refreshed")
             
         if exec_request_token:
             kite_exec = KiteConnect(api_key=exec_api_key)
             data_exec = kite_exec.generate_session(exec_request_token, api_secret=exec_api_secret)
-            update_env_file("EXEC_KITE_ACCESS_TOKEN", data_exec["access_token"])
+            acc_exec = data_exec["access_token"]
+            update_env_file("EXEC_KITE_ACCESS_TOKEN", acc_exec)
+            tokens_to_save["EXEC_KITE_ACCESS_TOKEN"] = acc_exec
+            success_msgs.append("Execution Account (HU0092) Refreshed")
         
-        msg = "Successfully generated and saved Access Tokens!"
-        return render_template_string(HTML_TEMPLATE, message=msg, success=True, log_files=get_log_files(), crons=parse_cron())
+        if tokens_to_save:
+            save_persistent_tokens(tokens_to_save)
+
+        msg = f"Successfully generated tokens: {', '.join(success_msgs)}" if success_msgs else "No tokens provided."
+        return render_template_string(HTML_TEMPLATE, message=msg, success=bool(success_msgs), log_files=get_log_files(), crons=parse_cron())
         
     except Exception as e:
-        return render_template_string(HTML_TEMPLATE, message=f"Error: {str(e)}", success=False, log_files=get_log_files(), crons=parse_cron())
+        return render_template_string(HTML_TEMPLATE, message=f"Error generating session: {str(e)}", success=False, log_files=get_log_files(), crons=parse_cron())
+
+# =============================================================================
+# REST API Endpoints (Laptop -> GCP Order Gateway)
+# =============================================================================
+
+def is_authorized(req) -> bool:
+    """Verifies X-Sovereign-Auth header or auth_key query parameter."""
+    auth_header = req.headers.get("X-Sovereign-Auth")
+    auth_param = req.args.get("auth_key")
+    token = auth_header or auth_param
+    return token in (SOVEREIGN_AUTH_KEY, UI_PASSWORD)
+
+@app.route("/api/tokens/sync", methods=["GET"])
+def sync_tokens():
+    """Allows laptop crons to sync active tokens from GCP."""
+    if not is_authorized(request):
+        return jsonify({"error": "Unauthorized"}), 401
+
+    load_dotenv()
+    persistent = load_persistent_tokens()
+    result = {
+        "KITE_ACCESS_TOKEN": persistent.get("KITE_ACCESS_TOKEN") or os.getenv("KITE_ACCESS_TOKEN", ""),
+        "EXEC_KITE_ACCESS_TOKEN": persistent.get("EXEC_KITE_ACCESS_TOKEN") or os.getenv("EXEC_KITE_ACCESS_TOKEN", ""),
+        "updated_at": persistent.get("updated_at", datetime.now().isoformat())
+    }
+    return jsonify(result), 200
+
+@app.route("/api/orders/execute", methods=["POST"])
+def execute_order_endpoint():
+    """
+    Automated Order Execution Gateway Endpoint:
+    Receives order requests from laptop crons, validates lot size < 600,
+    checks available cash, places limit order, checks fill in 10s, sets SL.
+    """
+    if not is_authorized(request):
+        return jsonify({"error": "Unauthorized: Invalid Sovereign Auth Header"}), 401
+
+    data = request.get_json(force=True, silent=True) or {}
+    symbol = data.get("symbol")
+    option_symbol = data.get("option_symbol")
+    lot_size = int(data.get("lot_size", 0))
+    entry_premium = float(data.get("entry_premium", 0.0))
+
+    if not symbol or not option_symbol or lot_size <= 0 or entry_premium <= 0:
+        return jsonify({
+            "success": False,
+            "error": "INVALID_PAYLOAD",
+            "message": "Required fields: symbol, option_symbol, lot_size > 0, entry_premium > 0"
+        }), 400
+
+    gateway = SovereignExecutionGateway()
+    result = gateway.execute_option_order(
+        symbol=symbol,
+        option_symbol=option_symbol,
+        lot_size=lot_size,
+        entry_premium=entry_premium,
+        direction=data.get("direction", "LONG"),
+        instrument_type=data.get("instrument_type", "CE"),
+        best_ask=data.get("best_ask"),
+        catalyst=data.get("catalyst", ""),
+        score=float(data.get("score", 85.0)),
+        holding_type=data.get("holding_type", "TYPE_C_BTST")
+    )
+
+    status_code = 200 if result.get("success") else 422
+    return jsonify(result), status_code
+
+@app.route("/api/positions", methods=["GET"])
+def get_positions_endpoint():
+    """Returns live open positions on the execution account."""
+    if not is_authorized(request):
+        return jsonify({"error": "Unauthorized"}), 401
+
+    engine = SmartVolumeReversalEngine()
+    positions = engine.get_live_open_positions()
+    return jsonify({"positions": positions, "count": len(positions)}), 200
+
+@app.route("/api/guardian/run_20m", methods=["POST"])
+def run_20m_guardian_endpoint():
+    """Triggers a 20-minute Volume Reversal cycle on demand."""
+    if not is_authorized(request):
+        return jsonify({"error": "Unauthorized"}), 401
+
+    engine = SmartVolumeReversalEngine()
+    results = engine.run_20m_cycle()
+    return jsonify({"status": "SUCCESS", "results": results}), 200
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

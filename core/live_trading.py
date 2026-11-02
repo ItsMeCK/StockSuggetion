@@ -220,6 +220,35 @@ def execute_trade(
             print(f"⚠️ Warning: Allocated capital ₹{allocated_capital:.2f} < Lot Cost ₹{lot_cost:.2f}. Falling back to PAPER simulation.")
             is_live_order_authorized = False
 
+        # Sovereign Risk Rule: Automated live execution permitted ONLY if lot_size < 600
+        if lot_size >= 600:
+            print(f"🛑 [RISK POLICY VETO] Lot size {lot_size} >= 600 (Sovereign Cap < 600). Rejecting automated live execution. Falling back to PAPER simulation.")
+            is_live_order_authorized = False
+
+        # Optional routing through GCP Execution Gateway when enabled
+        if is_live_order_authorized and os.getenv("USE_GCP_EXECUTION", "false").lower() == "true":
+            try:
+                from core.gcp_execution_client import GCPExecutionClient
+                gcp_client = GCPExecutionClient()
+                gcp_res = gcp_client.execute_order(
+                    symbol=symbol,
+                    option_symbol=option_symbol,
+                    lot_size=lot_size,
+                    entry_premium=entry_premium,
+                    direction=direction,
+                    instrument_type=target_inst_type,
+                    catalyst=catalyst,
+                    score=score,
+                    holding_type=holding_type
+                )
+                if gcp_res.get("success"):
+                    print(f"✅ [GCP GATEWAY] Successfully executed on remote GCP service: Order ID {gcp_res.get('order_id')}")
+                    return
+                else:
+                    print(f"⚠️ [GCP GATEWAY] Remote execution returned: {gcp_res.get('error')}. Falling back to local execution.")
+            except Exception as e:
+                print(f"⚠️ [GCP GATEWAY] Could not connect to remote GCP service: {e}. Falling back to local execution.")
+
     if is_live_order_authorized:
         order_tag = f"MS_{symbol[:6]}_{int(entry_time.timestamp()) % 100000}"[:20]
         try:
