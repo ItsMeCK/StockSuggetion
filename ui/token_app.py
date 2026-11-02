@@ -302,15 +302,37 @@ HTML_TEMPLATE = """
                 </div>
 
                 <form method="POST" action="/generate">
-                    <label for="main_token">1. Main Data Account (YF4472)</label>
-                    <div class="hint">Paste raw Request Token OR complete redirected Google URL (e.g. https://www.google.com/?...request_token=xyz)</div>
-                    <input type="text" id="main_token" name="main_token" placeholder="Paste Data Account Request Token or Redirect URL">
+                    <!-- Data Account -->
+                    <div style="background: rgba(88, 166, 255, 0.05); border: 1px solid rgba(88, 166, 255, 0.2); border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+                            <div>
+                                <span style="font-weight: 700; color: #58a6ff; font-size: 15px;">1. Main Data Account (YF4472)</span>
+                                <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">API Key: <code>anywvvfkcyjhhqiy</code></div>
+                            </div>
+                            <a href="https://kite.zerodha.com/connect/login?v=3&api_key=anywvvfkcyjhhqiy" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 9px 18px; background: #1f6feb; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                                🔗 1. Open Zerodha Login (YF4472) ↗
+                            </a>
+                        </div>
+                        <label for="main_token" style="font-size: 13px; color: var(--text-color); margin-bottom: 6px;">2. Paste Redirected URL or Request Token below:</label>
+                        <input type="text" id="main_token" name="main_token" placeholder="Paste redirected URL (e.g. https://www.google.com/?...request_token=...)" style="margin-bottom: 0;">
+                    </div>
                     
-                    <label for="exec_token">2. Live Execution Account (HU0092)</label>
-                    <div class="hint">Paste raw Request Token OR complete redirected Google URL</div>
-                    <input type="text" id="exec_token" name="exec_token" placeholder="Paste Execution Account Request Token or Redirect URL">
+                    <!-- Exec Account -->
+                    <div style="background: rgba(63, 185, 80, 0.05); border: 1px solid rgba(63, 185, 80, 0.2); border-radius: 8px; padding: 16px; margin-bottom: 25px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+                            <div>
+                                <span style="font-weight: 700; color: #3fb950; font-size: 15px;">2. Live Execution Account (HU0092)</span>
+                                <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">API Key: <code>lhrw3sc9uo6ofenq</code></div>
+                            </div>
+                            <a href="https://kite.zerodha.com/connect/login?v=3&api_key=lhrw3sc9uo6ofenq" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 9px 18px; background: #238636; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                                🔗 1. Open Zerodha Login (HU0092) ↗
+                            </a>
+                        </div>
+                        <label for="exec_token" style="font-size: 13px; color: var(--text-color); margin-bottom: 6px;">2. Paste Redirected URL or Request Token below:</label>
+                        <input type="text" id="exec_token" name="exec_token" placeholder="Paste redirected URL (e.g. https://www.google.com/?...request_token=...)" style="margin-bottom: 0;">
+                    </div>
                     
-                    <button type="submit">Generate & Sync Tokens to Engine</button>
+                    <button type="submit">⚡ Step 3: Generate & Sync Tokens to Engine</button>
                 </form>
             </div>
 
