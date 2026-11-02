@@ -13,4 +13,5 @@ backup_untracked/
 vision_cache.json
 weekly_report_data_*.log
 data/*.jsonl
+data/kite_tokens.json
 

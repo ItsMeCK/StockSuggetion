@@ -21,7 +21,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-app.secret_key = os.urandom(24)
+# Use deterministic secret key so restarts do not invalidate browser sessions
+app.secret_key = os.getenv("FLASK_SECRET_KEY", "midnight_sovereign_persistent_secret_key_8899")
 
 load_dotenv()
 UI_PASSWORD = os.getenv("UI_PASSWORD", "midnight123")
