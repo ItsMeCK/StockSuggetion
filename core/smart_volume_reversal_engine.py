@@ -68,21 +68,30 @@ class SmartVolumeReversalEngine:
         Retrieves active open positions from the broker (HU0092) and reconciles with DB ledger.
         """
         open_positions = []
+        try:
+            db_positions_map = {p.get("option_symbol"): p for p in get_all_active_positions() if p.get("option_symbol")}
+        except Exception:
+            db_positions_map = {}
+
         if self.kite_exec:
             try:
                 net_pos = self.kite_exec.positions().get("net", [])
                 for pos in net_pos:
                     qty = int(pos.get("quantity", 0))
                     if qty != 0:  # Open position
+                        opt_sym = pos.get("tradingsymbol")
+                        db_p = db_positions_map.get(opt_sym, {})
                         open_positions.append({
-                            "option_symbol": pos.get("tradingsymbol"),
+                            "option_symbol": opt_sym,
                             "instrument_token": pos.get("instrument_token"),
                             "quantity": abs(qty),
                             "direction": "LONG" if qty > 0 else "SHORT",
                             "entry_price": float(pos.get("average_price", 0.0)),
                             "ltp": float(pos.get("last_price", 0.0)),
                             "m2m": float(pos.get("m2m", 0.0)),
-                            "pnl": float(pos.get("pnl", 0.0))
+                            "pnl": float(pos.get("pnl", 0.0)),
+                            "entry_time": db_p.get("entry_time"),
+                            "order_id": db_p.get("order_id", f"BROKER_{opt_sym}")
                         })
             except Exception as e:
                 logger.error(f"Error fetching live broker positions: {e}")
@@ -229,22 +238,26 @@ Respond with strict JSON ONLY using this exact schema:
   "concise_rationale": "<1-2 sentence high-conviction institutional reasoning>"
 }}
 """
-        try:
-            from google.genai import types
-            response = self.gemini_client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    temperature=0.0,
-                    response_mime_type="application/json"
+        from google.genai import types
+        models_to_try = ["gemini-3.5-flash-lite", "gemini-flash-latest"]
+        for m in models_to_try:
+            try:
+                response = self.gemini_client.models.generate_content(
+                    model=m,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        temperature=0.0,
+                        response_mime_type="application/json"
+                    )
                 )
-            )
-            data = json.loads(response.text.strip())
-            logger.info(f"🧠 [LLM ARBITER] {option_symbol} -> Verdict: {data.get('decision')} (Conf: {data.get('confidence')}%) | {data.get('concise_rationale')}")
-            return data
-        except Exception as e:
-            logger.error(f"Error during LLM volume reversal consultation: {e}")
-            return self._deterministic_fallback_reversal(metrics, pnl_pct)
+                data = json.loads(response.text.strip())
+                logger.info(f"🧠 [LLM ARBITER ({m})] {option_symbol} -> Verdict: {data.get('decision')} (Conf: {data.get('confidence')}%) | {data.get('concise_rationale')}")
+                return data
+            except Exception as e:
+                logger.warning(f"Model {m} failed for volume reversal consultation: {e}")
+
+        logger.error("All Gemini models failed for volume reversal consultation. Using quantitative fallback.")
+        return self._deterministic_fallback_reversal(metrics, pnl_pct)
 
     def _deterministic_fallback_reversal(self, metrics: Dict[str, Any], pnl_pct: float) -> Dict[str, Any]:
         """
@@ -455,6 +468,24 @@ Respond with strict JSON ONLY using this exact schema:
                     current_ltp = entry_price
 
             pnl_pct = round(((current_ltp - entry_price) / entry_price * 100.0), 2) if entry_price > 0 else 0.0
+
+            # 15-Minute Gestation Window: Do not liquidate newly opened positions on initial noise
+            entry_time = pos.get("entry_time")
+            if entry_time:
+                age_minutes = (current_time - entry_time).total_seconds() / 60.0
+                if age_minutes < 15.0 and pnl_pct > -14.0:
+                    logger.info(f"⏳ {option_symbol} is in early gestation window (held {age_minutes:.1f}m < 15m, PnL: {pnl_pct:+.1f}%). Bypassing volume reversal.")
+                    results.append({
+                        "option_symbol": option_symbol,
+                        "underlying": underlying,
+                        "current_ltp": current_ltp,
+                        "pnl_pct": pnl_pct,
+                        "decision": "HOLD",
+                        "confidence": 90,
+                        "mechanism": "GESTATION_HOLD",
+                        "action_taken": "HOLD"
+                    })
+                    continue
 
             # Fetch 5-minute historical candles for the underlying
             candles = []

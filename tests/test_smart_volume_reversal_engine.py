@@ -116,3 +116,41 @@ def test_smart_volume_reversal_executes_exit_and_emails():
         subject = mock_emailer.send_live_alert.call_args[0][0]
         assert "[ORDER EXECUTED] [AUTO-EXIT]" in subject
         assert "BHARATFORG26NOV1720CE" in subject
+
+def test_smart_volume_reversal_respects_15m_gestation_window():
+    from datetime import datetime, timedelta
+    mock_kite_data = MagicMock()
+    mock_kite_exec = MagicMock()
+    now_dt = datetime(2026, 11, 9, 11, 25, 0)
+    
+    # Position entered only 4 minutes ago
+    entry_dt = now_dt - timedelta(minutes=4)
+    mock_kite_exec.positions.return_value = {
+        "net": [{
+            "tradingsymbol": "AUROPHARMA26NOV1820CE",
+            "quantity": 550,
+            "average_price": 50.7,
+            "last_price": 51.5,
+            "instrument_token": 9999
+        }]
+    }
+    
+    mock_db_pos = [{
+        "option_symbol": "AUROPHARMA26NOV1820CE",
+        "entry_time": entry_dt,
+        "order_id": "ORD_123"
+    }]
+    
+    with patch("core.smart_volume_reversal_engine.get_all_active_positions", return_value=mock_db_pos):
+        engine = SmartVolumeReversalEngine(
+            kite_data=mock_kite_data,
+            kite_exec=mock_kite_exec
+        )
+        results = engine.run_20m_cycle(now=now_dt)
+        
+        assert len(results) == 1
+        assert results[0]["mechanism"] == "GESTATION_HOLD"
+        assert results[0]["action_taken"] == "HOLD"
+        # Must NOT attempt to place order
+        mock_kite_exec.place_order.assert_not_called()
+
