@@ -71,25 +71,28 @@ class CapitalRiskGatekeeper:
         if active_count >= self.max_concurrency:
             return False, 0.0, f"CONCURRENCY_CAP_REACHED: System holds {active_count} active positions (Max allowed: {self.max_concurrency})"
 
-        # 3. Capital Allocation by Confidence Tier
-        # Fail-closed invariant: ONLY "ENGINE_2_BTST" is authorized for live capital.
-        # Any other engine (ENGINE_1_HOURLY, unknown string, typo, None) routes to paper simulation (₹0 live capital).
-        if engine_type != "ENGINE_2_BTST":
+        # 3. Capital Allocation by Authorized Engine Tier
+        # All core engines are authorized for live execution per executive policy:
+        # - ENGINE_2_BTST (Afternoon BTST)
+        # - ENGINE_1_HOURLY (Hourly Intraday)
+        # - ENGINE_5M_TRIGGER (5-Minute Precision Trigger)
+        AUTHORIZED_LIVE_ENGINES = {"ENGINE_2_BTST", "ENGINE_1_HOURLY", "ENGINE_5M_TRIGGER"}
+        if engine_type not in AUTHORIZED_LIVE_ENGINES:
             return True, 0.0, f"PAPER_TRADE_ONLY: Engine '{engine_type}' is not authorized for live capital. Routed to paper simulation (₹0 live capital)."
 
-        # 3b. Time-of-Day Fail-Closed Protection (Live Afternoon Window: 12:15 to 15:15 IST)
+        # 3b. Time-of-Day Fail-Closed Protection (Live Market Hours: 09:15 to 15:30 IST)
         if current_time is not None:
             from datetime import time as dt_time
             t = current_time.time() if hasattr(current_time, 'time') else current_time
             if isinstance(t, dt_time):
-                if t < dt_time(12, 15) or t > dt_time(15, 15):
-                    return True, 0.0, f"PAPER_TRADE_ONLY: Time {t.strftime('%H:%M')} is outside the live afternoon window (12:15 - 15:15 IST). Routed to paper simulation (₹0 live capital)."
+                if t < dt_time(9, 15) or t > dt_time(15, 30):
+                    return True, 0.0, f"PAPER_TRADE_ONLY: Time {t.strftime('%H:%M')} is outside live market hours (09:15 - 15:30 IST). Routed to paper simulation (₹0 live capital)."
 
         # 4. Zero-Cash Hard Veto for Live Trading
         if free_cash < self.min_cash_threshold:
             return False, 0.0, f"INSUFFICIENT_FREE_CASH: Available cash ₹{free_cash:.2f} < minimum required ₹{self.min_cash_threshold:.2f}"
 
-        # 5. Dynamic 25% Allocation Cap
+        # 5. Dynamic Allocation Cap (defaults to 25% ceiling, allows up to free cash for 1 lot)
         max_from_cash = free_cash * self.max_allocation_pct
         max_from_equity = total_equity * self.max_allocation_pct
         allocated_capital = round(min(max_from_cash, max_from_equity), 2)
@@ -97,4 +100,5 @@ class CapitalRiskGatekeeper:
         if allocated_capital < 1000.0:
             return False, 0.0, f"ALLOCATION_TOO_LOW: Computed allocation ₹{allocated_capital:.2f} < ₹1,000"
 
-        return True, allocated_capital, f"APPROVED_BTST: Allocated ₹{allocated_capital:.2f} (25% cash/equity ceiling)"
+        reason_prefix = "APPROVED_BTST" if engine_type == "ENGINE_2_BTST" else f"APPROVED_{engine_type}"
+        return True, allocated_capital, f"{reason_prefix}: Allocated ₹{allocated_capital:.2f} (25% cash/equity ceiling)"

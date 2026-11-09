@@ -73,7 +73,8 @@ def run_hourly_evaluation():
                         kite_exec.cancel_order(variety=kite_exec.VARIETY_REGULAR, order_id=sl_order_id)
                         print(f"✅ Cancelled resting SL order {sl_order_id}")
                         
-                    # 2. Fire Market SELL to exit
+                    # 2. Fire Marketable Limit SELL to exit (NSE blocks ORDER_TYPE_MARKET for stock options)
+                    limit_exit_px = max(0.05, round(round(ltp * 0.90 / 0.05) * 0.05, 2))
                     kite_exec.place_order(
                         variety=kite_exec.VARIETY_REGULAR,
                         exchange=kite_exec.EXCHANGE_NFO,
@@ -81,7 +82,8 @@ def run_hourly_evaluation():
                         transaction_type=kite_exec.TRANSACTION_TYPE_SELL,
                         quantity=pos["qty"],
                         product=kite_exec.PRODUCT_NRML,
-                        order_type=kite_exec.ORDER_TYPE_MARKET
+                        order_type=kite_exec.ORDER_TYPE_LIMIT,
+                        price=limit_exit_px
                     )
                     print(f"✅ DECAY EXIT SELL Order Placed for {opt_symbol}")
                 except Exception as e:
@@ -614,8 +616,13 @@ def run_hourly_evaluation():
             print(f"Rank {i}: {symbol} ({direction} {inst_type}) | Score: {score}")
             
             # Dynamic Conviction Threshold
+            # Morning (10-12): 70
+            # 13:15 Afternoon: 75
+            # 14:15 Afternoon: 90 (Mandate: 2:15 PM cycle buys only with 90+ conviction)
             if now.hour in [10, 11, 12]:
                 threshold = 70
+            elif now.hour == 14:
+                threshold = 90
             else:
                 threshold = 75
                 
@@ -678,14 +685,14 @@ def run_hourly_evaluation():
                 "passed": [f"{direction} {inst_type}: " + trade.get('catalyst_summary', "Breakout/Breakdown")]
             })
                 
-            # Session Routing: Morning Paper (10:15, 11:15) vs Afternoon Live BTST (12:15, 13:15, 14:15)
+            # Session Routing: Morning Intraday (10:15, 11:15) vs Afternoon Live BTST (12:15, 13:15, 14:15)
             from datetime import time as dt_time
             now_time = now.time()
             is_afternoon_session = (now_time >= dt_time(12, 15) and now_time <= dt_time(15, 15))
             
             holding_type = "TYPE_C_BTST" if is_afternoon_session else "TYPE_A_SCALP"
             engine_type = "ENGINE_2_BTST" if is_afternoon_session else "ENGINE_1_HOURLY"
-            session_label = "LIVE AFTERNOON BTST" if is_afternoon_session else "MORNING PAPER SCALP (₹0 Live Risk)"
+            session_label = "LIVE AFTERNOON BTST" if is_afternoon_session else "LIVE HOURLY INTRADAY"
 
             # Execute trade
             execute_trade(
@@ -753,6 +760,8 @@ def squash_old_positions():
                 
             if live_buy_flag.lower() == "true":
                 try:
+                    # NSE blocks ORDER_TYPE_MARKET for stock options
+                    limit_squash_px = max(0.05, round(round(ltp * 0.90 / 0.05) * 0.05, 2))
                     kite.place_order(
                         variety=kite.VARIETY_REGULAR,
                         exchange=kite.EXCHANGE_NFO,
@@ -760,7 +769,8 @@ def squash_old_positions():
                         transaction_type=kite.TRANSACTION_TYPE_SELL,
                         quantity=pos["qty"],
                         product=kite.PRODUCT_NRML,
-                        order_type=kite.ORDER_TYPE_MARKET
+                        order_type=kite.ORDER_TYPE_LIMIT,
+                        price=limit_squash_px
                     )
                     print(f"✅ SQUASH SELL Order Placed for {opt_symbol}")
                 except Exception as e:

@@ -35,8 +35,8 @@ def test_grounding_public_catalyst_approved():
     approved, score, rationale, audit_data = agent.evaluate_symbol("HAL")
 
     assert approved is True
-    # 0.30 * 90 + 0.50 * 60 = 27 + 30 = 57.0 >= 50.0
-    assert score == 57.0
+    # Normalized score: (0.30 * 90 + 0.50 * 60) / (0.30 + 0.50) = 57.0 / 0.80 = 71.25 >= 50.0
+    assert score == 71.25
     assert "APPROVED (Public News)" in rationale
 
 def test_grounding_stealth_accumulation_approved():

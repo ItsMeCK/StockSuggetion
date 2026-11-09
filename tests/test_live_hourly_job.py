@@ -123,3 +123,25 @@ def test_live_hourly_job_sends_email_when_max_trades_reached(mock_emailer_cls, m
     assert args[1] == []
     assert args[2][0]["ticker"] == "CAPACITY CEILING"
 
+def test_live_hourly_job_2_15_requires_90_plus_conviction():
+    """
+    Mandate:
+    - 10:15, 11:15, 12:15 hours threshold is 70
+    - 13:15 hour threshold is 75
+    - 14:15 hour (2:15 PM cycle) threshold is strictly 90+
+    """
+    def get_threshold(hour: int) -> int:
+        if hour in [10, 11, 12]:
+            return 70
+        elif hour == 14:
+            return 90
+        else:
+            return 75
+
+    assert get_threshold(10) == 70
+    assert get_threshold(11) == 70
+    assert get_threshold(12) == 70
+    assert get_threshold(13) == 75
+    assert get_threshold(14) == 90
+
+

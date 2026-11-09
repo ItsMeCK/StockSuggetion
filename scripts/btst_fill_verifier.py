@@ -205,30 +205,81 @@ def run_btst_fill_verifier(now: datetime = None, force_check: bool = False, dry_
                 })
 
             elif broker_status in ("OPEN", "TRIGGER PENDING"):
-                # Unfilled order at 3:26 PM -> Cancel order and close DB position
-                print(f"🚨 UNFILLED ORDER AT 3:26 PM: Cancelling {order_id} ({opt_symbol}) to eliminate overnight risk.")
-                if not dry_run:
-                    try:
-                        kite_exec.cancel_order(variety=kite_exec.VARIETY_REGULAR, order_id=order_id)
-                        print(f"   ✅ Cancelled broker order {order_id}")
-                    except Exception as e:
-                        print(f"   ⚠️ Warning: Cancel order failed on broker: {e}")
-                    close_position(pos, exit_price=entry_premium, pnl_pct=0.0, status_override="CANCELLED_UNFILLED_AT_326")
+                filled_qty = int(latest_order.get("filled_quantity", 0) or 0)
+                if filled_qty > 0:
+                    # Partial fill occurred before 3:26 PM: Cancel remaining contracts, protect filled contracts
+                    avg_price = float(latest_order.get("average_price") or entry_premium)
+                    print(f"⚠️ PARTIAL FILL AT 3:26 PM: {filled_qty}/{qty} filled for {order_id}. Cancelling remainder & protecting filled shares...")
+                    if not dry_run:
+                        try:
+                            kite_exec.cancel_order(variety=kite_exec.VARIETY_REGULAR, order_id=order_id)
+                            print(f"   ✅ Cancelled unfilled remainder for {order_id}")
+                        except Exception as e:
+                            print(f"   ⚠️ Warning: Cancel order failed on broker: {e}")
 
-                emailer.send_live_alert(
-                    f"🚨 BTST ORDER UNFILLED AT 3:26 PM - CANCELLED: {symbol}",
-                    f"""
-                    <p>BTST buy order for <b>{symbol}</b> ({opt_symbol}) remained <b>{broker_status}</b> at 15:26 IST.</p>
-                    <p>The order was automatically cancelled to eliminate unmanaged overnight exposure into 15:30 close.</p>
-                    """
-                )
+                        # Place protective SL for the filled quantity
+                        initial_sl_price = round_to_tick(avg_price * 0.85)
+                        sl_limit_price = round_to_tick(initial_sl_price * 0.95)
+                        new_sl_order = None
+                        try:
+                            new_sl_order = kite_exec.place_order(
+                                variety=kite_exec.VARIETY_REGULAR,
+                                exchange=kite_exec.EXCHANGE_NFO,
+                                tradingsymbol=opt_symbol,
+                                transaction_type=kite_exec.TRANSACTION_TYPE_SELL,
+                                quantity=filled_qty,
+                                product=kite_exec.PRODUCT_NRML,
+                                order_type=kite_exec.ORDER_TYPE_SL,
+                                trigger_price=initial_sl_price,
+                                price=sl_limit_price
+                            )
+                            print(f"   ✅ Protective SL Placed for partial fill! ID: {new_sl_order}")
+                        except Exception as e:
+                            print(f"   ❌ Failed to place protective SL for partial fill: {e}")
 
-                verification_results.append({
-                    "symbol": symbol,
-                    "order_id": order_id,
-                    "action": "CANCELLED_UNFILLED",
-                    "broker_status": broker_status
-                })
+                        # Update database position with filled quantity
+                        update_entry_fill(order_id, fill_price=avg_price, new_sl=initial_sl_price, new_sl_order_id=new_sl_order)
+
+                    emailer.send_live_alert(
+                        f"⚠️ BTST ORDER PARTIALLY FILLED AT 3:26 PM: {symbol} ({filled_qty}/{qty})",
+                        f"""
+                        <p>BTST buy order for <b>{symbol}</b> ({opt_symbol}) partially filled <b>{filled_qty}/{qty} shares</b> at avg ₹{avg_price:.2f}.</p>
+                        <p>Remaining {qty - filled_qty} shares were cancelled to avoid overnight uncertainty. Protective SL placed at ₹{initial_sl_price:.2f}.</p>
+                        """
+                    )
+
+                    verification_results.append({
+                        "symbol": symbol,
+                        "order_id": order_id,
+                        "action": "PARTIAL_FILL_PROTECTED",
+                        "filled_qty": filled_qty,
+                        "broker_status": broker_status
+                    })
+                else:
+                    # Unfilled order at 3:26 PM -> Cancel order and close DB position
+                    print(f"🚨 UNFILLED ORDER AT 3:26 PM: Cancelling {order_id} ({opt_symbol}) to eliminate overnight risk.")
+                    if not dry_run:
+                        try:
+                            kite_exec.cancel_order(variety=kite_exec.VARIETY_REGULAR, order_id=order_id)
+                            print(f"   ✅ Cancelled broker order {order_id}")
+                        except Exception as e:
+                            print(f"   ⚠️ Warning: Cancel order failed on broker: {e}")
+                        close_position(pos, exit_price=entry_premium, pnl_pct=0.0, status_override="CANCELLED_UNFILLED_AT_326")
+
+                    emailer.send_live_alert(
+                        f"🚨 BTST ORDER UNFILLED AT 3:26 PM - CANCELLED: {symbol}",
+                        f"""
+                        <p>BTST buy order for <b>{symbol}</b> ({opt_symbol}) remained <b>{broker_status}</b> at 15:26 IST.</p>
+                        <p>The order was automatically cancelled to eliminate unmanaged overnight exposure into 15:30 close.</p>
+                        """
+                    )
+
+                    verification_results.append({
+                        "symbol": symbol,
+                        "order_id": order_id,
+                        "action": "CANCELLED_UNFILLED",
+                        "broker_status": broker_status
+                    })
 
             elif broker_status in ("CANCELLED", "REJECTED"):
                 print(f"⚠️ Order {order_id} was already {broker_status} on broker. Updating database record.")

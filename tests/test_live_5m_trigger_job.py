@@ -65,10 +65,9 @@ def test_5m_trigger_job_fires_and_executes(mock_kite_cls, mock_focus, mock_count
 def test_5m_trigger_job_morning_routes_to_paper_scalp(mock_kite_cls, mock_focus, mock_count):
     """
     Session Invariant:
-    At 10:30 AM (Morning session), 5m triggers MUST route to:
-    - engine_type: ENGINE_1_HOURLY (100% Paper Simulation)
+    At 10:30 AM (Morning session), 5m triggers route to:
+    - engine_type: ENGINE_1_HOURLY (Live Capital Authorized)
     - holding_type: TYPE_A_SCALP
-    - ₹0 live capital risk
     """
     mock_focus.return_value = [{"symbol": "INFY", "direction": "LONG", "conviction_score": 80.0}]
     mock_kite = MagicMock()
@@ -88,7 +87,7 @@ def test_5m_trigger_job_morning_routes_to_paper_scalp(mock_kite_cls, mock_focus,
         _, kwargs = mock_exec.call_args
         assert kwargs["engine_type"] == "ENGINE_1_HOURLY"
         assert kwargs["holding_type"] == "TYPE_A_SCALP"
-        assert "MORNING PAPER SCALP (₹0 Live Risk)" in kwargs["catalyst"]
+        assert "LIVE MORNING INTRADAY SCALP" in kwargs["catalyst"]
 
 @patch("scripts.live_5m_trigger_job.get_daily_trades_count", return_value=1)
 @patch("scripts.live_5m_trigger_job.get_active_daily_focus_watchlist")

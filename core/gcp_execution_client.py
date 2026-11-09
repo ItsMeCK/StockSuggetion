@@ -77,6 +77,74 @@ class GCPExecutionClient:
                 "message": str(e)
             }
 
+    def modify_order(
+        self,
+        order_id: str,
+        quantity: int,
+        trigger_price: float,
+        price: float,
+        order_type: str = "SL",
+        variety: str = "regular"
+    ) -> Dict[str, Any]:
+        """Modifies a resting broker order through GCP Gateway."""
+        url = f"{self.base_url}/api/orders/modify"
+        payload = {
+            "order_id": order_id,
+            "quantity": quantity,
+            "trigger_price": trigger_price,
+            "price": price,
+            "order_type": order_type,
+            "variety": variety
+        }
+        headers = {
+            "Content-Type": "application/json",
+            "X-Sovereign-Auth": self.auth_key
+        }
+        try:
+            resp = requests.post(url, json=payload, headers=headers, timeout=10)
+            return resp.json() if resp.status_code == 200 else {"success": False, "error": resp.text}
+        except Exception as e:
+            return {"success": False, "error": str(e)}
+
+    def cancel_order(self, order_id: str, variety: str = "regular") -> Dict[str, Any]:
+        """Cancels a resting order through GCP Gateway."""
+        url = f"{self.base_url}/api/orders/cancel"
+        payload = {"order_id": order_id, "variety": variety}
+        headers = {
+            "Content-Type": "application/json",
+            "X-Sovereign-Auth": self.auth_key
+        }
+        try:
+            resp = requests.post(url, json=payload, headers=headers, timeout=10)
+            return resp.json() if resp.status_code == 200 else {"success": False, "error": resp.text}
+        except Exception as e:
+            return {"success": False, "error": str(e)}
+
+    def exit_position(
+        self,
+        symbol: str,
+        quantity: int,
+        price: float,
+        sl_order_id: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """Cancels resting SL and executes limit sell through GCP Gateway."""
+        url = f"{self.base_url}/api/orders/exit"
+        payload = {
+            "symbol": symbol,
+            "quantity": quantity,
+            "price": price,
+            "sl_order_id": sl_order_id
+        }
+        headers = {
+            "Content-Type": "application/json",
+            "X-Sovereign-Auth": self.auth_key
+        }
+        try:
+            resp = requests.post(url, json=payload, headers=headers, timeout=10)
+            return resp.json() if resp.status_code == 200 else {"success": False, "error": resp.text}
+        except Exception as e:
+            return {"success": False, "error": str(e)}
+
     def sync_tokens_from_gcp(self, update_local_env: bool = True) -> Dict[str, Any]:
         """
         Pulls refreshed access tokens from GCP Gateway to local laptop.

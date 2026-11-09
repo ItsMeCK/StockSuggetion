@@ -191,48 +191,70 @@ def evaluate_watchlist():
         min_conviction=50.0
     )
 
-    # Fail-safe (Requirement WB2): If AI grounding yielded 0 symbols (e.g. offline/API rate limit),
-    # activate quantitative fallback from ranked sector leaders so desk never operates on an unranked list.
-    if not final_focus and active_daily:
-        logger.warning("⚠️ Grounding yielded 0 symbols. Activating quantitative pre-open fallback.")
+    # 5b. Sovereign 5+5 Focus Guarantee: Maintain exactly 10 candidates (5 Longs + 5 Shorts)
+    # AI-approved candidates take priority. Any shortfall on Long (CE) or Short (PE) side is padded
+    # with the highest-ranked clean quantitative sector leaders.
+    if len(final_focus) < 10 and active_daily:
         vetoed_syms = {
             c.get("symbol") for c in grounded_review 
-            if "ABSOLUTE_VETO" in c.get("route_reason", "") or "ABSOLUTE_VETO" in c.get("catalyst_summary", "")
+            if "ABSOLUTE_VETO" in c.get("route_reason", "") 
+            or "ABSOLUTE_VETO" in c.get("catalyst_summary", "")
+            or "IV_CRUSH" in c.get("route_reason", "")
+            or c.get("status") in ["PRUNED", "REVIEW"]
         }
-        clean_longs = [c for c in longs_sorted if c["symbol"] not in vetoed_syms]
-        clean_shorts = [c for c in shorts_sorted if c["symbol"] not in vetoed_syms]
+        existing_syms = {c.get("symbol") for c in final_focus}
 
-        fallback_pool = clean_longs[:5] + clean_shorts[:5]
-        if len(fallback_pool) < 10:
-            seen_fb = {c["symbol"] for c in fallback_pool}
+        approved_longs = [c for c in final_focus if c.get("direction") == "LONG"]
+        approved_shorts = [c for c in final_focus if c.get("direction") == "SHORT"]
+
+        clean_longs = [c for c in longs_sorted if c["symbol"] not in existing_syms and c["symbol"] not in vetoed_syms]
+        clean_shorts = [c for c in shorts_sorted if c["symbol"] not in existing_syms and c["symbol"] not in vetoed_syms]
+
+        needed_longs = max(0, 5 - len(approved_longs))
+        padded_longs = clean_longs[:needed_longs]
+
+        needed_shorts = max(0, 5 - len(approved_shorts))
+        padded_shorts = clean_shorts[:needed_shorts]
+
+        fallback_to_add = padded_longs + padded_shorts
+
+        # If still under 10 (e.g. fewer than 5 available on a side), fill remaining from eligible pool by ATR%
+        if (len(final_focus) + len(fallback_to_add)) < 10:
+            already_picked = existing_syms | {c["symbol"] for c in fallback_to_add}
             remaining_clean = sorted(
-                [c for c in active_daily if c["symbol"] not in seen_fb and c["symbol"] not in vetoed_syms],
+                [c for c in active_daily if c["symbol"] not in already_picked and c["symbol"] not in vetoed_syms],
                 key=lambda x: x.get("atr_pct", 2.0),
                 reverse=True
             )
-            for c in remaining_clean:
-                fallback_pool.append(c)
-                if len(fallback_pool) >= 10:
-                    break
+            shortfall = 10 - (len(final_focus) + len(fallback_to_add))
+            fallback_to_add.extend(remaining_clean[:shortfall])
 
-        for cand in fallback_pool[:10]:
+        for cand in fallback_to_add:
             sym = cand.get("symbol", "")
             direction = cand.get("direction", "LONG")
             fallback_stock = {
                 "symbol": sym,
+                "prev_close": cand.get("prev_close", 1000.0),
+                "open": cand.get("open", 1000.0),
+                "dte": cand.get("dte", 15),
+                "bid_ask_spread_pct": cand.get("bid_ask_spread_pct", 0.8),
+                "atr_pct": cand.get("atr_pct", 2.5),
+                "gap_pct": cand.get("gap_pct", 0.0),
                 "direction": direction,
+                "sector": cand.get("sector", get_sector_for_symbol(sym)),
+                "is_sector_aligned": cand.get("is_sector_aligned", True),
+                "status": "ACTIVE",
                 "conviction_score": 60.0,
-                "catalyst_summary": "QUANT_FALLBACK: Promoted via quantitative pre-open rank",
+                "catalyst_summary": "QUANT_FALLBACK: Promoted via quantitative sector ranking to maintain 5+5 balance",
                 "upcoming_events": "Clean (Quantitative Fallback)",
-                "market_buzz": "Quantitative Pre-Open Selection",
-                "status": "ACTIVE"
+                "market_buzz": "Quantitative Pre-Open Selection"
             }
             final_focus.append(fallback_stock)
             save_daily_focus_stock(
                 symbol=sym,
                 direction=direction,
                 conviction_score=60.0,
-                catalyst_summary="QUANT_FALLBACK: Promoted via quantitative pre-open rank",
+                catalyst_summary="QUANT_FALLBACK: Promoted via quantitative sector ranking to maintain 5+5 balance",
                 upcoming_events="Clean (Quantitative Fallback)",
                 market_buzz="Quantitative Pre-Open Selection",
                 status="ACTIVE"

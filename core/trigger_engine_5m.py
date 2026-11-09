@@ -26,13 +26,15 @@ class TriggerSignal:
 def evaluate_5m_trigger(
     bar: FiveMinuteBar,
     min_vol_surge: float = 1.8,
-    max_ext_pct: float = 2.5
+    max_ext_pct: float = 2.5,
+    direction_bias: Optional[str] = None
 ) -> TriggerSignal:
     """
     Evaluates a closed 5-minute bar for immediate momentum ignition or breakdown (Requirement W3).
     - Eliminates the 45-60 minute lag of hourly candles.
     - Anti-FOMO: Rejects overextended moves (|extension| > 2.5%).
     - Requires volume expansion >= 1.8x and candle close near the extreme (>= 0.85).
+    - Directional Alignment: Strictly enforces Watchlist direction bias (LONG/CE vs SHORT/PE).
     """
     vol_surge = (bar.volume / bar.vol_sma_20) if bar.vol_sma_20 > 0 else 1.0
     ext_pct = ((bar.close - bar.sma_20) / bar.sma_20 * 100.0) if bar.sma_20 > 0 else 0.0
@@ -76,8 +78,12 @@ def evaluate_5m_trigger(
             reason=f"Price extension {ext_pct:+.2f}% exceeds {max_ext_pct}% limit"
         )
 
-    # 2. Bullish 5m Momentum Ignition (Long Call Setup)
-    if vol_surge >= min_vol_surge and bar.close > bar.open and close_to_high >= 0.85:
+    # Direction Bias Filters
+    allow_long = direction_bias is None or direction_bias.upper() in ["LONG", "CE"]
+    allow_short = direction_bias is None or direction_bias.upper() in ["SHORT", "PE"]
+
+    # 3. Bullish 5m Momentum Ignition (Long Call Setup)
+    if allow_long and vol_surge >= min_vol_surge and bar.close > bar.open and close_to_high >= 0.85:
         return TriggerSignal(
             triggered=True,
             symbol=bar.symbol,
@@ -87,8 +93,8 @@ def evaluate_5m_trigger(
             reason=f"Bullish 5m ignition (Vol Surge: {vol_surge:.2f}x >= {min_vol_surge}x, Close/High: {close_to_high:.2f})"
         )
 
-    # 3. Bearish 5m Momentum Breakdown (Short Put Setup)
-    if vol_surge >= min_vol_surge and bar.close < bar.open and close_to_low >= 0.85:
+    # 4. Bearish 5m Momentum Breakdown (Short Put Setup)
+    if allow_short and vol_surge >= min_vol_surge and bar.close < bar.open and close_to_low >= 0.85:
         return TriggerSignal(
             triggered=True,
             symbol=bar.symbol,

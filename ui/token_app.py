@@ -573,6 +573,89 @@ def execute_order_endpoint():
     status_code = 200 if result.get("success") else 422
     return jsonify(result), status_code
 
+@app.route("/api/orders/modify", methods=["POST"])
+def modify_order_endpoint():
+    """Modifies a resting broker order (e.g. SL ratchet / breakeven)."""
+    if not is_authorized(request):
+        return jsonify({"error": "Unauthorized"}), 401
+    data = request.get_json(force=True, silent=True) or {}
+    order_id = data.get("order_id")
+    trigger_price = float(data.get("trigger_price", 0.0))
+    price = float(data.get("price", 0.0))
+    quantity = int(data.get("quantity", 0))
+    order_type = data.get("order_type", "SL")
+    variety = data.get("variety", "regular")
+
+    gateway = SovereignExecutionGateway()
+    if not gateway.kite_exec:
+        return jsonify({"success": False, "error": "Broker not connected"}), 422
+    try:
+        mod_res = gateway.kite_exec.modify_order(
+            variety=variety,
+            order_id=order_id,
+            order_type=order_type,
+            quantity=quantity,
+            trigger_price=trigger_price,
+            price=price
+        )
+        return jsonify({"success": True, "order_id": mod_res}), 200
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 422
+
+@app.route("/api/orders/cancel", methods=["POST"])
+def cancel_order_endpoint():
+    """Cancels a resting broker order."""
+    if not is_authorized(request):
+        return jsonify({"error": "Unauthorized"}), 401
+    data = request.get_json(force=True, silent=True) or {}
+    order_id = data.get("order_id")
+    variety = data.get("variety", "regular")
+
+    gateway = SovereignExecutionGateway()
+    if not gateway.kite_exec:
+        return jsonify({"success": False, "error": "Broker not connected"}), 422
+    try:
+        cancel_res = gateway.kite_exec.cancel_order(variety=variety, order_id=order_id)
+        return jsonify({"success": True, "order_id": cancel_res}), 200
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 422
+
+@app.route("/api/orders/exit", methods=["POST"])
+def exit_order_endpoint():
+    """Cancels resting SL and places aggressive limit sell order to exit position."""
+    if not is_authorized(request):
+        return jsonify({"error": "Unauthorized"}), 401
+    data = request.get_json(force=True, silent=True) or {}
+    sl_order_id = data.get("sl_order_id")
+    symbol = data.get("symbol")
+    quantity = int(data.get("quantity", 0))
+    price = float(data.get("price", 0.0))
+
+    gateway = SovereignExecutionGateway()
+    if not gateway.kite_exec:
+        return jsonify({"success": False, "error": "Broker not connected"}), 422
+
+    if sl_order_id:
+        try:
+            gateway.kite_exec.cancel_order(variety=gateway.kite_exec.VARIETY_REGULAR, order_id=sl_order_id)
+        except Exception as e:
+            logger.warning(f"Could not cancel resting SL {sl_order_id}: {e}")
+
+    try:
+        exit_order_id = gateway.kite_exec.place_order(
+            variety=gateway.kite_exec.VARIETY_REGULAR,
+            exchange=gateway.kite_exec.EXCHANGE_NFO,
+            tradingsymbol=symbol,
+            transaction_type=gateway.kite_exec.TRANSACTION_TYPE_SELL,
+            quantity=quantity,
+            product=gateway.kite_exec.PRODUCT_NRML,
+            order_type=gateway.kite_exec.ORDER_TYPE_LIMIT,
+            price=price
+        )
+        return jsonify({"success": True, "order_id": exit_order_id}), 200
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 422
+
 @app.route("/api/positions", methods=["GET"])
 def get_positions_endpoint():
     """Returns live open positions on the execution account."""

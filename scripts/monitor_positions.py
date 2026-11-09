@@ -202,6 +202,8 @@ def monitor_positions():
                 if book_qty > 0:
                     if live_buy_flag.lower() == "true":
                         try:
+                            # NSE blocks ORDER_TYPE_MARKET for stock options
+                            limit_partial_px = max(0.05, round(round(ltp * 0.90 / 0.05) * 0.05, 2))
                             kite_exec.place_order(
                                 variety=kite_exec.VARIETY_REGULAR,
                                 exchange=kite_exec.EXCHANGE_NFO,
@@ -209,7 +211,8 @@ def monitor_positions():
                                 transaction_type=kite_exec.TRANSACTION_TYPE_SELL,
                                 quantity=book_qty,
                                 product=kite_exec.PRODUCT_NRML,
-                                order_type=kite_exec.ORDER_TYPE_MARKET
+                                order_type=kite_exec.ORDER_TYPE_LIMIT,
+                                price=limit_partial_px
                             )
                             print(f"✅ Booked {book_qty} lots at Tier 1 profit target")
                         except Exception as e:

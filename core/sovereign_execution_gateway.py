@@ -58,7 +58,7 @@ class SovereignExecutionGateway:
 
         try:
             margins = self.kite_exec.margins(segment="equity")
-            avail = margins.get("available", {})
+            avail = margins.get("available", margins.get("equity", {}).get("available", {}))
             # live_balance includes cash + collateral - intraday payins
             available_cash = float(avail.get("live_balance", avail.get("cash", 0.0)))
             
@@ -83,8 +83,8 @@ class SovereignExecutionGateway:
         else:
             target = entry_premium * 1.01
 
-        # Round to nearest 0.05 tick
-        return round(round(target / 0.05) * 0.05, 2)
+        # Round to nearest 0.05 tick, minimum 0.05
+        return max(0.05, round(round(target / 0.05) * 0.05, 2))
 
     def verify_order_fill_after_10s(
         self,
@@ -98,6 +98,9 @@ class SovereignExecutionGateway:
         {
             "status": "COMPLETE" | "OPEN" | "REJECTED" | "CANCELLED",
             "average_price": float,
+            "filled_quantity": int,
+            "pending_quantity": int,
+            "quantity": int,
             "status_message": str,
             "unfilled_reason": str
         }
@@ -106,6 +109,9 @@ class SovereignExecutionGateway:
         last_status = "UNKNOWN"
         status_message = ""
         avg_price = 0.0
+        filled_qty = 0
+        pending_qty = 0
+        total_qty = 0
 
         while time.time() - start_time < timeout_seconds:
             try:
@@ -115,11 +121,17 @@ class SovereignExecutionGateway:
                     last_status = latest.get("status", "UNKNOWN")
                     status_message = latest.get("status_message", "")
                     avg_price = float(latest.get("average_price", 0.0) or 0.0)
+                    filled_qty = int(latest.get("filled_quantity", 0) or 0)
+                    pending_qty = int(latest.get("pending_quantity", 0) or 0)
+                    total_qty = int(latest.get("quantity", 0) or 0)
 
                     if last_status in ("COMPLETE", "REJECTED", "CANCELLED"):
                         return {
                             "status": last_status,
                             "average_price": avg_price,
+                            "filled_quantity": filled_qty,
+                            "pending_quantity": pending_qty,
+                            "quantity": total_qty,
                             "status_message": status_message,
                             "unfilled_reason": ""
                         }
@@ -132,6 +144,9 @@ class SovereignExecutionGateway:
         return {
             "status": last_status if last_status != "UNKNOWN" else "OPEN",
             "average_price": avg_price,
+            "filled_quantity": filled_qty,
+            "pending_quantity": pending_qty,
+            "quantity": total_qty,
             "status_message": status_message,
             "unfilled_reason": "Order remained unfilled after 10-second verification window"
         }
@@ -146,9 +161,12 @@ class SovereignExecutionGateway:
         """
         Places a broker-side SL-Limit SELL order once BUY order is filled.
         Because open long position exists, broker requires ₹0 extra margin.
+        Enforces NSE SL rules: trigger_price >= price and all prices >= 0.05 tick.
         """
-        trigger_sl = round(round(fill_price * hard_sl_pct / 0.05) * 0.05, 2)
-        limit_sl = round(round(trigger_sl * 0.95 / 0.05) * 0.05, 2)
+        trigger_sl = max(0.05, round(round(fill_price * hard_sl_pct / 0.05) * 0.05, 2))
+        limit_sl = max(0.05, round(round(trigger_sl * 0.95 / 0.05) * 0.05, 2))
+        if limit_sl >= trigger_sl and trigger_sl > 0.05:
+            limit_sl = max(0.05, round(trigger_sl - 0.05, 2))
 
         if not self.kite_exec:
             return f"SIM_SL_{int(time.time())}", trigger_sl, limit_sl
@@ -196,7 +214,17 @@ class SovereignExecutionGateway:
         """
         logger.info(f"⚡ [GATEWAY] Received execution request: {symbol} -> {option_symbol} (Lot: {lot_size}, Premium: ₹{entry_premium})")
 
-        # 1. Lot Size Ceiling Enforcement (< 600)
+        # 1. Input Sanity & Lot Size Ceiling Enforcement (< 600)
+        if entry_premium <= 0.05:
+            err_msg = f"Invalid entry premium ₹{entry_premium:.2f}. Must be > ₹0.05 tick size."
+            logger.error(f"🛑 [INVALID PREMIUM]: {err_msg}")
+            return {
+                "success": False,
+                "error": "INVALID_PREMIUM",
+                "message": err_msg,
+                "order_id": None
+            }
+
         lot_ok, lot_reason = self.check_lot_size(lot_size)
         if not lot_ok:
             self._notify_order_failure(
@@ -257,7 +285,28 @@ class SovereignExecutionGateway:
                 "is_simulation": True
             }
 
-        # 4. Submit Marketable Limit Order to Zerodha
+        # 4. Idempotency Guard: Prevent duplicate live order submission
+        if not is_amo:
+            try:
+                existing_orders = self.kite_exec.orders() or []
+                active_order = next((
+                    o for o in existing_orders
+                    if o.get("tradingsymbol") == option_symbol
+                    and o.get("transaction_type") == self.kite_exec.TRANSACTION_TYPE_BUY
+                    and o.get("status") in ("COMPLETE", "OPEN", "TRIGGER PENDING")
+                ), None)
+                if active_order:
+                    logger.warning(f"🛡️ [IDEMPOTENCY GUARD] Active BUY order {active_order['order_id']} already exists for {option_symbol} (status={active_order['status']}). Preventing duplicate submission.")
+                    return {
+                        "success": active_order["status"] == "COMPLETE",
+                        "status": active_order["status"],
+                        "order_id": active_order["order_id"],
+                        "message": f"Idempotent: Order already active on broker ({active_order['order_id']})"
+                    }
+            except Exception as e:
+                logger.warning(f"Could not check order book for idempotency: {e}")
+
+        # 5. Submit Marketable Limit Order to Zerodha
         order_tag = f"MS_{symbol[:6]}_{int(time.time()) % 100000}"[:20]
         order_variety = self.kite_exec.VARIETY_AMO if is_amo else self.kite_exec.VARIETY_REGULAR
         try:
@@ -302,12 +351,14 @@ class SovereignExecutionGateway:
                 "message": f"AMO limit order placed successfully and is OPEN: {buy_order_id}"
             }
 
-        # 5. 10-Second Order Execution Check
+        # 6. 10-Second Order Execution Check with Partial Fill Protection
         fill_result = self.verify_order_fill_after_10s(buy_order_id, timeout_seconds=10, poll_interval=2.0)
         order_status = fill_result["status"]
+        filled_quantity = int(fill_result.get("filled_quantity", 0) or 0)
+        avg_price = float(fill_result.get("average_price", 0.0) or 0.0)
 
         if order_status == "COMPLETE":
-            fill_price = fill_result["average_price"] or limit_price
+            fill_price = avg_price or limit_price
             logger.info(f"🎯 ORDER FILLED: {buy_order_id} @ ₹{fill_price:.2f}")
 
             # Place broker-level stop loss immediately
@@ -356,39 +407,152 @@ class SovereignExecutionGateway:
                 "fill_price": fill_price,
                 "order_id": buy_order_id,
                 "sl_order_id": sl_order_id,
-                "lot_size": lot_size
+                "lot_size": lot_size,
+                "filled_quantity": lot_size
             }
 
         elif order_status in ("OPEN", "TRIGGER PENDING"):
-            # Order unfilled after 10s: Cancel immediately to prevent chasing
-            logger.warning(f"⚠️ Order {buy_order_id} unfilled after 10s. Initiating protective cancel...")
+            # Order unfilled or partially filled after 10s: Cancel remainder immediately
+            logger.warning(f"⚠️ Order {buy_order_id} incomplete after 10s. Initiating protective cancel for remainder...")
             try:
                 self.kite_exec.cancel_order(
                     variety=self.kite_exec.VARIETY_REGULAR,
                     order_id=buy_order_id
                 )
-                cancel_status = "CANCELLED_PROTECTIVE"
             except Exception as e:
-                cancel_status = f"CANCEL_ERROR: {e}"
+                logger.warning(f"Error cancelling remaining order {buy_order_id}: {e}")
 
-            reason_text = f"Unfilled after 10s window (Market moved past ₹{limit_price:.2f}). Stale order cancelled safely."
-            self._notify_order_failure(
-                symbol=symbol,
-                option_symbol=option_symbol,
-                reason=reason_text,
-                failure_type="UNFILLED_10S_TIMEOUT"
-            )
+            # Query order history post-cancel to get definitive final filled quantity
+            final_filled_qty = filled_quantity
+            final_avg_price = avg_price or limit_price
+            try:
+                history = self.kite_exec.order_history(buy_order_id)
+                if history:
+                    latest = history[-1]
+                    final_filled_qty = int(latest.get("filled_quantity", 0) or 0)
+                    final_avg_price = float(latest.get("average_price", 0.0) or final_avg_price)
+            except Exception as e:
+                logger.warning(f"Could not fetch post-cancel order history: {e}")
 
-            return {
-                "success": False,
-                "status": "CANCELLED_TIMEOUT",
-                "error": "UNFILLED_TIMEOUT",
-                "message": reason_text,
-                "order_id": buy_order_id
-            }
+            if final_filled_qty > 0:
+                # PARTIAL FILL PROTECTION:
+                # Remainder cancelled, but we own final_filled_qty shares!
+                logger.warning(f"⚠️ PARTIAL FILL DETECTED: {final_filled_qty}/{lot_size} filled for {buy_order_id}. Placing protective SL...")
+                sl_order_id, trigger_sl, limit_sl = self.place_protective_stop_loss(
+                    option_symbol=option_symbol,
+                    fill_price=final_avg_price,
+                    lot_size=final_filled_qty
+                )
+                try:
+                    save_active_position({
+                        "symbol": symbol,
+                        "direction": direction,
+                        "instrument_type": instrument_type,
+                        "option_symbol": option_symbol,
+                        "entry_price": final_avg_price,
+                        "entry_time": datetime.now().isoformat(),
+                        "quantity": final_filled_qty,
+                        "stop_loss": trigger_sl,
+                        "target_price": round(final_avg_price * 1.25, 2),
+                        "holding_type": holding_type,
+                        "order_id": buy_order_id,
+                        "sl_order_id": sl_order_id,
+                        "score": score,
+                        "catalyst": catalyst
+                    })
+                except Exception as e:
+                    logger.warning(f"Could not persist partial position to database: {e}")
+
+                self._notify_partial_fill_executed(
+                    symbol=symbol,
+                    option_symbol=option_symbol,
+                    fill_price=final_avg_price,
+                    filled_quantity=final_filled_qty,
+                    total_lot_size=lot_size,
+                    sl_price=trigger_sl,
+                    order_id=buy_order_id,
+                    sl_order_id=sl_order_id or "MANUAL_REQUIRED",
+                    catalyst=catalyst
+                )
+
+                return {
+                    "success": True,
+                    "status": "PARTIAL_FILL",
+                    "fill_price": final_avg_price,
+                    "filled_quantity": final_filled_qty,
+                    "lot_size": lot_size,
+                    "order_id": buy_order_id,
+                    "sl_order_id": sl_order_id
+                }
+            else:
+                reason_text = f"Unfilled after 10s window (Market moved past ₹{limit_price:.2f}). Stale order cancelled safely with 0 exposure."
+                self._notify_order_failure(
+                    symbol=symbol,
+                    option_symbol=option_symbol,
+                    reason=reason_text,
+                    failure_type="UNFILLED_10S_TIMEOUT"
+                )
+
+                return {
+                    "success": False,
+                    "status": "CANCELLED_TIMEOUT",
+                    "error": "UNFILLED_TIMEOUT",
+                    "message": reason_text,
+                    "order_id": buy_order_id,
+                    "filled_quantity": 0
+                }
 
         else:
             # REJECTED or CANCELLED by broker
+            # Even if status is CANCELLED/REJECTED, check if any quantity was filled before cancel
+            if filled_quantity > 0:
+                logger.warning(f"⚠️ Order {buy_order_id} ended in status {order_status} with {filled_quantity} qty filled! Placing SL...")
+                sl_order_id, trigger_sl, limit_sl = self.place_protective_stop_loss(
+                    option_symbol=option_symbol,
+                    fill_price=avg_price or limit_price,
+                    lot_size=filled_quantity
+                )
+                try:
+                    save_active_position({
+                        "symbol": symbol,
+                        "direction": direction,
+                        "instrument_type": instrument_type,
+                        "option_symbol": option_symbol,
+                        "entry_price": avg_price or limit_price,
+                        "entry_time": datetime.now().isoformat(),
+                        "quantity": filled_quantity,
+                        "stop_loss": trigger_sl,
+                        "target_price": round((avg_price or limit_price) * 1.25, 2),
+                        "holding_type": holding_type,
+                        "order_id": buy_order_id,
+                        "sl_order_id": sl_order_id,
+                        "score": score,
+                        "catalyst": catalyst
+                    })
+                except Exception as e:
+                    logger.warning(f"Could not persist partial position to database: {e}")
+
+                self._notify_partial_fill_executed(
+                    symbol=symbol,
+                    option_symbol=option_symbol,
+                    fill_price=avg_price or limit_price,
+                    filled_quantity=filled_quantity,
+                    total_lot_size=lot_size,
+                    sl_price=trigger_sl,
+                    order_id=buy_order_id,
+                    sl_order_id=sl_order_id or "MANUAL_REQUIRED",
+                    catalyst=catalyst
+                )
+                return {
+                    "success": True,
+                    "status": "PARTIAL_FILL",
+                    "fill_price": avg_price or limit_price,
+                    "filled_quantity": filled_quantity,
+                    "lot_size": lot_size,
+                    "order_id": buy_order_id,
+                    "sl_order_id": sl_order_id
+                }
+
             reason_text = fill_result.get("status_message") or f"Broker status: {order_status}"
             logger.error(f"❌ Order {buy_order_id} ended in status {order_status}: {reason_text}")
             self._notify_order_failure(
@@ -402,7 +566,8 @@ class SovereignExecutionGateway:
                 "status": order_status,
                 "error": "BROKER_REJECTION",
                 "message": reason_text,
-                "order_id": buy_order_id
+                "order_id": buy_order_id,
+                "filled_quantity": 0
             }
 
     # =========================================================================
@@ -473,6 +638,73 @@ class SovereignExecutionGateway:
             self.emailer.send_live_alert(subject, html)
         except Exception as e:
             logger.error(f"Failed to dispatch order executed email: {e}")
+
+    def _notify_partial_fill_executed(
+        self,
+        symbol: str,
+        option_symbol: str,
+        fill_price: float,
+        filled_quantity: int,
+        total_lot_size: int,
+        sl_price: float,
+        order_id: str,
+        sl_order_id: str,
+        catalyst: str = ""
+    ):
+        target_price = round(fill_price * 1.25, 2)
+        invested = round(fill_price * filled_quantity, 2)
+
+        subject = f"[ORDER PARTIALLY EXECUTED] {symbol} {option_symbol} ({filled_quantity}/{total_lot_size} Filled @ ₹{fill_price:.2f})"
+        
+        html = f"""
+        <div style="background: rgba(234, 179, 8, 0.1); border-left: 5px solid #eab308; border-radius: 6px; padding: 20px; margin-bottom: 25px; border: 1px solid rgba(234, 179, 8, 0.3);">
+            <div style="font-size: 18px; font-weight: bold; color: #eab308; margin-bottom: 10px;">
+                ⚠️ ORDER PARTIALLY EXECUTED - PROTECTIVE SL PLACED
+            </div>
+            <p style="margin: 0 0 15px 0; color: #c9d1d9; font-size: 14px;">
+                The 10-second fill window timed out with a partial fill. Unfilled contracts ({total_lot_size - filled_quantity} shares) were <b>safely cancelled</b> to prevent slippage. A protective stop loss was immediately placed for the <b>{filled_quantity} shares filled</b>.
+            </p>
+            <table width="100%" style="font-size: 14px; color: #c9d1d9; border-collapse: collapse;">
+                <tr>
+                    <td style="padding: 6px 0;"><b>Underlying:</b></td>
+                    <td style="text-align: right; color: #ffffff; font-weight: bold;">{symbol}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 0;"><b>Contract:</b></td>
+                    <td style="text-align: right; color: #58a6ff; font-family: monospace;">{option_symbol}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 0;"><b>Filled / Requested:</b></td>
+                    <td style="text-align: right; color: #eab308; font-weight: bold;">{filled_quantity} / {total_lot_size} shares</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 0;"><b>Average Fill Price:</b></td>
+                    <td style="text-align: right; color: #3fb950; font-weight: bold; font-size: 16px;">₹{fill_price:.2f}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 0;"><b>Capital Invested:</b></td>
+                    <td style="text-align: right; color: #ffffff;">₹{invested:,.2f}</td>
+                </tr>
+                <tr style="border-top: 1px solid #30363d;">
+                    <td style="padding: 8px 0; color: #ff7b72;"><b>Protective Stop-Loss:</b></td>
+                    <td style="text-align: right; color: #ff7b72; font-weight: bold;">₹{sl_price:.2f} (-15.0%)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 0; color: #58a6ff;"><b>Primary Target (T1):</b></td>
+                    <td style="text-align: right; color: #58a6ff; font-weight: bold;">₹{target_price:.2f} (+25.0%)</td>
+                </tr>
+                <tr style="border-top: 1px solid #30363d;">
+                    <td style="padding: 6px 0; font-size: 12px; color: #8b949e;">Order ID / SL ID:</td>
+                    <td style="text-align: right; font-size: 12px; color: #8b949e; font-family: monospace;">{order_id} / {sl_order_id}</td>
+                </tr>
+            </table>
+            {f'<div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(234, 179, 8, 0.2); font-size: 12px; color: #8b949e;"><b>Catalyst Grounding:</b> {catalyst}</div>' if catalyst else ''}
+        </div>
+        """
+        try:
+            self.emailer.send_live_alert(subject, html)
+        except Exception as e:
+            logger.error(f"Failed to dispatch partial fill email: {e}")
 
     def _notify_insufficient_funds(
         self,

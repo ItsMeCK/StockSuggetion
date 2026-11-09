@@ -78,3 +78,45 @@ def test_5m_trigger_engine_batches_watchlist():
     # Invariant: Single batch quote call
     mock_kite.quote.assert_called_once_with(["NSE:RELIANCE", "NSE:INFY"])
     assert isinstance(signals, list)
+
+def test_evaluate_5m_trigger_respects_watchlist_direction_bias():
+    """Verifies that a SHORT-bias watchlist stock ignores bullish bounces and only triggers on PE breakdowns."""
+    # Bullish green candle on MPHASIS
+    bullish_bar = FiveMinuteBar(
+        symbol="MPHASIS",
+        timestamp=datetime(2026, 10, 25, 10, 35),
+        open=2530.0,
+        high=2552.0,
+        low=2528.0,
+        close=2551.0,
+        volume=50000,
+        vol_sma_20=10000,
+        sma_20=2535.0
+    )
+    # With direction_bias="SHORT", this green spike MUST NOT trigger CE!
+    signal_short = evaluate_5m_trigger(bullish_bar, direction_bias="SHORT")
+    assert signal_short.triggered is False
+
+    # With direction_bias="LONG", this green spike triggers CE
+    signal_long = evaluate_5m_trigger(bullish_bar, direction_bias="LONG")
+    assert signal_long.triggered is True
+    assert signal_long.direction == "LONG"
+    assert signal_long.instrument_type == "CE"
+
+    # Bearish red candle on MPHASIS
+    bearish_bar = FiveMinuteBar(
+        symbol="MPHASIS",
+        timestamp=datetime(2026, 10, 25, 11, 20),
+        open=2540.0,
+        high=2542.0,
+        low=2510.0,
+        close=2512.0,
+        volume=60000,
+        vol_sma_20=15000,
+        sma_20=2535.0
+    )
+    # With direction_bias="SHORT", the red breakdown triggers PE
+    signal_pe = evaluate_5m_trigger(bearish_bar, direction_bias="SHORT")
+    assert signal_pe.triggered is True
+    assert signal_pe.direction == "SHORT"
+    assert signal_pe.instrument_type == "PE"

@@ -194,7 +194,13 @@ def execute_trade(
     if live_buy_flag.lower() == "true":
         try:
             margins = kite_exec.margins(segment="equity")
-            free_cash = float(margins.get("available", {}).get("cash", 0.0))
+            avail = margins.get("available", {})
+            if "live_balance" in avail and avail["live_balance"] is not None:
+                free_cash = float(avail["live_balance"])
+            elif "cash" in avail and avail["cash"] is not None:
+                free_cash = float(avail["cash"])
+            else:
+                free_cash = float(margins.get("net", 0.0))
             total_equity = float(margins.get("net", total_equity))
         except Exception as e:
             print(f"Warning: Could not fetch real-time margins from Zerodha: {e}")
@@ -219,7 +225,7 @@ def execute_trade(
     # Fail-Closed Live Money Condition:
     # 1. LIVE_BUY must be True
     # 2. Gatekeeper must approve
-    # 3. Allocated capital must be > 0 (ONLY ENGINE_2_BTST passes this; ENGINE_1_HOURLY gets ₹0)
+    # 3. Allocated capital must be > 0 (Authorized live engines get > ₹0)
     is_live_order_authorized = (
         live_buy_flag.lower() == "true" and 
         is_approved and 
@@ -232,8 +238,11 @@ def execute_trade(
 
     if is_live_order_authorized:
         lot_cost = entry_premium * lot_size
-        if allocated_capital < lot_cost:
-            print(f"⚠️ Warning: Allocated capital ₹{allocated_capital:.2f} < Lot Cost ₹{lot_cost:.2f}. Falling back to PAPER simulation.")
+        if lot_cost > free_cash:
+            print(f"⚠️ Warning: Lot Cost ₹{lot_cost:.2f} exceeds available cash ₹{free_cash:.2f}. Falling back to PAPER simulation.")
+            is_live_order_authorized = False
+        elif allocated_capital < lot_cost and os.getenv("STRICT_ALLOCATION_CAP", "False").lower() == "true":
+            print(f"⚠️ Warning: Allocated capital ₹{allocated_capital:.2f} < Lot Cost ₹{lot_cost:.2f} under strict cap. Falling back to PAPER simulation.")
             is_live_order_authorized = False
 
         # Sovereign Risk Rule: Automated live execution permitted ONLY if lot_size < 600
@@ -258,7 +267,42 @@ def execute_trade(
                     holding_type=holding_type
                 )
                 if gcp_res.get("success"):
-                    print(f"✅ [GCP GATEWAY] Successfully executed on remote GCP service: Order ID {gcp_res.get('order_id')}")
+                    remote_order_id = gcp_res.get("order_id")
+                    remote_sl_id = gcp_res.get("sl_order_id")
+                    remote_fill = gcp_res.get("fill_price", entry_premium)
+                    print(f"✅ [GCP GATEWAY] Successfully executed on remote GCP service: Order ID {remote_order_id} (SL: {remote_sl_id})")
+                    position = {
+                        "order_id": remote_order_id,
+                        "sl_order_id": remote_sl_id,
+                        "status": "LIVE_TRADED",
+                        "entry_time": entry_time.isoformat(),
+                        "symbol": symbol,
+                        "option_symbol": option_symbol,
+                        "option_token": option_token,
+                        "spot_entry": spot_price,
+                        "entry_premium": remote_fill,
+                        "qty": lot_size,
+                        "score": score,
+                        "catalyst": catalyst,
+                        "current_sl": round(round(remote_fill * 0.85 / 0.05) * 0.05, 2),
+                        "highest_high": remote_fill,
+                        "trailing_active": False,
+                        "profit_locked": False,
+                        "holding_type": holding_type,
+                        "direction": direction,
+                        "instrument_type": target_inst_type,
+                        "initial_oi": initial_oi,
+                        "highest_oi": initial_oi,
+                        "initial_volume": initial_volume
+                    }
+                    try:
+                        save_active_position(position)
+                        print(f"✅ Position saved to local DB: {remote_order_id} (SL: {remote_sl_id})")
+                    except Exception as e:
+                        print(f"⚠️ Could not save position to local DB: {e}")
+                    return
+                elif gcp_res.get("error") in ("INSUFFICIENT_FUNDS", "LOT_SIZE_EXCEEDED", "INVALID_PREMIUM"):
+                    print(f"🛑 [GCP GATEWAY] Trade rejected by gateway policy: {gcp_res.get('message')}")
                     return
                 else:
                     print(f"⚠️ [GCP GATEWAY] Remote execution returned: {gcp_res.get('error')}. Falling back to local execution.")

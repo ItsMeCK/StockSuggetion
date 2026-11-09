@@ -182,3 +182,107 @@ def test_gateway_amo_order_stays_open_without_cancellation():
     )
     mock_kite.cancel_order.assert_not_called()
 
+def test_gateway_partial_fill_places_sl_for_filled_quantity_and_persists():
+    mock_kite = MagicMock()
+    mock_emailer = MagicMock()
+    
+    mock_kite.margins.return_value = {"available": {"live_balance": 50000.0}}
+    mock_kite.place_order.side_effect = ["ORD_BUY_PARTIAL", "ORD_SL_PARTIAL"]
+    mock_kite.orders.return_value = []
+    
+    # 200 out of 500 shares filled when timeout occurs
+    mock_kite.order_history.return_value = [
+        {"status": "CANCELLED", "filled_quantity": 200, "average_price": 24.50}
+    ]
+    
+    gateway = SovereignExecutionGateway(kite_exec=mock_kite, emailer=mock_emailer)
+    
+    with patch.object(gateway, "verify_order_fill_after_10s") as mock_verify, \
+         patch("core.sovereign_execution_gateway.save_active_position") as mock_save:
+        
+        mock_verify.return_value = {
+            "status": "OPEN",
+            "average_price": 24.50,
+            "filled_quantity": 200,
+            "pending_quantity": 300,
+            "quantity": 500,
+            "status_message": "Partially filled"
+        }
+        
+        result = gateway.execute_option_order(
+            symbol="KPITTECH",
+            option_symbol="KPITTECH26NOV520CE",
+            lot_size=500,
+            entry_premium=24.0
+        )
+        
+        assert result["success"] is True
+        assert result["status"] == "PARTIAL_FILL"
+        assert result["filled_quantity"] == 200
+        assert result["fill_price"] == 24.50
+        assert result["order_id"] == "ORD_BUY_PARTIAL"
+        assert result["sl_order_id"] == "ORD_SL_PARTIAL"
+        
+        # Verify remainder cancelled
+        mock_kite.cancel_order.assert_called_once_with(
+            variety=mock_kite.VARIETY_REGULAR,
+            order_id="ORD_BUY_PARTIAL"
+        )
+        
+        # Verify protective SL placed for exactly 200 qty (not 500)
+        sl_call = mock_kite.place_order.call_args_list[1]
+        assert sl_call[1]["quantity"] == 200
+        assert sl_call[1]["order_type"] == mock_kite.ORDER_TYPE_SL
+        
+        # Verify saved to database ledger
+        mock_save.assert_called_once()
+        saved_pos = mock_save.call_args[0][0]
+        assert saved_pos["quantity"] == 200
+        assert saved_pos["entry_price"] == 24.50
+        
+        # Verify partial fill email dispatched
+        mock_emailer.send_live_alert.assert_called_once()
+        subject = mock_emailer.send_live_alert.call_args[0][0]
+        assert "[ORDER PARTIALLY EXECUTED]" in subject
+        assert "200/500" in subject
+
+def test_gateway_idempotency_prevents_duplicate_submission():
+    mock_kite = MagicMock()
+    mock_emailer = MagicMock()
+    mock_kite.margins.return_value = {"available": {"live_balance": 50000.0}}
+    
+    # Existing active buy order already in book
+    mock_kite.orders.return_value = [
+        {
+            "order_id": "ORD_EXISTING_111",
+            "tradingsymbol": "JSWSTEEL26NOV1280CE",
+            "transaction_type": mock_kite.TRANSACTION_TYPE_BUY,
+            "status": "OPEN"
+        }
+    ]
+    
+    gateway = SovereignExecutionGateway(kite_exec=mock_kite, emailer=mock_emailer)
+    
+    result = gateway.execute_option_order(
+        symbol="JSWSTEEL",
+        option_symbol="JSWSTEEL26NOV1280CE",
+        lot_size=350,
+        entry_premium=35.0
+    )
+    
+    assert result["order_id"] == "ORD_EXISTING_111"
+    assert "Idempotent" in result["message"]
+    mock_kite.place_order.assert_not_called()
+
+def test_gateway_rejects_sub_tick_entry_premium():
+    gateway = SovereignExecutionGateway()
+    result = gateway.execute_option_order(
+        symbol="TATACHEM",
+        option_symbol="TATACHEM26NOV1000CE",
+        lot_size=400,
+        entry_premium=0.02
+    )
+    assert result["success"] is False
+    assert result["error"] == "INVALID_PREMIUM"
+
+

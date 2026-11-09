@@ -28,9 +28,9 @@ def test_dynamic_25_pct_allocation_btst():
     assert capital == 2500.0
     assert "APPROVED_BTST" in reason
 
-def test_engine_1_paper_only_zero_live_capital():
+def test_engine_1_hourly_allocates_live_capital():
     gatekeeper = CapitalRiskGatekeeper()
-    # Engine 1 has unverified standalone edge -> must route to paper simulation with ₹0 live money
+    # Engine 1 Hourly is authorized for live execution per user policy (25% cap)
     approved, capital, reason = gatekeeper.evaluate_entry(
         engine_type="ENGINE_1_HOURLY",
         free_cash=20000.0,
@@ -38,8 +38,8 @@ def test_engine_1_paper_only_zero_live_capital():
         active_positions=[]
     )
     assert approved is True
-    assert capital == 0.0
-    assert "PAPER_TRADE_ONLY" in reason
+    assert capital == 5000.0
+    assert "APPROVED_ENGINE_1_HOURLY" in reason
 
 def test_fail_closed_unknown_or_typo_engine_type():
     gatekeeper = CapitalRiskGatekeeper()
@@ -97,22 +97,22 @@ def test_5_pct_daily_drawdown_circuit_breaker():
     assert approved is False
     assert "CIRCUIT_BREAKER_HALT" in reason
 
-def test_risk_gatekeeper_time_of_day_morning_routes_to_paper_simulation():
+def test_risk_gatekeeper_time_of_day_outside_market_hours_routes_to_paper_simulation():
     from datetime import datetime
     gatekeeper = CapitalRiskGatekeeper()
-    # At 10:30 AM (outside 12:15 - 15:15 window), even with ENGINE_2_BTST and ample cash,
+    # At 08:30 AM (outside 09:15 - 15:30 live market window), even with ample cash,
     # it must fail-close to paper trade with ₹0 live money to protect capital.
     approved, capital, reason = gatekeeper.evaluate_entry(
         engine_type="ENGINE_2_BTST",
         free_cash=50000.0,
         total_equity=50000.0,
-        current_time=datetime(2026, 10, 25, 10, 30),
+        current_time=datetime(2026, 10, 25, 8, 30),
         active_positions=[]
     )
     assert approved is True
     assert capital == 0.0
     assert "PAPER_TRADE_ONLY" in reason
-    assert "outside the live afternoon window" in reason
+    assert "outside live market hours" in reason
 
 def test_risk_gatekeeper_time_of_day_afternoon_approves_live_btst():
     from datetime import datetime

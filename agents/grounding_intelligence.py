@@ -163,8 +163,10 @@ You MUST respond ONLY with valid JSON in this exact structure, with no markdown 
                 stealth_conf *= 0.50
                 parsed["stealth_accumulation"]["confidence"] = stealth_conf
 
-        # 3. Deterministic Code-Level Score Calculation (Frozen Weights)
-        final_score = round((WEIGHT_PUBLIC_CATALYST * (pub_conf * 100)) + (WEIGHT_STEALTH_ACCUMULATION * (stealth_conf * 100)), 2)
+        # 3. Deterministic Code-Level Score Calculation (Normalized out of 100)
+        raw_weighted_score = (WEIGHT_PUBLIC_CATALYST * (pub_conf * 100)) + (WEIGHT_STEALTH_ACCUMULATION * (stealth_conf * 100))
+        total_weight = WEIGHT_PUBLIC_CATALYST + WEIGHT_STEALTH_ACCUMULATION
+        final_score = round(raw_weighted_score / total_weight, 2)
         verdict = final_score >= APPROVAL_THRESHOLD
 
         if verdict:

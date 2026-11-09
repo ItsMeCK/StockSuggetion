@@ -183,3 +183,67 @@ def test_btst_fill_verifier_paper_trade_audit(
     assert res[0]["ltp"] == 52.5
     assert res[0]["current_sl"] == 42.5  # 50.0 * 0.85 = 42.5
     assert mock_update_fill.called
+
+
+@patch("scripts.btst_fill_verifier.get_kite_data_client")
+@patch("scripts.btst_fill_verifier.get_kite_exec_client")
+@patch("scripts.btst_fill_verifier.SovereignEmailer")
+@patch("scripts.btst_fill_verifier.get_all_active_positions")
+@patch("scripts.btst_fill_verifier.update_entry_fill")
+def test_btst_fill_verifier_partial_fill_at_326_cancels_remainder_and_places_sl(
+    mock_update_fill,
+    mock_get_positions,
+    mock_emailer_cls,
+    mock_kite_exec_fn,
+    mock_kite_data_fn,
+    mock_ist_time
+):
+    mock_emailer = MagicMock()
+    mock_emailer_cls.return_value = mock_emailer
+
+    mock_exec = MagicMock()
+    # 250 out of 500 filled before 3:26 PM
+    mock_exec.order_history.return_value = [
+        {"order_id": "2410110003", "status": "OPEN", "filled_quantity": 250, "average_price": 45.0}
+    ]
+    mock_exec.place_order.return_value = "SL_ORDER_PARTIAL"
+    mock_kite_exec_fn.return_value = mock_exec
+
+    pos = {
+        "order_id": "2410110003",
+        "sl_order_id": None,
+        "status": "LIVE_TRADED",
+        "entry_time": "2026-10-11T15:15:00",
+        "symbol": "JSWSTEEL",
+        "option_symbol": "JSWSTEEL26OCT1280CE",
+        "option_token": 55555,
+        "spot_entry": 1270.0,
+        "entry_premium": 44.0,
+        "qty": 500,
+        "score": 88,
+        "catalyst": "MOMENTUM_IGNITION",
+        "current_sl": 0.0,
+        "holding_type": "TYPE_C_BTST"
+    }
+    mock_get_positions.return_value = [pos]
+
+    res = run_btst_fill_verifier(now=mock_ist_time, force_check=True)
+    assert len(res) == 1
+    assert res[0]["action"] == "PARTIAL_FILL_PROTECTED"
+    assert res[0]["filled_qty"] == 250
+
+    # Cancel remainder called
+    mock_exec.cancel_order.assert_called_once_with(
+        variety=mock_exec.VARIETY_REGULAR,
+        order_id="2410110003"
+    )
+
+    # Protective SL placed for 250 qty
+    mock_exec.place_order.assert_called_once()
+    sl_call_kwargs = mock_exec.place_order.call_args[1]
+    assert sl_call_kwargs["quantity"] == 250
+    assert sl_call_kwargs["order_type"] == mock_exec.ORDER_TYPE_SL
+
+    # Email notification sent
+    assert any("PARTIALLY FILLED AT 3:26 PM" in call[0][0] for call in mock_emailer.send_live_alert.call_args_list)
+

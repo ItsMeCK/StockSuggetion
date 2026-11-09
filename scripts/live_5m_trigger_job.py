@@ -26,7 +26,7 @@ def run_5m_trigger_cycle(now_dt=None):
     - Evaluates closed 5-minute bars on Active Focus Watchlist tickers.
     - Rate Limits: Batches quote requests and spaces historical data calls (0.35s sleep) to respect Zerodha limits.
     - Session Routing:
-        * 09:30 - 12:14 PM: Morning Scalp Session (ENGINE_1_HOURLY -> 100% Paper Simulation, ₹0 live risk).
+        * 09:30 - 12:14 PM: Morning Scalp Session (ENGINE_1_HOURLY -> Live Capital Authorized).
         * 12:15 - 15:15 PM: Afternoon Live Session (ENGINE_2_BTST -> Live Capital Authorized for overnight holds).
     - Dispatches confirmed momentum ignitions / breakdowns to execute_trade.
     """
@@ -68,7 +68,7 @@ def run_5m_trigger_cycle(now_dt=None):
     kite = KiteConnect(api_key=api_key)
     kite.set_access_token(access_token)
 
-    # 4. Session Determination: Morning Paper Scalp (09:30-12:14) vs Afternoon Live BTST (12:15-15:15)
+    # 4. Session Determination: Morning Intraday Scalp (09:30-12:14) vs Afternoon Live BTST (12:15-15:15)
     import time
     from datetime import time as dt_time
     now_time = now.time()
@@ -76,7 +76,7 @@ def run_5m_trigger_cycle(now_dt=None):
 
     holding_type = "TYPE_C_BTST" if is_afternoon_session else "TYPE_A_SCALP"
     engine_type = "ENGINE_2_BTST" if is_afternoon_session else "ENGINE_1_HOURLY"
-    session_label = "LIVE AFTERNOON BTST" if is_afternoon_session else "MORNING PAPER SCALP (₹0 Live Risk)"
+    session_label = "LIVE AFTERNOON BTST" if is_afternoon_session else "LIVE MORNING INTRADAY SCALP"
     logger.info(f"Session Profile: {session_label} | Engine: {engine_type} | Holding: {holding_type}")
 
     # 5. Batch Quote Fetching (Respect Zerodha single-call limit of 500 symbols)
@@ -146,8 +146,8 @@ def run_5m_trigger_cycle(now_dt=None):
                 sma_20=sma_20
             )
 
-            # Evaluate 5-minute trigger
-            signal = evaluate_5m_trigger(bar)
+            # Evaluate 5-minute trigger with Watchlist direction bias
+            signal = evaluate_5m_trigger(bar, direction_bias=stock.get("direction"))
             
             if signal.triggered:
                 logger.info(f"🚀 5-MINUTE TRIGGER FIRED for {symbol}: {signal.direction} ({signal.instrument_type}) | {session_label} | Reason: {signal.reason}")

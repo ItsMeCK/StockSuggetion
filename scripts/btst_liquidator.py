@@ -138,27 +138,80 @@ def run_btst_liquidator(now: datetime = None, force_exit: bool = False, dry_run:
         pnl_pct = ((ltp - entry_premium) / entry_premium) * 100
         print(f"📊 {opt_symbol}: Entry={entry_premium:.2f} | LTP={ltp:.2f} | PnL={pnl_pct:+.2f}%")
 
-        # 3. Evaluate Exit Decision Rules
+        # 3. Evaluate V2 Exit Decision Rules
+        # Rule 1: 09:15 - 09:20 AM Illiquid Spread Freeze (Prevent exiting into artificial spreads)
+        is_freeze_period = (now.hour == 9 and now.minute < 20) and not force_exit
+        if is_freeze_period:
+            print(f"❄️ [09:20 FREEZE] Holding {opt_symbol} through opening spread volatility (PnL: {pnl_pct:+.2f}%). Exits locked until 09:20 AM.")
+            continue
+
         should_exit = False
         exit_reason = ""
+        should_modify_sl = False
+        new_sl_price = 0.0
 
-        # Rule A (Provisional Heuristic): Gap Profit Lock (+15% or higher)
-        if pnl_pct >= 15.0:
+        highest_high = max(float(pos.get("highest_high", entry_premium)), ltp)
+        current_sl = float(pos.get("current_sl", entry_premium * 0.85))
+
+        # Check if resting Trailing / Breakeven SL was hit
+        if current_sl > entry_premium and ltp <= current_sl:
             should_exit = True
-            exit_reason = f"BTST Gap Profit Lock (+{pnl_pct:.1f}%)"
+            exit_reason = f"BTST Trailing Stop Hit (LTP {ltp:.2f} <= Trail {current_sl:.2f}, Gain: +{pnl_pct:.1f}%)"
 
-        # Rule B (Provisional Heuristic): Adverse Gap Cut (-10% or worse)
+        # Rule 2: Multi-Bagger Trailing Runner (+40% or higher gain)
+        elif pnl_pct >= 40.0:
+            trailing_sl = round_to_tick(highest_high * 0.85, 0.05)
+            if ltp <= trailing_sl:
+                should_exit = True
+                exit_reason = f"BTST Multi-Bagger Trailing Stop Hit (LTP {ltp:.2f} <= Trail {trailing_sl:.2f}, Gain: +{pnl_pct:.1f}%)"
+            elif trailing_sl > current_sl:
+                should_modify_sl = True
+                new_sl_price = trailing_sl
+                print(f"🚀 [MULTI-BAGGER TRAIL] {opt_symbol} PnL +{pnl_pct:.1f}%! Ratcheting trailing SL from {current_sl:.2f} to {trailing_sl:.2f}")
+
+        # Rule 3: Mechanical Breakeven Ratchet (+20% to +40% gain)
+        elif pnl_pct >= 20.0:
+            breakeven_sl = round_to_tick(entry_premium * 1.015, 0.05)
+            if current_sl < breakeven_sl:
+                should_modify_sl = True
+                new_sl_price = breakeven_sl
+                print(f"🛡️ [BREAKEVEN RATCHET] {opt_symbol} PnL +{pnl_pct:.1f}% >= 20%! Ratcheting SL to cost {breakeven_sl:.2f} (Zero Risk Locked).")
+
+        # Rule 4: Adverse Gap Cut (-10% or worse at/after 09:20 AM)
         elif pnl_pct <= -10.0:
             should_exit = True
             exit_reason = f"BTST Adverse Gap Stop ({pnl_pct:.1f}%)"
 
-        # Rule C: Unconditional 09:30 AM Decay Exit (empirical edge flat/decayed)
+        # Rule 5: 09:30 AM Edge Decay Cut (for flat/decaying positions < +20%)
         elif (now.hour == 9 and now.minute >= 30) or now.hour > 9 or force_exit:
             should_exit = True
             exit_reason = f"BTST 09:30 AM Edge Decay Cut ({pnl_pct:.1f}%)"
 
+        # Handle Stop-Loss Ratchet Modification on Exchange
+        if should_modify_sl and sl_order_id and sl_order_id != "FAILED":
+            if live_buy_flag:
+                try:
+                    mod_trigger = new_sl_price
+                    mod_price = round_to_tick(new_sl_price * 0.98, 0.05)
+                    kite_exec.modify_order(
+                        variety=kite_exec.VARIETY_REGULAR,
+                        order_id=sl_order_id,
+                        order_type=kite_exec.ORDER_TYPE_SL,
+                        quantity=qty,
+                        trigger_price=mod_trigger,
+                        price=mod_price
+                    )
+                    print(f"✅ Modified broker SL order {sl_order_id} to Trigger: {mod_trigger:.2f}, Price: {mod_price:.2f}")
+                except Exception as me:
+                    print(f"⚠️ Failed to modify broker SL order {sl_order_id}: {me}")
+            from core.db_manager import update_position_sl
+            try:
+                update_position_sl(order_id, new_sl_price, highest_high, trailing_active=(pnl_pct >= 40.0))
+            except Exception as dbe:
+                print(f"⚠️ Could not update DB for SL ratchet: {dbe}")
+
         if not should_exit:
-            print(f"⏳ Holding {opt_symbol}: Inside 09:15-09:30 window, PnL {pnl_pct:+.2f}% awaiting target or 09:30 cutoff.")
+            print(f"⏳ Holding {opt_symbol}: PnL {pnl_pct:+.2f}% | Current SL {current_sl:.2f} | Highest {highest_high:.2f}")
             continue
 
         print(f"🚨 EXECUTING BTST EXIT: {opt_symbol} -> Reason: {exit_reason}")

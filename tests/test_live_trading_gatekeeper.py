@@ -10,11 +10,11 @@ from core.live_trading import execute_trade
 @patch("core.live_trading.save_active_position")
 @patch("core.live_trading.get_kite_data_client")
 @patch("core.live_trading.get_kite_exec_client")
-def test_engine_1_never_places_live_order_even_if_live_buy_true(mock_exec, mock_data, mock_save_pos, mock_get_pos):
+def test_engine_1_places_live_order_when_live_buy_true(mock_exec, mock_data, mock_save_pos, mock_get_pos):
     """
-    Critical Invariant:
-    Even when LIVE_BUY=true in production environment, Engine 1 Hourly
-    MUST NEVER place real orders on Zerodha Exec account. It must be forced to PAPER_TRADED.
+    User Policy:
+    When LIVE_BUY=true and cash is ample, Engine 1 Hourly
+    IS authorized to place live orders on Zerodha Exec account.
     """
     mock_data_client = MagicMock()
     mock_exec_client = MagicMock()
@@ -36,6 +36,8 @@ def test_engine_1_never_places_live_order_even_if_live_buy_true(mock_exec, mock_
         "available": {"cash": 50000.0},
         "net": 50000.0
     }
+    mock_exec_client.orders.return_value = []
+    mock_exec_client.place_order.return_value = "LIVE_ORD_123"
 
     # Execute trade for Engine 1
     execute_trade(
@@ -47,14 +49,13 @@ def test_engine_1_never_places_live_order_even_if_live_buy_true(mock_exec, mock_
         engine_type="ENGINE_1_HOURLY"
     )
 
-    # Invariant: place_order MUST NOT be called on Exec account!
-    mock_exec_client.place_order.assert_not_called()
+    # Invariant: place_order MUST be called on Exec account!
+    assert mock_exec_client.place_order.call_count >= 1
 
-    # Invariant: Must be saved as PAPER_TRADED
+    # Invariant: Must be saved as LIVE_TRADED
     mock_save_pos.assert_called_once()
     saved_position = mock_save_pos.call_args[0][0]
-    assert saved_position["status"] == "PAPER_TRADED"
-    assert "PAPER_" in saved_position["order_id"]
+    assert saved_position["status"] == "LIVE_TRADED"
     assert saved_position["holding_type"] == "TYPE_A_SCALP"
 
 @patch.dict(os.environ, {"LIVE_BUY": "true"})
@@ -413,6 +414,63 @@ def test_liquidity_gate_veto_blocks_execution_on_wide_spread(mock_exec, mock_dat
     # Invariant: Neither place_order nor save_active_position must be called due to liquidity veto!
     mock_exec_client.place_order.assert_not_called()
     mock_save_pos.assert_not_called()
+
+
+@patch.dict(os.environ, {"LIVE_BUY": "true", "USE_GCP_EXECUTION": "true"})
+@patch("core.risk_gatekeeper.get_all_active_positions", return_value=[])
+@patch("core.live_trading.save_active_position")
+@patch("core.live_trading.get_kite_data_client")
+@patch("core.live_trading.get_kite_exec_client")
+@patch("core.gcp_execution_client.GCPExecutionClient.execute_order")
+def test_live_trading_routes_via_gcp_relay(mock_gcp_execute, mock_exec, mock_data, mock_save_pos, mock_get_pos):
+    """
+    Verifies that when USE_GCP_EXECUTION=true, order placement routes to GCPExecutionClient
+    and records the active position locally.
+    """
+    mock_data_client = MagicMock()
+    mock_exec_client = MagicMock()
+    mock_data.return_value = mock_data_client
+    mock_exec.return_value = mock_exec_client
+
+    mock_data_client.quote.side_effect = [
+        {"NSE:INFY": {"last_price": 1800.0}},
+        {"NFO:INFY26OCT1820CE": {"last_price": 25.0, "oi": 50000, "volume": 12000}}
+    ]
+    mock_data_client.instruments.return_value = [
+        {"name": "INFY", "instrument_type": "CE", "expiry": datetime(2026, 10, 29).date(),
+         "strike": 1820.0, "lot_size": 400, "tradingsymbol": "INFY26OCT1820CE", "instrument_token": 12345}
+    ]
+
+    mock_exec_client.margins.return_value = {
+        "available": {"live_balance": 50000.0},
+        "net": 50000.0
+    }
+
+    mock_gcp_execute.return_value = {
+        "success": True,
+        "status": "COMPLETE",
+        "order_id": "GCP_ORD_999",
+        "sl_order_id": "GCP_SL_999",
+        "fill_price": 25.0,
+        "lot_size": 400
+    }
+
+    execute_trade(
+        symbol="INFY",
+        score=85,
+        catalyst="Test GCP Relay",
+        entry_time=datetime.now(),
+        holding_type="TYPE_A_SCALP",
+        engine_type="ENGINE_5M_TRIGGER"
+    )
+
+    mock_gcp_execute.assert_called_once()
+    mock_exec_client.place_order.assert_not_called()
+    mock_save_pos.assert_called_once()
+    saved = mock_save_pos.call_args[0][0]
+    assert saved["order_id"] == "GCP_ORD_999"
+    assert saved["status"] == "LIVE_TRADED"
+
 
 
 
