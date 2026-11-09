@@ -101,3 +101,69 @@ def test_monitor_positions_triggers_profit_lock(mock_emailer, mock_exec, mock_da
     
     # Invariant: Reduced quantity (175 - 87 = 88) must be persisted to database!
     mock_update_qty.assert_called_once_with("ORD_102", 88)
+
+@patch("scripts.monitor_positions.close_position")
+@patch("scripts.monitor_positions.get_all_active_positions")
+@patch("scripts.monitor_positions.get_kite_data_client")
+@patch("scripts.monitor_positions.get_kite_exec_client")
+@patch("scripts.monitor_positions.SovereignEmailer")
+def test_monitor_positions_pending_buy_order_awaits_fill(mock_emailer, mock_exec, mock_data, mock_get_positions, mock_close):
+    pos = {
+        "order_id": "ORD_PENDING_01",
+        "sl_order_id": "FAILED",
+        "option_symbol": "AUROPHARMA26NOV1820CE",
+        "symbol": "AUROPHARMA",
+        "entry_premium": 50.7,
+        "qty": 550,
+        "current_sl": 42.65,
+        "highest_high": 50.7,
+        "trailing_active": False,
+        "profit_locked": False,
+        "holding_type": "TYPE_A_SCALP"
+    }
+    mock_get_positions.return_value = [pos]
+    # Broker orderbook has order with TRIGGER PENDING
+    mock_exec.return_value.orders.return_value = [
+        {"order_id": "ORD_PENDING_01", "status": "TRIGGER PENDING", "tradingsymbol": "AUROPHARMA26NOV1820CE"}
+    ]
+    # Net positions is empty (qty = 0) because order hasn't executed
+    mock_exec.return_value.positions.return_value = {"net": []}
+
+    with patch.dict("os.environ", {"LIVE_BUY": "True"}):
+        monitor_positions()
+
+    # Must NOT call close_position because order is pending fill
+    mock_close.assert_not_called()
+
+@patch("scripts.monitor_positions.close_position")
+@patch("scripts.monitor_positions.get_all_active_positions")
+@patch("scripts.monitor_positions.get_kite_data_client")
+@patch("scripts.monitor_positions.get_kite_exec_client")
+@patch("scripts.monitor_positions.SovereignEmailer")
+def test_monitor_positions_rejected_buy_order_cleans_up(mock_emailer, mock_exec, mock_data, mock_get_positions, mock_close):
+    pos = {
+        "order_id": "ORD_REJECTED_01",
+        "sl_order_id": "FAILED",
+        "option_symbol": "AUROPHARMA26NOV1820CE",
+        "symbol": "AUROPHARMA",
+        "entry_premium": 50.7,
+        "qty": 550,
+        "current_sl": 42.65,
+        "highest_high": 50.7,
+        "trailing_active": False,
+        "profit_locked": False,
+        "holding_type": "TYPE_A_SCALP"
+    }
+    mock_get_positions.return_value = [pos]
+    mock_exec.return_value.orders.return_value = [
+        {"order_id": "ORD_REJECTED_01", "status": "REJECTED", "tradingsymbol": "AUROPHARMA26NOV1820CE"}
+    ]
+    mock_exec.return_value.positions.return_value = {"net": []}
+
+    with patch.dict("os.environ", {"LIVE_BUY": "True"}):
+        monitor_positions()
+
+    # Must call close_position to clean up rejected order
+    mock_close.assert_called_once()
+    assert "Buy Order REJECTED" in mock_close.call_args[0][3]
+

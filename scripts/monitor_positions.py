@@ -75,7 +75,24 @@ def monitor_positions():
         opt_symbol = pos["option_symbol"]
         base_symbol = pos["symbol"]
 
-        # 1. Broker Reconciliation: Check if manually squared off
+        # 1. Check Entry Buy Order Status (if available in live orderbook)
+        buy_order = order_dict.get(order_id)
+        buy_status = buy_order.get("status") if buy_order else None
+
+        if buy_status in ["OPEN", "TRIGGER PENDING"]:
+            print(f"[{now_dt}] ⏳ Entry Buy Order {order_id} ({opt_symbol}) is still {buy_status}. Awaiting fill...")
+            continue
+        elif buy_status in ["CANCELLED", "REJECTED"]:
+            print(f"[{now_dt}] ⚠️ Entry Buy Order {order_id} ({opt_symbol}) was {buy_status}. Cleaning up position.")
+            if sl_order_id and sl_order_id != "FAILED":
+                try:
+                    kite_exec.cancel_order(variety=kite_exec.VARIETY_REGULAR, order_id=sl_order_id)
+                except Exception:
+                    pass
+            close_position(pos, pos["entry_premium"], 0.0, f"Buy Order {buy_status}")
+            continue
+
+        # Broker Reconciliation: Check if manually squared off (only after fill)
         qty_held = net_positions.get(opt_symbol, 0)
         if qty_held <= 0 and live_buy_flag.lower() == "true":
             print(f"[{now_dt}] 👁️ Broker Reconciliation: {opt_symbol} was manually exited (qty={qty_held}). Marking as CLOSED.")
