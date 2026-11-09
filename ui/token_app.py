@@ -406,6 +406,352 @@ HTML_TEMPLATE = """
 </html>
 """
 
+ALLOWED_PUBLIC_LOGS = {
+    "5m_trigger.log",
+    "live_hourly.log",
+    "btst_sniper.log",
+    "btst_liquidator.log",
+    "live_monitor.log",
+    "preopen_watchlist.log",
+    "volume_reversal.log",
+    "btst_fill_verifier.log",
+    "weekly_watchlist.log",
+    "token_app.log"
+}
+
+RUNS_HTML_TEMPLATE = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Sovereign - Autonomous Engine Telemetry</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --surface-color: rgba(22, 27, 34, 0.85);
+            --border-color: rgba(48, 54, 61, 0.9);
+            --accent-color: #58a6ff;
+            --success-color: #3fb950;
+            --warning-color: #d29922;
+            --danger-color: #ff7b72;
+            --text-color: #c9d1d9;
+            --text-muted: #8b949e;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 960px;
+            width: 100%;
+        }
+        .header {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 22px;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        .pill {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent-color);
+            border: 1px solid rgba(88, 166, 255, 0.3);
+        }
+        .pill.green {
+            background: rgba(63, 185, 80, 0.15);
+            color: var(--success-color);
+            border-color: rgba(63, 185, 80, 0.4);
+        }
+        .pill.gold {
+            background: rgba(210, 153, 34, 0.15);
+            color: var(--warning-color);
+            border-color: rgba(210, 153, 34, 0.4);
+        }
+        .card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 8px 10px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .badge.long { background: rgba(63, 185, 80, 0.2); color: var(--success-color); }
+        .badge.short { background: rgba(255, 123, 114, 0.2); color: var(--danger-color); }
+        .log-tabs {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        .log-tab {
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: rgba(13, 17, 23, 0.8);
+            border: 1px solid var(--border-color);
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: all 0.2s;
+        }
+        .log-tab:hover { color: var(--text-color); border-color: var(--accent-color); }
+        .log-tab.active {
+            background: rgba(88, 166, 255, 0.15);
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        .terminal {
+            background: #010409;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 12px;
+            line-height: 1.45;
+            height: 420px;
+            overflow-y: auto;
+            color: #c9d1d9;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        a.btn-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        a.btn-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <span>🏛️ Midnight Sovereign Telemetry</span>
+                <a href="/" class="btn-link">🔑 Token Portal &rarr;</a>
+            </h1>
+            <div class="pills">
+                <span class="pill green">● GCP CLOUD ENGINE: ACTIVE</span>
+                <span class="pill">🌐 IP: 35.231.246.98:5000</span>
+                <span class="pill gold">⚡ LIVE_BUY: {{ live_buy }}</span>
+                <span class="pill">⏰ {{ now_ist }}</span>
+            </div>
+        </div>
+
+        <!-- ACTIVE WATCHLIST CARD -->
+        <div class="card">
+            <div class="card-title">
+                <span>🎯 Active 10-Stock Focus Watchlist (Today's Targets)</span>
+                <span style="font-size: 12px; color: var(--text-muted);">{{ watchlist|length }} Candidates</span>
+            </div>
+            {% if watchlist %}
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Bias</th>
+                            <th>Score</th>
+                            <th>Sector</th>
+                            <th>Catalyst Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for stock in watchlist %}
+                        <tr>
+                            <td><strong>{{ stock.symbol }}</strong></td>
+                            <td>
+                                <span class="badge {% if stock.direction == 'LONG' %}long{% else %}short{% endif %}">
+                                    {{ stock.direction }}
+                                </span>
+                            </td>
+                            <td>{{ stock.conviction_score }}</td>
+                            <td>{{ stock.sector or 'N/A' }}</td>
+                            <td style="color: var(--text-muted); font-size: 12px;">{{ stock.catalyst_summary }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <div style="color: var(--text-muted); font-size: 13px;">No active watchlist in memory. Pre-open job runs at 09:11 AM IST.</div>
+            {% endif %}
+        </div>
+
+        <!-- ACTIVE POSITIONS CARD -->
+        <div class="card">
+            <div class="card-title">
+                <span>📊 Open Trades &amp; Stop-Loss Floor</span>
+                <span style="font-size: 12px; color: var(--text-muted);">{{ positions|length }} Open</span>
+            </div>
+            {% if positions %}
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Contract</th>
+                            <th>Qty</th>
+                            <th>Entry</th>
+                            <th>Current SL</th>
+                            <th>High Water</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for pos in positions %}
+                        <tr>
+                            <td><strong>{{ pos.option_symbol or pos.symbol }}</strong></td>
+                            <td>{{ pos.qty }}</td>
+                            <td>₹{{ "%.2f"|format(pos.entry_premium) }}</td>
+                            <td style="color: var(--danger-color); font-weight: 600;">₹{{ "%.2f"|format(pos.current_sl) }}</td>
+                            <td style="color: var(--success-color);">₹{{ "%.2f"|format(pos.highest_high or pos.entry_premium) }}</td>
+                            <td><span class="badge long">{{ pos.holding_type }}</span></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <div style="color: var(--text-muted); font-size: 13px;">0 open positions. Risk exposure is currently ₹0.</div>
+            {% endif %}
+        </div>
+
+        <!-- LIVE TELEMETRY LOGS -->
+        <div class="card">
+            <div class="card-title">
+                <span>⚡ Live Run Logs &amp; Cycle Telemetry</span>
+                <div style="font-size: 12px; font-weight: normal;">
+                    <label style="cursor: pointer;">
+                        <input type="checkbox" id="autoRefresh" checked> Auto-refresh (10s)
+                    </label>
+                </div>
+            </div>
+
+            <div class="log-tabs">
+                <div class="log-tab active" onclick="loadLog('5m_trigger.log', this)">⚡ 5m Trigger</div>
+                <div class="log-tab" onclick="loadLog('live_hourly.log', this)">🕒 Hourly Scanner</div>
+                <div class="log-tab" onclick="loadLog('btst_sniper.log', this)">🎯 3:15 BTST Sniper</div>
+                <div class="log-tab" onclick="loadLog('btst_liquidator.log', this)">🌅 Morning Liquidator</div>
+                <div class="log-tab" onclick="loadLog('live_monitor.log', this)">👁️ Minutely Monitor</div>
+                <div class="log-tab" onclick="loadLog('preopen_watchlist.log', this)">📋 Pre-Open Evaluator</div>
+                <div class="log-tab" onclick="loadLog('token_app.log', this)">🌐 Gateway Port 5000</div>
+            </div>
+
+            <div class="controls">
+                <span id="currentLogName">Active Log: 5m_trigger.log</span>
+                <span id="lastUpdated">Updated: Just now</span>
+            </div>
+
+            <pre class="terminal" id="terminalLog">Loading telemetry...</pre>
+        </div>
+    </div>
+
+    <script>
+        let currentFile = '5m_trigger.log';
+
+        function loadLog(filename, element) {
+            currentFile = filename;
+            if (element) {
+                document.querySelectorAll('.log-tab').forEach(t => t.classList.remove('active'));
+                element.classList.add('active');
+            }
+            document.getElementById('currentLogName').innerText = 'Active Log: ' + filename;
+            
+            fetch('/api/runs/logs/' + filename)
+                .then(res => res.text())
+                .then(data => {
+                    const term = document.getElementById('terminalLog');
+                    term.innerText = data || 'Log file is currently empty.';
+                    term.scrollTop = term.scrollHeight;
+                    document.getElementById('lastUpdated').innerText = 'Updated: ' + new Date().toLocaleTimeString();
+                })
+                .catch(err => {
+                    document.getElementById('terminalLog').innerText = 'Error fetching log: ' + err;
+                });
+        }
+
+        // Initial load
+        loadLog('5m_trigger.log');
+
+        // Auto refresh
+        setInterval(() => {
+            if (document.getElementById('autoRefresh').checked) {
+                loadLog(currentFile);
+            }
+        }, 10000);
+    </script>
+</body>
+</html>
+"""
+
 # =============================================================================
 # Web Routes
 # =============================================================================
@@ -415,6 +761,52 @@ def index():
     log_files = get_log_files()
     crons = parse_cron()
     return render_template_string(HTML_TEMPLATE, log_files=log_files, crons=crons)
+
+@app.route("/runs", methods=["GET"])
+@app.route("/dashboard", methods=["GET"])
+def runs_dashboard():
+    # Load Active Watchlist
+    watchlist = []
+    watchlist_path = os.path.join(PROJECT_ROOT, "data/daily_focus_watchlist.json")
+    if os.path.exists(watchlist_path):
+        try:
+            with open(watchlist_path, "r") as f:
+                watchlist = json.load(f)
+        except Exception:
+            pass
+
+    # Load Active Positions
+    positions = []
+    try:
+        from core.db_manager import get_all_active_positions
+        positions = get_all_active_positions()
+    except Exception:
+        pass
+
+    live_buy = os.getenv("LIVE_BUY", "False")
+    now_ist = datetime.now().strftime("%Y-%m-%d %H:%M:%S IST")
+
+    return render_template_string(
+        RUNS_HTML_TEMPLATE,
+        watchlist=watchlist,
+        positions=positions,
+        live_buy=live_buy,
+        now_ist=now_ist
+    )
+
+@app.route("/api/runs/logs/<filename>", methods=["GET"])
+def get_public_run_logs(filename):
+    if filename not in ALLOWED_PUBLIC_LOGS:
+        return "Log file not permitted", 403
+    filepath = os.path.join(LOGS_DIR, filename)
+    if not os.path.exists(filepath):
+        return f"Log {filename} not yet generated today.", 200
+    try:
+        with open(filepath, "r") as f:
+            lines = f.readlines()
+            return "".join(lines[-150:]), 200, {"Content-Type": "text/plain; charset=utf-8"}
+    except Exception as e:
+        return str(e), 500
 
 @app.route("/login", methods=["POST"])
 def login():
