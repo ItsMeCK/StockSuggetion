@@ -2,15 +2,19 @@ import pytest
 from unittest.mock import MagicMock, patch
 from core.sovereign_execution_gateway import SovereignExecutionGateway
 
-def test_gateway_enforces_lot_size_ceiling_under_600():
+def test_gateway_enforces_lot_size_ceiling_under_1000():
     gateway = SovereignExecutionGateway()
     
-    # 500 qty (< 600) -> Allowed
+    # 500, 600, 1000 qty (<= 1000) -> Allowed
     ok, msg = gateway.check_lot_size(500)
     assert ok is True
-    
-    # 600 qty -> Rejected
     ok, msg = gateway.check_lot_size(600)
+    assert ok is True
+    ok, msg = gateway.check_lot_size(1000)
+    assert ok is True
+    
+    # 1001 qty (> 1000) -> Rejected
+    ok, msg = gateway.check_lot_size(1001)
     assert ok is False
     assert "exceeds automated ceiling" in msg
     

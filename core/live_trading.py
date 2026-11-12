@@ -245,9 +245,10 @@ def execute_trade(
             print(f"⚠️ Warning: Allocated capital ₹{allocated_capital:.2f} < Lot Cost ₹{lot_cost:.2f} under strict cap. Falling back to PAPER simulation.")
             is_live_order_authorized = False
 
-        # Sovereign Risk Rule: Automated live execution permitted ONLY if lot_size < 600
-        if lot_size >= 600:
-            print(f"🛑 [RISK POLICY VETO] Lot size {lot_size} >= 600 (Sovereign Cap < 600). Rejecting automated live execution. Falling back to PAPER simulation.")
+        # Sovereign Risk Rule: Automated live execution permitted ONLY if lot_size <= MAX_LOT_SIZE_CEILING (default 1000)
+        max_lot_size = int(os.getenv("MAX_LOT_SIZE_CEILING", "1000"))
+        if lot_size > max_lot_size:
+            print(f"🛑 [RISK POLICY VETO] Lot size {lot_size} > {max_lot_size} (Sovereign Cap <= {max_lot_size}). Rejecting automated live execution. Falling back to PAPER simulation.")
             is_live_order_authorized = False
 
         # Optional routing through GCP Execution Gateway when enabled

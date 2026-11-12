@@ -19,7 +19,7 @@ class SovereignExecutionGateway:
     margin verification, and automated alerts for the Execution Account (HU0092).
     """
 
-    MAX_LOT_SIZE_CEILING = 600  # Hard ceiling: only lot_size < 600 permitted for automated orders
+    MAX_LOT_SIZE_CEILING = int(os.getenv("MAX_LOT_SIZE_CEILING", "1000"))  # Hard ceiling: only lot_size <= 1000 permitted for automated orders
 
     def __init__(self, kite_exec: Optional[KiteConnect] = None, emailer: Optional[SovereignEmailer] = None):
         load_dotenv()
@@ -38,10 +38,11 @@ class SovereignExecutionGateway:
 
     def check_lot_size(self, lot_size: int) -> Tuple[bool, str]:
         """
-        Enforces lot size ceiling (< 600 shares per lot).
+        Enforces lot size ceiling (<= MAX_LOT_SIZE_CEILING shares per lot).
         """
-        if lot_size >= self.MAX_LOT_SIZE_CEILING:
-            reason = f"Lot size {lot_size} exceeds automated ceiling (< {self.MAX_LOT_SIZE_CEILING}). Manual execution required."
+        max_lot = int(os.getenv("MAX_LOT_SIZE_CEILING", str(self.MAX_LOT_SIZE_CEILING)))
+        if lot_size > max_lot:
+            reason = f"Lot size {lot_size} exceeds automated ceiling (<= {max_lot}). Manual execution required."
             logger.warning(f"🛑 [LOT SIZE CEILING]: {reason}")
             return False, reason
         return True, "Lot size within safe automated boundaries"
