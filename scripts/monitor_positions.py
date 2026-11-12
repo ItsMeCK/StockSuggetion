@@ -12,7 +12,7 @@ if PROJECT_ROOT not in sys.path:
 from core.db_manager import (
     get_all_active_positions, update_position_sl, close_position,
     update_sl_order_id, update_highest_oi, update_position_profit_locked,
-    update_position_qty
+    update_position_qty, update_entry_fill
 )
 from core.live_trading import get_kite_data_client, get_kite_exec_client
 from alerts.email_notifier import SovereignEmailer
@@ -91,6 +91,12 @@ def monitor_positions():
                     pass
             close_position(pos, pos["entry_premium"], 0.0, f"Buy Order {buy_status}")
             continue
+        elif buy_status == "COMPLETE":
+            avg_px = buy_order.get("average_price")
+            if avg_px and avg_px > 0 and abs(pos["entry_premium"] - avg_px) > 0.05:
+                print(f"[{now_dt}] 🎯 Broker Fill Reconciled for {opt_symbol}: DB {pos['entry_premium']} -> Broker {avg_px}")
+                update_entry_fill(order_id, avg_px)
+                pos["entry_premium"] = avg_px
 
         # Broker Reconciliation: Check if manually squared off (only after fill)
         qty_held = net_positions.get(opt_symbol, 0)
