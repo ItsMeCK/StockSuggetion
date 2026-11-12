@@ -16,7 +16,7 @@ from core.db_manager import (
 )
 from core.live_trading import get_kite_data_client, get_kite_exec_client
 from alerts.email_notifier import SovereignEmailer
-from core.dynamic_exit_engine import DynamicOptionExitEngine
+from core.dynamic_exit_engine import DynamicOptionExitEngine, round_to_tick
 
 def monitor_positions():
     """
@@ -111,7 +111,8 @@ def monitor_positions():
                 print(f"[{now_dt}] 🔄 Buy Order {order_id} is COMPLETE. Placing recovery SL for {opt_symbol}...")
                 if live_buy_flag.lower() == "true":
                     try:
-                        sl_limit_price = round(pos["current_sl"] * 0.95, 1)
+                        pos_sl = round_to_tick(pos["current_sl"])
+                        sl_limit_price = round_to_tick(pos_sl * 0.95)
                         new_sl_id = kite_exec.place_order(
                             variety=kite_exec.VARIETY_REGULAR,
                             exchange=kite_exec.EXCHANGE_NFO,
@@ -120,7 +121,7 @@ def monitor_positions():
                             quantity=pos["qty"],
                             product=kite_exec.PRODUCT_NRML,
                             order_type=kite_exec.ORDER_TYPE_SL,
-                            trigger_price=pos["current_sl"],
+                            trigger_price=pos_sl,
                             price=sl_limit_price
                         )
                         print(f"✅ Recovery SL Order Placed! ID: {new_sl_id}")
@@ -243,7 +244,7 @@ def monitor_positions():
                     print(f"💾 Persisted reduced quantity {pos['qty']} to database for {order_id}")
 
             # Ratchet SL
-            new_sl = decision.new_sl
+            new_sl = round_to_tick(decision.new_sl)
             if live_buy_flag.lower() == "true" and sl_order_id and sl_order_id != "FAILED":
                 try:
                     kite_exec.modify_order(
@@ -252,7 +253,7 @@ def monitor_positions():
                         order_type=kite_exec.ORDER_TYPE_SL,
                         quantity=pos["qty"],
                         trigger_price=new_sl,
-                        price=round(new_sl * 0.95, 1)
+                        price=round_to_tick(new_sl * 0.95)
                     )
                 except Exception as e:
                     print(f"Warning: Failed to modify SL on exchange: {e}")
@@ -268,7 +269,7 @@ def monitor_positions():
             )
 
         elif decision.action in ("MOVE_TO_BREAKEVEN", "UPDATE_TRAILING_SL"):
-            new_sl = decision.new_sl
+            new_sl = round_to_tick(decision.new_sl)
             print(f"[{now_dt}] 📈 {decision.action} for {opt_symbol}: Moving SL to ₹{new_sl}")
             if live_buy_flag.lower() == "true" and sl_order_id and sl_order_id != "FAILED":
                 try:
@@ -278,7 +279,7 @@ def monitor_positions():
                         order_type=kite_exec.ORDER_TYPE_SL,
                         quantity=pos["qty"],
                         trigger_price=new_sl,
-                        price=round(new_sl * 0.95, 1)
+                        price=round_to_tick(new_sl * 0.95)
                     )
                 except Exception as e:
                     print(f"Warning: Failed to modify SL on exchange: {e}")
@@ -295,6 +296,27 @@ def monitor_positions():
         else: # HOLD
             if highest_high > float(pos.get("highest_high", 0)):
                 update_position_sl(pos['order_id'], pos['current_sl'], highest_high, pos.get('trailing_active', False))
+
+            # SL Self-Healing: Reconcile exchange SL trigger with pos['current_sl'] if exchange order lag exists
+            if live_buy_flag.lower() == "true" and sl_order_id and sl_order_id in order_dict:
+                sl_order = order_dict[sl_order_id]
+                if sl_order.get("status") in ("OPEN", "TRIGGER PENDING"):
+                    target_sl = round_to_tick(pos["current_sl"])
+                    exchange_trigger = round_to_tick(sl_order.get("trigger_price") or 0.0)
+                    if exchange_trigger > 0 and exchange_trigger < target_sl:
+                        print(f"[{now_dt}] 🔄 Reconciling SL on exchange: Order trigger ₹{exchange_trigger} < Target SL ₹{target_sl}. Modifying order {sl_order_id}...")
+                        try:
+                            kite_exec.modify_order(
+                                variety=kite_exec.VARIETY_REGULAR,
+                                order_id=sl_order_id,
+                                order_type=kite_exec.ORDER_TYPE_SL,
+                                quantity=pos["qty"],
+                                trigger_price=target_sl,
+                                price=round_to_tick(target_sl * 0.95)
+                            )
+                            print(f"✅ Exchange SL successfully reconciled to ₹{target_sl}")
+                        except Exception as e:
+                            print(f"Warning: Failed to reconcile SL on exchange: {e}")
 
         trail_status = pos.get("trailing_active", False)
         lock_status = pos.get("profit_locked", False)

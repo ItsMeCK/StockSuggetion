@@ -10,6 +10,10 @@ class ExitDecision:
     new_sl: Optional[float] = None
     book_lot_pct: float = 0.0
 
+def round_to_tick(price: float, tick: float = 0.05) -> float:
+    """Rounds price to nearest valid NSE tick size (default 0.05)."""
+    return round(round(price / tick) * tick, 2)
+
 def calculate_statutory_friction(
     buy_premium: float,
     sell_premium: float,
@@ -120,7 +124,7 @@ class DynamicOptionExitEngine:
 
         # 3. Tier 1: Profit Lock (+20% to +25% Option Gain)
         if pnl_pct >= self.profit_lock_threshold and not profit_locked:
-            locked_sl = round(entry_premium * 1.15, 2)
+            locked_sl = round_to_tick(entry_premium * 1.15)
             book_pct = 0.0 if is_single_lot else 0.50
             return ExitDecision(
                 action="PROFIT_LOCK",
@@ -131,7 +135,7 @@ class DynamicOptionExitEngine:
 
         # Dynamic Trailing for Profit-Locked Positions
         if profit_locked:
-            trail_sl = round(highest_high * 0.90, 2)
+            trail_sl = round_to_tick(highest_high * 0.90)
             if trail_sl > current_sl:
                 return ExitDecision(
                     action="UPDATE_TRAILING_SL",
@@ -141,7 +145,7 @@ class DynamicOptionExitEngine:
 
         # 4. Tier 2: Breakeven Trailing Stop (+15% Option Gain)
         if pnl_pct >= self.breakeven_threshold and not trailing_active and not profit_locked:
-            be_sl = round(entry_premium * 1.015, 2) # Cost + 1.5% for fees/taxes
+            be_sl = round_to_tick(entry_premium * 1.015) # Cost + 1.5% for fees/taxes
             return ExitDecision(
                 action="MOVE_TO_BREAKEVEN",
                 reason=f"Tier 2 Breakeven Ratchet: PnL {pnl_pct:.2f}% >= {self.breakeven_threshold:.1f}%",
