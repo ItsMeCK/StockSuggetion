@@ -215,13 +215,14 @@ def monitor_positions():
         elif decision.action == "PROFIT_LOCK":
             print(f"[{now_dt}] 🟢 PROFIT LOCK for {opt_symbol}: {decision.reason} (New SL: ₹{decision.new_sl})")
             # If multi-lot, book 50%
-            if decision.book_lot_pct > 0.0 and pos["qty"] > 1:
-                book_qty = int(pos["qty"] * decision.book_lot_pct)
+            order_qty = net_positions.get(opt_symbol) or pos["qty"]
+            if decision.book_lot_pct > 0.0 and order_qty > 1:
+                book_qty = int(order_qty * decision.book_lot_pct)
                 if book_qty > 0:
                     if live_buy_flag.lower() == "true":
                         try:
                             # NSE blocks ORDER_TYPE_MARKET for stock options
-                            limit_partial_px = max(0.05, round(round(ltp * 0.90 / 0.05) * 0.05, 2))
+                            limit_partial_px = max(0.05, round_to_tick(ltp * 0.90))
                             kite_exec.place_order(
                                 variety=kite_exec.VARIETY_REGULAR,
                                 exchange=kite_exec.EXCHANGE_NFO,
@@ -233,25 +234,26 @@ def monitor_positions():
                                 price=limit_partial_px
                             )
                             print(f"✅ Booked {book_qty} lots at Tier 1 profit target")
+                            pos["qty"] = max(0, order_qty - book_qty)
+                            update_position_qty(pos["order_id"], pos["qty"])
+                            print(f"💾 Persisted reduced quantity {pos['qty']} to database for {order_id}")
                         except Exception as e:
                             print(f"Warning: Failed partial profit booking order: {e}")
                     else:
                         print(f"Paper mode: Simulated partial booking of {book_qty} lots for {opt_symbol}")
-
-                    # Invariant: Persist reduced quantity to database immediately so subsequent ticks/runs match broker state!
-                    pos["qty"] -= book_qty
-                    update_position_qty(pos["order_id"], pos["qty"])
-                    print(f"💾 Persisted reduced quantity {pos['qty']} to database for {order_id}")
+                        pos["qty"] = max(0, order_qty - book_qty)
+                        update_position_qty(pos["order_id"], pos["qty"])
 
             # Ratchet SL
             new_sl = round_to_tick(decision.new_sl)
+            sl_qty = net_positions.get(opt_symbol) or pos["qty"]
             if live_buy_flag.lower() == "true" and sl_order_id and sl_order_id != "FAILED":
                 try:
                     kite_exec.modify_order(
                         variety=kite_exec.VARIETY_REGULAR,
                         order_id=sl_order_id,
                         order_type=kite_exec.ORDER_TYPE_SL,
-                        quantity=pos["qty"],
+                        quantity=sl_qty,
                         trigger_price=new_sl,
                         price=round_to_tick(new_sl * 0.95)
                     )
@@ -271,13 +273,14 @@ def monitor_positions():
         elif decision.action in ("MOVE_TO_BREAKEVEN", "UPDATE_TRAILING_SL"):
             new_sl = round_to_tick(decision.new_sl)
             print(f"[{now_dt}] 📈 {decision.action} for {opt_symbol}: Moving SL to ₹{new_sl}")
+            sl_qty = net_positions.get(opt_symbol) or pos["qty"]
             if live_buy_flag.lower() == "true" and sl_order_id and sl_order_id != "FAILED":
                 try:
                     kite_exec.modify_order(
                         variety=kite_exec.VARIETY_REGULAR,
                         order_id=sl_order_id,
                         order_type=kite_exec.ORDER_TYPE_SL,
-                        quantity=pos["qty"],
+                        quantity=sl_qty,
                         trigger_price=new_sl,
                         price=round_to_tick(new_sl * 0.95)
                     )
@@ -303,6 +306,7 @@ def monitor_positions():
                 if sl_order.get("status") in ("OPEN", "TRIGGER PENDING"):
                     target_sl = round_to_tick(pos["current_sl"])
                     exchange_trigger = round_to_tick(sl_order.get("trigger_price") or 0.0)
+                    sl_qty = net_positions.get(opt_symbol) or pos["qty"]
                     if exchange_trigger > 0 and exchange_trigger < target_sl:
                         print(f"[{now_dt}] 🔄 Reconciling SL on exchange: Order trigger ₹{exchange_trigger} < Target SL ₹{target_sl}. Modifying order {sl_order_id}...")
                         try:
@@ -310,7 +314,7 @@ def monitor_positions():
                                 variety=kite_exec.VARIETY_REGULAR,
                                 order_id=sl_order_id,
                                 order_type=kite_exec.ORDER_TYPE_SL,
-                                quantity=pos["qty"],
+                                quantity=sl_qty,
                                 trigger_price=target_sl,
                                 price=round_to_tick(target_sl * 0.95)
                             )
