@@ -100,7 +100,7 @@ def monitor_positions():
 
         # Broker Reconciliation: Check if manually squared off (only after fill)
         qty_held = net_positions.get(opt_symbol, 0)
-        if qty_held <= 0 and live_buy_flag.lower() == "true":
+        if not str(order_id).startswith("PAPER_") and qty_held <= 0 and live_buy_flag.lower() == "true":
             print(f"[{now_dt}] 👁️ Broker Reconciliation: {opt_symbol} was manually exited (qty={qty_held}). Marking as CLOSED.")
             if sl_order_id and sl_order_id != "FAILED":
                 try:
@@ -215,7 +215,7 @@ def monitor_positions():
             else:
                 print(f"Paper mode: {decision.action} simulated for {opt_symbol} at ₹{ltp} ({pnl_pct:.2f}%)")
 
-            close_position(pos, ltp, pnl_pct, f"{decision.action}: {decision.reason}")
+            close_position(pos, ltp, pnl_pct, decision.action[:20])
             continue
 
         elif decision.action == "PROFIT_LOCK":

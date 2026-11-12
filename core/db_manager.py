@@ -219,12 +219,13 @@ def close_position(position, exit_price, pnl_pct, status_override="CLOSED"):
     gross_pnl = (float(exit_price) - entry_premium) * qty
     net_pnl = round(gross_pnl - statutory_charges, 2)
 
+    safe_status = (status_override or "CLOSED")[:20]
     cur.execute("""
         UPDATE trades
         SET status = %s, exit_time = %s, exit_price = %s, pnl_pct = %s,
             turnover = %s, statutory_charges = %s, net_pnl = %s
         WHERE order_id = %s
-    """, (status_override, datetime.now(), exit_price, pnl_pct, turnover, statutory_charges, net_pnl, position['order_id']))
+    """, (safe_status, datetime.now(), exit_price, pnl_pct, turnover, statutory_charges, net_pnl, position['order_id']))
     conn.commit()
     cur.close()
     conn.close()
