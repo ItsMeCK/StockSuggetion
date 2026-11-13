@@ -109,3 +109,59 @@ def test_statutory_friction_exact_calculation():
     assert 185.0 <= friction["total_cost"] <= 195.0
     assert friction["cost_per_unit"] < 0.20 # Less than 0.20 premium points
 
+def test_btst_opening_freeze_blocks_hard_stop_before_0930():
+    engine = DynamicOptionExitEngine()
+    pos = {
+        "entry_premium": 100.0,
+        "current_sl": 85.0,
+        "holding_type": "TYPE_C_BTST"
+    }
+    # 09:16 AM opening tick drop to 80.0 (-20% loss)
+    now_0916 = datetime(2026, 11, 13, 9, 16, 0)
+    decision = engine.evaluate_position(pos, ltp=80.0, now=now_0916)
+    assert decision.action == "HOLD"
+    assert "BTST Opening" in decision.reason or "Freeze" in decision.reason
+
+def test_btst_allows_hard_stop_after_0930():
+    engine = DynamicOptionExitEngine()
+    pos = {
+        "entry_premium": 100.0,
+        "current_sl": 85.0,
+        "holding_type": "TYPE_C_BTST"
+    }
+    # 09:31 AM drop to 80.0 (-20% loss, freeze has elapsed)
+    now_0931 = datetime(2026, 11, 13, 9, 31, 0)
+    decision = engine.evaluate_position(pos, ltp=80.0, now=now_0931)
+    assert decision.action == "HARD_STOP"
+    assert "Hard Stop Hit" in decision.reason
+
+def test_btst_opening_freeze_allows_profit_lock_before_0930():
+    engine = DynamicOptionExitEngine()
+    pos = {
+        "entry_premium": 100.0,
+        "current_sl": 85.0,
+        "holding_type": "TYPE_C_BTST",
+        "trailing_active": False,
+        "profit_locked": False,
+        "qty": 100,
+        "lot_size": 100
+    }
+    # 09:18 AM surge to 125.0 (+25% gain)
+    now_0918 = datetime(2026, 11, 13, 9, 18, 0)
+    decision = engine.evaluate_position(pos, ltp=125.0, now=now_0918)
+    assert decision.action == "PROFIT_LOCK"
+    assert decision.new_sl == 115.0
+
+def test_scalp_not_subject_to_btst_opening_freeze():
+    engine = DynamicOptionExitEngine()
+    pos = {
+        "entry_premium": 100.0,
+        "current_sl": 85.0,
+        "holding_type": "TYPE_A_SCALP"
+    }
+    # Scalp at 09:16 AM dropping to 80.0 (-20% loss)
+    now_0916 = datetime(2026, 11, 13, 9, 16, 0)
+    decision = engine.evaluate_position(pos, ltp=80.0, now=now_0916)
+    assert decision.action == "HARD_STOP"
+
+

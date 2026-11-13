@@ -167,3 +167,48 @@ def test_monitor_positions_rejected_buy_order_cleans_up(mock_emailer, mock_exec,
     mock_close.assert_called_once()
     assert "Buy Order REJECTED" in mock_close.call_args[0][3]
 
+@patch("scripts.monitor_positions.update_highest_oi")
+@patch("scripts.monitor_positions.close_position")
+@patch("scripts.monitor_positions.get_all_active_positions")
+@patch("scripts.monitor_positions.get_kite_data_client")
+@patch("scripts.monitor_positions.get_kite_exec_client")
+@patch("scripts.monitor_positions.SovereignEmailer")
+def test_monitor_positions_suppresses_hard_stop_for_btst_during_opening_freeze(mock_emailer, mock_exec, mock_data, mock_get_positions, mock_close, mock_update_oi):
+    pos = {
+        "order_id": "ORD_BTST_01",
+        "sl_order_id": "SL_BTST_01",
+        "option_symbol": "LODHA26NOV1200CE",
+        "symbol": "LODHA",
+        "entry_premium": 50.0,
+        "qty": 625,
+        "current_sl": 40.0,
+        "highest_high": 50.0,
+        "trailing_active": False,
+        "profit_locked": False,
+        "holding_type": "TYPE_C_BTST"
+    }
+    mock_get_positions.return_value = [pos]
+    
+    mock_exec.return_value.orders.return_value = [
+        {"order_id": "SL_BTST_01", "status": "TRIGGER PENDING", "tradingsymbol": "LODHA26NOV1200CE"}
+    ]
+    mock_exec.return_value.positions.return_value = {"net": [{"tradingsymbol": "LODHA26NOV1200CE", "quantity": 625}]}
+    
+    # Premium dips at 09:16 AM to 40.50 (-19% loss)
+    mock_data.return_value.quote.return_value = {
+        "NFO:LODHA26NOV1200CE": {"last_price": 40.50, "oi": 50000},
+        "NSE:LODHA": {"last_price": 1180.0, "average_price": 1190.0}
+    }
+
+    # Freeze active at 09:16 AM
+    with patch("scripts.monitor_positions.datetime") as mock_dt:
+        mock_dt.now.return_value = datetime(2026, 11, 13, 9, 16, 0)
+        with patch.dict("os.environ", {"LIVE_BUY": "True"}):
+            monitor_positions()
+
+    # Must NOT exit position and must NOT cancel resting exchange SL!
+    mock_close.assert_not_called()
+    mock_exec.return_value.cancel_order.assert_not_called()
+    mock_exec.return_value.place_order.assert_not_called()
+
+

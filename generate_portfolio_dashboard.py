@@ -3,87 +3,87 @@ import json
 import os
 from datetime import datetime
 from dotenv import load_dotenv
-from kiteconnect import KiteConnect
 
-def get_db_connection():
-    load_dotenv()
-    return psycopg2.connect(
-        host=os.getenv('DB_HOST', 'localhost'),
-        port=os.getenv('DB_PORT', '5432'),
-        user=os.getenv('POSTGRES_USER', 'quant'),
-        password=os.getenv('POSTGRES_PASSWORD', 'quantpassword'),
-        dbname=os.getenv('POSTGRES_DB', 'market_data')
-    )
+from core.db_manager import get_db_connection
+from core.live_trading import get_kite_data_client
 
 def get_kite_client():
-    load_dotenv()
-    api_key = os.getenv('KITE_API_KEY')
-    access_token = os.getenv('KITE_ACCESS_TOKEN')
-    if api_key and access_token:
-        try:
-            kite = KiteConnect(api_key=api_key)
-            kite.set_access_token(access_token)
-            return kite
-        except Exception as e:
-            pass
-    return None
+    try:
+        return get_kite_data_client()
+    except Exception:
+        return None
 
 def generate_dashboard():
-    conn = get_db_connection()
-    cur = conn.cursor()
-    
-    cur.execute("""
-        WITH latest_status AS (
-            SELECT trade_id, ticker, status, price, quantity, notes, system_time,
-                   ROW_NUMBER() OVER(PARTITION BY trade_id ORDER BY system_time DESC) as rn
-            FROM trade_events
-        )
-        SELECT trade_id, ticker, status, price, quantity, notes, system_time 
-        FROM latest_status 
-        WHERE rn = 1
-    """)
-    all_trades = cur.fetchall()
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute("""
+            SELECT order_id, COALESCE(option_symbol, symbol) as ticker, status, 
+                   entry_premium as price, qty as quantity, catalyst as notes, 
+                   entry_time as system_time, exit_price, pnl_pct, score, holding_type, turnover
+            FROM trades 
+            ORDER BY entry_time DESC
+        """)
+        all_trades = cur.fetchall()
+    except Exception as e:
+        print(f"Error querying database: {e}")
+        return
+    finally:
+        try:
+            conn.close()
+        except Exception:
+            pass
     
     active_trades, signaled_trades, closed_trades, incubating_trades = [], [], [], []
     tickers_to_fetch = set()
     
     for row in all_trades:
         status, ticker = row[2], row[1]
-        if status == 'ACTIVE': active_trades.append(row)
-        elif status == 'SIGNALED': signaled_trades.append(row)
-        elif status == 'INCUBATING': incubating_trades.append(row)
-        elif status.startswith('CLOSED'): closed_trades.append(row)
-        if status != 'CLOSED': tickers_to_fetch.add(f"NSE:{ticker}")
+        if status in ('ACTIVE', 'OPEN'): 
+            active_trades.append(row)
+            prefix = "NFO:" if any(c.isdigit() for c in ticker) else "NSE:"
+            tickers_to_fetch.add(f"{prefix}{ticker}")
+        elif status == 'SIGNALED': 
+            signaled_trades.append(row)
+        elif status == 'INCUBATING': 
+            incubating_trades.append(row)
+        else: 
+            closed_trades.append(row)
             
     kite = get_kite_client()
-    quotes = kite.quote(list(tickers_to_fetch)) if kite and tickers_to_fetch else {}
+    quotes = {}
+    if kite and tickers_to_fetch:
+        try:
+            quotes = kite.quote(list(tickers_to_fetch))
+        except Exception as qe:
+            print(f"Warning: Failed to fetch live quotes: {qe}")
             
     total_active_pnl_pct, wins, losses = 0.0, 0, 0
 
     def build_row(row, is_active=True, is_closed=False, is_incubator=False):
         nonlocal total_active_pnl_pct, wins, losses
-        trade_id, ticker, status, price, quantity, notes_str, sys_time = row
+        trade_id, ticker, status, price, quantity, notes_str, sys_time, exit_p, db_pnl, score, holding_type, turnover_val = row
         price = float(price) if price is not None else 0.0
-        try: notes = json.loads(notes_str)
-        except: notes = {}
-            
-        ai_score = notes.get('ai_score', notes.get('conviction', 0.0))
-        mom_score = notes.get('mom_score', notes.get('extension', 0.0))
-        vol_z = notes.get('vol_z', notes.get('vol_surge', 0.0))
-        turnover = notes.get('turnover', 0.0)
-        regime = notes.get('macro', notes.get('regime', 'N/A'))
+        ai_score = float(score) if score is not None else 0.0
+        mom_score = 0.0
+        vol_z = 0.0
+        turnover = (float(turnover_val) / 10000000.0) if turnover_val else 0.0
+        regime = holding_type or 'N/A'
         
-        display_date = sys_time.strftime("%Y-%m-%d")
-        kite_symbol = f"NSE:{ticker}"
+        display_date = sys_time.strftime("%Y-%m-%d %H:%M") if sys_time else "N/A"
+        kite_symbol = f"NFO:{ticker}" if any(c.isdigit() for c in ticker) else f"NSE:{ticker}"
         live_price = quotes.get(kite_symbol, {}).get('last_price', 0.0)
         
         pnl_pct = 0.0
         if is_closed:
-            exit_p = notes.get('exit_price', price)
-            if price > 0: pnl_pct = ((exit_p - price) / price) * 100
-            if status == 'CLOSED_WIN': wins += 1
+            exit_val = float(exit_p) if exit_p is not None else price
+            if db_pnl is not None:
+                pnl_pct = float(db_pnl)
+            elif price > 0:
+                pnl_pct = ((exit_val - price) / price) * 100
+            if pnl_pct >= 0: wins += 1
             else: losses += 1
-            live_price_display = f"₹{exit_p:.2f}"
+            live_price_display = f"₹{exit_val:.2f}"
         else:
             if price > 0 and live_price > 0: pnl_pct = ((live_price - price) / price) * 100
             live_price_display = f"₹{live_price:.2f}" if live_price > 0 else "N/A"

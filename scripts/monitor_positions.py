@@ -1,7 +1,7 @@
 import os
 import sys
 import json
-from datetime import datetime
+from datetime import datetime, time
 from dotenv import load_dotenv
 
 # Ensure project root is in sys.path
@@ -178,6 +178,12 @@ def monitor_positions():
 
         # 5. Evaluate position through DynamicOptionExitEngine
         decision = exit_engine.evaluate_position(pos, ltp=ltp, now=now_dt)
+
+        # Defense-in-depth: BTST Opening 15-Minute Noise Freeze (09:15 - 09:30 IST)
+        if pos.get("holding_type") == "TYPE_C_BTST" and now_dt.time() < time(9, 30):
+            if decision.action in ("HARD_STOP", "TIME_STOP", "TAXONOMY_CUT", "EXPIRY_STOP"):
+                print(f"[{now_dt}] ⏳ BTST Opening 15m Freeze (09:15-09:30 IST): Suppressed {decision.action} for {opt_symbol} (PnL: {pnl_pct:+.2f}%). Resting exchange SL active.")
+                continue
 
         # 6. Act on Exit Decision
         if decision.action in ("HARD_STOP", "TIME_STOP", "TAXONOMY_CUT", "EXPIRY_STOP"):

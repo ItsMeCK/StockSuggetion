@@ -85,6 +85,18 @@ class DynamicOptionExitEngine:
         highest_high = float(pos.get("highest_high", entry_premium))
         current_sl = float(pos.get("current_sl", entry_premium * 0.85))
         trailing_active = bool(pos.get("trailing_active", False))
+        holding_type = pos.get("holding_type", "TYPE_A_SCALP")
+
+        # 0. Opening 15-Minute Volatility Freeze for BTST Positions (09:15 to 09:30 AM IST)
+        # Prevents premature software dumps on opening bid-ask spreads and market maker wicks.
+        # Catastrophic downside is 100% guarded by the physical resting exchange Stop-Loss order.
+        if now and holding_type == "TYPE_C_BTST" and now.time() < time(9, 30):
+            # Allow upward profit lock / trailing ratchets, but suppress adverse/stagnation cuts
+            if pnl_pct < self.breakeven_threshold:
+                return ExitDecision(
+                    action="HOLD",
+                    reason=f"BTST Opening 15m Freeze (09:15-09:30 IST active until 09:30; resting exchange SL guards risk): PnL {pnl_pct:+.2f}%"
+                )
 
         # 1. Hard Stop-Loss Floor (-15% max premium loss)
         if pnl_pct <= self.hard_sl_pct:

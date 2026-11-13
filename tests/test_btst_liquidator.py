@@ -135,3 +135,39 @@ def test_btst_liquidator_0930_decay_exit(mock_close, mock_positions, mock_emaile
     assert exited[0]["symbol"] == "SBIN"
     assert "09:30 AM Edge Decay Cut" in exited[0]["exit_reason"]
     mock_close.assert_called_once()
+
+@patch("scripts.btst_liquidator.get_kite_data_client")
+@patch("scripts.btst_liquidator.get_kite_exec_client")
+@patch("scripts.btst_liquidator.SovereignEmailer")
+@patch("scripts.btst_liquidator.get_all_active_positions")
+@patch("scripts.btst_liquidator.close_position")
+def test_btst_liquidator_adverse_gap_held_before_0930(mock_close, mock_positions, mock_emailer, mock_exec, mock_data):
+    # Adverse gap (-12% loss) evaluated at 09:21 AM
+    mock_positions.return_value = [{
+        "order_id": "ORD789",
+        "sl_order_id": "SL789",
+        "holding_type": "TYPE_C_BTST",
+        "symbol": "PAYTM",
+        "option_symbol": "PAYTM26NOV1880CE",
+        "entry_premium": 88.0,
+        "qty": 725,
+        "current_sl": 74.8
+    }]
+    
+    kite_data_mock = MagicMock()
+    kite_data_mock.quote.return_value = {
+        "NFO:PAYTM26NOV1880CE": {"last_price": 77.44} # -12%
+    }
+    mock_data.return_value = kite_data_mock
+
+    kite_exec_mock = MagicMock()
+    kite_exec_mock.positions.return_value = {"net": [{"tradingsymbol": "PAYTM26NOV1880CE", "quantity": 725}]}
+    mock_exec.return_value = kite_exec_mock
+
+    # Run at 09:21 AM IST -> Must NOT exit, holding through opening 15m freeze!
+    run_time = datetime(2026, 11, 13, 9, 21, 0)
+    exited = run_btst_liquidator(now=run_time, dry_run=True)
+
+    assert len(exited) == 0
+    mock_close.assert_not_called()
+

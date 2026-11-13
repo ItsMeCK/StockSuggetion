@@ -177,8 +177,12 @@ def run_btst_liquidator(now: datetime = None, force_exit: bool = False, dry_run:
                 new_sl_price = breakeven_sl
                 print(f"🛡️ [BREAKEVEN RATCHET] {opt_symbol} PnL +{pnl_pct:.1f}% >= 20%! Ratcheting SL to cost {breakeven_sl:.2f} (Zero Risk Locked).")
 
-        # Rule 4: Adverse Gap Cut (-10% or worse at/after 09:20 AM)
+        # Rule 4: Adverse Gap Cut (-10% or worse at/after 09:30 AM)
+        # Suppressed before 09:30 AM IST: resting exchange SL protects risk; software must not panic-dump
         elif pnl_pct <= -10.0:
+            if now.hour == 9 and now.minute < 30 and not force_exit:
+                print(f"⏳ [09:30 FREEZE] Holding {opt_symbol} through opening spread (PnL: {pnl_pct:+.2f}%). Resting exchange SL active.")
+                continue
             should_exit = True
             exit_reason = f"BTST Adverse Gap Stop ({pnl_pct:.1f}%)"
 
