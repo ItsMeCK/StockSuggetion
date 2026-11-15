@@ -112,7 +112,14 @@ schedule.every().day.at("14:15").do(
 schedule.every().day.at("15:15").do(
     run_script,
     script_name="scripts/anticipatory_execution_job.py",
-    description="15:15 PM Insider / BTST Sniper"
+    description="15:15 PM Insider / BTST Sniper (CE)"
+)
+
+# 5b. 15:18 PM - Engine 2 3:18 PM STBT (PE) Insider Sniper (Reuses shared 15:15 data)
+schedule.every().day.at("15:18").do(
+    run_script,
+    script_name="scripts/anticipatory_pe_execution_job.py",
+    description="15:18 PM STBT (PE) Insider Sniper"
 )
 
 # 6. 15:26 PM - BTST Order Fill Verifier & Overnight SL Safety Net

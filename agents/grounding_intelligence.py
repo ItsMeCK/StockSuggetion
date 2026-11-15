@@ -166,10 +166,30 @@ You MUST respond ONLY with valid JSON in this exact structure, with no markdown 
         # 3. Deterministic Code-Level Score Calculation (Normalized out of 100)
         raw_weighted_score = (WEIGHT_PUBLIC_CATALYST * (pub_conf * 100)) + (WEIGHT_STEALTH_ACCUMULATION * (stealth_conf * 100))
         total_weight = WEIGHT_PUBLIC_CATALYST + WEIGHT_STEALTH_ACCUMULATION
-        final_score = round(raw_weighted_score / total_weight, 2)
-        verdict = final_score >= APPROVAL_THRESHOLD
+        weighted_score = round(raw_weighted_score / total_weight, 2)
 
-        if verdict:
+        # Wolf Sovereign Stealth Rule:
+        # If institutional stealth accumulation is strong (>= 0.65) and passed adversarial rebuttal,
+        # the lack of public retail news must NOT artificially drag it down into a rejection.
+        if stealth_conf >= 0.65:
+            stealth_standalone = round(stealth_conf * 100 * 0.85, 2)
+            final_score = max(weighted_score, stealth_standalone)
+        else:
+            final_score = weighted_score
+
+        # Wolf Anti-Hype Trap Gate:
+        # If public news is heavily hyped (pub_conf >= 0.70) but institutional delivery is absent (stealth_conf < 0.30),
+        # flag as Sell-the-News Retail Trap and veto below approval threshold.
+        is_hype_trap = False
+        if pub_conf >= 0.70 and stealth_conf < 0.30:
+            is_hype_trap = True
+            final_score = min(final_score, 40.0)
+
+        verdict = (final_score >= APPROVAL_THRESHOLD) and not is_hype_trap
+
+        if is_hype_trap:
+            rationale = f"REJECTED: Retail news hype detected ({parsed.get('public_catalyst', {}).get('summary')}) without institutional delivery confirmation (Sell-the-News Trap risk) (Score: {final_score}/100 < {APPROVAL_THRESHOLD})"
+        elif verdict:
             catalyst_type = "Public News" if pub_conf >= stealth_conf else "Silent Institutional Accumulation"
             summary_txt = parsed.get("public_catalyst", {}).get("summary") if pub_conf >= stealth_conf else parsed.get("stealth_accumulation", {}).get("summary")
             rationale = f"APPROVED ({catalyst_type}): {summary_txt} (Score: {final_score}/100)"

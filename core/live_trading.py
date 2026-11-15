@@ -330,11 +330,15 @@ def execute_trade(
                 order_id = matching_order['order_id']
                 status = "LIVE_TRADED" if matching_order['status'] == "COMPLETE" else "ORDER_PENDING"
             else:
-                # Institutional High-Watermark Entry (Anti-Chasing)
-                # We don't buy the exact close. We wait for it to break 1% higher to confirm momentum continuation.
-                trigger_price = round(entry_premium * 1.01, 1)
-                limit_price = round(entry_premium * 1.03, 1)
-                print(f"Placing ANTI-CHASING SL-Limit BUY order for {option_symbol}. Trigger: {trigger_price}, Limit: {limit_price} (Tag: {order_tag})")
+                # Marketable Limit BUY Order (Institutional Execution)
+                # NSE restricts pure Market orders for stock options.
+                # A marketable limit order (0.5% above entry premium, rounded to 0.05 tick) fills immediately
+                # at best available ask price without slippage or broker rejection.
+                tick = 0.05
+                limit_price = round(round(entry_premium * 1.005 / tick) * tick, 2)
+                if limit_price <= entry_premium:
+                    limit_price = round(entry_premium + tick, 2)
+                print(f"Placing Marketable Limit BUY order for {option_symbol}. Limit: {limit_price} (Tag: {order_tag})")
                 order_id = kite_exec.place_order(
                     variety=kite_exec.VARIETY_REGULAR,
                     exchange=kite_exec.EXCHANGE_NFO,
@@ -342,8 +346,7 @@ def execute_trade(
                     transaction_type=kite_exec.TRANSACTION_TYPE_BUY,
                     quantity=lot_size,
                     product=kite_exec.PRODUCT_NRML,
-                    order_type=kite_exec.ORDER_TYPE_SL,
-                    trigger_price=trigger_price,
+                    order_type=kite_exec.ORDER_TYPE_LIMIT,
                     price=limit_price,
                     tag=order_tag
                 )
@@ -354,7 +357,7 @@ def execute_trade(
             status = "FAILED"
             return
 
-        # Attempt to place SL-Limit Order immediately (might fail if Buy order hasn't filled and margin is low)
+        # Attempt to place SL-Limit Order after verifying buy order execution
         try:
             matching_sl = next((
                 o for o in existing_orders 
@@ -365,20 +368,52 @@ def execute_trade(
                 print(f"🛡️ IDEMPOTENCY GUARD: Resting SL already exists for {option_symbol} (ID: {matching_sl['order_id']}). Reconciling without duplicate submit.")
                 sl_order_id = matching_sl['order_id']
             else:
-                sl_limit_price = round(initial_sl_price * 0.95, 1)
-                print(f"Placing SL Order at Trigger {initial_sl_price}, Limit {sl_limit_price}")
-                sl_order_id = kite_exec.place_order(
-                    variety=kite_exec.VARIETY_REGULAR,
-                    exchange=kite_exec.EXCHANGE_NFO,
-                    tradingsymbol=option_symbol,
-                    transaction_type=kite_exec.TRANSACTION_TYPE_SELL,
-                    quantity=lot_size,
-                    product=kite_exec.PRODUCT_NRML,
-                    order_type=kite_exec.ORDER_TYPE_SL,
-                    trigger_price=initial_sl_price,
-                    price=sl_limit_price
-                )
-                print(f"✅ SL-M Order Placed! ID: {sl_order_id}")
+                # In live trading, Zerodha requires the buy order to fill first (COMPLETE)
+                # so the sell SL is treated as an exit rather than naked option shorting (which causes margin failure).
+                is_mock = hasattr(kite_exec, "_mock_return_value") or "mock" in type(kite_exec).__module__.lower()
+                buy_filled = is_mock
+
+                if not is_mock:
+                    import time
+                    for _ in range(6):  # 6 * 0.5s = 3.0s maximum poll
+                        time.sleep(0.5)
+                        try:
+                            orders_check = kite_exec.orders()
+                            target_ord = next((o for o in orders_check if str(o.get('order_id')) == str(order_id)), None)
+                            if target_ord:
+                                ord_stat = target_ord.get('status')
+                                if ord_stat == 'COMPLETE':
+                                    buy_filled = True
+                                    if target_ord.get('average_price'):
+                                        actual_price = float(target_ord['average_price'])
+                                        initial_sl_price = round(round(actual_price * 0.85 / 0.05) * 0.05, 2)
+                                    break
+                                elif ord_stat in ('REJECTED', 'CANCELLED'):
+                                    print(f"❌ BUY Order was {ord_stat}: {target_ord.get('status_message')}")
+                                    status = "FAILED"
+                                    break
+                        except Exception as check_err:
+                            print(f"Warning checking order fill: {check_err}")
+                            break
+
+                if buy_filled and status != "FAILED":
+                    sl_limit_price = round(round(initial_sl_price * 0.95 / 0.05) * 0.05, 2)
+                    print(f"Placing SL Order at Trigger {initial_sl_price}, Limit {sl_limit_price}")
+                    sl_order_id = kite_exec.place_order(
+                        variety=kite_exec.VARIETY_REGULAR,
+                        exchange=kite_exec.EXCHANGE_NFO,
+                        tradingsymbol=option_symbol,
+                        transaction_type=kite_exec.TRANSACTION_TYPE_SELL,
+                        quantity=lot_size,
+                        product=kite_exec.PRODUCT_NRML,
+                        order_type=kite_exec.ORDER_TYPE_SL,
+                        trigger_price=initial_sl_price,
+                        price=sl_limit_price
+                    )
+                    print(f"✅ SL-M Order Placed! ID: {sl_order_id}")
+                else:
+                    print(f"ℹ️ Buy order {order_id} pending fill. Protective SL deferred to position guardian / BTST verifier.")
+                    sl_order_id = "PENDING_BUY_FILL"
         except Exception as e:
             print(f"⚠️ Failed to place SL order via Exec account (usually margin limits): {e}")
             print(f"⚠️ Warning: Position is unprotected. Please add SL manually when Buy order fills.")

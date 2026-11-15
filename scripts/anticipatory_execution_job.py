@@ -59,6 +59,18 @@ def run_anticipatory_execution():
         pl.col("close").shift(1).over("symbol").alias("prev_close"),
         pl.col("low").shift(1).over("symbol").alias("prev_low")
     ])
+
+    # Wolf ATR True Range & Volatility Metrics
+    df = df.with_columns([
+        pl.max_horizontal(
+            (pl.col("high") - pl.col("low")),
+            (pl.col("high") - pl.col("close").shift(1).over("symbol")).abs(),
+            (pl.col("low") - pl.col("close").shift(1).over("symbol")).abs()
+        ).alias("true_range")
+    ])
+    df = df.with_columns([
+        pl.col("true_range").rolling_mean(window_size=14).over("symbol").alias("atr_14")
+    ])
     
     # Isolate the latest candle
     latest_time = df.select(pl.col("time").max()).item()
@@ -74,22 +86,36 @@ def run_anticipatory_execution():
             pl.when(pl.col("high") != pl.col("low"))
             .then((pl.col("close") - pl.col("low")) / (pl.col("high") - pl.col("low")))
             .otherwise(0.0)
-        ).alias("close_to_high_ratio")
+        ).alias("close_to_high_ratio"),
+        (
+            pl.when(pl.col("atr_14") > 0.0)
+            .then((pl.col("close") - pl.col("sma_20")) / pl.col("atr_14"))
+            .otherwise(0.0)
+        ).alias("atr_dist_sma20")
     ])
     
     # Apply the 4-part Filter (and exclude low-beta defensives)
     from core.watchlist_manager import DEFAULT_DEFENSIVE_BLACKLIST
+
+    # Wolf Breakout Pattern: Clean top 15% close OR VCP Base Expansion (vol_surge > 2.0 with close_to_high > 0.65)
+    valid_breakout_pattern = (
+        (pl.col("close_to_high_ratio") > 0.85) |
+        ((pl.col("vol_surge") > 2.0) & (pl.col("close_to_high_ratio") > 0.65))
+    )
+
     insider_breakouts = current_hour_df.filter(
         (~pl.col("symbol").is_in(list(DEFAULT_DEFENSIVE_BLACKLIST))) &
-        # 1. Closing near HOD (Top 15% of range, no supply)
-        (pl.col("close_to_high_ratio") > 0.85) &
+        # 1. Closing near HOD or VCP Base Expansion
+        valid_breakout_pattern &
         # 2. Volume expansion (at least 1.2x, no upper cap for 3 PM run)
         (pl.col("vol_surge") > 1.2) &
         # 3. Structural Integrity (Green candle, above 20 SMA)
         (pl.col("close") > pl.col("open")) &
         (pl.col("close") > pl.col("sma_20")) &
         (pl.col("close") > pl.col("prev_close")) &
-        (pl.col("low") > pl.col("prev_low"))
+        (pl.col("low") > pl.col("prev_low")) &
+        # 4. Wolf Anti-Trap Mean-Reversion Gate: Max 4.0x ATR distance above 20 SMA (prevents buying parabolic exhaustion in 99th percentile)
+        (pl.col("atr_dist_sma20") <= 4.0)
     ).sort("vol_surge", descending=True).head(5)
     
     candidates = insider_breakouts.select("symbol").to_series().to_list()
@@ -112,6 +138,33 @@ def run_anticipatory_execution():
         return
 
     for sym in candidates:
+        # Wolf Anti-Duplicate Chase: If symbol already hit a profitable daytime target today, skip duplicate BTST entry
+        try:
+            from core.db_manager import get_db_connection
+            conn = get_db_connection()
+            cur = conn.cursor()
+            cur.execute("""
+                SELECT COUNT(*) FROM trades 
+                WHERE symbol = %s 
+                  AND entry_time::date = CURRENT_DATE 
+                  AND holding_type IN ('TYPE_A_SCALP', 'HOURLY / BTST')
+                  AND pnl_pct > 3.0
+            """, (sym,))
+            row = cur.fetchone()
+            already_won_today = (row[0] > 0) if row else False
+            cur.close()
+            conn.close()
+            if already_won_today:
+                print(f"🛡️ WOLF ANTI-CHASE: {sym} already yielded a profitable trade today. Skipping duplicate late-day BTST entry to prevent top-ticking.")
+                rejected_trades.append({
+                    "ticker": sym,
+                    "score": 0,
+                    "reason": "WOLF ANTI-CHASE: Duplicate same-day entry blocked (already booked profits earlier today)."
+                })
+                continue
+        except Exception as e:
+            print(f"Warning in anti-chase check: {e}")
+
         print(f"\n🌍 Running Hardened 3D Grounding Evaluation for {sym}...")
         try:
             approved, score, rationale, audit_data = grounding_agent.evaluate_symbol(sym)

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T10:41:42.476082",
+  "generated_at": "2026-11-15T10:52:55.492247",
   "count": 203,
   "banned_count": 2,
   "macro_themes": {
@@ -20,7 +20,7 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.917742964585089,
+        "atr_pct": 3.850925152653975,
         "sector": "NIFTY AUTO"
       },
       {
@@ -28,7 +28,7 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.5345955405083265,
+        "atr_pct": 3.8192259348412305,
         "sector": "NIFTY AUTO"
       },
       {
@@ -36,7 +36,7 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.4087628811952806,
+        "atr_pct": 3.4750144473164966,
         "sector": "NIFTY PHARMA"
       },
       {
@@ -44,15 +44,7 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.29967198441303,
-        "sector": "NIFTY AUTO"
-      },
-      {
-        "symbol": "SONACOMS",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 3.2961597032654284,
+        "atr_pct": 3.4533623268268334,
         "sector": "NIFTY AUTO"
       },
       {
@@ -60,7 +52,7 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.209564431505928,
+        "atr_pct": 3.391202680322182,
         "sector": "NIFTY PHARMA"
       },
       {
@@ -68,32 +60,40 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.1876724759528576,
+        "atr_pct": 3.1745174231106135,
         "sector": "NIFTY AUTO"
       },
       {
-        "symbol": "MAXHEALTH",
+        "symbol": "SONACOMS",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.143142022224855,
-        "sector": "NIFTY PHARMA"
-      },
-      {
-        "symbol": "FORTIS",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 3.0879294602383127,
-        "sector": "NIFTY PHARMA"
+        "atr_pct": 3.060981052872208,
+        "sector": "NIFTY AUTO"
       },
       {
         "symbol": "BHARATFORG",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.0821075478149145,
+        "atr_pct": 3.036356875439928,
         "sector": "NIFTY AUTO"
+      },
+      {
+        "symbol": "MANKIND",
+        "dte": 15,
+        "bid_ask_spread_pct": 0.8,
+        "oi": 50000,
+        "atr_pct": 3.0080725025442425,
+        "sector": "NIFTY PHARMA"
+      },
+      {
+        "symbol": "DIVISLAB",
+        "dte": 15,
+        "bid_ask_spread_pct": 0.8,
+        "oi": 50000,
+        "atr_pct": 2.956061795438266,
+        "sector": "NIFTY PHARMA"
       }
     ],
     "pe_focus": [
@@ -102,7 +102,7 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.822351163174799,
+        "atr_pct": 3.620153826145889,
         "sector": "NIFTY IT"
       },
       {
@@ -110,7 +110,7 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.4945526891155994,
+        "atr_pct": 3.546573517671932,
         "sector": "NIFTY IT"
       },
       {
@@ -118,31 +118,7 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.4778389417677973,
-        "sector": "NIFTY IT"
-      },
-      {
-        "symbol": "TATAELXSI",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 3.465818235992562,
-        "sector": "NIFTY IT"
-      },
-      {
-        "symbol": "LTM",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 3.4578049233853783,
-        "sector": "NIFTY IT"
-      },
-      {
-        "symbol": "INFY",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 3.43154301324399,
+        "atr_pct": 3.347435414659975,
         "sector": "NIFTY IT"
       },
       {
@@ -150,7 +126,23 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.4154630701161013,
+        "atr_pct": 3.302203945817464,
+        "sector": "NIFTY IT"
+      },
+      {
+        "symbol": "LTM",
+        "dte": 15,
+        "bid_ask_spread_pct": 0.8,
+        "oi": 50000,
+        "atr_pct": 3.2681202243660543,
+        "sector": "NIFTY IT"
+      },
+      {
+        "symbol": "INFY",
+        "dte": 15,
+        "bid_ask_spread_pct": 0.8,
+        "oi": 50000,
+        "atr_pct": 3.211751302397949,
         "sector": "NIFTY IT"
       },
       {
@@ -158,7 +150,15 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.2444917868303085,
+        "atr_pct": 2.8526175962404787,
+        "sector": "NIFTY IT"
+      },
+      {
+        "symbol": "TATAELXSI",
+        "dte": 15,
+        "bid_ask_spread_pct": 0.8,
+        "oi": 50000,
+        "atr_pct": 2.8358689201928717,
         "sector": "NIFTY IT"
       },
       {
@@ -166,15 +166,15 @@
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.0339783464013372,
+        "atr_pct": 2.8307737827577415,
         "sector": "NIFTY IT"
       },
       {
-        "symbol": "TECHM",
+        "symbol": "WIPRO",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 2.9287801396212987,
+        "atr_pct": 2.619184251714906,
         "sector": "NIFTY IT"
       }
     ]
@@ -185,7 +185,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.2568796629319907,
+      "atr_pct": 3.3777431442188024,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -193,7 +193,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.475650193596368,
+      "atr_pct": 3.5036526764245686,
       "sector": "NIFTY INFRA"
     },
     {
@@ -201,7 +201,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.095529394079308,
+      "atr_pct": 3.1033952672592737,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -209,7 +209,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.47396962276015,
+      "atr_pct": 3.3776724878889874,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -217,7 +217,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.7253620647154033,
+      "atr_pct": 2.6996752676759006,
       "sector": "NIFTY INFRA"
     },
     {
@@ -225,7 +225,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.160859723843475,
+      "atr_pct": 3.245134210970817,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -233,7 +233,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.7916078759159273,
+      "atr_pct": 2.6843344784476644,
       "sector": "NIFTY INFRA"
     },
     {
@@ -241,7 +241,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.214095477618213,
+      "atr_pct": 2.794140255793993,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -249,7 +249,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.3452158356455715,
+      "atr_pct": 2.6186389702186093,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -257,7 +257,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.3656933741866246,
+      "atr_pct": 4.268990132827427,
       "sector": "NIFTY INFRA"
     },
     {
@@ -265,7 +265,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.509270517228019,
+      "atr_pct": 3.379491763547771,
       "sector": "NIFTY INFRA"
     },
     {
@@ -273,7 +273,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.82340574338835,
+      "atr_pct": 3.7111617659813185,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -281,7 +281,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.777000162012017,
+      "atr_pct": 2.5569931937784594,
       "sector": "NIFTY METAL"
     },
     {
@@ -289,7 +289,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.6926979578233565,
+      "atr_pct": 2.248097655502487,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -297,7 +297,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.868175734137939,
+      "atr_pct": 2.866220168581893,
       "sector": "NIFTY AUTO"
     },
     {
@@ -305,7 +305,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.358898038972257,
+      "atr_pct": 2.3188249174776954,
       "sector": "NIFTY CONSUMPTION"
     },
     {
@@ -313,7 +313,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.0307382612418556,
+      "atr_pct": 3.0659024718372385,
       "sector": "NIFTY INFRA"
     },
     {
@@ -321,7 +321,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.90990065797794,
+      "atr_pct": 2.972989743046529,
       "sector": "NIFTY BANK"
     },
     {
@@ -329,7 +329,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.725534840166297,
+      "atr_pct": 2.6319843532770397,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -337,7 +337,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.119187809331039,
+      "atr_pct": 2.023458755448515,
       "sector": "NIFTY BANK"
     },
     {
@@ -345,7 +345,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.5785285393441226,
+      "atr_pct": 2.295143713135613,
       "sector": "NIFTY AUTO"
     },
     {
@@ -353,7 +353,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.497585394394213,
+      "atr_pct": 2.3898783054090607,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -369,7 +369,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.00231863568229,
+      "atr_pct": 2.9561583793719155,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -377,7 +377,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 4.135350811940223,
+      "atr_pct": 3.6796651143088326,
       "sector": "NIFTY BANK"
     },
     {
@@ -385,7 +385,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.243879832648713,
+      "atr_pct": 2.364756219531695,
       "sector": "NIFTY PSU BANK"
     },
     {
@@ -393,7 +393,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.887180298470775,
+      "atr_pct": 2.9479162993358097,
       "sector": "NIFTY PSU BANK"
     },
     {
@@ -409,7 +409,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.385407549407637,
+      "atr_pct": 3.8366113753972777,
       "sector": "NIFTY INFRA"
     },
     {
@@ -417,7 +417,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.3169721081513983,
+      "atr_pct": 2.2638668288185633,
       "sector": "NIFTY INFRA"
     },
     {
@@ -425,7 +425,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.0821075478149145,
+      "atr_pct": 3.036356875439928,
       "sector": "NIFTY AUTO"
     },
     {
@@ -433,7 +433,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.4420005260137705,
+      "atr_pct": 2.2559292395545154,
       "sector": "NIFTY INFRA"
     },
     {
@@ -441,7 +441,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.5667134597640846,
+      "atr_pct": 3.217604833562187,
       "sector": "NIFTY INFRA"
     },
     {
@@ -449,7 +449,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.726075914476854,
+      "atr_pct": 2.665866506197937,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -457,7 +457,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.508465525691782,
+      "atr_pct": 3.5283770791112894,
       "sector": "NIFTY INFRA"
     },
     {
@@ -465,7 +465,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.435698301435535,
+      "atr_pct": 2.603575614239764,
       "sector": "NIFTY AUTO"
     },
     {
@@ -473,7 +473,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.508456367924931,
+      "atr_pct": 2.515485557041139,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -481,7 +481,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.4464521153581154,
+      "atr_pct": 2.2078911815505053,
       "sector": "NIFTY FMCG"
     },
     {
@@ -489,7 +489,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.083040366292926,
+      "atr_pct": 2.8880250933596434,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -497,7 +497,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.966409159737556,
+      "atr_pct": 3.26036382904507,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -505,7 +505,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.662666894053851,
+      "atr_pct": 2.387779887766669,
       "sector": "NIFTY PSU BANK"
     },
     {
@@ -513,7 +513,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.760004353732237,
+      "atr_pct": 2.943889508768522,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -521,7 +521,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.669026993172057,
+      "atr_pct": 3.55877539593061,
       "sector": "NIFTY INFRA"
     },
     {
@@ -529,7 +529,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.2046141224947227,
+      "atr_pct": 2.9535136227379706,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -537,7 +537,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 1.9667926880801438,
+      "atr_pct": 1.849040966565406,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -545,7 +545,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.2394230718772947,
+      "atr_pct": 2.030336991800996,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -553,7 +553,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.4322461034007445,
+      "atr_pct": 3.383388192584107,
       "sector": "NIFTY INFRA"
     },
     {
@@ -561,7 +561,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.4154630701161013,
+      "atr_pct": 3.302203945817464,
       "sector": "NIFTY IT"
     },
     {
@@ -569,7 +569,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.6573571768730124,
+      "atr_pct": 2.7282526712767314,
       "sector": "NIFTY INFRA"
     },
     {
@@ -577,7 +577,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 4.167130399754638,
+      "atr_pct": 4.051974030318443,
       "sector": "NIFTY INFRA"
     },
     {
@@ -585,7 +585,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.9280288861179167,
+      "atr_pct": 3.0091730483057235,
       "sector": "NIFTY INFRA"
     },
     {
@@ -601,7 +601,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.183019121116885,
+      "atr_pct": 3.0970514688932083,
       "sector": "NIFTY INFRA"
     },
     {
@@ -609,7 +609,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.5277776813112447,
+      "atr_pct": 2.956061795438266,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -617,7 +617,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.4645790306876654,
+      "atr_pct": 3.515345987640727,
       "sector": "NIFTY INFRA"
     },
     {
@@ -625,7 +625,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.4822862782170168,
+      "atr_pct": 2.5303461779290304,
       "sector": "NIFTY REALTY"
     },
     {
@@ -633,7 +633,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.2141617295723273,
+      "atr_pct": 1.904933736068611,
       "sector": "NIFTY CONSUMPTION"
     },
     {
@@ -641,7 +641,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.2449292568142822,
+      "atr_pct": 2.045520825187469,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -649,7 +649,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.3605430987222875,
+      "atr_pct": 2.3511975185397933,
       "sector": "NIFTY AUTO"
     },
     {
@@ -665,7 +665,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.7757115910830334,
+      "atr_pct": 2.833583455721924,
       "sector": "NIFTY BANK"
     },
     {
@@ -681,7 +681,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.5345955405083265,
+      "atr_pct": 3.8192259348412305,
       "sector": "NIFTY AUTO"
     },
     {
@@ -689,7 +689,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.0879294602383127,
+      "atr_pct": 2.8192207878797815,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -697,7 +697,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.3513358064289616,
+      "atr_pct": 2.329576714803744,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -705,7 +705,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.4087628811952806,
+      "atr_pct": 3.4750144473164966,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -713,7 +713,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.920272300802962,
+      "atr_pct": 2.8144907842750415,
       "sector": "NIFTY INFRA"
     },
     {
@@ -721,7 +721,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.278010887462596,
+      "atr_pct": 3.440526298504443,
       "sector": "NIFTY FMCG"
     },
     {
@@ -729,7 +729,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.421106678175343,
+      "atr_pct": 3.541121846818291,
       "sector": "NIFTY REALTY"
     },
     {
@@ -737,7 +737,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.0935746313574537,
+      "atr_pct": 2.2672778133835396,
       "sector": "NIFTY INFRA"
     },
     {
@@ -745,7 +745,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.805005797947969,
+      "atr_pct": 3.8841635751251857,
       "sector": "NIFTY INFRA"
     },
     {
@@ -753,7 +753,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.455080843419446,
+      "atr_pct": 2.6763092221708327,
       "sector": "NIFTY INFRA"
     },
     {
@@ -761,7 +761,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.1549536902636763,
+      "atr_pct": 2.970922469743658,
       "sector": "NIFTY INFRA"
     },
     {
@@ -769,7 +769,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.814773342143527,
+      "atr_pct": 2.3835249202440894,
       "sector": "NIFTY IT"
     },
     {
@@ -777,7 +777,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.0175529602203905,
+      "atr_pct": 2.8387316241285605,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -785,7 +785,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.137093116430715,
+      "atr_pct": 2.131831388654004,
       "sector": "NIFTY BANK"
     },
     {
@@ -793,7 +793,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.599139590753433,
+      "atr_pct": 2.5711666821756136,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -801,7 +801,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.8212134702562603,
+      "atr_pct": 2.7911254622949495,
       "sector": "NIFTY AUTO"
     },
     {
@@ -809,7 +809,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.5000727551746653,
+      "atr_pct": 2.527195458856924,
       "sector": "NIFTY METAL"
     },
     {
@@ -817,7 +817,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.7511331700517587,
+      "atr_pct": 2.594500447852206,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -825,7 +825,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.873429698486753,
+      "atr_pct": 2.7907125370425185,
       "sector": "NIFTY METAL"
     },
     {
@@ -833,7 +833,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.9543108431586775,
+      "atr_pct": 2.7705222449519042,
       "sector": "NIFTY AUTO"
     },
     {
@@ -841,7 +841,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.1121556555489898,
+      "atr_pct": 1.9833547767198945,
       "sector": "NIFTY BANK"
     },
     {
@@ -857,7 +857,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.2935572400248967,
+      "atr_pct": 3.249109669253202,
       "sector": "NIFTY INFRA"
     },
     {
@@ -865,7 +865,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.5187898060503833,
+      "atr_pct": 2.611384752559544,
       "sector": "NIFTY BANK"
     },
     {
@@ -873,7 +873,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.8783660587405335,
+      "atr_pct": 2.9077121699729007,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -881,7 +881,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.6595365854631914,
+      "atr_pct": 2.7724541473728994,
       "sector": "NIFTY CONSUMPTION"
     },
     {
@@ -889,7 +889,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.6898560714945563,
+      "atr_pct": 2.5271228688759044,
       "sector": "NIFTY PSU BANK"
     },
     {
@@ -897,7 +897,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.6208361477423816,
+      "atr_pct": 2.469945630883653,
       "sector": "NIFTY INFRA"
     },
     {
@@ -905,7 +905,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.865268173230956,
+      "atr_pct": 2.8402239376598386,
       "sector": "NIFTY BANK"
     },
     {
@@ -913,7 +913,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.4022745851960616,
+      "atr_pct": 2.533532445826373,
       "sector": "NIFTY INFRA"
     },
     {
@@ -921,7 +921,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.43154301324399,
+      "atr_pct": 3.211751302397949,
       "sector": "NIFTY IT"
     },
     {
@@ -929,7 +929,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 4.478460135846408,
+      "atr_pct": 4.419346307468599,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -937,7 +937,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 1.976682363594912,
+      "atr_pct": 2.070356831020844,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -945,7 +945,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.0045648323673113,
+      "atr_pct": 3.412643976538778,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -953,7 +953,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.864104108666415,
+      "atr_pct": 3.23727624851714,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -961,7 +961,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.396365504491098,
+      "atr_pct": 2.1244944245396575,
       "sector": "NIFTY FMCG"
     },
     {
@@ -969,7 +969,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.5823474355761094,
+      "atr_pct": 2.4865721646755796,
       "sector": "NIFTY METAL"
     },
     {
@@ -977,7 +977,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.4764363988073015,
+      "atr_pct": 2.3231688022162635,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -985,7 +985,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.0510919718744107,
+      "atr_pct": 2.743888953784047,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -993,7 +993,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.633411674045782,
+      "atr_pct": 2.458133095369119,
       "sector": "NIFTY METAL"
     },
     {
@@ -1001,7 +1001,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.7168852110761534,
+      "atr_pct": 3.0110486442615225,
       "sector": "NIFTY CONSUMPTION"
     },
     {
@@ -1009,7 +1009,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.428613880790574,
+      "atr_pct": 4.300022969622804,
       "sector": "NIFTY CONSUMPTION"
     },
     {
@@ -1017,7 +1017,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.548270813503012,
+      "atr_pct": 3.51060291424388,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1025,7 +1025,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.72404706549528,
+      "atr_pct": 3.6396063440159914,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1033,7 +1033,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.6462249586424624,
+      "atr_pct": 3.677304190433978,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1041,7 +1041,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.0872157527568502,
+      "atr_pct": 2.1020971489605,
       "sector": "NIFTY BANK"
     },
     {
@@ -1049,7 +1049,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.822351163174799,
+      "atr_pct": 3.620153826145889,
       "sector": "NIFTY IT"
     },
     {
@@ -1057,7 +1057,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.209564431505928,
+      "atr_pct": 3.391202680322182,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -1065,7 +1065,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.8947925558151675,
+      "atr_pct": 2.9354649151324206,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1073,7 +1073,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.305099109030677,
+      "atr_pct": 2.193350979955734,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1081,7 +1081,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.762456360938864,
+      "atr_pct": 3.9236557025122414,
       "sector": "NIFTY REALTY"
     },
     {
@@ -1089,7 +1089,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.0991707112114666,
+      "atr_pct": 1.8867016184727496,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1097,7 +1097,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.369114803457954,
+      "atr_pct": 3.4051424107893786,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1105,7 +1105,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.4578049233853783,
+      "atr_pct": 3.2681202243660543,
       "sector": "NIFTY IT"
     },
     {
@@ -1113,7 +1113,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 1.9053526603965367,
+      "atr_pct": 1.8918412617826408,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -1121,7 +1121,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.440005078924033,
+      "atr_pct": 2.305641766574589,
       "sector": "NIFTY AUTO"
     },
     {
@@ -1129,7 +1129,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.6875730510069125,
+      "atr_pct": 3.982705382720171,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1137,7 +1137,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.916851731300265,
+      "atr_pct": 3.0080725025442425,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -1145,7 +1145,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.2509782837922083,
+      "atr_pct": 2.1243475340960427,
       "sector": "NIFTY AUTO"
     },
     {
@@ -1153,7 +1153,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.143142022224855,
+      "atr_pct": 2.824879504326069,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -1161,7 +1161,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.730727854891847,
+      "atr_pct": 3.559622095257134,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1169,7 +1169,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.6322062456442126,
+      "atr_pct": 3.617497977715664,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1177,7 +1177,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.3486669795844684,
+      "atr_pct": 3.4493798098858703,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1193,7 +1193,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.1876724759528576,
+      "atr_pct": 3.1745174231106135,
       "sector": "NIFTY AUTO"
     },
     {
@@ -1201,7 +1201,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 4.330894984871863,
+      "atr_pct": 4.638675640929198,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1209,7 +1209,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.4945526891155994,
+      "atr_pct": 3.546573517671932,
       "sector": "NIFTY IT"
     },
     {
@@ -1217,7 +1217,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.0941557888862006,
+      "atr_pct": 3.2025864002082756,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1225,7 +1225,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.9160096904386905,
+      "atr_pct": 4.05040127808799,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1233,7 +1233,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.058086609729808,
+      "atr_pct": 2.9923161646944623,
       "sector": "NIFTY METAL"
     },
     {
@@ -1241,7 +1241,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.4778389417677973,
+      "atr_pct": 3.347435414659975,
       "sector": "NIFTY IT"
     },
     {
@@ -1249,7 +1249,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.3795579519108285,
+      "atr_pct": 3.559323307382853,
       "sector": "NIFTY REALTY"
     },
     {
@@ -1257,7 +1257,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.556375680412717,
+      "atr_pct": 2.7504033129358136,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -1281,7 +1281,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.2134903788744555,
+      "atr_pct": 2.2413935618149554,
       "sector": "NIFTY METAL"
     },
     {
@@ -1289,7 +1289,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.5022926120208577,
+      "atr_pct": 2.4594243933849755,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -1305,7 +1305,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.1433012337620925,
+      "atr_pct": 3.1668222420193834,
       "sector": "NIFTY CONSUMPTION"
     },
     {
@@ -1313,7 +1313,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.5482967416340383,
+      "atr_pct": 2.8004930995678725,
       "sector": "NIFTY REALTY"
     },
     {
@@ -1321,7 +1321,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.0339783464013372,
+      "atr_pct": 2.8307737827577415,
       "sector": "NIFTY IT"
     },
     {
@@ -1329,7 +1329,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.1569177078882396,
+      "atr_pct": 2.3202966696166407,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -1337,7 +1337,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.028672943756468,
+      "atr_pct": 3.0952139829074765,
       "sector": "NIFTY CONSUMPTION"
     },
     {
@@ -1345,7 +1345,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.392188043219643,
+      "atr_pct": 3.5625618956451612,
       "sector": "NIFTY FMCG"
     },
     {
@@ -1353,7 +1353,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.494791300108443,
+      "atr_pct": 3.4449026947475367,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1361,7 +1361,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.2444917868303085,
+      "atr_pct": 2.8526175962404787,
       "sector": "NIFTY IT"
     },
     {
@@ -1369,7 +1369,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.3582901774901126,
+      "atr_pct": 2.4774583818751337,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -1377,7 +1377,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.55511747981499,
+      "atr_pct": 2.5405700586302777,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1385,7 +1385,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.5158717728921003,
+      "atr_pct": 3.6381210665602297,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1393,7 +1393,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.93825710900632,
+      "atr_pct": 3.1796467602474143,
       "sector": "NIFTY REALTY"
     },
     {
@@ -1401,7 +1401,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.365484305574497,
+      "atr_pct": 2.3790801002222697,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1409,7 +1409,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.6028560751923644,
+      "atr_pct": 3.559626043462594,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1417,7 +1417,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.4732338037282386,
+      "atr_pct": 2.729931071354399,
       "sector": "NIFTY PSU BANK"
     },
     {
@@ -1425,7 +1425,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.2461262834689513,
+      "atr_pct": 3.1872181611333255,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1433,7 +1433,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.937588597793153,
+      "atr_pct": 4.152594905825136,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1441,7 +1441,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.4215129598148186,
+      "atr_pct": 3.0363427728590136,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1449,7 +1449,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.362040476329436,
+      "atr_pct": 2.3842152091044353,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -1457,7 +1457,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.7442326667024424,
+      "atr_pct": 3.9938648694712837,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1465,7 +1465,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.180852625224383,
+      "atr_pct": 3.074527932409182,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -1473,7 +1473,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.1724168132949355,
+      "atr_pct": 3.3268424546350324,
       "sector": "NIFTY REALTY"
     },
     {
@@ -1481,7 +1481,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.2250027737518296,
+      "atr_pct": 3.253643412724196,
       "sector": "NIFTY FMCG"
     },
     {
@@ -1489,7 +1489,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.2840365106141554,
+      "atr_pct": 2.9540257773541274,
       "sector": "NIFTY BANK"
     },
     {
@@ -1497,7 +1497,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.6583674955697805,
+      "atr_pct": 2.784081300372729,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1505,7 +1505,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.408428595412137,
+      "atr_pct": 2.1985295647209844,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -1513,7 +1513,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.239931084678639,
+      "atr_pct": 3.7876223760239833,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1521,7 +1521,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.0862820280331036,
+      "atr_pct": 3.1520277567779598,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1529,7 +1529,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.115294727340035,
+      "atr_pct": 2.160070065840205,
       "sector": "NIFTY PSU BANK"
     },
     {
@@ -1537,7 +1537,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.5308594914016305,
+      "atr_pct": 2.3642338415796353,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1545,7 +1545,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.5739796259114427,
+      "atr_pct": 3.2482804549342665,
       "sector": "NIFTY FIN SERVICE"
     },
     {
@@ -1553,7 +1553,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.412735380991028,
+      "atr_pct": 3.440183874060775,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1561,7 +1561,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.2249961052137253,
+      "atr_pct": 3.295280359925149,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1569,7 +1569,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.2961597032654284,
+      "atr_pct": 3.060981052872208,
       "sector": "NIFTY AUTO"
     },
     {
@@ -1577,7 +1577,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.6827659718756918,
+      "atr_pct": 2.7175081305680737,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1585,7 +1585,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.226939337547983,
+      "atr_pct": 2.3720553729325626,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -1593,7 +1593,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.041286477796336,
+      "atr_pct": 3.125072596154384,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1601,7 +1601,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.702244404457558,
+      "atr_pct": 3.4363671164314056,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -1609,7 +1609,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 4.571188824143478,
+      "atr_pct": 4.986950344129864,
       "sector": "NIFTY CONSUMPTION"
     },
     {
@@ -1617,7 +1617,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.465818235992562,
+      "atr_pct": 2.8358689201928717,
       "sector": "NIFTY IT"
     },
     {
@@ -1625,7 +1625,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.4375263996109675,
+      "atr_pct": 2.636836038968789,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -1633,7 +1633,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.44843235163325,
+      "atr_pct": 2.523987916082258,
       "sector": "NIFTY METAL"
     },
     {
@@ -1641,7 +1641,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.8754852489780767,
+      "atr_pct": 2.403766759029163,
       "sector": "NIFTY IT"
     },
     {
@@ -1649,7 +1649,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.9287801396212987,
+      "atr_pct": 2.5335975299344953,
       "sector": "NIFTY IT"
     },
     {
@@ -1657,7 +1657,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.917742964585089,
+      "atr_pct": 3.850925152653975,
       "sector": "NIFTY AUTO"
     },
     {
@@ -1665,7 +1665,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.3559196378643725,
+      "atr_pct": 2.4363361717206105,
       "sector": "NIFTY CONSUMPTION"
     },
     {
@@ -1673,7 +1673,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.396204147084204,
+      "atr_pct": 2.38957841779215,
       "sector": "NIFTY AUTO"
     },
     {
@@ -1681,7 +1681,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.1987105891819643,
+      "atr_pct": 2.1876065343194155,
       "sector": "NIFTY PHARMA"
     },
     {
@@ -1689,7 +1689,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.5413103680607394,
+      "atr_pct": 2.5605842314076197,
       "sector": "NIFTY CONSUMPTION"
     },
     {
@@ -1697,7 +1697,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.89818370083552,
+      "atr_pct": 2.6274409516081034,
       "sector": "NIFTY AUTO"
     },
     {
@@ -1705,7 +1705,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.427688595360311,
+      "atr_pct": 2.317745353637627,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1713,7 +1713,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.5946852512272764,
+      "atr_pct": 2.545408444845222,
       "sector": "NIFTY PSU BANK"
     },
     {
@@ -1721,7 +1721,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.931699708381101,
+      "atr_pct": 2.7750892568332963,
       "sector": "NIFTY FMCG"
     },
     {
@@ -1729,7 +1729,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.29967198441303,
+      "atr_pct": 3.4533623268268334,
       "sector": "NIFTY AUTO"
     },
     {
@@ -1737,7 +1737,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.540207443434288,
+      "atr_pct": 3.2697522628230913,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1745,7 +1745,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.986081339263288,
+      "atr_pct": 2.9468079505457854,
       "sector": "NIFTY FMCG"
     },
     {
@@ -1753,7 +1753,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.9758295397290238,
+      "atr_pct": 2.7237322557923873,
       "sector": "NIFTY METAL"
     },
     {
@@ -1761,7 +1761,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.1012909150681307,
+      "atr_pct": 3.2048174080885246,
       "sector": "NIFTY CONSUMPTION"
     },
     {
@@ -1769,7 +1769,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.269208069317422,
+      "atr_pct": 3.603624193223361,
       "sector": "NIFTY INFRA"
     },
     {
@@ -1777,7 +1777,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 3.2599285655147234,
+      "atr_pct": 3.3613280465289086,
       "sector": "NIFTY ENERGY"
     },
     {
@@ -1785,7 +1785,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.8153542530106668,
+      "atr_pct": 2.619184251714906,
       "sector": "NIFTY IT"
     },
     {
@@ -1793,7 +1793,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 4.4155774940823855,
+      "atr_pct": 3.419761083235291,
       "sector": "NIFTY BANK"
     },
     {
@@ -1801,7 +1801,7 @@
       "dte": 15,
       "bid_ask_spread_pct": 0.8,
       "oi": 50000,
-      "atr_pct": 2.9195090602361295,
+      "atr_pct": 2.7930693213017763,
       "sector": "NIFTY PHARMA"
     }
   ]

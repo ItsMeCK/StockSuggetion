@@ -253,3 +253,72 @@ def test_grounding_toxic_veto_contractions_and_multiword_phrases():
         "evidence": []
     }
     assert agent._is_toxic_confirmed(toxic_data_real_veto) is True
+
+
+def test_grounding_wolf_sovereign_stealth_approved_without_news():
+    """Validates that a 70% institutional accumulation footprint with 0% news is approved under Wolf rule."""
+    mock_client = MagicMock()
+    mock_resp = MagicMock()
+    
+    mock_json = {
+        "public_catalyst": {
+            "evidence": [],
+            "confidence": 0.0,
+            "summary": "No breaking public news"
+        },
+        "stealth_accumulation": {
+            "evidence": [{"source": "NSE", "date": "2026-11-11", "fact": "Massive 78% delivery spike and 3:15 PM block absorption"}],
+            "confidence": 0.70,
+            "summary": "78% institutional delivery block absorption"
+        },
+        "toxic_catalyst": {
+            "evidence": [],
+            "detected": False,
+            "summary": "None"
+        }
+    }
+    mock_resp.text = json.dumps(mock_json)
+    rebuttal_resp = MagicMock()
+    rebuttal_resp.text = "CLEAN_ACCUMULATION: Institutional volume absorption verified."
+    mock_client.models.generate_content.side_effect = [mock_resp, rebuttal_resp]
+
+    agent = HardenedGroundingAgent(client=mock_client)
+    approved, score, rationale, audit_data = agent.evaluate_symbol("OIL")
+
+    assert approved is True
+    assert score >= APPROVAL_THRESHOLD
+    assert "Silent Institutional Accumulation" in rationale
+
+
+def test_grounding_wolf_anti_hype_trap_vetoed():
+    """Validates that a 90% public hype earnings beat with low delivery (<0.30) is vetoed as a sell-the-news trap."""
+    mock_client = MagicMock()
+    mock_resp = MagicMock()
+    
+    mock_json = {
+        "public_catalyst": {
+            "evidence": [{"source": "CNBC", "date": "2026-11-12", "fact": "Q2 PAT surged 66.5% beating consensus"}],
+            "confidence": 0.90,
+            "summary": "Q2 earnings beat and profit growth"
+        },
+        "stealth_accumulation": {
+            "evidence": [{"source": "NSE", "date": "2026-11-12", "fact": "Delivery collapsed to 24%, heavy retail churning"}],
+            "confidence": 0.20,
+            "summary": "Retail churning with low delivery"
+        },
+        "toxic_catalyst": {
+            "evidence": [],
+            "detected": False,
+            "summary": "None"
+        }
+    }
+    mock_resp.text = json.dumps(mock_json)
+    mock_client.models.generate_content.return_value = mock_resp
+
+    agent = HardenedGroundingAgent(client=mock_client)
+    approved, score, rationale, audit_data = agent.evaluate_symbol("RADICO")
+
+    assert approved is False
+    assert score <= 40.0
+    assert "Retail news hype detected" in rationale
+    assert "Sell-the-News Trap risk" in rationale

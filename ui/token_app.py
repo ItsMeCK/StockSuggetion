@@ -302,6 +302,22 @@ HTML_TEMPLATE = """
                     <span class="badge active">OPERATIONAL</span>
                 </div>
 
+                <!-- 1-Click Autonomous Refresh Card -->
+                <div style="background: linear-gradient(135deg, rgba(35, 134, 54, 0.15) 0%, rgba(31, 111, 235, 0.15) 100%); border: 1px solid rgba(63, 185, 80, 0.4); border-radius: 8px; padding: 20px; margin-bottom: 25px; text-align: center;">
+                    <div style="font-size: 16px; font-weight: 700; color: #3fb950; margin-bottom: 6px;">⚡ Autonomous Headless Refresh</div>
+                    <div style="font-size: 13px; color: var(--text-color); margin-bottom: 16px;">One-click automated TOTP login for both accounts (HU0092 &amp; YF4472). No manual login, no copy-pasting URLs!</div>
+                    <form method="POST" action="/auto-refresh">
+                        <button type="submit" style="background: linear-gradient(180deg, #2ea043 0%, #238636 100%); font-size: 15px; font-weight: 700; padding: 12px 24px; cursor: pointer; border-radius: 6px; box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);">
+                            🚀 Run Autonomous Token Refresh Now
+                        </button>
+                    </form>
+                    <div style="font-size: 11px; color: var(--text-muted); margin-top: 10px;">⏰ Auto-scheduled daily at 08:30 AM IST via Cron on GCP</div>
+                </div>
+
+                <div style="text-align: center; margin-bottom: 20px; color: var(--text-muted); font-size: 12px; font-weight: 600;">
+                    ─── OR MANUAL FALLBACK BELOW ───
+                </div>
+
                 <form method="POST" action="/generate">
                     <!-- Data Account -->
                     <div style="background: rgba(88, 166, 255, 0.05); border: 1px solid rgba(88, 166, 255, 0.2); border-radius: 8px; padding: 16px; margin-bottom: 20px;">
@@ -880,6 +896,29 @@ def generate():
         
     except Exception as e:
         return render_template_string(HTML_TEMPLATE, message=f"Error generating session: {str(e)}", success=False, log_files=get_log_files(), crons=parse_cron())
+
+@app.route("/auto-refresh", methods=["POST"])
+def auto_refresh():
+    if not session.get('authenticated'):
+        return redirect(url_for('index'))
+    try:
+        from scripts.auto_login_zerodha import main as run_auto_login
+        run_auto_login()
+        return render_template_string(
+            HTML_TEMPLATE, 
+            message="✅ 1-Click Autonomous Refresh Succeeded: Both HU0092 & YF4472 tokens generated and synced!", 
+            success=True, 
+            log_files=get_log_files(), 
+            crons=parse_cron()
+        )
+    except Exception as e:
+        return render_template_string(
+            HTML_TEMPLATE, 
+            message=f"❌ Auto-Refresh Error: {str(e)}", 
+            success=False, 
+            log_files=get_log_files(), 
+            crons=parse_cron()
+        )
 
 # =============================================================================
 # REST API Endpoints (Laptop -> GCP Order Gateway)
