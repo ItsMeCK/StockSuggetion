@@ -1,102 +1,102 @@
 {
-  "generated_at": "2026-11-15T10:52:55.492247",
-  "count": 203,
-  "banned_count": 2,
+  "generated_at": "2026-11-15T12:56:48.965631",
+  "count": 204,
+  "banned_count": 0,
   "macro_themes": {
     "strong_sectors": [
-      "Auto",
-      "Pharma"
+      "Banking & Financial Services",
+      "Energy & Capital Goods"
     ],
     "weak_sectors": [
-      "IT"
+      "Information Technology",
+      "Real Estate"
+    ],
+    "macro_events": [
+      {
+        "event": "India October Merchandise Trade & Balance Data",
+        "date": "2026-11-16",
+        "impact": "Key metric for assessing current account balance, export recovery, and USD/INR currency dynamics."
+      },
+      {
+        "event": "US Federal Reserve & Global Macro Policy Signals",
+        "date": "2026-11-18",
+        "impact": "Influences global dollar index (DXY), US 10-year Treasury yields, and cross-border risk-on liquidity."
+      },
+      {
+        "event": "RBI Monetary Policy Committee Rate Decision Prep",
+        "date": "2026-12-02",
+        "impact": "Markets actively pricing potential 25-50 bps rate hike risk after October headline CPI breached the 6% upper threshold at 6.09%."
+      }
     ],
     "market_sentiment": "BULLISH",
-    "narrative_summary": "Strong industrial demand."
+    "narrative_summary": "Indian equities are benefiting from a massive FII buying reversal exceeding \u20b984,000 crore in early November, propelled by tactical capital rotation out of Asian tech/AI trades into resilient domestic banks. However, elevated domestic CPI inflation (6.09%) and Brent crude volatility around $92-$98/bbl present near-term headwinds for broader valuation expansion."
   },
   "focus_candidates": {
     "ce_focus": [
       {
-        "symbol": "TIINDIA",
+        "symbol": "MOTILALOFS",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.850925152653975,
-        "sector": "NIFTY AUTO"
+        "atr_pct": 4.638675640929198,
+        "sector": "NIFTY FIN SERVICE"
       },
       {
-        "symbol": "FORCEMOT",
+        "symbol": "INOXWIND",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.8192259348412305,
-        "sector": "NIFTY AUTO"
+        "atr_pct": 4.419346307468599,
+        "sector": "NIFTY ENERGY"
       },
       {
-        "symbol": "GLENMARK",
+        "symbol": "POLICYBZR",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.4750144473164966,
-        "sector": "NIFTY PHARMA"
+        "atr_pct": 4.152594905825136,
+        "sector": "NIFTY FIN SERVICE"
       },
       {
-        "symbol": "UNOMINDA",
+        "symbol": "NAM-INDIA",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.4533623268268334,
-        "sector": "NIFTY AUTO"
+        "atr_pct": 4.05040127808799,
+        "sector": "NIFTY FIN SERVICE"
       },
       {
-        "symbol": "LAURUSLABS",
+        "symbol": "MANAPPURAM",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.391202680322182,
-        "sector": "NIFTY PHARMA"
+        "atr_pct": 3.982705382720171,
+        "sector": "NIFTY FIN SERVICE"
       },
       {
-        "symbol": "MOTHERSON",
+        "symbol": "ANGELONE",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.1745174231106135,
-        "sector": "NIFTY AUTO"
+        "atr_pct": 3.7111617659813185,
+        "sector": "NIFTY FIN SERVICE"
       },
       {
-        "symbol": "SONACOMS",
+        "symbol": "BANDHANBNK",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.060981052872208,
-        "sector": "NIFTY AUTO"
+        "atr_pct": 3.6796651143088326,
+        "sector": "NIFTY BANK"
       },
       {
-        "symbol": "BHARATFORG",
+        "symbol": "KFINTECH",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.036356875439928,
-        "sector": "NIFTY AUTO"
+        "atr_pct": 3.677304190433978,
+        "sector": "NIFTY FIN SERVICE"
       },
-      {
-        "symbol": "MANKIND",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 3.0080725025442425,
-        "sector": "NIFTY PHARMA"
-      },
-      {
-        "symbol": "DIVISLAB",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 2.956061795438266,
-        "sector": "NIFTY PHARMA"
-      }
-    ],
-    "pe_focus": [
       {
         "symbol": "KPITTECH",
         "dte": 15,
@@ -106,78 +106,15 @@
         "sector": "NIFTY IT"
       },
       {
-        "symbol": "MPHASIS",
+        "symbol": "MCX",
         "dte": 15,
         "bid_ask_spread_pct": 0.8,
         "oi": 50000,
-        "atr_pct": 3.546573517671932,
-        "sector": "NIFTY IT"
-      },
-      {
-        "symbol": "NAUKRI",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 3.347435414659975,
-        "sector": "NIFTY IT"
-      },
-      {
-        "symbol": "COFORGE",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 3.302203945817464,
-        "sector": "NIFTY IT"
-      },
-      {
-        "symbol": "LTM",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 3.2681202243660543,
-        "sector": "NIFTY IT"
-      },
-      {
-        "symbol": "INFY",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 3.211751302397949,
-        "sector": "NIFTY IT"
-      },
-      {
-        "symbol": "PERSISTENT",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 2.8526175962404787,
-        "sector": "NIFTY IT"
-      },
-      {
-        "symbol": "TATAELXSI",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 2.8358689201928717,
-        "sector": "NIFTY IT"
-      },
-      {
-        "symbol": "OFSS",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 2.8307737827577415,
-        "sector": "NIFTY IT"
-      },
-      {
-        "symbol": "WIPRO",
-        "dte": 15,
-        "bid_ask_spread_pct": 0.8,
-        "oi": 50000,
-        "atr_pct": 2.619184251714906,
-        "sector": "NIFTY IT"
+        "atr_pct": 3.617497977715664,
+        "sector": "NIFTY FIN SERVICE"
       }
-    ]
+    ],
+    "pe_focus": []
   },
   "eligible_candidates": [
     {
@@ -1515,6 +1452,14 @@
       "oi": 50000,
       "atr_pct": 3.7876223760239833,
       "sector": "NIFTY INFRA"
+    },
+    {
+      "symbol": "SAIL",
+      "dte": 15,
+      "bid_ask_spread_pct": 0.8,
+      "oi": 50000,
+      "atr_pct": 3.166323366863357,
+      "sector": "NIFTY METAL"
     },
     {
       "symbol": "SBICARD",
