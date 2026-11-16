@@ -6,10 +6,11 @@ PYTHONPATH=/Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign
 # 0. Sunday 18:00 PM - Weekly Eligible Universe Build & Strategy Briefing
 0 18 * * 0 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/weekly_watchlist_builder.py >> logs/weekly_watchlist.log 2>&1
 
-# 0a. 09:05 AM - Headless Zerodha 2FA TOTP Auto-Login (Exec HU0092 & Data YF4472)
-05 9 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/auto_login_zerodha.py >> logs/auto_login.log 2>&1
+# 0a. 08:30 AM - Headless Zerodha 2FA TOTP Auto-Login (Exec HU0092 & Data YF4472)
+30 8 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/auto_login_zerodha.py >> logs/auto_login.log 2>&1
 
-# 0b. 09:10 AM - Automated Token Synchronization from GCP Gateway
+# 0b. 08:35 AM & 09:10 AM - Automated Token Synchronization from GCP Gateway
+35 8 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python -c "from core.gcp_execution_client import GCPExecutionClient; GCPExecutionClient().sync_tokens_from_gcp()" >> logs/token_sync.log 2>&1
 10 9 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python -c "from core.gcp_execution_client import GCPExecutionClient; GCPExecutionClient().sync_tokens_from_gcp()" >> logs/token_sync.log 2>&1
 
 # 1. 09:11 AM - Pre-Open Futures Discovery & Daily Focus Watchlist (Mon-Fri)
