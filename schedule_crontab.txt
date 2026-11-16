@@ -6,6 +6,9 @@ PYTHONPATH=/Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign
 # 0. Sunday 18:00 PM - Weekly Eligible Universe Build & Strategy Briefing
 0 18 * * 0 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/weekly_watchlist_builder.py >> logs/weekly_watchlist.log 2>&1
 
+# 0a. 09:05 AM - Headless Zerodha 2FA TOTP Auto-Login (Exec HU0092 & Data YF4472)
+05 9 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python scripts/auto_login_zerodha.py >> logs/auto_login.log 2>&1
+
 # 0b. 09:10 AM - Automated Token Synchronization from GCP Gateway
 10 9 * * 1-5 cd /Users/poonamsalke/.gemini/antigravity/scratch/midnight_sovereign && ./venv/bin/python -c "from core.gcp_execution_client import GCPExecutionClient; GCPExecutionClient().sync_tokens_from_gcp()" >> logs/token_sync.log 2>&1
 
